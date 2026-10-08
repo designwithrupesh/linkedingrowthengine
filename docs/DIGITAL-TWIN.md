@@ -13,13 +13,17 @@ This application runs the imported 12-skill bundle as an autonomous workflow. Th
 
 ## Free model: no AI API key
 
-automation/start_local_model.sh runs official Qwen3 1.7B Q8 weights through a pinned llama.cpp CPU server. The runtime and weights are checked against their publisher SHA-256 digests. GitHub caches the 1.834GB model. The server listens only on 127.0.0.1; thinking is disabled to keep runtime and output manageable. Custom HTTPS model APIs remain optional.
+automation/start_local_model.sh runs Qwen3 4B Instruct 2507, using Unsloth's Q4_K_M GGUF conversion, through a pinned llama.cpp CPU server. The runtime and weights are checked against pinned publisher SHA-256 digests; both have open licenses. GitHub caches the 2.497GB model. The server listens only on 127.0.0.1. This model uses no thinking mode. Custom HTTPS model APIs remain optional. A preview fails when generation does not pass the content length and format checks.
 
-Public GitHub repositories normally receive free standard-hosted Actions execution; account quotas and provider rules still apply. Apify and Publora have separate service limits. Apify reading pauses at the lower of the account cap and $4 monthly usage, reserving credit instead of requesting an upgrade. Unknown usage/caps stop reads. This does not promise unlimited free operation or override provider billing.
+Public GitHub repositories normally receive free standard-hosted Actions execution; account quotas and provider rules still apply. Apify and Publora have separate service limits. Apify reading pauses at the lower of the account cap and $4 monthly usage, reserving credit instead of requesting an upgrade. Unknown usage/caps stop reads. Publora's verified Starter account allows 15 posts per month, three queued posts and a seven-day scheduling horizon. The runner checks current capacity before scheduling and defers when a limit is full. This does not promise unlimited free operation or override provider billing.
 
-## One-time GitHub connection
+## Verified connection and controls
 
-Cloud environment secrets and GitHub Actions secrets are separate. The cloud Publora and Apify account checks pass, but this chat is denied repository secret/settings access (HTTP 403). No credential is copied into Git or workflow inputs.
+Cloud environment secrets and GitHub Actions secrets are separate. Both credentials were present in a real GitHub Actions live run, the connected LinkedIn account passed verification, and a hosted preview generated content using the free local model. Repository secret/settings inspection is denied (HTTP 403), so runtime checks are the evidence for this connection. No credential is copied into Git or workflow inputs.
+
+The initial batch has been accepted and read back from Publora: October 9, 13 and 14, 2026 at 09:00 India time. These are scheduled posts, not yet published posts. The runner keeps their remote IDs and does not submit them again.
+
+For a replacement account or revoked key, use the following setup:
 
 1. Open https://github.com/designwithrupesh/linkedingrowthengine/settings/secrets/actions.
 2. Add repository secret **PUBLORA_API_KEY** using a fresh key from Publora. Revoke the key previously shared in chat.
@@ -43,7 +47,7 @@ This requires the owner's standing authorization and a working Publora binding. 
 
 GitHub Actions shows each run's summary. automation/state.json records public generated content, timestamps, remote IDs, publication dates, read quotas and reports. Treat it as public if the repository is public. Keep confidential career notes out of the repo.
 
-For an uncertain write, check Publora and LinkedIn before changing the state. Record the verified remote ID/status and reconcile before resuming. Never clear an uncertain record just to retry. Pausing or deleting a workflow does not cancel already scheduled posts.
+For an uncertain write, check Publora and LinkedIn before changing that intent's state. Record verified evidence; never clear an uncertain record just to retry. Other independent intents can continue. Definitively rejected requests record their HTTP status and are not retried. Pausing or deleting a workflow does not cancel already scheduled posts.
 
 ## All 12 skills
 

@@ -84,7 +84,25 @@ class DiscoveryTests(unittest.TestCase):
         row = {'urn': actual, 'post_url': URL, 'text': TEXT}
         result = normalize_profile_post(row, 'designer')
         self.assertEqual(result['urn'], actual)
-        self.assertEqual(result['url'], 'https://www.linkedin.com/feed/update/' + actual + '/')
+        self.assertEqual(result['url'], URL)
+        self.assertEqual(result['shareUrn'], actual)
+
+    def test_explicit_share_identity_keeps_different_activity_url_for_reads(self):
+        actual = 'urn:li:share:7000000000000000002'
+        for share_fields in ({'urn': {'activity_urn': ID, 'share_urn': '7000000000000000002'}},
+                             {'share_id': '7000000000000000002'}, {'share_urn': actual},
+                             {'full_urn': actual}):
+            with self.subTest(share_fields=share_fields):
+                row = {'url': URL, 'text': TEXT, **share_fields}
+                result = normalize_profile_post(row, 'designer')
+                self.assertEqual(result['urn'], actual)
+                self.assertEqual(result['shareUrn'], actual)
+                self.assertEqual(result['url'], URL)
+
+    def test_activity_metadata_cannot_be_relabelled_as_share(self):
+        result = normalize_profile_post({'url': URL, 'text': TEXT, 'share_urn': URN}, 'designer')
+        self.assertEqual(result['urn'], URN)
+        self.assertIsNone(result['shareUrn'])
 
     def test_flat_actor_variants_preserve_timestamp(self):
         stamp = int(datetime(2026, 10, 9, 3, 30, tzinfo=timezone.utc).timestamp() * 1000)
@@ -107,6 +125,8 @@ class DiscoveryTests(unittest.TestCase):
                'stats': {'total_reactions': 10}, 'pagination_token': 'ignored'}
         result = normalize_profile_post(row, 'designer')
         self.assertEqual(result['urn'], actual)
+        self.assertEqual(result['shareUrn'], actual)
+        self.assertEqual(result['url'], URL)
         self.assertEqual(result['authorName'], 'Product Designer')
         self.assertEqual(result['authorHeadline'], 'Co-Founder')
         self.assertEqual(result['postedAtISO'], '2026-10-09T03:30:00+00:00')

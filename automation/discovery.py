@@ -84,6 +84,16 @@ def _first_text(*values: Any) -> str | None:
     return next((value.strip() for value in values if isinstance(value, str) and value.strip()), None)
 
 
+def _typed_urn(value: Any, kind: str) -> str | None:
+    """Only typed actor fields may turn numeric identifiers into their own URN type."""
+    candidate = post_urn(value)
+    if candidate:
+        return candidate if candidate.startswith(f'urn:li:{kind}:') else None
+    if isinstance(value, (str, int)) and not isinstance(value, bool):
+        return post_urn(f'urn:li:{kind}:{value}')
+    return None
+
+
 def _posted_at(*values: Any) -> str | None:
     for value in values:
         if isinstance(value, dict):
@@ -121,17 +131,26 @@ def normalize_profile_post(raw: dict, source_handle: str) -> dict | None:
     if not urn:
         for field, kind in (('activity_urn', 'activity'), ('share_urn', 'share'), ('ugcPost_urn', 'ugcPost')):
             value = urn_fields.get(field) or post.get(field)
-            candidate = post_urn(value)
-            if candidate is None and isinstance(value, (str, int)) and not isinstance(value, bool):
-                candidate = post_urn(f'urn:li:{kind}:{value}')
+            candidate = _typed_urn(value, kind)
             if candidate:
                 urn = candidate
                 break
-    if not urn:
-        urn = next((parsed for value in (
-            post.get('url'), post.get('post_url'), post.get('postUrl'), post.get('linkedinUrl'),
-            raw.get('url'), raw.get('post_url'), raw.get('postUrl'), raw.get('linkedinUrl'),
-        ) if (parsed := post_urn(value))), None)
+    url_urn = next((parsed for value in (
+        post.get('url'), post.get('post_url'), post.get('postUrl'), post.get('linkedinUrl'),
+        raw.get('url'), raw.get('post_url'), raw.get('postUrl'), raw.get('linkedinUrl'),
+    ) if (parsed := post_urn(value))), None)
+    share_urn = next((parsed for value in (post.get('full_urn'), post.get('shareUrn'), raw.get('full_urn'),
+                                         raw.get('shareUrn'), post.get('urn'))
+                      if (parsed := post_urn(value)) and parsed.startswith(('urn:li:share:', 'urn:li:ugcPost:'))), None)
+    if share_urn is None:
+        share_urn = next((parsed for field, kind in (('share_urn', 'share'), ('share_id', 'share'),
+                                                    ('ugcPost_urn', 'ugcPost'), ('ugcPost_id', 'ugcPost'))
+                          for value in (urn_fields.get(field), post.get(field), raw.get(field))
+                          if (parsed := _typed_urn(value, kind))), None)
+    # Public activity links and writable share/UGC identifiers can have
+    # different digits. Preserve both, using only explicitly supplied typed
+    # share metadata for the canonical writable identifier.
+    urn = share_urn or urn or url_urn
     text = _first_text(post.get('text'), post.get('content'), post.get('post_text'), raw.get('text'))
     if not urn or not text:
         return None
@@ -141,8 +160,9 @@ def normalize_profile_post(raw: dict, source_handle: str) -> dict | None:
     author_name = ' '.join(value for value in (author.get('first_name'), author.get('last_name'))
                            if isinstance(value, str) and value.strip())
     return {
-        'url': f'https://www.linkedin.com/feed/update/{urn}/',
+        'url': f'https://www.linkedin.com/feed/update/{url_urn or urn}/',
         'urn': urn,
+        'shareUrn': share_urn,
         'text': text,
         'authorName': _first_text(author.get('name'), author_name, post.get('authorName'), raw.get('authorName')),
         'authorHeadline': _first_text(author.get('headline')),
@@ -230,8 +250,8 @@ def discover_targets(policy: dict, reader: DiscoveryClient, state: dict,
         return []
     discovery['last_status'] = 'ok'
     return [post for post in rows if isinstance(post, dict)
-            and post_urn(post.get('urn')) == post_urn(post.get('url'))
-            and post_urn(post.get('urn')) and _first_text(post.get('text'))
+            and post_urn(post.get('url')) and post_urn(post.get('urn'))
+            and _first_text(post.get('text'))
             and profile_handle(post.get('authorProfileUrl')) != own]
 
 

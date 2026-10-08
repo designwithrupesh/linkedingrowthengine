@@ -47,8 +47,8 @@ jobs:
         with:
           path: |
             testing/local-model/llama-b11512-bin-ubuntu-x64.tar.gz
-            testing/local-model/Qwen3-1.7B-Q8_0.gguf
-          key: twin-cpu-qwen3-1.7b-q8-90862c4b-llama-b11512-${{ runner.os }}-${{ runner.arch }}
+            testing/local-model/Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+          key: twin-cpu-qwen3-4b-instruct-2507-q4km-a06e946b-llama-b11512-${{ runner.os }}-${{ runner.arch }}
       - name: Start verified free CPU model
         if: >-
           vars.MODEL_ENDPOINT == '' &&

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# Free CPU inference. Assets are pinned to official publisher revisions and hashes.
+# Free CPU inference. Runtime and model assets are pinned to publisher hashes.
+# Model: Unsloth's Q4_K_M quantization of Qwen/Qwen3-4B-Instruct-2507.
+# Both the Qwen source and this GGUF are licensed Apache-2.0.
+# Source model: https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
 set -euo pipefail
 
 if [[ "$(uname -s)" != Linux || "$(uname -m)" != x86_64 ]]; then
@@ -13,12 +16,13 @@ TWIN_MODEL_DIR="$(cd "$TWIN_MODEL_DIR" && pwd)"
 runtime_archive="$TWIN_MODEL_DIR/llama-b11512-bin-ubuntu-x64.tar.gz"
 runtime_sha='cf4083d1e89ccce41157b096d5c9d36e2ef4c8751cf96b709ed533a3a4fe98d3'
 runtime_url='https://github.com/ggml-org/llama.cpp/releases/download/b11512/llama-b11512-bin-ubuntu-x64.tar.gz'
-model_file="$TWIN_MODEL_DIR/Qwen3-1.7B-Q8_0.gguf"
-model_sha='061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a'
-model_url='https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/resolve/90862c4b9d2787eaed51d12237eafdfe7c5f6077/Qwen3-1.7B-Q8_0.gguf'
+model_file="$TWIN_MODEL_DIR/Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
+model_sha='3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597'
+model_url='https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/a06e946bb6b655725eafa393f4a9745d460374c9/Qwen3-4B-Instruct-2507-Q4_K_M.gguf'
 server="$TWIN_MODEL_DIR/llama-b11512/llama-server"
 pid_file="$TWIN_MODEL_DIR/server.pid"
 log_file="$TWIN_MODEL_DIR/server.log"
+model_marker="$TWIN_MODEL_DIR/server.model.sha256"
 
 verify_file() {
   [[ -f "$1" ]] && printf '%s  %s\n' "$2" "$1" | sha256sum --check --status
@@ -31,7 +35,7 @@ download_verified() {
     return
   fi
   local partial="${destination}.part"
-  echo "Downloading official asset: $(basename "$destination")"
+  echo "Downloading publisher asset: $(basename "$destination")"
   curl --fail --location --proto '=https' --tlsv1.2 --retry 2 \
     --connect-timeout 15 --max-time 600 --output "$partial" "$url"
   if ! verify_file "$partial" "$expected"; then
@@ -57,6 +61,10 @@ healthy() {
 
 if [[ -f "$pid_file" ]] && kill -0 "$(cat "$pid_file")" 2>/dev/null; then
   if healthy; then
+    if [[ ! -f "$model_marker" || "$(cat "$model_marker")" != "$model_sha" ]]; then
+      echo 'An existing local model uses a different or unverified pinned model. Stop that process before starting this model.' >&2
+      exit 1
+    fi
     echo "Local model is ready. PID: $(cat "$pid_file"); log: $log_file"
     exit 0
   fi
@@ -80,6 +88,7 @@ while ((SECONDS < deadline)); do
     exit 1
   fi
   if healthy; then
+    printf '%s\n' "$model_sha" >"$model_marker"
     echo "Local model is ready. PID: $model_pid; log: $log_file"
     echo 'Endpoint: http://127.0.0.1:8080/v1/chat/completions; model: twin-local'
     exit 0

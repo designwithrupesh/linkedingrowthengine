@@ -54,6 +54,10 @@ def copy_path(src: Path, dest: Path) -> None:
                 "check_markdown_references.py",
                 "sync_codex_marketplace.py",
             )
+        if src.name == "automation":
+            # Runtime receipts belong to the owner's checkout, not to a
+            # distributable plugin snapshot that drifts on every live run.
+            ignore = shutil.ignore_patterns("__pycache__", "*.pyc", "state.json", "*.tmp")
         shutil.copytree(src, dest, ignore=ignore)
     else:
         dest.parent.mkdir(parents=True, exist_ok=True)

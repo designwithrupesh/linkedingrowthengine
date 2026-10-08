@@ -8,7 +8,7 @@ Run from this repository's root with Python 3.10 or newer:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-lock.txt 'PyYAML==6.0.3'
+.venv/bin/python -m pip install -r automation/requirements.txt 'PyYAML==6.0.3'
 .venv/bin/python -m pip check
 .venv/bin/python scripts/check_frontmatter.py
 .venv/bin/python scripts/check_markdown_references.py
@@ -24,12 +24,16 @@ Start with linkedin-interviewer to collect real stories, then linkedin-profile-o
 
 Keep personal voice profiles, stories, draft queues, and reports in the ignored testing/ directory. Pass these working files as context instead of publishing personal material in the upstream reference templates.
 
-## Optional automation connections
+## Autonomous runner
+
+The imported skills are connected to the persistent GitHub Actions workflow in .github/workflows/digital-twin.yml. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for the cadence, free local model, verified connection, activity records and pause controls. The owner has authorized routine autonomous posts and interactions within automation/policy.json. The upstream interactive skills still use their original draft approval flow when invoked separately.
+
+## Account connections
 
 Securely configure PUBLORA_API_KEY and LINKEDIN_PLATFORM_ID for publishing, and APIFY_TOKEN for reading posts, comments, and engagers. PIXFARO_TOKEN is optional for images. Never commit credentials or paste them into public issues. Use secure cloud environment settings or a local ignored .env file.
 
-Publora executes posts scheduled through its API. Content and interactions follow the repository's draft-review-approval workflow. Daily AI drafting and monitoring require a separately configured persistent scheduler or agent. This repository import does not activate an unattended service, send DMs, or automatically edit a LinkedIn profile.
+Publora executes posts scheduled through its API. The GitHub runner handles drafting, discovery and supported interactions even after a cloud session closes. It does not send DMs or automatically edit a LinkedIn profile.
 
 Use explicit timezone-aware timestamps for a weekly schedule. scripts/schedule_post.py defaults to today's 10:00 in the host timezone, or five minutes from now; it is not a future weekly calendar.
 
-For Codex cloud, use the existing checkout: tasks are already isolated, so do not create Git worktrees unless requested. No background web server is required.
+For Codex cloud, use the existing checkout: tasks are already isolated, so do not create Git worktrees unless requested. Local model previews need automation/start_local_model.sh; persistent automation starts its own model in GitHub Actions.

@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch, Mock
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
-from automation.twin import Runner, flatten_comments, preflight, model, main, LocalModelError, ModelConfigurationError
+from automation.twin import Runner, flatten_comments, preflight, model, main, LocalModelError, ModelConfigurationError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, normalize_public_text, validate_model_output, skills, compact_skill_context
 
 POLICY = {**json.loads(Path('automation/policy.json').read_text(encoding="utf-8")), 'discovery_profiles': []}
 NOW = datetime(2026, 10, 13, 3, 30, tzinfo=timezone.utc)
@@ -20,7 +20,24 @@ class DigitalTwinTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
     def runner(self, **kw):
-        return Runner(POLICY, self.path, now=NOW, generate=lambda *a: {'text': TEXT}, **kw)
+        return Runner(POLICY, self.path, now=NOW, generate=lambda *a: {'text': TEXT}, capacity=lambda *a: (True, 'capacity verified'), **kw)
+    def test_full_remote_queue_defers_without_generating_or_consuming_intent(self):
+        r = self.runner(live=True)
+        r.post_capacity = lambda *a: (False, 'Queue is full')
+        r.generate = Mock()
+        with patch('automation.twin.requests.post') as send:
+            r.post()
+            r.write('post:2026-10-14', 'post', TEXT, scheduled_time=NOW + timedelta(days=1))
+        r.generate.assert_not_called()
+        send.assert_not_called()
+        self.assertFalse(r.state['actions'])
+        self.assertEqual(r.counts['post'], 0)
+        self.assertNotIn('2026-10-14', r.state['days'])
+        r.post_capacity = lambda *a: (True, 'capacity verified')
+        r.generate = lambda *a: {'text': TEXT}
+        with patch.object(r, 'write') as write:
+            r.post()
+        write.assert_called_once()
     def test_restart_does_not_duplicate_post(self):
         self.runner().post()
         self.runner().post()
@@ -40,6 +57,16 @@ class DigitalTwinTests(unittest.TestCase):
         r.generate = lambda *a: {'skip': True}
         r.post()
         self.assertFalse(r.state['actions'])
+    def test_preview_fails_when_model_skips_instead_of_claiming_readiness(self):
+        with patch('automation.twin.model', return_value={'skip': True}), \
+             patch('automation.twin.requests.get') as read, \
+             patch('automation.twin.requests.post') as publish, \
+             patch('sys.argv', ['twin', '--preview', '--state', str(self.path)]), \
+             patch.dict(os.environ, {}, clear=True):
+            with self.assertRaises(ModelQualityError):
+                main()
+        read.assert_not_called()
+        publish.assert_not_called()
     def test_nested_parent_and_own_comment_filter(self):
         rows = [{'comment_id':'1','author':{'profile_url':POLICY['profile_url']},'replies':[{'comment_id':'2','text':'question','author':{'profile_url':'https://www.linkedin.com/in/other/'}}]}]
         result = flatten_comments(rows, POLICY['profile_url'])
@@ -122,6 +149,103 @@ class DigitalTwinTests(unittest.TestCase):
             r.write('a', 'post', TEXT)
         self.assertEqual(send.call_count,1)
         self.assertEqual(r.state['actions']['a']['status'], 'unknown-needs-reconciliation')
+        self.assertIsNone(r.state['actions']['a']['http_status'])
+
+    @patch('automation.twin.requests.post')
+    def test_definitive_rejection_allows_next_intent_and_never_reads_provider_body(self, send):
+        rejected = Mock(status_code=403)
+        rejected.json.return_value = {'error': 'private provider text'}
+        accepted = Mock(status_code=201)
+        accepted.json.return_value = {'success': True, 'comment': {'id': 'comment-123'}}
+        send.side_effect = [rejected, accepted]
+        r = self.runner(live=True)
+        with patch.object(r, 'save'), patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}), patch('builtins.print') as log:
+            r.write('reaction', 'reaction', 'LIKE', 'urn:li:share:7000000000000000000')
+            r.write('reaction', 'reaction', 'LIKE', 'urn:li:share:7000000000000000000')
+            r.write('comment', 'comment', TEXT, 'urn:li:share:7000000000000000000')
+        self.assertEqual(send.call_count, 2)
+        self.assertEqual(r.state['actions']['reaction']['status'], 'rejected')
+        self.assertEqual(r.state['actions']['reaction']['http_status'], 403)
+        self.assertEqual(r.state['actions']['comment']['status'], 'sent')
+        self.assertEqual(r.counts['interaction'], 2)
+        rejected.json.assert_not_called()
+        self.assertIn('HTTP 403', log.call_args.args[0])
+        self.assertNotIn('private provider text', str(r.state))
+        self.assertFalse(send.call_args.kwargs['allow_redirects'])
+
+    @patch('automation.twin.requests.post')
+    def test_nondefinitive_http_response_is_unknown_with_safe_status_and_no_retry(self, send):
+        for status in (307, 408, 429, 500, 503):
+            with self.subTest(status=status):
+                send.reset_mock()
+                send.return_value = Mock(status_code=status)
+                send.return_value.json.return_value = {'error': 'sensitive response body'}
+                r = self.runner(live=True)
+                with patch.object(r, 'save'), patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}):
+                    with self.assertRaises(WriteOutcomeError) as caught:
+                        r.write('uncertain', 'comment', TEXT, 'urn:li:share:7000000000000000000')
+                    r.write('uncertain', 'comment', TEXT, 'urn:li:share:7000000000000000000')
+                self.assertEqual(send.call_count, 1)
+                self.assertEqual(r.state['actions']['uncertain']['status'], 'unknown-needs-reconciliation')
+                self.assertEqual(r.state['actions']['uncertain']['http_status'], status)
+                self.assertIn('HTTP ' + str(status), str(caught.exception))
+                self.assertNotIn('sensitive response body', str(caught.exception))
+                send.return_value.json.assert_not_called()
+
+    @patch('automation.twin.requests.post')
+    def test_missing_acknowledgement_stays_blocked_after_restart(self, send):
+        send.return_value = Mock(status_code=200)
+        send.return_value.json.return_value = {'success': True, 'message': 'provider text'}
+        r = self.runner(live=True)
+        def persist():
+            r.path.write_text(json.dumps(r.state), encoding='utf-8')
+        with patch.object(r, 'save', side_effect=persist), patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}):
+            with self.assertRaises(WriteOutcomeError):
+                r.write('uncertain', 'comment', TEXT, 'urn:li:share:7000000000000000000')
+        restarted = self.runner(live=True)
+        restarted.write('uncertain', 'comment', TEXT, 'urn:li:share:7000000000000000000')
+        self.assertEqual(send.call_count, 1)
+        self.assertEqual(restarted.state['actions']['uncertain']['http_status'], 200)
+        self.assertEqual(restarted.counts['interaction'], 1)
+        self.assertNotIn('provider text', str(restarted.state))
+
+    @patch('automation.twin.requests.post')
+    def test_failed_ack_checkpoint_preserves_known_remote_success(self, send):
+        send.return_value = Mock(status_code=201)
+        send.return_value.json.return_value = {'success': True, 'postGroupId': 'group-123'}
+        r = self.runner(live=True)
+        with patch.object(r, 'save', side_effect=[None, RuntimeError('push failed')]), \
+             patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}):
+            with self.assertRaises(WriteCheckpointError):
+                r.write('scheduled', 'post', TEXT)
+            r.write('scheduled', 'post', TEXT)
+        self.assertEqual(send.call_count, 1)
+        self.assertEqual(r.state['actions']['scheduled']['status'], 'scheduled')
+        self.assertEqual(r.state['actions']['scheduled']['remote_id'], 'group-123')
+        self.assertEqual(r.state['posts'][0]['id'], 'group-123')
+
+    @patch('automation.twin.requests.post')
+    def test_uncertain_reaction_does_not_block_independent_post(self, send):
+        send.return_value = Mock(status_code=201)
+        send.return_value.json.return_value = {'success': True, 'postGroupId': 'new-post'}
+        r = self.runner(live=True)
+        r.state['actions']['old-reaction'] = {'kind': 'reaction', 'status': 'unknown-needs-reconciliation', 'text': 'LIKE'}
+        with patch.object(r, 'save'), patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}):
+            r.post()
+        self.assertEqual(send.call_count, 1)
+        self.assertEqual(r.state['actions']['post:' + r.day]['status'], 'scheduled')
+
+    def test_uncertain_reaction_quarantines_its_target_before_read_or_generation(self):
+        url = 'https://www.linkedin.com/feed/update/urn:li:share:7000000000000000000/'
+        r = self.runner()
+        r.policy = dict(POLICY, target_post_urls=[url])
+        key = 'reaction:comment:' + hashlib.sha256(url.encode()).hexdigest()
+        r.state['actions'][key] = {'kind': 'reaction', 'status': 'unknown-needs-reconciliation'}
+        reader = Mock()
+        r.generate = Mock()
+        r.interactions(reader)
+        reader.fetch_post.assert_not_called()
+        r.generate.assert_not_called()
     @patch('automation.twin.requests.get')
     def test_missing_secret_stops_before_network(self, get):
         with patch.dict(os.environ, {}, clear=True):
@@ -303,6 +427,58 @@ class DigitalTwinTests(unittest.TestCase):
             with self.assertRaisesRegex(LocalModelError, 'Local model server is unavailable') as caught:
                 model('task', {}, POLICY)
         self.assertNotIn('private data', str(caught.exception))
+
+    def test_public_format_cleanup_preserves_facts_and_named_tools(self):
+        draft = '## 🎨 **Design trade-offs**\n\nThe C# prototype cost $4,730 on 14 Feb.\n\n`Figma` made #Design reviews clearer. #ProductDesign #Startups\n\n#FoundingDesigner #BrandStrategy'
+        cleaned = normalize_public_text(draft)
+        self.assertEqual(cleaned, 'Design trade-offs\n\nThe C# prototype cost $4,730 on 14 Feb.\n\nFigma made Design reviews clearer.')
+
+    def test_invalid_short_post_and_long_comment_are_skipped_without_padding(self):
+        short = 'A truthful design observation. ' * 20
+        self.assertLess(len(short), 900)
+        result = validate_model_output({'text': short, 'skip': False}, 'post')
+        self.assertTrue(result['skip'])
+        self.assertEqual(result['text'], '')
+        self.assertTrue(validate_model_output({'text': short, 'skip': False}, 'comment')['skip'])
+
+    def test_checklist_output_is_skipped_instead_of_rewritten_into_claims(self):
+        draft = 'Design choices deserve context.\n\n1. ' + 'Discuss the trade-off with your team. ' * 28
+        self.assertTrue(validate_model_output({'text': draft, 'skip': False}, 'post')['skip'])
+
+    def test_local_compaction_retains_all_operational_skill_names_and_hard_rules(self):
+        full = skills('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-humanizer')
+        compact = compact_skill_context(full)
+        self.assertLess(len(compact), len(full))
+        for name in ('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-humanizer'):
+            self.assertIn('Skill: ' + name, compact)
+        self.assertIn('## Non-negotiable rules', compact)
+        self.assertIn('## Hard rules', compact)
+
+    @patch('automation.twin.requests.post')
+    def test_action_constraints_follow_skill_templates_and_use_text_length(self, post):
+        comment = ('A useful design review distinguishes a reversible interface choice from a product promise. '
+                   'That distinction helps an early team decide what to test quickly and what needs a clear owner before shipping.')
+        post.return_value.json.return_value = {'choices': [{'message': {'content': json.dumps({'text': comment, 'skip': False})}}]}
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-comment-drafter'), {'post': {'text': 'Product teams need ownership'}}, POLICY)
+        self.assertFalse(result['skip'])
+        prompt = post.call_args.kwargs['json']['messages'][0]['content']
+        self.assertGreater(prompt.rfind('FINAL OUTPUT REQUIREMENTS'), prompt.index('Skill: linkedin-comment-drafter'))
+        self.assertIn('200-350 characters in text', prompt)
+        self.assertNotIn('900-1300 characters', prompt[prompt.rfind('FINAL OUTPUT REQUIREMENTS'):])
+        self.assertEqual(post.call_count, 1)
+
+    @patch('automation.twin.requests.post')
+    def test_analysis_generation_avoids_post_style_and_length_requirements(self, post):
+        report = 'The available commenter headlines include product design and early-stage leadership. This supports audience relevance, but company size and consulting intent are unknown from the supplied records.'
+        post.return_value.json.return_value = {'choices': [{'message': {'content': json.dumps({'text': report, 'skip': False})}}]}
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-engager-analytics'), {'engagers': []}, POLICY)
+        self.assertFalse(result['skip'])
+        prompt = post.call_args.kwargs['json']['messages'][0]['content']
+        final_rules = prompt[prompt.rfind('FINAL OUTPUT REQUIREMENTS'):]
+        self.assertIn('audience-fit analysis', final_rules)
+        self.assertNotIn('900-1300', final_rules)
 
     def test_discovered_target_uses_existing_context_without_second_read(self):
         policy = {**POLICY, 'discovery_profiles':['source-designer'], 'target_post_urls': []}
