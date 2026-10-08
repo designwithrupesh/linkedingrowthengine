@@ -82,3 +82,10 @@ class DigitalTwinTests(unittest.TestCase):
             model('task', {}, POLICY)
         self.assertEqual(post.call_args.args[0], 'https://models.github.ai/inference/chat/completions')
         self.assertEqual(post.call_args.kwargs['json']['model'], 'openai/gpt-4.1')
+
+    @patch('automation.twin.requests.post')
+    def test_compatible_model_fenced_json(self, post):
+        post.return_value.json.return_value={'choices':[{'message':{'content':'```json\n{"text":"draft","skip":false}\n```'}, 'finish_reason':'stop'}]}
+        with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder'}):
+            result = model('task', {}, POLICY)
+        self.assertEqual(result['text'], 'draft')

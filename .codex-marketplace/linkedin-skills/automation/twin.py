@@ -74,7 +74,15 @@ def model(task, context, policy):
                             'temperature': 0.5, 'max_tokens': 900,
                             'response_format': {'type': 'json_object'}}, timeout=90)
     r.raise_for_status()
-    return json.loads(r.json()['choices'][0]['message']['content'])
+    print('Model response:', r.status_code, 'bytes:', len(r.content))
+    payload = r.json()
+    choice = payload['choices'][0]
+    content = choice['message'].get('content') or ''
+    print('Model output characters:', len(content), 'finish reason:',
+          choice.get('finish_reason') if choice.get('finish_reason') in ('stop', 'length', 'content_filter') else 'other')
+    # Some compatible providers wrap JSON in a Markdown fence.
+    content = re.sub(r'^```(?:json)?\s*|\s*```$', '', content.strip())
+    return json.loads(content)
 
 
 class Runner:
