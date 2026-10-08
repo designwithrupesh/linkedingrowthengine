@@ -38,7 +38,7 @@
     "2026-10-09": {
       "post": 1,
       "interaction": 0,
-      "read": 0
+      "read": 1
     },
     "2026-10-13": {
       "post": 1,
@@ -77,5 +77,6 @@
       "scheduled_for": "2026-10-14T03:30:00+00:00",
       "allocation_day": "2026-10-14"
     }
-  ]
+  ],
+  "discovery": {}
 }
