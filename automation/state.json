@@ -37,7 +37,7 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-10-08T19:04:15.162859+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:activity:7513701100856848385",
       "parent": null
     }
