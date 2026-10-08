@@ -15,11 +15,12 @@
       "kind": "post",
       "text": "Your onboarding makes a promise about your brand.\n\nA company may describe itself as simple, but its first-use experience can ask customers to make decisions they do not yet understand. That creates a useful design question: what does “simple” mean at this particular moment?\n\nFor me, brand strategy and product design belong in the same conversation. Positioning gives the team a direction. The product gives people a way to experience it.\n\nOne exercise I would use is to pick a word from the brand strategy and translate it into a product decision.\n\nIf the word is “clear,” what needs a better explanation? If it is “trusted,” what information does the user need before committing?\n\nThe answer should be visible in an interaction, a piece of copy, or the order in which information appears. It gives the team something concrete to review.\n\nMy work spans creative direction, brand strategy, and product design. I want to explore more of these connections here, especially for early-stage teams.\n\nWhich promise does your product need to make more tangible?",
       "at": "2026-10-08T19:01:51.180100+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-13T03:30:00+00:00",
-      "allocation_day": "2026-10-13"
+      "allocation_day": "2026-10-13",
+      "remote_id": "6ac7e8b588cd87066bbfd542"
     }
   },
   "days": {
@@ -43,6 +44,14 @@
       "at": "2026-10-08T19:01:51.180100+00:00",
       "scheduled_for": "2026-10-09T03:30:00+00:00",
       "allocation_day": "2026-10-09"
+    },
+    {
+      "id": "6ac7e8b588cd87066bbfd542",
+      "text": "Your onboarding makes a promise about your brand.\n\nA company may describe itself as simple, but its first-use experience can ask customers to make decisions they do not yet understand. That creates a useful design question: what does “simple” mean at this particular moment?\n\nFor me, brand strategy and product design belong in the same conversation. Positioning gives the team a direction. The product gives people a way to experience it.\n\nOne exercise I would use is to pick a word from the brand strategy and translate it into a product decision.\n\nIf the word is “clear,” what needs a better explanation? If it is “trusted,” what information does the user need before committing?\n\nThe answer should be visible in an interaction, a piece of copy, or the order in which information appears. It gives the team something concrete to review.\n\nMy work spans creative direction, brand strategy, and product design. I want to explore more of these connections here, especially for early-stage teams.\n\nWhich promise does your product need to make more tangible?",
+      "url": null,
+      "at": "2026-10-08T19:01:51.180100+00:00",
+      "scheduled_for": "2026-10-13T03:30:00+00:00",
+      "allocation_day": "2026-10-13"
     }
   ]
 }
