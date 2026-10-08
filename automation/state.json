@@ -4,11 +4,12 @@
       "kind": "post",
       "text": "A product can look finished while its most important decision is still unresolved.\n\nThe homepage says who it is for. The onboarding asks for information. The dashboard presents a set of actions. Somewhere between those screens, the user has to understand what to do next and why it is worth doing.\n\nThat is the part of design I want to talk about more here.\n\nMy background spans product design, creative direction, brand strategy, and startup founding. I’m interested in how those disciplines inform the decisions an early team makes.\n\nFor a product review, I would start with one task: follow a new user from the first promise to the first useful outcome. Write down every point where the next step needs an explanation. Then ask which of those explanations belongs in the experience itself.\n\nIt is a practical starting point for a conversation between a founder and a designer. It gives us something specific to examine before deciding what to redesign.\n\nWhere does a new user need the most help understanding your product today?",
       "at": "2026-10-08T19:01:51.180100+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-09T03:30:00+00:00",
-      "allocation_day": "2026-10-09"
+      "allocation_day": "2026-10-09",
+      "remote_id": "6ac7e8a8c50baf8aea281621"
     }
   },
   "days": {
@@ -19,5 +20,14 @@
     }
   },
   "reports": [],
-  "posts": []
+  "posts": [
+    {
+      "id": "6ac7e8a8c50baf8aea281621",
+      "text": "A product can look finished while its most important decision is still unresolved.\n\nThe homepage says who it is for. The onboarding asks for information. The dashboard presents a set of actions. Somewhere between those screens, the user has to understand what to do next and why it is worth doing.\n\nThat is the part of design I want to talk about more here.\n\nMy background spans product design, creative direction, brand strategy, and startup founding. I’m interested in how those disciplines inform the decisions an early team makes.\n\nFor a product review, I would start with one task: follow a new user from the first promise to the first useful outcome. Write down every point where the next step needs an explanation. Then ask which of those explanations belongs in the experience itself.\n\nIt is a practical starting point for a conversation between a founder and a designer. It gives us something specific to examine before deciding what to redesign.\n\nWhere does a new user need the most help understanding your product today?",
+      "url": null,
+      "at": "2026-10-08T19:01:51.180100+00:00",
+      "scheduled_for": "2026-10-09T03:30:00+00:00",
+      "allocation_day": "2026-10-09"
+    }
+  ]
 }
