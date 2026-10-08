@@ -75,6 +75,20 @@ class DigitalTwinTests(unittest.TestCase):
         with patch.dict(os.environ, {'PUBLORA_API_KEY':'test-placeholder','GITHUB_TOKEN':'test-placeholder'}):
             with self.assertRaises(RuntimeError):
                 preflight(POLICY)
+    @patch('automation.twin.requests.get')
+    def test_discover_published_uses_post_id_path_and_saves_permalink(self, get):
+        url = 'https://www.linkedin.com/feed/update/urn:li:share:7000000000000000000/'
+        get.return_value.json.return_value = {'posts': [{'permalink': url}]}
+        r = self.runner()
+        r.state['posts'].append({'id': 'group/with?reserved#characters', 'url': None})
+        with patch.dict(os.environ, {'PUBLORA_API_KEY': 'test-placeholder'}):
+            r.discover_published()
+        get.assert_called_once_with(
+            'https://api.publora.com/api/v1/get-post/group%2Fwith%3Freserved%23characters',
+            headers={'x-publora-key': 'test-placeholder'}, timeout=30)
+        get.return_value.raise_for_status.assert_called_once_with()
+        saved = json.loads(self.path.read_text(encoding="utf-8"))
+        self.assertEqual(saved['posts'][0]['url'], url)
     @patch('automation.twin.requests.post')
     def test_empty_model_variables_use_defaults(self, post):
         post.return_value.json.return_value={'choices':[{'message':{'content':'{"skip":true}'}}]}

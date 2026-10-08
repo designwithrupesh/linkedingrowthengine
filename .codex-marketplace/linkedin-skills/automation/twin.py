@@ -10,6 +10,7 @@ import re
 from pathlib import Path
 import subprocess
 from datetime import datetime, timedelta, timezone
+from urllib.parse import quote
 from zoneinfo import ZoneInfo
 import requests
 from lib.url_parser import parse_linkedin_url, build_parent_comment_urn
@@ -240,8 +241,8 @@ class Runner:
         for post in self.state['posts'][-3:]:
             if post.get('url'):
                 continue
-            r = requests.get('https://api.publora.com/api/v1/get-post',
-                             params={'postGroupId': post['id']},
+            post_id = quote(str(post['id']), safe='')
+            r = requests.get('https://api.publora.com/api/v1/get-post/' + post_id,
                              headers={'x-publora-key': os.environ['PUBLORA_API_KEY']}, timeout=30)
             r.raise_for_status()
             def find(node):
