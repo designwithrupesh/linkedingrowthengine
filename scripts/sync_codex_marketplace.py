@@ -30,6 +30,8 @@ PATHS_TO_COPY = [
     "requirements-lock.txt",
     ".env.example",
     "LICENSE",
+    "docs",
+    "automation",
 ]
 
 

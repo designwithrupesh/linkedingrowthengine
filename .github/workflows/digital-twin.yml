@@ -7,7 +7,7 @@ on:
       mode:
         description: Run mode
         type: choice
-        options: [demo, live]
+        options: [demo, preview, live]
         default: demo
 permissions:
   contents: write
@@ -36,6 +36,14 @@ jobs:
       - name: Offline preview
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'demo'
         run: python -m automation.twin --demo --state /tmp/twin-preview.json
+      - name: Verify real model generation without publishing
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'preview'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+          MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
+          MODEL_NAME: ${{ vars.MODEL_NAME }}
+        run: python -m automation.twin --preview --state /tmp/twin-model-preview.json
       - name: Run autonomous workflow
         if: github.event_name == 'schedule' || inputs.mode == 'live'
         env:
