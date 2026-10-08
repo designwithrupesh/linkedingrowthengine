@@ -19,6 +19,11 @@ jobs:
   twin:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
+      MODEL_NAME: ${{ vars.MODEL_NAME }}
+      TWIN_MODEL_DIR: ${{ github.workspace }}/testing/local-model
+      NO_PROXY: 127.0.0.1,localhost
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -33,6 +38,26 @@ jobs:
         run: |
           git config user.name 'Sergey Bulaev'
           git config user.email 's@bulaev.org'
+      - name: Cache verified free CPU model
+        if: >-
+          vars.MODEL_ENDPOINT == '' &&
+          ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
+          ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            testing/local-model/llama-b11512-bin-ubuntu-x64.tar.gz
+            testing/local-model/Qwen3-1.7B-Q8_0.gguf
+          key: twin-cpu-qwen3-1.7b-q8-90862c4b-llama-b11512-${{ runner.os }}-${{ runner.arch }}
+      - name: Start verified free CPU model
+        if: >-
+          vars.MODEL_ENDPOINT == '' &&
+          ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
+          ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
+        run: |
+          bash automation/start_local_model.sh
+          echo 'MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions' >> "$GITHUB_ENV"
+          echo 'MODEL_NAME=twin-local' >> "$GITHUB_ENV"
       - name: Offline preview
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'demo'
         run: python -m automation.twin --demo --state /tmp/twin-preview.json
@@ -41,8 +66,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
-          MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
-          MODEL_NAME: ${{ vars.MODEL_NAME }}
         run: python -m automation.twin --preview --state /tmp/twin-model-preview.json
       - name: Run autonomous workflow
         if: github.event_name == 'schedule' || inputs.mode == 'live'
@@ -51,14 +74,12 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
           MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
-          MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
-          MODEL_NAME: ${{ vars.MODEL_NAME }}
-          TWIN_LIVE: ${{ vars.TWIN_LIVE }}
-          TWIN_READ_ENABLED: ${{ vars.TWIN_READ_ENABLED }}
+          TWIN_LIVE: ${{ vars.TWIN_LIVE || 'true' }}
+          TWIN_READ_ENABLED: ${{ vars.TWIN_READ_ENABLED || 'true' }}
           TWIN_CHECKPOINT_GIT: 'true'
         run: |
           if [ "$TWIN_LIVE" != 'true' ]; then
-            echo 'Live execution is not enabled. Set repository variable TWIN_LIVE=true after adding secrets.'
+            echo 'Live execution is paused by TWIN_LIVE. Set it to true or remove it to resume.'
             exit 0
           fi
           python -m automation.twin
@@ -69,7 +90,7 @@ jobs:
             python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json
           from pathlib import Path
-          s = json.loads(Path('automation/state.json').read_text())
+          s = json.loads(Path('automation/state.json').read_text(encoding='utf-8'))
           print('## Digital twin activity')
           for day, counts in s['days'].items():
               print(f'- {day}: {counts}')

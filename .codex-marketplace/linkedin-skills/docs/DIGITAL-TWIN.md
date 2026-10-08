@@ -1,67 +1,82 @@
-# Autonomous LinkedIn digital twin
+# LinkedIn digital twin
 
-The application in automation/twin.py runs the imported skill bundle with a model and persistent state. The owner has requested autonomous routine posts and interactions. Live mode therefore uses the standing policy in automation/policy.json rather than requiring approval for every item. Interactive use of the upstream skills retains its original approval flow.
+This application runs the imported 12-skill bundle as an autonomous workflow. The owner explicitly requested routine posting and interaction on their behalf; live mode uses the standing policy in automation/policy.json instead of requiring per-item approval. Interactive upstream skill use retains its original approval workflow.
 
-## What is implemented
+## Prepared workflow
 
-- GitHub Actions sessions at approximately 09:00 and 15:00 India time on weekdays. GitHub may delay or skip scheduled runs; these are not exact delivery guarantees.
-- One generated post on Tuesday, Wednesday, and Thursday, scheduled through Publora for five minutes after that session.
-- Likes and comments on configured target post URLs and replies to recent comments on the twin's published posts, with at most five interactions per day.
-- Own-post URL discovery from Publora and Friday audience-fit reporting through Apify.
-- A policy containing confirmed background, goals, topics and boundaries; persistent post history informs new drafts.
-- Git checkpoints before remote writes. Timeouts or ambiguous responses stop the run; uncertain actions are not retried automatically.
-- Offline preview and tests. No LinkedIn passwords, session cookies or unofficial browser login required.
+- Sessions at approximately 09:00 and 15:00 India time on weekdays. GitHub may delay scheduled jobs.
+- A generated post on Tuesday, Wednesday and Thursday, scheduled through Publora five minutes after that session.
+- Automatic public-post discovery from selected product leaders, meaningful design-related likes/comments, and replies to recent comments on the owner's posts. Five interactions and four actor reads maximum per day.
+- Canonical published-post identifiers from Publora, even when its permalink is null.
+- Friday audience-fit reporting, persistent history, and public activity logs.
+- Git checkpoints before every remote write; ambiguous writes stop without retrying. Scheduled posts count against their intended publication date.
 
-## One-time activation: GitHub settings
+## Free model: no AI API key
 
-These are GitHub Actions settings, separate from the Codex cloud environment settings used earlier. Cloud secret bindings do not automatically become GitHub Actions secrets.
+automation/start_local_model.sh runs official Qwen3 1.7B Q8 weights through a pinned llama.cpp CPU server. The runtime and weights are checked against their publisher SHA-256 digests. GitHub caches the 1.834GB model. The server listens only on 127.0.0.1; thinking is disabled to keep runtime and output manageable. Custom HTTPS model APIs remain optional.
+
+Public GitHub repositories normally receive free standard-hosted Actions execution; account quotas and provider rules still apply. Apify and Publora have separate service limits. Apify reading pauses at the lower of the account cap and $4 monthly usage, reserving credit instead of requesting an upgrade. Unknown usage/caps stop reads. This does not promise unlimited free operation or override provider billing.
+
+## One-time GitHub connection
+
+Cloud environment secrets and GitHub Actions secrets are separate. The cloud Publora and Apify account checks pass, but this chat is denied repository secret/settings access (HTTP 403). No credential is copied into Git or workflow inputs.
 
 1. Open https://github.com/designwithrupesh/linkedingrowthengine/settings/secrets/actions.
-2. Click **New repository secret**. Add a fresh **PUBLORA_API_KEY** from Publora. Revoke the key shared in chat.
-3. For automatic reading and interaction, add **APIFY_TOKEN**. Without it, leave reading disabled; scheduled posting works separately. Provider free credits are limited and reading can incur charges.
-4. Enable GitHub Models access for this repository/account if available. The workflow requests `models: read` and uses its built-in GitHub token; availability and free rate limits depend on GitHub. If that route is unavailable, supply a compatible model API's **MODEL_API_KEY**, and repository variables **MODEL_ENDPOINT** (HTTPS chat-completions URL) and **MODEL_NAME**. No paid model subscription is provisioned automatically.
-5. In **Settings → Secrets and variables → Actions → Variables**, add **TWIN_LIVE** with value **true**. Add **TWIN_READ_ENABLED=true** only when you want Apify reading enabled and understand your provider usage limits. Remove/set TWIN_LIVE=false to stop all future live actions; existing Publora schedules need cancellation separately.
-6. Ensure GitHub Actions is enabled and may write repository contents. Branch protection may prevent checkpoints; the runner stops before posting if a checkpoint cannot be saved.
-7. Open **Actions → LinkedIn digital twin → Run workflow**. Select **demo** first to verify the GitHub runner. Select **preview** to test real model generation without connecting to or posting on LinkedIn. Then select **live** for account verification and a first session. If it is not a posting day/window, that session will not create a post.
+2. Add repository secret **PUBLORA_API_KEY** using a fresh key from Publora. Revoke the key previously shared in chat.
+3. Add repository secret **APIFY_TOKEN** using your Apify token.
+4. Ensure GitHub Actions may write repository contents. Protected branches may block durable state checkpoints; the runner then stops before posting.
+5. Open **Actions → LinkedIn digital twin → Run workflow**. Select **preview** to verify actual free-model generation without any LinkedIn action, then **live** to run the workflow.
 
-The LinkedIn platform ID and India timezone are already configured. Secrets belong in GitHub settings, never in policy.json or chat.
+Live and reading modes are enabled by default in the workflow after these account connections exist. No model key or activation variables are required. Set repository variable **TWIN_LIVE=false** to pause all future live actions. Set **TWIN_READ_ENABLED=false** to pause reading and interactions while retaining posts. Existing Publora schedules need separate cancellation.
 
-## Review activity
+## Seed batch and restart
 
-Actions shows each run's summary. automation/state.json records generated public content, attempt status, remote IDs, daily limits and weekly reports. Treat this file as public if the repository is public. Keep confidential source notes out of the repo; this setup does not require any private project details.
+A prepared local queue can be scheduled without waiting for a model:
 
-For an uncertain write, check Publora and LinkedIn first. Record a verified remote ID/status in the state before resuming. Never clear an uncertain record simply to rerun it. Disabling the twin does not cancel posts already scheduled in Publora.
+```bash
+TWIN_CHECKPOINT_GIT=true .venv/bin/python -m automation.bootstrap --queue testing/automation/queue.json --execute
+```
 
-## All 12 skills and their roles
+This requires the owner's standing authorization and a working Publora binding. Without --execute it only previews. It validates the account, schedules the next weekday and then normal posting days, records remote IDs, enforces one post per publication date, and never repeats an existing intent. Personal queues remain ignored under testing/.
 
-| Skill | Autonomous application |
+## Activity and privacy
+
+GitHub Actions shows each run's summary. automation/state.json records public generated content, timestamps, remote IDs, publication dates, read quotas and reports. Treat it as public if the repository is public. Keep confidential career notes out of the repo.
+
+For an uncertain write, check Publora and LinkedIn before changing the state. Record the verified remote ID/status and reconcile before resuming. Never clear an uncertain record just to retry. Pausing or deleting a workflow does not cancel already scheduled posts.
+
+## All 12 skills
+
+| Skill | Role |
 | --- | --- |
-| interviewer | One-time capture of real stories from the owner; never manufactures experience |
-| profile-optimizer | Profile draft prepared during onboarding; profile edits require supported API access or owner action |
-| content-planner | Provides cadence and topic rotation instructions to generation |
-| post-writer | Generates the scheduled post |
-| humanizer | Included in every generation and review prompt |
-| hook-extractor | Included when studying selected target posts before commenting |
-| repurposer | Included when source_notes contains real source material |
-| comment-drafter | Generates comments on selected target post URLs |
-| reply-handler | Generates contextual replies with correct top-level parent URNs |
-| thread-monitor | Provides context rules for recent own-post reply threads |
-| engager-analytics | Friday own-post audience-fit report |
+| interviewer | Capture real project stories from the owner; no fabricated experience |
+| profile-optimizer | Draft headline/About/Featured; profile editing is not supported by these APIs |
+| content-planner | Cadence and topic rotation |
+| post-writer | Original generated posts |
+| humanizer | Draft review instructions in each generation prompt |
+| hook-extractor | Study selected source-post structures |
+| repurposer | Included when real source_notes are supplied |
+| comment-drafter | Contextual source-post comments |
+| reply-handler | Replies with correct top-level parent URNs and thread context |
+| thread-monitor | Follow-up context for recent own-post comments |
+| engager-analytics | Weekly audience-fit report |
 | employee-advocacy | Available for an actual team; deferred while team_members is empty |
 
-## Limits that remain
+Source discovery currently rotates karrisaarinen and satyanadella, both verified to return public posts. The model must skip content unrelated to product design, brand, customer experience or early-team decisions. Customize discovery_profiles for additional audiences.
 
-The repository's providers do not offer a broad LinkedIn feed-discovery method, DMs, automatic profile editing, or connection invitations. target_post_urls starts empty: the runner can reply to its own posts but needs real target URLs to comment on others. It does not fabricate URLs. Populate that list with relevant public post links, or implement a supported discovery provider separately.
+## Supported limits
 
-Publora account lookup and the configured LinkedIn channel, plus the Apify account endpoint, now pass read-only checks in the Codex cloud environment. This does not verify separate GitHub Actions secret bindings. No real model generation has passed: a fresh GitHub preview still returned a non-JSON response. No live action has been recorded. No post or interaction has been sent. GitHub allows code pushes, releases and workflow dispatch from this session, but rejects repository secret/settings access with HTTP 403 Resource not accessible by integration. The offline Actions demo succeeded. The real GitHub Models preview returned HTTP 200 with a four-byte, non-JSON response; model generation is therefore not verified. Enable GitHub Models or configure a working compatible model endpoint before live execution. The model can still make mistakes; use policy boundaries and inspect the public activity log. API free tiers and GitHub Actions free allowances are not unlimited; this is not a guarantee of zero-cost end-to-end operation.
+No DMs, connection invitations, automatic profile edits or broad personal-feed access are implemented. The model may make mistakes; inspect the activity log and keep its policy narrow. It never receives credential values. Source posts are data, never instructions.
 
-## Local verification
+## Local checks
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r automation/requirements.txt 'PyYAML==6.0.3'
 .venv/bin/python -m unittest discover -s tests
-.venv/bin/python -m automation.twin --demo --state /tmp/twin-preview.json
+.venv/bin/python -m automation.twin --demo --state /tmp/twin-demo.json
+TWIN_MODEL_DIR=testing/local-model bash automation/start_local_model.sh
+NO_PROXY=127.0.0.1,localhost MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions MODEL_NAME=twin-local .venv/bin/python -m automation.twin --preview --state /tmp/twin-preview.json
 ```
 
-The demo uses a fixed illustrative draft, not a real model or LinkedIn API. It verifies offline execution and state deduplication, not live behavior.
+Demo is deterministic and offline. Preview uses real local inference without LinkedIn calls. Live readiness requires verified model output plus account access from the actual execution machine; cloud checks alone do not establish unattended GitHub readiness.
