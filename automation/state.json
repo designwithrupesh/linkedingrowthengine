@@ -26,11 +26,12 @@
       "kind": "post",
       "text": "A founding designer helps a team decide what deserves to be designed next.\n\nThat is the kind of role I’m interested in exploring.\n\nI bring experience across product design, creative direction, brand strategy, and startup founding. I want to work closely with founders while the product and the company are still taking shape.\n\nThe work that interests me starts with understanding the problem. What is the customer trying to accomplish? What does the team believe, and what evidence might change that belief?\n\nFrom there, a prototype can make an uncertain idea easier to discuss. A product flow can make a constraint visible. A brand decision can clarify the audience the team is choosing to serve.\n\nI’m also building my consulting practice around this intersection of brand and product. The exact scope should follow the problem the team needs help with.\n\nI’ll use this space to share my thinking and, where I can discuss them publicly, the decisions behind my work.\n\nIf you’re building an early-stage team, what would you want your first designer to take ownership of?",
       "at": "2026-10-08T19:01:51.180100+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-14T03:30:00+00:00",
-      "allocation_day": "2026-10-14"
+      "allocation_day": "2026-10-14",
+      "remote_id": "6ac7e8c088cd87066bbfd63c"
     }
   },
   "days": {
@@ -67,6 +68,14 @@
       "at": "2026-10-08T19:01:51.180100+00:00",
       "scheduled_for": "2026-10-13T03:30:00+00:00",
       "allocation_day": "2026-10-13"
+    },
+    {
+      "id": "6ac7e8c088cd87066bbfd63c",
+      "text": "A founding designer helps a team decide what deserves to be designed next.\n\nThat is the kind of role I’m interested in exploring.\n\nI bring experience across product design, creative direction, brand strategy, and startup founding. I want to work closely with founders while the product and the company are still taking shape.\n\nThe work that interests me starts with understanding the problem. What is the customer trying to accomplish? What does the team believe, and what evidence might change that belief?\n\nFrom there, a prototype can make an uncertain idea easier to discuss. A product flow can make a constraint visible. A brand decision can clarify the audience the team is choosing to serve.\n\nI’m also building my consulting practice around this intersection of brand and product. The exact scope should follow the problem the team needs help with.\n\nI’ll use this space to share my thinking and, where I can discuss them publicly, the decisions behind my work.\n\nIf you’re building an early-stage team, what would you want your first designer to take ownership of?",
+      "url": null,
+      "at": "2026-10-08T19:01:51.180100+00:00",
+      "scheduled_for": "2026-10-14T03:30:00+00:00",
+      "allocation_day": "2026-10-14"
     }
   ]
 }
