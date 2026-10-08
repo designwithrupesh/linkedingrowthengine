@@ -1,0 +1,2 @@
+-r ../requirements-lock.txt
+tzdata==2026.5

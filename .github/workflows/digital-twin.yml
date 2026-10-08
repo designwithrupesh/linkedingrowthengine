@@ -1,0 +1,70 @@
+name: LinkedIn digital twin
+on:
+  schedule:
+    - cron: '30 3,9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run mode
+        type: choice
+        options: [demo, live]
+        default: demo
+permissions:
+  contents: write
+  models: read
+concurrency:
+  group: linkedin-digital-twin
+  cancel-in-progress: false
+jobs:
+  twin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install locked runtime
+        run: python -m pip install -r automation/requirements.txt
+      - name: Configure state checkpoints
+        run: |
+          git config user.name 'Sergey Bulaev'
+          git config user.email 's@bulaev.org'
+      - name: Offline preview
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'demo'
+        run: python -m automation.twin --demo --state /tmp/twin-preview.json
+      - name: Run autonomous workflow
+        if: github.event_name == 'schedule' || inputs.mode == 'live'
+        env:
+          PUBLORA_API_KEY: ${{ secrets.PUBLORA_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+          MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
+          MODEL_NAME: ${{ vars.MODEL_NAME }}
+          TWIN_LIVE: ${{ vars.TWIN_LIVE }}
+          TWIN_READ_ENABLED: ${{ vars.TWIN_READ_ENABLED }}
+          TWIN_CHECKPOINT_GIT: 'true'
+        run: |
+          if [ "$TWIN_LIVE" != 'true' ]; then
+            echo 'Live execution is not enabled. Set repository variable TWIN_LIVE=true after adding secrets.'
+            exit 0
+          fi
+          python -m automation.twin
+      - name: Activity summary
+        if: always()
+        run: |
+          if [ -f automation/state.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          s = json.loads(Path('automation/state.json').read_text())
+          print('## Digital twin activity')
+          for day, counts in s['days'].items():
+              print(f'- {day}: {counts}')
+          print('Inspect automation/state.json for content and action status. Ambiguous writes are never retried automatically.')
+          PY
+          fi

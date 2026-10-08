@@ -1,3 +1,7 @@
+# LinkedIn Growth Engine
+
+An autonomous runner is implemented in `automation/` and scheduled by GitHub Actions. See [digital twin activation and capabilities](docs/DIGITAL-TWIN.md). Live execution needs account connections; it is not activated by cloning this repository. The imported 12-skill bundle and original attribution follow below.
+
 <p align="center">
   <img src="assets/linkedin-skills-hero.png" alt="12 Claude Code and Codex skills for LinkedIn marketing — open source, MIT licensed" width="900" />
 </p>
