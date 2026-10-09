@@ -121,14 +121,23 @@
       "http_status": 201,
       "remote_id": "7514358060644147200",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:4385b0b72b60927527e248b98e48ba38a3be0ab3edfe2b4954a3662be2aeb443": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-09T16:14:33.834666+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7514024372920262656",
+      "parent": null
     }
   },
   "days": {
     "2026-10-09": {
       "post": 1,
-      "interaction": 5,
+      "interaction": 6,
       "read": 6,
-      "reply": 1
+      "reply": 1,
+      "public_interaction": 6
     },
     "2026-10-13": {
       "post": 1,
@@ -197,8 +206,8 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 2,
-    "last_status": "daily-budget-exhausted"
+    "profile_cursor": 3,
+    "last_status": "ok"
   },
   "reply_monitor": {
     "posts": {
@@ -241,6 +250,98 @@
   "engagement": {
     "profile_checked_at": {
       "lennyrachitsky": "2026-10-09T16:14:33.834666+00:00"
-    }
+    },
+    "targets": [
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514024464032940032/",
+        "urn": "urn:li:ugcPost:7514024372920262656",
+        "shareUrn": "urn:li:ugcPost:7514024372920262656",
+        "text": "Linear CEO Karri Saarinen: \"Making products produces two things: the product, and the learning.\n\nThe effort you put into building and designing things teaches you something about what the problem is, what the customers want.\n\nWe're in this time now that there's this danger of losing that direct connection with the learning.\"",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-08T18:10:36.049000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7514024464032940032",
+          "urn:li:ugcPost:7514024372920262656"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513648398735028224/",
+        "urn": "urn:li:ugcPost:7513648319177420800",
+        "shareUrn": "urn:li:ugcPost:7513648319177420800",
+        "text": "Linear CEO, Karri Saarinen: \"I took a break this summer from paying attention to AI. I thought that when I came back, I'd feel left behind. But when I came back, I realized that nothing has really changed.\n\nThere's new models, there's new techniques, there's new agents. But in the end, making great products, increasing revenue, and building the business—it's still hard. \n\nIt's clear the tools are getting better, you can do more, you can do it faster. But I think the more important question is: are we actually making better things with these tools? Are our teams getting better with these tools? \n\nI don't think that answer is clearly yes. \n\nThere's a lot of emphasis now on toolmaking and using tools and building systems. But I think in the end, as product people, our job is to make something great.\"\n\nWatch the full talk here: https://lnkd.in/g4V-Hz4g",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-07T17:16:15.095000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7513648398735028224",
+          "urn:li:ugcPost:7513648319177420800"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513338457843314689/",
+        "urn": "urn:li:share:7513338456849207297",
+        "shareUrn": "urn:li:share:7513338456849207297",
+        "text": "Trend I'm following: Teams using AI \"simulations\" to quickly test product ideas, flow tweaks, and copy changes.\n\nProducts like Simile, Primitive Labs, Tenera, Seldon, Synthetic Users, and others.\n\nIf you've tried something like this, what did you try, and how'd it go?",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-06T20:44:39.428000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7513338457843314689",
+          "urn:li:share:7513338456849207297"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513270088305733633/",
+        "urn": "urn:li:ugcPost:7513269921741545472",
+        "shareUrn": "urn:li:ugcPost:7513269921741545472",
+        "text": "Me: \"I've been arguing for a long time that PMs are going to thrive in this AI era.\"\n\nTibo (Head of ChatGTP & Codex): \"I agree.\"\n\nFull conversation: https://lnkd.in/guMJ_ziU",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-06T16:12:58.860000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7513270088305733633",
+          "urn:li:ugcPost:7513269921741545472"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513009752134766592/",
+        "urn": "urn:li:ugcPost:7513009691497553921",
+        "shareUrn": "urn:li:ugcPost:7513009691497553921",
+        "text": "Head of ChatGPT and Codex Thibault Sottiaux: \"How we work is still going to continue to change quite radically.\"",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-05T22:58:29.880000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7513009752134766592",
+          "urn:li:ugcPost:7513009691497553921"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      }
+    ]
   }
 }
