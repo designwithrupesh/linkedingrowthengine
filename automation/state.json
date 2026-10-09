@@ -25,14 +25,15 @@
     },
     "post:2026-10-14": {
       "kind": "post",
-      "text": "A founding designer helps a team decide what deserves to be designed next.\n\nThat is the kind of role I’m interested in exploring.\n\nI bring experience across product design, creative direction, brand strategy, and startup founding. I want to work closely with founders while the product and the company are still taking shape.\n\nThe work that interests me starts with understanding the problem. What is the customer trying to accomplish? What does the team believe, and what evidence might change that belief?\n\nFrom there, a prototype can make an uncertain idea easier to discuss. A product flow can make a constraint visible. A brand decision can clarify the audience the team is choosing to serve.\n\nI’m also building my consulting practice around this intersection of brand and product. The exact scope should follow the problem the team needs help with.\n\nI’ll use this space to share my thinking and, where I can discuss them publicly, the decisions behind my work.\n\nIf you’re building an early-stage team, what would you want your first designer to take ownership of?",
+      "text": "I'm looking for founding designer opportunities and building a consulting practice around product design and brand strategy.\n\nI've worked across creative direction, product design, startup founding, and brand strategy. I want to bring that mix to early teams while there's still room to question the brief.\n\nThe first conversation I'd want to have is about the customer. What are they trying to do? Where are they getting stuck? What does the team already know, and what are we guessing?\n\nA rough prototype can give that conversation something concrete. Walk through it together and notice where you disagree. Those moments can tell you what to test next.\n\nIf you're looking for a founding designer or considering outside design help, tell me which product decision your team is wrestling with. We can start there.",
       "at": "2026-10-08T19:01:51.180100+00:00",
       "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-14T03:30:00+00:00",
       "allocation_day": "2026-10-14",
-      "remote_id": "6ac7e8c088cd87066bbfd63c"
+      "remote_id": "6ac7e8c088cd87066bbfd63c",
+      "content_revision_sha256": "66a07e87f596001241e2af889fb94f64f476904d3e2a206c185e71f8993cab94"
     },
     "reaction:comment:960d370419fc1feac66c5ab0950f513a7b57766334228f61cbdd5a74cee81aca": {
       "kind": "reaction",
@@ -207,8 +208,11 @@
       "post_group_id": "6ac7e8c088cd87066bbfd63c",
       "text": "I'm looking for founding designer opportunities and building a consulting practice around product design and brand strategy.\n\nI've worked across creative direction, product design, startup founding, and brand strategy. I want to bring that mix to early teams while there's still room to question the brief.\n\nThe first conversation I'd want to have is about the customer. What are they trying to do? Where are they getting stuck? What does the team already know, and what are we guessing?\n\nA rough prototype can give that conversation something concrete. Walk through it together and notice where you disagree. Those moments can tell you what to test next.\n\nIf you're looking for a founding designer or considering outside design help, tell me which product decision your team is wrestling with. We can start there.",
       "at": "2026-10-09T16:31:00.581589+00:00",
-      "status": "inflight",
-      "original_content_sha256": "1e3bef7f4379af7c0652e207cbb26f90f832205c92481813a41dd4094663d0a0"
+      "status": "sent",
+      "original_content_sha256": "1e3bef7f4379af7c0652e207cbb26f90f832205c92481813a41dd4094663d0a0",
+      "http_status": 200,
+      "remote_id": "6ac7e8c088cd87066bbfd63c",
+      "reason": "Replacement copy and unchanged schedule verified by GET"
     }
   },
   "days": {
@@ -262,7 +266,7 @@
     },
     {
       "id": "6ac7e8c088cd87066bbfd63c",
-      "text": "A founding designer helps a team decide what deserves to be designed next.\n\nThat is the kind of role I’m interested in exploring.\n\nI bring experience across product design, creative direction, brand strategy, and startup founding. I want to work closely with founders while the product and the company are still taking shape.\n\nThe work that interests me starts with understanding the problem. What is the customer trying to accomplish? What does the team believe, and what evidence might change that belief?\n\nFrom there, a prototype can make an uncertain idea easier to discuss. A product flow can make a constraint visible. A brand decision can clarify the audience the team is choosing to serve.\n\nI’m also building my consulting practice around this intersection of brand and product. The exact scope should follow the problem the team needs help with.\n\nI’ll use this space to share my thinking and, where I can discuss them publicly, the decisions behind my work.\n\nIf you’re building an early-stage team, what would you want your first designer to take ownership of?",
+      "text": "I'm looking for founding designer opportunities and building a consulting practice around product design and brand strategy.\n\nI've worked across creative direction, product design, startup founding, and brand strategy. I want to bring that mix to early teams while there's still room to question the brief.\n\nThe first conversation I'd want to have is about the customer. What are they trying to do? Where are they getting stuck? What does the team already know, and what are we guessing?\n\nA rough prototype can give that conversation something concrete. Walk through it together and notice where you disagree. Those moments can tell you what to test next.\n\nIf you're looking for a founding designer or considering outside design help, tell me which product decision your team is wrestling with. We can start there.",
       "url": null,
       "at": "2026-10-08T19:01:51.180100+00:00",
       "scheduled_for": "2026-10-14T03:30:00+00:00",
