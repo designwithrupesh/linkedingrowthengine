@@ -93,7 +93,7 @@ class ApifyAiTests(unittest.TestCase):
                         headers = apify_ai.authorization_headers(self.endpoint, self.config)
                         self.assertEqual(headers['Authorization'], 'Bearer test-apify-placeholder')
                     else:
-                        with self.assertRaisesRegex(apify_ai.ApifyModelError, 'free-credit reserve'):
+                        with self.assertRaisesRegex(apify_ai.ApifyBudgetError, 'configured budget or account limits'):
                             apify_ai.authorization_headers(self.endpoint, self.config)
                     reader._session.get.assert_called_once_with(
                         'https://api.apify.com/v2/users/me/limits',

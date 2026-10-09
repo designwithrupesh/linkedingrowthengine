@@ -9,7 +9,31 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from automation.twin import Runner, flatten_comments, preflight, model, main, LocalModelError, ModelConfigurationError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, normalize_public_text, validate_model_output, skills, compact_skill_context
 
-POLICY = {**json.loads(Path('automation/policy.json').read_text(encoding="utf-8")), 'discovery_profiles': []}
+# Preserve the original single-slot/shared-interaction contracts independently
+# of the owner's current, expanded live policy. New cadence and reply limits
+# have their own integration coverage in test_expanded_runner.py.
+POLICY = {
+    'timezone': 'Asia/Calcutta',
+    'platform_id': 'linkedin-tYCSPeVNvi',
+    'profile_url': 'https://www.linkedin.com/in/therupeshkumar/',
+    'background': ['creative direction', 'product design', 'startup founding', 'brand strategy'],
+    'goals': ['consulting clients', 'personal brand', 'founding designer roles'],
+    'audience': 'early-stage founders and product leaders',
+    'topics': ['product design decisions', 'brand strategy in product experiences'],
+    'posting_days': [0, 1, 2, 3, 4],
+    'posting_hour': 9,
+    'max_posts_per_day': 1,
+    'max_interactions_per_day': 5,
+    'max_read_calls_per_day': 4,
+    'target_post_urls': [],
+    'source_notes': [],
+    'team_members': [],
+    'authorization': 'Owner authorized routine design content and contextual comments/replies.',
+    'boundaries': 'Do not invent career stories, clients, metrics, quotes or commitments.',
+    'react_to_target_posts': True,
+    'discovery_profiles': [],
+    'free_read_credit_reserve_usd': 1,
+}
 NOW = datetime(2026, 10, 13, 3, 30, tzinfo=timezone.utc)
 TEXT = 'A concrete design observation.'
 
@@ -17,6 +41,7 @@ class DigitalTwinTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.path = Path(self.temp.name) / 'state.json'
+        self.enterContext(patch.dict(os.environ, {'INTERACTION_MODEL_ENDPOINT': ''}))
     def tearDown(self):
         self.temp.cleanup()
     def runner(self, **kw):
@@ -491,7 +516,7 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertIn('## Hard rules', compact)
 
     @patch('automation.twin.requests.post')
-    def test_action_constraints_follow_skill_templates_and_use_text_length(self, post):
+    def test_action_constraints_follow_runtime_overrides_and_use_text_length(self, post):
         comment = ('A useful design review distinguishes a reversible interface choice from a product promise. '
                    'That distinction helps an early team decide what to test quickly and what needs a clear owner before shipping.')
         post.return_value.json.return_value = {'choices': [{'message': {'content': json.dumps({'text': comment, 'skip': False})}}]}
@@ -500,9 +525,23 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertFalse(result['skip'])
         prompt = post.call_args.kwargs['json']['messages'][0]['content']
         self.assertGreater(prompt.rfind('FINAL OUTPUT REQUIREMENTS'), prompt.index('Skill: linkedin-comment-drafter'))
-        self.assertIn('200-350 characters in text', prompt)
+        self.assertIn('140-350 characters in text', prompt)
         self.assertNotIn('900-1300 characters', prompt[prompt.rfind('FINAL OUTPUT REQUIREMENTS'):])
         self.assertEqual(post.call_count, 1)
+
+    @patch('automation.twin.requests.post')
+    def test_short_concrete_comment_is_accepted_without_padding_or_an_edit_call(self, post):
+        comment = ('Compare both prototypes on the same customer task. If the faster tool leaves users '
+                   'equally confused, it improves production speed without improving the decision about what to build.')
+        self.assertGreaterEqual(len(comment), 140)
+        self.assertLess(len(comment), 200)
+        post.return_value.json.return_value = {'choices': [{'message': {'content': json.dumps({'text': comment, 'skip': False})}}]}
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-comment-drafter'),
+                           {'post': {'text': 'Does a faster prototyping tool improve the customer experience?'}}, POLICY)
+        self.assertFalse(result['skip'])
+        self.assertEqual(result['text'], comment)
+        post.assert_called_once()
 
     @patch('automation.twin.requests.post')
     def test_analysis_generation_avoids_post_style_and_length_requirements(self, post):

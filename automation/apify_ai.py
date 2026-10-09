@@ -28,6 +28,10 @@ class ApifyModelError(RuntimeError):
     """A fixed, credential-free diagnostic for this bounded AI backend."""
 
 
+class ApifyBudgetError(ApifyModelError):
+    """Account usage or the selected spending limit prevents inference."""
+
+
 def model_info(config_path: Path | str | None = None) -> tuple[str, str] | None:
     """Return the pinned destination and fixed model, or None for invalid config."""
     path = Path(config_path) if config_path is not None else CONFIG_PATH
@@ -79,7 +83,7 @@ def authorization_headers(endpoint: str, config_path: Path | str | None = None) 
     except Exception:
         permitted = False
     if not permitted:
-        raise ApifyModelError('Apify AI paused because the free-credit reserve or account limits cannot be verified')
+        raise ApifyBudgetError('Apify AI paused because the configured budget or account limits cannot be verified')
     return {'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}
 
 

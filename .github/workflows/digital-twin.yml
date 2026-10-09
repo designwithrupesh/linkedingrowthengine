@@ -1,7 +1,7 @@
 name: LinkedIn digital twin
 on:
   schedule:
-    - cron: '30 3,9 * * 1-5'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -25,6 +25,8 @@ jobs:
       MODEL_NAME: ${{ vars.MODEL_NAME }}
       TWIN_MODEL_DIR: ${{ github.workspace }}/testing/local-model
       NO_PROXY: 127.0.0.1,localhost
+      APIFY_MONTHLY_BUDGET_USD: ${{ vars.APIFY_MONTHLY_BUDGET_USD || '4' }}
+      TWIN_LOW_COST_MODE: ${{ vars.TWIN_LOW_COST_MODE || 'true' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -71,7 +73,7 @@ jobs:
           fi
       - name: Cache verified free CPU model
         if: >-
-          env.MODEL_ENDPOINT == '' &&
+          (env.MODEL_ENDPOINT == '' || env.TWIN_LOW_COST_MODE == 'true') &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
           ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
@@ -82,13 +84,16 @@ jobs:
           key: twin-cpu-qwen3-4b-instruct-2507-q4km-a06e946b-llama-b11512-${{ runner.os }}-${{ runner.arch }}
       - name: Start verified free CPU model
         if: >-
-          env.MODEL_ENDPOINT == '' &&
+          (env.MODEL_ENDPOINT == '' || env.TWIN_LOW_COST_MODE == 'true') &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
           ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
         run: |
           bash automation/start_local_model.sh
-          echo 'MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions' >> "$GITHUB_ENV"
-          echo 'MODEL_NAME=twin-local' >> "$GITHUB_ENV"
+          echo 'INTERACTION_MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions' >> "$GITHUB_ENV"
+          if [ -z "$MODEL_ENDPOINT" ]; then
+            echo 'MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions' >> "$GITHUB_ENV"
+            echo 'MODEL_NAME=twin-local' >> "$GITHUB_ENV"
+          fi
       - name: Offline preview
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'demo'
         run: python -m automation.twin --demo --state /tmp/twin-preview.json
@@ -109,6 +114,9 @@ jobs:
           TWIN_LIVE: ${{ vars.TWIN_LIVE || 'true' }}
           TWIN_READ_ENABLED: ${{ vars.TWIN_READ_ENABLED || 'true' }}
           TWIN_CHECKPOINT_GIT: 'true'
+          UNIPILE_API_KEY: ${{ secrets.UNIPILE_API_KEY }}
+          UNIPILE_BASE_URL: ${{ vars.UNIPILE_BASE_URL }}
+          UNIPILE_ACCOUNT_ID: ${{ vars.UNIPILE_ACCOUNT_ID }}
         run: |
           if [ "$TWIN_LIVE" != 'true' ]; then
             echo 'Live execution is paused by TWIN_LIVE. Set it to true or remove it to resume.'

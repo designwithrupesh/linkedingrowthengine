@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "start_date": "2026-10-10",
+  "end_date": "2026-11-08",
+  "slots": [
+    {
+      "date": "2026-10-10",
+      "hour": 9,
+      "topic": "Before polishing a screen, name the customer task and the decision the screen must support. Close: a takeaway readers can use in a design review.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-10",
+      "hour": 18,
+      "topic": "A founding designer's value starts with shaping the problem. Discuss which decisions the first designer should help own.",
+      "format": "position"
+    },
+    {
+      "date": "2026-10-11",
+      "hour": 9,
+      "topic": "Review onboarding by what a new user can accomplish, rather than by the number of setup screens. Close: ask which step creates uncertainty.",
+      "format": "walkthrough"
+    },
+    {
+      "date": "2026-10-11",
+      "hour": 18,
+      "topic": "Explain when a founder should join customer research and when the designer should lead it. Discuss the handoff between understanding and deciding.",
+      "format": "founder-decision"
+    },
+    {
+      "date": "2026-10-12",
+      "hour": 9,
+      "topic": "Translate a brand promise into interface behavior, language, and support expectations. Close: a concrete brand-review prompt.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-12",
+      "hour": 18,
+      "topic": "A familiar-looking interface still needs a clear point of view. Ask what a product should deliberately feel different about.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-10-13",
+      "hour": 9,
+      "topic": "Separate a confusing core task from a cosmetic inconsistency before deciding what to fix first. Close: a design triage method.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-13",
+      "hour": 18,
+      "topic": "Outline a product-and-brand clarity review as a possible consulting conversation. Invite founders to describe one stuck decision publicly; no price or promised result.",
+      "format": "consulting-invitation",
+      "cta": "If a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation."
+    },
+    {
+      "date": "2026-10-14",
+      "hour": 9,
+      "topic": "Evaluate a prototype against a specific customer task, including the moments that require explanation. Close: ask what the team needs to learn next.",
+      "format": "rubric"
+    },
+    {
+      "date": "2026-10-14",
+      "hour": 18,
+      "topic": "Describe the evidence needed before redesigning an experience. Discuss how to distinguish a usability issue from a positioning issue.",
+      "format": "founder-decision"
+    },
+    {
+      "date": "2026-10-15",
+      "hour": 9,
+      "topic": "Give a critique that connects visual choices to the intended customer experience. Close: a useful feedback sentence structure.",
+      "format": "practical-insight"
+    },
+    {
+      "date": "2026-10-15",
+      "hour": 18,
+      "topic": "Invite a conversation about a product whose brand promise and experience feel disconnected. Frame the work as diagnosis, with scope discussed later.",
+      "format": "consulting-invitation",
+      "cta": "If your product experience and brand promise feel disconnected, I would welcome a conversation about the decision your team is working through."
+    },
+    {
+      "date": "2026-10-16",
+      "hour": 9,
+      "topic": "Turn the week's design advice into a short problem-definition checklist. Close: a saveable working note.",
+      "format": "synthesis"
+    },
+    {
+      "date": "2026-10-16",
+      "hour": 18,
+      "topic": "State openness to founding designer conversations. Explain interest in working with founders on product decisions, brand, and early design foundations.",
+      "format": "founding-designer-invitation",
+      "cta": "I am open to founding designer conversations. If your early-stage team is shaping its product and design foundations, I would welcome a conversation about the role."
+    },
+    {
+      "date": "2026-10-17",
+      "hour": 9,
+      "topic": "Identify what a customer must understand before a request for more information feels reasonable. Close: a question about trust.",
+      "format": "walkthrough"
+    },
+    {
+      "date": "2026-10-17",
+      "hour": 18,
+      "topic": "Explain the trade-off between learning through a small prototype and committing to a polished launch. Ask what uncertainty the next version should remove.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-10-18",
+      "hour": 9,
+      "topic": "Make empty states and error messages explain what happened and the next useful action. Close: a practical copy-review prompt.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-18",
+      "hour": 18,
+      "topic": "Product language is part of brand strategy. Discuss how tone changes when a customer is confused or disappointed.",
+      "format": "position"
+    },
+    {
+      "date": "2026-10-19",
+      "hour": 9,
+      "topic": "Turn vague interview opinions into questions about recent behavior and actual decisions. Close: a question a founder can ask without leading the answer.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-19",
+      "hour": 18,
+      "topic": "Treat a design-system investment as a response to repeated work. Discuss what should exist before a small team creates a large system.",
+      "format": "founder-decision"
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 9,
+      "topic": "Define the smallest product flow that lets a team test its central assumption. Close: a boundary-setting exercise.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 18,
+      "topic": "Invite founders with an unclear first release to discuss its central customer task and the design decisions around it. Do not imply a standing free audit service.",
+      "format": "consulting-invitation",
+      "cta": "If your team is deciding what belongs in its first release, I would welcome a conversation about the customer task and the choices around it."
+    },
+    {
+      "date": "2026-10-21",
+      "hour": 9,
+      "topic": "Check whether the landing page and the first product experience describe the same value. Close: a consistency question.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-21",
+      "hour": 18,
+      "topic": "Consider who should decide when user feedback conflicts with the product's intended audience. Ask what evidence changes that decision.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-10-22",
+      "hour": 9,
+      "topic": "Make each review distinguish the problem, proposed solution, and unresolved assumption. Close: a concise review agenda.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-22",
+      "hour": 18,
+      "topic": "Explain how an outside design perspective could help a team resolve an ambiguous product-and-brand decision. Invite a specific conversation without promising business outcomes.",
+      "format": "consulting-invitation",
+      "cta": "If an outside design perspective could help your team resolve an unclear product-and-brand decision, I would welcome a conversation about the problem."
+    },
+    {
+      "date": "2026-10-23",
+      "hour": 9,
+      "topic": "Summarize ways to make an early product clearer without expanding its feature list. Close: a practical takeaway.",
+      "format": "synthesis"
+    },
+    {
+      "date": "2026-10-23",
+      "hour": 18,
+      "topic": "Describe the kinds of decisions Rupesh wants to contribute to as a founding designer. Invite founders to discuss the mandate their first design hire would have.",
+      "format": "founding-designer-invitation",
+      "cta": "I am open to founding designer conversations. What decisions would you want your first design hire to help own?"
+    },
+    {
+      "date": "2026-10-24",
+      "hour": 9,
+      "topic": "Define the first designer's expected responsibilities before writing the job description. Close: a mandate-writing prompt.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-24",
+      "hour": 18,
+      "topic": "Explore where a founding designer needs autonomy and where a founder should remain closely involved. Ask which decisions require shared ownership.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-10-25",
+      "hour": 9,
+      "topic": "Evaluate how a designer explains constraints, decisions, and trade-offs. Close: a question about the reasoning behind a piece of work.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-25",
+      "hour": 18,
+      "topic": "A polished portfolio leaves questions about collaboration unanswered. Discuss what a founder should learn in a design interview.",
+      "format": "position"
+    },
+    {
+      "date": "2026-10-26",
+      "hour": 9,
+      "topic": "Sort debt by customer confusion, repeated team effort, and inconsistency before planning cleanup. Close: a useful triage lens.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-26",
+      "hour": 18,
+      "topic": "Explore the moment when a team needs design leadership rather than more output. Discuss the recurring decisions that point to that need.",
+      "format": "founder-decision"
+    },
+    {
+      "date": "2026-10-27",
+      "hour": 9,
+      "topic": "Start a design brief with the intended customer change, constraints, and what remains uncertain. Close: a practical brief outline.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-27",
+      "hour": 18,
+      "topic": "Invite teams facing repeated redesigns to discuss the decisions and assumptions behind the work. Frame consulting around clarifying the problem.",
+      "format": "consulting-invitation",
+      "cta": "If your team keeps returning to the same redesign, I would welcome a conversation about the decision and assumptions behind it."
+    },
+    {
+      "date": "2026-10-28",
+      "hour": 9,
+      "topic": "Make product, engineering, and design review the same customer task before debating a solution. Close: a working-session prompt.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-10-28",
+      "hour": 18,
+      "topic": "Describe how early engineering input can improve design decisions while preserving room to explore. Ask where technical constraints should enter the process.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-10-29",
+      "hour": 9,
+      "topic": "Examine trust in permissions, pricing explanations, and recovery from errors using hypothetical examples. Close: a brand-behavior checklist.",
+      "format": "walkthrough"
+    },
+    {
+      "date": "2026-10-29",
+      "hour": 18,
+      "topic": "Invite a product-and-brand conversation focused on a moment where customers hesitate. No fabricated diagnosis or assurance of higher conversion.",
+      "format": "consulting-invitation",
+      "cta": "If your customers hesitate at an important moment in the experience, I would welcome a conversation about the product and brand questions involved."
+    },
+    {
+      "date": "2026-10-30",
+      "hour": 9,
+      "topic": "Share a checklist for making a first design hire's role specific and workable. Close: a useful hiring takeaway.",
+      "format": "synthesis"
+    },
+    {
+      "date": "2026-10-30",
+      "hour": 18,
+      "topic": "State openness to a role with meaningful input into product direction and design foundations. Invite a conversation about the team's stage and expectations.",
+      "format": "founding-designer-invitation",
+      "cta": "I am open to founding designer roles with meaningful input into product direction and design foundations. I would welcome a conversation about your team and its expectations."
+    },
+    {
+      "date": "2026-10-31",
+      "hour": 9,
+      "topic": "Evaluate an AI-assisted workflow through the quality of its decisions and customer-task results. Close: a test a team could run, without invented metrics.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-10-31",
+      "hour": 18,
+      "topic": "Explore what should remain accountable to a person when design production becomes faster. Ask who owns the judgment behind the output.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-11-01",
+      "hour": 9,
+      "topic": "Choose what a prototype must make testable before choosing its fidelity. Close: a learning-goal prompt.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-11-01",
+      "hour": 18,
+      "topic": "More output creates more decisions to assess. Discuss what an early-stage team should simplify when its production tools improve.",
+      "format": "position"
+    },
+    {
+      "date": "2026-11-02",
+      "hour": 9,
+      "topic": "Review handoffs between marketing, product, and customer support as one customer experience. Close: a cross-team review prompt.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-11-02",
+      "hour": 18,
+      "topic": "Explore when a team should sharpen its positioning before adding another product feature. Ask what a confused customer is unable to understand.",
+      "format": "founder-decision"
+    },
+    {
+      "date": "2026-11-03",
+      "hour": 9,
+      "topic": "Explain a design consulting problem in terms of the client's decision, evidence, and boundaries. Close: a useful scoping takeaway.",
+      "format": "checklist"
+    },
+    {
+      "date": "2026-11-03",
+      "hour": 18,
+      "topic": "State the focus of the developing consulting practice: product clarity, brand alignment, and early-stage design decisions. Invite relevant founders to start a specific conversation.",
+      "format": "consulting-invitation",
+      "cta": "I am building a consulting practice around product clarity, brand alignment, and early-stage design decisions. If that fits your team, I would welcome a conversation about the problem."
+    },
+    {
+      "date": "2026-11-04",
+      "hour": 9,
+      "topic": "Decide which customer behavior would indicate that a design change helped. Close: a measurement question without claiming results.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-11-04",
+      "hour": 18,
+      "topic": "Explain the difference between a design preference and an argument supported by customer evidence. Ask what would change the team's mind.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-11-05",
+      "hour": 9,
+      "topic": "Make feedback actionable by naming the task, observed issue, and possible next test. Close: a useful critique prompt.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-11-05",
+      "hour": 18,
+      "topic": "Invite a conversation about a design decision where a team keeps circling back. Clarify that any engagement needs an agreed scope, not an automatic promise.",
+      "format": "consulting-invitation",
+      "cta": "If your team keeps circling back to the same design decision, I would welcome a conversation about what needs to become clearer. Any engagement would need an agreed scope."
+    },
+    {
+      "date": "2026-11-06",
+      "hour": 9,
+      "topic": "Combine the month's principles into a short product-and-brand review checklist. Close: a saveable reference.",
+      "format": "synthesis"
+    },
+    {
+      "date": "2026-11-06",
+      "hour": 18,
+      "topic": "Connect creative direction, product design, founding experience, and brand strategy to the responsibilities sought in a founding designer role. Invite founders with a relevant mandate.",
+      "format": "founding-designer-invitation",
+      "cta": "I am open to founding designer conversations where creative direction, product design, startup founding, and brand strategy can contribute to the mandate."
+    },
+    {
+      "date": "2026-11-07",
+      "hour": 9,
+      "topic": "Share one lesson from actual public discussions during the experiment only if the recorded comments support it. Otherwise explain a design principle without claiming feedback.",
+      "format": "evidence-review"
+    },
+    {
+      "date": "2026-11-07",
+      "hour": 18,
+      "topic": "Revisit a question that genuinely drew thoughtful discussion; credit a person only when their identity and comment are verified. Otherwise introduce a new design dilemma without a claimed trend.",
+      "format": "discussion"
+    },
+    {
+      "date": "2026-11-08",
+      "hour": 9,
+      "topic": "Publish a compact checklist for connecting a customer task, product choice, and brand promise. Close: a useful takeaway.",
+      "format": "framework"
+    },
+    {
+      "date": "2026-11-08",
+      "hour": 18,
+      "topic": "Report only verified activity and outcomes from the tracker, distinguish conversations from leads, and explain the next month's focus. Never substitute invented success figures for unavailable analytics.",
+      "format": "reflection"
+    }
+  ]
+}

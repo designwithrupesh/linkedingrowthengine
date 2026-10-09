@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 import math
+import os
 import re
 from typing import Any, Callable
 from urllib.parse import unquote, urlsplit
@@ -263,6 +264,9 @@ def read_budget_available(reader: ApifyClient) -> bool:
     No actor is run by this check and no provider body or credential is logged.
     """
     try:
+        budget = float(os.getenv('APIFY_MONTHLY_BUDGET_USD') or '4')
+        if not math.isfinite(budget) or budget <= 0:
+            return False
         response = reader._session.get(reader.BASE_URL + '/users/me/limits',
                                        headers={'Authorization': 'Bearer ' + reader.token},
                                        timeout=30, allow_redirects=False)
@@ -275,6 +279,6 @@ def read_budget_available(reader: ApifyClient) -> bool:
         cap = _mapping(data.get('limits')).get('maxMonthlyUsageUsd')
         valid = lambda number: (isinstance(number, (int, float)) and not isinstance(number, bool)
                                 and math.isfinite(number))
-        return bool(valid(usage) and valid(cap) and 0 <= usage < min(cap, 4.0))
+        return bool(valid(usage) and valid(cap) and 0 <= usage < min(cap, budget))
     except (requests.RequestException, ValueError, TypeError, AttributeError):
         return False
