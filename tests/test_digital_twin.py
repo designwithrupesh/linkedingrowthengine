@@ -369,8 +369,44 @@ class DigitalTwinTests(unittest.TestCase):
         post.return_value.json.return_value={'choices':[{'message':{'content':'{"skip":true}'}}]}
         with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder','MODEL_ENDPOINT':'','MODEL_NAME':''}):
             model('task', {}, POLICY)
-        self.assertEqual(post.call_args.args[0], 'https://models.github.ai/inference/chat/completions')
-        self.assertEqual(post.call_args.kwargs['json']['model'], 'openai/gpt-4.1')
+        self.assertEqual(post.call_args.args[0], 'https://api.openai.com/v1/chat/completions')
+        self.assertEqual(post.call_args.kwargs['json']['model'], 'gpt-4.1-mini')
+
+    @patch('automation.twin.complete')
+    def test_failed_draft_receives_one_source_only_edit_pass(self, complete):
+        source = 'A design decision should clarify what an early team needs to learn. ' * 5
+        edited = ('Research should inform the next design decision. A prototype can expose an uncertain assumption before a team commits to the full product. ' * 8).strip()
+        self.assertTrue(900 <= len(edited) <= 1300)
+        complete.side_effect = [{'text': source, 'skip': False}, {'text': edited, 'skip': False}]
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-post-writer'), {'topic': 'design decisions', 'private_context': 'original input'}, POLICY)
+        self.assertFalse(result['skip'])
+        self.assertEqual(complete.call_count, 2)
+        editor_messages = complete.call_args.args[-1]
+        self.assertEqual(json.loads(editor_messages[1]['content'])['draft'], source)
+        self.assertNotIn('original input', json.dumps(editor_messages))
+        self.assertIn('linkedin-humanizer', editor_messages[0]['content'])
+
+    @patch('automation.twin.complete')
+    def test_failed_editor_is_skipped_without_padding_or_more_calls(self, complete):
+        short = 'A useful design trade-off deserves attention. ' * 5
+        complete.return_value = {'text': short, 'skip': False}
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-post-writer'), {'topic': 'design'}, POLICY)
+        self.assertTrue(result['skip'])
+        self.assertEqual(result['text'], '')
+        self.assertEqual(complete.call_count, 2)
+
+    @patch('automation.twin.complete')
+    def test_editor_cannot_introduce_numeric_claims(self, complete):
+        source = 'Product research should inform the next design decision. ' * 5
+        edited = ('A prototype exposes an uncertain assumption before the team commits to building the full product. ' * 10) + 'Conversion increased by 50%.'
+        self.assertTrue(900 <= len(edited) <= 1300)
+        complete.side_effect = [{'text': source, 'skip': False}, {'text': edited, 'skip': False}]
+        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+            result = model(skills('linkedin-post-writer'), {'topic': 'design'}, POLICY)
+        self.assertTrue(result['skip'])
+        self.assertEqual(result['reason'], 'Editor introduced new numeric claims')
 
     @patch('automation.twin.requests.post')
     def test_compatible_model_fenced_json(self, post):

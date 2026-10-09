@@ -11,9 +11,15 @@ This application runs the imported 12-skill bundle as an autonomous workflow. Th
 - Friday audience-fit reporting, persistent history, and public activity logs.
 - Git checkpoints before every remote write; ambiguous writes stop without retrying. Scheduled posts count against their intended publication date.
 
-## Free model: no AI API key
+## Primary AI: OpenAI
 
-automation/start_local_model.sh runs Qwen3 4B Instruct 2507, using Unsloth's Q4_K_M GGUF conversion, through a pinned llama.cpp CPU server. The runtime and weights are checked against pinned publisher SHA-256 digests; both have open licenses. GitHub caches the 2.497GB model. The server listens only on 127.0.0.1. This model uses no thinking mode. Custom HTTPS model APIs remain optional. A preview fails when generation does not pass the content length and format checks.
+Save an OpenAI API key as the GitHub repository secret **MODEL_API_KEY**. The workflow automatically selects https://api.openai.com/v1/chat/completions and **gpt-4.1-mini** when this key exists; no model variables or code changes are needed. OpenAI API billing is separate from a ChatGPT subscription. Custom HTTPS model APIs remain optional through MODEL_ENDPOINT and MODEL_NAME repository variables.
+
+The writing pipeline generates a draft with the relevant skills, checks its format and character range, and permits one humanizer editing pass using only that draft as its factual source. The edit cannot introduce new numeric claims. Failed edits are skipped without padding or publishing. Preview fails when no usable post is produced.
+
+## Free fallback
+
+If no AI API key or custom endpoint is configured, automation/start_local_model.sh runs Qwen3 4B Instruct 2507, using Unsloth's Q4_K_M GGUF conversion, through a pinned llama.cpp CPU server. The runtime and weights are checked against pinned publisher SHA-256 digests; both have open licenses. GitHub caches the 2.497GB model. The server listens only on 127.0.0.1. This model uses no thinking mode. OpenAI is the preferred route after the free model failed reliable first-draft length checks.
 
 Public GitHub repositories normally receive free standard-hosted Actions execution; account quotas and provider rules still apply. Apify and Publora have separate service limits. Apify reading pauses at the lower of the account cap and $4 monthly usage, reserving credit instead of requesting an upgrade. Unknown usage/caps stop reads. Publora's verified Starter account allows 15 posts per month, three queued posts and a seven-day scheduling horizon. The runner checks current capacity before scheduling and defers when a limit is full. This does not promise unlimited free operation or override provider billing.
 
@@ -21,17 +27,18 @@ Public GitHub repositories normally receive free standard-hosted Actions executi
 
 Cloud environment secrets and GitHub Actions secrets are separate. Both credentials were present in a real GitHub Actions live run, the connected LinkedIn account passed verification, and a hosted preview generated content using the free local model. Repository secret/settings inspection is denied (HTTP 403), so runtime checks are the evidence for this connection. No credential is copied into Git or workflow inputs.
 
-The initial batch has been accepted and read back from Publora: October 9, 13 and 14, 2026 at 09:00 India time. These are scheduled posts, not yet published posts. The runner keeps their remote IDs and does not submit them again.
+The initial batch was accepted and read back from Publora: October 9, 13 and 14, 2026 at 09:00 India time. On October 9, the first post was verified published with LinkedIn URN urn:li:share:7514165310896250880. The remaining posts are scheduled. The runner keeps their remote IDs and does not submit them again.
 
 For a replacement account or revoked key, use the following setup:
 
 1. Open https://github.com/designwithrupesh/linkedingrowthengine/settings/secrets/actions.
 2. Add repository secret **PUBLORA_API_KEY** using a fresh key from Publora. Revoke the key previously shared in chat.
 3. Add repository secret **APIFY_TOKEN** using your Apify token.
-4. Ensure GitHub Actions may write repository contents. Protected branches may block durable state checkpoints; the runner then stops before posting.
-5. Open **Actions → LinkedIn digital twin → Run workflow**. Select **preview** to verify actual free-model generation without any LinkedIn action, then **live** to run the workflow.
+4. Add repository secret **MODEL_API_KEY** using an OpenAI API key to select paid AI automatically.
+5. Ensure GitHub Actions may write repository contents. Protected branches may block durable state checkpoints; the runner then stops before posting.
+6. Open **Actions → LinkedIn digital twin → Run workflow**. Select **preview** to verify actual generation without any LinkedIn action, then **live** to run the workflow.
 
-Live and reading modes are enabled by default in the workflow after these account connections exist. No model key or activation variables are required. Set repository variable **TWIN_LIVE=false** to pause all future live actions. Set **TWIN_READ_ENABLED=false** to pause reading and interactions while retaining posts. Existing Publora schedules need separate cancellation.
+Live and reading modes are enabled by default after these account connections exist. No activation variables are required. Set repository variable **TWIN_LIVE=false** to pause all future live actions. Set **TWIN_READ_ENABLED=false** to pause reading and interactions while retaining posts. Existing Publora schedules need separate cancellation.
 
 ## Seed batch and restart
 
