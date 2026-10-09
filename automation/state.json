@@ -127,7 +127,7 @@
     "2026-10-09": {
       "post": 1,
       "interaction": 5,
-      "read": 5,
+      "read": 6,
       "reply": 1
     },
     "2026-10-13": {
@@ -215,27 +215,7 @@
         "next_page": null
       }
     },
-    "pending": {
-      "reply:urn:li:share:7514165310896250880:7514209729988993024": {
-        "key": "reply:urn:li:share:7514165310896250880:7514209729988993024",
-        "post_urn": "urn:li:share:7514165310896250880",
-        "post_url": "https://www.linkedin.com/feed/update/urn:li:share:7514165310896250880/",
-        "post_text": "A product can look finished while its most important decision is still unresolved.\n\nThe homepage says who it is for. The onboarding asks for information. The dashboard presents a set of actions. Somewhere between those screens, the user has to understand what to do next and why it is worth doing.\n\nThat is the part of design I want to talk about more here.\n\nMy background spans product design, creative direction, brand strategy, and startup founding. I’m interested in how those disciplines inform the decisions an early team makes.\n\nFor a product review, I would start with one task: follow a new user from the first promise to the first useful outcome. Write down every point where the next step needs an explanation. Then ask which of those explanations belongs in the experience itself.\n\nIt is a practical starting point for a conversation between a founder and a designer. It gives us something specific to examine before deciding what to redesign.\n\nWhere does a new user need the most help understanding your product today?",
-        "comment": {
-          "id": "7514209729988993024",
-          "parent_id": "7514209729988993024",
-          "text": "Usually the gap is the first empty screen after sign-up. Count the taps from sign-up to the first saved result. If it is more than three, the explanation belongs in the layout itself, like one clear next-step card, not in a tooltip tour nobody reads.",
-          "author": "Tushar Negi",
-          "author_profile_url": "https://www.linkedin.com/in/tusharux",
-          "timestamp": 1791527206895,
-          "parent_text": "Usually the gap is the first empty screen after sign-up. Count the taps from sign-up to the first saved result. If it is more than three, the explanation belongs in the layout itself, like one clear next-step card, not in a tooltip tour nobody reads.",
-          "parent_author": "Tushar Negi"
-        },
-        "parent": "urn:li:comment:(urn:li:share:7514165310896250880,7514209729988993024)",
-        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
-        "generation_deferrals": 0
-      }
-    },
+    "pending": {},
     "last_ingest": {
       "at": "2026-10-09T16:14:33.834666+00:00",
       "post_urn": "urn:li:share:7514165310896250880",
@@ -253,6 +233,14 @@
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-09T16:14:33.834666+00:00"
       }
+    }
+  },
+  "operational_status": {
+    "private_connection": "disabled-by-policy"
+  },
+  "engagement": {
+    "profile_checked_at": {
+      "lennyrachitsky": "2026-10-09T16:14:33.834666+00:00"
     }
   }
 }
