@@ -40,12 +40,20 @@
       "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:activity:7513701100856848385",
       "parent": null
+    },
+    "reaction:comment:030fc9ac4fe99e041f5972259fce9f92f793865f1de8d7d30b9d6683f21260c4": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-09T08:36:34.932335+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513669275748925440",
+      "parent": null
     }
   },
   "days": {
     "2026-10-09": {
       "post": 1,
-      "interaction": 1,
+      "interaction": 2,
       "read": 1
     },
     "2026-10-13": {
