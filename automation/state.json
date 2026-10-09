@@ -137,9 +137,12 @@
       "kind": "comment",
       "text": "Relying solely on data risks filtering out the nuanced, emotional signals users express in real time. Designers must protect moments of unfiltered interaction—like spontaneous conversations or observational notes—to preserve the human context behind product needs.",
       "at": "2026-10-09T16:14:33.834666+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7514024372920262656",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7514358446813663232",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
