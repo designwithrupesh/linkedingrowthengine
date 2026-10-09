@@ -101,7 +101,7 @@
     },
     "post:2026-10-10:1800": {
       "kind": "post",
-      "text": "A founding designer's impact begins long before the first pixel is placed. Their true value lies in shaping the problem itself—not just solving it.\n\nThe first designer should help define which customer tasks matter most and what decisions users must make. This means owning the clarity around the problem, not just the visual solution.\n\nFor example, a trade-off often arises between designing for visual polish and designing for functional clarity. Prioritizing clarity ensures the product guides users toward meaningful actions rather than just looking good.\n\nEarly-stage founders should expect their founding designer to take ownership of framing the problem space, setting the direction for product flows, prototypes, and brand signals that align with user needs.\n\nThis approach creates a shared language for the team, reduces wasted effort, and makes the product easier to iterate on. When design starts with the problem, solutions become more purposeful and impactful.\n\nIf you’re building an early-stage team, consider what decisions your first designer should own. That clarity can shape your product’s trajectory from day one.",
+      "text": "If you're hiring your first designer, let them into the conversation before the feature list is settled.\n\nGive them the customer calls. Show them the support questions. Explain which assumptions are keeping you up at night.\n\nA designer can turn an uncertain idea into a flow that the team can walk through. Sometimes that exposes a missing step. Sometimes it reveals that two features are trying to solve the same problem.\n\nIf the brief only arrives after those decisions, you've already limited what the designer can help with.\n\nI'm interested in founding designer roles where that conversation happens early. My background spans product design, creative direction, brand strategy, and startup founding. I'd want to understand what your customers are struggling with before deciding what to draw.",
       "at": "2026-10-09T16:13:01.642239+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -110,7 +110,8 @@
       "allocation_day": "2026-10-10",
       "http_status": 200,
       "remote_id": "6ac912a9cb40d0350b30cd43",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "content_revision_sha256": "944dd1f397af5194287ea0b63c729afa74cccc7a43904931b3807ee1b9f3f47c"
     },
     "reply:urn:li:share:7514165310896250880:7514209729988993024": {
       "kind": "reply",
@@ -183,8 +184,11 @@
       "post_group_id": "6ac912a9cb40d0350b30cd43",
       "text": "If you're hiring your first designer, let them into the conversation before the feature list is settled.\n\nGive them the customer calls. Show them the support questions. Explain which assumptions are keeping you up at night.\n\nA designer can turn an uncertain idea into a flow that the team can walk through. Sometimes that exposes a missing step. Sometimes it reveals that two features are trying to solve the same problem.\n\nIf the brief only arrives after those decisions, you've already limited what the designer can help with.\n\nI'm interested in founding designer roles where that conversation happens early. My background spans product design, creative direction, brand strategy, and startup founding. I'd want to understand what your customers are struggling with before deciding what to draw.",
       "at": "2026-10-09T16:31:00.581589+00:00",
-      "status": "inflight",
-      "original_content_sha256": "228078cdd6d512452b60da8598a31a53989c9de84bd9411cecfa0a593f3b75f4"
+      "status": "sent",
+      "original_content_sha256": "228078cdd6d512452b60da8598a31a53989c9de84bd9411cecfa0a593f3b75f4",
+      "http_status": 200,
+      "remote_id": "6ac912a9cb40d0350b30cd43",
+      "reason": "Replacement copy and unchanged schedule verified by GET"
     }
   },
   "days": {
@@ -254,7 +258,7 @@
     },
     {
       "id": "6ac912a9cb40d0350b30cd43",
-      "text": "A founding designer's impact begins long before the first pixel is placed. Their true value lies in shaping the problem itself—not just solving it.\n\nThe first designer should help define which customer tasks matter most and what decisions users must make. This means owning the clarity around the problem, not just the visual solution.\n\nFor example, a trade-off often arises between designing for visual polish and designing for functional clarity. Prioritizing clarity ensures the product guides users toward meaningful actions rather than just looking good.\n\nEarly-stage founders should expect their founding designer to take ownership of framing the problem space, setting the direction for product flows, prototypes, and brand signals that align with user needs.\n\nThis approach creates a shared language for the team, reduces wasted effort, and makes the product easier to iterate on. When design starts with the problem, solutions become more purposeful and impactful.\n\nIf you’re building an early-stage team, consider what decisions your first designer should own. That clarity can shape your product’s trajectory from day one.",
+      "text": "If you're hiring your first designer, let them into the conversation before the feature list is settled.\n\nGive them the customer calls. Show them the support questions. Explain which assumptions are keeping you up at night.\n\nA designer can turn an uncertain idea into a flow that the team can walk through. Sometimes that exposes a missing step. Sometimes it reveals that two features are trying to solve the same problem.\n\nIf the brief only arrives after those decisions, you've already limited what the designer can help with.\n\nI'm interested in founding designer roles where that conversation happens early. My background spans product design, creative direction, brand strategy, and startup founding. I'd want to understand what your customers are struggling with before deciding what to draw.",
       "url": null,
       "at": "2026-10-09T16:13:01.642239+00:00",
       "scheduled_for": "2026-10-10T12:30:00+00:00",
