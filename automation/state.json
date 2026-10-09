@@ -159,9 +159,12 @@
       "kind": "comment",
       "text": "The tension between tool proficiency and product quality is central. As AI tools evolve, teams may optimize for speed and system complexity rather than user value. A key trade-off: faster iteration risks shallow impact if not grounded in deep customer understanding and iterative validation.",
       "at": "2026-10-09T16:14:33.834666+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7513648319177420800",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7514358619111317504",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
