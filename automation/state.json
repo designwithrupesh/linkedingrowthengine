@@ -116,7 +116,7 @@
     "2026-10-09": {
       "post": 1,
       "interaction": 5,
-      "read": 4
+      "read": 5
     },
     "2026-10-13": {
       "post": 1,
@@ -187,5 +187,18 @@
   "discovery": {
     "profile_cursor": 2,
     "last_status": "daily-budget-exhausted"
+  },
+  "reply_monitor": {
+    "posts": {},
+    "pending": {}
+  },
+  "comment_signals": {
+    "posts": {
+      "urn:li:share:7514165310896250880": {
+        "last_considered_at": "2026-10-09T16:14:33.834666+00:00",
+        "status": "fallback-unverified-count",
+        "last_checked_at": "2026-10-09T16:14:33.834666+00:00"
+      }
+    }
   }
 }
