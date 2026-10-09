@@ -124,7 +124,13 @@
       "parent": "urn:li:comment:(urn:li:share:7514165310896250880,7514209729988993024)",
       "http_status": 201,
       "remote_id": "7514358060644147200",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "verification": {
+        "status": "visible-in-parent-thread",
+        "observed_at": "2026-10-09T16:37:05.505044+00:00",
+        "comment_url": "https://www.linkedin.com/feed/update/urn:li:activity:7514165313605742592?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7514165313605742592%2C7514209729988993024%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7514165313605742592%2C7514358060644147200%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287514209729988993024%2Curn%3Ali%3Aactivity%3A7514165313605742592%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287514358060644147200%2Curn%3Ali%3Aactivity%3A7514165313605742592%29",
+        "reader_sort": "most relevant"
+      }
     },
     "reaction:comment:4385b0b72b60927527e248b98e48ba38a3be0ab3edfe2b4954a3662be2aeb443": {
       "kind": "reaction",
@@ -254,7 +260,8 @@
       "at": "2026-10-08T19:01:51.180100+00:00",
       "scheduled_for": "2026-10-09T03:30:00+00:00",
       "allocation_day": "2026-10-09",
-      "post_urn": "urn:li:share:7514165310896250880"
+      "post_urn": "urn:li:share:7514165310896250880",
+      "read_url": "https://www.linkedin.com/feed/update/urn:li:activity:7514165313605742592/"
     },
     {
       "id": "6ac7e8b588cd87066bbfd542",
@@ -329,7 +336,8 @@
     }
   },
   "operational_status": {
-    "private_connection": "disabled-by-policy"
+    "private_connection": "disabled-by-policy",
+    "own_reply_verification": "visible-in-parent-thread"
   },
   "engagement": {
     "profile_checked_at": {
