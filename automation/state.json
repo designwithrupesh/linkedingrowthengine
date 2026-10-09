@@ -102,11 +102,14 @@
       "kind": "post",
       "text": "A founding designer's impact begins long before the first pixel is placed. Their true value lies in shaping the problem itself—not just solving it.\n\nThe first designer should help define which customer tasks matter most and what decisions users must make. This means owning the clarity around the problem, not just the visual solution.\n\nFor example, a trade-off often arises between designing for visual polish and designing for functional clarity. Prioritizing clarity ensures the product guides users toward meaningful actions rather than just looking good.\n\nEarly-stage founders should expect their founding designer to take ownership of framing the problem space, setting the direction for product flows, prototypes, and brand signals that align with user needs.\n\nThis approach creates a shared language for the team, reduces wasted effort, and makes the product easier to iterate on. When design starts with the problem, solutions become more purposeful and impactful.\n\nIf you’re building an early-stage team, consider what decisions your first designer should own. That clarity can shape your product’s trajectory from day one.",
       "at": "2026-10-09T16:13:01.642239+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-10T12:30:00+00:00",
-      "allocation_day": "2026-10-10"
+      "allocation_day": "2026-10-10",
+      "http_status": 200,
+      "remote_id": "6ac912a9cb40d0350b30cd43",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -170,6 +173,14 @@
       "url": null,
       "at": "2026-10-09T16:13:01.642239+00:00",
       "scheduled_for": "2026-10-10T03:30:00+00:00",
+      "allocation_day": "2026-10-10"
+    },
+    {
+      "id": "6ac912a9cb40d0350b30cd43",
+      "text": "A founding designer's impact begins long before the first pixel is placed. Their true value lies in shaping the problem itself—not just solving it.\n\nThe first designer should help define which customer tasks matter most and what decisions users must make. This means owning the clarity around the problem, not just the visual solution.\n\nFor example, a trade-off often arises between designing for visual polish and designing for functional clarity. Prioritizing clarity ensures the product guides users toward meaningful actions rather than just looking good.\n\nEarly-stage founders should expect their founding designer to take ownership of framing the problem space, setting the direction for product flows, prototypes, and brand signals that align with user needs.\n\nThis approach creates a shared language for the team, reduces wasted effort, and makes the product easier to iterate on. When design starts with the problem, solutions become more purposeful and impactful.\n\nIf you’re building an early-stage team, consider what decisions your first designer should own. That clarity can shape your product’s trajectory from day one.",
+      "url": null,
+      "at": "2026-10-09T16:13:01.642239+00:00",
+      "scheduled_for": "2026-10-10T12:30:00+00:00",
       "allocation_day": "2026-10-10"
     }
   ],
