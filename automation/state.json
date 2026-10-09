@@ -115,9 +115,12 @@
       "kind": "reply",
       "text": "Placing a single, visible next-step card where users naturally look reduces friction by delivering immediate value. Tooltips rarely engage, creating a gap between intent and action. This design prioritizes clarity over guidance, ensuring users see a clear path forward without cognitive load.",
       "at": "2026-10-09T16:14:33.834666+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7514165310896250880",
-      "parent": "urn:li:comment:(urn:li:share:7514165310896250880,7514209729988993024)"
+      "parent": "urn:li:comment:(urn:li:share:7514165310896250880,7514209729988993024)",
+      "http_status": 201,
+      "remote_id": "7514358060644147200",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
