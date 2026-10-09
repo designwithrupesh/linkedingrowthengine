@@ -165,6 +165,14 @@
       "http_status": 201,
       "remote_id": "7514358619111317504",
       "reason": "Publora acknowledged the request"
+    },
+    "edit:6ac91297686963a31d9d2fd4:61ecda71716badf79518eb95deb1f2fc84a6527278c992b28e4772333c322946": {
+      "kind": "post-edit",
+      "post_group_id": "6ac91297686963a31d9d2fd4",
+      "text": "Before opening Figma, write down what someone came to this screen to do.\n\nSay it's an invoice dashboard. A customer opens it because they need to find an unpaid invoice and send a reminder. Can they spot that invoice, understand its status, and send it without hunting through menus?\n\nThat's a useful design review. \"Make the dashboard cleaner\" gives everyone a different problem to solve.\n\nI'd follow the task through the screen once and note each moment that needs explaining. Maybe the status label is vague. Maybe the reminder action is buried. Fix those before spending another afternoon on the card layout.\n\nThe visual details still matter. Choosing them gets easier when the team agrees on the task the screen needs to help with.",
+      "at": "2026-10-09T16:31:00.581589+00:00",
+      "status": "inflight",
+      "original_content_sha256": "c6478da658237edd73139b5c993e98040630b927514acfda62490f76078ba56a"
     }
   },
   "days": {
