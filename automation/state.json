@@ -110,13 +110,22 @@
       "http_status": 200,
       "remote_id": "6ac912a9cb40d0350b30cd43",
       "reason": "Publora acknowledged the request"
+    },
+    "reply:urn:li:share:7514165310896250880:7514209729988993024": {
+      "kind": "reply",
+      "text": "Placing a single, visible next-step card where users naturally look reduces friction by delivering immediate value. Tooltips rarely engage, creating a gap between intent and action. This design prioritizes clarity over guidance, ensuring users see a clear path forward without cognitive load.",
+      "at": "2026-10-09T16:14:33.834666+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7514165310896250880",
+      "parent": "urn:li:comment:(urn:li:share:7514165310896250880,7514209729988993024)"
     }
   },
   "days": {
     "2026-10-09": {
       "post": 1,
       "interaction": 5,
-      "read": 5
+      "read": 5,
+      "reply": 1
     },
     "2026-10-13": {
       "post": 1,
