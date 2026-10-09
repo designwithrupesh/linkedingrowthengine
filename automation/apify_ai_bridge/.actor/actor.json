@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "linkedin-growth-ai",
+  "title": "Private LinkedIn growth AI bridge",
+  "description": "Bounded GPT-4.1-mini generation through the official Apify OpenRouter gateway.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json"
+}

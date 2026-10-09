@@ -1,0 +1,14 @@
+{
+  "title": "Private LinkedIn AI generation",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "model": {"title": "Model", "description": "The bridge accepts only GPT-4.1-mini.", "type": "string", "editor": "textfield", "default": "openai/gpt-4.1-mini"},
+    "messages": {"title": "System policy and user context", "description": "Exactly one system message followed by one user message, totaling at most 24,000 characters.", "type": "array", "editor": "json", "items": {"type": "object"}},
+    "max_tokens": {"title": "Maximum output tokens", "description": "Hard output budget, capped at 900 tokens.", "type": "integer", "minimum": 1, "maximum": 900, "default": 900},
+    "temperature": {"title": "Temperature", "description": "Sampling temperature between zero and two.", "type": "number", "minimum": 0, "maximum": 2, "default": 0.5},
+    "response_format": {"title": "JSON response format", "description": "Compatibility field; the bridge always enforces its fixed strict JSON schema.", "type": "object", "editor": "json"},
+    "stream": {"title": "Streaming", "description": "Streaming must remain disabled.", "type": "boolean", "default": false}
+  },
+  "required": ["messages"]
+}

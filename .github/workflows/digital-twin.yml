@@ -43,6 +43,8 @@ jobs:
         if: >-
           (github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
           ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true'))
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
           if [ -z "$MODEL_ENDPOINT" ]; then
             if [ -n "$MODEL_API_KEY" ]; then
@@ -51,6 +53,16 @@ jobs:
                 echo 'MODEL_NAME=gpt-4.1-mini' >> "$GITHUB_ENV"
               fi
               echo 'Paid AI route selected.'
+            elif [ -n "$APIFY_TOKEN" ]; then
+              python - <<'PY' >> "$GITHUB_ENV"
+          from automation.apify_ai import model_info
+          info = model_info()
+          if info is None:
+              raise RuntimeError('Apify AI metadata is unavailable or invalid')
+          print('MODEL_ENDPOINT=' + info[0])
+          print('MODEL_NAME=' + info[1])
+          PY
+              echo 'Apify balance funds the private AI route.'
             else
               echo 'paidAI_not_connected_fallback'
             fi
@@ -85,6 +97,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python -m automation.twin --preview --state /tmp/twin-model-preview.json
       - name: Run autonomous workflow
         if: github.event_name == 'schedule' || inputs.mode == 'live'

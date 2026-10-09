@@ -30,7 +30,7 @@ The imported skills are connected to the persistent GitHub Actions workflow in .
 
 ## Account connections
 
-Securely configure PUBLORA_API_KEY and LINKEDIN_PLATFORM_ID for publishing, and APIFY_TOKEN for reading posts, comments, and engagers. PIXFARO_TOKEN is optional for images. Never commit credentials or paste them into public issues. Use secure cloud environment settings or a local ignored .env file.
+Securely configure PUBLORA_API_KEY and LINKEDIN_PLATFORM_ID for publishing, and APIFY_TOKEN for reading posts, comments, engagers and the private AI-writing bridge. The bridge uses the connected Apify account's existing credits; MODEL_API_KEY is optional for direct OpenAI billing. PIXFARO_TOKEN is optional for images. Never commit credentials or paste them into public issues. Use secure cloud environment settings or a local ignored .env file.
 
 Publora executes posts scheduled through its API. The GitHub runner handles drafting, discovery and supported interactions even after a cloud session closes. It does not send DMs or automatically edit a LinkedIn profile.
 

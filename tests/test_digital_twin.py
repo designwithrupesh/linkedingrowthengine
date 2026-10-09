@@ -282,7 +282,7 @@ class DigitalTwinTests(unittest.TestCase):
     @patch('automation.twin.requests.get')
     def test_wrong_channel_blocks_preflight(self, get):
         get.return_value.json.return_value = {'connections':[{'platformId':'linkedin-other'}]}
-        with patch.dict(os.environ, {'PUBLORA_API_KEY':'test-placeholder','GITHUB_TOKEN':'test-placeholder'}):
+        with patch.dict(os.environ, {'PUBLORA_API_KEY':'test-placeholder','GITHUB_TOKEN':'test-placeholder'}, clear=True):
             with self.assertRaises(RuntimeError):
                 preflight(POLICY)
     @patch('automation.twin.requests.get')
@@ -367,7 +367,7 @@ class DigitalTwinTests(unittest.TestCase):
     @patch('automation.twin.requests.post')
     def test_empty_model_variables_use_defaults(self, post):
         post.return_value.json.return_value={'choices':[{'message':{'content':'{"skip":true}'}}]}
-        with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder','MODEL_ENDPOINT':'','MODEL_NAME':''}):
+        with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder','MODEL_ENDPOINT':'','MODEL_NAME':''}, clear=True):
             model('task', {}, POLICY)
         self.assertEqual(post.call_args.args[0], 'https://api.openai.com/v1/chat/completions')
         self.assertEqual(post.call_args.kwargs['json']['model'], 'gpt-4.1-mini')
@@ -411,7 +411,7 @@ class DigitalTwinTests(unittest.TestCase):
     @patch('automation.twin.requests.post')
     def test_compatible_model_fenced_json(self, post):
         post.return_value.json.return_value={'choices':[{'message':{'content':'```json\n{"text":"draft","skip":false}\n```'}, 'finish_reason':'stop'}]}
-        with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder'}):
+        with patch.dict(os.environ, {'MODEL_API_KEY':'test-placeholder'}, clear=True):
             result = model('task', {}, POLICY)
         self.assertEqual(result['text'], 'draft')
 

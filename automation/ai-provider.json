@@ -1,0 +1,7 @@
+{
+  "name": "linkedin-growth-ai",
+  "actor_id": "mmWZGBBv0mCt9X5G8",
+  "build_id": "DcGEZAJSdYYfFmk1x",
+  "build_number": "0.1.2",
+  "model": "openai/gpt-4.1-mini"
+}

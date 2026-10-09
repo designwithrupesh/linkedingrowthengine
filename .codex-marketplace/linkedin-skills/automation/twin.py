@@ -17,6 +17,7 @@ from lib.url_parser import parse_linkedin_url, build_parent_comment_urn
 from lib.apify_client import ApifyClient
 from automation.discovery import DiscoveryClient, discover_targets, read_budget_available
 from automation.capacity import check_post_capacity
+from automation import apify_ai
 
 ROOT = Path(__file__).resolve().parents[1]
 GITHUB_MODEL_ENDPOINT = 'https://models.github.ai/inference/chat/completions'
@@ -45,13 +46,19 @@ class WriteCheckpointError(RuntimeError):
 
 
 def model_connection():
-    endpoint = os.getenv('MODEL_ENDPOINT') or (OPENAI_MODEL_ENDPOINT if os.getenv('MODEL_API_KEY') else GITHUB_MODEL_ENDPOINT)
+    bridge = apify_ai.model_info() if os.getenv('APIFY_TOKEN') else None
+    endpoint = os.getenv('MODEL_ENDPOINT') or (OPENAI_MODEL_ENDPOINT if os.getenv('MODEL_API_KEY')
+                                              else bridge[0] if bridge else GITHUB_MODEL_ENDPOINT)
     local = endpoint == LOCAL_MODEL_ENDPOINT
     parsed = urlsplit(endpoint)
     if not local and (parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password):
         raise ModelConfigurationError('Model endpoint must use verified HTTPS or the supported local loopback endpoint')
     if local:
         token = 'twin-local'
+    elif apify_ai.is_apify_model_endpoint(endpoint):
+        token = os.getenv('APIFY_TOKEN')
+        if not token:
+            raise ModelConfigurationError('Pinned Apify AI route requires APIFY_TOKEN')
     else:
         token = os.getenv('MODEL_API_KEY')
         if not token and endpoint == GITHUB_MODEL_ENDPOINT:
@@ -60,7 +67,9 @@ def model_connection():
             message = ('Missing GitHub Models access or MODEL_API_KEY' if endpoint == GITHUB_MODEL_ENDPOINT
                        else 'Custom HTTPS model endpoints require MODEL_API_KEY')
             raise ModelConfigurationError(message)
-    name = os.getenv('MODEL_NAME') or ('twin-local' if local else 'gpt-4.1-mini' if endpoint == OPENAI_MODEL_ENDPOINT else 'openai/gpt-4.1')
+    name = (apify_ai.MODEL if apify_ai.is_apify_model_endpoint(endpoint)
+            else os.getenv('MODEL_NAME') or ('twin-local' if local else 'gpt-4.1-mini'
+                                           if endpoint == OPENAI_MODEL_ENDPOINT else 'openai/gpt-4.1'))
     return endpoint, token, name, local
 
 
@@ -201,12 +210,25 @@ def flatten_comments(rows, own_url):
 
 
 def complete(endpoint, token, name, local, messages):
+    request = {'model': name, 'messages': messages, 'temperature': 0.5,
+               'max_tokens': 900, 'response_format': {'type': 'json_object'}}
+    if apify_ai.is_apify_model_endpoint(endpoint):
+        payload = apify_ai.complete(endpoint, request)
+    else:
+        payload = remote_completion(endpoint, token, local, request)
+    choice = payload['choices'][0]
+    content = choice['message'].get('content') or ''
+    print('Model output characters:', len(content), 'finish reason:',
+          choice.get('finish_reason') if choice.get('finish_reason') in ('stop', 'length', 'content_filter') else 'other')
+    # Some compatible providers wrap JSON in a Markdown fence.
+    content = re.sub(r'^```(?:json)?\s*|\s*```$', '', content.strip())
+    return json.loads(content)
+
+
+def remote_completion(endpoint, token, local, request):
     try:
         r = requests.post(endpoint, headers={'Authorization': f'Bearer {token}'},
-                          json={'model': name,
-                                'messages': messages,
-                                'temperature': 0.5, 'max_tokens': 900,
-                                'response_format': {'type': 'json_object'}}, timeout=180 if local else 90, allow_redirects=False)
+                          json=request, timeout=180 if local else 90, allow_redirects=False)
     except (requests.ConnectionError, requests.Timeout):
         if local:
             raise LocalModelError('Local model server is unavailable; start automation/start_local_model.sh') from None
@@ -215,14 +237,7 @@ def complete(endpoint, token, name, local, messages):
         raise LocalModelError(f'Local model server is not ready (HTTP {r.status_code})')
     r.raise_for_status()
     print('Model response:', r.status_code, 'bytes:', len(r.content))
-    payload = r.json()
-    choice = payload['choices'][0]
-    content = choice['message'].get('content') or ''
-    print('Model output characters:', len(content), 'finish reason:',
-          choice.get('finish_reason') if choice.get('finish_reason') in ('stop', 'length', 'content_filter') else 'other')
-    # Some compatible providers wrap JSON in a Markdown fence.
-    content = re.sub(r'^```(?:json)?\s*|\s*```$', '', content.strip())
-    return json.loads(content)
+    return r.json()
 
 
 def model(task, context, policy):
@@ -603,7 +618,7 @@ if __name__ == '__main__':
         # Never log provider bodies, credential values or external content.
         status = getattr(getattr(exc, 'response', None), 'status_code', None)
         detail = f' (HTTP {status})' if status else ''
-        if isinstance(exc, (ModelConfigurationError, LocalModelError, ModelQualityError, WriteOutcomeError, WriteCheckpointError)):
+        if isinstance(exc, (ModelConfigurationError, LocalModelError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, apify_ai.ApifyModelError)):
             print('Twin stopped: ' + str(exc))
         else:
             print('Twin stopped: ' + type(exc).__name__ + detail + '. Check required bindings and durable checkpoints.')
