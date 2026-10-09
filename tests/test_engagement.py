@@ -14,7 +14,9 @@ from automation.engagement import (candidate_targets, canonical_target_urn,
 ZONE = ZoneInfo('Asia/Calcutta')
 POLICY = {'timezone': 'Asia/Calcutta', 'profile_url': 'https://www.linkedin.com/in/owner/',
           'discovery_profiles': ['source', 'other'], 'react_to_target_posts': True,
-          'max_public_interactions_per_day': 40, 'max_public_actions_per_session': 4}
+          'max_public_interactions_per_day': 40, 'max_public_actions_per_session': 2,
+          'public_engagement_start_hour': 17, 'public_engagement_end_hour': 22,
+          'public_engagement_slot_minutes': 15}
 ACTIVITY = 'urn:li:activity:7000000000000000000'
 SHARE = 'urn:li:ugcPost:7000000000000000001'
 URL = 'https://www.linkedin.com/feed/update/' + ACTIVITY + '/'
@@ -32,80 +34,117 @@ def post(urn=SHARE, url=URL, **extra):
 
 
 class PublicPacingTests(unittest.TestCase):
-    def test_daily_target_accrues_across_half_hour_slots(self):
-        self.assertEqual(public_actions_due(at(8), POLICY, {}), 1)
-        self.assertEqual(public_actions_due(at(8, 29), POLICY, {}), 1)
-        self.assertEqual(public_actions_due(at(8, 30), POLICY, {}), 2)
-        self.assertEqual(public_actions_due(at(9), POLICY, {}), 4)
-        self.assertEqual(public_actions_due(at(21, 59), POLICY, {}), 4)
+    def test_five_hour_window_allows_one_like_comment_pair_per_quarter_hour(self):
+        for now in (at(17), at(17, 14), at(17, 15), at(18), at(21, 59)):
+            self.assertEqual(public_actions_due(now, POLICY, {}), 2)
 
     def test_no_public_writes_outside_window(self):
-        for now in (at(7, 59), at(22), at(23, 59)):
+        for now in (at(8), at(16, 59), at(22), at(23, 59)):
             self.assertEqual(public_actions_due(now, POLICY, {}), 0)
 
     def test_repeated_runs_share_durable_slot_allowance(self):
-        state = {'actions': {'comment:a': {'kind': 'comment', 'at': at().isoformat(), 'status': 'sent'}},
+        state = {'actions': {'comment:a': {'kind': 'comment', 'at': at(17).isoformat(), 'status': 'sent'}},
                  'days': {'2026-10-10': {'interaction': 1}}}
-        self.assertEqual(public_actions_due(at(8, 5), POLICY, state), 0)
-        self.assertEqual(public_actions_due(at(8, 30), POLICY, json.loads(json.dumps(state))), 1)
+        self.assertEqual(public_actions_due(at(17, 5), POLICY, state), 1)
+        state['actions']['reaction:a'] = {'kind': 'reaction', 'at': at(17, 5).isoformat(), 'status': 'sent'}
+        state['days']['2026-10-10']['interaction'] = 2
+        persisted = json.loads(json.dumps(state))
+        self.assertEqual(public_actions_due(at(17, 10), POLICY, persisted), 0)
+        self.assertEqual(public_actions_due(at(17, 15), POLICY, persisted), 2)
 
     def test_forty_is_a_hard_cap_even_when_slots_were_missed(self):
         state = {'days': {'2026-10-10': {'public_interaction': 39}}}
-        self.assertEqual(public_actions_due(at(21, 30), POLICY, state), 1)
+        self.assertEqual(public_actions_due(at(21, 45), POLICY, state), 1)
         state['days']['2026-10-10']['public_interaction'] = 40
-        self.assertEqual(public_actions_due(at(21, 30), POLICY, state), 0)
+        self.assertEqual(public_actions_due(at(21, 45), POLICY, state), 0)
 
     def test_utc_clock_uses_indian_day_and_window(self):
-        self.assertEqual(public_actions_due(at().astimezone(timezone.utc), POLICY, {}), 1)
+        self.assertEqual(public_actions_due(at(17).astimezone(timezone.utc), POLICY, {}), 2)
         self.assertEqual(public_actions_due(datetime(2026, 10, 9, 23, 30, tzinfo=timezone.utc), POLICY, {}), 0)
 
     def test_replies_do_not_reduce_public_quota(self):
         state = {'actions': {
-            'comment:a': {'kind': 'comment', 'at': at().isoformat(), 'status': 'sent'},
-            'reply:a': {'kind': 'reply', 'at': at().isoformat(), 'status': 'sent'},
+            'comment:a': {'kind': 'comment', 'at': at(17).isoformat(), 'status': 'sent'},
+            'reply:a': {'kind': 'reply', 'at': at(17).isoformat(), 'status': 'sent'},
         }, 'days': {'2026-10-10': {'interaction': 2}}}
-        self.assertEqual(public_action_counts(at(8, 30), POLICY, state),
+        self.assertEqual(public_action_counts(at(17, 5), POLICY, state),
                          {'reaction': 0, 'comment': 1, 'total': 1})
-        self.assertEqual(public_actions_due(at(8, 30), POLICY, state), 1)
+        self.assertEqual(public_actions_due(at(17, 5), POLICY, state), 1)
 
     def test_unknown_rejected_and_prepared_attempts_count(self):
         state = {'actions': {
-            'reaction:a': {'kind': 'reaction', 'at': at().isoformat(), 'status': 'unknown-needs-reconciliation'},
-            'comment:b': {'kind': 'comment', 'at': at().isoformat(), 'status': 'rejected'},
-            'comment:c': {'kind': 'comment', 'at': at().isoformat(), 'status': 'prepared'},
+            'reaction:a': {'kind': 'reaction', 'at': at(17).isoformat(), 'status': 'unknown-needs-reconciliation'},
+            'comment:b': {'kind': 'comment', 'at': at(17).isoformat(), 'status': 'rejected'},
+            'comment:c': {'kind': 'comment', 'at': at(17, 15).isoformat(), 'status': 'prepared'},
         }}
-        self.assertEqual(public_action_counts(at(9), POLICY, state),
+        self.assertEqual(public_action_counts(at(17, 20), POLICY, state),
                          {'reaction': 1, 'comment': 2, 'total': 3})
-        self.assertEqual(public_actions_due(at(9), POLICY, state), 1)
+        self.assertEqual(public_actions_due(at(17, 5), POLICY, state), 0)
+        self.assertEqual(public_actions_due(at(17, 20), POLICY, state), 1)
 
     def test_missing_receipts_do_not_release_legacy_quota(self):
         state = {'days': {'2026-10-10': {'interaction': 40}}}
         self.assertEqual(public_actions_due(at(21, 30), POLICY, state), 0)
 
     def test_missing_counter_does_not_release_recorded_quota(self):
-        state = {'actions': {'comment:a': {'kind': 'comment', 'at': at().isoformat()}},
+        state = {'actions': {'comment:a': {'kind': 'comment', 'at': at(17).isoformat()}},
                  'days': {'2026-10-10': {'interaction': 0}}}
-        self.assertEqual(public_actions_due(at(), POLICY, state), 0)
+        self.assertEqual(public_actions_due(at(17), POLICY, state), 1)
 
     def test_new_public_counter_excludes_replies(self):
         state = {'days': {'2026-10-10': {'interaction': 12, 'public_interaction': 1}}}
-        self.assertEqual(public_actions_due(at(8, 30), POLICY, state), 1)
+        self.assertEqual(public_actions_due(at(17), POLICY, state), 1)
 
     def test_prior_day_attempts_do_not_consume_today(self):
         state = {'actions': {'comment:a': {'kind': 'comment', 'at': (at() - timedelta(days=1)).isoformat()}},
                  'days': {'2026-10-09': {'interaction': 40}}}
-        self.assertEqual(public_actions_due(at(), POLICY, state), 1)
+        self.assertEqual(public_actions_due(at(17), POLICY, state), 2)
+
+    def test_missed_slots_are_not_accumulated_into_later_five_minute_runs(self):
+        state = {'actions': {}}
+        # A first successful job at19:00 still gets only one pair.
+        for minute in (0, 5, 10):
+            now = at(19, minute)
+            self.assertEqual(public_actions_due(now, POLICY, state), 2 if minute == 0 else 0)
+            if minute == 0:
+                for kind in ('reaction', 'comment'):
+                    state['actions'][kind] = {'kind': kind, 'at': now.isoformat(), 'status': 'sent'}
+        self.assertEqual(public_actions_due(at(19, 15), POLICY, state), 2)
+
+    def test_repeated_jobs_need_the_whole_window_to_reach_forty(self):
+        state = {'actions': {}, 'days': {'2026-10-10': {'public_interaction': 0}}}
+        for slot in range(20):
+            now = at(17) + timedelta(minutes=slot * 15)
+            self.assertEqual(public_actions_due(now, POLICY, state), 2)
+            for kind in ('reaction', 'comment'):
+                state['actions'][f'{slot}:{kind}'] = {
+                    'kind': kind, 'at': now.isoformat(), 'status': 'sent'}
+                state['days']['2026-10-10']['public_interaction'] += 1
+            persisted = json.loads(json.dumps(state))
+            self.assertEqual(public_actions_due(now + timedelta(minutes=5), POLICY, persisted), 0)
+            self.assertEqual(public_actions_due(now + timedelta(minutes=10), POLICY, persisted), 0)
+            self.assertEqual(public_action_counts(now, POLICY, persisted)['total'], 2 * (slot + 1))
+        self.assertEqual(public_action_counts(at(21, 55), POLICY, state)['total'], 40)
+        self.assertEqual(public_actions_due(at(22), POLICY, state), 0)
+
+    def test_rejected_and_uncertain_writes_do_not_release_the_current_slot(self):
+        for status in ('prepared', 'inflight', 'rejected', 'unknown-needs-reconciliation'):
+            with self.subTest(status=status):
+                state = {'actions': {kind: {'kind': kind, 'at': at(17).isoformat(), 'status': status}
+                                     for kind in ('reaction', 'comment')}}
+                self.assertEqual(public_actions_due(at(17, 10), POLICY, state), 0)
+                self.assertEqual(public_actions_due(at(17, 15), POLICY, state), 2)
 
     def test_invalid_policy_and_clock_fail_closed(self):
         for overrides in ({'max_public_interactions_per_day': 80}, {'max_public_actions_per_session': 40},
                           {'max_public_interactions_per_day': True}, {'public_engagement_start_hour': 22},
                           {'public_engagement_slot_minutes': 17}):
             with self.subTest(overrides=overrides), self.assertRaises(ValueError):
-                public_actions_due(at(), {**POLICY, **overrides}, {})
+                public_actions_due(at(17), {**POLICY, **overrides}, {})
         with self.assertRaises(ValueError):
             public_actions_due(at().replace(tzinfo=None), POLICY, {})
         with self.assertRaises(ValueError):
-            public_actions_due(at(), POLICY, {'days': {'2026-10-10': {'interaction': '40'}}})
+            public_actions_due(at(17), POLICY, {'days': {'2026-10-10': {'interaction': '40'}}})
 
 
 class TargetCacheTests(unittest.TestCase):

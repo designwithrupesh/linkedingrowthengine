@@ -208,7 +208,7 @@ class ExpandedRunnerTests(unittest.TestCase):
         self.assertNotIn('reply:over-limit', restarted.state['actions'])
 
     def test_queued_reply_runs_before_cached_public_comment_and_both_deduplicate(self):
-        runner = self.runner()
+        runner = self.runner(now=clock(17))
         own = owned_post()
         runner.state['posts'].append(own)
         reply_monitor.queue_comments(runner.state, own, comments(), runner.policy['profile_url'], runner.now)
@@ -222,14 +222,14 @@ class ExpandedRunnerTests(unittest.TestCase):
                          ['reply', 'reaction', 'comment'])
         reader.fetch_post.assert_not_called()
         runner.save()
-        restarted = self.runner(now=clock(9, 5))
+        restarted = self.runner(now=clock(17, 5))
         restarted.interactions(self.reader(comments()))
         self.assertEqual(len(restarted.state['actions']), 3)
         restarted.generate.assert_not_called()
         self.assertEqual(reply_monitor.pending_replies(restarted.state), [])
 
     def test_unknown_reaction_quarantines_explicit_target_before_actor_read(self):
-        runner = self.runner()
+        runner = self.runner(now=clock(17))
         post = public_post()
         runner.policy['target_post_urls'] = [post['url']]
         legacy = 'comment:' + hashlib.sha256(post['url'].encode()).hexdigest()
@@ -264,7 +264,7 @@ class ExpandedRunnerTests(unittest.TestCase):
         self.send.assert_not_called()
 
     def test_unconnected_inbox_does_not_block_existing_public_connection(self):
-        runner = self.runner(live=True)
+        runner = self.runner(now=clock(17), live=True)
         runner.policy['dm_replies_enabled'] = True
         engagement.stash_targets(runner.now, runner.policy, runner.state, [public_post()])
         with patch('automation.twin.UnipileClient.from_environment', return_value=None), \

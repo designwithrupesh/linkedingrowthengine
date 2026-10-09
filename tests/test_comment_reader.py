@@ -24,7 +24,7 @@ class CommentReaderTests(unittest.TestCase):
         reader._run_sync.return_value = [comment(post_input=post()['url']), comment(2, post_input=URN2)]
         result = fetch_comments(reader, [post(), post(URN2)])
         reader._run_sync.assert_called_once_with('known-actor', {
-            'postIds': [post()['url'], post(URN2)['url']], 'limit': 100, 'sortOrder': 'most recent',
+            'postIds': [post()['url'], post(URN2)['url']], 'limit': 100, 'sortOrder': 'most relevant',
         }, force_refresh=True)
         self.assertEqual([row['comment_id'] for row in result['posts'][URN1]], ['1'])
         self.assertEqual([row['comment_id'] for row in result['posts'][URN2]], ['2'])
@@ -34,7 +34,7 @@ class CommentReaderTests(unittest.TestCase):
         reader._run_sync.return_value = []
         fetch_comments(reader, [post()], max_items=20, page_number=2, input_format='urn')
         self.assertEqual(reader._run_sync.call_args.args[1], {
-            'postIds': [URN1], 'limit': 20, 'sortOrder': 'most recent', 'page_number': 2,
+            'postIds': [URN1], 'limit': 20, 'sortOrder': 'most relevant', 'page_number': 2,
         })
 
     def test_exact_known_activity_read_url_can_map_to_distinct_canonical_share(self):
@@ -43,6 +43,19 @@ class CommentReaderTests(unittest.TestCase):
         result = group_comments([comment(post_input=activity)], [target, post(URN2)])
         self.assertEqual(len(result['posts'][URN1]), 1)
         self.assertEqual(result['posts'][URN1][0]['post_input'], activity)
+
+    def test_thread_read_uses_evidenced_activity_url_and_relevant_ordering(self):
+        activity = 'urn:li:activity:7501000000000000001'
+        read_url = 'https://www.linkedin.com/feed/update/' + activity + '/'
+        reader = Mock(POST_COMMENTS_ACTOR='known-actor')
+        reader._run_sync.return_value = [comment(1, post_input=read_url, replies=[
+            comment(2, post_input=read_url, author={'profile_url': 'https://linkedin.com/in/therupeshkumar'}),
+        ])]
+        result = fetch_comments(reader, [post(read_url=read_url)])
+        payload = reader._run_sync.call_args.args[1]
+        self.assertEqual(payload['postIds'], [read_url])
+        self.assertEqual(payload['sortOrder'], 'most relevant')
+        self.assertEqual(result['posts'][URN1][0]['replies'][0]['comment_id'], '2')
 
     def test_activity_digits_are_never_relabelled_to_a_share(self):
         activity = 'urn:li:activity:' + URN1.rsplit(':', 1)[1]

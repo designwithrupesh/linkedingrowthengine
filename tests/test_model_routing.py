@@ -1,6 +1,7 @@
 """Model backend selection and credential-destination contracts, without API calls."""
 import json
 import os
+import re
 from pathlib import Path
 import tempfile
 import unittest
@@ -105,6 +106,40 @@ class ModelRoutingTests(unittest.TestCase):
             self.assertEqual(twin.complete(*connection, self.messages)['text'], 'draft')
         self.assertEqual(post.call_args.kwargs['headers']['Authorization'], 'Bearer twin-local')
         bridge.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_only_local_decoder_receives_strict_schema_and_cannot_match_typographic_dashes(self, post, bridge):
+        post.return_value = self.response()
+        post.return_value.json.return_value = self.native_text(INTERACTION_TEXT)
+        with patch.dict(os.environ, {'MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT,
+                                    'APIFY_TOKEN': 'apify-test-placeholder',
+                                    'MODEL_API_KEY': 'model-test-placeholder'}, clear=True):
+            twin.complete(*twin.model_connection(), self.messages)
+        payload = post.call_args.kwargs['json']
+        response_format = payload['response_format']
+        self.assertEqual(response_format['type'], 'json_schema')
+        self.assertTrue(response_format['json_schema']['strict'])
+        schema = response_format['json_schema']['schema']
+        self.assertFalse(schema['additionalProperties'])
+        self.assertEqual(set(schema['required']), {'text', 'skip', 'reason'})
+        pattern = schema['properties']['text']['pattern']
+        self.assertTrue(re.fullmatch(pattern, INTERACTION_TEXT))
+        self.assertTrue(re.fullmatch(pattern, 'An early-stage team can test it.'))
+        for dash in ('\u2012', '\u2013', '\u2014', '\u2015'):
+            with self.subTest(dash=dash):
+                self.assertIsNone(re.fullmatch(pattern, 'Test it ' + dash + ' then decide.'))
+        self.assertEqual(post.call_args.kwargs['headers'], {'Authorization': 'Bearer twin-local'})
+        bridge.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_remote_provider_keeps_native_json_object_format(self, post, bridge):
+        bridge.return_value = self.native_text(INTERACTION_TEXT)
+        with patch.dict(os.environ, {'APIFY_TOKEN': 'apify-test-placeholder'}, clear=True):
+            twin.complete(*twin.model_connection(), self.messages)
+        self.assertEqual(bridge.call_args.args[1]['response_format'], {'type': 'json_object'})
+        post.assert_not_called()
 
     @patch('automation.apify_ai.complete')
     @patch('automation.twin.requests.post')

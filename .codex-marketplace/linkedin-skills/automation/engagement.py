@@ -76,18 +76,19 @@ def public_action_counts(now: datetime, policy: dict, state: dict) -> dict:
 
 
 def public_actions_due(now: datetime, policy: dict, state: dict) -> int:
-    """Return the accrued allowance, capped at four actions per run.
+    """Return this slot's allowance without carrying missed work forward.
 
-    The default forty daily attempts accrue over twenty-eight half-hour slots
-    from 08:00 through 21:30. Missed slots do not allow a forty-action burst.
-    Repeated five-minute runs in one slot share the same durable allowance.
+    Forty daily attempts are spread across twenty quarter-hour slots from
+    17:00 through 21:45. Every write attempt in a slot consumes its allowance,
+    including rejected and uncertain writes. Repeated five-minute jobs share
+    that allowance through durable action timestamps.
     """
     local = _clock(now, policy)
-    start = _integer(policy.get('public_engagement_start_hour', 8), 'start hour', maximum=23)
+    start = _integer(policy.get('public_engagement_start_hour', 17), 'start hour', maximum=23)
     end = _integer(policy.get('public_engagement_end_hour', 22), 'end hour', 1, 24)
-    minutes = _integer(policy.get('public_engagement_slot_minutes', 30), 'slot minutes', 15, 60)
+    minutes = _integer(policy.get('public_engagement_slot_minutes', 15), 'slot minutes', 15, 60)
     target = _integer(policy.get('max_public_interactions_per_day', 40), 'daily target', maximum=40)
-    session = _integer(policy.get('max_public_actions_per_session', 4), 'session limit', maximum=4)
+    session = _integer(policy.get('max_public_actions_per_session', 2), 'session limit', maximum=4)
     duration = (end - start) * 60
     if duration <= 0 or duration % minutes:
         raise ValueError('Invalid public engagement window')
@@ -95,8 +96,20 @@ def public_actions_due(now: datetime, policy: dict, state: dict) -> int:
     if not 0 <= elapsed < duration:
         return 0
     slot = elapsed // minutes
-    allowance = target * (slot + 1) // (duration // minutes)
-    return max(0, min(session, allowance - public_action_counts(now, policy, state)['total']))
+    slots = duration // minutes
+    accrued = target * (slot + 1) // slots
+    allowance = accrued - target * slot // slots
+    slot_start = local.replace(hour=start, minute=0, second=0, microsecond=0) + timedelta(minutes=slot * minutes)
+    slot_end = slot_start + timedelta(minutes=minutes)
+    attempted = 0
+    for action in state.get('actions', {}).values():
+        if not isinstance(action, dict) or action.get('kind') not in ('reaction', 'comment'):
+            continue
+        stamp = _stamp(action.get('at'))
+        if stamp is not None and slot_start <= stamp < slot_end:
+            attempted += 1
+    total = public_action_counts(now, policy, state)['total']
+    return max(0, min(session, allowance - attempted, accrued - total, target - total))
 
 
 def canonical_target_urn(post: dict) -> str | None:

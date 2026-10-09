@@ -10,12 +10,14 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 import re
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 
 from lib.url_parser import build_parent_comment_urn, parse_linkedin_url
 
 POST_URN = re.compile(r'urn:li:(?:activity|share|ugcPost):\d{18,25}')
 COMMENT_ID = re.compile(r'\d{1,25}')
+COMMENT_URN = re.compile(r'urn:li:comment:\((urn:li:(?:activity|share|ugcPost):\d{18,25}),(\d{1,25})\)')
+SOURCE_COMMENT_URN = re.compile(r'urn:li:comment:\((?:urn:li:)?(?:activity|share|ugcPost):\d{18,25},\d{1,25}\)')
 MAX_PENDING = 1000
 
 
@@ -129,14 +131,106 @@ def record_poll(state, post, now, *, rows=None, error=False, max_items=100):
     return record
 
 
-def _comments(rows, own_url):
+def _source_post_urn(value):
+    if not isinstance(value, str):
+        return None
+    if POST_URN.fullmatch(value):
+        return value
+    try:
+        parsed = urlsplit(value)
+        if (parsed.scheme != 'https' or (parsed.hostname or '').casefold().removeprefix('www.') != 'linkedin.com'
+                or parsed.username or parsed.password or parsed.port not in (None, 443)):
+            return None
+        return parse_linkedin_url('https://linkedin.com' + parsed.path).get('post_urn')
+    except ValueError:
+        return None
+
+
+def _parent_urn(row, post):
+    """Keep the parent's evidenced identity distinct from the published post.
+
+    A public comment URL can identify an activity whose numeric ID differs
+    from the canonical share used by the write API. Never replace that typed
+    identity with the share ID. Missing URLs retain the documented legacy
+    format; malformed or conflicting supplied URLs hold the whole thread.
+    """
+    cid = str(row.get('comment_id') or '')
+    value = row.get('comment_url')
+    if value is None:
+        return build_parent_comment_urn(post['post_urn'], cid)
+    if not isinstance(value, str):
+        return None
+    try:
+        parsed = urlsplit(value)
+        if (parsed.scheme != 'https' or (parsed.hostname or '').casefold().removeprefix('www.') != 'linkedin.com'
+                or parsed.username or parsed.password or parsed.port not in (None, 443)):
+            return None
+        parameters = parse_qs(parsed.query)
+        supplied = parameters.get('commentUrn', [])
+        if len(supplied) != 1 or not SOURCE_COMMENT_URN.fullmatch(supplied[0]):
+            return None
+        parent = parse_linkedin_url(supplied[0])
+        parent_urn = parent.get('comment_urn')
+        match = COMMENT_URN.fullmatch(parent_urn or '')
+        path_urn = parse_linkedin_url('https://linkedin.com' + parsed.path).get('post_urn')
+        if not match or match.group(2) != cid or path_urn != match.group(1):
+            return None
+        known = {post['post_urn']}
+        for field in ('url', 'read_url'):
+            if post.get(field):
+                known.add(parse_linkedin_url(post[field]).get('post_urn'))
+        activities = {item for item in known if isinstance(item, str) and item.startswith('urn:li:activity:')}
+        if match.group(1).startswith('urn:li:activity:') and activities and match.group(1) not in activities:
+            return None
+        source_urn = _source_post_urn(row.get('post_input'))
+        # A grouped row's explicit post_input establishes that this distinct
+        # activity is a public alias of the known canonical post.
+        if source_urn and source_urn not in known:
+            return None
+        if match.group(1) not in known and source_urn not in known:
+            return None
+        return parent_urn
+    except ValueError:
+        return None
+
+
+def _learn_read_url(state, post, rows):
+    """Persist an activity alias only when the actor attests its owned input."""
+    candidates = set()
+    for row in rows or []:
+        if not isinstance(row, dict) or _source_post_urn(row.get('post_input')) != post['post_urn']:
+            continue
+        parent = _parent_urn(row, post)
+        match = COMMENT_URN.fullmatch(parent or '')
+        if match and match.group(1).startswith('urn:li:activity:'):
+            candidates.add('https://www.linkedin.com/feed/update/' + match.group(1) + '/')
+    # Conflicting identities and changes to an already evidenced alias require
+    # reconciliation; never select whichever external row arrived first.
+    if len(candidates) > 1:
+        return False
+    if not candidates:
+        return True
+    candidate = next(iter(candidates))
+    if post.get('read_url') and _source_post_urn(post['read_url']) != _source_post_urn(candidate):
+        return False
+    post['read_url'] = candidate
+    for saved in state.get('posts', []):
+        if not isinstance(saved, dict):
+            continue
+        saved_urn = saved.get('post_urn') or saved.get('urn') or _source_post_urn(saved.get('url'))
+        if saved_urn == post['post_urn']:
+            saved['read_url'] = candidate
+    return True
+
+
+def _comments(rows, own_url, post):
     """Flatten nested threads while preserving the top-level parent context."""
     own = _profile_identity(own_url)
     if own is None:
         raise ValueError('A verified owner profile URL is required to monitor replies')
-    result, counts, visited = [], {'self': 0, 'unidentified': 0}, set()
+    result, counts, visited = [], {'self': 0, 'unidentified': 0, 'invalid_parent': 0}, set()
 
-    def walk(row, parent_id, parent_text, parent_author, depth=0):
+    def walk(row, parent_id, parent_text, parent_author, parent_urn, depth=0):
         if not isinstance(row, dict) or depth > 20 or len(visited) >= 5000 or id(row) in visited:
             return
         visited.add(id(row))
@@ -155,9 +249,10 @@ def _comments(rows, own_url):
                 result.append({'id': cid, 'parent_id': parent_id, 'text': row['text'][:4000],
                                'author': str(author.get('name') or '')[:300],
                                'author_profile_url': author['profile_url'], 'timestamp': posted.get('timestamp'),
-                               'parent_text': parent_text[:4000], 'parent_author': parent_author[:300]})
+                               'parent_text': parent_text[:4000], 'parent_author': parent_author[:300],
+                               'parent_urn': parent_urn})
         for child in row.get('replies') or []:
-            walk(child, parent_id, parent_text, parent_author, depth + 1)
+            walk(child, parent_id, parent_text, parent_author, parent_urn, depth + 1)
 
     for row in rows or []:
         if not isinstance(row, dict):
@@ -165,8 +260,12 @@ def _comments(rows, own_url):
         cid = str(row.get('comment_id') or '')
         if not COMMENT_ID.fullmatch(cid):
             continue
+        parent_urn = _parent_urn(row, post)
+        if parent_urn is None:
+            counts['invalid_parent'] += 1
+            continue
         author = row.get('author') if isinstance(row.get('author'), dict) else {}
-        walk(row, cid, str(row.get('text') or ''), str(author.get('name') or ''))
+        walk(row, cid, str(row.get('text') or ''), str(author.get('name') or ''), parent_urn)
     return result, counts
 
 
@@ -185,7 +284,10 @@ def queue_comments(state, post, rows, own_url, now, *, max_pending=MAX_PENDING):
         raise ValueError('A verified post URN is required to queue replies')
     monitor = _monitor(state)
     pending_replies(state)  # Remove comments for which an intent already exists.
-    comments, stats = _comments(rows, own_url)
+    if _learn_read_url(state, post, rows):
+        comments, stats = _comments(rows, own_url, post)
+    else:
+        comments, stats = [], {'self': 0, 'unidentified': 0, 'invalid_parent': len(rows or [])}
     stats.update(queued=0, duplicate=0, overflow=0)
     for comment in comments:
         key = 'reply:' + urn + ':' + comment['id']
@@ -196,6 +298,7 @@ def queue_comments(state, post, rows, own_url, now, *, max_pending=MAX_PENDING):
             # Edited source comments can update context without losing their
             # place in the queue or removing a generation deferral.
             monitor['pending'][key]['comment'] = comment
+            monitor['pending'][key]['parent'] = comment['parent_urn']
             stats['duplicate'] += 1
             continue
         if len(monitor['pending']) >= max_pending:
@@ -204,7 +307,7 @@ def queue_comments(state, post, rows, own_url, now, *, max_pending=MAX_PENDING):
         monitor['pending'][key] = {
             'key': key, 'post_urn': urn, 'post_url': post['url'],
             'post_text': str(post.get('text') or '')[:3000], 'comment': comment,
-            'parent': build_parent_comment_urn(urn, comment['parent_id']),
+            'parent': comment['parent_urn'],
             'first_seen_at': now.isoformat(), 'generation_deferrals': 0,
         }
         stats['queued'] += 1

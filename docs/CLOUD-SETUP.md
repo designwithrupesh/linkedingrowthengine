@@ -23,7 +23,7 @@ For Codex cloud, use the existing checkout; tasks are already isolated, so do no
 
 The [GitHub Actions workflow](../.github/workflows/digital-twin.yml) runs every five minutes, subject to GitHub's scheduling delays. It remains independent of an open cloud session. The requested daily slots are 09:00 and 18:00 IST, with a five-minute publishing lead; an on-time run schedules approximately 09:05 and 18:05.
 
-The [30-day growth plan](30-DAY-GROWTH-PLAN.md) and [machine-readable calendar](../automation/content-plan.json) contain 60 angles for October 10–November 8, 2026. Public engagement aims for 30–40 total daily likes/comments, capped at 20 meaningful comments and 20 likes, paced between 08:00 and 22:00 IST. Replies use a separate durable queue and quota. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for exact limits, monitoring delays, model routing, activity receipts, and pause controls.
+The [30-day growth plan](30-DAY-GROWTH-PLAN.md) and [machine-readable calendar](../automation/content-plan.json) contain 60 angles for October 10–November 8, 2026. Public engagement aims for 30–40 total daily likes/comments, capped at 20 meaningful comments and 20 likes, spread across 17:00 to 22:00 IST in fifteen-minute slots. Replies use a separate durable queue and quota. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for exact limits, monitoring delays, model routing, activity receipts, and pause controls.
 
 Routine posting and contextual public interaction use the owner's standing authorization in [policy.json](../automation/policy.json). The separately invoked interactive skills retain their original draft flow. The original October 9, 13, and 14 morning seed posts are already recorded and must not be resubmitted.
 
@@ -54,3 +54,5 @@ The interviewer can collect optional true stories; the profile optimizer and pla
 Keep confidential stories, private voice samples, draft queues, and reports in ignored local storage such as `testing/`. Public action receipts remain in [state.json](../automation/state.json). Ambiguous writes, including the historical uncertain reaction, stay quarantined until verified evidence resolves them. Independent work can continue; uncertain intents must not be cleared simply to retry.
 
 Use timezone-aware timestamps for any explicit schedule. `scripts/schedule_post.py` defaults to today's 10:00 in the host timezone or five minutes ahead; it is not the runner's daily calendar.
+
+Generated posts, comments, replies, messages, and profile copy share the strict writing gate in `lib/voice.py`. Em dashes, en dashes, double hyphens, canned praise, stock phrases, and writing scaffolding are rejected before publishing. Short answers need no padding. Scheduled-copy revisions use a content-only patch followed by a remote read to confirm the text and publishing time.

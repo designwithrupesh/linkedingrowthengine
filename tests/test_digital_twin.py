@@ -495,12 +495,12 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertEqual(cleaned, 'Design trade-offs\n\nThe C# prototype cost $4,730 on 14 Feb.\n\nFigma made Design reviews clearer.')
 
     def test_invalid_short_post_and_long_comment_are_skipped_without_padding(self):
-        short = 'A truthful design observation. ' * 20
-        self.assertLess(len(short), 900)
+        short = 'A truthful design observation. ' * 10
+        self.assertLess(len(short), 400)
         result = validate_model_output({'text': short, 'skip': False}, 'post')
         self.assertTrue(result['skip'])
         self.assertEqual(result['text'], '')
-        self.assertTrue(validate_model_output({'text': short, 'skip': False}, 'comment')['skip'])
+        self.assertTrue(validate_model_output({'text': short * 2, 'skip': False}, 'comment')['skip'])
 
     def test_checklist_output_is_skipped_instead_of_rewritten_into_claims(self):
         draft = 'Design choices deserve context.\n\n1. ' + 'Discuss the trade-off with your team. ' * 28
@@ -525,7 +525,7 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertFalse(result['skip'])
         prompt = post.call_args.kwargs['json']['messages'][0]['content']
         self.assertGreater(prompt.rfind('FINAL OUTPUT REQUIREMENTS'), prompt.index('Skill: linkedin-comment-drafter'))
-        self.assertIn('140-350 characters in text', prompt)
+        self.assertIn('80-350 characters in text', prompt)
         self.assertNotIn('900-1300 characters', prompt[prompt.rfind('FINAL OUTPUT REQUIREMENTS'):])
         self.assertEqual(post.call_count, 1)
 

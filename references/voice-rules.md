@@ -1,45 +1,33 @@
-# Voice Rules for Comments
+# Writing voice
 
-## Hard rules
+These rules apply to posts, comments, replies, inbox messages, profile copy, and reports written for Rupesh. His explicit preference overrides the imported templates.
 
-1. **Em dashes (`—`) capped at about 1 per 100 words** (so 0-1 in a comment, 1-2 in a post). The character is no longer a tell (2026 models use fewer than humans); the density is. Replace the excess with a comma, colon or parentheses, never a period. No en dashes (`–`) between clauses, no double dashes (`--`).
-2. **Use `..` as soft pause** when you'd reach for a second em dash. Feels human, matches the author's own rhythm.
-3. **Capitalize personal names, company names, product names** (HubSpot, Claude, etc.). Lowercase reads as disrespectful.
-4. **Sentence starts can be lowercase** (natural voice), but names inside are always capitalized.
-5. **Don't mention the user's own product by name** in comments on third-party posts. Describe what they do instead ("our AI content system", "the platform we're building").
+## Punctuation and layout
 
-## Vocabulary blacklist
+Use no em dashes, en dashes, or double hyphens. Rewrite the sentence with a comma, a full stop, or a new sentence. Do not replace them with forced ellipses or decorative punctuation.
 
-Never use in comments:
-- leverage, utilize, facilitate, streamline, robust, seamless, delve, navigate, unlock, harness, foster, cultivate
-- fundamentally, essentially, ultimately, crucially, notably
-- landscape, ecosystem, paradigm, realm, tapestry, journey
-- "It's not just X, it's Y"
-- "In today's fast-paced world"
-- "Game-changer", "deep dive", "at the end of the day"
+Write plain text. No emoji titles, Markdown headings, bold markers, hashtags, numbered checklists, or bullet scaffolding in social content. Use paragraph breaks where the thought needs them. Vary paragraph and sentence length; do not force every post into the same layout.
 
-## Structure
+## Say something specific
 
-- 200-350 chars. Two short paragraphs max. Line break between them.
-- One concrete number or named entity per comment minimum.
-- One line that could be screenshot and quoted standalone.
-- Never end with "What do you think?" — dead prompt. End with a specific question or a clean landing.
+Start with the actual point. Explain a customer task, a design decision, or a trade-off that someone can recognise. A hypothetical example must read as hypothetical. Use the supplied post or comment as context, then add something useful instead of summarising it back to the author.
 
-## Anti-patterns
+Keep a reply as short as its answer needs. Do not pad it to reach a word count. Ask a question only when it follows naturally from the conversation. Never finish with a generic engagement prompt such as "What do you think?"
 
-- Thesis restatement ("so true, AI is changing everything")
-- Generic praise ("great insight!", "love this")
-- Overused openers: "This.", "100%", "Couldn't agree more"
-- Rule of three ("faster, cheaper, better")
-- Passive voice over 10% of clauses
+Do not invent career stories, clients, outcomes, statistics, quotes, availability, or commitments. A number or named entity is optional and must come from supplied facts. Capitalise real names and product names correctly.
 
-## Algorithmic Scoring Criteria (NLP-level)
+## Avoid canned writing
 
-LinkedIn's ranker runs NLP on comments and rewards:
+No generic praise: "great post", "love this", "so true", "100%", "couldn't agree more", or "a strong reminder". No commentary about the source itself, such as "this post highlights a key tension". Join the conversation directly.
 
-- **Depth** — comments with ≥12 words and multiple sentence structures
-- **New keywords** — introduce at least one noun/concept NOT already in the parent post
-- **Questions** — end with one that invites a sub-thread
-- **Sub-thread sparks** — comments that generate replies from the author AND other commenters count as a strong signal
+Avoid formulaic contrasts such as "it's not about X, it's about Y", "not just X but Y", and "the real value lies in". Avoid a grand opening followed by a tidy lesson, three polished abstractions, or a sales pitch disguised as a comment.
 
-**Before submitting, check:** does your comment add at least one noun/concept not already in the post? If no, rewrite.
+Do not use promotional filler: leverage, utilize, facilitate, streamline, robust, seamless, delve, unlock, harness, foster, cultivate, game-changer, deep dive, at the end of the day, in today's fast-paced world, meaningful impact, transformative, or revolutionary.
+
+Prefer familiar verbs and concrete nouns. Explain what a person would see or do. A comment about an empty dashboard can mention a visible next action; it does not need to promise reduced cognitive load or a transformed product journey.
+
+## Final check
+
+Read the text as a contribution to this exact conversation. Remove phrases that could be pasted under any other post. The publishing paths must reject forbidden punctuation and known canned patterns before a remote write. If one source-only edit still fails, skip it.
+
+These are writing constraints. They do not establish who wrote a text or guarantee a reader's judgement about its origin.

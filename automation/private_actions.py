@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
 
 from automation.unipile_client import UnipileWriteError
+from automation.voice import require_plain_text, violations
 
 
 class PrivateWriteOutcomeError(RuntimeError):
@@ -263,6 +264,8 @@ class PrivateActions:
                 result = None if result.get('skip') else result.get('text')
             if not isinstance(result, str) or not 1 <= len(result.strip()) <= 1000 or _sensitive(result):
                 continue
+            if violations(result):
+                continue
             answer = result.strip()
             attempted += 1
             if self._one_shot(key, 'dm_reply', answer, lambda: self.client.reply_in_chat(chat_id, answer),
@@ -281,7 +284,7 @@ class PrivateActions:
                 or not isinstance(summary, str) or not 1 <= len(summary.strip()) <= 2600
                 or _sensitive(headline) or _sensitive(summary)):
             raise ValueError('A valid prepared headline and About plan is required.')
-        headline, summary = headline.strip(), summary.strip()
+        headline, summary = require_plain_text(headline), require_plain_text(summary)
         key = 'profile-edit:' + digest(headline, summary)
         if key in self.actions or any(action.get('kind') == 'profile_edit'
                                      and action.get('status') in ('inflight', 'unknown-needs-reconciliation')

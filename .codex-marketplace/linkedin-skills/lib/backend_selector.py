@@ -34,6 +34,7 @@ import subprocess
 from typing import Any, Literal, Optional
 
 from ._env import load_env
+from .voice import require_plain_text
 
 load_env()
 
@@ -269,6 +270,8 @@ def publish(
         - diy:     dict with `{"mode": "diy", "returncode": int, "stdout": str, "stderr": str}`.
         Returns None only if the chosen backend cannot run (missing deps).
     """
+    if draft_text or kind != 'reshare':
+        draft_text = require_plain_text(draft_text)
     backend = active_backend()
 
     if backend == "manual":
@@ -427,6 +430,8 @@ def repost(
         - `{"mode": "error", "message": ...}` if the post cannot be reshared.
         - None if the parent URN could not be resolved (ask the user to paste it).
     """
+    if commentary:
+        commentary = require_plain_text(commentary)
     parent = kwargs.get("parent")
     if not parent:
         post = fetch_post(post_url)

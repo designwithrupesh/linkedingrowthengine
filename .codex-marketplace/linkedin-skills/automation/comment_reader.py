@@ -233,7 +233,10 @@ def fetch_comments(reader, posts, *, max_items=100, page_number=1, input_format=
         else:
             value = urn
         values.append(value)
-    payload = {'postIds': values, 'limit': max_items, 'sortOrder': 'most recent'}
+    # The actor's newest-first results can omit existing nested replies.
+    # Relevant ordering returns thread coverage; pagination still advances
+    # through all available top-level comments on busy owned posts.
+    payload = {'postIds': values, 'limit': max_items, 'sortOrder': 'most relevant'}
     if page_number != 1:
         payload['page_number'] = page_number
     rows = reader._run_sync(reader.POST_COMMENTS_ACTOR, payload, force_refresh=True)

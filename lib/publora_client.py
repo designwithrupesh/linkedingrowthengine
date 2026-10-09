@@ -30,6 +30,7 @@ from typing import Any, Optional
 import requests
 
 from ._env import load_env
+from .voice import require_plain_text
 
 
 class PubloraError(RuntimeError):
@@ -113,6 +114,7 @@ class PubloraClient:
         """
         if len(message) > 1250:
             raise PubloraError("message exceeds 1,250 char LinkedIn limit")
+        message = require_plain_text(message)
         payload = {
             "postedId": post_urn,
             "message": message,
@@ -189,6 +191,7 @@ class PubloraClient:
         are normalized to their "platformId" here. `scheduled_time` is ISO 8601
         (UTC); if None, the post is created as a draft.
         """
+        content = require_plain_text(content)
         norm_platforms = [
             p if isinstance(p, str) else (p.get("platformId") or p.get("platform"))
             for p in platforms
@@ -308,7 +311,7 @@ class PubloraClient:
             "parent": parent,
         }
         if commentary:
-            payload["commentary"] = commentary
+            payload["commentary"] = require_plain_text(commentary)
         if visibility:
             payload["visibility"] = visibility.upper()
         return self._post("/linkedin-reshare", payload)

@@ -2,13 +2,23 @@
 
 This application connects the imported 12-skill bundle to an autonomous GitHub Actions workflow. Rupesh has authorized routine design posts and contextual public interactions on his behalf. Live mode uses that standing authorization in [policy.json](../automation/policy.json); it does not ask for approval on each post or comment. The imported skills retain their original interactive workflow when used separately.
 
+## Writing checks
+
+All outgoing writing uses [the owner writing rules](../references/voice-rules.md) and the shared gate in [lib/voice.py](../lib/voice.py). Posts, comments, replies, private messages, profile text, and reports reject em dashes, en dashes, double hyphens, generic praise, named stock phrases, jargon, and writing scaffolding. The rules are included in the actual generation and editing prompts. Each draft gets at most one source-only edit; a second failure skips the action before intent or quota allocation.
+
+Short answers are allowed, and posts use paragraphs only where the idea needs them. There is no fixed hook-and-lesson layout or mandatory closing question. These checks enforce writing preferences and do not prove authorship.
+
+The four scheduled posts for October 10, 13, and 14 were rewritten as specific plain prose and verified remotely, preserving their IDs and publishing times. Already acknowledged replies retain their receipts. Reply reads use the actor's most-relevant view and evidenced activity URLs, because the most-recent share view can omit nested replies. Parent identity comes from the actual source comment URL when available.
+
 ## Publishing and engagement
 
 The runner checks for work every five minutes, every day. GitHub may delay scheduled jobs. Publishing slots are **09:00 and 18:00 IST**, including weekends; a due slot is scheduled through Publora five minutes ahead, so an on-time session publishes at approximately **09:05 or 18:05**. A delayed session keeps the slot's identity and does not create a duplicate. Missed slots are not moved to another day.
 
 The [30-day calendar](30-DAY-GROWTH-PLAN.md) covers October 10 to November 8, 2026, with 60 distinct angles. The runner selects its slot from [content-plan.json](../automation/content-plan.json). Outside that campaign it continues with the policy's topic rotation. The goal is consulting conversations, personal-brand authority, and founding designer relationships. LinkedIn's editorial Top Voice selection is outside the application's control; there is no 30-day badge guarantee.
 
-Public engagement aims for **30–40 total actions per day**, with ceilings of **20 substantive comments and 20 likes**. Actions are paced between **08:00 and 22:00 IST**, at most four per session. The runner reads the actual post, skips unrelated or weak matches, and contributes a design example, a decision criterion, or a specific question. It does not fill a quota with generic praise. Relevant public source posts must be no more than seven days old; profile discovery is cached for 24 hours.
+Public engagement aims for **30–40 total actions per day**, with ceilings of **20 substantive comments and 20 likes**, spread across the **five-hour daily window from 17:00 to 22:00 IST**. Each fifteen-minute slot allows at most **one like and one substantive comment**. The five-minute workflow checks share that slot's durable allowance; missed slots expire instead of building up a burst later. The runner reads the actual post, skips unrelated or weak matches, and contributes a design example, a decision criterion, or a specific question. It does not fill a quota with generic praise. Relevant public source posts must be no more than seven days old; profile discovery is cached for 24 hours.
+
+This schedules useful engagement throughout five hours. It does not simulate a person being online continuously or establish five hours of human work. GitHub scheduling delays, available relevant posts, and the existing read budget can reduce activity. Replies have their own queue and continue outside the public engagement window.
 
 Replies on Rupesh's own posts have a separate durable queue and are handled before outbound public engagement. The limits are 20 replies per run and 1,000 per day. These are operational ceilings, not a promise that each run will reach them. Personal facts, commitments, off-topic content, and generation failures remain exceptions.
 
