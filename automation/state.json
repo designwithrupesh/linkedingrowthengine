@@ -89,11 +89,14 @@
       "kind": "post",
       "text": "Before you polish a screen, pause to clearly name the customer task it supports and the decision it must help the user make. This focus grounds design in purpose rather than aesthetics alone.\n\nEvery screen should answer two questions: what is the user trying to accomplish here, and what choice are they facing? Without this clarity, design risks becoming decoration.\n\nFor example, a dashboard might look sleek but if it doesn’t guide the user toward their next step—like prioritizing tasks or confirming a selection—it falls short. The trade-off is between visual refinement and functional clarity.\n\nEarly-stage founders should insist on naming these tasks and decisions explicitly during design reviews. It creates a shared framework to evaluate if a screen truly supports the user’s journey.\n\nThis practice helps keep the team aligned, reduces wasted effort on polishing the wrong elements, and ensures each screen delivers real value. Next time you review a screen, ask: what task is this enabling, and what decision does it clarify? That question alone can transform your product’s focus.",
       "at": "2026-10-09T16:13:01.642239+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-10T03:30:00+00:00",
-      "allocation_day": "2026-10-10"
+      "allocation_day": "2026-10-10",
+      "http_status": 200,
+      "remote_id": "6ac91297686963a31d9d2fd4",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -150,6 +153,14 @@
       "at": "2026-10-08T19:01:51.180100+00:00",
       "scheduled_for": "2026-10-14T03:30:00+00:00",
       "allocation_day": "2026-10-14"
+    },
+    {
+      "id": "6ac91297686963a31d9d2fd4",
+      "text": "Before you polish a screen, pause to clearly name the customer task it supports and the decision it must help the user make. This focus grounds design in purpose rather than aesthetics alone.\n\nEvery screen should answer two questions: what is the user trying to accomplish here, and what choice are they facing? Without this clarity, design risks becoming decoration.\n\nFor example, a dashboard might look sleek but if it doesn’t guide the user toward their next step—like prioritizing tasks or confirming a selection—it falls short. The trade-off is between visual refinement and functional clarity.\n\nEarly-stage founders should insist on naming these tasks and decisions explicitly during design reviews. It creates a shared framework to evaluate if a screen truly supports the user’s journey.\n\nThis practice helps keep the team aligned, reduces wasted effort on polishing the wrong elements, and ensures each screen delivers real value. Next time you review a screen, ask: what task is this enabling, and what decision does it clarify? That question alone can transform your product’s focus.",
+      "url": null,
+      "at": "2026-10-09T16:13:01.642239+00:00",
+      "scheduled_for": "2026-10-10T03:30:00+00:00",
+      "allocation_day": "2026-10-10"
     }
   ],
   "discovery": {
