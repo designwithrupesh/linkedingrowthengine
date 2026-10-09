@@ -189,6 +189,14 @@
       "http_status": 200,
       "remote_id": "6ac912a9cb40d0350b30cd43",
       "reason": "Replacement copy and unchanged schedule verified by GET"
+    },
+    "edit:6ac7e8b588cd87066bbfd542:eaf6ee5f4f059c60432561b7a5d34da5f742f89460850ecb83dd4c72b350e29c": {
+      "kind": "post-edit",
+      "post_group_id": "6ac7e8b588cd87066bbfd542",
+      "text": "If your brand says \"simple\", try creating an account in your own product.\n\nNotice the things a new customer has to work out. Why do you need this information? What happens after clicking continue? Can they change that choice later?\n\nEach unanswered question adds a bit of work. A shorter form won't help much if people still don't understand what they're signing up for.\n\nI'd take one word from the brand strategy and review the product against it. For \"trusted\", that might mean showing the price before asking for payment details. For \"clear\", it might mean saying exactly what a button will do.\n\nMy work spans brand strategy and product design. This is where I like to connect them: a promise someone can actually see in the product.\n\nWhich part of your first-use experience needs a better explanation?",
+      "at": "2026-10-09T16:31:00.581589+00:00",
+      "status": "inflight",
+      "original_content_sha256": "02d5a83d433bb59b0db42de5a0cf5915319aeb6e349ed455de44d688d2f14be3"
     }
   },
   "days": {
