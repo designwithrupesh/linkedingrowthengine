@@ -242,7 +242,7 @@
     "2026-10-10": {
       "post": 2,
       "interaction": 0,
-      "read": 1
+      "read": 2
     }
   },
   "reports": [
@@ -331,12 +331,20 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-10T00:22:58.153381+00:00",
+        "last_considered_at": "2026-10-10T06:04:24.231829+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-10T00:22:58.153381+00:00",
+        "last_checked_at": "2026-10-10T06:04:24.231829+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
         "count": 2,
         "cached": false
+      },
+      "urn:li:share:7514527701878284288": {
+        "last_considered_at": "2026-10-10T06:04:24.231829+00:00",
+        "changed_at": "2026-10-10T06:04:24.231829+00:00",
+        "count": 0,
+        "cached": false,
+        "status": "analytics-count",
+        "last_checked_at": "2026-10-10T06:04:24.231829+00:00"
       }
     }
   },
