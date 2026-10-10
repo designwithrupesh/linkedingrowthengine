@@ -478,7 +478,15 @@
   },
   "operational_status": {
     "private_connection": "disabled-by-policy",
-    "own_reply_verification": "visible-in-parent-thread"
+    "own_reply_verification": "visible-in-parent-thread",
+    "session": {
+      "status": "running",
+      "started_at": "2026-10-10T15:23:40.608830+00:00",
+      "deadline": "2026-10-10T22:00:00+05:30",
+      "heartbeat_at": "2026-10-10T15:25:48.595584+00:00",
+      "cycles": 1,
+      "recent_errors": []
+    }
   },
   "engagement": {
     "profile_checked_at": {
