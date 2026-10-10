@@ -247,6 +247,14 @@
         "author_profile_url": "https://www.linkedin.com/in/therupeshkumar",
         "comment_url": "https://www.linkedin.com/feed/update/urn:li:activity:7513338457843314689/?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7513338457843314689%2C7514703672421994498%29"
       }
+    },
+    "reaction:comment:4c406bc25141d97b7e81ea493b793e11544dee8eaad3c41aed22af57550a6302": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-10T15:24:52.370072+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513269921741545472",
+      "parent": null
     }
   },
   "days": {
@@ -269,9 +277,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 5,
-      "public_interaction": 2
+      "public_interaction": 3
     }
   },
   "reports": [
