@@ -285,7 +285,7 @@
     },
     "post:2026-10-11:1800": {
       "kind": "post",
-      "text": "Founders should join customer research when they need to directly hear where users struggle or hesitate. This firsthand exposure helps them understand the context behind support questions and assumptions that keep them up at night. Designers, on the other hand, should lead the research when the goal is to translate those insights into flows and solutions. They connect the dots between what users say and how the product should respond. The handoff happens after understanding: founders bring the raw problems and urgency, while designers decide how to address them through design. Early-stage founders can make this smoother by involving designers in customer conversations before finalizing feature lists. That way, design leads with clarity on real user needs rather than assumptions, saving time and reducing rework down the line.",
+      "text": "A founder and a designer can hear the same customer call and come away with different problems to solve.\n\nThe founder might hear a request for a missing feature. The designer might notice that the customer couldn't find something already in the product.\n\nI'd want both of those observations in the discussion before anyone commits to a solution. Ask the customer to walk through what they were trying to do. Watch where they get stuck. Then compare that with what each person thought the problem was.\n\nThe designer can lead the session while the founder listens and asks follow-ups. Afterwards, agree on what you actually heard and which questions still need testing.\n\nAt an early startup, those conversations belong in the same room as product decisions.",
       "at": "2026-10-10T15:25:33.475344+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -312,8 +312,11 @@
       "post_group_id": "6aca58f7cb40d0350b40aefe",
       "text": "A founder and a designer can hear the same customer call and come away with different problems to solve.\n\nThe founder might hear a request for a missing feature. The designer might notice that the customer couldn't find something already in the product.\n\nI'd want both of those observations in the discussion before anyone commits to a solution. Ask the customer to walk through what they were trying to do. Watch where they get stuck. Then compare that with what each person thought the problem was.\n\nThe designer can lead the session while the founder listens and asks follow-ups. Afterwards, agree on what you actually heard and which questions still need testing.\n\nAt an early startup, those conversations belong in the same room as product decisions.",
       "at": "2026-10-10T15:29:23.913489+00:00",
-      "status": "inflight",
-      "original_content_sha256": "82f757f48dfa129fadcdd30f1fcd85c0abdd8bff6db0213c66a422b232e2c641"
+      "status": "sent",
+      "original_content_sha256": "82f757f48dfa129fadcdd30f1fcd85c0abdd8bff6db0213c66a422b232e2c641",
+      "http_status": 200,
+      "remote_id": "6aca58f7cb40d0350b40aefe",
+      "reason": "Reviewed replacement copy and unchanged publishing time verified by GET"
     }
   },
   "days": {
@@ -408,7 +411,7 @@
     },
     {
       "id": "6aca58f7cb40d0350b40aefe",
-      "text": "Founders should join customer research when they need to directly hear where users struggle or hesitate. This firsthand exposure helps them understand the context behind support questions and assumptions that keep them up at night. Designers, on the other hand, should lead the research when the goal is to translate those insights into flows and solutions. They connect the dots between what users say and how the product should respond. The handoff happens after understanding: founders bring the raw problems and urgency, while designers decide how to address them through design. Early-stage founders can make this smoother by involving designers in customer conversations before finalizing feature lists. That way, design leads with clarity on real user needs rather than assumptions, saving time and reducing rework down the line.",
+      "text": "A founder and a designer can hear the same customer call and come away with different problems to solve.\n\nThe founder might hear a request for a missing feature. The designer might notice that the customer couldn't find something already in the product.\n\nI'd want both of those observations in the discussion before anyone commits to a solution. Ask the customer to walk through what they were trying to do. Watch where they get stuck. Then compare that with what each person thought the problem was.\n\nThe designer can lead the session while the founder listens and asks follow-ups. Afterwards, agree on what you actually heard and which questions still need testing.\n\nAt an early startup, those conversations belong in the same room as product decisions.",
       "url": null,
       "at": "2026-10-10T15:25:33.475344+00:00",
       "scheduled_for": "2026-10-11T12:30:00+00:00",
