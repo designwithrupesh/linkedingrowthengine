@@ -323,6 +323,14 @@
       "http_status": 200,
       "remote_id": "6aca58f7cb40d0350b40aefe",
       "reason": "Reviewed replacement copy and unchanged publishing time verified by GET"
+    },
+    "reaction:comment:269213f1acb8aa5dece48be3ada01af3deee54e238a7e5d7e6cfb81f44e827b3": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-10T15:34:04.797065+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513009691497553921",
+      "parent": null
     }
   },
   "days": {
@@ -345,9 +353,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 4,
+      "interaction": 5,
       "read": 5,
-      "public_interaction": 4
+      "public_interaction": 5
     },
     "2026-10-11": {
       "post": 2,
