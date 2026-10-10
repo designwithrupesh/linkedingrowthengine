@@ -530,12 +530,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-10T15:23:40.608830+00:00",
       "deadline": "2026-10-10T22:00:00+05:30",
       "heartbeat_at": "2026-10-10T16:28:48.647409+00:00",
       "cycles": 14,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-10-10T16:30:00.000172+00:00"
     }
   },
   "engagement": {
