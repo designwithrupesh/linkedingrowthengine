@@ -269,6 +269,16 @@
       "http_status": 201,
       "remote_id": "7514707563259731968",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-11:0900": {
+      "kind": "post",
+      "text": "When reviewing onboarding, focus on what a new user can actually do at each step instead of counting screens. That shifts the conversation from ticking boxes to understanding progress. For example, if a setup screen asks for information but the user can’t move forward because they’re unsure why it’s needed, that’s a barrier. Early-stage founders should watch where users hesitate and ask, \"Which step creates uncertainty?\" Fixing that clears the path and accelerates adoption. This approach helps teams avoid adding more screens that don’t move the user closer to their goal. It’s less about quantity and more about clarity and momentum.",
+      "at": "2026-10-10T15:25:10.607411+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-11T03:30:00+00:00",
+      "allocation_day": "2026-10-11"
     }
   },
   "days": {
@@ -294,6 +304,11 @@
       "interaction": 4,
       "read": 5,
       "public_interaction": 4
+    },
+    "2026-10-11": {
+      "post": 1,
+      "interaction": 0,
+      "read": 0
     }
   },
   "reports": [
