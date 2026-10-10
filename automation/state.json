@@ -230,6 +230,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:86049dad66fd9ed0e8e43031bdf402eb33627bb2294b49c71b77064380a6067d": {
+      "kind": "comment",
+      "text": "I'd use simulations to find questions to test, then put the riskiest one in front of a real customer. If a simulated user likes new copy, I'd still check whether someone can explain the offer in their own words. Those are different signals.",
+      "at": "2026-10-10T15:09:22.128742+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7513338456849207297",
+      "parent": null
     }
   },
   "days": {
@@ -252,9 +260,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 4,
-      "public_interaction": 1
+      "public_interaction": 2
     }
   },
   "reports": [
