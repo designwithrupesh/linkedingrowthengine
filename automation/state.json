@@ -274,11 +274,14 @@
       "kind": "post",
       "text": "When reviewing onboarding, focus on what a new user can actually do at each step instead of counting screens. That shifts the conversation from ticking boxes to understanding progress. For example, if a setup screen asks for information but the user can’t move forward because they’re unsure why it’s needed, that’s a barrier. Early-stage founders should watch where users hesitate and ask, \"Which step creates uncertainty?\" Fixing that clears the path and accelerates adoption. This approach helps teams avoid adding more screens that don’t move the user closer to their goal. It’s less about quantity and more about clarity and momentum.",
       "at": "2026-10-10T15:25:10.607411+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-11T03:30:00+00:00",
-      "allocation_day": "2026-10-11"
+      "allocation_day": "2026-10-11",
+      "http_status": 200,
+      "remote_id": "6aca58e0cb40d0350b40ad64",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -362,6 +365,14 @@
       "scheduled_for": "2026-10-10T12:30:00+00:00",
       "allocation_day": "2026-10-10",
       "post_urn": "urn:li:share:7514663593506951168"
+    },
+    {
+      "id": "6aca58e0cb40d0350b40ad64",
+      "text": "When reviewing onboarding, focus on what a new user can actually do at each step instead of counting screens. That shifts the conversation from ticking boxes to understanding progress. For example, if a setup screen asks for information but the user can’t move forward because they’re unsure why it’s needed, that’s a barrier. Early-stage founders should watch where users hesitate and ask, \"Which step creates uncertainty?\" Fixing that clears the path and accelerates adoption. This approach helps teams avoid adding more screens that don’t move the user closer to their goal. It’s less about quantity and more about clarity and momentum.",
+      "url": null,
+      "at": "2026-10-10T15:25:10.607411+00:00",
+      "scheduled_for": "2026-10-11T03:30:00+00:00",
+      "allocation_day": "2026-10-11"
     }
   ],
   "discovery": {
