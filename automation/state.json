@@ -242,7 +242,7 @@
     "2026-10-10": {
       "post": 2,
       "interaction": 0,
-      "read": 3
+      "read": 4
     }
   },
   "reports": [
@@ -366,7 +366,8 @@
   },
   "engagement": {
     "profile_checked_at": {
-      "lennyrachitsky": "2026-10-09T16:14:33.834666+00:00"
+      "lennyrachitsky": "2026-10-09T16:14:33.834666+00:00",
+      "juliezhuo": "2026-10-10T12:22:22.421526+00:00"
     },
     "targets": [
       {
