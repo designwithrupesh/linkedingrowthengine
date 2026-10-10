@@ -263,9 +263,12 @@
       "kind": "comment",
       "text": "If PMs are thriving in the AI era, what’s the actual customer task they’re solving better than before? I’d watch how AI tools are shifting the scope of product decisions, not just the execution.",
       "at": "2026-10-10T15:24:56.668011+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7513269921741545472",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7514707563259731968",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
