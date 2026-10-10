@@ -258,6 +258,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:4c406bc25141d97b7e81ea493b793e11544dee8eaad3c41aed22af57550a6302": {
+      "kind": "comment",
+      "text": "If PMs are thriving in the AI era, what’s the actual customer task they’re solving better than before? I’d watch how AI tools are shifting the scope of product decisions, not just the execution.",
+      "at": "2026-10-10T15:24:56.668011+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513269921741545472",
+      "parent": null
     }
   },
   "days": {
@@ -280,9 +288,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 3,
+      "interaction": 4,
       "read": 5,
-      "public_interaction": 3
+      "public_interaction": 4
     }
   },
   "reports": [
