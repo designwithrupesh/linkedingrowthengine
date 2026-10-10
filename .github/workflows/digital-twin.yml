@@ -1,13 +1,14 @@
 name: LinkedIn digital twin
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '2-57/5 * * * *'
+    - cron: '15 11 * * *'  # prepare the continuous 17:00-22:00 IST session
   workflow_dispatch:
     inputs:
       mode:
         description: Run mode
         type: choice
-        options: [demo, preview, live]
+        options: [demo, preview, live, session]
         default: demo
 permissions:
   contents: write
@@ -18,7 +19,7 @@ concurrency:
 jobs:
   twin:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 360
     env:
       MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
       MODEL_ENDPOINT: ${{ vars.MODEL_ENDPOINT }}
@@ -44,7 +45,7 @@ jobs:
       - name: Configure AI route
         if: >-
           (github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
-          ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true'))
+          ((github.event_name == 'schedule' || (inputs.mode == 'live' || inputs.mode == 'session')) && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true'))
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
@@ -75,7 +76,7 @@ jobs:
         if: >-
           (env.MODEL_ENDPOINT == '' || env.TWIN_LOW_COST_MODE == 'true') &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
-          ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
+          ((github.event_name == 'schedule' || (inputs.mode == 'live' || inputs.mode == 'session')) && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
         with:
           path: |
@@ -86,7 +87,7 @@ jobs:
         if: >-
           (env.MODEL_ENDPOINT == '' || env.TWIN_LOW_COST_MODE == 'true') &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
-          ((github.event_name == 'schedule' || inputs.mode == 'live') && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
+          ((github.event_name == 'schedule' || (inputs.mode == 'live' || inputs.mode == 'session')) && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
         run: |
           bash automation/start_local_model.sh
           echo 'INTERACTION_MODEL_ENDPOINT=http://127.0.0.1:8080/v1/chat/completions' >> "$GITHUB_ENV"
@@ -105,7 +106,7 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python -m automation.twin --preview --state /tmp/twin-model-preview.json
       - name: Run autonomous workflow
-        if: github.event_name == 'schedule' || inputs.mode == 'live'
+        if: github.event_name == 'schedule' || (inputs.mode == 'live' || inputs.mode == 'session')
         env:
           PUBLORA_API_KEY: ${{ secrets.PUBLORA_API_KEY }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
@@ -114,6 +115,8 @@ jobs:
           TWIN_LIVE: ${{ vars.TWIN_LIVE || 'true' }}
           TWIN_READ_ENABLED: ${{ vars.TWIN_READ_ENABLED || 'true' }}
           TWIN_CHECKPOINT_GIT: 'true'
+          TWIN_RUN_MODE: ${{ inputs.mode }}
+          TWIN_SCHEDULE: ${{ github.event.schedule }}
           UNIPILE_API_KEY: ${{ secrets.UNIPILE_API_KEY }}
           UNIPILE_BASE_URL: ${{ vars.UNIPILE_BASE_URL }}
           UNIPILE_ACCOUNT_ID: ${{ vars.UNIPILE_ACCOUNT_ID }}
@@ -122,7 +125,19 @@ jobs:
             echo 'Live execution is paused by TWIN_LIVE. Set it to true or remove it to resume.'
             exit 0
           fi
-          python -m automation.twin
+          python - <<'PYCODE'
+          from datetime import datetime
+          import os
+          import subprocess
+          import sys
+          from zoneinfo import ZoneInfo
+          hour = datetime.now(ZoneInfo('Asia/Calcutta')).hour
+          wait = os.getenv('TWIN_RUN_MODE') == 'session' or os.getenv('TWIN_SCHEDULE') == '15 11 * * *'
+          command = [sys.executable, '-m', 'automation.session' if wait or 17 <= hour < 22 else 'automation.twin']
+          if wait:
+              command.append('--wait-for-window')
+          subprocess.run(command, check=True)
+          PYCODE
       - name: Activity summary
         if: always()
         run: |
@@ -132,8 +147,21 @@ jobs:
           from pathlib import Path
           s = json.loads(Path('automation/state.json').read_text(encoding='utf-8'))
           print('## Digital twin activity')
-          for day, counts in s['days'].items():
-              print(f'- {day}: {counts}')
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          today = datetime.now(ZoneInfo('Asia/Calcutta')).date().isoformat()
+          print('Today: ' + today + ' (IST)')
+          print('Allocated attempts: ' + str(s['days'].get(today, {})))
+          confirmed = {'reaction': 0, 'comment': 0, 'reply': 0}
+          for action in s['actions'].values():
+              stamp = datetime.fromisoformat(action['at'].replace('Z', '+00:00'))
+              if stamp.astimezone(ZoneInfo('Asia/Calcutta')).date().isoformat() == today:
+                  if action.get('status') == 'sent' and action.get('kind') in confirmed:
+                      confirmed[action['kind']] += 1
+          print('Confirmed actions: ' + str(confirmed))
+          session = s.get('operational_status', {}).get('session')
+          if session:
+              print('Continuous session: ' + str(session))
           print('Inspect automation/state.json for content and action status. Ambiguous writes are never retried automatically.')
           PY
           fi
