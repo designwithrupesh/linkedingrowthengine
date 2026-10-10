@@ -356,12 +356,24 @@
         "unresolved_replies": 0,
         "page_number": 1,
         "next_page": null
+      },
+      "urn:li:share:7514663593506951168": {
+        "last_attempt_at": "2026-10-10T15:23:43.853731+00:00",
+        "poll_count": 1,
+        "status": "checked",
+        "last_success_at": "2026-10-10T15:23:43.853731+00:00",
+        "returned_top_level": 0,
+        "coverage": "bounded-public-results",
+        "returned_rows": 0,
+        "unresolved_replies": 0,
+        "page_number": 1,
+        "next_page": null
       }
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-10-10T12:22:22.421526+00:00",
-      "post_urn": "urn:li:share:7514527701878284288",
+      "at": "2026-10-10T15:23:43.853731+00:00",
+      "post_urn": "urn:li:share:7514663593506951168",
       "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
