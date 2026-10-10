@@ -272,7 +272,7 @@
     },
     "post:2026-10-11:0900": {
       "kind": "post",
-      "text": "When reviewing onboarding, focus on what a new user can actually do at each step instead of counting screens. That shifts the conversation from ticking boxes to understanding progress. For example, if a setup screen asks for information but the user can’t move forward because they’re unsure why it’s needed, that’s a barrier. Early-stage founders should watch where users hesitate and ask, \"Which step creates uncertainty?\" Fixing that clears the path and accelerates adoption. This approach helps teams avoid adding more screens that don’t move the user closer to their goal. It’s less about quantity and more about clarity and momentum.",
+      "text": "Counting onboarding screens won't tell you whether someone is ready to use the product.\n\nI'd check what a new customer can do after each step. After entering company details, can they create the thing they signed up to make? After inviting a teammate, do they know what that person can access?\n\nA short setup flow can still leave people confused. A longer one may be useful if every step helps them finish a task.\n\nFor the next review, I'd follow one customer goal through setup and write down where progress stops. Maybe the question needs an example. Maybe the next action is unclear. That gives the team a specific change to test.",
       "at": "2026-10-10T15:25:10.607411+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -301,8 +301,11 @@
       "post_group_id": "6aca58e0cb40d0350b40ad64",
       "text": "Counting onboarding screens won't tell you whether someone is ready to use the product.\n\nI'd check what a new customer can do after each step. After entering company details, can they create the thing they signed up to make? After inviting a teammate, do they know what that person can access?\n\nA short setup flow can still leave people confused. A longer one may be useful if every step helps them finish a task.\n\nFor the next review, I'd follow one customer goal through setup and write down where progress stops. Maybe the question needs an example. Maybe the next action is unclear. That gives the team a specific change to test.",
       "at": "2026-10-10T15:29:23.913213+00:00",
-      "status": "inflight",
-      "original_content_sha256": "282045911cfb447e580e55c37a24276f3659df6bfac6a6a4c47868a156b9828d"
+      "status": "sent",
+      "original_content_sha256": "282045911cfb447e580e55c37a24276f3659df6bfac6a6a4c47868a156b9828d",
+      "http_status": 200,
+      "remote_id": "6aca58e0cb40d0350b40ad64",
+      "reason": "Reviewed replacement copy and unchanged publishing time verified by GET"
     },
     "edit:6aca58f7cb40d0350b40aefe:64f1122ff90c7e1d992da122e751d1991f437e3e68b4d5a23a7104c5df80d43e": {
       "kind": "post-edit",
@@ -397,7 +400,7 @@
     },
     {
       "id": "6aca58e0cb40d0350b40ad64",
-      "text": "When reviewing onboarding, focus on what a new user can actually do at each step instead of counting screens. That shifts the conversation from ticking boxes to understanding progress. For example, if a setup screen asks for information but the user can’t move forward because they’re unsure why it’s needed, that’s a barrier. Early-stage founders should watch where users hesitate and ask, \"Which step creates uncertainty?\" Fixing that clears the path and accelerates adoption. This approach helps teams avoid adding more screens that don’t move the user closer to their goal. It’s less about quantity and more about clarity and momentum.",
+      "text": "Counting onboarding screens won't tell you whether someone is ready to use the product.\n\nI'd check what a new customer can do after each step. After entering company details, can they create the thing they signed up to make? After inviting a teammate, do they know what that person can access?\n\nA short setup flow can still leave people confused. A longer one may be useful if every step helps them finish a task.\n\nFor the next review, I'd follow one customer goal through setup and write down where progress stops. Maybe the question needs an example. Maybe the next action is unclear. That gives the team a specific change to test.",
       "url": null,
       "at": "2026-10-10T15:25:10.607411+00:00",
       "scheduled_for": "2026-10-11T03:30:00+00:00",
