@@ -295,6 +295,22 @@
       "http_status": 200,
       "remote_id": "6aca58f7cb40d0350b40aefe",
       "reason": "Publora acknowledged the request"
+    },
+    "edit:6aca58e0cb40d0350b40ad64:2a4ff9ecc1d4ec9a10c93c3d2100e75596c11854e466c788b1cf939cf8d4aaec": {
+      "kind": "post-edit",
+      "post_group_id": "6aca58e0cb40d0350b40ad64",
+      "text": "Counting onboarding screens won't tell you whether someone is ready to use the product.\n\nI'd check what a new customer can do after each step. After entering company details, can they create the thing they signed up to make? After inviting a teammate, do they know what that person can access?\n\nA short setup flow can still leave people confused. A longer one may be useful if every step helps them finish a task.\n\nFor the next review, I'd follow one customer goal through setup and write down where progress stops. Maybe the question needs an example. Maybe the next action is unclear. That gives the team a specific change to test.",
+      "at": "2026-10-10T15:29:23.913213+00:00",
+      "status": "inflight",
+      "original_content_sha256": "282045911cfb447e580e55c37a24276f3659df6bfac6a6a4c47868a156b9828d"
+    },
+    "edit:6aca58f7cb40d0350b40aefe:64f1122ff90c7e1d992da122e751d1991f437e3e68b4d5a23a7104c5df80d43e": {
+      "kind": "post-edit",
+      "post_group_id": "6aca58f7cb40d0350b40aefe",
+      "text": "A founder and a designer can hear the same customer call and come away with different problems to solve.\n\nThe founder might hear a request for a missing feature. The designer might notice that the customer couldn't find something already in the product.\n\nI'd want both of those observations in the discussion before anyone commits to a solution. Ask the customer to walk through what they were trying to do. Watch where they get stuck. Then compare that with what each person thought the problem was.\n\nThe designer can lead the session while the founder listens and asks follow-ups. Afterwards, agree on what you actually heard and which questions still need testing.\n\nAt an early startup, those conversations belong in the same room as product decisions.",
+      "at": "2026-10-10T15:29:23.913489+00:00",
+      "status": "inflight",
+      "original_content_sha256": "82f757f48dfa129fadcdd30f1fcd85c0abdd8bff6db0213c66a422b232e2c641"
     }
   },
   "days": {
