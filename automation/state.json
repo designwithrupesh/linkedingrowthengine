@@ -235,9 +235,12 @@
       "kind": "comment",
       "text": "I'd use simulations to find questions to test, then put the riskiest one in front of a real customer. If a simulated user likes new copy, I'd still check whether someone can explain the offer in their own words. Those are different signals.",
       "at": "2026-10-10T15:09:22.128742+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7513338456849207297",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7514703672421994498",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
