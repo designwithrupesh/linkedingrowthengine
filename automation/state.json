@@ -287,11 +287,14 @@
       "kind": "post",
       "text": "Founders should join customer research when they need to directly hear where users struggle or hesitate. This firsthand exposure helps them understand the context behind support questions and assumptions that keep them up at night. Designers, on the other hand, should lead the research when the goal is to translate those insights into flows and solutions. They connect the dots between what users say and how the product should respond. The handoff happens after understanding: founders bring the raw problems and urgency, while designers decide how to address them through design. Early-stage founders can make this smoother by involving designers in customer conversations before finalizing feature lists. That way, design leads with clarity on real user needs rather than assumptions, saving time and reducing rework down the line.",
       "at": "2026-10-10T15:25:33.475344+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-11T12:30:00+00:00",
-      "allocation_day": "2026-10-11"
+      "allocation_day": "2026-10-11",
+      "http_status": 200,
+      "remote_id": "6aca58f7cb40d0350b40aefe",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -382,6 +385,14 @@
       "url": null,
       "at": "2026-10-10T15:25:10.607411+00:00",
       "scheduled_for": "2026-10-11T03:30:00+00:00",
+      "allocation_day": "2026-10-11"
+    },
+    {
+      "id": "6aca58f7cb40d0350b40aefe",
+      "text": "Founders should join customer research when they need to directly hear where users struggle or hesitate. This firsthand exposure helps them understand the context behind support questions and assumptions that keep them up at night. Designers, on the other hand, should lead the research when the goal is to translate those insights into flows and solutions. They connect the dots between what users say and how the product should respond. The handoff happens after understanding: founders bring the raw problems and urgency, while designers decide how to address them through design. Early-stage founders can make this smoother by involving designers in customer conversations before finalizing feature lists. That way, design leads with clarity on real user needs rather than assumptions, saving time and reducing rework down the line.",
+      "url": null,
+      "at": "2026-10-10T15:25:33.475344+00:00",
+      "scheduled_for": "2026-10-11T12:30:00+00:00",
       "allocation_day": "2026-10-11"
     }
   ],
