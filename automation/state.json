@@ -219,6 +219,14 @@
       "http_status": 200,
       "remote_id": "6ac7e8c088cd87066bbfd63c",
       "reason": "Replacement copy and unchanged schedule verified by GET"
+    },
+    "reaction:comment:86049dad66fd9ed0e8e43031bdf402eb33627bb2294b49c71b77064380a6067d": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-10T15:09:22.128742+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7513338456849207297",
+      "parent": null
     }
   },
   "days": {
@@ -241,8 +249,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 0,
-      "read": 4
+      "interaction": 1,
+      "read": 4,
+      "public_interaction": 1
     }
   },
   "reports": [
