@@ -240,7 +240,13 @@
       "parent": null,
       "http_status": 201,
       "remote_id": "7514703672421994498",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "verification": {
+        "status": "visible-on-linkedin",
+        "observed_at": "2026-10-10T15:15:55.890228+00:00",
+        "author_profile_url": "https://www.linkedin.com/in/therupeshkumar",
+        "comment_url": "https://www.linkedin.com/feed/update/urn:li:activity:7513338457843314689/?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7513338457843314689%2C7514703672421994498%29"
+      }
     }
   },
   "days": {
