@@ -334,6 +334,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:269213f1acb8aa5dece48be3ada01af3deee54e238a7e5d7e6cfb81f44e827b3": {
+      "kind": "comment",
+      "text": "The idea that work will change radically is obvious, but what’s less clear is how quickly or how deeply. I’d ask: what’s one team process you’re still testing that might shift the most in the next year?",
+      "at": "2026-10-10T15:34:09.772026+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513009691497553921",
+      "parent": null
     }
   },
   "days": {
@@ -356,9 +364,9 @@
     },
     "2026-10-10": {
       "post": 2,
-      "interaction": 5,
+      "interaction": 6,
       "read": 5,
-      "public_interaction": 5
+      "public_interaction": 6
     },
     "2026-10-11": {
       "post": 2,
