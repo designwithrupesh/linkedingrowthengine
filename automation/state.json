@@ -268,7 +268,13 @@
       "parent": null,
       "http_status": 201,
       "remote_id": "7514707563259731968",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "verification": {
+        "status": "visible-on-linkedin",
+        "observed_at": "2026-10-10T15:31:43.197939+00:00",
+        "author_profile_url": "https://www.linkedin.com/in/therupeshkumar",
+        "comment_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7513269921741545472?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7513269921741545472%2C7514707563259731968%29"
+      }
     },
     "post:2026-10-11:0900": {
       "kind": "post",
