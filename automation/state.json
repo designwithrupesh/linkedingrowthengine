@@ -418,9 +418,12 @@
       "kind": "comment",
       "text": "Hit Zero today by clearing your inbox for 24 hours. I’d test it with just one priority task: respond to a key customer message. See how the flow changes without email noise.",
       "at": "2026-10-11T15:05:03.214292+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7513302714798268416",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515064947127582720",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
