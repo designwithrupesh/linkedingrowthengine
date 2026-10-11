@@ -396,9 +396,12 @@
       "kind": "comment",
       "text": "Fin delivering an instant perfect experience for Anthropic suggests a strong focus on real-time responsiveness. How do they ensure consistency across user interactions without relying on pre-built workflows?",
       "at": "2026-10-11T14:49:59.051468+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7512554338662109184",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515061154252099584",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
