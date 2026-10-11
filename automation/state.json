@@ -358,6 +358,14 @@
       "http_status": 200,
       "remote_id": "6acb9b2bcb40d0350b4e4cd9",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:785efb4d2a1d4ce389a6db8fb1b0a407d5dc89f0c5ed6a2034de9a0e4d8004f6": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-11T14:30:20.701552+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7513691375863832576",
+      "parent": null
     }
   },
   "days": {
@@ -386,8 +394,9 @@
     },
     "2026-10-11": {
       "post": 2,
-      "interaction": 0,
-      "read": 8
+      "interaction": 1,
+      "read": 8,
+      "public_interaction": 1
     },
     "2026-10-12": {
       "post": 1,
@@ -475,7 +484,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 5,
+    "profile_cursor": 6,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -703,6 +712,42 @@
         ],
         "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
         "cached_at": "2026-10-09T16:14:33.834666+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513691376828510209/",
+        "urn": "urn:li:ugcPost:7513691375863832576",
+        "shareUrn": "urn:li:ugcPost:7513691375863832576",
+        "text": "We launched a lot today:  \n* Fin now does Customer Success !\n* It has skills letting it dynamically work out how to solve unseen problems \n* Operator has massive new features \n* Intercom Helpdesk has a new Copilot & Human In the Loop features \n* 3 new CX models released \n* Inbox is now 7x faster (complete rewrite!)",
+        "authorName": "Des Traynor",
+        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
+        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
+        "postedAtISO": "2026-10-07T20:07:01.871000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
+        "identity_aliases": [
+          "urn:li:activity:7513691376828510209",
+          "urn:li:ugcPost:7513691375863832576"
+        ],
+        "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
+        "cached_at": "2026-10-11T14:29:36.793555+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512554339215945728/",
+        "urn": "urn:li:share:7512554338662109184",
+        "shareUrn": "urn:li:share:7512554338662109184",
+        "text": "Great example of Fin delivering an instant perfect experience for Anthropic",
+        "authorName": "Des Traynor",
+        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
+        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
+        "postedAtISO": "2026-10-04T16:48:50.979000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
+        "identity_aliases": [
+          "urn:li:activity:7512554339215945728",
+          "urn:li:share:7512554338662109184"
+        ],
+        "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
+        "cached_at": "2026-10-11T14:29:36.793555+00:00"
       }
     ]
   },
