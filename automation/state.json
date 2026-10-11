@@ -528,9 +528,12 @@
       "kind": "comment",
       "text": "I’d ask the team to explain positioning and segmentation as if talking to a customer. That reveals if they truly grasp the concepts or just memorize definitions.",
       "at": "2026-10-11T16:20:26.876394+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7514434235441799168",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515083919772315648",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
