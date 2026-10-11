@@ -497,7 +497,7 @@
     "2026-10-11": {
       "post": 2,
       "interaction": 10,
-      "read": 12,
+      "read": 13,
       "public_interaction": 10
     },
     "2026-10-12": {
@@ -719,7 +719,7 @@
   },
   "engagement": {
     "profile_checked_at": {
-      "lennyrachitsky": "2026-10-09T16:14:33.834666+00:00",
+      "lennyrachitsky": "2026-10-11T15:49:42.373724+00:00",
       "juliezhuo": "2026-10-11T14:19:59.933223+00:00",
       "brianchesky": "2026-10-11T14:24:36.456682+00:00",
       "destraynor": "2026-10-11T14:29:36.793555+00:00",
