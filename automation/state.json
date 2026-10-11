@@ -440,9 +440,12 @@
       "kind": "comment",
       "text": "The question about AI reshaping product design is broad. What if we started with a specific user task? For example, how does AI affect the first step of onboarding a new customer? That might reveal more than a general conversation.",
       "at": "2026-10-11T15:20:05.290662+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7514731552811995136",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515068730779807744",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
