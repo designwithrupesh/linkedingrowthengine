@@ -380,6 +380,14 @@
       "http_status": 201,
       "remote_id": "7515056230722088960",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:ccfcfc9da5ca61168ca804cb8a1040524e5ff9afd6d828aab252ef7d735df71e": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-11T14:49:54.414981+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7512554338662109184",
+      "parent": null
     }
   },
   "days": {
@@ -408,9 +416,9 @@
     },
     "2026-10-11": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 9,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-10-12": {
       "post": 1,
@@ -498,7 +506,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 6,
+    "profile_cursor": 7,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -763,6 +771,24 @@
         ],
         "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
         "cached_at": "2026-10-11T14:29:36.793555+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513302767722098688/",
+        "urn": "urn:li:ugcPost:7513302714798268416",
+        "shareUrn": "urn:li:ugcPost:7513302714798268416",
+        "text": "It's Inbox Zero Day — the day when we're all most likely to hit Inbox Zero! 💜\n\nWe're celebrating all day with surprises, giveaways, and free Superhuman…\n\nTo join in:\n\n1️⃣ Hit Inbox Zero today, Oct. 6, and enjoy the view!\n2️⃣ Share your achievements on X or LinkedIn, tagging #HitZero.\n3️⃣ Everyone who posts will get a surprise, as well as a chance to win Superhuman swag.",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-10-06T18:22:50.240000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7513302767722098688",
+          "urn:li:ugcPost:7513302714798268416"
+        ],
+        "first_seen_at": "2026-10-11T14:49:38.181181+00:00",
+        "cached_at": "2026-10-11T14:49:38.181181+00:00"
       }
     ]
   },
