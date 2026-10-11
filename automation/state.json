@@ -432,10 +432,11 @@
     {
       "id": "6aca58e0cb40d0350b40ad64",
       "text": "Counting onboarding screens won't tell you whether someone is ready to use the product.\n\nI'd check what a new customer can do after each step. After entering company details, can they create the thing they signed up to make? After inviting a teammate, do they know what that person can access?\n\nA short setup flow can still leave people confused. A longer one may be useful if every step helps them finish a task.\n\nFor the next review, I'd follow one customer goal through setup and write down where progress stops. Maybe the question needs an example. Maybe the next action is unclear. That gives the team a specific change to test.",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7514890083917864960/",
       "at": "2026-10-10T15:25:10.607411+00:00",
       "scheduled_for": "2026-10-11T03:30:00+00:00",
-      "allocation_day": "2026-10-11"
+      "allocation_day": "2026-10-11",
+      "post_urn": "urn:li:share:7514890083917864960"
     },
     {
       "id": "6aca58f7cb40d0350b40aefe",
