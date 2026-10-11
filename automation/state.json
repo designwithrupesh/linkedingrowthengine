@@ -484,9 +484,12 @@
       "kind": "comment",
       "text": "Before letting AI-generated content go live, I’d ask: does it align with our core messaging and audience expectations?",
       "at": "2026-10-11T15:50:20.409378+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7514454333581799424",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515076343865356288",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
