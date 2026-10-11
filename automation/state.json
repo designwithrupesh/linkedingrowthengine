@@ -506,9 +506,12 @@
       "kind": "comment",
       "text": "Congrats on making the list. It’s impressive how much traction you’ve built with a focus on both creative flexibility and enterprise scalability. How did you balance product simplicity with feature depth in the core workflow?",
       "at": "2026-10-11T16:04:59.143945+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7512884862052294657",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515080029081489408",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
