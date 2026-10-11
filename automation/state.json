@@ -446,6 +446,14 @@
       "http_status": 201,
       "remote_id": "7515068730779807744",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:54e7b83c1d842b31d3280a20bc85b21b44a4aa66134a9839c5f14ce9b26804aa": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-11T15:35:01.126958+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7513443099587764226",
+      "parent": null
     }
   },
   "days": {
@@ -474,9 +482,9 @@
     },
     "2026-10-11": {
       "post": 2,
-      "interaction": 8,
+      "interaction": 9,
       "read": 12,
-      "public_interaction": 8
+      "public_interaction": 9
     },
     "2026-10-12": {
       "post": 1,
@@ -564,7 +572,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 9,
+    "profile_cursor": 10,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -922,6 +930,78 @@
         ],
         "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
         "cached_at": "2026-10-11T15:19:40.269191+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514454334219145216/",
+        "urn": "urn:li:ugcPost:7514454333581799424",
+        "shareUrn": "urn:li:ugcPost:7514454333581799424",
+        "text": "Do you work with anyone who largely seems to be using AI performatively and everyone on the team knows this but no one wants to say it out loud?",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-09T22:38:45.088000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7514454334219145216",
+          "urn:li:ugcPost:7514454333581799424"
+        ],
+        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
+        "cached_at": "2026-10-11T15:34:41.325699+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512884863322972161/",
+        "urn": "urn:li:share:7512884862052294657",
+        "shareUrn": "urn:li:share:7512884862052294657",
+        "text": "invideo's 28th on the list of top 50 consumer AI apps by monthly revenue. Big congratulations to the team for all the product, gtm, creative and enterprise set-ups we have done over the past few years",
+        "authorName": "Sanket Shah",
+        "authorHeadline": "CEO at invideo",
+        "authorProfileUrl": "https://www.linkedin.com/in/sanketsh/",
+        "postedAtISO": "2026-10-09T22:36:47.917000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7512884863322972161",
+          "urn:li:share:7512884862052294657"
+        ],
+        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
+        "cached_at": "2026-10-11T15:34:41.325699+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514434237161402368/",
+        "urn": "urn:li:share:7514434235441799168",
+        "shareUrn": "urn:li:share:7514434235441799168",
+        "text": "The joy was unexpected.\n\nThere was the intellectual challenge of unpacking concepts we casually throw around (but rarely truly understand) like product sense, strategy, positioning, segmentation, and taste. Sure, there was the anticipation of seeing them applied through the lens of someone like Shreyas Doshi (Startup advisor. ex-Stripe, Twitter, Google, Yahoo). I signed up for the latest cohort looking forward to all of it because this was primarily a self-funded investment in an AI differentiator: the quality of my own thinking.\n\nBut to feel reenergized by how high the ceiling of great product management is? Or realizing that this feels hard because creative work IS demanding? There was even joy in being proven wrong (so wrong!).\n\nIf you’re a product leader looking to (re)train your brain, this one’s for you. \n\nhttps://lnkd.in/eGQKwyzn",
+        "authorName": "Karen Tancongco Naranjo",
+        "authorHeadline": "Building the strategies and systems that build products, without losing sight of the people they’re built for | Product @ Ecolab",
+        "authorProfileUrl": "https://www.linkedin.com/in/ktnaranjo/",
+        "postedAtISO": "2026-10-09T21:32:05.923000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7514434237161402368",
+          "urn:li:share:7514434235441799168"
+        ],
+        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
+        "cached_at": "2026-10-11T15:34:41.325699+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514340423180615680/",
+        "urn": "urn:li:share:7514340422161281024",
+        "shareUrn": "urn:li:share:7514340422161281024",
+        "text": "Just landed a Series B product role, and credits the course.\n\n\"I could not have scored this role without what I learnt here, especially segmentation, differentiation, and simulation.\" 🚀",
+        "authorName": "Shreyas Doshi's Product Sense course",
+        "authorHeadline": "5,014 followers",
+        "authorProfileUrl": "https://www.linkedin.com/in/product-sense-shreyas/",
+        "postedAtISO": "2026-10-09T15:11:04.453000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7514340423180615680",
+          "urn:li:share:7514340422161281024"
+        ],
+        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
+        "cached_at": "2026-10-11T15:34:41.325699+00:00"
       }
     ]
   },
