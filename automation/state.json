@@ -479,6 +479,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:23dbfdc52c277688922d17f055e8937cd732b261bf2ecd7e647fd253741d9e1a": {
+      "kind": "comment",
+      "text": "Before letting AI-generated content go live, I’d ask: does it align with our core messaging and audience expectations?",
+      "at": "2026-10-11T15:50:20.409378+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7514454333581799424",
+      "parent": null
     }
   },
   "days": {
@@ -507,9 +515,9 @@
     },
     "2026-10-11": {
       "post": 2,
-      "interaction": 11,
+      "interaction": 12,
       "read": 13,
-      "public_interaction": 11
+      "public_interaction": 12
     },
     "2026-10-12": {
       "post": 1,
