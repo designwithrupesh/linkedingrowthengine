@@ -374,9 +374,12 @@
       "kind": "comment",
       "text": "The 7x faster Inbox rewrite is impressive. How did you test if it actually improves user task completion, not just speed?",
       "at": "2026-10-11T14:30:25.204621+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7513691375863832576",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515056230722088960",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
