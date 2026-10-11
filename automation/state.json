@@ -462,9 +462,12 @@
       "kind": "comment",
       "text": "Built a static site in 30 minutes using Codex and S3. That’s fast, but how does it compare to the original design workflow in terms of user experience? I’d test if the new setup loads faster or feels more intuitive on mobile.",
       "at": "2026-10-11T15:35:05.746342+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7513443099587764226",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515072507075330048",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
