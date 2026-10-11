@@ -350,11 +350,14 @@
       "kind": "post",
       "text": "Translating a brand promise into your product means more than just words on a page. It shapes how the interface behaves, the language it uses, and even how support interacts with customers. For example, if your brand promises simplicity, your interface should avoid clutter and guide users clearly through tasks. The language should be straightforward, avoiding jargon, and support should respond with patience and clarity.\n\nFor founders, a practical step is to review the product experience through the lens of your brand promise. Ask: Does every interaction reflect what we say we stand for? This can be as simple as running a brand-review prompt during product sprints, checking if the UI, messaging, and support align. That review helps catch disconnects early, so your product feels consistent and trustworthy from the first touch.",
       "at": "2026-10-11T14:20:17.444189+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-12T03:30:00+00:00",
-      "allocation_day": "2026-10-12"
+      "allocation_day": "2026-10-12",
+      "http_status": 200,
+      "remote_id": "6acb9b2bcb40d0350b4e4cd9",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -461,6 +464,14 @@
       "scheduled_for": "2026-10-11T12:30:00+00:00",
       "allocation_day": "2026-10-11",
       "post_urn": "urn:li:share:7515026715027525632"
+    },
+    {
+      "id": "6acb9b2bcb40d0350b4e4cd9",
+      "text": "Translating a brand promise into your product means more than just words on a page. It shapes how the interface behaves, the language it uses, and even how support interacts with customers. For example, if your brand promises simplicity, your interface should avoid clutter and guide users clearly through tasks. The language should be straightforward, avoiding jargon, and support should respond with patience and clarity.\n\nFor founders, a practical step is to review the product experience through the lens of your brand promise. Ask: Does every interaction reflect what we say we stand for? This can be as simple as running a brand-review prompt during product sprints, checking if the UI, messaging, and support align. That review helps catch disconnects early, so your product feels consistent and trustworthy from the first touch.",
+      "url": null,
+      "at": "2026-10-11T14:20:17.444189+00:00",
+      "scheduled_for": "2026-10-12T03:30:00+00:00",
+      "allocation_day": "2026-10-12"
     }
   ],
   "discovery": {
