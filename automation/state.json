@@ -449,7 +449,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 3,
+    "profile_cursor": 4,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -690,6 +690,11 @@
         "attempted_at": "2026-10-10T15:25:10.607411+00:00",
         "allocation_day": "2026-10-11",
         "retry_after": "2026-10-10T17:25:10.607411+00:00"
+      },
+      "post:2026-10-12:0900": {
+        "attempted_at": "2026-10-11T14:20:03.584806+00:00",
+        "allocation_day": "2026-10-12",
+        "retry_after": "2026-10-11T16:20:03.584806+00:00"
       }
     }
   }
