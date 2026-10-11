@@ -424,6 +424,14 @@
       "http_status": 201,
       "remote_id": "7515064947127582720",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:ef3792f1c612e022bfdafbcba230154d4aaf42640e0bd720a560b960d560c5ac": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-11T15:20:00.441910+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7514731552811995136",
+      "parent": null
     }
   },
   "days": {
@@ -452,9 +460,9 @@
     },
     "2026-10-11": {
       "post": 2,
-      "interaction": 6,
+      "interaction": 7,
       "read": 11,
-      "public_interaction": 6
+      "public_interaction": 7
     },
     "2026-10-12": {
       "post": 1,
@@ -542,7 +550,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 8,
+    "profile_cursor": 9,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -845,6 +853,60 @@
         ],
         "first_seen_at": "2026-10-11T15:04:39.262212+00:00",
         "cached_at": "2026-10-11T15:04:39.262212+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513701100856848385/",
+        "urn": "urn:li:share:7513701100298887169",
+        "shareUrn": "urn:li:share:7513701100298887169",
+        "text": "I took a break from paying attention to AI this summer. I thought I’d feel left behind when I came back.  But coming back, I realized not that much had changed. There are new models, new techniques, new agents. \n\nBut making great products, growing revenue, and building a business is still hard. \n\nThe tools are clearly getting better. We can do more, faster. But I think the more important question is whether we’re making better things. Are our teams getting better, or are we just getting faster?I don’t think the answer is clearly yes. \n\nThere’s a lot of focus on making tools, using tools, and building systems around them. But as product people, our job is still to make something great.",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-07T20:45:40.260000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7513701100856848385",
+          "urn:li:share:7513701100298887169"
+        ],
+        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
+        "cached_at": "2026-10-11T15:19:40.269191+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513669278634762240/",
+        "urn": "urn:li:ugcPost:7513669275748925440",
+        "shareUrn": "urn:li:ugcPost:7513669275748925440",
+        "text": "Are the tools getting better? - Yes\nAre we making better things and becoming better - ?",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-07T18:39:13.251000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7513669278634762240",
+          "urn:li:ugcPost:7513669275748925440"
+        ],
+        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
+        "cached_at": "2026-10-11T15:19:40.269191+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513443100082515968/",
+        "urn": "urn:li:share:7513443099587764226",
+        "shareUrn": "urn:li:share:7513443099587764226",
+        "text": "I’ve tried rebuilding my website about 5 times since coding models came out. Design always was annoying and nothing felt as simple as my old setup. Finally got somewhere in 30mins with Codex, along with a small tool to add my writing and deploy the static site to S3. \n\nSo now you can enjoy all my writings in one place: https://karrisaarinen.com",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-07T03:40:28.082000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7513443100082515968",
+          "urn:li:share:7513443099587764226"
+        ],
+        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
+        "cached_at": "2026-10-11T15:19:40.269191+00:00"
       }
     ]
   },
