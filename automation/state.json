@@ -691,6 +691,90 @@
       "http_status": 200,
       "remote_id": "6accba26fafcfc71104a54ad",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-14:1800": {
+      "kind": "post",
+      "text": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+      "at": "2026-10-12T10:44:20.735069+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-14T12:30:00+00:00",
+      "allocation_day": "2026-10-14",
+      "format": "freebie",
+      "asset_id": "redesign-evidence-worksheet",
+      "asset_sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821",
+      "asset_title": "Before you approve a redesign",
+      "asset_pages": 7,
+      "asset_spec": {
+        "id": "redesign-evidence-worksheet",
+        "kind": "freebie",
+        "title": "Before you approve a redesign",
+        "subtitle": "A worksheet for separating evidence from preference",
+        "caption": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+        "slides": [
+          {
+            "title": "Choose the task under review",
+            "body": [
+              "Customer and situation",
+              "Task they want to complete",
+              "Where they enter the product"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          },
+          {
+            "title": "Record what happened",
+            "body": [
+              "Observed action or exact customer words",
+              "Screen, step or message involved",
+              "Source and date of the observation"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          },
+          {
+            "title": "Name the kind of problem",
+            "body": [
+              "Task difficulty: what could they not complete?",
+              "Value confusion: what did they expect instead?",
+              "Visual preference: whose preference is this?"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          },
+          {
+            "title": "Compare two possible changes",
+            "body": [
+              "Smallest change to the current experience",
+              "Larger change being proposed",
+              "What each option costs the team"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          },
+          {
+            "title": "Plan the next check",
+            "body": [
+              "Question the next test should answer",
+              "Evidence that would favor one option",
+              "Person responsible for the test"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          },
+          {
+            "title": "Keep the conclusion open to evidence",
+            "body": [
+              "What is still an assumption",
+              "Other possible explanation to check",
+              "Decision and review date"
+            ],
+            "example": "",
+            "layout": "worksheet"
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -707,7 +791,7 @@
       "read": 0
     },
     "2026-10-14": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     },
