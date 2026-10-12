@@ -1467,12 +1467,16 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "failed",
       "started_at": "2026-10-12T10:56:17.539941+00:00",
       "deadline": "2026-10-12T21:56:17.539941+05:30",
       "heartbeat_at": "2026-10-12T13:40:10.035162+00:00",
       "cycles": 27,
-      "recent_errors": []
+      "recent_errors": [],
+      "failed_at": "2026-10-12T13:45:13+00:00",
+      "workflow_run_id": 38239360039,
+      "reason": "GitHub rejected a checkpoint ref update",
+      "observed_at": "2026-10-12T16:51:09.742541+00:00"
     }
   },
   "engagement": {
