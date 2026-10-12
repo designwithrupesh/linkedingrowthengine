@@ -794,6 +794,14 @@
       "http_status": 200,
       "remote_id": "6accba4126b57a9d24d343fe",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "reaction:comment:fcf65f0040da9e17a1bdfd6f4150f11d5b69c0f4d61e46a4d2e628868624458d": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-12T11:30:40.067000+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7514340422161281024",
+      "parent": null
     }
   },
   "days": {
@@ -828,8 +836,9 @@
     },
     "2026-10-12": {
       "post": 2,
-      "interaction": 0,
-      "read": 4
+      "interaction": 1,
+      "read": 4,
+      "public_interaction": 1
     }
   },
   "reports": [
