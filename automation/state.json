@@ -710,11 +710,12 @@
             "size_bytes": 62990
           },
           "media_stage": "reserve-replacement-upload",
-          "media_stage_status": "inflight",
+          "media_stage_status": "acknowledged",
           "status": "inflight",
           "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00",
           "http_status": 200,
-          "old_media_id": "6accba2a26b57a9d24d34246"
+          "old_media_id": "6accba2a26b57a9d24d34246",
+          "new_media_id": "6acd0ea3744df2c803834f21"
         }
       ]
     },
