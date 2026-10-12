@@ -577,12 +577,13 @@
         "page_count": 1,
         "format": "image",
         "file_name": "choose-what-your-product-makes-easier.png",
-        "size_bytes": 79954
+        "size_bytes": 79954,
+        "media_id": "6accba0dfafcfc71104a5338"
       },
       "media_scheduled_for": "2026-10-12T12:30:00Z",
       "media_operation_id": "ddb5d49b8a2387da298dc2d64c69ef45137f4bd0d383a74d81b1779375318726",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6accba09fafcfc71104a5315"
     }
