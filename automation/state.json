@@ -1039,9 +1039,9 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-12T08:17:49.290001+00:00",
+        "last_considered_at": "2026-10-12T11:30:00.408322+00:00",
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-12T08:17:49.290001+00:00",
+        "last_checked_at": "2026-10-12T11:30:00.408322+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
         "count": 2,
         "cached": false
