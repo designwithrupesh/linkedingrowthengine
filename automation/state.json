@@ -1112,13 +1112,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-11T14:19:32.916828+00:00",
-      "deadline": "2026-10-11T22:00:00+05:30",
-      "heartbeat_at": "2026-10-11T16:29:45.180879+00:00",
-      "cycles": 27,
-      "recent_errors": [],
-      "ended_at": "2026-10-11T16:30:00.000146+00:00"
+      "status": "running",
+      "started_at": "2026-10-12T10:56:17.539941+00:00",
+      "deadline": "2026-10-12T21:56:17.539941+05:30",
+      "heartbeat_at": "2026-10-12T11:30:46.626204+00:00",
+      "cycles": 1,
+      "recent_errors": []
     }
   },
   "engagement": {
