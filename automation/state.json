@@ -686,7 +686,7 @@
       "media_scheduled_for": "2026-10-13T12:30:00Z",
       "media_operation_id": "c472cfe38219434ba4ee7ebaa4b5bfd7909e0d7b2668980a5a1d9b50e1e9e088",
       "media_stage": "upload-bytes",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6accba26fafcfc71104a54ad"
     }
