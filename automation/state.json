@@ -805,6 +805,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:fcf65f0040da9e17a1bdfd6f4150f11d5b69c0f4d61e46a4d2e628868624458d": {
+      "kind": "comment",
+      "text": "Segmentation and simulation are actionable tools, not just concepts. How do you test a segment’s behavior before building a product for them?",
+      "at": "2026-10-12T11:30:43.393934+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7514340422161281024",
+      "parent": null
     }
   },
   "days": {
@@ -839,9 +847,9 @@
     },
     "2026-10-12": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 4,
-      "public_interaction": 1
+      "public_interaction": 2
     }
   },
   "reports": [
