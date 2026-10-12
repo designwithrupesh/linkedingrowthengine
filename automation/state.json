@@ -774,7 +774,21 @@
             "layout": "worksheet"
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821",
+        "mime_type": "application/pdf",
+        "title": "Before you approve a redesign",
+        "type": "document",
+        "page_count": 7,
+        "format": "freebie",
+        "file_name": "before-you-approve-a-redesign.pdf",
+        "size_bytes": 53168
+      },
+      "media_scheduled_for": "2026-10-14T12:30:00Z",
+      "media_operation_id": "3a38b9be42ad0ed40e6df8add9f858885514284cff13ba5ede0da3a28a92fc77",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
