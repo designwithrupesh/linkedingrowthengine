@@ -568,7 +568,21 @@
             "layout": "decision"
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "5ba82c9d92eb65f520b960c0a41398d0ed7fc64bffe3a9b4ea80962d94558b71",
+        "mime_type": "image/png",
+        "title": "Choose what your product makes easier",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "choose-what-your-product-makes-easier.png",
+        "size_bytes": 79954
+      },
+      "media_scheduled_for": "2026-10-12T12:30:00Z",
+      "media_operation_id": "ddb5d49b8a2387da298dc2d64c69ef45137f4bd0d383a74d81b1779375318726",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
