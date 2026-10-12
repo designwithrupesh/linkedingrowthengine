@@ -593,7 +593,7 @@
       "kind": "post",
       "text": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
       "at": "2026-10-12T10:44:20.735069+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-13T12:30:00+00:00",
@@ -686,10 +686,11 @@
       },
       "media_scheduled_for": "2026-10-13T12:30:00Z",
       "media_operation_id": "c472cfe38219434ba4ee7ebaa4b5bfd7909e0d7b2668980a5a1d9b50e1e9e088",
-      "media_stage": "schedule-media",
-      "media_stage_status": "acknowledged",
+      "media_stage": "verify-schedule",
+      "media_stage_status": "verified",
       "http_status": 200,
-      "remote_id": "6accba26fafcfc71104a54ad"
+      "remote_id": "6accba26fafcfc71104a54ad",
+      "reason": "Publora confirmed scheduled media and caption"
     }
   },
   "days": {
@@ -825,7 +826,7 @@
       "at": "2026-10-12T10:44:20.735069+00:00",
       "scheduled_for": "2026-10-13T12:30:00+00:00",
       "allocation_day": "2026-10-13",
-      "media_status": "schedule-acknowledged",
+      "media_status": "scheduled",
       "format": "carousel",
       "asset_sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9"
     }
