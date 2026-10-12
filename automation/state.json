@@ -671,7 +671,21 @@
             "layout": "decision"
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9",
+        "mime_type": "application/pdf",
+        "title": "When the promise and the product disagree",
+        "type": "document",
+        "page_count": 7,
+        "format": "carousel",
+        "file_name": "when-the-promise-and-the-product-disagree.pdf",
+        "size_bytes": 53569
+      },
+      "media_scheduled_for": "2026-10-13T12:30:00Z",
+      "media_operation_id": "c472cfe38219434ba4ee7ebaa4b5bfd7909e0d7b2668980a5a1d9b50e1e9e088",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
