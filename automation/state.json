@@ -873,7 +873,7 @@
     "2026-10-12": {
       "post": 2,
       "interaction": 4,
-      "read": 4,
+      "read": 5,
       "public_interaction": 4
     }
   },
@@ -1128,6 +1128,11 @@
         "last_considered_at": "2026-10-12T10:53:12.958440+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-12T10:53:12.958440+00:00"
+      },
+      "urn:li:share:7515388331061452800": {
+        "last_considered_at": "2026-10-12T12:35:07.504778+00:00",
+        "status": "fallback-unverified-count",
+        "last_checked_at": "2026-10-12T12:35:07.504778+00:00"
       }
     }
   },
