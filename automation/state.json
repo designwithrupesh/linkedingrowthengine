@@ -709,8 +709,8 @@
             "file_name": "a-promise-is-a-product-decision.pdf",
             "size_bytes": 62990
           },
-          "media_stage": "reserve-replacement-upload",
-          "media_stage_status": "acknowledged",
+          "media_stage": "upload-replacement-bytes",
+          "media_stage_status": "inflight",
           "status": "inflight",
           "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00",
           "http_status": 200,
