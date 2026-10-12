@@ -534,6 +534,41 @@
       "http_status": 201,
       "remote_id": "7515083919772315648",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-12:1800": {
+      "kind": "post",
+      "text": "A product can look familiar and still have a clear point of view. The choice often sits in what gets the most attention, what takes fewer steps and what you leave out.\n\nFor a scheduling tool, that might mean making the next available time easy to find before showing the full calendar. For a finance tool, it might mean explaining a balance before offering another chart. These are hypothetical choices, each tied to a different customer task.\n\nI'd use the four questions on this card before discussing visual references. They give the team something concrete to agree on.",
+      "at": "2026-10-12T10:44:20.735069+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-12T12:30:00+00:00",
+      "allocation_day": "2026-10-12",
+      "format": "image",
+      "asset_id": "product-point-of-view",
+      "asset_sha256": "5ba82c9d92eb65f520b960c0a41398d0ed7fc64bffe3a9b4ea80962d94558b71",
+      "asset_title": "Choose what your product makes easier",
+      "asset_pages": 1,
+      "asset_spec": {
+        "id": "product-point-of-view",
+        "kind": "image",
+        "title": "Choose what your product makes easier",
+        "subtitle": "A working card for founders and designers",
+        "caption": "A product can look familiar and still have a clear point of view. The choice often sits in what gets the most attention, what takes fewer steps and what you leave out.\n\nFor a scheduling tool, that might mean making the next available time easy to find before showing the full calendar. For a finance tool, it might mean explaining a balance before offering another chart. These are hypothetical choices, each tied to a different customer task.\n\nI'd use the four questions on this card before discussing visual references. They give the team something concrete to agree on.",
+        "slides": [
+          {
+            "title": "Give the interface a point of view",
+            "body": [
+              "Customer task: what are they trying to finish?",
+              "Priority: what should take less effort here?",
+              "Trade-off: what will you deliberately leave out?",
+              "Evidence: what would show the choice helped?"
+            ],
+            "example": "",
+            "layout": "decision"
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -567,7 +602,7 @@
       "public_interaction": 16
     },
     "2026-10-12": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 3
     }
