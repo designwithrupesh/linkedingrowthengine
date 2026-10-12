@@ -821,97 +821,257 @@
     },
     "post:2026-10-14:1800": {
       "kind": "post",
-      "text": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+      "text": "A redesign request often combines a customer getting stuck, an unresolved product rule and a preference about the visual direction. I want those recorded separately before the team approves a larger piece of work.\n\nThis worksheet uses a hypothetical pricing-page example. It shows how to record an observation, keep the explanation open, compare a local fix with a wider redesign and choose a test that could change the decision.\n\nThe downloadable version has room for your own evidence and includes a review rubric. Use it in the approval meeting. If the observation is missing, the next useful piece of work is to find out what happens during the task.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
       "at": "2026-10-12T10:44:20.735069+00:00",
-      "status": "media-held",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-14T12:30:00+00:00",
       "allocation_day": "2026-10-14",
       "format": "freebie",
       "asset_id": "redesign-evidence-worksheet",
-      "asset_sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821",
-      "asset_title": "Before you approve a redesign",
-      "asset_pages": 7,
+      "asset_sha256": "2a7345ebf033644d180907a9e23e78907fec7ed72fac6615137e5d85aba63dfe",
+      "asset_title": "Should this be a redesign?",
+      "asset_pages": 9,
       "asset_spec": {
         "id": "redesign-evidence-worksheet",
         "kind": "freebie",
-        "title": "Before you approve a redesign",
-        "subtitle": "A worksheet for separating evidence from preference",
-        "caption": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+        "title": "Should this be a redesign?",
+        "subtitle": "A decision worksheet with a completed example and review criteria.",
+        "caption": "A redesign request often combines a customer getting stuck, an unresolved product rule and a preference about the visual direction. I want those recorded separately before the team approves a larger piece of work.\n\nThis worksheet uses a hypothetical pricing-page example. It shows how to record an observation, keep the explanation open, compare a local fix with a wider redesign and choose a test that could change the decision.\n\nThe downloadable version has room for your own evidence and includes a review rubric. Use it in the approval meeting. If the observation is missing, the next useful piece of work is to find out what happens during the task.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
         "slides": [
           {
-            "title": "Choose the task under review",
+            "title": "Start with the task, then state the proposed change.",
             "body": [
-              "Customer and situation",
-              "Task they want to complete",
-              "Where they enter the product"
+              "Hypothetical example: a customer is comparing subscription plans. The proposal is to redesign the pricing page.",
+              "Keep the task specific enough to try. A broad goal such as improve conversion cannot explain which decision failed."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "worksheet",
+            "visual": {
+              "panels": [
+                {
+                  "label": "Completed example",
+                  "title": "Compare two plans",
+                  "body": "A customer needs to find whether both plans include the feature they came for."
+                }
+              ],
+              "fields": [
+                {
+                  "label": "Customer and situation",
+                  "hint": "Who is choosing, and what brings them to this screen?"
+                },
+                {
+                  "label": "Task and current proposal",
+                  "hint": "What should they finish? What change has been proposed?"
+                }
+              ]
+            }
           },
           {
-            "title": "Record what happened",
+            "title": "Record an observation without turning it into a cause.",
             "body": [
-              "Observed action or exact customer words",
-              "Screen, step or message involved",
-              "Source and date of the observation"
+              "An observation describes what happened. The explanation remains an interpretation until it has support."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "matrix",
+            "visual": {
+              "matrix": {
+                "columns": [
+                  "Observation",
+                  "Interpretation",
+                  "Other explanation"
+                ],
+                "rows": [
+                  [
+                    "The person opens both plan pages to find export limits.",
+                    "The comparison does not explain the difference.",
+                    "The plan names may also be unclear."
+                  ],
+                  [
+                    "The person returns to pricing after reaching checkout.",
+                    "A condition appeared too late.",
+                    "They may be checking the billing period."
+                  ],
+                  [
+                    "A founder dislikes the card style.",
+                    "The visual direction needs discussion.",
+                    "This says nothing yet about the customer task."
+                  ]
+                ]
+              }
+            }
           },
           {
-            "title": "Name the kind of problem",
+            "title": "Write down the evidence you can inspect.",
             "body": [
-              "Task difficulty: what could they not complete?",
-              "Value confusion: what did they expect instead?",
-              "Visual preference: whose preference is this?"
+              "Separate the record from your explanation. A preference can be recorded honestly without being presented as customer evidence."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Observed action or words",
+                  "hint": "What happened? Keep the wording or sequence as recorded."
+                },
+                {
+                  "label": "Source and context",
+                  "hint": "Where did it happen, when, and during which task?"
+                },
+                {
+                  "label": "Limit of the record",
+                  "hint": "What does this observation leave unknown?"
+                }
+              ]
+            }
           },
           {
-            "title": "Compare two possible changes",
+            "title": "Choose the size of the response.",
             "body": [
-              "Smallest change to the current experience",
-              "Larger change being proposed",
-              "What each option costs the team"
+              "Compare a local change with a wider redesign. Write the dependency each introduces."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "comparison",
+            "visual": {
+              "panels": [
+                {
+                  "label": "Local change",
+                  "title": "Put export limits in the comparison",
+                  "body": "Keeps the structure. Requires a reliable source for each plan limit."
+                },
+                {
+                  "label": "Wider change",
+                  "title": "Rebuild the plan comparison",
+                  "body": "May help several difficult comparisons. Requires evidence across those decisions."
+                }
+              ]
+            }
           },
           {
-            "title": "Plan the next check",
+            "title": "Compare your own two responses.",
             "body": [
-              "Question the next test should answer",
-              "Evidence that would favor one option",
-              "Person responsible for the test"
+              "Use the completed pricing example as a guide. Give the smaller response a fair comparison with the proposed redesign."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Local response",
+                  "hint": "Which specific obstruction would this change address?"
+                },
+                {
+                  "label": "Wider response",
+                  "hint": "Which repeated cause would justify a larger change?"
+                },
+                {
+                  "label": "Dependency and cost",
+                  "hint": "What needs to be settled, and what work does each response introduce?"
+                }
+              ]
+            }
           },
           {
-            "title": "Keep the conclusion open to evidence",
+            "title": "Use a rubric, not a vote on the mockup.",
             "body": [
-              "What is still an assumption",
-              "Other possible explanation to check",
-              "Decision and review date"
+              "These are decision criteria, not a score with a scientific cutoff. An unresolved critical dependency can outweigh several benefits."
             ],
             "example": "",
-            "layout": "worksheet"
+            "layout": "matrix",
+            "visual": {
+              "matrix": {
+                "columns": [
+                  "Criterion",
+                  "Evidence to inspect",
+                  "Decision implication"
+                ],
+                "rows": [
+                  [
+                    "Task obstruction",
+                    "Can a person find the relevant plan difference?",
+                    "Address a failed decision first."
+                  ],
+                  [
+                    "Spread",
+                    "Does the same issue recur in other key comparisons?",
+                    "Consider wider work when the cause repeats."
+                  ],
+                  [
+                    "Dependency",
+                    "Are plan rules settled and available?",
+                    "Resolve uncertain rules before presenting them."
+                  ],
+                  [
+                    "Reversibility",
+                    "Can the smaller change be tested and withdrawn?",
+                    "Use it to learn when the cost is low."
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "title": "Plan a check that can change your mind.",
+            "body": [
+              "Give someone a plan-selection task without naming the feature location. Compare how they find and explain the relevant difference."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Question and task",
+                  "hint": "What decision is difficult? What will the person try?"
+                },
+                {
+                  "label": "Observation to record",
+                  "hint": "Where do they look? What do they believe is included?"
+                },
+                {
+                  "label": "Reason to revise",
+                  "hint": "What result would make us reject our preferred response?"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Keep the decision and its limits together.",
+            "body": [
+              "Example decision: add export limits to the comparison before commissioning a full page redesign.",
+              "A successful task attempt supports this local change. It does not establish an effect on revenue."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Selected change and rationale",
+                  "hint": "Name the response and the evidence behind it."
+                },
+                {
+                  "label": "Uncertainty and boundary",
+                  "hint": "What remains unknown? Which conclusion can we not make?"
+                },
+                {
+                  "label": "Owner and review date",
+                  "hint": "Who will check the revised task, and when?"
+                }
+              ]
+            }
           }
         ]
       },
       "media": {
-        "sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821",
+        "sha256": "2a7345ebf033644d180907a9e23e78907fec7ed72fac6615137e5d85aba63dfe",
         "mime_type": "application/pdf",
-        "title": "Before you approve a redesign",
+        "title": "Should this be a redesign?",
         "type": "document",
-        "page_count": 7,
+        "page_count": 9,
         "format": "freebie",
-        "file_name": "before-you-approve-a-redesign.pdf",
-        "size_bytes": 53168,
-        "media_id": "6accba4426b57a9d24d34445",
+        "file_name": "should-this-be-a-redesign.pdf",
+        "size_bytes": 65662,
+        "media_id": "6acd0ec5afd4458f558a8126",
         "status": "ready"
       },
       "media_scheduled_for": "2026-10-14T12:30:00Z",
@@ -939,13 +1099,14 @@
             "file_name": "should-this-be-a-redesign.pdf",
             "size_bytes": 65662
           },
-          "media_stage": "schedule-existing-replacement",
-          "media_stage_status": "acknowledged",
-          "status": "inflight",
+          "media_stage": "verify-replacement-schedule",
+          "media_stage_status": "verified",
+          "status": "scheduled",
           "media_operation_id": "8c4a2d0f7b6027a556b109a9af71744f878fb6864b5071bdf6530eabc150bfdc",
           "http_status": 200,
           "old_media_id": "6accba4426b57a9d24d34445",
-          "new_media_id": "6acd0ec5afd4458f558a8126"
+          "new_media_id": "6acd0ec5afd4458f558a8126",
+          "reason": "Existing post replacement verified"
         }
       ]
     },
@@ -1135,14 +1296,14 @@
     },
     {
       "id": "6accba4126b57a9d24d343fe",
-      "text": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+      "text": "A redesign request often combines a customer getting stuck, an unresolved product rule and a preference about the visual direction. I want those recorded separately before the team approves a larger piece of work.\n\nThis worksheet uses a hypothetical pricing-page example. It shows how to record an observation, keep the explanation open, compare a local fix with a wider redesign and choose a test that could change the decision.\n\nThe downloadable version has room for your own evidence and includes a review rubric. Use it in the approval meeting. If the observation is missing, the next useful piece of work is to find out what happens during the task.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
       "url": null,
       "at": "2026-10-12T10:44:20.735069+00:00",
       "scheduled_for": "2026-10-14T12:30:00+00:00",
       "allocation_day": "2026-10-14",
-      "media_status": "replacement-in-progress",
+      "media_status": "scheduled",
       "format": "freebie",
-      "asset_sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821"
+      "asset_sha256": "2a7345ebf033644d180907a9e23e78907fec7ed72fac6615137e5d85aba63dfe"
     }
   ],
   "discovery": {
