@@ -593,7 +593,7 @@
       "kind": "post",
       "text": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
       "at": "2026-10-12T10:44:20.735069+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-13T12:30:00+00:00",
@@ -712,7 +712,9 @@
           "media_stage": "inspect-existing-media",
           "media_stage_status": "prepared",
           "status": "inflight",
-          "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00"
+          "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00",
+          "http_status": 200,
+          "old_media_id": "6accba2a26b57a9d24d34246"
         }
       ]
     },
@@ -999,7 +1001,7 @@
       "at": "2026-10-12T10:44:20.735069+00:00",
       "scheduled_for": "2026-10-13T12:30:00+00:00",
       "allocation_day": "2026-10-13",
-      "media_status": "scheduled",
+      "media_status": "replacement-in-progress",
       "format": "carousel",
       "asset_sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9"
     },
