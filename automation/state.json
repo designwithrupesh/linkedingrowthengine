@@ -810,9 +810,12 @@
       "kind": "comment",
       "text": "Segmentation and simulation are actionable tools, not just concepts. How do you test a segment’s behavior before building a product for them?",
       "at": "2026-10-12T11:30:43.393934+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7514340422161281024",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515373390569041920",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
