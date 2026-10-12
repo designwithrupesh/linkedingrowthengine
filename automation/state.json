@@ -591,97 +591,196 @@
     },
     "post:2026-10-13:1800": {
       "kind": "post",
-      "text": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
+      "text": "A claim such as 'a report in minutes' creates a product requirement. The team then has to decide what counts as a report, when the clock starts and which prerequisites the customer should know about.\n\nThis carousel follows a hypothetical reporting tool from the website to its first result. An undisclosed approval step is the point where the claim and the experience separate. There are several possible responses, including a narrower promise or a sample the customer can try immediately.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
       "at": "2026-10-12T10:44:20.735069+00:00",
-      "status": "media-held",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-13T12:30:00+00:00",
       "allocation_day": "2026-10-13",
       "format": "carousel",
       "asset_id": "product-brand-clarity",
-      "asset_sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9",
-      "asset_title": "When the promise and the product disagree",
+      "asset_sha256": "2065de5d9754ebcb435242e4a63be236240b6a84461fd472036c234cb17063f9",
+      "asset_title": "A promise is a product decision",
       "asset_pages": 7,
       "asset_spec": {
         "id": "product-brand-clarity",
         "kind": "carousel",
-        "title": "When the promise and the product disagree",
-        "subtitle": "A six-step review for an early-stage team",
-        "caption": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
+        "title": "A promise is a product decision",
+        "subtitle": "Trace a claim through the first useful task.",
+        "caption": "A claim such as 'a report in minutes' creates a product requirement. The team then has to decide what counts as a report, when the clock starts and which prerequisites the customer should know about.\n\nThis carousel follows a hypothetical reporting tool from the website to its first result. An undisclosed approval step is the point where the claim and the experience separate. There are several possible responses, including a narrower promise or a sample the customer can try immediately.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
         "slides": [
           {
-            "title": "Start with one promise",
+            "title": "Put the claim next to the actual task.",
             "body": [
-              "Write the claim a customer sees before signing up.",
-              "Choose one customer and one task.",
-              "Keep the exact words in view during the review."
+              "Keep the exact claim. Rewriting it during the review hides the disagreement.",
+              "Hypothetical product: a reporting tool promising a report in minutes."
             ],
             "example": "",
-            "layout": "decision"
+            "layout": "comparison",
+            "visual": {
+              "panels": [
+                {
+                  "label": "Customer promise",
+                  "title": "A report in minutes",
+                  "body": "The website creates an expectation before the customer knows how setup works."
+                },
+                {
+                  "label": "First useful task",
+                  "title": "Create a report from a file",
+                  "body": "The customer needs a result they can inspect before choosing whether to continue."
+                }
+              ]
+            }
           },
           {
-            "title": "Walk the first task",
+            "title": "Trace the expectation through the experience.",
             "body": [
-              "Open the product as a new customer.",
-              "Follow the path to the promised result.",
-              "Note every point that needs an explanation."
+              "Read each step from the customer's side. Look for the point where the promise stops being believable."
             ],
             "example": "",
-            "layout": "decision"
+            "layout": "diagram",
+            "visual": {
+              "nodes": [
+                {
+                  "label": "Promise",
+                  "title": "A report in minutes",
+                  "detail": "Expectation: I can try this now."
+                },
+                {
+                  "label": "Setup",
+                  "title": "Wait for approval",
+                  "detail": "A requirement the claim did not explain."
+                },
+                {
+                  "label": "Result",
+                  "title": "Open the first report",
+                  "detail": "The result arrives after a different process."
+                }
+              ]
+            }
           },
           {
-            "title": "Find a moment that contradicts the claim",
+            "title": "Separate a copy gap from a capability gap.",
             "body": [
-              "Compare what was promised with what happens.",
-              "Separate missing information from missing capability.",
-              "Record the screen or message that creates the gap."
-            ],
-            "example": "Hypothetical: easy setup requires an unexplained approval step.",
-            "layout": "decision"
-          },
-          {
-            "title": "Choose the decision that needs attention",
-            "body": [
-              "Should the product change, or should the promise change?",
-              "Name the constraint behind each option.",
-              "Avoid starting with a complete visual redesign."
-            ],
-            "example": "",
-            "layout": "decision"
-          },
-          {
-            "title": "Test the revised moment",
-            "body": [
-              "Give someone the original customer task.",
-              "Watch what they expect and what they try.",
-              "Keep the claim and the product experience together."
+              "The same complaint can require a different response. Diagnose the missing condition before choosing the work."
             ],
             "example": "",
-            "layout": "decision"
+            "layout": "matrix",
+            "visual": {
+              "matrix": {
+                "columns": [
+                  "Observed moment",
+                  "What is missing",
+                  "Possible response"
+                ],
+                "rows": [
+                  [
+                    "Approval is required, but never disclosed.",
+                    "An expectation-setting message.",
+                    "Explain the requirement before signup."
+                  ],
+                  [
+                    "Approval is unnecessary for a sample report.",
+                    "A path to try the product.",
+                    "Offer a sample before approval."
+                  ],
+                  [
+                    "All reports need a manual review.",
+                    "A truthful promise.",
+                    "Describe the actual process."
+                  ]
+                ]
+              }
+            }
           },
           {
-            "title": "Leave with an owner and a next step",
+            "title": "Compare the decisions, including their cost.",
             "body": [
-              "Decision: [write the specific choice]",
-              "Evidence needed: [write what you need to learn]",
-              "Owner and review date: [write here]"
+              "A narrower claim can be the right decision. A faster path can be the right decision. Each needs a reason."
             ],
             "example": "",
-            "layout": "decision"
+            "layout": "comparison",
+            "visual": {
+              "panels": [
+                {
+                  "label": "Change the promise",
+                  "title": "State the approval step",
+                  "body": "Less product work. The customer can decide whether the process suits them."
+                },
+                {
+                  "label": "Change the experience",
+                  "title": "Let a sample run immediately",
+                  "body": "More product work. Check data limits and support cost before offering it."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Check the expectation before the click.",
+            "body": [
+              "Show the revised claim and give the first task. Ask what the person expects to happen next.",
+              "Then watch the task. Record the moment their expectation differs from the product."
+            ],
+            "example": "",
+            "layout": "framework",
+            "visual": {
+              "nodes": [
+                {
+                  "label": "Before",
+                  "title": "Expected result",
+                  "detail": "What do they think they will get, and when?"
+                },
+                {
+                  "label": "During",
+                  "title": "Observed attempt",
+                  "detail": "Where do they hesitate or seek an explanation?"
+                },
+                {
+                  "label": "After",
+                  "title": "Account of the result",
+                  "detail": "Can they explain the requirement in their own words?"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Write a decision someone can act on.",
+            "body": [
+              "Example decision: allow a sample report before approval. Keep approval for connecting a live account.",
+              "Review the claim again when the required setup changes."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Change and boundary",
+                  "hint": "What will change? What will remain a requirement?"
+                },
+                {
+                  "label": "Evidence to inspect",
+                  "hint": "Which customer expectation and task attempt should we observe?"
+                },
+                {
+                  "label": "Owner and review point",
+                  "hint": "Who can make the change, and when will we inspect it?"
+                }
+              ]
+            }
           }
         ]
       },
       "media": {
-        "sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9",
+        "sha256": "2065de5d9754ebcb435242e4a63be236240b6a84461fd472036c234cb17063f9",
         "mime_type": "application/pdf",
-        "title": "When the promise and the product disagree",
+        "title": "A promise is a product decision",
         "type": "document",
         "page_count": 7,
         "format": "carousel",
-        "file_name": "when-the-promise-and-the-product-disagree.pdf",
-        "size_bytes": 53569,
-        "media_id": "6accba2a26b57a9d24d34246",
+        "file_name": "a-promise-is-a-product-decision.pdf",
+        "size_bytes": 62990,
+        "media_id": "6acd0ea3744df2c803834f21",
         "status": "ready"
       },
       "media_scheduled_for": "2026-10-13T12:30:00Z",
@@ -709,13 +808,14 @@
             "file_name": "a-promise-is-a-product-decision.pdf",
             "size_bytes": 62990
           },
-          "media_stage": "schedule-existing-replacement",
-          "media_stage_status": "acknowledged",
-          "status": "inflight",
+          "media_stage": "verify-replacement-schedule",
+          "media_stage_status": "verified",
+          "status": "scheduled",
           "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00",
           "http_status": 200,
           "old_media_id": "6accba2a26b57a9d24d34246",
-          "new_media_id": "6acd0ea3744df2c803834f21"
+          "new_media_id": "6acd0ea3744df2c803834f21",
+          "reason": "Existing post replacement verified"
         }
       ]
     },
@@ -997,14 +1097,14 @@
     },
     {
       "id": "6accba26fafcfc71104a54ad",
-      "text": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
+      "text": "A claim such as 'a report in minutes' creates a product requirement. The team then has to decide what counts as a report, when the clock starts and which prerequisites the customer should know about.\n\nThis carousel follows a hypothetical reporting tool from the website to its first result. An undisclosed approval step is the point where the claim and the experience separate. There are several possible responses, including a narrower promise or a sample the customer can try immediately.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
       "url": null,
       "at": "2026-10-12T10:44:20.735069+00:00",
       "scheduled_for": "2026-10-13T12:30:00+00:00",
       "allocation_day": "2026-10-13",
-      "media_status": "replacement-in-progress",
+      "media_status": "scheduled",
       "format": "carousel",
-      "asset_sha256": "78599c9df2e939b23cfc929138a826008bb597c0cadcdf53381e10f30c8ea7b9"
+      "asset_sha256": "2065de5d9754ebcb435242e4a63be236240b6a84461fd472036c234cb17063f9"
     },
     {
       "id": "6accba4126b57a9d24d343fe",
