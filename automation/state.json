@@ -690,7 +690,31 @@
       "media_stage_status": "verified",
       "http_status": 200,
       "remote_id": "6accba26fafcfc71104a54ad",
-      "reason": "Publora confirmed scheduled media and caption"
+      "reason": "Publora confirmed scheduled media and caption",
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-12T16:45:10.745054+00:00",
+          "remote_id": "6accba26fafcfc71104a54ad",
+          "text": "A claim such as 'a report in minutes' creates a product requirement. The team then has to decide what counts as a report, when the clock starts and which prerequisites the customer should know about.\n\nThis carousel follows a hypothetical reporting tool from the website to its first result. An undisclosed approval step is the point where the claim and the experience separate. There are several possible responses, including a narrower promise or a sample the customer can try immediately.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
+          "previous_text": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation.",
+          "scheduled_for": "2026-10-13T12:30:00Z",
+          "media": {
+            "sha256": "2065de5d9754ebcb435242e4a63be236240b6a84461fd472036c234cb17063f9",
+            "mime_type": "application/pdf",
+            "title": "A promise is a product decision",
+            "type": "document",
+            "page_count": 7,
+            "format": "carousel",
+            "file_name": "a-promise-is-a-product-decision.pdf",
+            "size_bytes": 62990
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "af3d60d65336c784efdb9843a9ac0cba261435a81b7aeb4f48cfda2f0fec9e00"
+        }
+      ]
     },
     "post:2026-10-14:1800": {
       "kind": "post",
