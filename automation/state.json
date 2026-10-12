@@ -582,7 +582,9 @@
       "media_scheduled_for": "2026-10-12T12:30:00Z",
       "media_operation_id": "ddb5d49b8a2387da298dc2d64c69ef45137f4bd0d383a74d81b1779375318726",
       "media_stage": "create-draft",
-      "media_stage_status": "inflight"
+      "media_stage_status": "acknowledged",
+      "http_status": 200,
+      "remote_id": "6accba09fafcfc71104a5315"
     }
   },
   "days": {
@@ -699,6 +701,17 @@
       "scheduled_for": "2026-10-12T03:30:00+00:00",
       "allocation_day": "2026-10-12",
       "post_urn": "urn:li:share:7515252488137261056"
+    },
+    {
+      "id": "6accba09fafcfc71104a5315",
+      "text": "A product can look familiar and still have a clear point of view. The choice often sits in what gets the most attention, what takes fewer steps and what you leave out.\n\nFor a scheduling tool, that might mean making the next available time easy to find before showing the full calendar. For a finance tool, it might mean explaining a balance before offering another chart. These are hypothetical choices, each tied to a different customer task.\n\nI'd use the four questions on this card before discussing visual references. They give the team something concrete to agree on.",
+      "url": null,
+      "at": "2026-10-12T10:44:20.735069+00:00",
+      "scheduled_for": "2026-10-12T12:30:00+00:00",
+      "allocation_day": "2026-10-12",
+      "media_status": "draft",
+      "format": "image",
+      "asset_sha256": "5ba82c9d92eb65f520b960c0a41398d0ed7fc64bffe3a9b4ea80962d94558b71"
     }
   ],
   "discovery": {
