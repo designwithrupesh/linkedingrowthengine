@@ -3,6 +3,8 @@ name: HOL Plugin Scanner
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - automation/state.json
   pull_request:
     branches: [main, master]
 
