@@ -920,7 +920,31 @@
       "media_stage_status": "verified",
       "http_status": 200,
       "remote_id": "6accba4126b57a9d24d343fe",
-      "reason": "Publora confirmed scheduled media and caption"
+      "reason": "Publora confirmed scheduled media and caption",
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-12T16:45:47.794726+00:00",
+          "remote_id": "6accba4126b57a9d24d343fe",
+          "text": "A redesign request often combines a customer getting stuck, an unresolved product rule and a preference about the visual direction. I want those recorded separately before the team approves a larger piece of work.\n\nThis worksheet uses a hypothetical pricing-page example. It shows how to record an observation, keep the explanation open, compare a local fix with a wider redesign and choose a test that could change the decision.\n\nThe downloadable version has room for your own evidence and includes a review rubric. Use it in the approval meeting. If the observation is missing, the next useful piece of work is to find out what happens during the task.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+          "previous_text": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/redesign-evidence-worksheet.pdf",
+          "scheduled_for": "2026-10-14T12:30:00Z",
+          "media": {
+            "sha256": "2a7345ebf033644d180907a9e23e78907fec7ed72fac6615137e5d85aba63dfe",
+            "mime_type": "application/pdf",
+            "title": "Should this be a redesign?",
+            "type": "document",
+            "page_count": 9,
+            "format": "freebie",
+            "file_name": "should-this-be-a-redesign.pdf",
+            "size_bytes": 65662
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "8c4a2d0f7b6027a556b109a9af71744f878fb6864b5071bdf6530eabc150bfdc"
+        }
+      ]
     },
     "reaction:comment:fcf65f0040da9e17a1bdfd6f4150f11d5b69c0f4d61e46a4d2e628868624458d": {
       "kind": "reaction",
