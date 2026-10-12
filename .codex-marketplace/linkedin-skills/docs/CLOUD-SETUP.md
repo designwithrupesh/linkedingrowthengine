@@ -27,6 +27,12 @@ The [30-day growth plan](30-DAY-GROWTH-PLAN.md) and [machine-readable calendar](
 
 Routine posting and contextual public interaction use the owner's standing authorization in [policy.json](../automation/policy.json). The separately invoked interactive skills retain their original draft flow. The original October 9, 13, and 14 morning seed posts are already recorded and must not be resubmitted.
 
+## Visual publishing
+
+The runtime installs pinned Pillow and ReportLab through `automation/requirements.txt`. Fonts are licensed and vendored in `automation/assets/fonts`; no extra system-font installation or image-service key is required. [The visual catalog](../automation/visual-content.json) contains 18 reviewed images, PDF carousels and worksheets, with public files in [resources/linkedin](../resources/linkedin/README.md). Future formats are selected from the same posting calendar. Runtime visual generation uses the existing AI route and budget; reviewed resources require no model credit.
+
+Assets render locally, pass writing and grounding checks, and are uploaded to a Publora draft. The runner verifies ready media before scheduling and verifies the scheduled group afterward. A failure holds that draft instead of publishing a missing attachment or retrying an uncertain write. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for format rotation, file checks and stage receipts.
+
 ## Connected accounts and cost controls
 
 The active connections require `PUBLORA_API_KEY`, `APIFY_TOKEN`, and the correct `LINKEDIN_PLATFORM_ID`. The existing Publora account was verified as Pro with API publishing and analytics enabled, 5,000 monthly posts per connection, and unrestricted queue/horizon fields. Capacity is checked again before scheduling rather than assumed from that observation.

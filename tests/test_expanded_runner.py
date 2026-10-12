@@ -176,14 +176,15 @@ class ExpandedRunnerTests(unittest.TestCase):
     def test_exact_date_and_hour_select_the_planned_consulting_brief(self):
         runner = self.runner(now=clock(18, day=13))
         runner.post()
-        context = runner.generate.call_args.args[1]
         plan = json.loads(Path('automation/content-plan.json').read_text(encoding='utf-8'))
         expected = next(item for item in plan['slots']
                         if item['date'] == '2026-10-13' and item['hour'] == 18)
-        self.assertEqual(context['content_brief'], expected)
-        self.assertEqual(context['topic'], expected['topic'])
-        self.assertEqual(context['source_notes'], [])
-        self.assertIn('linkedin-post-writer', runner.generate.call_args.args[0])
+        action = runner.state['actions']['post:2026-10-13:1800']
+        self.assertEqual(action['format'], 'carousel')
+        self.assertEqual(action['asset_id'], expected['media_ref'])
+        self.assertEqual(action['asset_pages'], 7)
+        self.assertIn(expected['cta'], action['text'])
+        runner.generate.assert_not_called()
 
     def test_public_forty_and_reply_thousand_have_independent_durable_limits(self):
         runner = self.runner()

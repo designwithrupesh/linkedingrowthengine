@@ -639,7 +639,7 @@ def illustrate(
     return _image_result(data, used_model)
 
 
-LINKEDIN_MAX_IMAGES = 10  # LinkedIn multi-image grid cap (swipeable carousels are API-unsupported)
+LINKEDIN_MAX_IMAGES = 10  # Image grids; document carousels use the PDF upload pipeline.
 
 
 def illustrate_set(prompts, **kwargs) -> list[dict[str, Any]]:

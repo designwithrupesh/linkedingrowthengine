@@ -1,0 +1,308 @@
+from copy import deepcopy
+from datetime import date
+import json
+from pathlib import Path
+from types import SimpleNamespace
+import tempfile
+import unittest
+from unittest.mock import Mock, patch
+
+from automation.apify_ai import ApifyBudgetError
+from automation import visual_planning as planning
+from automation.visual_assets import VisualAssetError
+from lib.voice import VoiceError, prompt_rules
+
+
+SPEC = {
+    "id": "design-review-card", "kind": "image",
+    "title": "Ask what the screen helps someone finish",
+    "subtitle": "A practical design review card",
+    "caption": "I'd start a design review with one customer task. Find the next action on the screen, then check whether the surrounding information helps someone choose it.",
+    "slides": [{"title": "Keep the task visible", "body": [
+        "Name what the person is trying to finish.",
+        "Show the next action clearly.",
+        "Check what information helps that choice."
+    ]}],
+}
+METADATA = {"path": "/tmp/card.png", "preview_path": "/tmp/card.png",
+            "mime_type": "image/png", "title": SPEC["title"],
+            "sha256": "a" * 64, "page_count": 1}
+
+
+class VisualFormatTests(unittest.TestCase):
+    def test_default_weekly_evening_rotation_and_text_mornings(self):
+        monday = date(2026, 10, 12)
+        for offset, kind in enumerate(planning.DEFAULT_WEEKDAY_FORMATS):
+            day = date.fromordinal(monday.toordinal() + offset)
+            self.assertEqual(planning.select_brief_format({}, day, 18), kind)
+            self.assertEqual(planning.select_brief_format({}, day, 9), "text")
+
+    def test_explicit_format_overrides_time_rotation(self):
+        for kind in planning.FORMATS:
+            self.assertEqual(planning.select_brief_format({}, "2026-10-12", 9,
+                                                         {"format": kind}), kind)
+        self.assertEqual(planning.select_brief_format({}, "2026-10-12", 18,
+                                                     {"format": "text"}), "text")
+
+    def test_legacy_prose_labels_are_not_reinterpreted_as_media(self):
+        for kind in ("checklist", "walkthrough", "framework", "rubric", "position", None, []):
+            self.assertEqual(planning.select_brief_format({}, "2026-10-12", 18,
+                                                         {"format": kind}), "text")
+
+    def test_policy_rotation_is_supported_and_validated(self):
+        policy = {"visual_formats_by_weekday": ["freebie"] * 7}
+        self.assertEqual(planning.select_brief_format(policy, "2026-10-12", 18), "freebie")
+        for rotation in (["text"] * 6, ["photo"] * 7, {"0": "image"}, [None] * 7):
+            with self.subTest(rotation=rotation), self.assertRaises(VisualAssetError):
+                planning.select_brief_format({"visual_formats_by_weekday": rotation},
+                                             "2026-10-12", 18)
+
+    def test_invalid_dates_hours_and_briefs_fail_before_selection(self):
+        for day in ("2026-10-32", "20261012", 12):
+            with self.subTest(day=day), self.assertRaises(VisualAssetError):
+                planning.select_brief_format({}, day, 18)
+        for hour in (True, -1, 24, "18"):
+            with self.subTest(hour=hour), self.assertRaises(VisualAssetError):
+                planning.select_brief_format({}, "2026-10-12", hour)
+        with self.assertRaises(VisualAssetError):
+            planning.select_brief_format({}, "2026-10-12", 18, [])
+
+
+class VisualPreparationTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.catalog = Path(self.temp.name) / "catalog.json"
+        self.spec = deepcopy(SPEC)
+        self.write_catalog(self.spec)
+        self.runner = SimpleNamespace(policy={"background": ["product design"], "source_notes": []},
+                                      state={"actions": {}}, model_paused=False)
+        self.render = Mock(return_value=deepcopy(METADATA))
+        self.catalog_patch = patch.object(planning, "CATALOG_PATH", self.catalog)
+        self.render_patch = patch.object(planning, "render_asset", self.render)
+        self.catalog_patch.start()
+        self.render_patch.start()
+        self.addCleanup(self.catalog_patch.stop)
+        self.addCleanup(self.render_patch.stop)
+
+    def write_catalog(self, *specs):
+        self.catalog.write_text(json.dumps({"version": 1, "assets": list(specs)}), encoding="utf-8")
+
+    def prepare(self, kind="image", **brief):
+        return planning.prepare_visual(self.runner,
+                                       {"format": kind, "media_ref": self.spec["id"], **brief},
+                                       "2026-10-12", 18, self.temp.name)
+
+    def generated(self, kind="image"):
+        spec = deepcopy(self.spec)
+        spec.update(id=f"visual-2026-10-12-1800-{kind}", kind=kind)
+        spec["slides"][0]["body"] = spec["slides"][0]["body"][:2]
+        if kind != "image":
+            spec["slides"] = [deepcopy(spec["slides"][0]) for _ in range(4)]
+        return spec
+
+    def generation(self, spec=None, **outer):
+        payload = {"text": json.dumps(spec if spec is not None else self.generated()),
+                   "skip": False, "reason": "", **outer}
+        return patch("automation.twin.complete", return_value=payload)
+
+    def runtime_prepare(self, kind="image"):
+        return planning.prepare_visual(self.runner, {"format": kind, "topic": "Review the customer task"},
+                                       "2026-10-12", 18, self.temp.name)
+
+    def test_catalog_renders_without_model_or_state_mutation(self):
+        state = deepcopy(self.runner.state)
+        source = self.catalog.read_bytes()
+        with patch("automation.twin.complete") as complete:
+            asset = self.prepare()
+        complete.assert_not_called()
+        self.assertEqual(asset["asset_id"], self.spec["id"])
+        self.assertEqual(asset["caption"], self.spec["caption"])
+        self.assertEqual(asset["mime_type"], "image/png")
+        self.assertEqual(asset["spec"]["caption"], self.spec["caption"])
+        self.assertEqual(asset["spec"]["slides"][0]["layout"], "checklist")
+        self.assertIsNone(asset["download_url"])
+        self.assertEqual(self.runner.state, state)
+        self.assertEqual(self.catalog.read_bytes(), source)
+        self.render.assert_called_once()
+
+    def test_catalog_available_when_model_budget_is_paused(self):
+        self.runner.model_paused = True
+        with patch("automation.twin.complete") as complete:
+            self.assertIsNotNone(self.prepare())
+            self.assertIsNone(self.runtime_prepare())
+        complete.assert_not_called()
+
+    def test_catalog_freebie_uses_real_public_resource_link(self):
+        self.spec["kind"] = "freebie"
+        self.write_catalog(self.spec)
+        asset = self.prepare("freebie")
+        self.assertEqual(asset["download_url"], planning.PUBLIC_DOWNLOAD_BASE + self.spec["id"] + ".pdf")
+        self.assertTrue(asset["caption"].endswith(asset["download_url"]))
+        self.assertIn("Download the worksheet:", asset["caption"])
+
+    def test_catalog_reference_errors_never_fall_back_to_generation(self):
+        for reference in ("missing", None, ""):
+            with self.subTest(reference=reference), patch("automation.twin.complete") as complete:
+                with self.assertRaises(VisualAssetError):
+                    self.prepare(media_ref=reference)
+                complete.assert_not_called()
+        self.write_catalog(self.spec, self.spec)
+        with self.assertRaises(VisualAssetError):
+            self.prepare()
+        self.write_catalog(self.spec)
+        with self.assertRaises(VisualAssetError):
+            self.prepare("freebie")
+        self.render.assert_not_called()
+
+    def test_all_post_action_statuses_reserve_asset_on_other_dates(self):
+        for status in ("scheduled", "published", "rejected", "inflight", "unknown-needs-reconciliation"):
+            self.runner.state["actions"] = {"post:2026-10-11:1800": {
+                "kind": "post", "status": status, "asset_id": self.spec["id"],
+                "allocation_day": "2026-10-11"}}
+            with self.subTest(status=status), self.assertRaises(VisualAssetError):
+                self.prepare()
+        self.render.assert_not_called()
+
+    def test_visible_copy_on_every_slide_uses_voice_and_grounding_checks(self):
+        for change, error in (
+            (lambda s: s["slides"][0]["body"].__setitem__(1, "Keep the next action clear\u2014then test it."), VoiceError),
+            (lambda s: s["slides"][0].__setitem__("title", "I helped my clients increase conversions."), VisualAssetError),
+            (lambda s: s.__setitem__("caption", "I've redesigned this for our clients."), VisualAssetError),
+            (lambda s: s["slides"][0].__setitem__("example", "We tested this with our customers."), VisualAssetError),
+        ):
+            spec = deepcopy(SPEC)
+            change(spec)
+            self.write_catalog(spec)
+            with self.subTest(error=error), self.assertRaises(error):
+                self.prepare()
+        self.render.assert_not_called()
+
+    def test_confirmed_source_note_can_support_a_visible_owner_claim(self):
+        self.spec["caption"] = "I've worked in product design."
+        self.runner.policy["source_notes"] = [self.spec["caption"]]
+        self.write_catalog(self.spec)
+        self.assertEqual(self.prepare()["caption"], self.spec["caption"])
+
+    def test_text_selection_does_not_render_or_generate(self):
+        with patch("automation.twin.complete") as complete:
+            self.assertIsNone(self.prepare("text"))
+        complete.assert_not_called()
+        self.render.assert_not_called()
+
+    def test_runtime_generates_once_with_full_voice_only_once_and_no_old_posts(self):
+        self.runner.state["actions"]["old-post"] = {"kind": "post", "text": "BAD_OLD_COPY"}
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation() as complete:
+            asset = self.runtime_prepare()
+        self.assertEqual(asset["id"], "visual-2026-10-12-1800-image")
+        complete.assert_called_once()
+        messages = complete.call_args.args[4]
+        self.assertEqual(messages[0]["content"].count(prompt_rules()), 1)
+        self.assertNotIn("BAD_OLD_COPY", json.dumps(messages))
+        self.assertEqual(complete.call_args.kwargs["kind"], "generic")
+
+    def test_runtime_freebie_attaches_pdf_without_inventing_download_link(self):
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation(self.generated("freebie")):
+            asset = self.runtime_prepare("freebie")
+        self.assertIsNone(asset["download_url"])
+        self.assertEqual(asset["caption"], self.spec["caption"])
+        self.assertEqual(len(self.render.call_args.args[0]["slides"]), 4)
+
+    def test_runtime_skip_does_not_render(self):
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation(text="", skip=True, reason="No useful factual topic"):
+            self.assertIsNone(self.runtime_prepare())
+        self.render.assert_not_called()
+
+    def test_runtime_budget_error_propagates_without_retry_or_render(self):
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                patch("automation.twin.complete", side_effect=ApifyBudgetError("Credit paused")) as complete:
+            with self.assertRaises(ApifyBudgetError):
+                self.runtime_prepare()
+        complete.assert_called_once()
+        self.render.assert_not_called()
+
+    def test_runtime_rejects_fenced_json_and_forged_identity(self):
+        for spec, outer in (
+            (self.generated(), {"text": "```json\n{}\n```"}),
+            ({**self.generated(), "id": "another-owner-id"}, {}),
+            ({**self.generated(), "kind": "freebie"}, {}),
+            ({**self.generated(), "extra": "ignored instruction"}, {}),
+            ({**self.generated(), "slides": []}, {}),
+        ):
+            with self.subTest(spec=spec, outer=outer), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec, **outer), self.assertRaises(VisualAssetError):
+                self.runtime_prepare()
+        self.render.assert_not_called()
+
+    def test_runtime_rejects_invalid_model_envelope_before_rendering(self):
+        for payload in ({"text": "{}", "skip": "false", "reason": ""},
+                        {"text": "{}", "skip": False},
+                        {"text": "{}", "skip": False, "reason": "", "extra": True},
+                        {"text": "{}", "skip": False, "reason": "Uncertain"}, []):
+            with self.subTest(payload=payload), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    patch("automation.twin.complete", return_value=payload), self.assertRaises(VisualAssetError):
+                self.runtime_prepare()
+        self.render.assert_not_called()
+
+    def test_runtime_compact_four_page_fixture_parses_and_passes_grounding(self):
+        # Exercise the nested JSON envelope using practical copy near each
+        # requested limit. The character bound is a serialization estimate;
+        # it is not a claim that characters precisely predict model tokens.
+        fill = lambda text, limit: (text + " " + text)[:limit].rsplit(" ", 1)[0]
+        spec = self.generated("carousel")
+        spec["title"] = fill("Check the product promise against one complete customer task", 80)
+        spec["subtitle"] = fill("Keep the same customer situation while reviewing the claim and the product steps", 130)
+        spec["caption"] = fill(
+            "I'd compare one customer task with the promise that brought someone to the product. "
+            "Walk through the first screen and check what information they need to choose the next action. "
+            "When the explanation changes, write down the exact moment and which team can fix it. "
+            "The next step can be clearer wording, a changed screen or a better handoff. "
+            "Choose the change after naming the gap, then check the original task again.", 550)
+        for slide in spec["slides"]:
+            slide["title"] = fill("Keep the customer task and the promise together", 55)
+            slide["body"] = [
+                fill("Record what the person expects before opening the product and choosing the next step.", 85),
+                fill("Compare that expectation with what happens on the screen when they try the task.", 85),
+            ]
+        envelope = json.dumps({"text": json.dumps(spec), "skip": False, "reason": ""})
+        self.assertLessEqual(len(envelope), 3000)
+        self.assertEqual(json.loads(json.loads(envelope)["text"]), spec)
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation(spec):
+            asset = self.runtime_prepare("carousel")
+        self.assertEqual(len(asset["spec"]["slides"]), 4)
+        self.assertTrue(all(len(slide["body"]) == 2 for slide in asset["spec"]["slides"]))
+        self.assertEqual(asset["spec"]["caption"], spec["caption"])
+
+    def test_runtime_compact_limits_do_not_change_reviewed_catalog_specs(self):
+        self.spec["slides"][0]["body"].append("Keep the team responsible for the next check visible.")
+        self.write_catalog(self.spec)
+        self.assertEqual(len(self.prepare()["spec"]["slides"][0]["body"]), 4)
+        for change in (
+            lambda spec: spec.__setitem__("caption", "a" * 551),
+            lambda spec: spec["slides"][0].__setitem__("title", "a" * 56),
+            lambda spec: spec["slides"][0]["body"].__setitem__(0, "a" * 86),
+            lambda spec: spec["slides"][0]["body"].append("An extra entry."),
+        ):
+            spec = self.generated()
+            change(spec)
+            with self.subTest(spec=spec), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec), self.assertRaises(VisualAssetError):
+                self.runtime_prepare()
+
+    def test_renderer_failure_does_not_mutate_post_actions(self):
+        self.render.side_effect = VisualAssetError("Page would overflow")
+        state = deepcopy(self.runner.state)
+        with self.assertRaises(VisualAssetError):
+            self.prepare()
+        self.assertEqual(self.runner.state, state)
+
+
+if __name__ == "__main__":
+    unittest.main()

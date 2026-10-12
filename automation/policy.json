@@ -72,5 +72,14 @@
   "profile_edits_enabled": false,
   "max_dm_replies_per_run": 20,
   "max_dm_chat_reads_per_run": 40,
-  "comment_signal_enabled": true
+  "comment_signal_enabled": true,
+  "visual_formats_by_weekday": [
+    "image",
+    "carousel",
+    "freebie",
+    "image",
+    "carousel",
+    "freebie",
+    "text"
+  ]
 }

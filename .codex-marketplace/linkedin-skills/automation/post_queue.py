@@ -11,6 +11,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from automation.cadence import DEFAULT_POSTING_HOURS, claimed_post_count, slot_key
+from automation import apify_ai
+from automation.visual_planning import select_brief_format, prepare_visual
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,7 +68,7 @@ def prepare_next_day_posts(runner):
     a post quota or authorize a retry of a remote write.
     """
     slots = _future_slots(runner)
-    if not slots or runner.model_paused:
+    if not slots:
         return []
     policy = runner.policy
     zone_name = policy.get('timezone', 'Asia/Calcutta')
@@ -79,9 +81,15 @@ def prepare_next_day_posts(runner):
         task += '\n' + skills('linkedin-repurposer')
     attempted = []
     for key, day, schedule in slots:
-        if claimed_post_count(day, runner.state, zone_name) >= limit or runner.model_paused:
+        if claimed_post_count(day, runner.state, zone_name) >= limit:
             break
         hour = schedule.astimezone(ZoneInfo(zone_name)).hour
+        brief = next((item for item in plan.get('slots', [])
+                      if item['date'] == day and item['hour'] == hour), None)
+        static_visual = (select_brief_format(policy, day, hour, brief) != 'text'
+                         and brief is not None and 'media_ref' in brief)
+        if runner.model_paused and not static_visual:
+            continue
         actions = runner.state['actions']
         if key in actions or (hour == 9 and 'post:' + day in actions):
             continue
@@ -109,16 +117,25 @@ def prepare_next_day_posts(runner):
                    'source_notes': policy.get('source_notes', []),
                    'recent_posts': [action['text'] for action in actions.values()
                                     if action.get('kind') == 'post' and isinstance(action.get('text'), str)][-3:]}
-        brief = next((item for item in plan.get('slots', [])
-                      if item['date'] == day and item['hour'] == hour), None)
         if brief:
             context.update(topic=brief['topic'], content_brief=brief)
-        text = runner.draft(task, context)
+        asset = None
+        if select_brief_format(policy, day, hour, brief) != 'text':
+            try:
+                asset = prepare_visual(runner, brief, day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
+            except apify_ai.ApifyBudgetError:
+                runner.model_paused = True
+                runner.state.setdefault('operational_status', {})['ai'] = 'budget-paused'
+                continue
+            text = asset['caption'] if asset else None
+        else:
+            text = runner.draft(task, context)
         if not text:
             continue
         if claimed_post_count(day, runner.state, zone_name) >= limit:
             break
-        runner.write(key, 'post', text, scheduled_time=schedule, allocation_day=day)
+        kwargs = {'media_asset': asset} if asset else {}
+        runner.write(key, 'post', text, scheduled_time=schedule, allocation_day=day, **kwargs)
         if key in runner.state['actions']:
             attempted.append(key)
     return attempted

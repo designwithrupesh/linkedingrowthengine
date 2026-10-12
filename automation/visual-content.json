@@ -1,0 +1,863 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "product-point-of-view",
+      "kind": "image",
+      "title": "Choose what your product makes easier",
+      "subtitle": "A working card for founders and designers",
+      "slides": [
+        {
+          "title": "Give the interface a point of view",
+          "body": [
+            "Customer task: what are they trying to finish?",
+            "Priority: what should take less effort here?",
+            "Trade-off: what will you deliberately leave out?",
+            "Evidence: what would show the choice helped?"
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "A product can look familiar and still have a clear point of view. The choice often sits in what gets the most attention, what takes fewer steps and what you leave out.\n\nFor a scheduling tool, that might mean making the next available time easy to find before showing the full calendar. For a finance tool, it might mean explaining a balance before offering another chart. These are hypothetical choices, each tied to a different customer task.\n\nI'd use the four questions on this card before discussing visual references. They give the team something concrete to agree on."
+    },
+    {
+      "id": "product-brand-clarity",
+      "kind": "carousel",
+      "title": "When the promise and the product disagree",
+      "subtitle": "A six-step review for an early-stage team",
+      "slides": [
+        {
+          "title": "Start with one promise",
+          "body": [
+            "Write the claim a customer sees before signing up.",
+            "Choose one customer and one task.",
+            "Keep the exact words in view during the review."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Walk the first task",
+          "body": [
+            "Open the product as a new customer.",
+            "Follow the path to the promised result.",
+            "Note every point that needs an explanation."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Find a moment that contradicts the claim",
+          "body": [
+            "Compare what was promised with what happens.",
+            "Separate missing information from missing capability.",
+            "Record the screen or message that creates the gap."
+          ],
+          "example": "Hypothetical: easy setup requires an unexplained approval step.",
+          "layout": "decision"
+        },
+        {
+          "title": "Choose the decision that needs attention",
+          "body": [
+            "Should the product change, or should the promise change?",
+            "Name the constraint behind each option.",
+            "Avoid starting with a complete visual redesign."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Test the revised moment",
+          "body": [
+            "Give someone the original customer task.",
+            "Watch what they expect and what they try.",
+            "Keep the claim and the product experience together."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Leave with an owner and a next step",
+          "body": [
+            "Decision: [write the specific choice]",
+            "Evidence needed: [write what you need to learn]",
+            "Owner and review date: [write here]"
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "If the website says a product is easy to start using, the first task should give a customer a reason to believe it. An unexplained approval step can undo that promise before the rest of the product gets a chance.\n\nThis review keeps the claim, the first task and the awkward moment in the same conversation. It helps a team decide whether to change the experience, narrow the promise or gather more evidence. A full redesign may never enter the discussion.\n\nIf a product decision is holding your early-stage team back, describe the problem in the comments. I am building my consulting practice and would welcome a relevant conversation."
+    },
+    {
+      "id": "redesign-evidence-worksheet",
+      "kind": "freebie",
+      "title": "Before you approve a redesign",
+      "subtitle": "A worksheet for separating evidence from preference",
+      "slides": [
+        {
+          "title": "Choose the task under review",
+          "body": [
+            "Customer and situation",
+            "Task they want to complete",
+            "Where they enter the product"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Record what happened",
+          "body": [
+            "Observed action or exact customer words",
+            "Screen, step or message involved",
+            "Source and date of the observation"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Name the kind of problem",
+          "body": [
+            "Task difficulty: what could they not complete?",
+            "Value confusion: what did they expect instead?",
+            "Visual preference: whose preference is this?"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Compare two possible changes",
+          "body": [
+            "Smallest change to the current experience",
+            "Larger change being proposed",
+            "What each option costs the team"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Plan the next check",
+          "body": [
+            "Question the next test should answer",
+            "Evidence that would favor one option",
+            "Person responsible for the test"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Keep the conclusion open to evidence",
+          "body": [
+            "What is still an assumption",
+            "Other possible explanation to check",
+            "Decision and review date"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "A redesign request can mix several things together: a customer getting stuck, a founder wanting a different visual direction and a promise the product doesn't yet explain well. Each calls for a different conversation.\n\nI made this worksheet to separate those questions before a team commits to a larger change. It has spaces for the customer task, an actual observation, two possible responses and the evidence needed to choose between them.\n\nYou can fill it in during a review. If the observation box stays empty, I'd treat that as a reason to investigate before treating a new layout as the answer.",
+      "download_slug": "redesign-evidence-worksheet"
+    },
+    {
+      "id": "problem-definition-worksheet",
+      "kind": "freebie",
+      "title": "Write the problem before the solution",
+      "subtitle": "A five-page brief you can complete with your team",
+      "slides": [
+        {
+          "title": "Name a customer and a situation",
+          "body": [
+            "Specific customer group",
+            "Situation that brings them here",
+            "Task they need to complete"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Put the evidence on the page",
+          "body": [
+            "What you observed",
+            "Where and when you observed it",
+            "Customer words, if recorded"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Describe the difficulty",
+          "body": [
+            "Step where the customer gets stuck",
+            "What they need at that moment",
+            "Why the current approach falls short"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Set the boundaries",
+          "body": [
+            "Constraint we must work within",
+            "Change this work will cover",
+            "Related work we will leave for later"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Keep the uncertainty visible",
+          "body": [
+            "What the evidence cannot tell you",
+            "Other plausible explanation",
+            "Uncertainty to resolve first"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Choose the next check",
+          "body": [
+            "Smallest useful test",
+            "What would change our decision",
+            "Decision owner and next review date"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "Before a team discusses a new screen, I'd want the customer task written in a sentence everyone understands. That sentence often reveals whether people are solving the same problem.\n\nThis worksheet makes room for the situation, the evidence, the difficult step and the boundaries of the work. It also asks what the evidence cannot tell you. That last space matters when an observation is being stretched into a bigger conclusion.\n\nTry filling it out together before opening a design file. Keep the answers short enough to read aloud, then agree on the first question the next test needs to answer.",
+      "download_slug": "problem-definition-worksheet"
+    },
+    {
+      "id": "empty-state-next-step",
+      "kind": "image",
+      "title": "An empty screen still has a job",
+      "subtitle": "A copy check for the moment before anything exists",
+      "slides": [
+        {
+          "title": "Explain the state and the next useful action",
+          "body": [
+            "State: say why there is nothing here yet.",
+            "Action: name the first thing the person can do.",
+            "Result: explain what will appear afterward.",
+            "Help: offer a way forward when they cannot continue."
+          ]
+        }
+      ],
+      "caption": "An empty state is often the first real product screen a customer sees. I'd use it to explain what belongs there and how to create it.\n\nIn a hypothetical invoicing tool, 'No invoices yet' explains the state. 'Create an invoice to see its payment status here' gives the action a purpose. That is more useful than a cheerful sentence that leaves the next step unclear.\n\nThe same check applies when something fails. Say what happened, whether the person's work is safe and what they can try next. The copy should answer the question the person has at that moment."
+    },
+    {
+      "id": "research-question-rewrites",
+      "kind": "carousel",
+      "title": "Ask about the last time",
+      "subtitle": "Five interview questions that give you something to inspect",
+      "slides": [
+        {
+          "title": "Start with a recent event",
+          "body": [
+            "Pick one customer task you need to understand.",
+            "Ask about the last time the person did it.",
+            "Let them explain the sequence before suggesting a solution."
+          ]
+        },
+        {
+          "title": "Replace a request for opinions",
+          "body": [
+            "Instead of: Would you use a tool for this?",
+            "Ask: Tell me about the last time you did this task.",
+            "Follow up: What started it, and what happened next?"
+          ]
+        },
+        {
+          "title": "Ask where the task became difficult",
+          "body": [
+            "Instead of: Was the process frustrating?",
+            "Ask: Which step took more work than you expected?",
+            "Follow up: What did you do to get past that step?"
+          ]
+        },
+        {
+          "title": "Look for a real choice",
+          "body": [
+            "Instead of: Is price important?",
+            "Ask: What options did you compare last time?",
+            "Follow up: What made you choose the one you used?"
+          ]
+        },
+        {
+          "title": "Understand the workaround",
+          "body": [
+            "Instead of: Would this feature help?",
+            "Ask: How are you handling this part today?",
+            "Follow up: Can you show me an example, with private details removed?"
+          ]
+        },
+        {
+          "title": "Separate the record from the interpretation",
+          "body": [
+            "Record the event and the words you heard.",
+            "Write your interpretation in a different note.",
+            "Choose what another interview or a test needs to check."
+          ]
+        }
+      ],
+      "caption": "A person can give a thoughtful answer to 'Would you use this?' without telling you much about what they actually do. I'd rather start with the last time they tried to complete the task.\n\nA recent event gives you a sequence to ask about: what started it, where it became difficult, what alternatives they considered and how they got around the problem. The questions in these slides keep that sequence in view.\n\nAfter the interview, separate what you heard from what you think it means. A workaround is evidence worth examining. It doesn't automatically prove that the feature you had in mind is the right response."
+    },
+    {
+      "id": "first-release-boundary",
+      "kind": "freebie",
+      "title": "Decide what belongs in the first release",
+      "subtitle": "A worksheet for one customer task and one important assumption",
+      "slides": [
+        {
+          "title": "Choose the task",
+          "body": [
+            "Customer and situation",
+            "Task this release must support",
+            "Useful finishing point"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Name the assumption",
+          "body": [
+            "What we believe about the customer",
+            "Evidence we already have",
+            "What this release should let us learn"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Draw a boundary around the flow",
+          "body": [
+            "Step that must work first",
+            "Next necessary step",
+            "Step that completes the task"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Make the omissions explicit",
+          "body": [
+            "Feature we are leaving out",
+            "Reason the task can still work without it",
+            "Condition for adding the feature later"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Make the test workable",
+          "body": [
+            "Failure the customer must be able to recover from",
+            "Manual support needed during the test",
+            "Who will try the flow"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Agree on the learning check",
+          "body": [
+            "What we will watch or ask",
+            "Person responsible for recording the evidence",
+            "Decision and review date"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "A first release becomes easier to discuss when the team names the task it must support and the assumption it should help test. A list of features can wait until those two things are clear.\n\nThis worksheet asks where the task starts, where it finishes and which steps have to work between those points. It also has a page for the things you leave out. Writing down the reason for an omission makes that decision easier to revisit later.\n\nI'd complete this with product, engineering and design in the room. If a missing feature prevents the chosen task from working, the boundary needs another look.",
+      "download_slug": "first-release-boundary"
+    },
+    {
+      "id": "promise-to-first-task",
+      "kind": "image",
+      "title": "Follow the promise into the product",
+      "subtitle": "A review card for the landing page and the first task",
+      "slides": [
+        {
+          "title": "Read these moments together",
+          "body": [
+            "Landing page: what does the customer expect?",
+            "Signup: what must they give you before they can start?",
+            "First task: where do they see the promised value?",
+            "Recovery: what happens if they cannot finish?"
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "The landing page and the first product task should be part of the same review. One sets an expectation. The other gives the customer a chance to check it.\n\nIf a hypothetical reporting product promises an instant report but requires a setup call, I'd make that requirement clear before signup. The product might have a good reason for it. Hiding the step still leaves the customer with a different expectation.\n\nRead the claim aloud, then walk through the first task. Note where the product confirms the claim and where it asks the customer to reinterpret it. That gives the team a specific conversation to have."
+    },
+    {
+      "id": "design-review-agenda",
+      "kind": "carousel",
+      "title": "A review that ends with a decision",
+      "subtitle": "Six prompts for product, engineering and design",
+      "slides": [
+        {
+          "title": "Put one decision at the top",
+          "body": [
+            "Name the choice this meeting should help make.",
+            "State who is responsible for making it.",
+            "Share the material people need before the meeting."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Read the customer task",
+          "body": [
+            "Explain who is trying to do what, and when.",
+            "Show the evidence behind the problem statement.",
+            "Check that everyone is reviewing the same task."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Describe the proposal",
+          "body": [
+            "Show the steps the customer would take.",
+            "Explain why those steps are there.",
+            "Name the constraints the proposal responds to."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Keep assumptions visible",
+          "body": [
+            "Which part of the proposal has not been checked?",
+            "What could make this approach unsuitable?",
+            "What would we need to learn before committing?"
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Make feedback specific",
+          "body": [
+            "Name the step your feedback concerns.",
+            "Describe the problem you think might happen.",
+            "Suggest evidence or a test that could resolve it."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Close with a written next step",
+          "body": [
+            "Decision or open question: [write here]",
+            "Next action and owner: [write here]",
+            "Evidence and review date: [write here]"
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "A review can produce plenty of comments and still leave the team unsure what to do next. I'd start by writing the decision the meeting is supposed to help make.\n\nThese slides give the discussion an order: customer task, proposal, assumptions, specific feedback and the next action. The order makes it easier to notice when a visual preference is answering a different question from the one on the table.\n\nAt the end, record the decision or the open question, the person responsible and the evidence they need to bring back. A review should leave the work easier to continue."
+    },
+    {
+      "id": "first-design-hire-brief",
+      "kind": "freebie",
+      "title": "Write the mandate before the job description",
+      "subtitle": "A worksheet for founders hiring their first designer",
+      "slides": [
+        {
+          "title": "Describe the company stage",
+          "body": [
+            "Customer and product stage",
+            "Design work happening today",
+            "Why the role is needed now"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Name the decisions the role should own",
+          "body": [
+            "Customer research decisions",
+            "Product experience decisions",
+            "Brand and product language decisions"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Make the boundaries clear",
+          "body": [
+            "Decisions that remain with the founder",
+            "Work the designer can reconsider",
+            "Support or expertise they will need"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Set the working relationships",
+          "body": [
+            "Product and engineering partners",
+            "Access to customers and existing evidence",
+            "How disagreements will be decided"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Choose the first useful work",
+          "body": [
+            "Problem the designer should understand first",
+            "Work already committed to",
+            "Person currently making the relevant decisions"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Check that the mandate is workable",
+          "body": [
+            "Responsibility without enough authority",
+            "Evidence you will use to review the role",
+            "Question to resolve before advertising"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "A job description gets clearer when the founder has already named the decisions the first designer should help own. Otherwise the role can become a long list of tasks with no clear authority.\n\nThis worksheet covers the company stage, decision ownership, working relationships and the first problem the designer should understand. It also asks where responsibility might exceed the authority the person is given. That is a useful gap to find before an interview.\n\nI'd use the completed brief to discuss the role with candidates. It gives both sides something more concrete than a broad request to improve the product and brand.",
+      "download_slug": "first-design-hire-brief"
+    },
+    {
+      "id": "portfolio-decision-review",
+      "kind": "carousel",
+      "title": "Look for the decisions behind the screens",
+      "subtitle": "A practical portfolio conversation",
+      "slides": [
+        {
+          "title": "Begin with the original task",
+          "body": [
+            "Who needed help, and what were they trying to do?",
+            "What evidence shaped the problem statement?",
+            "What was the designer personally responsible for?"
+          ]
+        },
+        {
+          "title": "Ask about the constraints",
+          "body": [
+            "What could the team change at that stage?",
+            "What did time, technology or policy make difficult?",
+            "Which constraint most affected the design?"
+          ]
+        },
+        {
+          "title": "Compare the options",
+          "body": [
+            "What other approaches did the team consider?",
+            "Why was this approach chosen?",
+            "Which trade-off remained in the final work?"
+          ]
+        },
+        {
+          "title": "Understand the collaboration",
+          "body": [
+            "Who disagreed, and what was the disagreement about?",
+            "How did engineering or product input change the work?",
+            "Who made the final decision?"
+          ]
+        },
+        {
+          "title": "Examine the evidence afterward",
+          "body": [
+            "What did the team observe after trying the design?",
+            "Which results are recorded, and which are impressions?",
+            "What cannot reasonably be attributed to this work?"
+          ]
+        },
+        {
+          "title": "Ask what they would revisit",
+          "body": [
+            "What question remains unanswered?",
+            "What would they check before reusing the approach?",
+            "What does that reveal about how they make decisions?"
+          ]
+        }
+      ],
+      "caption": "A polished portfolio shows the result. To understand the designer's reasoning, I'd ask them to walk through one decision that was difficult to make.\n\nThe constraints, alternatives and disagreement around that choice often tell you more than another tour of the final screens. I also want to know which parts the person owned and which came from the team. Clear credit makes the conversation more useful.\n\nThese prompts work for a case-study review or a hiring conversation. Leave room for an honest answer about what the team could not measure. A confident result without supporting evidence should still invite a follow-up question."
+    },
+    {
+      "id": "design-debt-triage",
+      "kind": "image",
+      "title": "Sort the cleanup before starting it",
+      "subtitle": "A working card for recurring design problems",
+      "slides": [
+        {
+          "title": "Put each issue in the right conversation",
+          "body": [
+            "Customer confusion: a task is difficult to understand.",
+            "Repeated effort: the team keeps solving the same thing.",
+            "Inconsistency: similar moments behave differently.",
+            "Priority: name the task affected and the next useful fix."
+          ]
+        }
+      ],
+      "caption": "A cleanup list can put a confusing checkout step next to an inconsistent button style as if they require the same discussion. I'd separate the issues before choosing the work.\n\nCustomer confusion needs attention to the task and the evidence of difficulty. Repeated team effort may call for a reusable decision or component. Inconsistency needs a closer look at whether the difference is intentional and whether anyone is affected by it.\n\nThis card gives the team three places to start. An issue can belong in more than one, but naming the reason makes the priority easier to explain."
+    },
+    {
+      "id": "founder-design-brief",
+      "kind": "freebie",
+      "title": "A design brief a founder can use",
+      "subtitle": "Five pages for the task, constraints and open questions",
+      "slides": [
+        {
+          "title": "State the customer change",
+          "body": [
+            "Customer and situation",
+            "What they can do today",
+            "What this work should help them do"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Bring the evidence",
+          "body": [
+            "Observation or recorded customer words",
+            "Source and date",
+            "Assumption that still needs checking"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Name the boundaries",
+          "body": [
+            "Product area in scope",
+            "Work deliberately outside scope",
+            "Technical, time or policy constraint"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Make previous decisions clear",
+          "body": [
+            "Decision that has already been made",
+            "Reason for that decision",
+            "What remains open to exploration"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Agree on the work together",
+          "body": [
+            "Decision owner",
+            "Design, product and engineering partners",
+            "Customer access available"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Set the first check",
+          "body": [
+            "Question to answer before committing",
+            "Smallest useful prototype or investigation",
+            "Evidence, next action, owner and date"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "A design brief should help someone make a decision after they read it. I'd start with what the customer needs to do differently, then add the evidence and the constraints around that change.\n\nThis template leaves space for the work the team is deliberately leaving out. It also asks which decisions have already been made. Those details can prevent a designer from exploring an option the team cannot consider.\n\nUse it as a conversation document. A blank answer about customer access or decision ownership is useful to spot before the work begins, while there is still time to resolve it.",
+      "download_slug": "founder-design-brief"
+    },
+    {
+      "id": "trust-in-product-moments",
+      "kind": "carousel",
+      "title": "Review trust in the small moments",
+      "subtitle": "Permissions, pricing and recovery from errors",
+      "slides": [
+        {
+          "title": "Choose a moment with a real decision",
+          "body": [
+            "Look where the customer must grant access, pay or recover.",
+            "Write what they need to understand before continuing.",
+            "Keep the review tied to that particular task."
+          ]
+        },
+        {
+          "title": "Explain a permission request",
+          "body": [
+            "Say what access is being requested.",
+            "Explain which task needs that access.",
+            "State what happens if the customer declines."
+          ],
+          "example": "Hypothetical: calendar access lets the tool show available appointment times."
+        },
+        {
+          "title": "Make a price understandable",
+          "body": [
+            "Show what is included at the point of the choice.",
+            "Explain when a charge begins and whether it repeats.",
+            "Make cancellation conditions easy to find."
+          ]
+        },
+        {
+          "title": "Tell the person what happened",
+          "body": [
+            "Use a specific explanation when a task fails.",
+            "Say whether their work or payment was saved.",
+            "Provide a next action that fits the error."
+          ]
+        },
+        {
+          "title": "Keep the promise consistent",
+          "body": [
+            "Compare these moments with the product claim.",
+            "Check whether the wording matches the actual behavior.",
+            "Remove reassurance you cannot support."
+          ]
+        },
+        {
+          "title": "Choose one moment to test",
+          "body": [
+            "Give a person the task without explaining the screen.",
+            "Ask what they expect before they continue.",
+            "Compare their expectation with what happens next."
+          ]
+        }
+      ],
+      "caption": "Trust can depend on a small piece of information at exactly the moment a person needs it. A permission request should explain why access is needed. A price should explain what the customer is agreeing to. An error should say whether their work is safe.\n\nThese slides give a team a way to review those moments without treating trust as a vague visual quality. Start with the decision the person has to make, then check whether the product gives them enough information to make it.\n\nI'd test one moment at a time. Ask what the person expects before they continue, and compare that with what the product actually does."
+    },
+    {
+      "id": "ai-workflow-decision-test",
+      "kind": "image",
+      "title": "Check the decision, then the speed",
+      "subtitle": "A small test for an AI-assisted design workflow",
+      "slides": [
+        {
+          "title": "Keep the customer task the same",
+          "body": [
+            "Compare two approaches to the same design problem.",
+            "Check which assumptions each approach introduces.",
+            "Watch whether a person can complete the chosen task.",
+            "Record corrections as well as time spent."
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "A faster design workflow still needs a way to check the decisions it produces. I'd compare two approaches to the same customer task and look at what each makes easier to understand or do.\n\nRecord the assumptions introduced along the way and the corrections the team has to make afterward. That helps you see where a tool saves effort and where it moves effort into review. Time spent is useful evidence, but it doesn't explain the quality of the result on its own.\n\nThis card is a starting point for a small team test. Keep the task and the review criteria consistent so you have something fair to compare."
+    },
+    {
+      "id": "prototype-learning-plan",
+      "kind": "freebie",
+      "title": "Choose what the prototype needs to teach you",
+      "subtitle": "A worksheet for the question, fidelity and observation",
+      "slides": [
+        {
+          "title": "Choose one question",
+          "body": [
+            "Customer task",
+            "Decision this prototype should help make",
+            "What the team is uncertain about"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Name what must feel real",
+          "body": [
+            "Step the person needs to try",
+            "Information they need to see",
+            "Interaction that must work"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Leave the unnecessary detail out",
+          "body": [
+            "Detail that can remain rough",
+            "What the prototype does not need to answer",
+            "Limits of the prototype you must explain"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Set the task without giving the answer",
+          "body": [
+            "Situation you will describe",
+            "Task you will ask them to attempt",
+            "Help you will avoid giving during the attempt"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Plan what to record",
+          "body": [
+            "Action or hesitation to watch for",
+            "Question to ask after the attempt",
+            "Record of what happened"
+          ],
+          "layout": "worksheet"
+        },
+        {
+          "title": "Bring the evidence to a decision",
+          "body": [
+            "What the test can reasonably tell us",
+            "What remains uncertain",
+            "Change or next test, owner and review date"
+          ],
+          "layout": "worksheet"
+        }
+      ],
+      "caption": "I'd choose a prototype's level of detail after naming the question it needs to answer. If the question concerns the order of steps, polished visual details may add work without making the test more useful. If it concerns a difficult interaction, that interaction needs to behave clearly enough to try.\n\nThis worksheet starts with the decision, then asks what must feel real and what can remain rough. It includes space for the task you will give someone and the help you will avoid giving them.\n\nThe last page keeps the conclusion within what the test can tell you. One successful attempt can inform a decision without proving that every customer will have the same experience.",
+      "download_slug": "prototype-learning-plan"
+    },
+    {
+      "id": "customer-handoff-review",
+      "kind": "carousel",
+      "title": "Follow the customer across team boundaries",
+      "subtitle": "A review from the first claim to the support reply",
+      "slides": [
+        {
+          "title": "Choose one complete task",
+          "body": [
+            "Pick a task that crosses marketing, product and support.",
+            "Write where it starts and what finishing means.",
+            "Keep the same customer situation throughout the review."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Read the marketing promise",
+          "body": [
+            "What is the customer told they can do?",
+            "What conditions or limits are explained?",
+            "What do they expect before opening the product?"
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Walk the product steps",
+          "body": [
+            "Which part confirms that expectation?",
+            "Where does the person need information from another team?",
+            "What happens when the expected path fails?"
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Follow the support handoff",
+          "body": [
+            "What information must the customer repeat?",
+            "What can the support person already see?",
+            "Does the reply explain the same rules as the product?"
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Name the gap between teams",
+          "body": [
+            "Record the moment where expectations change.",
+            "Separate a missing explanation from a missing capability.",
+            "Choose an owner who can resolve the whole moment."
+          ],
+          "layout": "decision"
+        },
+        {
+          "title": "Check the revised path",
+          "body": [
+            "Repeat the original customer task.",
+            "Keep the promise, product and support reply together.",
+            "Record what still needs explanation or another handoff."
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "A customer doesn't experience a company as separate marketing, product and support teams. They follow a task and notice when the explanation changes along the way.\n\nI'd review one complete path with those teams together. Start with the claim that brought the customer in, walk the product steps and follow what happens when they need help. Look for repeated information, conflicting rules and moments where nobody owns the whole question.\n\nThese prompts keep the review on a specific task. The next step might be a clearer message, a product change or a better handoff. Naming the gap first makes that choice easier."
+    },
+    {
+      "id": "product-brand-review-card",
+      "kind": "image",
+      "title": "Keep the task and the promise together",
+      "subtitle": "A compact product and brand review card",
+      "slides": [
+        {
+          "title": "Four questions for the same customer moment",
+          "body": [
+            "Task: what is the person trying to finish?",
+            "Promise: what have we told them to expect?",
+            "Experience: what happens when they try?",
+            "Next step: which gap will we check or change first?"
+          ],
+          "layout": "decision"
+        }
+      ],
+      "caption": "Product and brand reviews are easier to connect when they use the same customer moment. I'd put the task, the promise and the actual experience next to each other before discussing a new direction.\n\nA gap might be a claim that asks too much of the product. It might be an unclear step that hides a capability already there. Those situations need different responses, even if they look similar on a feedback board.\n\nThis card is a short reference for that conversation. Use a specific moment you can inspect, then leave the review with one gap to investigate or change and someone responsible for the next step."
+    }
+  ]
+}

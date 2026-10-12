@@ -42,16 +42,19 @@ class ContentPlanContractTests(unittest.TestCase):
         self.assertTrue(all(isinstance(slot['format'], str) and slot['format'] for slot in self.plan['slots']))
 
     def test_consulting_and_role_invitations_have_weekly_limits(self):
-        kinds = Counter(slot['format'] for slot in self.plan['slots'])
+        # Publication format may be an image or a document. The invitation
+        # policy follows the editorial intent, regardless of its attachment.
+        kinds = Counter(slot.get('editorial_format', slot['format']) for slot in self.plan['slots'])
         self.assertEqual(kinds['consulting-invitation'], 8)
         self.assertEqual(kinds['founding-designer-invitation'], 4)
         for slot in self.plan['slots']:
             weekday = date.fromisoformat(slot['date']).weekday()
-            if slot['format'] == 'consulting-invitation':
+            editorial_format = slot.get('editorial_format', slot['format'])
+            if editorial_format == 'consulting-invitation':
                 self.assertIn(weekday, (1, 3))
                 self.assertEqual(slot['hour'], 18)
                 self.assertTrue(slot.get('cta'))
-            elif slot['format'] == 'founding-designer-invitation':
+            elif editorial_format == 'founding-designer-invitation':
                 self.assertEqual(weekday, 4)
                 self.assertEqual(slot['hour'], 18)
                 self.assertTrue(slot.get('cta'))

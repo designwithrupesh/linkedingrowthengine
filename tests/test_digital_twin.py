@@ -60,9 +60,10 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertNotIn('2026-10-14', r.state['days'])
         r.post_capacity = lambda *a: (True, 'capacity verified')
         r.generate = lambda *a: {'text': TEXT}
-        with patch.object(r, 'write') as write:
+        with patch.object(r, 'write') as write, patch.object(r, 'save') as checkpoint:
             r.post()
         write.assert_called_once()
+        checkpoint.assert_called_once()
     def test_restart_does_not_duplicate_post(self):
         self.runner().post()
         self.runner().post()

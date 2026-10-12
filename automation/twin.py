@@ -455,10 +455,17 @@ class Runner:
             elif changed.returncode:
                 raise RuntimeError('Cannot verify Git checkpoint')
 
-    def write(self, key, kind, text, post_urn=None, parent=None, *, scheduled_time=None, allocation_day=None):
+    def write(self, key, kind, text, post_urn=None, parent=None, *, scheduled_time=None, allocation_day=None, media_asset=None):
         """Persist intent before the one-shot write; ambiguous writes never retry."""
         if key in self.state['actions']:
             return
+        if media_asset is not None:
+            if kind != 'post':
+                raise ValueError('Visual attachments are supported only for posts')
+            from automation.media_posts import validate_media_asset
+            validate_media_asset(media_asset)
+            if not isinstance(media_asset.get('id'), str) or not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,79}', media_asset['id']):
+                raise ValueError('A valid visual asset identity is required')
         schedule = None
         day = self.day
         if kind == 'post':
@@ -499,6 +506,12 @@ class Runner:
                   'post_urn': post_urn, 'parent': parent}
         if schedule is not None:
             action.update(scheduled_for=schedule.astimezone(timezone.utc).isoformat(), allocation_day=day)
+        if media_asset is not None:
+            action.update(format=media_asset['kind'], asset_id=media_asset['id'],
+                          asset_sha256=media_asset['sha256'], asset_title=media_asset['title'],
+                          asset_pages=media_asset['page_count'])
+            if media_asset.get('spec'):
+                action['asset_spec'] = media_asset['spec']
         if kind in ('comment', 'reaction') and 'max_public_interactions_per_day' in self.policy:
             public_count = engagement.public_action_counts(self.now, self.policy, self.state)['total']
             if public_count >= self.policy['max_public_interactions_per_day']:
@@ -513,6 +526,13 @@ class Runner:
             return
         action['status'] = 'inflight'
         self.save()  # A failed push prevents the remote operation.
+        if media_asset is not None:
+            from automation.media_posts import publish_media_post, MediaPostCheckpointError
+            try:
+                publish_media_post(self, action, media_asset)
+            except MediaPostCheckpointError:
+                raise WriteCheckpointError('A visual post checkpoint failed; do not repeat its remote operations') from None
+            return
         payload = {'content': text, 'platforms': [self.policy['platform_id']],
                    'scheduledTime': schedule.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ') if schedule else None}
         endpoint = '/create-post'
@@ -611,20 +631,40 @@ class Runner:
                 if not allowed:
                     print('Post deferred: ' + reason)
                     continue
+            if not force:
+                from automation.post_queue import _retry_due, DRAFT_COOLDOWN_SECONDS
+                attempts = self.state.setdefault('post_queue', {}).setdefault('attempts', {})
+                if not _retry_due(attempts.get(key), self.now):
+                    continue
+                attempts[key] = {'attempted_at': self.now.isoformat(), 'allocation_day': self.day,
+                                 'retry_after': (self.now + timedelta(seconds=DRAFT_COOLDOWN_SECONDS)).isoformat()}
+                self.save()
             index = len(self.state['posts']) + sum(a['kind'] == 'post' and a['status'] == 'dry-run' for a in self.state['actions'].values())
             context = {'topic': p['topics'][index % len(p['topics'])], 'source_notes': p['source_notes'],
                        'recent_posts': [a['text'] for a in self.state['actions'].values() if a['kind'] == 'post'][-3:]}
             plan_path = ROOT / 'automation/content-plan.json'
+            brief = None
+            hour = slot.nominal_time.astimezone(ZoneInfo(p['timezone'])).hour if slot else 9
             if plan_path.exists():
                 plan = json.loads(plan_path.read_text(encoding='utf-8'))
-                hour = slot.nominal_time.astimezone(ZoneInfo(p['timezone'])).hour if slot else 9
                 brief = next((item for item in plan.get('slots', []) if item['date'] == self.day and item['hour'] == hour), None)
                 if brief:
                     context.update(topic=brief['topic'], content_brief=brief)
             task = skills('linkedin-content-planner', 'linkedin-post-writer')
             if p['source_notes']:
                 task += '\n' + skills('linkedin-repurposer')
-            text = self.draft(task, context)
+            asset = None
+            from automation.visual_planning import select_brief_format, prepare_visual
+            if not force and select_brief_format(p, self.day, hour, brief) != 'text':
+                try:
+                    asset = prepare_visual(self, brief, self.day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
+                except apify_ai.ApifyBudgetError:
+                    self.model_paused = True
+                    self.state.setdefault('operational_status', {})['ai'] = 'budget-paused'
+                    return
+                text = asset['caption'] if asset else None
+            else:
+                text = self.draft(task, context)
             if text:
                 # Drafting can outlast the initial publication lead, especially
                 # when the free model needs an editing pass. Keep the slot's
@@ -636,7 +676,8 @@ class Runner:
                 if schedule.astimezone(ZoneInfo(p['timezone'])).date().isoformat() != self.day:
                     print('Post deferred: drafting crossed its local publication date.')
                     return
-                self.write(key, 'post', text, scheduled_time=schedule, allocation_day=slot.allocation_day if slot else None)
+                kwargs = {'media_asset': asset} if asset else {}
+                self.write(key, 'post', text, scheduled_time=schedule, allocation_day=slot.allocation_day if slot else None, **kwargs)
 
     def read(self, call):
         if self.read_budget_guard is not None and not self.read_budget_guard():

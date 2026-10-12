@@ -1,0 +1,318 @@
+"""One-shot draft, signed upload, validation and scheduling for LinkedIn media.
+
+The caller owns the post quota and first durable action intent. A held operation
+never falls back to a text post or creates another draft on a later invocation.
+"""
+from __future__ import annotations
+
+from datetime import datetime, timedelta, timezone
+import hashlib
+import io
+import os
+from pathlib import Path
+import re
+import struct
+from time import monotonic
+from urllib.parse import urlsplit
+
+import requests
+
+from lib.voice import require_plain_text
+
+
+BASE_URL = 'https://api.publora.com/api/v1'
+_IDENTIFIER = re.compile(r'^[A-Za-z0-9_-]{1,128}$')
+_S3_HOST = re.compile(
+    r'^(?:[a-z0-9][a-z0-9.-]*\.)?s3(?:[.-][a-z0-9-]+)?\.amazonaws\.com$'
+)
+
+
+class MediaPostCheckpointError(RuntimeError):
+    """A durable checkpoint failed; no following request may be attempted."""
+
+
+class MediaPostOutcomeError(RuntimeError):
+    """A media request has an uncertain remote outcome."""
+
+
+def valid_upload_url(value):
+    """Allow the documented HTTPS S3 upload hosts, without embedded credentials."""
+    if not isinstance(value, str) or len(value) > 16384 or any(ord(c) < 33 for c in value):
+        return False
+    try:
+        parsed = urlsplit(value)
+        return (parsed.scheme == 'https' and parsed.username is None and parsed.password is None
+                and parsed.port in (None, 443) and not parsed.fragment and bool(parsed.path.strip('/'))
+                and bool(_S3_HOST.fullmatch(parsed.hostname or '')))
+    except ValueError:
+        return False
+
+
+def _identifier(value):
+    return isinstance(value, str) and bool(_IDENTIFIER.fullmatch(value))
+
+
+def _checkpoint(runner):
+    try:
+        runner.save()
+    except Exception:
+        # Never include provider URLs, bodies or credential-bearing exceptions.
+        raise MediaPostCheckpointError(
+            'Saving the media post checkpoint failed. This action must not be retried.'
+        ) from None
+
+
+def _stage(runner, action, name):
+    action['media_stage'] = name
+    action['media_stage_status'] = 'inflight'
+    _checkpoint(runner)
+
+
+def _hold(runner, action, reason, *, uncertain=False, status=None):
+    action.update(status='unknown-needs-reconciliation' if uncertain else 'media-held',
+                  reason=reason, media_stage_status='unknown' if uncertain else 'held')
+    if status is not None:
+        action['http_status'] = status
+    _checkpoint(runner)
+    if uncertain:
+        raise MediaPostOutcomeError(
+            'Media post outcome is uncertain. Reconcile the existing draft before any retry.'
+        ) from None
+    return None
+
+
+def _api(runner, action, method, endpoint, *, payload=None):
+    """One request, no redirects or retries, and no external error text."""
+    headers = {'x-publora-key': os.environ['PUBLORA_API_KEY']}
+    if method in ('post', 'put') and endpoint.startswith(('/create-post', '/update-post/')):
+        # The provider documents idempotency only on draft creation and edits.
+        seed = action['media_operation_id'] + ':' + action['media_stage']
+        headers['Idempotency-Key'] = hashlib.sha256(seed.encode()).hexdigest()
+    kwargs = {'headers': headers, 'timeout': 45, 'allow_redirects': False}
+    if payload is not None:
+        kwargs['json'] = payload
+    try:
+        response = getattr(requests, method)(BASE_URL + endpoint, **kwargs)
+    except Exception:
+        return _hold(runner, action, 'Media transport acknowledgement unavailable', uncertain=True)
+    status = response.status_code
+    action['http_status'] = status
+    if not 200 <= status < 300:
+        uncertain = not (400 <= status < 500 and status not in (408, 429))
+        if not uncertain and action['media_stage'] == 'create-draft':
+            action.update(status='rejected', reason='Publora rejected the media draft',
+                          media_stage_status='rejected')
+            _checkpoint(runner)
+            return None
+        return _hold(runner, action, 'Publora did not acknowledge the media stage',
+                     uncertain=uncertain, status=status)
+    try:
+        data = response.json()
+    except Exception:
+        return _hold(runner, action, 'Media stage response could not be verified', uncertain=True)
+    if not isinstance(data, dict) or data.get('success') is not True:
+        return _hold(runner, action, 'Media stage response did not establish success', uncertain=True)
+    return data
+
+
+def _asset(asset):
+    """Verify the exact local bytes before creating a remote draft."""
+    if not isinstance(asset, dict):
+        raise ValueError('A rendered media asset is required')
+    path = Path(asset['path'])
+    mime = asset.get('mime_type')
+    format_kind = asset.get('kind')
+    if format_kind not in ('image', 'carousel', 'freebie'):
+        raise ValueError('An image, carousel or freebie format is required')
+    if mime not in ('image/png', 'application/pdf'):
+        raise ValueError('Only rendered PNG and PDF assets are supported')
+    if (format_kind == 'image') != (mime == 'image/png'):
+        raise ValueError('Rendered MIME does not match its selected format')
+    data = path.read_bytes()
+    digest = hashlib.sha256(data).hexdigest()
+    if not data or digest != asset.get('sha256'):
+        raise ValueError('Rendered media checksum does not match')
+    title = require_plain_text(asset.get('title')).strip()
+    if not title or len(title) > 180:
+        raise ValueError('Media title must contain readable text')
+    if mime == 'image/png':
+        if len(data) > 50 * 1024 * 1024 or data[:8] != b'\x89PNG\r\n\x1a\n' or len(data) < 24:
+            raise ValueError('PNG asset exceeds the supported bounds')
+        width, height = struct.unpack('>II', data[16:24])
+        if width <= 0 or height <= 0 or width * height > 36152320:
+            raise ValueError('PNG dimensions exceed the supported bounds')
+        from PIL import Image
+        try:
+            with Image.open(io.BytesIO(data)) as image:
+                if image.format != 'PNG' or image.size != (width, height):
+                    raise ValueError('Rendered PNG metadata does not match its bytes')
+                image.verify()
+        except Exception:
+            raise ValueError('Rendered PNG could not be verified') from None
+        kind, extension = 'image', '.png'
+    else:
+        pages = asset.get('page_count')
+        if (len(data) > 100 * 1024 * 1024 or not data.startswith(b'%PDF-')
+                or isinstance(pages, bool) or not isinstance(pages, int) or not 1 <= pages <= 300):
+            raise ValueError('PDF asset exceeds the supported bounds')
+        kind, extension = 'document', '.pdf'
+    filename = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:96] or 'design-resource'
+    return data, {'sha256': digest, 'mime_type': mime, 'title': title,
+                  'type': kind, 'page_count': asset.get('page_count'),
+                  'format': asset.get('kind'), 'file_name': filename + extension,
+                  'size_bytes': len(data)}
+
+
+def validate_media_asset(asset):
+    """Public validation for the caller to run before reserving post quota."""
+    return _asset(asset)[1]
+
+
+def _group(data):
+    group = data.get('postGroup') or data
+    return group if isinstance(group, dict) else {}
+
+
+def _verified_group(data, runner, action, media_id, *, scheduled=False):
+    group = _group(data)
+    group_id = group.get('postGroupId') or group.get('_id') or group.get('id')
+    if group_id is not None and str(group_id) != action['remote_id']:
+        return False
+    if group.get('platforms') != [runner.policy['platform_id']]:
+        return False
+    media = group.get('media')
+    if not isinstance(media, list) or len(media) != 1 or not isinstance(media[0], dict):
+        return False
+    item = media[0]
+    if (str(item.get('mediaId') or item.get('_id') or '') != media_id
+            or item.get('status') != 'ready' or item.get('failureReason')
+            or item.get('type') != action['media']['type']
+            or item.get('mimeType') != action['media']['mime_type']):
+        return False
+    content = group.get('content')
+    if content is not None and content != action['text']:
+        return False
+    children = [child for child in group.get('posts', [])
+                if isinstance(child, dict) and child.get('platform') == 'linkedin']
+    if not children or any(child.get('content') != action['text'] for child in children):
+        return False
+    if scheduled:
+        if group.get('status') != 'scheduled':
+            return False
+        try:
+            actual = datetime.fromisoformat(group['scheduledTime'].replace('Z', '+00:00'))
+            intended = datetime.fromisoformat(action['media_scheduled_for'].replace('Z', '+00:00'))
+        except (KeyError, ValueError, TypeError, AttributeError):
+            return False
+        if actual.tzinfo is None or actual != intended:
+            return False
+    elif group.get('status') != 'draft':
+        return False
+    return True
+
+
+def publish_media_post(runner, action, asset):
+    """Complete an already checkpointed new media intent exactly once."""
+    if action.get('status') != 'inflight' or action.get('remote_id') or action.get('media_stage'):
+        return action
+    pipeline_start = monotonic()
+    data, metadata = _asset(asset)
+    require_plain_text(action['text'])
+    schedule = datetime.fromisoformat(action['scheduled_for'].replace('Z', '+00:00'))
+    if schedule.tzinfo is None or schedule <= runner.now:
+        raise ValueError('Media posts require a future aware schedule')
+    action['media'] = metadata
+    action['media_scheduled_for'] = schedule.astimezone(timezone.utc).replace(microsecond=0).strftime('%Y-%m-%dT%H:%M:%SZ')
+    seed = action['at'] + ':' + action['scheduled_for'] + ':' + metadata['sha256'] + ':' + action['text']
+    action['media_operation_id'] = hashlib.sha256(seed.encode()).hexdigest()
+    _stage(runner, action, 'create-draft')
+    response = _api(runner, action, 'post', '/create-post',
+                    payload={'content': action['text'], 'platforms': [runner.policy['platform_id']]})
+    if response is None:
+        return action
+    remote_id = response.get('postGroupId')
+    if not _identifier(remote_id):
+        _hold(runner, action, 'Draft acknowledgement did not include a valid identifier', uncertain=True)
+    action.update(remote_id=remote_id, media_stage_status='acknowledged')
+    record = {'id': remote_id, 'text': action['text'], 'url': None, 'at': action['at'],
+              'scheduled_for': action['scheduled_for'], 'allocation_day': action['allocation_day'],
+              'media_status': 'draft', 'format': metadata['format'], 'asset_sha256': metadata['sha256']}
+    runner.state['posts'].append(record)
+    _checkpoint(runner)
+
+    _stage(runner, action, 'reserve-upload')
+    response = _api(runner, action, 'post', '/get-upload-url', payload={
+        'fileName': metadata['file_name'], 'contentType': metadata['mime_type'],
+        'type': metadata['type'], 'postGroupId': remote_id})
+    if response is None:
+        return action
+    media_id, upload_url = response.get('mediaId'), response.get('uploadUrl')
+    if not _identifier(media_id):
+        _hold(runner, action, 'Upload reservation identifier could not be verified', uncertain=True)
+    action['media']['media_id'] = media_id
+    action['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)  # Persist reservation before validating or using its URL.
+    if not valid_upload_url(upload_url):
+        _hold(runner, action, 'Upload destination did not match documented storage hosts')
+        return action
+    _stage(runner, action, 'upload-bytes')
+    try:
+        uploaded = requests.put(upload_url, headers={'Content-Type': metadata['mime_type']},
+                                data=data, timeout=90, allow_redirects=False)
+    except Exception:
+        _hold(runner, action, 'Storage upload acknowledgement unavailable', uncertain=True)
+    if not 200 <= uploaded.status_code < 300:
+        _hold(runner, action, 'Storage upload was not acknowledged',
+              uncertain=not (400 <= uploaded.status_code < 500 and uploaded.status_code not in (408, 429)),
+              status=uploaded.status_code)
+        return action
+    action['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+
+    _stage(runner, action, 'complete-media')
+    response = _api(runner, action, 'post', '/complete-media/' + media_id)
+    if response is None:
+        return action
+    completed = response.get('mediaFile')
+    if (not isinstance(completed, dict) or str(completed.get('_id') or '') != media_id
+            or completed.get('status') in ('failed', 'invalid')):
+        _hold(runner, action, 'Media completion could not be verified')
+        return action
+    action['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+    action['media_stage'] = 'verify-attachment'
+    response = _api(runner, action, 'get', '/get-post/' + remote_id)
+    if response is None:
+        return action
+    if not _verified_group(response, runner, action, media_id):
+        _hold(runner, action, 'Draft attachment, caption or channel could not be verified')
+        return action
+    action['media']['status'] = 'ready'
+    record['media_status'] = 'ready'
+    _checkpoint(runner)
+
+    current = runner.now + timedelta(seconds=max(0, monotonic() - pipeline_start))
+    publication_time = datetime.fromisoformat(action['media_scheduled_for'].replace('Z', '+00:00'))
+    if publication_time <= current:
+        _hold(runner, action, 'Publication time elapsed while preparing the media draft')
+        return action
+    _stage(runner, action, 'schedule-media')
+    response = _api(runner, action, 'put', '/update-post/' + remote_id,
+                    payload={'status': 'scheduled', 'scheduledTime': action['media_scheduled_for']})
+    if response is None:
+        return action
+    action['media_stage_status'] = 'acknowledged'
+    record['media_status'] = 'schedule-acknowledged'
+    _checkpoint(runner)
+    action['media_stage'] = 'verify-schedule'
+    response = _api(runner, action, 'get', '/get-post/' + remote_id)
+    if response is None:
+        return action
+    if not _verified_group(response, runner, action, media_id, scheduled=True):
+        _hold(runner, action, 'Scheduled media, caption, channel or time could not be verified')
+        return action
+    action.update(status='scheduled', media_stage_status='verified',
+                  reason='Publora confirmed scheduled media and caption')
+    record['media_status'] = 'scheduled'
+    _checkpoint(runner)
+    return action

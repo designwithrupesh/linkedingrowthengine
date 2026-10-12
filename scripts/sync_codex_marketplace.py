@@ -32,6 +32,7 @@ PATHS_TO_COPY = [
     "LICENSE",
     "docs",
     "automation",
+    "resources",
 ]
 
 
