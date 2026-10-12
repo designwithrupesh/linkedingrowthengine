@@ -784,11 +784,12 @@
         "format": "freebie",
         "file_name": "before-you-approve-a-redesign.pdf",
         "size_bytes": 53168,
-        "media_id": "6accba4426b57a9d24d34445"
+        "media_id": "6accba4426b57a9d24d34445",
+        "status": "ready"
       },
       "media_scheduled_for": "2026-10-14T12:30:00Z",
       "media_operation_id": "3a38b9be42ad0ed40e6df8add9f858885514284cff13ba5ede0da3a28a92fc77",
-      "media_stage": "complete-media",
+      "media_stage": "verify-attachment",
       "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6accba4126b57a9d24d343fe"
@@ -938,7 +939,7 @@
       "at": "2026-10-12T10:44:20.735069+00:00",
       "scheduled_for": "2026-10-14T12:30:00+00:00",
       "allocation_day": "2026-10-14",
-      "media_status": "draft",
+      "media_status": "ready",
       "format": "freebie",
       "asset_sha256": "b1290321886625869a6ff8770dbc07f589dc8cd824300a9e79cf9fa6f7aba821"
     }
