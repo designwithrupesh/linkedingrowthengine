@@ -121,7 +121,7 @@ class VoiceTests(unittest.TestCase):
     def test_one_source_only_repair_includes_explicit_owner_rules(self, complete):
         source = COMMENT.replace('. A faster', ' \u2014 a faster')
         complete.side_effect = [{'text': source, 'skip': False}, {'text': COMMENT, 'skip': False}]
-        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'MODEL_API_KEY': '<test-credential>'}, clear=True):
             result = twin.model(twin.skills('linkedin-comment-drafter'),
                                 {'post': {'text': 'A real prototype comparison'}, 'private_detail': 'must-not-enter-edit'}, POLICY)
         self.assertEqual(result['text'], COMMENT)
@@ -137,7 +137,7 @@ class VoiceTests(unittest.TestCase):
     @patch('automation.twin.complete')
     def test_a_second_bad_output_is_skipped_without_a_third_model_call(self, complete):
         complete.return_value = {'text': COMMENT + ' \u2014 Test again.', 'skip': False}
-        with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'MODEL_API_KEY': '<test-credential>'}, clear=True):
             result = twin.model(twin.skills('linkedin-reply-handler'), {'comment': {'text': 'How would you test it?'}}, POLICY)
         self.assertTrue(result['skip'])
         self.assertEqual(result['text'], '')
@@ -167,7 +167,7 @@ class VoiceTests(unittest.TestCase):
             self.assertEqual(runner.state['actions'], {})
 
     def test_low_level_publora_text_writes_share_gate(self):
-        client = PubloraClient(api_key='test-placeholder')
+        client = PubloraClient(api_key='<test-credential>')
         client._post = Mock()
         bad = COMMENT + ' \u2014 Test it.'
         for operation in (lambda: client.create_post(content=bad, platforms=['linkedin-owner']),

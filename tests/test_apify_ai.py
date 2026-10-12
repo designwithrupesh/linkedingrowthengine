@@ -27,7 +27,7 @@ class ApifyAiTests(unittest.TestCase):
     def client(self, usage=0.5, cap=5):
         reader = Mock()
         reader.BASE_URL = 'https://api.apify.com/v2'
-        reader.token = 'test-apify-placeholder'
+        reader.token = '<test-credential>'
         response = reader._session.get.return_value
         response.status_code = 200
         response.json.return_value = {'data': {'current': {'monthlyUsageUsd': usage},
@@ -63,7 +63,7 @@ class ApifyAiTests(unittest.TestCase):
                      self.endpoint.replace('build=0.1.2', 'build=0.1.3'),
                      self.endpoint + '&token=unexpected', self.endpoint + '#fragment',
                      self.endpoint.replace('&timeout=120&memory=256', '&memory=256&timeout=120')]
-        with patch.dict(os.environ, {'APIFY_TOKEN': 'test-apify-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
             for endpoint in endpoints:
                 with self.subTest(endpoint=endpoint):
                     self.assertFalse(apify_ai.is_apify_model_endpoint(endpoint, self.config))
@@ -81,7 +81,7 @@ class ApifyAiTests(unittest.TestCase):
     @patch('automation.apify_ai.requests.post')
     @patch('automation.apify_ai.ApifyClient')
     def test_real_budget_guard_uses_lower_account_cap_and_reserves_free_credit(self, client, post):
-        with patch.dict(os.environ, {'APIFY_TOKEN': 'test-apify-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
             for usage, cap, allowed in ((0, 5, True), (3.99, 5, True), (4, 5, False),
                                        (2.99, 3, True), (3, 3, False), (4.01, 5, False),
                                        (-1, 5, False), (True, 5, False), (1, None, False),
@@ -91,13 +91,13 @@ class ApifyAiTests(unittest.TestCase):
                     client.return_value = reader
                     if allowed:
                         headers = apify_ai.authorization_headers(self.endpoint, self.config)
-                        self.assertEqual(headers['Authorization'], 'Bearer test-apify-placeholder')
+                        self.assertEqual(headers['Authorization'], 'Bearer <test-credential>')
                     else:
                         with self.assertRaisesRegex(apify_ai.ApifyBudgetError, 'configured budget or account limits'):
                             apify_ai.authorization_headers(self.endpoint, self.config)
                     reader._session.get.assert_called_once_with(
                         'https://api.apify.com/v2/users/me/limits',
-                        headers={'Authorization': 'Bearer test-apify-placeholder'}, timeout=30, allow_redirects=False)
+                        headers={'Authorization': 'Bearer <test-credential>'}, timeout=30, allow_redirects=False)
         post.assert_not_called()
 
     @patch('automation.apify_ai.requests.post')
@@ -106,7 +106,7 @@ class ApifyAiTests(unittest.TestCase):
         reader = self.client()
         reader._session.get.side_effect = requests.ConnectionError('private provider data')
         client.return_value = reader
-        with patch.dict(os.environ, {'APIFY_TOKEN': 'test-apify-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
             with self.assertRaises(apify_ai.ApifyModelError) as caught:
                 apify_ai.complete(self.endpoint, {'model': apify_ai.MODEL, 'messages': []}, config_path=self.config)
         self.assertNotIn('private provider data', str(caught.exception))
@@ -122,10 +122,10 @@ class ApifyAiTests(unittest.TestCase):
                                'finish_reason': 'stop'}]}
         post.return_value.status_code = 200
         post.return_value.json.return_value = native
-        with patch.dict(os.environ, {'APIFY_TOKEN': 'test-apify-placeholder'}, clear=True):
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
             self.assertEqual(apify_ai.complete(self.endpoint, payload, config_path=self.config), native)
         post.assert_called_once_with(self.endpoint,
-                                     headers={'Authorization': 'Bearer test-apify-placeholder', 'Content-Type': 'application/json'},
+                                     headers={'Authorization': 'Bearer <test-credential>', 'Content-Type': 'application/json'},
                                      json=payload, timeout=150, allow_redirects=False)
         self.assertNotIn('token=', post.call_args.args[0])
         self.assertEqual(client.return_value._session.get.call_count, 1)
@@ -140,7 +140,7 @@ class ApifyAiTests(unittest.TestCase):
                 post.reset_mock()
                 post.return_value.status_code = status
                 post.return_value.json.return_value = {'error': 'private response text'}
-                with patch.dict(os.environ, {'APIFY_TOKEN': 'test-apify-placeholder'}, clear=True):
+                with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
                     with self.assertRaises(apify_ai.ApifyModelError) as caught:
                         apify_ai.complete(self.endpoint, payload, config_path=self.config)
                 self.assertIn('HTTP ' + str(status), str(caught.exception))

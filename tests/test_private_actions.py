@@ -136,7 +136,8 @@ class PrivateActionsTests(unittest.TestCase):
         self.assertEqual(self.client.dm_writes, [])
 
     def test_credentials_in_inbound_or_draft_are_never_sent_to_model_or_linkedin(self):
-        self.client.messages['private-chat-id'] = [message(text='api_key: sk-abcdefghijklmnopqrstuv')]
+        synthetic_credential = 'sk-' + 'a' * 24
+        self.client.messages['private-chat-id'] = [message(text='api_key: ' + synthetic_credential)]
         self.assertEqual(self.runner().run_dm_replies(), 0)
         self.assertEqual(self.drafts, [])
         self.client.messages['private-chat-id'] = [message()]

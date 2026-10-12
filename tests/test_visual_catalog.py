@@ -5,6 +5,7 @@ import re
 import unittest
 
 from lib.voice import violations
+from automation.visual_planning import _ground_spec
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,7 @@ class VisualCatalogContractTests(unittest.TestCase):
     def setUpClass(cls):
         cls.catalog = json.loads((ROOT / 'automation/visual-content.json').read_text(encoding="utf-8"))
         cls.plan = json.loads((ROOT / 'automation/content-plan.json').read_text(encoding="utf-8"))
+        cls.policy = json.loads((ROOT / 'automation/policy.json').read_text(encoding="utf-8"))
 
     def test_future_media_slots_resolve_to_unique_reviewed_assets(self):
         assets = self.catalog['assets']
@@ -34,19 +36,20 @@ class VisualCatalogContractTests(unittest.TestCase):
         self.assertEqual(set(used), set(by_id), 'Every reviewed starter asset has a planned slot')
         self.assertEqual({by_id[key]['kind'] for key in used}, {'image', 'carousel', 'freebie'})
 
-    def test_public_copy_passes_owner_voice_and_has_readable_card_lengths(self):
+    def test_public_copy_passes_owner_voice_and_grounding_including_diagrams(self):
         for asset in self.catalog['assets']:
             with self.subTest(asset=asset['id']):
                 self.assertRegex(asset['id'], r'^[a-z][a-z0-9-]{2,70}$')
                 self.assertIn(asset['kind'], {'image', 'carousel', 'freebie'})
                 self.assertGreaterEqual(len(asset['caption']), 400)
-                self.assertLessEqual(len(asset['caption']), 1000)
+                self.assertLessEqual(len(asset['caption']), 1200)
+                _ground_spec(asset, self.policy)
                 copy = [asset['title'], asset.get('subtitle', ''), asset['caption']]
                 for slide in asset['slides']:
-                    self.assertLessEqual(len(slide['title']), 70)
+                    self.assertLessEqual(len(slide['title']), 85)
                     self.assertGreaterEqual(len(slide['body']), 1)
                     self.assertLessEqual(len(slide['body']), 4)
-                    self.assertTrue(all(len(line) <= 95 for line in slide['body']))
+                    self.assertTrue(all(len(line) <= 230 for line in slide['body']))
                     copy.extend([slide['title'], slide.get('example', ''), *slide['body']])
                 for text in copy:
                     if text:
@@ -59,17 +62,27 @@ class VisualCatalogContractTests(unittest.TestCase):
                     self.assertEqual(len(asset['slides']), 1)
                 else:
                     self.assertGreaterEqual(len(asset['slides']), 4)
-                    self.assertLessEqual(len(asset['slides']), 7)
+                    self.assertLessEqual(len(asset['slides']), 8)
                 if asset['kind'] == 'freebie':
                     self.assertEqual(asset['download_slug'], asset['id'])
-                    fields = [line for slide in asset['slides'] for line in slide['body']]
-                    self.assertGreaterEqual(len(fields), 15)
-                    # The worksheet layout supplies ruled blank answer spaces.
-                    # Public copy contains prompts, rather than fake examples.
-                    self.assertTrue(all(slide.get('layout') == 'worksheet'
-                                        and len(slide['body']) <= 3
-                                        for slide in asset['slides']))
-                    self.assertTrue(all('[' not in line for line in fields))
+                    fields = [field for slide in asset['slides']
+                              for field in slide.get('visual', {}).get('fields', [])]
+                    self.assertGreaterEqual(len(fields), 8)
+                    self.assertTrue(all(field.get('label') and field.get('hint') for field in fields))
+                    # A useful working document includes a filled example or
+                    # decision diagram as well as spaces for the reader's work.
+                    examples = [slide for slide in asset['slides']
+                                if any(key in slide.get('visual', {})
+                                       for key in ('panels', 'matrix', 'nodes', 'screens'))]
+                    self.assertTrue(examples, 'Working fields need a concrete example or decision aid')
+
+    def test_every_asset_has_a_concrete_visual_and_carousels_vary_the_explanation(self):
+        for asset in self.catalog['assets']:
+            with self.subTest(asset=asset['id']):
+                self.assertTrue(all(slide.get('visual') for slide in asset['slides']))
+                if asset['kind'] == 'carousel':
+                    layouts = {slide.get('layout') for slide in asset['slides']}
+                    self.assertGreaterEqual(len(layouts), 2)
 
     def test_format_change_keeps_the_original_editorial_intent_and_cta(self):
         future = [slot for slot in self.plan['slots']

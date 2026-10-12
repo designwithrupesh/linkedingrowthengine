@@ -116,6 +116,86 @@ class VisualAssetTests(unittest.TestCase):
             self.assertNotEqual(first["path"], revised["path"])
             self.assertTrue(Path(first["path"]).is_file())
 
+    def test_structured_visual_fields_share_the_voice_boundary(self):
+        structures = [
+            ("comparison", {"panels": [{"label": "Option", "title": "A clear task", "body": "Show its result."}]}, "panels", "body"),
+            ("diagram", {"nodes": [{"label": "Task", "title": "Choose a time", "detail": "Keep the duration visible."}]}, "nodes", "detail"),
+            ("worksheet", {"fields": [{"label": "Observation", "hint": "Record what happened."}]}, "fields", "hint"),
+            ("annotated-ui", {"screens": [{"label": "Before", "title": "Calendar", "rows": ["Choose a day"], "action": "Choose time"}],
+                              "annotations": [{"label": "Context", "detail": "Show the duration."}]}, "annotations", "detail"),
+        ]
+        for layout, visual, group, field in structures:
+            with self.subTest(layout=layout), tempfile.TemporaryDirectory() as directory:
+                spec = deepcopy(SPEC)
+                spec["slides"][0].update(layout=layout, visual=deepcopy(visual))
+                spec["slides"][0]["visual"][group][0][field] = "Test first \u2014 then decide."
+                with self.assertRaises(VoiceError):
+                    render_asset(spec, directory)
+                self.assertEqual(list(Path(directory).iterdir()), [])
+        with tempfile.TemporaryDirectory() as directory:
+            spec = deepcopy(SPEC)
+            spec["slides"][0].update(layout="matrix", visual={
+                "matrix": {"columns": ["Observation", "Interpretation"],
+                           "rows": [["A hesitation", "Test first \u2014 then decide."]]}})
+            with self.assertRaises(VoiceError):
+                render_asset(spec, directory)
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_matrix_shape_and_undisplayed_visual_fields_are_rejected(self):
+        invalid = [
+            {"matrix": {"columns": ["Task", "Response"], "rows": [["Only one cell"]]}},
+            {"matrix": {"columns": ["Task", "Response"], "rows": [["One", "Two"]]},
+             "screens": [{"label": "Hidden", "title": "Hidden copy", "rows": ["A row"], "action": "Continue"}]},
+        ]
+        for visual in invalid:
+            with self.subTest(visual=visual):
+                spec = deepcopy(SPEC)
+                spec["slides"][0].update(layout="matrix", visual=visual)
+                with self.assertRaises(VisualAssetError):
+                    validate_spec(spec)
+
+    @unittest.skipUnless(shutil.which("pdftotext"), "PDF text extraction needs pdftotext")
+    def test_semantic_visuals_and_writing_prompts_remain_selectable_in_pdf(self):
+        spec = deepcopy(SPEC)
+        spec["kind"] = "carousel"
+        spec["slides"] = [
+            {"title": "Trace a requirement", "body": ["Use the same task."], "layout": "diagram",
+             "visual": {"nodes": [{"label": "Promise", "title": "Choose a time", "detail": "A duration is visible."},
+                                  {"label": "Result", "title": "Confirm the booking", "detail": "The selected time stays visible."}]}},
+            {"title": "Compare the response", "body": ["Keep its cost in the discussion."], "layout": "comparison",
+             "visual": {"panels": [{"label": "Local change", "title": "Clarify the limit", "body": "Retain the current structure."},
+                                   {"label": "Wider change", "title": "Rebuild the comparison", "body": "Inspect repeated decisions."}]}},
+            {"title": "Separate what was observed", "body": ["An explanation needs support."], "layout": "matrix",
+             "visual": {"matrix": {"columns": ["Observation", "Interpretation"], "rows": [["The person returned to pricing.", "A condition appeared too late."]]}}},
+            {"title": "Record the next check", "body": ["Keep the decision reversible."], "layout": "worksheet",
+             "visual": {"fields": [{"label": "Task and question", "hint": "Describe the decision to inspect."},
+                                   {"label": "Reason to revise", "hint": "What would change your mind?"}],
+                        "panels": [{"label": "Completed example", "title": "Compare two plans", "body": "Look for an export limit."}]}},
+            {"title": "Show the next action", "body": ["Use a hypothetical booking screen."], "layout": "annotated-ui",
+             "visual": {"screens": [{"label": "After", "title": "Choose a time", "rows": ["Tuesday at 10:30", "Duration: 30 minutes"], "action": "Choose this time"}],
+                        "annotations": [{"label": "Context", "detail": "Explain the duration before commitment."}]}},
+        ]
+        def copy_strings(value):
+            if isinstance(value, str):
+                yield value
+            elif isinstance(value, dict):
+                for child in value.values():
+                    yield from copy_strings(child)
+            elif isinstance(value, list):
+                for child in value:
+                    yield from copy_strings(child)
+        with tempfile.TemporaryDirectory() as directory:
+            result = render_asset(spec, directory)
+            # Raw extraction follows PDF text operations. Layout extraction can
+            # interleave the two columns of a comparison at the same baseline.
+            extracted = subprocess.run(["pdftotext", "-raw", result["path"], "-"],
+                                       check=True, capture_output=True, text=True).stdout
+            normalized = " ".join(extracted.casefold().split())
+            for slide in spec["slides"]:
+                for text in copy_strings(slide["visual"]):
+                    self.assertIn(" ".join(text.casefold().split()), normalized)
+            self.assertEqual(result["page_count"], 6)
+
     def test_unsafe_ids_unsupported_layouts_and_multiple_image_pages_fail(self):
         for change in ({"id": "../outside"}, {"kind": "video"}, {"id": ""}):
             with self.subTest(change=change):

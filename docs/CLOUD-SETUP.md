@@ -29,7 +29,7 @@ Routine posting and contextual public interaction use the owner's standing autho
 
 ## Visual publishing
 
-The runtime installs pinned Pillow and ReportLab through `automation/requirements.txt`. Fonts are licensed and vendored in `automation/assets/fonts`; no extra system-font installation or image-service key is required. [The visual catalog](../automation/visual-content.json) contains 18 reviewed images, PDF carousels and worksheets, with public files in [resources/linkedin](../resources/linkedin/README.md). Future formats are selected from the same posting calendar. Runtime visual generation uses the existing AI route and budget; reviewed resources require no model credit.
+The runtime installs pinned Pillow and ReportLab through `automation/requirements.txt`. Licensed IBM Plex Serif, Sans and Mono fonts are vendored in `automation/assets/fonts`; no system-font installation or image-service subscription is required. [The visual catalog](../automation/visual-content.json) contains 18 images, PDF carousels and worksheets with annotated interfaces, comparison tables, worked examples and writing fields. Public files live in [resources/linkedin](../resources/linkedin/README.md). Future formats use the same posting calendar and the existing AI route and budget; reviewed resources require no model credit.
 
 Assets render locally, pass writing and grounding checks, and are uploaded to a Publora draft. The runner verifies ready media before scheduling and verifies the scheduled group afterward. A failure holds that draft instead of publishing a missing attachment or retrying an uncertain write. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for format rotation, file checks and stage receipts.
 

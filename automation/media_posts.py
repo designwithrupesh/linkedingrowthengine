@@ -316,3 +316,272 @@ def publish_media_post(runner, action, asset):
     record['media_status'] = 'scheduled'
     _checkpoint(runner)
     return action
+
+
+def _replacement_group(data, runner, audit, *, media_ids, caption, scheduled=False):
+    """Verify account, caption and exact media inventory without persisting URLs."""
+    group = _group(data)
+    if str(group.get('postGroupId') or group.get('_id') or '') != audit['remote_id']:
+        return False
+    if group.get('platforms') != [runner.policy['platform_id']]:
+        return False
+    expected_status = 'scheduled' if scheduled else 'draft'
+    if group.get('status') != expected_status:
+        return False
+    if group.get('content') is not None and group['content'] != caption:
+        return False
+    children = group.get('posts')
+    channel = runner.policy['platform_id']
+    if (not isinstance(children, list) or len(children) != 1
+            or not isinstance(children[0], dict)
+            or children[0].get('platform') != 'linkedin'
+            or children[0].get('platformId') not in (channel, channel.removeprefix('linkedin-'))
+            or children[0].get('content') != caption
+            or children[0].get('status') != expected_status
+            or children[0].get('postedId') or children[0].get('permalink')):
+        return False
+    items = group.get('media')
+    if not isinstance(items, list) or len(items) != len(media_ids):
+        return False
+    inventory = {}
+    for item in items:
+        if not isinstance(item, dict):
+            return False
+        ident = str(item.get('mediaId') or item.get('_id') or '')
+        if (not _identifier(ident) or ident in inventory or item.get('status') != 'ready'
+                or item.get('failureReason')):
+            return False
+        inventory[ident] = item
+    if set(inventory) != set(media_ids):
+        return False
+    replacement_id = audit.get('new_media_id')
+    if replacement_id in inventory:
+        item = inventory[replacement_id]
+        if (item.get('type') != audit['media']['type']
+                or item.get('mimeType') != audit['media']['mime_type']):
+            return False
+    stored_time = group.get('scheduledTime')
+    if scheduled or stored_time is not None:
+        try:
+            actual = datetime.fromisoformat(stored_time.replace('Z', '+00:00'))
+            intended = datetime.fromisoformat(audit['scheduled_for'].replace('Z', '+00:00'))
+        except (ValueError, TypeError, AttributeError):
+            return False
+        if actual.tzinfo is None or actual != intended:
+            return False
+    return True
+
+
+def _finish_replacement(runner, action, record, audit, asset):
+    audit.update(status='scheduled', media_stage='verify-replacement-schedule',
+                 media_stage_status='verified', reason='Existing post replacement verified')
+    metadata = dict(audit['media'], media_id=audit['new_media_id'], status='ready')
+    action.update(status='scheduled', text=audit['text'], media=metadata,
+                  format=metadata['format'], asset_sha256=metadata['sha256'],
+                  asset_title=metadata['title'], asset_pages=metadata['page_count'],
+                  media_scheduled_for=audit['scheduled_for'])
+    if isinstance(asset.get('id'), str):
+        action['asset_id'] = asset['id']
+    if isinstance(asset.get('spec'), dict):
+        action['asset_spec'] = asset['spec']
+    record.update(text=audit['text'], format=metadata['format'],
+                  asset_sha256=metadata['sha256'], media_status='scheduled')
+    _checkpoint(runner)
+    return audit
+
+
+def replace_media_post(runner, post_key, asset, *, caption=None):
+    """Replace media on an existing draft/scheduled post without reserving quota.
+
+    The old ready asset remains attached until the new asset is verified ready.
+    Each write has a durable stage checkpoint. Reinvoking an unfinished attempt
+    performs read-only reconciliation; it never repeats an ambiguous write.
+    """
+    if getattr(runner, 'live', True) is not True:
+        raise ValueError('Existing media replacement requires an explicit live runner')
+    data, metadata = _asset(asset)
+    action = runner.state.get('actions', {}).get(post_key)
+    if not isinstance(action, dict) or action.get('kind') != 'post':
+        raise ValueError('An existing post action is required')
+    remote_id = action.get('remote_id')
+    if not _identifier(remote_id):
+        raise ValueError('An existing post identifier is required')
+    records = [item for item in runner.state.get('posts', [])
+               if isinstance(item, dict) and item.get('id') == remote_id]
+    if len(records) != 1:
+        raise ValueError('A unique existing post record is required')
+    record = records[0]
+    old_caption = require_plain_text(action.get('text'))
+    new_caption = require_plain_text(caption if caption is not None else action.get('text'))
+    if not old_caption.strip() or not new_caption.strip() or len(new_caption) > 3000:
+        raise ValueError('A readable LinkedIn caption is required')
+    schedule_text = action.get('media_scheduled_for') or action.get('scheduled_for')
+    try:
+        schedule = datetime.fromisoformat(schedule_text.replace('Z', '+00:00'))
+    except (ValueError, TypeError, AttributeError):
+        raise ValueError('The existing post publication time is required') from None
+    if schedule.tzinfo is None or runner.now.tzinfo is None:
+        raise ValueError('Media replacement requires an aware publication clock')
+    schedule_text = schedule.astimezone(timezone.utc).isoformat().replace('+00:00', 'Z')
+    audits = action.setdefault('media_replacements', [])
+    if not isinstance(audits, list):
+        raise ValueError('Existing media replacement history is invalid')
+    if audits:
+        previous = audits[-1]
+        if not isinstance(previous, dict):
+            raise ValueError('Existing media replacement history is invalid')
+        if previous.get('status') != 'scheduled':
+            # A crash can occur after any write, including the final schedule.
+            # GET can establish final success, but no stage is silently replayed.
+            previous['media_stage'] = 'reconcile-replacement'
+            observed = _api(runner, previous, 'get', '/get-post/' + remote_id)
+            if observed is None:
+                return previous
+            group = _group(observed)
+            previous['observed_status'] = (group.get('status') if group.get('status')
+                                           in ('draft', 'scheduled', 'published', 'failed') else 'unknown')
+            previous['observed_media_ids'] = [
+                str(item.get('mediaId') or item.get('_id') or '')
+                for item in group.get('media', []) if isinstance(item, dict)
+                and _identifier(item.get('mediaId') or item.get('_id'))]
+            if (previous.get('new_media_id') and previous.get('media', {}).get('sha256') == metadata['sha256']
+                    and previous.get('text') == new_caption
+                    and _replacement_group(observed, runner, previous,
+                                           media_ids=[previous['new_media_id']],
+                                           caption=previous['text'], scheduled=True)):
+                return _finish_replacement(runner, action, record, previous, asset)
+            previous.update(status='media-held', media_stage_status='held',
+                            reason='Existing replacement needs reconciliation before any further write')
+            _checkpoint(runner)
+            return previous
+        if previous.get('media', {}).get('sha256') == metadata['sha256'] and previous.get('text') == new_caption:
+            return previous
+    if schedule <= runner.now:
+        raise ValueError('Existing media replacement requires a future publication time')
+    start = monotonic()
+    audit = {'kind': 'post-media-replacement', 'at': runner.now.isoformat(),
+             'remote_id': remote_id, 'text': new_caption, 'previous_text': old_caption,
+             'scheduled_for': schedule_text, 'media': metadata,
+             'media_stage': 'inspect-existing-media', 'media_stage_status': 'prepared',
+             'status': 'inflight'}
+    seed = remote_id + ':' + metadata['sha256'] + ':' + new_caption + ':' + audit['at']
+    audit['media_operation_id'] = hashlib.sha256(seed.encode()).hexdigest()
+    audits.append(audit)
+    _checkpoint(runner)
+    observed = _api(runner, audit, 'get', '/get-post/' + remote_id)
+    if observed is None:
+        return audit
+    group = _group(observed)
+    old_media = group.get('media')
+    if (not isinstance(old_media, list) or len(old_media) != 1 or not isinstance(old_media[0], dict)
+            or not _identifier(old_media[0].get('mediaId') or old_media[0].get('_id'))):
+        _hold(runner, audit, 'Existing media inventory is not a single verifiable asset')
+        return audit
+    old_id = str(old_media[0].get('mediaId') or old_media[0]['_id'])
+    audit['old_media_id'] = old_id
+    initially_scheduled = group.get('status') == 'scheduled'
+    if not _replacement_group(observed, runner, audit, media_ids=[old_id],
+                              caption=old_caption, scheduled=initially_scheduled):
+        _hold(runner, audit, 'Existing caption, channel, time or ready media could not be verified')
+        return audit
+    action['status'] = 'media-held'
+    record['media_status'] = 'replacement-in-progress'
+    _checkpoint(runner)
+    if initially_scheduled or old_caption != new_caption:
+        _stage(runner, audit, 'pause-existing-post')
+        payload = {'status': 'draft'}
+        if old_caption != new_caption:
+            payload['content'] = new_caption
+        paused = _api(runner, audit, 'put', '/update-post/' + remote_id, payload=payload)
+        if paused is None:
+            return audit
+        audit['media_stage_status'] = 'acknowledged'
+        _checkpoint(runner)
+        audit['media_stage'] = 'verify-existing-draft'
+        observed = _api(runner, audit, 'get', '/get-post/' + remote_id)
+        if observed is None:
+            return audit
+        if not _replacement_group(observed, runner, audit, media_ids=[old_id], caption=new_caption):
+            _hold(runner, audit, 'Existing post did not become the intended draft')
+            return audit
+    _stage(runner, audit, 'reserve-replacement-upload')
+    reserved = _api(runner, audit, 'post', '/get-upload-url', payload={
+        'fileName': metadata['file_name'], 'contentType': metadata['mime_type'],
+        'type': metadata['type'], 'postGroupId': remote_id})
+    if reserved is None:
+        return audit
+    new_id = reserved.get('mediaId')
+    if not _identifier(new_id) or new_id == old_id:
+        _hold(runner, audit, 'Replacement reservation identifier could not be verified', uncertain=True)
+    audit.update(new_media_id=new_id, media_stage_status='acknowledged')
+    _checkpoint(runner)
+    upload_url = reserved.get('uploadUrl')
+    if not valid_upload_url(upload_url):
+        _hold(runner, audit, 'Replacement upload destination is not approved storage')
+        return audit
+    _stage(runner, audit, 'upload-replacement-bytes')
+    try:
+        uploaded = requests.put(upload_url, headers={'Content-Type': metadata['mime_type']},
+                                data=data, timeout=90, allow_redirects=False)
+    except Exception:
+        _hold(runner, audit, 'Replacement storage acknowledgement unavailable', uncertain=True)
+    if not 200 <= uploaded.status_code < 300:
+        _hold(runner, audit, 'Replacement storage upload was not acknowledged',
+              uncertain=not (400 <= uploaded.status_code < 500 and uploaded.status_code not in (408, 429)),
+              status=uploaded.status_code)
+        return audit
+    audit['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+    _stage(runner, audit, 'complete-replacement-media')
+    completed = _api(runner, audit, 'post', '/complete-media/' + new_id)
+    if completed is None:
+        return audit
+    item = completed.get('mediaFile')
+    if (not isinstance(item, dict) or str(item.get('_id') or '') != new_id
+            or item.get('status') in ('failed', 'invalid')):
+        _hold(runner, audit, 'Replacement completion could not be verified')
+        return audit
+    audit['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+    audit['media_stage'] = 'verify-replacement-before-delete'
+    observed = _api(runner, audit, 'get', '/get-post/' + remote_id)
+    if observed is None:
+        return audit
+    if not _replacement_group(observed, runner, audit, media_ids=[old_id, new_id], caption=new_caption):
+        _hold(runner, audit, 'Both ready assets were not verified; existing media retained')
+        return audit
+    if schedule <= runner.now + timedelta(seconds=max(0, monotonic() - start)):
+        _hold(runner, audit, 'Publication time elapsed before old media removal')
+        return audit
+    _stage(runner, audit, 'delete-previous-media')
+    removed = _api(runner, audit, 'delete', '/media/' + old_id)
+    if removed is None:
+        return audit
+    audit['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+    audit['media_stage'] = 'verify-replacement-inventory'
+    observed = _api(runner, audit, 'get', '/get-post/' + remote_id)
+    if observed is None:
+        return audit
+    if not _replacement_group(observed, runner, audit, media_ids=[new_id], caption=new_caption):
+        _hold(runner, audit, 'Replacement inventory could not be verified after removal')
+        return audit
+    if schedule <= runner.now + timedelta(seconds=max(0, monotonic() - start)):
+        _hold(runner, audit, 'Publication time elapsed before replacement scheduling')
+        return audit
+    _stage(runner, audit, 'schedule-existing-replacement')
+    scheduled = _api(runner, audit, 'put', '/update-post/' + remote_id,
+                     payload={'status': 'scheduled', 'scheduledTime': schedule_text})
+    if scheduled is None:
+        return audit
+    audit['media_stage_status'] = 'acknowledged'
+    _checkpoint(runner)
+    audit['media_stage'] = 'verify-replacement-schedule'
+    observed = _api(runner, audit, 'get', '/get-post/' + remote_id)
+    if observed is None:
+        return audit
+    if not _replacement_group(observed, runner, audit, media_ids=[new_id],
+                              caption=new_caption, scheduled=True):
+        _hold(runner, audit, 'Replacement schedule, caption, time or channel could not be verified')
+        return audit
+    return _finish_replacement(runner, action, record, audit, asset)

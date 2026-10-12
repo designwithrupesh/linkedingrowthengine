@@ -19,7 +19,7 @@ TEXT = 'Good design starts with a clear product decision.'
 
 class DiscoveryTests(unittest.TestCase):
     def client(self, payload=None):
-        client = DiscoveryClient(token='test-placeholder')
+        client = DiscoveryClient(token='<test-credential>')
         client._run_sync = Mock(return_value=payload or [])
         return client
 
@@ -203,7 +203,7 @@ class DiscoveryTests(unittest.TestCase):
 
 class ReadBudgetTests(unittest.TestCase):
     def client(self, usage=0, cap=5):
-        client = DiscoveryClient(token='test-placeholder')
+        client = DiscoveryClient(token='<test-credential>')
         response = Mock(status_code=200)
         response.json.return_value = {'data': {'current': {'monthlyUsageUsd': usage},
                                               'limits': {'maxMonthlyUsageUsd': cap}}}
@@ -223,7 +223,7 @@ class ReadBudgetTests(unittest.TestCase):
         client._run_sync = Mock()
         self.assertTrue(read_budget_available(client))
         client._session.get.assert_called_once_with('https://api.apify.com/v2/users/me/limits',
-            headers={'Authorization': 'Bearer test-placeholder'}, timeout=30, allow_redirects=False)
+            headers={'Authorization': 'Bearer <test-credential>'}, timeout=30, allow_redirects=False)
         client._run_sync.assert_not_called()
 
     def test_unknown_missing_or_invalid_credit_values_fail_closed(self):

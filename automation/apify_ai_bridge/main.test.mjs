@@ -45,13 +45,13 @@ test('input, official gateway and safe OUTPUT use injected authentication withou
     calls.push({ url, options });
     return { ok: true, status: 200, json: async () => calls.length === 1 ? input() : response };
   };
-  await runBridge({ APIFY_TOKEN: 'test-credential', APIFY_DEFAULT_KEY_VALUE_STORE_ID: 'testStore' }, fetcher);
+  await runBridge({ APIFY_TOKEN: '<test-credential>', APIFY_DEFAULT_KEY_VALUE_STORE_ID: 'testStore' }, fetcher);
   assert.equal(calls.length, 3);
   assert.equal(calls[1].url, GATEWAY);
   for (const call of calls) {
     assert.equal(call.options.redirect, 'error');
-    assert.equal(call.options.headers.Authorization, 'Bearer test-credential');
-    assert.equal((call.options.body || '').includes('test-credential'), false);
+    assert.equal(call.options.headers.Authorization, 'Bearer <test-credential>');
+    assert.equal((call.options.body || '').includes('<test-credential>'), false);
   }
   assert.deepEqual(Object.keys(JSON.parse(calls[2].options.body)), ['choices']);
 });
@@ -64,7 +64,7 @@ test('provider errors persist only fixed error and HTTP status, and make no retr
     if (calls.length === 2) return { ok: false, status: 403, json: async () => { throw new Error('Provider secret'); } };
     return { ok: true };
   };
-  await assert.rejects(runBridge({ APIFY_TOKEN: 'test-credential', APIFY_DEFAULT_KEY_VALUE_STORE_ID: 'testStore' }, fetcher));
+  await assert.rejects(runBridge({ APIFY_TOKEN: '<test-credential>', APIFY_DEFAULT_KEY_VALUE_STORE_ID: 'testStore' }, fetcher));
   assert.equal(calls.filter(call => call.url === GATEWAY).length, 1);
   assert.deepEqual(JSON.parse(calls[2].options.body), { error: 'AI bridge generation unavailable', status: 403 });
 });

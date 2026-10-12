@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 import subprocess
 from datetime import date, datetime, timedelta, timezone
-from time import monotonic
+from time import monotonic, sleep
 from urllib.parse import quote, unquote, urlsplit
 from zoneinfo import ZoneInfo
 import requests
@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GITHUB_MODEL_ENDPOINT = 'https://models.github.ai/inference/chat/completions'
 OPENAI_MODEL_ENDPOINT = 'https://api.openai.com/v1/chat/completions'
 LOCAL_MODEL_ENDPOINT = 'http://127.0.0.1:8080/v1/chat/completions'
+LOCAL_MODEL_AUTH = 'twin-local'  # Credential-free marker accepted by the loopback server.
 LOCAL_MODEL_TIMEOUT = (5, 420)
 LOCAL_COMPLETION_TOKENS = {
     'comment': 256, 'reply': 224, 'dm': 400,
@@ -57,6 +58,10 @@ class WriteCheckpointError(RuntimeError):
     """A known remote acknowledgement could not be checkpointed."""
 
 
+class GitCheckpointError(RuntimeError):
+    """A credential-free diagnostic for an unverified durable checkpoint."""
+
+
 def model_connection():
     bridge = apify_ai.model_info() if os.getenv('APIFY_TOKEN') else None
     endpoint = os.getenv('MODEL_ENDPOINT') or (OPENAI_MODEL_ENDPOINT if os.getenv('MODEL_API_KEY')
@@ -66,7 +71,7 @@ def model_connection():
     if not local and (parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password):
         raise ModelConfigurationError('Model endpoint must use verified HTTPS or the supported local loopback endpoint')
     if local:
-        token = 'twin-local'
+        token = LOCAL_MODEL_AUTH
     elif apify_ai.is_apify_model_endpoint(endpoint):
         token = os.getenv('APIFY_TOKEN')
         if not token:
@@ -418,6 +423,60 @@ def model(task, context, policy):
     return result
 
 
+def _checkpoint_command(*args, allowed=(0,)):
+    """Keep Git output private and bound each checkpoint command."""
+    try:
+        result = subprocess.run(['git', *args], cwd=ROOT, capture_output=True,
+                                text=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        raise GitCheckpointError('A durable Git checkpoint command could not complete') from None
+    if allowed is not None and result.returncode not in allowed:
+        raise GitCheckpointError('A durable Git checkpoint command failed') from None
+    return result
+
+
+def _remote_has_checkpoint(checkpoint):
+    """A false result proves a retry is a fast-forward of the same receipt."""
+    _checkpoint_command('fetch', '--no-tags', 'origin', 'refs/heads/main')
+    remote = _checkpoint_command('rev-parse', 'FETCH_HEAD').stdout.strip()
+    if not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', remote):
+        raise GitCheckpointError('The remote Git checkpoint could not be verified')
+    if _checkpoint_command('merge-base', '--is-ancestor', checkpoint, remote,
+                           allowed=(0, 1)).returncode == 0:
+        return True
+    if _checkpoint_command('merge-base', '--is-ancestor', remote, checkpoint,
+                           allowed=(0, 1)).returncode != 0:
+        raise GitCheckpointError('The remote Git checkpoint diverged; reconciliation is required')
+    return False
+
+
+def _push_checkpoint(checkpoint, *, verify_first=False):
+    """Retry the same commit, verifying remote ancestry after a failed push.
+
+    Only a fast-forward of the fixed checkpoint can be retried. A remote
+    receipt already containing it is sufficient acknowledgement; divergence
+    or an unverifiable remote stops the caller before another LinkedIn write.
+    """
+    if not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', checkpoint):
+        raise GitCheckpointError('The local Git checkpoint identity is invalid')
+    if verify_first and _remote_has_checkpoint(checkpoint):
+        return
+    for attempt in range(3):
+        try:
+            result = _checkpoint_command('push', 'origin', checkpoint + ':refs/heads/main', allowed=None)
+        except GitCheckpointError:
+            result = None  # A transport timeout may still have reached GitHub.
+        if result is not None and result.returncode == 0:
+            return
+        # FETCH_HEAD records exactly this read without merging or replacing HEAD.
+        if _remote_has_checkpoint(checkpoint):
+            return
+        if attempt < 2:
+            print('Git checkpoint push was not acknowledged; retrying the same verified commit.')
+            sleep(attempt + 1)
+    raise GitCheckpointError('The durable Git checkpoint was not acknowledged after three push attempts')
+
+
 class Runner:
     def __init__(self, policy, path, live=False, now=None, generate=model, capacity=check_post_capacity):
         self.policy, self.path, self.live, self.generate = policy, Path(path), live, generate
@@ -445,15 +504,14 @@ class Runner:
             if os.getenv('TWIN_CHECKPOINT_GIT') != 'true':
                 raise RuntimeError('Live writes require durable Git checkpoints')
             rel = str(self.path.resolve().relative_to(ROOT))
-            subprocess.run(['git', 'add', '--', rel], cwd=ROOT, check=True)
-            changed = subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=ROOT)
+            _checkpoint_command('add', '--', rel)
+            changed = _checkpoint_command('diff', '--cached', '--quiet', allowed=(0, 1))
             if changed.returncode == 1:
-                subprocess.run(['git', 'commit', '--author=Sergey Bulaev <s@bulaev.org>', '-m', 'Record digital twin checkpoint'], cwd=ROOT, check=True,
-                               stdout=subprocess.DEVNULL)
-                subprocess.run(['git', 'push', 'origin', 'HEAD:main'], cwd=ROOT, check=True,
-                               stdout=subprocess.DEVNULL)
-            elif changed.returncode:
-                raise RuntimeError('Cannot verify Git checkpoint')
+                _checkpoint_command('commit', '--author=Sergey Bulaev <s@bulaev.org>',
+                                    '-m', 'Record digital twin checkpoint')
+            checkpoint = _checkpoint_command('rev-parse', 'HEAD').stdout.strip()
+            # An unchanged index can still contain a prior unpushed intent.
+            _push_checkpoint(checkpoint, verify_first=changed.returncode == 0)
 
     def write(self, key, kind, text, post_urn=None, parent=None, *, scheduled_time=None, allocation_day=None, media_asset=None):
         """Persist intent before the one-shot write; ambiguous writes never retry."""
@@ -1000,7 +1058,7 @@ if __name__ == '__main__':
         # Never log provider bodies, credential values or external content.
         status = getattr(getattr(exc, 'response', None), 'status_code', None)
         detail = f' (HTTP {status})' if status else ''
-        if isinstance(exc, (ModelConfigurationError, LocalModelError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, apify_ai.ApifyModelError,
+        if isinstance(exc, (ModelConfigurationError, LocalModelError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, GitCheckpointError, apify_ai.ApifyModelError,
                             PrivateWriteOutcomeError, PrivateWriteCheckpointError)):
             print('Twin stopped: ' + str(exc))
         else:

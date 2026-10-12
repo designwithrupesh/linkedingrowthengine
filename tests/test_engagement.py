@@ -229,7 +229,7 @@ class TargetCacheTests(unittest.TestCase):
         for group in range(3):
             rows = [post(urn='urn:li:share:' + str(7000000000000000000 + group * 50 + item),
                          url='https://www.linkedin.com/feed/update/urn:li:share:' + str(7000000000000000000 + group * 50 + item) + '/',
-                         providerSecret='must-not-be-copied') for item in range(50)]
+                         providerSecret='<test-credential>') for item in range(50)]
             stash_targets(at(), POLICY, state, rows)
         self.assertEqual(len(state['engagement']['targets']), 100)
         self.assertNotIn('providerSecret', json.dumps(state))

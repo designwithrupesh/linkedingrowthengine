@@ -95,10 +95,36 @@ class VisualPreparationTests(unittest.TestCase):
 
     def generated(self, kind="image"):
         spec = deepcopy(self.spec)
-        spec.update(id=f"visual-2026-10-12-1800-{kind}", kind=kind)
-        spec["slides"][0]["body"] = spec["slides"][0]["body"][:2]
-        if kind != "image":
-            spec["slides"] = [deepcopy(spec["slides"][0]) for _ in range(4)]
+        spec.update(id=f"visual-2026-10-12-1800-{kind}", kind=kind,
+                    subtitle="Hypothetical example: choosing an appointment")
+        layouts = (["annotated-ui"] if kind == "image"
+                   else ["worksheet"] * 4 if kind == "freebie"
+                   else ["comparison", "diagram", "matrix", "worksheet"])
+        visuals = {
+            "annotated-ui": {
+                "screens": [
+                    {"label": "Before", "title": "Schedule an appointment", "rows": ["Weekly calendar"], "action": "View calendar"},
+                    {"label": "After", "title": "Choose an appointment", "rows": ["Next available: Tuesday"], "action": "Choose this time"},
+                ],
+                "annotations": [{"label": "Priority", "detail": "The booking decision is visible first."}],
+            },
+            "comparison": {"panels": [
+                {"label": "Before", "title": "Weekly calendar", "body": "Find a day before seeing an appointment."},
+                {"label": "After", "title": "Next available time", "body": "Choose a time before opening the full calendar."},
+            ]},
+            "diagram": {"nodes": [
+                {"label": "First", "title": "Choose a time", "detail": "Show the next available appointment."},
+                {"label": "Next", "title": "Confirm the booking", "detail": "Explain the duration before committing."},
+            ]},
+            "matrix": {"matrix": {"columns": ["Moment", "Decision"], "rows": [
+                ["Choose time", "Show next available"], ["Compare days", "Open full calendar"]]}},
+            "worksheet": {"fields": [
+                {"label": "Customer task", "hint": "Example: book an appointment."},
+                {"label": "First decision", "hint": "Example: choose the next available time."},
+            ]},
+        }
+        spec["slides"] = [{"title": "Keep the task visible", "body": ["Name the decision this screen should make easier."],
+                           "layout": layout, "visual": deepcopy(visuals[layout])} for layout in layouts]
         return spec
 
     def generation(self, spec=None, **outer):
@@ -202,6 +228,35 @@ class VisualPreparationTests(unittest.TestCase):
         self.assertNotIn("BAD_OLD_COPY", json.dumps(messages))
         self.assertEqual(complete.call_args.kwargs["kind"], "generic")
 
+    def test_generation_prompt_has_a_valid_encoded_json_skeleton(self):
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation() as complete:
+            self.runtime_prepare()
+        system = complete.call_args.args[4][0]["content"]
+        sample_source = system.split("Encoding skeleton only, not copy to publish: ", 1)[1]
+        outer, consumed = json.JSONDecoder().raw_decode(sample_source)
+        inner = json.loads(outer["text"])
+        self.assertEqual(set(outer), {"text", "skip", "reason"})
+        self.assertEqual(inner["id"], "visual-2026-10-12-1800-image")
+        self.assertEqual(inner["kind"], "image")
+        self.assertEqual(inner["slides"], [])
+        self.assertIn("Replace its empty slides", sample_source[consumed:])
+        self.assertIn("write examples as ordinary unquoted words", system)
+
+    def test_unescaped_quotes_in_nested_json_are_held_without_repair_or_retry(self):
+        # This was observed in a provider response. The outer text envelope
+        # was valid, but a quoted example broke the inner content JSON.
+        spec = self.generated("carousel")
+        source = json.dumps(spec).replace("Example: book an appointment.",
+                                          'Example: "book an appointment".')
+        self.assertNotEqual(source, json.dumps(spec))
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation(spec, text=source) as complete, \
+                self.assertRaisesRegex(VisualAssetError, "JSON specification"):
+            self.runtime_prepare("carousel")
+        complete.assert_called_once()
+        self.render.assert_not_called()
+
     def test_runtime_freebie_attaches_pdf_without_inventing_download_link(self):
         with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
                 self.generation(self.generated("freebie")):
@@ -256,7 +311,7 @@ class VisualPreparationTests(unittest.TestCase):
         fill = lambda text, limit: (text + " " + text)[:limit].rsplit(" ", 1)[0]
         spec = self.generated("carousel")
         spec["title"] = fill("Check the product promise against one complete customer task", 80)
-        spec["subtitle"] = fill("Keep the same customer situation while reviewing the claim and the product steps", 130)
+        spec["subtitle"] = fill("Hypothetical example: compare the promise and the first product task", 100)
         spec["caption"] = fill(
             "I'd compare one customer task with the promise that brought someone to the product. "
             "Walk through the first screen and check what information they need to choose the next action. "
@@ -267,16 +322,17 @@ class VisualPreparationTests(unittest.TestCase):
             slide["title"] = fill("Keep the customer task and the promise together", 55)
             slide["body"] = [
                 fill("Record what the person expects before opening the product and choosing the next step.", 85),
-                fill("Compare that expectation with what happens on the screen when they try the task.", 85),
             ]
         envelope = json.dumps({"text": json.dumps(spec), "skip": False, "reason": ""})
-        self.assertLessEqual(len(envelope), 3000)
+        self.assertLessEqual(len(envelope), 3500)
         self.assertEqual(json.loads(json.loads(envelope)["text"]), spec)
         with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
                 self.generation(spec):
             asset = self.runtime_prepare("carousel")
         self.assertEqual(len(asset["spec"]["slides"]), 4)
-        self.assertTrue(all(len(slide["body"]) == 2 for slide in asset["spec"]["slides"]))
+        self.assertTrue(all(len(slide["body"]) == 1 for slide in asset["spec"]["slides"]))
+        self.assertEqual([slide["layout"] for slide in asset["spec"]["slides"]],
+                         ["comparison", "diagram", "matrix", "worksheet"])
         self.assertEqual(asset["spec"]["caption"], spec["caption"])
 
     def test_runtime_compact_limits_do_not_change_reviewed_catalog_specs(self):
@@ -285,9 +341,9 @@ class VisualPreparationTests(unittest.TestCase):
         self.assertEqual(len(self.prepare()["spec"]["slides"][0]["body"]), 4)
         for change in (
             lambda spec: spec.__setitem__("caption", "a" * 551),
-            lambda spec: spec["slides"][0].__setitem__("title", "a" * 56),
-            lambda spec: spec["slides"][0]["body"].__setitem__(0, "a" * 86),
-            lambda spec: spec["slides"][0]["body"].append("An extra entry."),
+            lambda spec: spec["slides"][0].__setitem__("title", "a" * 86),
+            lambda spec: spec["slides"][0]["body"].__setitem__(0, "a" * 161),
+            lambda spec: spec["slides"][0]["body"].extend(["A second line.", "An excessive third line."]),
         ):
             spec = self.generated()
             change(spec)
@@ -295,6 +351,83 @@ class VisualPreparationTests(unittest.TestCase):
                     patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
                     self.generation(spec), self.assertRaises(VisualAssetError):
                 self.runtime_prepare()
+
+    def test_runtime_requires_meaningful_visual_and_hypothetical_example_label(self):
+        for change in (
+            lambda spec: spec.__setitem__("subtitle", "An appointment screen"),
+            lambda spec: spec["slides"][0].pop("visual"),
+            lambda spec: spec["slides"][0].__setitem__("visual", {}),
+            lambda spec: spec["slides"][0]["visual"].__setitem__("instructions", "Do something else"),
+            lambda spec: spec["slides"][0]["visual"]["screens"][0].__setitem__("action", "a" * 36),
+            lambda spec: spec["slides"][0]["visual"]["screens"][0].__setitem__("rows", []),
+            lambda spec: spec["slides"][0]["visual"]["annotations"].extend([
+                {"label": "More", "detail": "Extra text."} for _ in range(3)]),
+            lambda spec: spec["slides"][0].__setitem__("layout", "checklist"),
+        ):
+            spec = self.generated()
+            change(spec)
+            with self.subTest(spec=spec), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec), self.assertRaises(VisualAssetError):
+                self.runtime_prepare()
+
+    def test_completed_rich_outputs_accept_two_body_lines_four_nodes_and_two_annotations(self):
+        image = self.generated()
+        image["slides"][0]["body"].append("The full calendar remains one step away.")
+        image["slides"][0]["visual"]["annotations"].append(
+            {"label": "Context", "detail": "Show duration before asking for a commitment."})
+        carousel = self.generated("carousel")
+        carousel["slides"][1]["body"].append("Keep the same customer task at every step.")
+        carousel["slides"][1]["visual"]["nodes"].extend([
+            {"label": "Then", "title": "Review the details", "detail": "Explain cancellation terms."},
+            {"label": "Finish", "title": "Book the appointment", "detail": "Confirm the selected time."},
+        ])
+        for kind, spec in (("image", image), ("carousel", carousel)):
+            with self.subTest(kind=kind), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec):
+                asset = self.runtime_prepare(kind)
+            self.assertEqual(asset["spec"]["id"], spec["id"])
+
+    def test_screen_buttons_reject_behavior_narration_even_when_short_enough(self):
+        for action in ("User scans the calendar", "Customer chooses a time", "People read the list",
+                       "Choose a time then read terms and confirm"):
+            spec = self.generated()
+            spec["slides"][0]["visual"]["screens"][0]["action"] = action
+            with self.subTest(action=action), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec), self.assertRaises(VisualAssetError):
+                self.runtime_prepare()
+
+    def test_every_nested_visible_field_is_checked_for_personal_grounding(self):
+        # Exercise rendered prose in UI, annotations, comparisons, diagrams,
+        # tables and worksheet hints. None is allowed to hide a client story.
+        cases = [
+            ("image", lambda s: s["slides"][0]["visual"]["screens"][0].__setitem__("action", "I helped my clients.")),
+            ("image", lambda s: s["slides"][0]["visual"]["screens"][0]["rows"].__setitem__(0, "We tested this with our customers.")),
+            ("image", lambda s: s["slides"][0]["visual"]["annotations"][0].__setitem__("detail", "I've redesigned this for our clients.")),
+            ("carousel", lambda s: s["slides"][0]["visual"]["panels"][0].__setitem__("body", "I helped my clients.")),
+            ("carousel", lambda s: s["slides"][1]["visual"]["nodes"][0].__setitem__("detail", "We tested this with our customers.")),
+            ("carousel", lambda s: s["slides"][2]["visual"]["matrix"]["columns"].__setitem__(0, "Our clients")),
+            ("carousel", lambda s: s["slides"][2]["visual"]["matrix"]["rows"][0].__setitem__(0, "I helped my clients.")),
+            ("freebie", lambda s: s["slides"][0]["visual"]["fields"][0].__setitem__("hint", "I've redesigned this for our clients.")),
+        ]
+        for kind, change in cases:
+            spec = self.generated(kind)
+            change(spec)
+            with self.subTest(kind=kind, spec=spec), \
+                    patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                    self.generation(spec), self.assertRaisesRegex(VisualAssetError, "unsupported personal experience"):
+                self.runtime_prepare(kind)
+        self.render.assert_not_called()
+
+    def test_nested_voice_errors_cannot_hide_in_visual_payloads(self):
+        spec = self.generated()
+        spec["slides"][0]["visual"]["annotations"][0]["detail"] = "Clear priority\u2014then the calendar."
+        with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \
+                self.generation(spec), self.assertRaises(VoiceError):
+            self.runtime_prepare()
+        self.render.assert_not_called()
 
     def test_renderer_failure_does_not_mutate_post_actions(self):
         self.render.side_effect = VisualAssetError("Page would overflow")

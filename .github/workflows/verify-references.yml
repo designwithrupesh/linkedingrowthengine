@@ -16,8 +16,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Check no credentials are tracked
         run: python3 scripts/check_no_secrets.py
-      - name: Install maintainer tooling
-        run: python3 -m pip install --quiet -r requirements-dev.txt
+      - name: Install runtime and maintainer tooling
+        run: python3 -m pip install --quiet -r automation/requirements.txt -r requirements-dev.txt
       - name: Check SKILL.md frontmatter parses
         run: python3 scripts/check_frontmatter.py
       - name: Offline test suite

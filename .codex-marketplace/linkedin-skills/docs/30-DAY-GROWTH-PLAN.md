@@ -34,7 +34,7 @@ Cost plan: keep `APIFY_MONTHLY_BUDGET_USD` at its default $4, using the existing
 
 ## The 60 publishing slots
 
-Each row contains two distinct slots. The labels identify the writing format and the intended close. Checklist and framework formats are text posts; this calendar does not assume an unbuilt carousel, poll, or image-publishing capability.
+Each row contains two distinct slots. The labels identify the editorial angle and intended close. The machine-readable calendar assigns images, PDF carousels and printable resources to 18 future evening slots; the original angle and close remain part of each brief.
 
 The same 60 angles are exported in [content-plan.json](../automation/content-plan.json) for selection by local date and posting hour. Outside this campaign, the runner can continue with the policy's topic rotation. Calendar selection does not bypass publishing capacity or write-receipt checks.
 
