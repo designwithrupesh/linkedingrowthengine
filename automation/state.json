@@ -1230,6 +1230,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:c369c135b5df1ce3679f842d5bd8cf748127f8e19f8b7d8a43f62aa973003015": {
+      "kind": "comment",
+      "text": "Keeping a list of what's 'almost possible' is a strong early-warning system for PMF. It forces teams to surface ambiguity before it becomes a product gap. How do you define 'almost possible' in your own context?",
+      "at": "2026-10-13T16:19:44.786809+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7515079290678493184",
+      "parent": null
     }
   },
   "days": {
@@ -1242,9 +1250,9 @@
     },
     "2026-10-13": {
       "post": 2,
-      "interaction": 7,
+      "interaction": 8,
       "read": 12,
-      "public_interaction": 7
+      "public_interaction": 8
     },
     "2026-10-14": {
       "post": 2,
