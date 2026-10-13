@@ -1213,9 +1213,12 @@
       "kind": "comment",
       "text": "The strongest signal isn't in numbers but in users' eye reactions. When testing a feature, observe real-time facial cues. If eyes light up, it's a sign of genuine emotional connection.",
       "at": "2026-10-13T16:05:15.501301+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7515419077918679040",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515804868129890304",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
