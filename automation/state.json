@@ -1169,9 +1169,12 @@
       "kind": "comment",
       "text": "A certification in product sense is a great way to sharpen strategy thinking. I’d watch how Maria applies this to early-stage decisions, like prioritizing features or defining customer outcomes.",
       "at": "2026-10-13T15:30:22.420563+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7515780577506013185",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515796092614135808",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
