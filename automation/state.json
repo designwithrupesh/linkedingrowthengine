@@ -1191,9 +1191,12 @@
       "kind": "comment",
       "text": "What if those eight $200/month subscriptions aren’t just noise, but a signal of real user friction? I’d test which subscriptions correlate with actual drop-offs or feature usage spikes. Maybe the frontier role isn’t about subscriptions at all, but about spotting where users stop engaging.",
       "at": "2026-10-13T15:49:41.402870+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7515566497952387072",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515800952722006016",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
