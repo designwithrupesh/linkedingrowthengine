@@ -1164,6 +1164,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:63301ab5910a1fd1c1765e23d6857dc97390669f0a70007d2c042faed1552997": {
+      "kind": "comment",
+      "text": "A certification in product sense is a great way to sharpen strategy thinking. I’d watch how Maria applies this to early-stage decisions, like prioritizing features or defining customer outcomes.",
+      "at": "2026-10-13T15:30:22.420563+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7515780577506013185",
+      "parent": null
     }
   },
   "days": {
@@ -1176,9 +1184,9 @@
     },
     "2026-10-13": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 11,
-      "public_interaction": 1
+      "public_interaction": 2
     },
     "2026-10-14": {
       "post": 2,
