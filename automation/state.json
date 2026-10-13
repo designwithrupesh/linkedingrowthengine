@@ -1309,7 +1309,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 14,
+    "profile_cursor": 15,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -1512,8 +1512,8 @@
       "status": "running",
       "started_at": "2026-10-13T14:59:00.941214+00:00",
       "deadline": "2026-10-13T22:00:00+05:30",
-      "heartbeat_at": "2026-10-13T15:09:10.532528+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-10-13T15:14:11.234333+00:00",
+      "cycles": 4,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -1541,24 +1541,6 @@
       "shreyasdoshi": "2026-10-11T15:34:41.325699+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513302767722098688/",
-        "urn": "urn:li:ugcPost:7513302714798268416",
-        "shareUrn": "urn:li:ugcPost:7513302714798268416",
-        "text": "It's Inbox Zero Day — the day when we're all most likely to hit Inbox Zero! 💜\n\nWe're celebrating all day with surprises, giveaways, and free Superhuman…\n\nTo join in:\n\n1️⃣ Hit Inbox Zero today, Oct. 6, and enjoy the view!\n2️⃣ Share your achievements on X or LinkedIn, tagging #HitZero.\n3️⃣ Everyone who posts will get a surprise, as well as a chance to win Superhuman swag.",
-        "authorName": "Rahul Vohra",
-        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
-        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
-        "postedAtISO": "2026-10-06T18:22:50.240000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:activity:7513302767722098688",
-          "urn:li:ugcPost:7513302714798268416"
-        ],
-        "first_seen_at": "2026-10-11T14:49:38.181181+00:00",
-        "cached_at": "2026-10-11T14:49:38.181181+00:00"
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514731553684471808/",
         "urn": "urn:li:share:7514731552811995136",
@@ -1810,6 +1792,24 @@
         ],
         "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
         "cached_at": "2026-10-13T15:09:04.672419+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513302767722098688/",
+        "urn": "urn:li:ugcPost:7513302714798268416",
+        "shareUrn": "urn:li:ugcPost:7513302714798268416",
+        "text": "It's Inbox Zero Day — the day when we're all most likely to hit Inbox Zero! 💜\n\nWe're celebrating all day with surprises, giveaways, and free Superhuman…\n\nTo join in:\n\n1️⃣ Hit Inbox Zero today, Oct. 6, and enjoy the view!\n2️⃣ Share your achievements on X or LinkedIn, tagging #HitZero.\n3️⃣ Everyone who posts will get a surprise, as well as a chance to win Superhuman swag.",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-10-06T18:22:50.240000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7513302767722098688",
+          "urn:li:ugcPost:7513302714798268416"
+        ],
+        "first_seen_at": "2026-10-11T14:49:38.181181+00:00",
+        "cached_at": "2026-10-13T15:14:05.040610+00:00"
       }
     ]
   },
