@@ -1175,6 +1175,14 @@
       "http_status": 201,
       "remote_id": "7515796092614135808",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:6fe36568fb412ada1d1e645cd47e315e91b399ca1412140003b6782b51e30e2b": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-13T15:49:38.011509+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7515566497952387072",
+      "parent": null
     }
   },
   "days": {
@@ -1187,9 +1195,9 @@
     },
     "2026-10-13": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 12,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-10-14": {
       "post": 2,
@@ -1332,7 +1340,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 18,
+    "profile_cursor": 19,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -1564,42 +1572,6 @@
       "shreyasdoshi": "2026-10-13T15:29:06.110296+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514421649580969985/",
-        "urn": "urn:li:ugcPost:7514421577766141952",
-        "shareUrn": "urn:li:ugcPost:7514421577766141952",
-        "text": "Tired: Two-pizza teams\n\nWired: Two-slice teams\n\nDan Shipper on the right team structure in the AI-era.\n\nFull (20m) talk here: https://lnkd.in/gZ9XFqPd",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-09T20:28:52.463000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7514421649580969985",
-          "urn:li:ugcPost:7514421577766141952"
-        ],
-        "first_seen_at": "2026-10-11T15:49:42.373724+00:00",
-        "cached_at": "2026-10-11T15:49:42.373724+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514024464032940032/",
-        "urn": "urn:li:ugcPost:7514024372920262656",
-        "shareUrn": "urn:li:ugcPost:7514024372920262656",
-        "text": "Linear CEO Karri Saarinen: \"Making products produces two things: the product, and the learning.\n\nThe effort you put into building and designing things teaches you something about what the problem is, what the customers want.\n\nWe're in this time now that there's this danger of losing that direct connection with the learning.\"",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-08T18:10:36.049000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7514024464032940032",
-          "urn:li:ugcPost:7514024372920262656"
-        ],
-        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
-        "cached_at": "2026-10-11T15:49:42.373724+00:00"
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513648398735028224/",
         "urn": "urn:li:ugcPost:7513648319177420800",
@@ -1850,6 +1822,96 @@
         ],
         "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
         "cached_at": "2026-10-13T15:29:06.110296+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515566569154953216/",
+        "urn": "urn:li:ugcPost:7515566497952387072",
+        "shareUrn": "urn:li:ugcPost:7515566497952387072",
+        "text": "\"Every company right now needs a set of people who's job is to be at the frontier. \n\nThey're the people who have eight $200/month subscriptions on everything.\n\nYou have to architect your organization where this can exist.\"\n\n— Josh Woodward, Head of Google Labs, Gemini App, and Google AI Studio",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-13T00:18:22.561000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7515566569154953216",
+          "urn:li:ugcPost:7515566497952387072"
+        ],
+        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
+        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515419078971551744/",
+        "urn": "urn:li:ugcPost:7515419077918679040",
+        "shareUrn": "urn:li:ugcPost:7515419077918679040",
+        "text": "My biggest takeaways from Josh Woodward (Head of Google Labs, the Gemini app, and Google AI Studio):\n\n1. The best ideas almost never come from a design sprint or brainstorm.\n2. Keep a list of what is “almost possible,” and move fast when something crosses over.\n3. Fall in love with the problem, not the product.\n4. Every company needs to think like a labs team now.\n5. When looking for early PMF, data and retention are important, but the strongest signal of PMF is in people’s eyes.\n6. When something is not working, the team almost always knows before the leader does.\n7. Someone’s “unlearning rate” is one of the most valuable skills right now.\n8. Roles are not blurring into one universal “builder” role.\n9. A labs team needs isolation, a clear mission, and the ability to create “good trouble.”\n10. Google Labs avoids burnout through \"seasons\" and rhythm.\n\nWatch the full episode: https://lnkd.in/gxfiJbHg",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-12T14:32:18.161000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7515419078971551744",
+          "urn:li:ugcPost:7515419077918679040"
+        ],
+        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
+        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515079359230308352/",
+        "urn": "urn:li:ugcPost:7515079290678493184",
+        "shareUrn": "urn:li:ugcPost:7515079290678493184",
+        "text": "Every company needs to think and operate like a labs team now.\n\nWhat’s possible changes every few months, and to stay ahead, you need to be experimenting at the frontier.\n\nHere's my conversation with Josh Woodwardd, Head of Google Labs, the Gemini, and Google AI Studio. \n\nWe discuss:\n🔸 What skills are rising fastest in value right now\n🔸 Where the best ideas actually come from\n🔸 How to recognize PMF early\n🔸 Why you should keep a list of what’s ‘almost possible’\n🔸 Three rules for standing up an internal labs team\n\nListen now → https://lnkd.in/gxfiJbHg\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/gUGddYRd\n• Apple: https://lnkd.in/gA_myXK7",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-11T16:02:22.663000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7515079359230308352",
+          "urn:li:ugcPost:7515079290678493184"
+        ],
+        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
+        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514421649580969985/",
+        "urn": "urn:li:ugcPost:7514421577766141952",
+        "shareUrn": "urn:li:ugcPost:7514421577766141952",
+        "text": "Tired: Two-pizza teams\n\nWired: Two-slice teams\n\nDan Shipper on the right team structure in the AI-era.\n\nFull (20m) talk here: https://lnkd.in/gZ9XFqPd",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-09T20:28:52.463000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7514421649580969985",
+          "urn:li:ugcPost:7514421577766141952"
+        ],
+        "first_seen_at": "2026-10-11T15:49:42.373724+00:00",
+        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514024464032940032/",
+        "urn": "urn:li:ugcPost:7514024372920262656",
+        "shareUrn": "urn:li:ugcPost:7514024372920262656",
+        "text": "Linear CEO Karri Saarinen: \"Making products produces two things: the product, and the learning.\n\nThe effort you put into building and designing things teaches you something about what the problem is, what the customers want.\n\nWe're in this time now that there's this danger of losing that direct connection with the learning.\"",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-08T18:10:36.049000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7514024464032940032",
+          "urn:li:ugcPost:7514024372920262656"
+        ],
+        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
+        "cached_at": "2026-10-13T15:49:08.908064+00:00"
       }
     ]
   },
