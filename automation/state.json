@@ -1235,9 +1235,12 @@
       "kind": "comment",
       "text": "Keeping a list of what's 'almost possible' is a strong early-warning system for PMF. It forces teams to surface ambiguity before it becomes a product gap. How do you define 'almost possible' in your own context?",
       "at": "2026-10-13T16:19:44.786809+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7515079290678493184",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7515808519347105792",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
