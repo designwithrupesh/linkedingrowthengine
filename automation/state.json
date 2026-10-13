@@ -1197,6 +1197,14 @@
       "http_status": 201,
       "remote_id": "7515800952722006016",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:68b9dc2fd20dbfb1f5a1807f64e2c1099794fce9964272e64bf1c1bdebfb7672": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-13T16:05:11.312739+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7515419077918679040",
+      "parent": null
     }
   },
   "days": {
@@ -1209,9 +1217,9 @@
     },
     "2026-10-13": {
       "post": 2,
-      "interaction": 4,
+      "interaction": 5,
       "read": 12,
-      "public_interaction": 4
+      "public_interaction": 5
     },
     "2026-10-14": {
       "post": 2,
