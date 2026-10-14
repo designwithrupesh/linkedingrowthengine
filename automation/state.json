@@ -1572,12 +1572,13 @@
         "page_count": 2,
         "format": "freebie",
         "file_name": "draw-the-boundary-before-the-share-button.pdf",
-        "size_bytes": 56718
+        "size_bytes": 56718,
+        "media_id": "6acf3a3f6665abdba464fb6e"
       },
       "media_scheduled_for": "2026-10-17T03:30:00Z",
       "media_operation_id": "222e3c3378f06cec5ee1036ebfc3b7d9390d3935f54e8242aca5f1981b7a90ab",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6acf3a3bab6b198ebf450c62"
     }
