@@ -1313,11 +1313,14 @@
       "kind": "post",
       "text": "A design critique gets more useful when someone describes what the customer is trying to do and how the screen might make that moment feel.\n\nTake a hypothetical checkout. A customer is checking the delivery address before paying. A large urgent button, a hidden total and an ambiguous back link create a very different conversation from a clear order summary with an obvious way to correct a mistake.\n\nI'd ask the team to walk through that decision before collecting visual references. Which information helps someone feel ready to continue? What can they still change? Where does the product need to slow down?\n\nThose answers give the visual direction a job. They also give the team something more useful to discuss than whether a layout feels premium.\n\nIf your product experience and brand promise feel disconnected, I would welcome a conversation about the decision your team is working through.",
       "at": "2026-10-14T08:15:04.245798+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-15T12:30:00+00:00",
-      "allocation_day": "2026-10-15"
+      "allocation_day": "2026-10-15",
+      "http_status": 200,
+      "remote_id": "6acf3a0aab6b198ebf450869",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -1488,6 +1491,14 @@
       "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22"
+    },
+    {
+      "id": "6acf3a0aab6b198ebf450869",
+      "text": "A design critique gets more useful when someone describes what the customer is trying to do and how the screen might make that moment feel.\n\nTake a hypothetical checkout. A customer is checking the delivery address before paying. A large urgent button, a hidden total and an ambiguous back link create a very different conversation from a clear order summary with an obvious way to correct a mistake.\n\nI'd ask the team to walk through that decision before collecting visual references. Which information helps someone feel ready to continue? What can they still change? Where does the product need to slow down?\n\nThose answers give the visual direction a job. They also give the team something more useful to discuss than whether a layout feels premium.\n\nIf your product experience and brand promise feel disconnected, I would welcome a conversation about the decision your team is working through.",
+      "url": null,
+      "at": "2026-10-14T08:15:04.245798+00:00",
+      "scheduled_for": "2026-10-15T12:30:00+00:00",
+      "allocation_day": "2026-10-15"
     }
   ],
   "discovery": {
