@@ -1302,7 +1302,9 @@
       "media_scheduled_for": "2026-10-15T03:30:00Z",
       "media_operation_id": "3414ee62af747138fc60fe3db63f174a24b0429d769e5f38e539cce40ebd8364",
       "media_stage": "create-draft",
-      "media_stage_status": "inflight"
+      "media_stage_status": "acknowledged",
+      "http_status": 200,
+      "remote_id": "6acf39cdab6b198ebf450152"
     }
   },
   "days": {
@@ -1462,6 +1464,17 @@
       "media_status": "scheduled",
       "format": "freebie",
       "asset_sha256": "2a7345ebf033644d180907a9e23e78907fec7ed72fac6615137e5d85aba63dfe"
+    },
+    {
+      "id": "6acf39cdab6b198ebf450152",
+      "text": "Sharing unfinished work can feel riskier than sending a finished presentation. The person wants help, but they may still be changing their mind.\n\nFor a hypothetical review tool, I'd let the creator send a separate copy for comments while keeping the working draft private. The invitation would name the reviewer, show their access and identify the version they will see.\n\nThat choice has a cost. A frozen review copy won't include later edits automatically. The product needs to explain that limit and make updates deliberate.\n\nI'd want a founding designer in this discussion before Share becomes a button on a finished screen. The decision shapes permissions, versioning and how comfortable someone feels asking for feedback.",
+      "url": null,
+      "at": "2026-10-14T08:14:01.057052+00:00",
+      "scheduled_for": "2026-10-15T03:30:00+00:00",
+      "allocation_day": "2026-10-15",
+      "media_status": "draft",
+      "format": "image",
+      "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22"
     }
   ],
   "discovery": {
