@@ -1,5 +1,7 @@
 # Design resources
 
+The newest [sharing story](stories/README.md) includes an authored image, a six-page narrative carousel and a two-page working map.
+
 Working materials by Rupesh Kumar for founders and product designers. The PDFs contain selectable text, worked hypothetical examples and writing fields. They can be printed or annotated.
 
 | Resource | Format | Download |

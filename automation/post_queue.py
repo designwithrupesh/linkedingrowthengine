@@ -87,7 +87,8 @@ def prepare_next_day_posts(runner):
         brief = next((item for item in plan.get('slots', [])
                       if item['date'] == day and item['hour'] == hour), None)
         static_visual = (select_brief_format(policy, day, hour, brief) != 'text'
-                         and brief is not None and 'media_ref' in brief)
+                         and brief is not None
+                         and ('media_ref' in brief or 'art_ref' in brief))
         if runner.model_paused and not static_visual:
             continue
         actions = runner.state['actions']

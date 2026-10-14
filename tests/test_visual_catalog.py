@@ -33,7 +33,11 @@ class VisualCatalogContractTests(unittest.TestCase):
             self.assertEqual(slot['format'], by_id[slot['media_ref']]['kind'])
             used.append(slot['media_ref'])
         self.assertEqual(len(used), len(set(used)), 'A starter asset must not repeat in the campaign')
-        self.assertEqual(set(used), set(by_id), 'Every reviewed starter asset has a planned slot')
+        deferred = [item['media_ref'] for item in self.plan.get('deferred_assets', [])]
+        self.assertEqual(len(deferred), len(set(deferred)))
+        self.assertFalse(set(used) & set(deferred), 'A deferred resource must not also publish')
+        self.assertEqual(set(used) | set(deferred), set(by_id),
+                         'Every reviewed starter asset is either planned or explicitly deferred')
         self.assertEqual({by_id[key]['kind'] for key in used}, {'image', 'carousel', 'freebie'})
 
     def test_public_copy_passes_owner_voice_and_grounding_including_diagrams(self):
@@ -83,6 +87,21 @@ class VisualCatalogContractTests(unittest.TestCase):
                 if asset['kind'] == 'carousel':
                     layouts = {slide.get('layout') for slide in asset['slides']}
                     self.assertGreaterEqual(len(layouts), 2)
+
+    def test_authored_story_slots_resolve_without_republishing_the_displaced_resource(self):
+        registry = json.loads((ROOT / 'automation/art-directed-content.json').read_text(encoding='utf-8'))
+        by_id = {asset['id']: asset for asset in registry['assets']}
+        slots = [slot for slot in self.plan['slots'] if 'art_ref' in slot]
+        self.assertEqual({slot['art_ref'] for slot in slots}, set(by_id))
+        self.assertEqual(len(slots), len(by_id))
+        for slot in slots:
+            self.assertNotIn('media_ref', slot)
+            self.assertEqual(slot['format'], by_id[slot['art_ref']]['kind'])
+            self.assertEqual(by_id[slot['art_ref']]['review_status'], 'checked')
+        displaced = [item for item in self.plan['deferred_assets']
+                     if item['media_ref'] == 'problem-definition-worksheet']
+        self.assertEqual(len(displaced), 1)
+        self.assertTrue(displaced[0]['reason'])
 
     def test_format_change_keeps_the_original_editorial_intent_and_cta(self):
         future = [slot for slot in self.plan['slots']

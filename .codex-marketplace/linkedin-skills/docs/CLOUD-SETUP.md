@@ -29,6 +29,8 @@ Routine posting and contextual public interaction use the owner's standing autho
 
 ## Visual publishing
 
+Checked authored stories use `art_ref` in the calendar and exact local files from `automation/art-directed-content.json`. `pypdf==6.20.1` verifies the actual PDF page tree and page count before upload. The current batch includes an image, a six-page photographic narrative with a selectable transcript, and a two-page vector sharing-state map. These use the existing image/document publishing route and add no runtime image-service subscription. [Public previews](../resources/linkedin/stories/README.md) should be shared as public web links, since workspace-only links did not open for the owner.
+
 The runtime installs pinned Pillow and ReportLab through `automation/requirements.txt`. Licensed IBM Plex Serif, Sans and Mono fonts are vendored in `automation/assets/fonts`; no system-font installation or image-service subscription is required. [The visual catalog](../automation/visual-content.json) contains 18 images, PDF carousels and worksheets with annotated interfaces, comparison tables, worked examples and writing fields. Public files live in [resources/linkedin](../resources/linkedin/README.md). Future formats use the same posting calendar and the existing AI route and budget; reviewed resources require no model credit.
 
 Assets render locally, pass writing and grounding checks, and are uploaded to a Publora draft. The runner verifies ready media before scheduling and verifies the scheduled group afterward. A failure holds that draft instead of publishing a missing attachment or retrying an uncertain write. See [DIGITAL-TWIN.md](DIGITAL-TWIN.md) for format rotation, file checks and stage receipts.

@@ -10,10 +10,16 @@ Use hypothetical examples when no real project has been supplied. Label them pla
 
 ## Art direction
 
-Use warm paper, dark ink and a restrained blue accent. Typography has distinct jobs: display type sets the argument, sans serif supports reading and monospace identifies steps and annotations. Align diagrams and tables to a clear grid. Keep strokes, spacing and type sizes consistent within a document.
+Before arranging the page, name the person, the moment and what matters to them. Decide what the reader should notice, feel and understand. Let that decision shape the composition, the amount of information and the relationship between words and images. Stacking a headline, a picture and a paragraph is not a finished design concept.
 
-Covers should contain a visual idea related to the topic, such as a promise-to-task trace or an evidence-to-decision path. Content pages can use annotated interfaces, comparisons, diagrams, matrices and writing fields. Repeat the visual language while adapting the composition to the material.
+The sharing series uses a private blue folio and a translucent review copy to communicate the hesitation involved in sharing unfinished work. The same objects develop across six scenes: invitation, uncertainty, different intentions, explicit access, separate versions and drift. Each scene should reveal a new relationship. The final trade-off earns its place in the story.
+
+Warm paper, dark ink, restrained cobalt and IBM Plex typography support this series. They are a visual vocabulary, not a requirement to put every future topic into the same layout. Use material, scale, light, space, type and image for a reason. Diagrams should explain relationships; photography and illustration should carry an idea; a cover should establish the story.
+
+A carousel needs progression and a useful resolution. Do not pad it to a preset page count. A free resource should be a working tool with a completed example, enough room to write and clear limits. The sharing-state map uses two landscape pages because the team needs to trace boundaries and work across the page.
 
 Inspect complete pages at feed size before scheduling. Check small labels, diagram connections, table cells, writing space, clipping and the sequence across pages. A renderer's successful exit is only a file-generation check; visual review still matters when the design system changes.
 
 The [catalog](../automation/visual-content.json) and [renderer](../automation/visual_assets.py) implement these formats. The [public resources](../resources/linkedin/README.md) provide the complete files.
+
+The new [sharing series](../resources/linkedin/stories/README.md) uses checked, pre-rendered assets from [art-directed-content.json](../automation/art-directed-content.json). Its `art_ref` calendar entries preserve the exact reviewed composition rather than rebuilding it as a generic template. The original catalog remains a separate collection; an older resource displaced by this series is explicitly deferred in the calendar. The checked designation records assistant review, not human approval or authorship.

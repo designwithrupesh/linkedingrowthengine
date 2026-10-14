@@ -214,6 +214,11 @@ def _generate_spec(runner: Any, brief: dict[str, Any], day: date, hour: int,
     }, separators=(",", ":"))
     task = (
         "Create a useful product design or brand strategy visual for a senior designer. "
+        "Begin with the person, their immediate concern and the product decision. "
+        "Choose what the reader should notice, feel and understand; use spatial "
+        "relationships and a clear story progression to communicate that idea. "
+        "Each page must advance the explanation. Avoid generic advice arranged "
+        "as repeated headline, picture and paragraph blocks. "
         "Teach through one concrete hypothetical product task, not generic advice cards. "
         "Choose a relevant appointment, reporting, checkout or onboarding example and "
         "carry the same situation through all pages. Show actual interface decisions, "
@@ -328,6 +333,16 @@ def prepare_visual(runner: Any, brief: dict[str, Any] | None, day: str | date,
     posting quota. Budget exceptions propagate to the runner's existing hold.
     """
     kind = select_brief_format(runner.policy, day, hour, brief)
+    if brief and "art_ref" in brief:
+        # Authored media already contains its final composition. An invalid
+        # reference must stop here, never regenerate or substitute a template.
+        if "media_ref" in brief:
+            raise VisualAssetError("A visual brief cannot select two media sources")
+        from automation.art_directed import load_art_directed
+
+        asset = load_art_directed(brief["art_ref"], kind, runner.policy)
+        _unused_asset(runner, asset["asset_id"])
+        return asset
     if kind == "text":
         return None
     brief = brief or {}

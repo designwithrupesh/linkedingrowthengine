@@ -73,9 +73,11 @@
     {
       "date": "2026-10-15",
       "hour": 9,
-      "topic": "Give a critique that connects visual choices to the intended customer experience. Close: a useful feedback sentence structure.",
-      "format": "text",
-      "editorial_format": "practical-insight"
+      "topic": "Let unfinished work become a careful invitation to review.",
+      "format": "image",
+      "editorial_format": "practical-insight",
+      "previous_topic": "Give a critique that connects visual choices to the intended customer experience. Close: a useful feedback sentence structure.",
+      "art_ref": "private-draft-invitation"
     },
     {
       "date": "2026-10-15",
@@ -88,10 +90,11 @@
     {
       "date": "2026-10-16",
       "hour": 9,
-      "topic": "Turn the week's design advice into a short problem-definition checklist. Close: a saveable working note.",
-      "format": "freebie",
+      "topic": "Follow a creator through sharing intentions, permissions and version drift.",
+      "format": "carousel",
       "editorial_format": "synthesis",
-      "media_ref": "problem-definition-worksheet"
+      "previous_topic": "Turn the week's design advice into a short problem-definition checklist. Close: a saveable working note.",
+      "art_ref": "before-you-press-share"
     },
     {
       "date": "2026-10-16",
@@ -104,16 +107,19 @@
     {
       "date": "2026-10-17",
       "hour": 9,
-      "topic": "Identify what a customer must understand before a request for more information feels reasonable. Close: a question about trust.",
-      "format": "text",
-      "editorial_format": "walkthrough"
+      "topic": "Map the boundary between a private working draft, review copy and release.",
+      "format": "freebie",
+      "editorial_format": "walkthrough",
+      "previous_topic": "Identify what a customer must understand before a request for more information feels reasonable. Close: a question about trust.",
+      "art_ref": "sharing-state-map"
     },
     {
       "date": "2026-10-17",
       "hour": 18,
-      "topic": "Explain the trade-off between learning through a small prototype and committing to a polished launch. Ask what uncertainty the next version should remove.",
+      "topic": "Explain how an empty search result can make someone worry that their work has disappeared. Discuss the language and recovery actions that clarify what happened.",
       "format": "text",
-      "editorial_format": "discussion"
+      "editorial_format": "discussion",
+      "previous_topic": "Explain the trade-off between learning through a small prototype and committing to a polished launch. Ask what uncertainty the next version should remove."
     },
     {
       "date": "2026-10-18",
@@ -445,6 +451,14 @@
       "topic": "Report only verified activity and outcomes from the tracker, distinguish conversations from leads, and explain the next month's focus. Never substitute invented success figures for unavailable analytics.",
       "format": "text",
       "editorial_format": "reflection"
+    }
+  ],
+  "deferred_assets": [
+    {
+      "media_ref": "problem-definition-worksheet",
+      "previous_date": "2026-10-16",
+      "previous_hour": 9,
+      "reason": "Replaced by the reviewed sharing story; the older resource remains available without a publication slot."
     }
   ]
 }
