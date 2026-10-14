@@ -1583,6 +1583,16 @@
       "http_status": 200,
       "remote_id": "6acf3a3bab6b198ebf450c62",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-17:1800": {
+      "kind": "post",
+      "text": "An empty search result can make someone wonder whether the product has lost their work.\n\nImagine a project library with no matches after a filter is applied. The person may have spent hours on those files. A bare No results message leaves them to work out whether the files are gone, the search failed or the filter is too narrow.\n\nI'd keep the active filters visible, explain what was searched and offer a direct way back to all projects. If the search itself failed, the screen should say that clearly.\n\nThe visual treatment needs to support the same explanation. An illustration of an empty box might suggest there is no work at all, which would be the wrong story in this example.\n\nI want the person to understand what happened and feel able to recover. What does your product say when someone's work seems to disappear?",
+      "at": "2026-10-14T08:16:20.865637+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-17T12:30:00+00:00",
+      "allocation_day": "2026-10-17"
     }
   },
   "days": {
@@ -1633,7 +1643,7 @@
       "read": 0
     },
     "2026-10-17": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
