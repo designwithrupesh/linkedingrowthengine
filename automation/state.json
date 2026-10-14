@@ -1615,7 +1615,7 @@
     "2026-10-14": {
       "post": 2,
       "interaction": 0,
-      "read": 5
+      "read": 6
     },
     "2026-10-10": {
       "post": 2,
@@ -1980,7 +1980,7 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-14T14:07:20.482377+00:00",
+        "last_considered_at": "2026-10-14T14:27:21.523798+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-14T14:07:20.482377+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
@@ -1996,7 +1996,7 @@
         "last_checked_at": "2026-10-14T13:57:21.154627+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-10-14T14:02:20.218613+00:00",
+        "last_considered_at": "2026-10-14T14:27:21.523798+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-14T14:02:20.218613+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
@@ -2004,7 +2004,7 @@
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-10-14T14:02:20.218613+00:00",
+        "last_considered_at": "2026-10-14T14:27:21.523798+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
@@ -2036,7 +2036,7 @@
         "cached": false
       },
       "urn:li:share:7515614827323740160": {
-        "last_considered_at": "2026-10-14T14:02:20.218613+00:00",
+        "last_considered_at": "2026-10-14T14:27:21.523798+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-14T14:02:20.218613+00:00"
       },
@@ -2049,7 +2049,7 @@
         "cached": false
       },
       "urn:li:share:7515977197396844546": {
-        "last_considered_at": "2026-10-14T14:02:20.218613+00:00",
+        "last_considered_at": "2026-10-14T14:27:21.523798+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-14T14:02:20.218613+00:00"
       },
