@@ -1588,11 +1588,14 @@
       "kind": "post",
       "text": "An empty search result can make someone wonder whether the product has lost their work.\n\nImagine a project library with no matches after a filter is applied. The person may have spent hours on those files. A bare No results message leaves them to work out whether the files are gone, the search failed or the filter is too narrow.\n\nI'd keep the active filters visible, explain what was searched and offer a direct way back to all projects. If the search itself failed, the screen should say that clearly.\n\nThe visual treatment needs to support the same explanation. An illustration of an empty box might suggest there is no work at all, which would be the wrong story in this example.\n\nI want the person to understand what happened and feel able to recover. What does your product say when someone's work seems to disappear?",
       "at": "2026-10-14T08:16:20.865637+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-17T12:30:00+00:00",
-      "allocation_day": "2026-10-17"
+      "allocation_day": "2026-10-17",
+      "http_status": 200,
+      "remote_id": "6acf3a566665abdba464fcdc",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -1811,6 +1814,14 @@
       "media_status": "scheduled",
       "format": "freebie",
       "asset_sha256": "ad2163a12bb0db2f71d9556e58ad69968e1ac80e9099eb4edc19ec389dc2ea5a"
+    },
+    {
+      "id": "6acf3a566665abdba464fcdc",
+      "text": "An empty search result can make someone wonder whether the product has lost their work.\n\nImagine a project library with no matches after a filter is applied. The person may have spent hours on those files. A bare No results message leaves them to work out whether the files are gone, the search failed or the filter is too narrow.\n\nI'd keep the active filters visible, explain what was searched and offer a direct way back to all projects. If the search itself failed, the screen should say that clearly.\n\nThe visual treatment needs to support the same explanation. An illustration of an empty box might suggest there is no work at all, which would be the wrong story in this example.\n\nI want the person to understand what happened and feel able to recover. What does your product say when someone's work seems to disappear?",
+      "url": null,
+      "at": "2026-10-14T08:16:20.865637+00:00",
+      "scheduled_for": "2026-10-17T12:30:00+00:00",
+      "allocation_day": "2026-10-17"
     }
   ],
   "discovery": {
