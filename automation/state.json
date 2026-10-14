@@ -1303,7 +1303,7 @@
       "media_scheduled_for": "2026-10-15T03:30:00Z",
       "media_operation_id": "3414ee62af747138fc60fe3db63f174a24b0429d769e5f38e539cce40ebd8364",
       "media_stage": "upload-bytes",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6acf39cdab6b198ebf450152"
     }
