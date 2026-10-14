@@ -1446,6 +1446,16 @@
       "http_status": 200,
       "remote_id": "6acf3a116665abdba464f857",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-16:1800": {
+      "kind": "post",
+      "text": "I'm open to founding designer conversations with early-stage teams.\n\nMy background spans 11 years across creative direction, product design, startup founding and brand strategy. I want to bring that range to a team while the product's basic decisions are still open.\n\nI'd want to understand the customer problem, what the business needs to prove and the experience people should have when they use the product. From there, the work might be a rough flow, a visual direction or a prototype that helps the team settle a disagreement.\n\nI care about how those pieces hold together. The product's language, behavior and appearance all give people reasons to trust it, or reasons to hesitate.\n\nIf your early-stage team is shaping its product and design foundations, I would welcome a conversation about the role.",
+      "at": "2026-10-14T08:15:45.958428+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-16T12:30:00+00:00",
+      "allocation_day": "2026-10-16"
     }
   },
   "days": {
@@ -1491,7 +1501,7 @@
       "read": 0
     },
     "2026-10-16": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
