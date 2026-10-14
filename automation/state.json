@@ -1241,6 +1241,54 @@
       "http_status": 201,
       "remote_id": "7515808519347105792",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-15:0900": {
+      "kind": "post",
+      "text": "Sharing unfinished work can feel riskier than sending a finished presentation. The person wants help, but they may still be changing their mind.\n\nFor a hypothetical review tool, I'd let the creator send a separate copy for comments while keeping the working draft private. The invitation would name the reviewer, show their access and identify the version they will see.\n\nThat choice has a cost. A frozen review copy won't include later edits automatically. The product needs to explain that limit and make updates deliberate.\n\nI'd want a founding designer in this discussion before Share becomes a button on a finished screen. The decision shapes permissions, versioning and how comfortable someone feels asking for feedback.",
+      "at": "2026-10-14T08:14:01.057052+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-15T03:30:00+00:00",
+      "allocation_day": "2026-10-15",
+      "format": "image",
+      "asset_id": "private-draft-invitation",
+      "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22",
+      "asset_title": "Let the draft stay a draft.",
+      "asset_pages": 1,
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "private-draft-invitation",
+        "kind": "image",
+        "title": "Let the draft stay a draft.",
+        "caption": "Sharing unfinished work can feel riskier than sending a finished presentation. The person wants help, but they may still be changing their mind.\n\nFor a hypothetical review tool, I'd let the creator send a separate copy for comments while keeping the working draft private. The invitation would name the reviewer, show their access and identify the version they will see.\n\nThat choice has a cost. A frozen review copy won't include later edits automatically. The product needs to explain that limit and make updates deliberate.\n\nI'd want a founding designer in this discussion before Share becomes a button on a finished screen. The decision shapes permissions, versioning and how comfortable someone feels asking for feedback.",
+        "file": "resources/linkedin/stories/private-draft-invitation.png",
+        "preview": "resources/linkedin/stories/private-draft-invitation.png",
+        "sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22",
+        "page_count": 1,
+        "transcript": [
+          "PRODUCT NOTES / 01",
+          "Let the draft stay a draft.",
+          "A private workspace. A deliberate invitation.",
+          "Working draft",
+          "Review copy",
+          "Rupesh Kumar",
+          "Hypothetical review tool"
+        ],
+        "design_brief": {
+          "reader_tension": "Asking for feedback before the work feels finished can feel exposing.",
+          "intended_feeling": "Care, ownership and enough confidence to invite another person in.",
+          "core_decision": "Send a separate frozen review copy while the working draft stays private.",
+          "visual_idea": "A graphite original remains inside a blue folio while a translucent review copy reaches another hand.",
+          "story_arc": [
+            "Shelter the unfinished original.",
+            "Open a deliberate invitation.",
+            "Keep the original intact."
+          ],
+          "tradeoff": "The separate copy can fall behind later private edits."
+        },
+        "review_status": "checked"
+      }
     }
   },
   "days": {
@@ -1279,6 +1327,11 @@
       "interaction": 4,
       "read": 7,
       "public_interaction": 4
+    },
+    "2026-10-15": {
+      "post": 1,
+      "interaction": 0,
+      "read": 0
     }
   },
   "reports": [
