@@ -1426,7 +1426,21 @@
           "tradeoff": "A frozen copy protects private edits while requiring deliberate updates and visible version labels."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "14c4667c1714c60a64f54de0015498e93867b2793f3b2e07f5c51b76695a2039",
+        "mime_type": "application/pdf",
+        "title": "Before you press Share",
+        "type": "document",
+        "page_count": 6,
+        "format": "carousel",
+        "file_name": "before-you-press-share.pdf",
+        "size_bytes": 15162081
+      },
+      "media_scheduled_for": "2026-10-16T03:30:00Z",
+      "media_operation_id": "d5946b8585484a15bf531d5bea18b3fae758067c74430638b13342a4d7cfe824",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
