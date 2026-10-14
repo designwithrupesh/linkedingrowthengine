@@ -1442,7 +1442,7 @@
       "media_scheduled_for": "2026-10-16T03:30:00Z",
       "media_operation_id": "d5946b8585484a15bf531d5bea18b3fae758067c74430638b13342a4d7cfe824",
       "media_stage": "schedule-media",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6acf3a116665abdba464f857"
     }
@@ -1636,7 +1636,7 @@
       "at": "2026-10-14T08:15:09.152811+00:00",
       "scheduled_for": "2026-10-16T03:30:00+00:00",
       "allocation_day": "2026-10-16",
-      "media_status": "ready",
+      "media_status": "schedule-acknowledged",
       "format": "carousel",
       "asset_sha256": "14c4667c1714c60a64f54de0015498e93867b2793f3b2e07f5c51b76695a2039"
     }
