@@ -1288,7 +1288,21 @@
           "tradeoff": "The separate copy can fall behind later private edits."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22",
+        "mime_type": "image/png",
+        "title": "Let the draft stay a draft.",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "let-the-draft-stay-a-draft.png",
+        "size_bytes": 2556031
+      },
+      "media_scheduled_for": "2026-10-15T03:30:00Z",
+      "media_operation_id": "3414ee62af747138fc60fe3db63f174a24b0429d769e5f38e539cce40ebd8364",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
