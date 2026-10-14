@@ -1464,7 +1464,7 @@
       "kind": "post",
       "text": "Before adding a Share button, I'd ask the team to draw what crosses the boundary.\n\nIs it the live document or a frozen copy? Does the other person get permission to view, comment or edit? If the owner closes access, what can they actually take back?\n\nUse the two-page map for that conversation. The first page works through a hypothetical review tool. The second gives your team room to map its own states and write one clear rule before the next mockup.\n\nThe awkward questions matter here. Closing access can stop future viewing; it cannot recall a screenshot. A quiet interface still needs an honest explanation of that limit.\n\nI'm open to consulting conversations with founders working through product decisions like this.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/stories/sharing-state-map.pdf",
       "at": "2026-10-14T08:15:51.030266+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-17T03:30:00+00:00",
@@ -1578,10 +1578,11 @@
       },
       "media_scheduled_for": "2026-10-17T03:30:00Z",
       "media_operation_id": "222e3c3378f06cec5ee1036ebfc3b7d9390d3935f54e8242aca5f1981b7a90ab",
-      "media_stage": "schedule-media",
-      "media_stage_status": "acknowledged",
+      "media_stage": "verify-schedule",
+      "media_stage_status": "verified",
       "http_status": 200,
-      "remote_id": "6acf3a3bab6b198ebf450c62"
+      "remote_id": "6acf3a3bab6b198ebf450c62",
+      "reason": "Publora confirmed scheduled media and caption"
     }
   },
   "days": {
@@ -1797,7 +1798,7 @@
       "at": "2026-10-14T08:15:51.030266+00:00",
       "scheduled_for": "2026-10-17T03:30:00+00:00",
       "allocation_day": "2026-10-17",
-      "media_status": "schedule-acknowledged",
+      "media_status": "scheduled",
       "format": "freebie",
       "asset_sha256": "ad2163a12bb0db2f71d9556e58ad69968e1ac80e9099eb4edc19ec389dc2ea5a"
     }
