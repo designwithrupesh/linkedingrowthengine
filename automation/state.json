@@ -1828,7 +1828,7 @@
   ],
   "discovery": {
     "profile_cursor": 19,
-    "last_status": "ok"
+    "last_status": "daily-budget-exhausted"
   },
   "reply_monitor": {
     "posts": {
@@ -2067,8 +2067,8 @@
       "status": "running",
       "started_at": "2026-10-14T13:57:18.516425+00:00",
       "deadline": "2026-10-14T22:00:00+05:30",
-      "heartbeat_at": "2026-10-14T14:57:23.400821+00:00",
-      "cycles": 13,
+      "heartbeat_at": "2026-10-14T15:02:53.756976+00:00",
+      "cycles": 14,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -2126,7 +2126,7 @@
   "engagement": {
     "profile_checked_at": {
       "lennyrachitsky": "2026-10-13T15:49:08.908064+00:00",
-      "juliezhuo": "2026-10-13T14:59:14.119263+00:00",
+      "juliezhuo": "2026-10-14T15:02:23.722695+00:00",
       "brianchesky": "2026-10-13T15:04:14.832984+00:00",
       "destraynor": "2026-10-13T15:09:04.672419+00:00",
       "rahulvohra": "2026-10-13T15:14:05.040610+00:00",
@@ -2154,42 +2154,6 @@
         "cached_at": "2026-10-11T15:49:42.373724+00:00"
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513338457843314689/",
-        "urn": "urn:li:share:7513338456849207297",
-        "shareUrn": "urn:li:share:7513338456849207297",
-        "text": "Trend I'm following: Teams using AI \"simulations\" to quickly test product ideas, flow tweaks, and copy changes.\n\nProducts like Simile, Primitive Labs, Tenera, Seldon, Synthetic Users, and others.\n\nIf you've tried something like this, what did you try, and how'd it go?",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-06T20:44:39.428000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7513338457843314689",
-          "urn:li:share:7513338456849207297"
-        ],
-        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
-        "cached_at": "2026-10-11T15:49:42.373724+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513270088305733633/",
-        "urn": "urn:li:ugcPost:7513269921741545472",
-        "shareUrn": "urn:li:ugcPost:7513269921741545472",
-        "text": "Me: \"I've been arguing for a long time that PMs are going to thrive in this AI era.\"\n\nTibo (Head of ChatGTP & Codex): \"I agree.\"\n\nFull conversation: https://lnkd.in/guMJ_ziU",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-06T16:12:58.860000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7513270088305733633",
-          "urn:li:ugcPost:7513269921741545472"
-        ],
-        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
-        "cached_at": "2026-10-11T15:49:42.373724+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513691376828510209/",
         "urn": "urn:li:ugcPost:7513691375863832576",
         "shareUrn": "urn:li:ugcPost:7513691375863832576",
@@ -2206,24 +2170,6 @@
         ],
         "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
         "cached_at": "2026-10-13T15:09:04.672419+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513302767722098688/",
-        "urn": "urn:li:ugcPost:7513302714798268416",
-        "shareUrn": "urn:li:ugcPost:7513302714798268416",
-        "text": "It's Inbox Zero Day — the day when we're all most likely to hit Inbox Zero! 💜\n\nWe're celebrating all day with surprises, giveaways, and free Superhuman…\n\nTo join in:\n\n1️⃣ Hit Inbox Zero today, Oct. 6, and enjoy the view!\n2️⃣ Share your achievements on X or LinkedIn, tagging #HitZero.\n3️⃣ Everyone who posts will get a surprise, as well as a chance to win Superhuman swag.",
-        "authorName": "Rahul Vohra",
-        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
-        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
-        "postedAtISO": "2026-10-06T18:22:50.240000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:activity:7513302767722098688",
-          "urn:li:ugcPost:7513302714798268416"
-        ],
-        "first_seen_at": "2026-10-11T14:49:38.181181+00:00",
-        "cached_at": "2026-10-13T15:14:05.040610+00:00"
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514731553684471808/",
@@ -2275,24 +2221,6 @@
         "identity_aliases": [
           "urn:li:activity:7513669278634762240",
           "urn:li:ugcPost:7513669275748925440"
-        ],
-        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
-        "cached_at": "2026-10-13T15:24:05.782551+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513443100082515968/",
-        "urn": "urn:li:share:7513443099587764226",
-        "shareUrn": "urn:li:share:7513443099587764226",
-        "text": "I’ve tried rebuilding my website about 5 times since coding models came out. Design always was annoying and nothing felt as simple as my old setup. Finally got somewhere in 30mins with Codex, along with a small tool to add my writing and deploy the static site to S3. \n\nSo now you can enjoy all my writings in one place: https://karrisaarinen.com",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-07T03:40:28.082000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7513443100082515968",
-          "urn:li:share:7513443099587764226"
         ],
         "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
         "cached_at": "2026-10-13T15:24:05.782551+00:00"
