@@ -1435,12 +1435,13 @@
         "page_count": 6,
         "format": "carousel",
         "file_name": "before-you-press-share.pdf",
-        "size_bytes": 15162081
+        "size_bytes": 15162081,
+        "media_id": "6acf3a146665abdba464f8c6"
       },
       "media_scheduled_for": "2026-10-16T03:30:00Z",
       "media_operation_id": "d5946b8585484a15bf531d5bea18b3fae758067c74430638b13342a4d7cfe824",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6acf3a116665abdba464f857"
     }
