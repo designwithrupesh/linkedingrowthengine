@@ -1563,7 +1563,21 @@
           "tradeoff": "Closing access can stop future viewing, but cannot recall screenshots or downloaded files."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "ad2163a12bb0db2f71d9556e58ad69968e1ac80e9099eb4edc19ec389dc2ea5a",
+        "mime_type": "application/pdf",
+        "title": "Draw the boundary before the Share button.",
+        "type": "document",
+        "page_count": 2,
+        "format": "freebie",
+        "file_name": "draw-the-boundary-before-the-share-button.pdf",
+        "size_bytes": 56718
+      },
+      "media_scheduled_for": "2026-10-17T03:30:00Z",
+      "media_operation_id": "222e3c3378f06cec5ee1036ebfc3b7d9390d3935f54e8242aca5f1981b7a90ab",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
