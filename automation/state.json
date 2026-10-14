@@ -1298,11 +1298,12 @@
         "format": "image",
         "file_name": "let-the-draft-stay-a-draft.png",
         "size_bytes": 2556031,
-        "media_id": "6acf39d16665abdba464f305"
+        "media_id": "6acf39d16665abdba464f305",
+        "status": "ready"
       },
       "media_scheduled_for": "2026-10-15T03:30:00Z",
       "media_operation_id": "3414ee62af747138fc60fe3db63f174a24b0429d769e5f38e539cce40ebd8364",
-      "media_stage": "complete-media",
+      "media_stage": "verify-attachment",
       "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6acf39cdab6b198ebf450152"
@@ -1473,7 +1474,7 @@
       "at": "2026-10-14T08:14:01.057052+00:00",
       "scheduled_for": "2026-10-15T03:30:00+00:00",
       "allocation_day": "2026-10-15",
-      "media_status": "draft",
+      "media_status": "ready",
       "format": "image",
       "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22"
     }
