@@ -2047,6 +2047,45 @@
         "6accba26fafcfc71104a54ad",
         "6accba4126b57a9d24d343fe"
       ]
+    },
+    "last_scheduled_batch": {
+      "verified_at": "2026-10-14T08:16:54.588003+00:00",
+      "source_version": "1.1.35",
+      "source_commit": "6d0d2e4ab36bec87fce23c0eb1e66434f46aaa21",
+      "dates": [
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17"
+      ],
+      "timezone": "Asia/Calcutta",
+      "posting_hours": [
+        9,
+        18
+      ],
+      "post_group_ids": [
+        "6acf39cdab6b198ebf450152",
+        "6acf3a0aab6b198ebf450869",
+        "6acf3a116665abdba464f857",
+        "6acf3a346665abdba464fa96",
+        "6acf3a3bab6b198ebf450c62",
+        "6acf3a566665abdba464fcdc"
+      ],
+      "visual_assets": [
+        "private-draft-invitation",
+        "before-you-press-share",
+        "sharing-state-map"
+      ],
+      "status": "six-scheduled-independently-verified",
+      "visual_bytes_verified": true,
+      "verification": {
+        "python_tests": 572,
+        "node_tests": 5,
+        "selftest": "pass",
+        "source_ci": 38533539809,
+        "scanner_ci": 38533540522,
+        "scanner_score": 89,
+        "high_or_critical": 0
+      }
     }
   },
   "engagement": {
