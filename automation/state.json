@@ -1659,6 +1659,14 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "reaction:comment:a427c246df1c43067791084f3e4506c5f123f34c6706087c7dc66639a7811334": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-15T16:05:17.743973+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7515863374711369728",
+      "parent": null
     }
   },
   "days": {
@@ -1700,9 +1708,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 6,
+      "interaction": 7,
       "read": 15,
-      "public_interaction": 6
+      "public_interaction": 7
     },
     "2026-10-16": {
       "post": 2,
@@ -1893,7 +1901,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 26,
+    "profile_cursor": 27,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2312,24 +2320,6 @@
         "cached_at": "2026-10-13T15:29:06.110296+00:00"
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515566569154953216/",
-        "urn": "urn:li:ugcPost:7515566497952387072",
-        "shareUrn": "urn:li:ugcPost:7515566497952387072",
-        "text": "\"Every company right now needs a set of people who's job is to be at the frontier. \n\nThey're the people who have eight $200/month subscriptions on everything.\n\nYou have to architect your organization where this can exist.\"\n\n— Josh Woodward, Head of Google Labs, Gemini App, and Google AI Studio",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-13T00:18:22.561000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7515566569154953216",
-          "urn:li:ugcPost:7515566497952387072"
-        ],
-        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-13T15:49:08.908064+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515419078971551744/",
         "urn": "urn:li:ugcPost:7515419077918679040",
         "shareUrn": "urn:li:ugcPost:7515419077918679040",
@@ -2579,6 +2569,96 @@
         ],
         "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
         "cached_at": "2026-10-15T15:48:46.420225+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
+        "urn": "urn:li:share:7516512888547627008",
+        "shareUrn": "urn:li:share:7516512888547627008",
+        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516512889588047873",
+          "urn:li:share:7516512888547627008"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
+        "urn": "urn:li:ugcPost:7516220203534430209",
+        "shareUrn": "urn:li:ugcPost:7516220203534430209",
+        "text": "Here it is: Benchmarks to measure a given company's moat.\n\nImage 1: KPIs to look at, by moat.\nImage 2: What \"good\" and \"great\" looks like.\n\nNote, these are rough and meant to be interpreted directionally, because there is so much variance by industry and business model. For a deeper exploration, see links in the PDF here: https://lnkd.in/gKrqKVty\n\nFor a lot more context and advice, don't miss Dan Hockenmaier's incredible full post: https://lnkd.in/gY6TkS2a",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-14T22:00:47.660000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516256721321824256",
+          "urn:li:ugcPost:7516220203534430209"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
+        "urn": "urn:li:share:7516209385463963648",
+        "shareUrn": "urn:li:share:7516209385463963648",
+        "text": "There’s way too much AI hype right now.\n\nSo Noam Segal and I are launching \"Hype(less),\" a research project to showcase the most genuine, impactful, and repeatable AI workflows that have created real value for you and your teams in product, design, and engineering.\n\nWe’ll showcase the best in a special three-part newsletter series in the coming months.\n\nHere's our ask: If you're a PM, engineer, or designer, please share your most valuable AI workflow here: https://tally.so/r/dWL6Xd (by 10/23).\n\nBy sharing your workflow, you'll help others cut through the AI hype.\n\nHere's the form: https://tally.so/r/dWL6Xd\n\n(Please repost and share with your colleagues so we can collect as many great examples as possible).",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-14T18:52:42.076000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516209386151915520",
+          "urn:li:share:7516209385463963648"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515825104031870976/",
+        "urn": "urn:li:share:7515825101053792257",
+        "shareUrn": "urn:li:share:7515825101053792257",
+        "text": "Moats! Does anyone have one anymore?\n\nYes. Yes, they do.\n\nBut only a small subset of what people call moats create real long-term value and defensibility.\n\nNot actually a moat:\n\n1. Distribution: This does matter more than ever. Building products has gotten easier, but getting them to customers has not. Distribution, however, does not create durable defensibility. It helps create the raw ingredients for one, but it is not itself a moat.\n\n2. Execution: Yes, speed is critical for startups. But a company that has to sprint forever is not a good business. Ultimately, it will misstep, slow down, and competition will catch up. Speed gives a company more shots on goal as it tries to build a great product and a great business, but it must eventually find something more durable.\n\n3. Brand: The idea is that when everyone is building the same thing, the most resonant brand will win. But for startups, brand works more like customer acquisition spend: Put money in, get growth out. It’s not something that will effectively keep others from competing long-term. Brand can become a true moat over time (as with Coke or Nike or Apple), but it just takes too long to really matter for most startups.\n\nWhat you're looking for is *compounding advantages*: a self-reinforcing flywheel that gets stronger and stronger over time, ultimately making a company very hard to compete with long-term.\n\nThere are only four compounding advantages that really matter. Every major tech company has at least one:\n\n1. Switching costs: The more deeply embedded a product is in the way a customer works, the harder it is for that customer to switch. This increases retention and revenue per customer, which can be reinvested into the product.\n\n2. Network effects: The more users a product has, the better it gets for everyone. This increases engagement and attracts more users.\n\n3. Scale economies: The more volume a company has, the larger and more efficient its operations can be. This lowers unit costs, funding lower prices or a better product at the same price, further driving up volume.\n\n4. Data effects: The more usage a product has, the more data it generates. This data can be used to improve the product and increase usage.\n\nIf you can’t see the potential for any in the startup you’re considering joining, that’s a red flag.\n\nIn today’s incredible post, Dan Hockenmaier shares a simple framework you can run in about an hour after getting an offer:\n1. Identify a startup’s compounding advantage\n2. Gauge how strong it could get\n3. Measure whether it’s working\n\nInside: dozens of real company examples, the specific metrics to track, and benchmarks for what good and great look like.\n\nRead it here: https://lnkd.in/gm3Dx__e",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-13T17:25:42.079000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7515825104031870976",
+          "urn:li:share:7515825101053792257"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515566569154953216/",
+        "urn": "urn:li:ugcPost:7515566497952387072",
+        "shareUrn": "urn:li:ugcPost:7515566497952387072",
+        "text": "\"Every company right now needs a set of people who's job is to be at the frontier. \n\nThey're the people who have eight $200/month subscriptions on everything.\n\nYou have to architect your organization where this can exist.\"\n\n— Josh Woodward, Head of Google Labs, Gemini App, and Google AI Studio",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-13T00:18:22.561000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7515566569154953216",
+          "urn:li:ugcPost:7515566497952387072"
+        ],
+        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
+        "cached_at": "2026-10-15T16:03:47.205166+00:00"
       }
     ]
   },
