@@ -77,7 +77,7 @@ jobs:
           (env.MODEL_ENDPOINT == '' || env.TWIN_LOW_COST_MODE == 'true') &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'preview') ||
           ((github.event_name == 'schedule' || (inputs.mode == 'live' || inputs.mode == 'session')) && (vars.TWIN_LIVE == '' || vars.TWIN_LIVE == 'true')))
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
         with:
           path: |
             testing/local-model/llama-b11512-bin-ubuntu-x64.tar.gz
