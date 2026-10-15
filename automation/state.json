@@ -2109,8 +2109,8 @@
       "status": "running",
       "started_at": "2026-10-15T14:23:40.362641+00:00",
       "deadline": "2026-10-15T22:00:00+05:30",
-      "heartbeat_at": "2026-10-15T14:48:43.461381+00:00",
-      "cycles": 6,
+      "heartbeat_at": "2026-10-15T14:53:43.698770+00:00",
+      "cycles": 7,
       "recent_errors": []
     },
     "last_live_validation": {
