@@ -1612,9 +1612,11 @@
       "kind": "comment",
       "text": "Swiping to reply or forward without expanding is a small change with big friction reduction. That’s the kind of detail that makes email feel less like a chore. How do you test if users actually adopt this behavior?",
       "at": "2026-10-15T15:20:41.694477+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:ugcPost:7516220473517719552",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
