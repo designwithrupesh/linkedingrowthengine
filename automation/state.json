@@ -1622,9 +1622,12 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-10-15T15:39:16.189842+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7516159655165972480",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "acknowledged",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
