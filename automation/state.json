@@ -1596,6 +1596,14 @@
       "http_status": 200,
       "remote_id": "6acf3a566665abdba464fcdc",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:5b203ebbee1b62b2b27279a918acbc48f5f9e32ee4e295bc4545de2b35470a62": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-15T15:20:38.479015+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516220473517719552",
+      "parent": null
     }
   },
   "days": {
@@ -1637,8 +1645,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 0,
-      "read": 10
+      "interaction": 1,
+      "read": 10,
+      "public_interaction": 1
     },
     "2026-10-16": {
       "post": 2,
@@ -1829,7 +1838,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 22,
+    "profile_cursor": 23,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2373,6 +2382,24 @@
         ],
         "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
         "cached_at": "2026-10-13T15:49:08.908064+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516220474209488897/",
+        "urn": "urn:li:ugcPost:7516220473517719552",
+        "shareUrn": "urn:li:ugcPost:7516220473517719552",
+        "text": "Lots of Superhuman Mail pebbles today 💜\n\nMy favorite is this: you can now swipe any message to reply or forward.  You don’t even have to expand the message first!",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-10-14T19:36:45.675000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7516220474209488897",
+          "urn:li:ugcPost:7516220473517719552"
+        ],
+        "first_seen_at": "2026-10-15T15:18:44.960759+00:00",
+        "cached_at": "2026-10-15T15:18:44.960759+00:00"
       }
     ]
   },
