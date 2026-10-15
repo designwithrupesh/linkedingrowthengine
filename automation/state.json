@@ -2212,7 +2212,7 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-15T14:23:40.362641+00:00",
       "deadline": "2026-10-15T22:00:00+05:30",
       "heartbeat_at": "2026-10-15T16:28:52.250561+00:00",
@@ -2243,7 +2243,8 @@
           "type": "WriteOutcomeError",
           "at": "2026-10-15T16:19:19.663201+00:00"
         }
-      ]
+      ],
+      "ended_at": "2026-10-15T16:30:00.000161+00:00"
     },
     "last_live_validation": {
       "status": "passed",
