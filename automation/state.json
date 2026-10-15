@@ -1617,6 +1617,14 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "reaction:comment:0aa3f68e220ddd4875dd24aca6896846293b856438ae5705d4209749cfd12e3d": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-15T15:39:16.189842+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516159655165972480",
+      "parent": null
     }
   },
   "days": {
@@ -1658,9 +1666,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 13,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-10-16": {
       "post": 2,
@@ -1851,7 +1859,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 24,
+    "profile_cursor": 25,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2419,6 +2427,60 @@
         ],
         "first_seen_at": "2026-10-11T15:04:39.262212+00:00",
         "cached_at": "2026-10-15T15:33:51.531716+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516159655828656130/",
+        "urn": "urn:li:ugcPost:7516159655165972480",
+        "shareUrn": "urn:li:ugcPost:7516159655165972480",
+        "text": "Join us for our first Linear conference on continuing the craft of great software",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-14T15:35:05.443000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7516159655828656130",
+          "urn:li:ugcPost:7516159655165972480"
+        ],
+        "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
+        "cached_at": "2026-10-15T15:38:45.930463+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516009658948673536/",
+        "urn": "urn:li:share:7516009658193694720",
+        "shareUrn": "urn:li:share:7516009658193694720",
+        "text": "New post: \n— Brand is who you are\n\nI think brand is often misunderstood. People talk about it as the logo, the website, the colors. Those are the things you can see, so it’s natural to start there. But they are expressions of the brand. The underlying thing is who you are and what you stand for.\n\nhttps://lnkd.in/gyBKZ6gZ",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-14T05:39:03.400000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7516009658948673536",
+          "urn:li:share:7516009658193694720"
+        ],
+        "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
+        "cached_at": "2026-10-15T15:38:45.930463+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515863375793324034/",
+        "urn": "urn:li:share:7515863374711369728",
+        "shareUrn": "urn:li:share:7515863374711369728",
+        "text": "Linear is becoming the place to drive more work forward in your orgs.  A customer shared this chart showing dramatically faster & automatic bug resolution after enabling Loops + @linear Cloud Coding Agent (claude/codex/open):  \n\n> Their 95th-percentile time from bug report or customer request to a fix in production dropped from 9 weeks to 3 days over three months.  \n\nSome use other use cases for Loops: \n- cleaning up deprecated code \n- investigating and fixing bugs \n- routing customer requests to whoever is on call \n- monitoring security vulnerabilities  \n- checking up on important projects or customer themes",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-13T19:57:46.778000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7515863375793324034",
+          "urn:li:share:7515863374711369728"
+        ],
+        "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
+        "cached_at": "2026-10-15T15:38:45.930463+00:00"
       }
     ]
   },
