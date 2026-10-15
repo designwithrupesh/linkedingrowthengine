@@ -1771,13 +1771,14 @@
     {
       "id": "6acf39cdab6b198ebf450152",
       "text": "Sharing unfinished work can feel riskier than sending a finished presentation. The person wants help, but they may still be changing their mind.\n\nFor a hypothetical review tool, I'd let the creator send a separate copy for comments while keeping the working draft private. The invitation would name the reviewer, show their access and identify the version they will see.\n\nThat choice has a cost. A frozen review copy won't include later edits automatically. The product needs to explain that limit and make updates deliberate.\n\nI'd want a founding designer in this discussion before Share becomes a button on a finished screen. The decision shapes permissions, versioning and how comfortable someone feels asking for feedback.",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7516339844223115264/",
       "at": "2026-10-14T08:14:01.057052+00:00",
       "scheduled_for": "2026-10-15T03:30:00+00:00",
       "allocation_day": "2026-10-15",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22"
+      "asset_sha256": "18bcd5c97d52c4c9e07e3a493da033172e1e9130430cdad119035cffdfd98f22",
+      "post_urn": "urn:li:share:7516339844223115264"
     },
     {
       "id": "6acf3a0aab6b198ebf450869",
