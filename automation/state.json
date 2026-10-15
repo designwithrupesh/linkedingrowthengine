@@ -1628,6 +1628,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:0aa3f68e220ddd4875dd24aca6896846293b856438ae5705d4209749cfd12e3d": {
+      "kind": "comment",
+      "text": "What does \"craft of great software\" mean in practice? I’d watch how the conference defines it through a real user task, not just a slogan.",
+      "at": "2026-10-15T15:39:19.470783+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516159655165972480",
+      "parent": null
     }
   },
   "days": {
@@ -1669,9 +1677,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 3,
+      "interaction": 4,
       "read": 13,
-      "public_interaction": 3
+      "public_interaction": 4
     },
     "2026-10-16": {
       "post": 2,
