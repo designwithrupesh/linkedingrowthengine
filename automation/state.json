@@ -1654,9 +1654,11 @@
       "kind": "comment",
       "text": "If your brand is just the logo or colors, you’re missing the core. I’d ask: what does your team actually stand for in daily decisions? That’s where authenticity starts.",
       "at": "2026-10-15T15:49:23.896413+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:share:7516009658193694720",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
