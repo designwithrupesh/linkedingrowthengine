@@ -1659,7 +1659,7 @@
     "2026-10-15": {
       "post": 2,
       "interaction": 2,
-      "read": 10,
+      "read": 11,
       "public_interaction": 2
     },
     "2026-10-16": {
@@ -2060,7 +2060,7 @@
         "last_checked_at": "2026-10-15T14:28:42.173720+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-15T14:33:42.481442+00:00",
+        "last_considered_at": "2026-10-15T15:33:45.502178+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-15T14:33:42.481442+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
@@ -2068,7 +2068,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-10-15T14:28:42.173720+00:00",
+        "last_considered_at": "2026-10-15T15:33:45.502178+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-15T14:28:42.173720+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -2076,7 +2076,7 @@
         "cached": false
       },
       "urn:li:share:7515388331061452800": {
-        "last_considered_at": "2026-10-15T14:28:42.173720+00:00",
+        "last_considered_at": "2026-10-15T15:33:45.502178+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-15T14:28:42.173720+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -2084,7 +2084,7 @@
         "cached": false
       },
       "urn:li:share:7515614827323740160": {
-        "last_considered_at": "2026-10-15T14:33:42.481442+00:00",
+        "last_considered_at": "2026-10-15T15:33:45.502178+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-15T14:33:42.481442+00:00"
       },
@@ -2097,7 +2097,7 @@
         "cached": false
       },
       "urn:li:share:7515977197396844546": {
-        "last_considered_at": "2026-10-15T14:33:42.481442+00:00",
+        "last_considered_at": "2026-10-15T15:33:45.502178+00:00",
         "status": "fallback-unverified-count",
         "last_checked_at": "2026-10-15T14:33:42.481442+00:00"
       },
