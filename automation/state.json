@@ -1696,9 +1696,11 @@
       "kind": "comment",
       "text": "What if the feedback is focused on consistency rather than innovation? I’d want to see a specific example of a product decision that felt off-brand to students to understand the tension between taste and change.",
       "at": "2026-10-15T16:19:16.581665+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:share:7516291092162514944",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
