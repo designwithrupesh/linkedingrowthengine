@@ -1638,6 +1638,14 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "reaction:comment:ce43b6f382ddd2290b6c7ec7c3459c3a9cae826cacf1917182e1a922ce7f4c49": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-15T15:49:20.987125+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516009658193694720",
+      "parent": null
     }
   },
   "days": {
@@ -1679,9 +1687,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 4,
+      "interaction": 5,
       "read": 14,
-      "public_interaction": 4
+      "public_interaction": 5
     },
     "2026-10-16": {
       "post": 2,
@@ -1872,7 +1880,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 25,
+    "profile_cursor": 26,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2232,41 +2240,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
-        "urn": "urn:li:ugcPost:7515780577506013185",
-        "shareUrn": "urn:li:ugcPost:7515780577506013185",
-        "text": "I’ve obtained a new certification: World-class Product Sense in Practice with Shreyas Doshi from Maven!\n\nI didn't quite know what to expect going in, but it was a whirlwind in the best of ways. Fundamentally changed the way I think about product and product strategy.",
-        "authorName": "Maria Steinson",
-        "authorHeadline": "Creative Direction @ Wooga",
-        "authorProfileUrl": "https://www.linkedin.com/in/maria-steinson-7a0a37175/",
-        "postedAtISO": "2026-10-13T15:24:00.450000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7515780577506013185"
-        ],
-        "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
-        "cached_at": "2026-10-13T15:29:06.110296+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514454334219145216/",
-        "urn": "urn:li:ugcPost:7514454333581799424",
-        "shareUrn": "urn:li:ugcPost:7514454333581799424",
-        "text": "Do you work with anyone who largely seems to be using AI performatively and everyone on the team knows this but no one wants to say it out loud?",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-09T22:38:45.088000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7514454334219145216",
-          "urn:li:ugcPost:7514454333581799424"
-        ],
-        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
-        "cached_at": "2026-10-13T15:29:06.110296+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512884863322972161/",
         "urn": "urn:li:share:7512884862052294657",
         "shareUrn": "urn:li:share:7512884862052294657",
@@ -2499,6 +2472,95 @@
         ],
         "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
         "cached_at": "2026-10-15T15:38:45.930463+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
+        "urn": "urn:li:share:7516291092162514944",
+        "shareUrn": "urn:li:share:7516291092162514944",
+        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516291092795822080",
+          "urn:li:share:7516291092162514944"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-15T15:48:46.420225+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
+        "urn": "urn:li:share:7516088553353867264",
+        "shareUrn": "urn:li:share:7516088553353867264",
+        "text": "Best $ I’ve spent in years",
+        "authorName": "Hobson Bryan",
+        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
+        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
+        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516088554066915328",
+          "urn:li:share:7516088553353867264"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-15T15:48:46.420225+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515937896546111488/",
+        "urn": "urn:li:share:7515937895862558720",
+        "shareUrn": "urn:li:share:7515937895862558720",
+        "text": "Quick note: my final Product Taste cohort of 2026 is this Saturday and enrollment closes in 2 days. About 100 students have already enrolled in this current cohort. If you lead product building in any capacity (regardless of your specific role and level), join me for 6 hours this Saturday to learn how to build, communicate, and scale good taste.\n\nDetails here:\nhttps://lnkd.in/g5Pwenke",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-14T00:53:53.910000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7515937896546111488",
+          "urn:li:share:7515937895862558720"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-15T15:48:46.420225+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
+        "urn": "urn:li:ugcPost:7515780577506013185",
+        "shareUrn": "urn:li:ugcPost:7515780577506013185",
+        "text": "I’ve obtained a new certification: World-class Product Sense in Practice with Shreyas Doshi from Maven!\n\nI didn't quite know what to expect going in, but it was a whirlwind in the best of ways. Fundamentally changed the way I think about product and product strategy.",
+        "authorName": "Maria Steinson",
+        "authorHeadline": "Creative Direction @ Wooga",
+        "authorProfileUrl": "https://www.linkedin.com/in/maria-steinson-7a0a37175/",
+        "postedAtISO": "2026-10-13T15:24:00.450000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:ugcPost:7515780577506013185"
+        ],
+        "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
+        "cached_at": "2026-10-15T15:48:46.420225+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514454334219145216/",
+        "urn": "urn:li:ugcPost:7514454333581799424",
+        "shareUrn": "urn:li:ugcPost:7514454333581799424",
+        "text": "Do you work with anyone who largely seems to be using AI performatively and everyone on the team knows this but no one wants to say it out loud?",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-09T22:38:45.088000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7514454334219145216",
+          "urn:li:ugcPost:7514454333581799424"
+        ],
+        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
+        "cached_at": "2026-10-15T15:48:46.420225+00:00"
       }
     ]
   },
