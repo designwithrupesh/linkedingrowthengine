@@ -1829,8 +1829,8 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 19,
-    "last_status": "daily-budget-exhausted"
+    "profile_cursor": 20,
+    "last_status": "ok"
   },
   "reply_monitor": {
     "posts": {
@@ -2109,8 +2109,8 @@
       "status": "running",
       "started_at": "2026-10-15T14:23:40.362641+00:00",
       "deadline": "2026-10-15T22:00:00+05:30",
-      "heartbeat_at": "2026-10-15T14:58:43.984843+00:00",
-      "cycles": 8,
+      "heartbeat_at": "2026-10-15T15:03:47.809318+00:00",
+      "cycles": 9,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -2178,42 +2178,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513648398735028224/",
-        "urn": "urn:li:ugcPost:7513648319177420800",
-        "shareUrn": "urn:li:ugcPost:7513648319177420800",
-        "text": "Linear CEO, Karri Saarinen: \"I took a break this summer from paying attention to AI. I thought that when I came back, I'd feel left behind. But when I came back, I realized that nothing has really changed.\n\nThere's new models, there's new techniques, there's new agents. But in the end, making great products, increasing revenue, and building the business—it's still hard. \n\nIt's clear the tools are getting better, you can do more, you can do it faster. But I think the more important question is: are we actually making better things with these tools? Are our teams getting better with these tools? \n\nI don't think that answer is clearly yes. \n\nThere's a lot of emphasis now on toolmaking and using tools and building systems. But I think in the end, as product people, our job is to make something great.\"\n\nWatch the full talk here: https://lnkd.in/g4V-Hz4g",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-07T17:16:15.095000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7513648398735028224",
-          "urn:li:ugcPost:7513648319177420800"
-        ],
-        "first_seen_at": "2026-10-09T16:14:33.834666+00:00",
-        "cached_at": "2026-10-11T15:49:42.373724+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513691376828510209/",
-        "urn": "urn:li:ugcPost:7513691375863832576",
-        "shareUrn": "urn:li:ugcPost:7513691375863832576",
-        "text": "We launched a lot today:  \n* Fin now does Customer Success !\n* It has skills letting it dynamically work out how to solve unseen problems \n* Operator has massive new features \n* Intercom Helpdesk has a new Copilot & Human In the Loop features \n* 3 new CX models released \n* Inbox is now 7x faster (complete rewrite!)",
-        "authorName": "Des Traynor",
-        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
-        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
-        "postedAtISO": "2026-10-07T20:07:01.871000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
-        "identity_aliases": [
-          "urn:li:activity:7513691376828510209",
-          "urn:li:ugcPost:7513691375863832576"
-        ],
-        "first_seen_at": "2026-10-11T14:29:36.793555+00:00",
-        "cached_at": "2026-10-13T15:09:04.672419+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514731553684471808/",
         "urn": "urn:li:share:7514731552811995136",
         "shareUrn": "urn:li:share:7514731552811995136",
@@ -2230,42 +2194,6 @@
         ],
         "first_seen_at": "2026-10-11T15:04:39.262212+00:00",
         "cached_at": "2026-10-13T15:19:05.461466+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513701100856848385/",
-        "urn": "urn:li:share:7513701100298887169",
-        "shareUrn": "urn:li:share:7513701100298887169",
-        "text": "I took a break from paying attention to AI this summer. I thought I’d feel left behind when I came back.  But coming back, I realized not that much had changed. There are new models, new techniques, new agents. \n\nBut making great products, growing revenue, and building a business is still hard. \n\nThe tools are clearly getting better. We can do more, faster. But I think the more important question is whether we’re making better things. Are our teams getting better, or are we just getting faster?I don’t think the answer is clearly yes. \n\nThere’s a lot of focus on making tools, using tools, and building systems around them. But as product people, our job is still to make something great.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-07T20:45:40.260000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7513701100856848385",
-          "urn:li:share:7513701100298887169"
-        ],
-        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
-        "cached_at": "2026-10-13T15:24:05.782551+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513669278634762240/",
-        "urn": "urn:li:ugcPost:7513669275748925440",
-        "shareUrn": "urn:li:ugcPost:7513669275748925440",
-        "text": "Are the tools getting better? - Yes\nAre we making better things and becoming better - ?",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-07T18:39:13.251000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7513669278634762240",
-          "urn:li:ugcPost:7513669275748925440"
-        ],
-        "first_seen_at": "2026-10-11T15:19:40.269191+00:00",
-        "cached_at": "2026-10-13T15:24:05.782551+00:00"
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
