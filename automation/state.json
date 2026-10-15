@@ -2215,8 +2215,8 @@
       "status": "running",
       "started_at": "2026-10-15T14:23:40.362641+00:00",
       "deadline": "2026-10-15T22:00:00+05:30",
-      "heartbeat_at": "2026-10-15T16:23:51.673784+00:00",
-      "cycles": 25,
+      "heartbeat_at": "2026-10-15T16:28:52.250561+00:00",
+      "cycles": 26,
       "recent_errors": [
         {
           "phase": "public",
