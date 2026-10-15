@@ -2173,8 +2173,8 @@
       "status": "running",
       "started_at": "2026-10-15T14:23:40.362641+00:00",
       "deadline": "2026-10-15T22:00:00+05:30",
-      "heartbeat_at": "2026-10-15T15:43:46.182197+00:00",
-      "cycles": 17,
+      "heartbeat_at": "2026-10-15T15:49:26.843775+00:00",
+      "cycles": 18,
       "recent_errors": [
         {
           "phase": "public",
@@ -2185,6 +2185,11 @@
           "phase": "public",
           "type": "WriteOutcomeError",
           "at": "2026-10-15T15:39:22.084677+00:00"
+        },
+        {
+          "phase": "public",
+          "type": "WriteOutcomeError",
+          "at": "2026-10-15T15:49:26.842128+00:00"
         }
       ]
     },
