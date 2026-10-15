@@ -1607,6 +1607,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:5b203ebbee1b62b2b27279a918acbc48f5f9e32ee4e295bc4545de2b35470a62": {
+      "kind": "comment",
+      "text": "Swiping to reply or forward without expanding is a small change with big friction reduction. That’s the kind of detail that makes email feel less like a chore. How do you test if users actually adopt this behavior?",
+      "at": "2026-10-15T15:20:41.694477+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516220473517719552",
+      "parent": null
     }
   },
   "days": {
@@ -1648,9 +1656,9 @@
     },
     "2026-10-15": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 10,
-      "public_interaction": 1
+      "public_interaction": 2
     },
     "2026-10-16": {
       "post": 2,
