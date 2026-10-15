@@ -1633,9 +1633,11 @@
       "kind": "comment",
       "text": "What does \"craft of great software\" mean in practice? I’d watch how the conference defines it through a real user task, not just a slogan.",
       "at": "2026-10-15T15:39:19.470783+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:ugcPost:7516159655165972480",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
