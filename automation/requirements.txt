@@ -1,5 +1,5 @@
 -r ../requirements-lock.txt
 tzdata==2026.5
 Pillow==12.0.0
-reportlab==4.4.4
+reportlab==5.0.1
 pypdf==6.20.1
