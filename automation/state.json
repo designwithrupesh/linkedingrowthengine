@@ -2449,9 +2449,15 @@
       "status": "running",
       "started_at": "2026-10-16T13:13:05.301337+00:00",
       "deadline": "2026-10-16T22:00:00+05:30",
-      "heartbeat_at": "2026-10-16T16:13:17.996770+00:00",
-      "cycles": 37,
-      "recent_errors": []
+      "heartbeat_at": "2026-10-16T16:18:49.264823+00:00",
+      "cycles": 38,
+      "recent_errors": [
+        {
+          "phase": "public",
+          "type": "WriteOutcomeError",
+          "at": "2026-10-16T16:18:49.263127+00:00"
+        }
+      ]
     },
     "last_live_validation": {
       "status": "passed",
