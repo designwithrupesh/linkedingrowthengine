@@ -1833,6 +1833,14 @@
       "http_status": 201,
       "remote_id": "7516886663697010689",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:4987565d5a25c973eb3881136364215867943e8347d1ef59a97c49ca001fe560": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-16T15:53:56.879520+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516145262101229568",
+      "parent": null
     }
   },
   "days": {
@@ -1880,9 +1888,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 12,
+      "interaction": 13,
       "read": 15,
-      "public_interaction": 12
+      "public_interaction": 13
     },
     "2026-10-17": {
       "post": 2,
@@ -2075,7 +2083,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 33,
+    "profile_cursor": 34,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2554,77 +2562,6 @@
         "cached_at": "2026-10-13T15:49:08.908064+00:00"
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
-        "urn": "urn:li:share:7516291092162514944",
-        "shareUrn": "urn:li:share:7516291092162514944",
-        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516291092795822080",
-          "urn:li:share:7516291092162514944"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-15T15:48:46.420225+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
-        "urn": "urn:li:share:7516088553353867264",
-        "shareUrn": "urn:li:share:7516088553353867264",
-        "text": "Best $ I’ve spent in years",
-        "authorName": "Hobson Bryan",
-        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
-        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
-        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516088554066915328",
-          "urn:li:share:7516088553353867264"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-15T15:48:46.420225+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515937896546111488/",
-        "urn": "urn:li:share:7515937895862558720",
-        "shareUrn": "urn:li:share:7515937895862558720",
-        "text": "Quick note: my final Product Taste cohort of 2026 is this Saturday and enrollment closes in 2 days. About 100 students have already enrolled in this current cohort. If you lead product building in any capacity (regardless of your specific role and level), join me for 6 hours this Saturday to learn how to build, communicate, and scale good taste.\n\nDetails here:\nhttps://lnkd.in/g5Pwenke",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-14T00:53:53.910000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7515937896546111488",
-          "urn:li:share:7515937895862558720"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-15T15:48:46.420225+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
-        "urn": "urn:li:ugcPost:7515780577506013185",
-        "shareUrn": "urn:li:ugcPost:7515780577506013185",
-        "text": "I’ve obtained a new certification: World-class Product Sense in Practice with Shreyas Doshi from Maven!\n\nI didn't quite know what to expect going in, but it was a whirlwind in the best of ways. Fundamentally changed the way I think about product and product strategy.",
-        "authorName": "Maria Steinson",
-        "authorHeadline": "Creative Direction @ Wooga",
-        "authorProfileUrl": "https://www.linkedin.com/in/maria-steinson-7a0a37175/",
-        "postedAtISO": "2026-10-13T15:24:00.450000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7515780577506013185"
-        ],
-        "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
-        "cached_at": "2026-10-15T15:48:46.420225+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514454334219145216/",
         "urn": "urn:li:ugcPost:7514454333581799424",
         "shareUrn": "urn:li:ugcPost:7514454333581799424",
@@ -2839,6 +2776,95 @@
         ],
         "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
         "cached_at": "2026-10-16T15:43:16.012819+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516271640838815745/",
+        "urn": "urn:li:share:7516145262101229568",
+        "shareUrn": "urn:li:share:7516145262101229568",
+        "text": "Is a 6-hour Saturday workshop worth it? Look at who signs up. 📊\n\n250+ people from 150+ companies have taken Advanced Product Taste, including Meta, Google, Amazon, Apple, OpenAI, Anthropic, Microsoft, Canva, Ramp, Rippling, Uber, and Coinbase.\n\n37% are Director level or above. 7 Chief Product Officers. 21 founders.\nHere is why they come: taste is a skill, and it is mostly evaluative, which means you can build it through deliberate practice. Six hours of taste workouts on real products can give you more of that practice than the last 10 years on the job.\n\nNext cohort is this Saturday, October 17. \nhttps://lnkd.in/dsaWTn8M",
+        "authorName": "Shreyas Doshi's Product Sense course",
+        "authorHeadline": "5,042 followers",
+        "authorProfileUrl": "https://www.linkedin.com/in/product-sense-shreyas/",
+        "postedAtISO": "2026-10-16T14:20:30.584000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516271640838815745",
+          "urn:li:share:7516145262101229568"
+        ],
+        "first_seen_at": "2026-10-16T15:53:16.743865+00:00",
+        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
+        "urn": "urn:li:share:7516291092162514944",
+        "shareUrn": "urn:li:share:7516291092162514944",
+        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516291092795822080",
+          "urn:li:share:7516291092162514944"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
+        "urn": "urn:li:share:7516088553353867264",
+        "shareUrn": "urn:li:share:7516088553353867264",
+        "text": "Best $ I’ve spent in years",
+        "authorName": "Hobson Bryan",
+        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
+        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
+        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516088554066915328",
+          "urn:li:share:7516088553353867264"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515937896546111488/",
+        "urn": "urn:li:share:7515937895862558720",
+        "shareUrn": "urn:li:share:7515937895862558720",
+        "text": "Quick note: my final Product Taste cohort of 2026 is this Saturday and enrollment closes in 2 days. About 100 students have already enrolled in this current cohort. If you lead product building in any capacity (regardless of your specific role and level), join me for 6 hours this Saturday to learn how to build, communicate, and scale good taste.\n\nDetails here:\nhttps://lnkd.in/g5Pwenke",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-14T00:53:53.910000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7515937896546111488",
+          "urn:li:share:7515937895862558720"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
+        "urn": "urn:li:ugcPost:7515780577506013185",
+        "shareUrn": "urn:li:ugcPost:7515780577506013185",
+        "text": "I’ve obtained a new certification: World-class Product Sense in Practice with Shreyas Doshi from Maven!\n\nI didn't quite know what to expect going in, but it was a whirlwind in the best of ways. Fundamentally changed the way I think about product and product strategy.",
+        "authorName": "Maria Steinson",
+        "authorHeadline": "Creative Direction @ Wooga",
+        "authorProfileUrl": "https://www.linkedin.com/in/maria-steinson-7a0a37175/",
+        "postedAtISO": "2026-10-13T15:24:00.450000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:ugcPost:7515780577506013185"
+        ],
+        "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
+        "cached_at": "2026-10-16T15:53:16.743865+00:00"
       }
     ],
     "deferred_until": {
