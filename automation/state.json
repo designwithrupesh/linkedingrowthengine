@@ -2053,7 +2053,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 28,
+    "profile_cursor": 29,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2373,8 +2373,8 @@
       "status": "running",
       "started_at": "2026-10-16T13:13:05.301337+00:00",
       "deadline": "2026-10-16T22:00:00+05:30",
-      "heartbeat_at": "2026-10-16T15:08:18.262706+00:00",
-      "cycles": 24,
+      "heartbeat_at": "2026-10-16T15:13:21.495345+00:00",
+      "cycles": 25,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -2473,24 +2473,6 @@
         "identity_aliases": [
           "urn:li:activity:7514434237161402368",
           "urn:li:share:7514434235441799168"
-        ],
-        "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
-        "cached_at": "2026-10-13T15:29:06.110296+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514340423180615680/",
-        "urn": "urn:li:share:7514340422161281024",
-        "shareUrn": "urn:li:share:7514340422161281024",
-        "text": "Just landed a Series B product role, and credits the course.\n\n\"I could not have scored this role without what I learnt here, especially segmentation, differentiation, and simulation.\" 🚀",
-        "authorName": "Shreyas Doshi's Product Sense course",
-        "authorHeadline": "5,028 followers",
-        "authorProfileUrl": "https://www.linkedin.com/in/product-sense-shreyas/",
-        "postedAtISO": "2026-10-09T15:11:04.453000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7514340423180615680",
-          "urn:li:share:7514340422161281024"
         ],
         "first_seen_at": "2026-10-11T15:34:41.325699+00:00",
         "cached_at": "2026-10-13T15:29:06.110296+00:00"
