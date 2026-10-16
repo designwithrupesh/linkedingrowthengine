@@ -1717,9 +1717,12 @@
       "kind": "comment",
       "text": "Spent on what? The post doesn’t say. If it’s a product or insight, what’s the trade-off of that investment? What would you test next?",
       "at": "2026-10-16T13:14:37.995453+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7516088553353867264",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516849090693931008",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
