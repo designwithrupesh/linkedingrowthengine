@@ -1822,6 +1822,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:66f487893d85e1bb37013d2c63f05e847752e169c590e5275d89ddc0d016e5b2": {
+      "kind": "comment",
+      "text": "The idea that products carry the 'experience' of their creators is powerful. I wonder: what if you could design a feature that explicitly shows how a team member thinks through a problem, not just what they do? That might make the product feel more human.",
+      "at": "2026-10-16T15:43:56.073516+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516703573087539200",
+      "parent": null
     }
   },
   "days": {
@@ -1869,9 +1877,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 11,
+      "interaction": 12,
       "read": 14,
-      "public_interaction": 11
+      "public_interaction": 12
     },
     "2026-10-17": {
       "post": 2,
