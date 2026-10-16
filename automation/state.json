@@ -1783,9 +1783,12 @@
       "kind": "comment",
       "text": "What if the workflow is simple but not widely shared? I’d encourage teams to document the exact input, output, and user task it solves. For example, does it reduce time spent on a specific design review by 20%? That’s more valuable than just saying it’s ‘useful’.",
       "at": "2026-10-16T13:48:49.007310+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7516209385463963648",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516857693668782081",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
