@@ -1827,9 +1827,12 @@
       "kind": "comment",
       "text": "The idea that products carry the 'experience' of their creators is powerful. I wonder: what if you could design a feature that explicitly shows how a team member thinks through a problem, not just what they do? That might make the product feel more human.",
       "at": "2026-10-16T15:43:56.073516+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7516703573087539200",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516886663697010689",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
