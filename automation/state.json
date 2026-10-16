@@ -1871,9 +1871,12 @@
       "kind": "comment",
       "text": "Testing core flows with real users before adding features prevents building designs that don't serve actual needs. Isolation leads to features that feel like noise, not value.",
       "at": "2026-10-16T16:09:02.994564+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7516860148611629056",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516892984928333824",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
