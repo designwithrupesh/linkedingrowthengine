@@ -1866,6 +1866,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:0538a1c65aa1d6ca0ed6dec9366646929be4f883e62f0137bdef5f6fa72dc726": {
+      "kind": "comment",
+      "text": "Testing core flows with real users before adding features prevents building designs that don't serve actual needs. Isolation leads to features that feel like noise, not value.",
+      "at": "2026-10-16T16:09:02.994564+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516860148611629056",
+      "parent": null
     }
   },
   "days": {
@@ -1913,9 +1921,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 15,
+      "interaction": 16,
       "read": 16,
-      "public_interaction": 15
+      "public_interaction": 16
     },
     "2026-10-17": {
       "post": 2,
