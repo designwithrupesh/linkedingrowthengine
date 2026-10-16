@@ -1756,6 +1756,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:de0d168ccafe7ebc71e8a12cdfefa9689c8404ac1e1878f00d589ac21ffd7be2": {
+      "kind": "comment",
+      "text": "The moat benchmarks by KPI type are useful, but they don’t account for how customer retention evolves over time. What if a company has strong network effects but low churn? That might look like a weak moat on these metrics. I’d want to see a longer time horizon for retention data to spot that shift.",
+      "at": "2026-10-16T13:38:46.686154+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516220203534430209",
+      "parent": null
     }
   },
   "days": {
@@ -1803,9 +1811,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 5,
+      "interaction": 6,
       "read": 7,
-      "public_interaction": 5
+      "public_interaction": 6
     },
     "2026-10-17": {
       "post": 2,
