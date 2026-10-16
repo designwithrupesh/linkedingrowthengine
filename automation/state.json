@@ -1739,9 +1739,12 @@
       "kind": "comment",
       "text": "What if the 'taste' in product taste isn't just about aesthetics but about how users feel when they interact with it? I’d watch how the cohort defines 'good taste' in practice, not just theory.",
       "at": "2026-10-16T13:18:46.125154+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7515937895862558720",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516850131711823872",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
