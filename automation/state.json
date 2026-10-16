@@ -1855,6 +1855,14 @@
       "http_status": 201,
       "remote_id": "7516889196658307072",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:0538a1c65aa1d6ca0ed6dec9366646929be4f883e62f0137bdef5f6fa72dc726": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-16T16:08:59.869201+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516860148611629056",
+      "parent": null
     }
   },
   "days": {
@@ -1902,9 +1910,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 14,
+      "interaction": 15,
       "read": 16,
-      "public_interaction": 14
+      "public_interaction": 15
     },
     "2026-10-17": {
       "post": 2,
@@ -2097,7 +2105,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 34,
+    "profile_cursor": 35,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -2594,60 +2602,6 @@
         "cached_at": "2026-10-15T15:48:46.420225+00:00"
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
-        "urn": "urn:li:share:7516512888547627008",
-        "shareUrn": "urn:li:share:7516512888547627008",
-        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516512889588047873",
-          "urn:li:share:7516512888547627008"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
-        "urn": "urn:li:ugcPost:7516220203534430209",
-        "shareUrn": "urn:li:ugcPost:7516220203534430209",
-        "text": "Here it is: Benchmarks to measure a given company's moat.\n\nImage 1: KPIs to look at, by moat.\nImage 2: What \"good\" and \"great\" looks like.\n\nNote, these are rough and meant to be interpreted directionally, because there is so much variance by industry and business model. For a deeper exploration, see links in the PDF here: https://lnkd.in/gKrqKVty\n\nFor a lot more context and advice, don't miss Dan Hockenmaier's incredible full post: https://lnkd.in/gY6TkS2a",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-14T22:00:47.660000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516256721321824256",
-          "urn:li:ugcPost:7516220203534430209"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00"
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
-        "urn": "urn:li:share:7516209385463963648",
-        "shareUrn": "urn:li:share:7516209385463963648",
-        "text": "There’s way too much AI hype right now.\n\nSo Noam Segal and I are launching \"Hype(less),\" a research project to showcase the most genuine, impactful, and repeatable AI workflows that have created real value for you and your teams in product, design, and engineering.\n\nWe’ll showcase the best in a special three-part newsletter series in the coming months.\n\nHere's our ask: If you're a PM, engineer, or designer, please share your most valuable AI workflow here: https://tally.so/r/dWL6Xd (by 10/23).\n\nBy sharing your workflow, you'll help others cut through the AI hype.\n\nHere's the form: https://tally.so/r/dWL6Xd\n\n(Please repost and share with your colleagues so we can collect as many great examples as possible).",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-14T18:52:42.076000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516209386151915520",
-          "urn:li:share:7516209385463963648"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00"
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515825104031870976/",
         "urn": "urn:li:share:7515825101053792257",
         "shareUrn": "urn:li:share:7515825101053792257",
@@ -2879,6 +2833,96 @@
         ],
         "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
         "cached_at": "2026-10-16T15:53:16.743865+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516860238080360448/",
+        "urn": "urn:li:ugcPost:7516860148611629056",
+        "shareUrn": "urn:li:ugcPost:7516860148611629056",
+        "text": "Head of Design at Stripe, Katie Dill, on how to stop building zombie UIs",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-16T13:58:57.268000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516860238080360448",
+          "urn:li:ugcPost:7516860148611629056"
+        ],
+        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
+        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516568362173239296/",
+        "urn": "urn:li:share:7516568360902397952",
+        "shareUrn": "urn:li:share:7516568360902397952",
+        "text": "Katie Dill's talk from the Lenny & Friends Summit is now my third most viewed YT video of all-time 👏👏👏\n\n(Beating out her former boss Brian Chesky!)\n\nHere's the talk: https://lnkd.in/gcec6qjp",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-15T18:39:08.629000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516568362173239296",
+          "urn:li:share:7516568360902397952"
+        ],
+        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
+        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
+        "urn": "urn:li:share:7516512888547627008",
+        "shareUrn": "urn:li:share:7516512888547627008",
+        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516512889588047873",
+          "urn:li:share:7516512888547627008"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
+        "urn": "urn:li:ugcPost:7516220203534430209",
+        "shareUrn": "urn:li:ugcPost:7516220203534430209",
+        "text": "Here it is: Benchmarks to measure a given company's moat.\n\nImage 1: KPIs to look at, by moat.\nImage 2: What \"good\" and \"great\" looks like.\n\nNote, these are rough and meant to be interpreted directionally, because there is so much variance by industry and business model. For a deeper exploration, see links in the PDF here: https://lnkd.in/gKrqKVty\n\nFor a lot more context and advice, don't miss Dan Hockenmaier's incredible full post: https://lnkd.in/gY6TkS2a",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-14T22:00:47.660000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516256721321824256",
+          "urn:li:ugcPost:7516220203534430209"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
+        "urn": "urn:li:share:7516209385463963648",
+        "shareUrn": "urn:li:share:7516209385463963648",
+        "text": "There’s way too much AI hype right now.\n\nSo Noam Segal and I are launching \"Hype(less),\" a research project to showcase the most genuine, impactful, and repeatable AI workflows that have created real value for you and your teams in product, design, and engineering.\n\nWe’ll showcase the best in a special three-part newsletter series in the coming months.\n\nHere's our ask: If you're a PM, engineer, or designer, please share your most valuable AI workflow here: https://tally.so/r/dWL6Xd (by 10/23).\n\nBy sharing your workflow, you'll help others cut through the AI hype.\n\nHere's the form: https://tally.so/r/dWL6Xd\n\n(Please repost and share with your colleagues so we can collect as many great examples as possible).",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-14T18:52:42.076000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516209386151915520",
+          "urn:li:share:7516209385463963648"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-16T16:08:17.644160+00:00"
       }
     ],
     "deferred_until": {
