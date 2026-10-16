@@ -1844,6 +1844,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:4987565d5a25c973eb3881136364215867943e8347d1ef59a97c49ca001fe560": {
+      "kind": "comment",
+      "text": "37% director level or above, 7 CPOs, 21 founders. That’s a lot of senior product leadership showing up for taste training. If you’re building a product, does your team have the same kind of deliberate practice in how they evaluate design decisions?",
+      "at": "2026-10-16T15:53:59.989786+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516145262101229568",
+      "parent": null
     }
   },
   "days": {
@@ -1891,9 +1899,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 13,
+      "interaction": 14,
       "read": 15,
-      "public_interaction": 13
+      "public_interaction": 14
     },
     "2026-10-17": {
       "post": 2,
