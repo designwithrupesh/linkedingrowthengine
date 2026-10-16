@@ -1712,6 +1712,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:2a8c3b73d78e86b4b7c93f0d23acebe4037866ebeaff0ab9c764b2c30e1d1774": {
+      "kind": "comment",
+      "text": "Spent on what? The post doesn’t say. If it’s a product or insight, what’s the trade-off of that investment? What would you test next?",
+      "at": "2026-10-16T13:14:37.995453+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516088553353867264",
+      "parent": null
     }
   },
   "days": {
@@ -1759,9 +1767,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 6,
-      "public_interaction": 1
+      "public_interaction": 2
     },
     "2026-10-17": {
       "post": 2,
