@@ -1800,6 +1800,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:61fb70a30d38becd8f4cb2e469888ed8485d81cd879de801a5c5dc56068a42a1": {
+      "kind": "comment",
+      "text": "Switching costs are the only real moat that scales for most startups. If a product doesn’t create deep user dependency, it won’t sustain long-term defensibility. I’d watch for how deeply the product integrates into daily workflows before trusting it as a defensible advantage.",
+      "at": "2026-10-16T14:04:07.475987+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7515825101053792257",
+      "parent": null
     }
   },
   "days": {
@@ -1847,9 +1855,9 @@
     },
     "2026-10-16": {
       "post": 2,
-      "interaction": 9,
+      "interaction": 10,
       "read": 7,
-      "public_interaction": 9
+      "public_interaction": 10
     },
     "2026-10-17": {
       "post": 2,
