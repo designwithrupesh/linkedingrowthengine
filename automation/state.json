@@ -1849,9 +1849,12 @@
       "kind": "comment",
       "text": "37% director level or above, 7 CPOs, 21 founders. That’s a lot of senior product leadership showing up for taste training. If you’re building a product, does your team have the same kind of deliberate practice in how they evaluate design decisions?",
       "at": "2026-10-16T15:53:59.989786+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7516145262101229568",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7516889196658307072",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
