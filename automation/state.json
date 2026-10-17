@@ -2029,7 +2029,7 @@
     "2026-10-17": {
       "post": 2,
       "interaction": 0,
-      "read": 6
+      "read": 7
     },
     "2026-10-18": {
       "post": 1,
@@ -2500,7 +2500,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-10-17T13:03:13.976984+00:00",
+        "last_considered_at": "2026-10-17T13:18:13.377568+00:00",
         "status": "analytics-count",
         "last_checked_at": "2026-10-17T13:03:13.976984+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -2508,7 +2508,7 @@
         "cached": false
       },
       "urn:li:share:7515388331061452800": {
-        "last_considered_at": "2026-10-17T13:03:13.976984+00:00",
+        "last_considered_at": "2026-10-17T13:18:13.377568+00:00",
         "status": "analytics-count",
         "last_checked_at": "2026-10-17T13:03:13.976984+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -2540,7 +2540,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516113634779901952": {
-        "last_considered_at": "2026-10-17T13:03:13.976984+00:00",
+        "last_considered_at": "2026-10-17T13:18:13.377568+00:00",
         "status": "analytics-count",
         "last_checked_at": "2026-10-17T13:03:13.976984+00:00",
         "changed_at": "2026-10-15T00:15:43.176519+00:00",
@@ -2556,17 +2556,17 @@
         "last_checked_at": "2026-10-17T13:08:12.994010+00:00"
       },
       "urn:li:share:7516475491210555392": {
-        "last_considered_at": "2026-10-17T09:18:17.960511+00:00",
+        "last_considered_at": "2026-10-17T13:18:13.377568+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-17T09:18:17.960511+00:00",
+        "last_checked_at": "2026-10-17T13:18:13.377568+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
         "count": 0,
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-17T09:18:17.960511+00:00",
+        "last_considered_at": "2026-10-17T13:18:13.377568+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-17T09:18:17.960511+00:00",
+        "last_checked_at": "2026-10-17T13:18:13.377568+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
         "count": 0,
         "cached": false
