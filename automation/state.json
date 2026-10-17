@@ -1986,6 +1986,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:01a58e5de5cf441629628e4bc3686797679540cacfbb89aa5f7f901aaea43a77": {
+      "kind": "comment",
+      "text": "The claim that only four moats matter feels like a simplification. What about network effects, switching costs, or data lock-in? Those aren’t just variations of the same moat. They’re different forces that shape long-term advantage. How do you define 'real' without excluding what actually matters in practice?",
+      "at": "2026-10-17T13:35:02.809892+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516512888547627008",
+      "parent": null
     }
   },
   "days": {
@@ -2039,9 +2047,9 @@
     },
     "2026-10-17": {
       "post": 2,
-      "interaction": 1,
+      "interaction": 2,
       "read": 8,
-      "public_interaction": 1
+      "public_interaction": 2
     },
     "2026-10-18": {
       "post": 1,
