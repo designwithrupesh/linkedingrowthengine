@@ -2285,10 +2285,10 @@
   "reply_monitor": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_attempt_at": "2026-10-16T22:47:00.085602+00:00",
-        "poll_count": 18,
+        "last_attempt_at": "2026-10-17T18:37:26.094849+00:00",
+        "poll_count": 19,
         "status": "checked",
-        "last_success_at": "2026-10-16T22:47:00.085602+00:00",
+        "last_success_at": "2026-10-17T18:37:26.094849+00:00",
         "returned_top_level": 1,
         "coverage": "bounded-public-results",
         "returned_rows": 1,
@@ -2491,13 +2491,13 @@
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-10-17T13:23:13.567506+00:00",
-      "post_urn": "urn:li:share:7514663593506951168",
-      "self": 0,
+      "at": "2026-10-17T18:37:26.094849+00:00",
+      "post_urn": "urn:li:share:7514165310896250880",
+      "self": 1,
       "unidentified": 0,
       "invalid_parent": 0,
       "queued": 0,
-      "duplicate": 0,
+      "duplicate": 1,
       "overflow": 0
     }
   },
