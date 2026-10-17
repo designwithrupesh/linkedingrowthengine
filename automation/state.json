@@ -1887,6 +1887,75 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "post:2026-10-18:0900": {
+      "kind": "post",
+      "text": "An empty state asks the customer to do work before the product has shown much of its value. The copy needs to make that effort understandable.\n\nIn this hypothetical invoicing screen, 'Get started' leaves several questions open. What am I creating? What will I need? Will it be sent immediately? The revised screen answers those questions before the click and explains what the view will show afterward.\n\nI'd test this without an introduction from the team. If the person can explain the next action and what it will do, the empty state is doing its job.",
+      "at": "2026-10-17T13:03:23.605169+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-18T03:30:00+00:00",
+      "allocation_day": "2026-10-18",
+      "format": "image",
+      "asset_id": "empty-state-next-step",
+      "asset_sha256": "5023dfbddb478baa872ad29cb5ec48784d88a4975471e35baffb72a5e7f76cee",
+      "asset_title": "An empty state is a first-use decision",
+      "asset_pages": 1,
+      "asset_spec": {
+        "id": "empty-state-next-step",
+        "kind": "image",
+        "title": "An empty state is a first-use decision",
+        "subtitle": "An invoicing screen before and after.",
+        "caption": "An empty state asks the customer to do work before the product has shown much of its value. The copy needs to make that effort understandable.\n\nIn this hypothetical invoicing screen, 'Get started' leaves several questions open. What am I creating? What will I need? Will it be sent immediately? The revised screen answers those questions before the click and explains what the view will show afterward.\n\nI'd test this without an introduction from the team. If the person can explain the next action and what it will do, the empty state is doing its job.",
+        "slides": [
+          {
+            "title": "Explain the result before asking for work.",
+            "body": [
+              "Explain the result before asking for work."
+            ],
+            "example": "",
+            "layout": "annotated-ui",
+            "visual": {
+              "screens": [
+                {
+                  "label": "Before",
+                  "title": "Invoices",
+                  "rows": [
+                    "No invoices yet",
+                    "Create your first invoice"
+                  ],
+                  "action": "Get started"
+                },
+                {
+                  "label": "After",
+                  "title": "Track unpaid invoices",
+                  "rows": [
+                    "Track payment after creating an invoice.",
+                    "You need a customer and an amount.",
+                    "Save a draft before sending."
+                  ],
+                  "action": "Create invoice"
+                }
+              ],
+              "annotations": [
+                {
+                  "label": "Purpose",
+                  "detail": "Payment status explains why this view exists."
+                },
+                {
+                  "label": "Effort",
+                  "detail": "The required information appears before the action."
+                },
+                {
+                  "label": "Control",
+                  "detail": "A draft makes it clear that creation does not immediately send."
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -1942,6 +2011,11 @@
       "post": 2,
       "interaction": 0,
       "read": 6
+    },
+    "2026-10-18": {
+      "post": 1,
+      "interaction": 0,
+      "read": 0
     }
   },
   "reports": [
