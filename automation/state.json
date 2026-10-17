@@ -1980,9 +1980,12 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-10-17T13:35:00.315436+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7516512888547627008",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "acknowledged",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
