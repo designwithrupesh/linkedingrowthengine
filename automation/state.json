@@ -1969,7 +1969,9 @@
       "media_scheduled_for": "2026-10-18T03:30:00Z",
       "media_operation_id": "61ebb97f566eee2fbfeed45dbe2ceeb92e9d7fb659ce8158459a8296922c6cd6",
       "media_stage": "create-draft",
-      "media_stage_status": "inflight"
+      "media_stage_status": "acknowledged",
+      "http_status": 200,
+      "remote_id": "6ad3721dc012b79dd396a198"
     }
   },
   "days": {
@@ -2216,6 +2218,17 @@
       "scheduled_for": "2026-10-17T12:30:00+00:00",
       "allocation_day": "2026-10-17",
       "post_urn": "urn:li:share:7517200265494855680"
+    },
+    {
+      "id": "6ad3721dc012b79dd396a198",
+      "text": "An empty state asks the customer to do work before the product has shown much of its value. The copy needs to make that effort understandable.\n\nIn this hypothetical invoicing screen, 'Get started' leaves several questions open. What am I creating? What will I need? Will it be sent immediately? The revised screen answers those questions before the click and explains what the view will show afterward.\n\nI'd test this without an introduction from the team. If the person can explain the next action and what it will do, the empty state is doing its job.",
+      "url": null,
+      "at": "2026-10-17T13:03:23.605169+00:00",
+      "scheduled_for": "2026-10-18T03:30:00+00:00",
+      "allocation_day": "2026-10-18",
+      "media_status": "draft",
+      "format": "image",
+      "asset_sha256": "5023dfbddb478baa872ad29cb5ec48784d88a4975471e35baffb72a5e7f76cee"
     }
   ],
   "discovery": {
