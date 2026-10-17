@@ -1968,8 +1968,8 @@
       },
       "media_scheduled_for": "2026-10-18T03:30:00Z",
       "media_operation_id": "61ebb97f566eee2fbfeed45dbe2ceeb92e9d7fb659ce8158459a8296922c6cd6",
-      "media_stage": "create-draft",
-      "media_stage_status": "acknowledged",
+      "media_stage": "reserve-upload",
+      "media_stage_status": "inflight",
       "http_status": 200,
       "remote_id": "6ad3721dc012b79dd396a198"
     }
