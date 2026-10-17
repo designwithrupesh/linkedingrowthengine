@@ -1997,6 +1997,16 @@
       "http_status": 201,
       "remote_id": "7517216614753345536",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-18:1800": {
+      "kind": "post",
+      "text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
+      "at": "2026-10-17T15:08:57.096507+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-18T12:30:00+00:00",
+      "allocation_day": "2026-10-18"
     }
   },
   "days": {
@@ -2055,7 +2065,7 @@
       "public_interaction": 2
     },
     "2026-10-18": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
