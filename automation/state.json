@@ -2327,12 +2327,24 @@
         "unresolved_replies": 0,
         "page_number": 1,
         "next_page": null
+      },
+      "urn:li:share:7517200265494855680": {
+        "last_attempt_at": "2026-10-17T13:03:13.976984+00:00",
+        "poll_count": 1,
+        "status": "checked",
+        "last_success_at": "2026-10-17T13:03:13.976984+00:00",
+        "returned_top_level": 0,
+        "coverage": "bounded-public-results",
+        "returned_rows": 0,
+        "unresolved_replies": 0,
+        "page_number": 1,
+        "next_page": null
       }
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-10-17T09:18:17.960511+00:00",
-      "post_urn": "urn:li:share:7516475491210555392",
+      "at": "2026-10-17T13:03:13.976984+00:00",
+      "post_urn": "urn:li:share:7517200265494855680",
       "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
