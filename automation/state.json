@@ -1975,6 +1975,14 @@
       "http_status": 200,
       "remote_id": "6ad3721dc012b79dd396a198",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "reaction:comment:01a58e5de5cf441629628e4bc3686797679540cacfbb89aa5f7f901aaea43a77": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-17T13:35:00.315436+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7516512888547627008",
+      "parent": null
     }
   },
   "days": {
@@ -2028,8 +2036,9 @@
     },
     "2026-10-17": {
       "post": 2,
-      "interaction": 0,
-      "read": 8
+      "interaction": 1,
+      "read": 8,
+      "public_interaction": 1
     },
     "2026-10-18": {
       "post": 1,
