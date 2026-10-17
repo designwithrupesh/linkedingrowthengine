@@ -2002,11 +2002,14 @@
       "kind": "post",
       "text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
       "at": "2026-10-17T15:08:57.096507+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-18T12:30:00+00:00",
-      "allocation_day": "2026-10-18"
+      "allocation_day": "2026-10-18",
+      "http_status": 200,
+      "remote_id": "6ad38f8ac012b79dd397cace",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -2265,6 +2268,14 @@
       "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "5023dfbddb478baa872ad29cb5ec48784d88a4975471e35baffb72a5e7f76cee"
+    },
+    {
+      "id": "6ad38f8ac012b79dd397cace",
+      "text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
+      "url": null,
+      "at": "2026-10-17T15:08:57.096507+00:00",
+      "scheduled_for": "2026-10-18T12:30:00+00:00",
+      "allocation_day": "2026-10-18"
     }
   ],
   "discovery": {
