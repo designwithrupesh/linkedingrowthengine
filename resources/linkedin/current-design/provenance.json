@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "images": [
+    {
+      "id": "current-notion-column-permissions",
+      "publisher": "Notion",
+      "source_page": "https://www.notion.com/releases/2026-10-13",
+      "published_date": "2026-10-13",
+      "captured_at": "2026-10-18",
+      "source_image": "https://images.ctfassets.net/spoqsaf9291f/aMP67ndDvf2FeoPvfBEqa/fe763bcbb61f96d520cfc75bc4357293/Property_access.jpg",
+      "sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735",
+      "capture_method": "Unaltered native-size Chromium capture of the official product visual. Not a capture from Rupesh's account, a generated mockup, or evidence of hands-on use.",
+      "file": "resources/linkedin/current-design/notion-column-permissions.png"
+    },
+    {
+      "id": "current-linear-stacked-prs",
+      "publisher": "Linear",
+      "source_page": "https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+      "published_date": "2026-10-08",
+      "captured_at": "2026-10-18",
+      "source_image": "https://webassets.linear.app/images/ornj730p/production/3770c67200a675f2ce42edef7405feb5a3b47bcd-3600x2098.png?q=95&auto=format&dpr=2",
+      "sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+      "capture_method": "Unaltered native-size Chromium capture of the official product visual. Not a capture from Rupesh's account, a generated mockup, or evidence of hands-on use.",
+      "file": "resources/linkedin/current-design/linear-stacked-prs.png"
+    },
+    {
+      "id": "current-penpot-inspect",
+      "publisher": "Penpot",
+      "source_page": "https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+      "published_date": "2026-10-15",
+      "captured_at": "2026-10-18",
+      "source_image": "https://penpot.app/blog/content/images/2026/10/inspect@2x.min-1.webp",
+      "sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+      "capture_method": "Unaltered native-size Chromium capture of the official product visual. Not a capture from Rupesh's account, a generated mockup, or evidence of hands-on use.",
+      "file": "resources/linkedin/current-design/penpot-inspect.png"
+    }
+  ]
+}

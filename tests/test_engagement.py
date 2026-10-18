@@ -28,7 +28,7 @@ def at(hour=8, minute=0):
 
 def post(urn=SHARE, url=URL, **extra):
     return {'url': url, 'urn': urn, 'shareUrn': urn if 'activity' not in urn else None,
-            'text': 'A specific product-design trade-off to discuss.',
+            'text': 'Keeping the error message beside the input makes it easier to correct the same field.',
             'authorProfileUrl': 'https://www.linkedin.com/in/source/',
             'postedAtISO': at().isoformat(), **extra}
 

@@ -21,6 +21,34 @@
       "format": "text",
       "title": "The emotional work of an empty state",
       "caption": "An empty search result can make someone wonder whether the product has lost their work.\n\nImagine a project library with no matches after a filter is applied. The person may have spent hours on those files. A bare No results message leaves them to work out whether the files are gone, the search failed or the filter is too narrow.\n\nI'd keep the active filters visible, explain what was searched and offer a direct way back to all projects. If the search itself failed, the screen should say that clearly.\n\nThe visual treatment needs to support the same explanation. An illustration of an empty box might suggest there is no work at all, which would be the wrong story in this example.\n\nI want the person to understand what happened and feel able to recover. What does your product say when someone's work seems to disappear?"
+    },
+    {
+      "date": "2026-10-18",
+      "hour": 18,
+      "format": "text",
+      "title": "Current design point of view",
+      "caption": "Country is a rough guess at language.\n\nFramer's October 1 Firewall update can redirect or block visitors by country and URL path. That's useful control for a site with regional pages.\n\nBut a visitor in the Netherlands might still want the English version. Someone travelling may want the version they use at home.\n\nI'm comfortable using location to suggest a locale. Automatically choosing it needs an obvious way back and a way to remember the person's choice. That's the part of the experience I'd check before turning a rule on.\n\nRelease notes: https://www.framer.com/updates/firewall"
+    },
+    {
+      "date": "2026-10-19",
+      "hour": 18,
+      "format": "text",
+      "title": "Current design point of view",
+      "caption": "I like a quiet interface. I get suspicious when 'cleaner' is the whole argument for a redesign.\n\nSometimes the screen looks cleaner because useful controls have been moved into a menu. The screenshot improves; the person doing the same task now has another place to look.\n\nShow me the before and after while someone is trying to finish something. That's a much more interesting design conversation."
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 18,
+      "format": "text",
+      "title": "Current design point of view",
+      "caption": "I'm starting consulting conversations around product design and brand strategy.\n\nThe work I'm interested in often sits between the two. A product promises simplicity, but its first task needs an explanation. Or the landing page speaks to one customer while the interface seems designed for someone else.\n\nI'd want to understand that mismatch before proposing a new visual direction.\n\nIf your team is circling a decision like this, tell me what you're trying to settle."
+    },
+    {
+      "date": "2026-10-21",
+      "hour": 18,
+      "format": "text",
+      "title": "Current design point of view",
+      "caption": "If you're showing me a redesign, show me the mistake too.\n\nOpen something without permission, or delete the wrong item and try to get it back.\n\nI want to see how the product talks to someone at that moment. A calm hero screen tells me very little about that part of the experience.\n\nThe recovery screens deserve a place in the presentation."
     }
   ]
 }

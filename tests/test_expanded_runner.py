@@ -21,7 +21,8 @@ from automation.twin import Runner
 from lib.url_parser import build_parent_comment_urn
 
 
-POLICY = json.loads(Path('automation/policy.json').read_text(encoding='utf-8'))
+# Source discovery has separate integration tests; these fixtures exercise cadence.
+POLICY = {**json.loads(Path('automation/policy.json').read_text(encoding='utf-8')), 'current_design_hours': []}
 ZONE = ZoneInfo('Asia/Calcutta')
 TEXT = 'A clear customer task gives a product team a useful basis for deciding what to simplify.'
 OWN_URN = 'urn:li:share:7500000000000000001'
@@ -367,9 +368,13 @@ if __name__ == '__main__':
 class InteractionVoiceTests(unittest.TestCase):
     def test_generic_praise_is_rejected_without_damaging_specific_text(self):
         from automation.twin import validate_model_output
-        generic='A strong reminder that speed does not equal quality. '+('A concrete design observation about customer decisions. '*4)
-        specific='Keeping the next action visible reduces the need for a tooltip. '+('A concrete design observation about customer decisions. '*3)
-        self.assertTrue(validate_model_output({'text':generic,'skip':False},'comment')['skip'])
+        generic = 'A strong reminder that speed does not equal quality.'
+        specific = "I'd keep the next action visible here rather than explain where to find it in a tooltip."
+        self.assertLessEqual(len(generic), 220)
+        self.assertLessEqual(len(specific), 220)
+        rejected = validate_model_output({'text': generic, 'skip': False}, 'comment')
+        self.assertTrue(rejected['skip'])
+        self.assertIn('generic praise', rejected['reason'])
         result=validate_model_output({'text':specific,'skip':False},'comment')
         self.assertFalse(result['skip'])
         self.assertEqual(result['text'],specific.strip())

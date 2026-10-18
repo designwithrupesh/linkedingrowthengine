@@ -45,7 +45,7 @@ class ContentPlanContractTests(unittest.TestCase):
         # Publication format may be an image or a document. The invitation
         # policy follows the editorial intent, regardless of its attachment.
         kinds = Counter(slot.get('editorial_format', slot['format']) for slot in self.plan['slots'])
-        self.assertEqual(kinds['consulting-invitation'], 8)
+        self.assertEqual(kinds['consulting-invitation'], 5)
         self.assertEqual(kinds['founding-designer-invitation'], 4)
         for slot in self.plan['slots']:
             weekday = date.fromisoformat(slot['date']).weekday()

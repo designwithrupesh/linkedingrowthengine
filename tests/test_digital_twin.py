@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch, Mock
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
-from automation.twin import Runner, flatten_comments, preflight, model, main, LocalModelError, ModelConfigurationError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, normalize_public_text, validate_model_output, skills, compact_skill_context
+from automation.twin import Runner, flatten_comments, preflight, model, main, LocalModelError, ModelConfigurationError, ModelQualityError, WriteOutcomeError, WriteCheckpointError, normalize_public_text, validate_model_output, skills, compact_skill_context, validate_grounding
 
 # Preserve the original single-slot/shared-interaction contracts independently
 # of the owner's current, expanded live policy. New cadence and reply limits
@@ -400,7 +400,7 @@ class DigitalTwinTests(unittest.TestCase):
 
     @patch('automation.twin.complete')
     def test_failed_draft_receives_one_source_only_edit_pass(self, complete):
-        source = 'A design decision should clarify what an early team needs to learn. ' * 5
+        source = 'A design decision should clarify what an early team needs to learn.'
         edited = ('Research should inform the next design decision. A prototype can expose an uncertain assumption before a team commits to the full product. ' * 8).strip()
         self.assertTrue(900 <= len(edited) <= 1300)
         complete.side_effect = [{'text': source, 'skip': False}, {'text': edited, 'skip': False}]
@@ -415,7 +415,7 @@ class DigitalTwinTests(unittest.TestCase):
 
     @patch('automation.twin.complete')
     def test_failed_editor_is_skipped_without_padding_or_more_calls(self, complete):
-        short = 'A useful design trade-off deserves attention. ' * 5
+        short = 'A useful design trade-off deserves attention.'
         complete.return_value = {'text': short, 'skip': False}
         with patch.dict(os.environ, {'MODEL_API_KEY': 'test-placeholder'}, clear=True):
             result = model(skills('linkedin-post-writer'), {'topic': 'design'}, POLICY)
@@ -425,7 +425,7 @@ class DigitalTwinTests(unittest.TestCase):
 
     @patch('automation.twin.complete')
     def test_editor_cannot_introduce_numeric_claims(self, complete):
-        source = 'Product research should inform the next design decision. ' * 5
+        source = 'Product research should inform the next design decision.'
         edited = ('A prototype exposes an uncertain assumption before the team commits to building the full product. ' * 10) + 'Conversion increased by 50%.'
         self.assertTrue(900 <= len(edited) <= 1300)
         complete.side_effect = [{'text': source, 'skip': False}, {'text': edited, 'skip': False}]
@@ -496,12 +496,22 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertEqual(cleaned, 'Design trade-offs\n\nThe C# prototype cost $4,730 on 14 Feb.\n\nFigma made Design reviews clearer.')
 
     def test_invalid_short_post_and_long_comment_are_skipped_without_padding(self):
-        short = 'A truthful design observation. ' * 10
-        self.assertLess(len(short), 400)
+        short = 'A truthful design observation.'
+        self.assertLess(len(short), 120)
         result = validate_model_output({'text': short, 'skip': False}, 'post')
         self.assertTrue(result['skip'])
         self.assertEqual(result['text'], '')
-        self.assertTrue(validate_model_output({'text': short * 2, 'skip': False}, 'comment')['skip'])
+        self.assertTrue(validate_model_output({'text': short * 20, 'skip': False}, 'comment')['skip'])
+
+    def test_complete_brief_post_and_one_sentence_comment_need_no_padding(self):
+        post = "Notion puts property access beside Edit property. I like keeping that decision close to the column, although the screenshot cannot show what a restricted teammate sees."
+        comment = "The Current label makes the position in the stack clear."
+        self.assertFalse(validate_model_output({'text': post, 'skip': False}, 'post')['skip'])
+        self.assertFalse(validate_model_output({'text': comment, 'skip': False}, 'comment')['skip'])
+
+    def test_unsupported_product_testing_claims_stay_held(self):
+        for claim in ["I tried Notion's column permissions.", "I used Linear Diffs.", "We installed Penpot yesterday."]:
+            self.assertTrue(validate_grounding({'text': claim, 'skip': False}, POLICY)['skip'])
 
     def test_checklist_output_is_skipped_instead_of_rewritten_into_claims(self):
         draft = 'Design choices deserve context.\n\n1. ' + 'Discuss the trade-off with your team. ' * 28
@@ -526,7 +536,7 @@ class DigitalTwinTests(unittest.TestCase):
         self.assertFalse(result['skip'])
         prompt = post.call_args.kwargs['json']['messages'][0]['content']
         self.assertGreater(prompt.rfind('FINAL OUTPUT REQUIREMENTS'), prompt.index('Skill: linkedin-comment-drafter'))
-        self.assertIn('80-350 characters in text', prompt)
+        self.assertIn('20-220 characters in text', prompt)
         self.assertNotIn('900-1300 characters', prompt[prompt.rfind('FINAL OUTPUT REQUIREMENTS'):])
         self.assertEqual(post.call_count, 1)
 

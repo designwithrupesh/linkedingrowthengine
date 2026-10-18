@@ -1,5 +1,7 @@
 # Design resources
 
+[Current design screenshots](current-design/README.md) show attributed Notion, Linear and Penpot product visuals used for specific commentary.
+
 The newest [sharing story](stories/README.md) includes an authored image, a six-page narrative carousel and a two-page working map.
 
 Working materials by Rupesh Kumar for founders and product designers. The PDFs contain selectable text, worked hypothetical examples and writing fields. They can be printed or annotated.

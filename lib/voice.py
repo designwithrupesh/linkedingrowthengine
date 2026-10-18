@@ -67,6 +67,20 @@ _SCAFFOLD = re.compile(
     re.IGNORECASE,
 )
 _EMOJI = re.compile(r'[\U0001F300-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]')
+# These exact constructions recur in recorded comments. Keep this narrower
+# than a ban on ordinary words such as test, watch, useful or trade-off.
+_RECYCLED_ADVICE = re.compile(
+    r"\b(?:the real trade[- ]off|a key trade[- ]off|that['’]s where authenticity starts"
+    r"|i['’]d watch how|what would you test next"
+    r'|how do you test if users actually adopt this behaviou?r)\b'
+    r"|\bthe post (?:doesn['’]t|does not) say\b"
+    r"|^\s*what if\b[^?\n]{1,320}\?\s*i['’]d (?:test|watch|want to see|encourage)\b"
+    r'|\b(?:the bigger picture|intuitive and efficient)\b'
+    r'|\b(?:a smart way to|a smart move for|without overwhelming the users?)\b'
+    r'|\bthat balance between [^.?!]{1,90} helps users\b'
+    r'|^\s*the idea that [^.!?\n]{1,160} is (?:powerful|compelling|interesting)\b',
+    re.IGNORECASE,
+)
 
 
 def violations(text: str) -> tuple[str, ...]:
@@ -81,6 +95,7 @@ def violations(text: str) -> tuple[str, ...]:
          'Text contains a prohibited dash'),
         (bool(_JARGON.search(decoded)), 'Text contains stock jargon'),
         (bool(_PHRASES.search(decoded)), 'Text contains a canned phrase'),
+        (bool(_RECYCLED_ADVICE.search(decoded)), 'Text repeats a stock advice template'),
         (bool(_PRAISE.search(decoded)), 'Text contains generic praise or an empty agreement'),
         (bool(_CONTRAST.search(decoded)), 'Text uses a formulaic contrast'),
         (bool(_SCAFFOLD.search(decoded)), 'Text contains writing scaffolding or Markdown'),
@@ -104,9 +119,25 @@ def prompt_rules() -> str:
     """Rules included explicitly in initial generation and the one edit pass."""
     return (
         'OWNER WRITING RULES, required for every post, comment, reply and message. '
-        'Use ordinary words and a conversational voice. Start with the actual point. '
-        'Refer to a specific detail in the supplied context and say something useful about it. '
-        'Prefer contractions and varied sentence lengths when they sound natural. '
+        'Write as Rupesh, a designer talking to one person, using ordinary words. '
+        'Respond to the exact detail or claim the person chose to share. Say what you make of it. '
+        'A specific reaction or design judgement is enough: appreciate a particular choice, '
+        'agree for a clear reason, disagree with a supported claim, or answer the question asked. '
+        'Choose what fits this conversation rather than covering all these moves. '
+        'Do not force a lesson, a mechanism, a trade-off, an experiment or consulting advice into every response. '
+        'Do not manufacture a disagreement or assume the author ignored something absent from an excerpt. '
+        'Let the supplied detail carry the point; avoid turning it into a broad speech about design. '
+        'Do not review the announcement like marketing copy. Avoid a feature summary followed by '
+        'a generic benefit such as intuitive and efficient, a smart way to, a smart move for, '
+        'without overwhelming the user, or seeing the bigger picture. '
+        'For a comment or reply, join as a peer with one exact thought in one or two ordinary sentences. '
+        'Stop there. Do not give a mini-review, explain the features back to their author, '
+        'or follow your reaction with a rundown of benefits. '
+        'Do not claim an interface is intuitive, fast or easier, or that it helps users quickly '
+        'understand something, without actual evidence in the supplied context. '
+        'Express your own preference about a specific label or placement, not an untested claim about users. '
+        'Prefer one direct sentence when it answers the person; extend only for another concrete detail. '
+        'Use ordinary contractions, plain ASCII punctuation and varied sentence lengths when they sound natural. '
         'Never use em dashes, en dashes, double hyphens or decorative separators. '
         'Use a comma, colon, parentheses or a sentence break instead. '
         'No generic praise, empty agreement, hype, engagement bait or a canned opener. '
@@ -117,22 +148,22 @@ def prompt_rules() -> str:
         'reinforces, captures or points out. Speak directly to the person and their idea. '
         'Avoid "key tension", "the real question", "depth of user value", "true value lies in", '
         '"meaningful impact", "purposeful and impactful", and "shape your product\'s trajectory". '
+        'Avoid the repeated templates "the real trade-off", "a key trade-off", '
+        '"I\'d watch how", "that\'s where authenticity starts", and "what would you test next?". '
+        'Do not default to "What if...? I\'d test/watch..." or turn every reaction into advice '
+        'about testing a customer task. Suggest a test only when that suggestion fits the actual discussion. '
         'Do not use "it\'s not X, it\'s Y", "not just X but Y", or "this isn\'t about X" framing. '
         'Avoid stock jargon: ' + ', '.join(_WORDS) + '. '
         'Use plain prose, with no headings, bullets, numbered lists, hashtags, emojis, '
         'bold, code fences, labels such as Hook/CTA, or assistant commentary. '
-        'Do not impose a repeated paragraph formula, a rule of three, a dramatic reveal '
-        'or a question at the end. Ask a question only when it serves this conversation. '
-        'A short useful answer is preferable to padding. Keep names and product names capitalized. '
-        'Write like a designer talking to one person. Prefer concrete actions such as show, '
-        'test, watch or ask over an abstract summary of product judgment or value. '
-        'The following are hypothetical style examples only. Do not copy their text or treat '
-        'their suggested actions as facts about this conversation: '
-        '"A tour adds another thing to remember. I\'d keep the next action visible on the empty '
-        'screen, then watch someone try it without help." '
-        '"I\'d cut the extra field first. Does the team use that answer to make a decision?" '
-        '"Two prototypes are enough to compare the checkout step. Keep the customer task the '
-        'same so the tool isn\'t the only thing you\'re judging." '
+        'Do not impose a repeated paragraph formula, a rule of three, a dramatic reveal, '
+        'a tidy takeaway, a consulting pitch or a question at the end. '
+        'Ask a question only when its answer matters to this exact conversation. '
+        'One direct sentence can be a complete comment or reply. Stop when the response is complete; '
+        'do not pad it to sound helpful or authoritative. Keep names and product names capitalized. '
+        'Do not recycle an opening, a hypothetical scenario or a concluding question from recent comments. '
+        'Do not imitate spelling mistakes, fake hesitation, confessions or vulnerability to sound personal. '
         'Preserve supplied facts and never invent personal stories, relationships, results or numbers. '
+        'If the context is too thin to respond truthfully, skip rather than filling gaps. '
         'These are writing preferences, not a claim about who authored the text.'
     )

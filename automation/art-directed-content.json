@@ -211,6 +211,121 @@
         "tradeoff": "Closing access can stop future viewing, but cannot recall screenshots or downloaded files."
       },
       "review_status": "checked"
+    },
+    {
+      "id": "current-notion-column-permissions",
+      "kind": "image",
+      "title": "Notion 3.8: Context for your agents",
+      "caption": "Notion has put a permission control inside the database column menu. I like that placement.\n\nIn the October 13 release, property access lets an owner decide which columns a person or agent can view or edit. The screenshot labels it Alpha.\n\nPutting it beside Edit property makes sense. You're already thinking about that column.\n\nWhat I can't judge from this image is the other side: what does someone with restricted access see? A missing field can look like missing data. That experience needs just as much care as the owner's menu.\n\nOfficial Notion release image: https://www.notion.com/releases/2026-10-13",
+      "file": "resources/linkedin/current-design/notion-column-permissions.png",
+      "preview": "resources/linkedin/current-design/notion-column-permissions.png",
+      "sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735",
+      "page_count": 1,
+      "transcript": [
+        "Product Roadmap",
+        "Table",
+        "Name",
+        "Team",
+        "Status",
+        "DRI",
+        "Edit property",
+        "Property access",
+        "Alpha",
+        "Change type",
+        "Filter",
+        "Sort",
+        "Group"
+      ],
+      "design_brief": {
+        "reader_tension": "Understand an actual interface choice rather than an abstract design lesson.",
+        "intended_feeling": "A specific reaction a design peer can agree with or challenge.",
+        "core_decision": "Official product visual shows a Product Roadmap database.",
+        "visual_idea": "Preserve the official product visual at native dimensions with source attribution in the caption.",
+        "story_arc": [
+          "Identify the dated source.",
+          "Point to the visible detail.",
+          "Separate an opinion from what the image cannot establish."
+        ],
+        "tradeoff": "Putting permissions next to a property makes access easier to find. Granular access can also become difficult to reason about. I would want a way to check what a specific teammate can actually see before sharing."
+      },
+      "review_status": "checked"
+    },
+    {
+      "id": "current-linear-stacked-prs",
+      "kind": "image",
+      "title": "Stacked pull requests",
+      "caption": "Linear's October 8 update puts a pull request in the context of its stack. In this screenshot, the current change is number 3, with the surrounding changes still visible.\n\nThe numbering, connecting line and Current label make the position clear without much explanation. I like that.\n\nThe faded neighbouring rows are my hesitation. On a smaller screen, context that's technically there may still be hard to read. I'd want to see this at review size before calling the hierarchy a win.\n\nOfficial Linear release image: https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+      "file": "resources/linkedin/current-design/linear-stacked-prs.png",
+      "preview": "resources/linkedin/current-design/linear-stacked-prs.png",
+      "sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+      "page_count": 1,
+      "transcript": [
+        "rideshare#2853",
+        "Up to date with main branch",
+        "Stack",
+        "4 Display retry count in payment details",
+        "3 Expose retry count in API",
+        "Current",
+        "2 Increment retry count on failed attempts",
+        "1 Add retry count column to payments",
+        "main"
+      ],
+      "design_brief": {
+        "reader_tension": "Understand an actual interface choice rather than an abstract design lesson.",
+        "intended_feeling": "A specific reaction a design peer can agree with or challenge.",
+        "core_decision": "Official product visual displays four numbered changes connected in a vertical stack.",
+        "visual_idea": "Preserve the official product visual at native dimensions with source attribution in the caption.",
+        "story_arc": [
+          "Identify the dated source.",
+          "Point to the visible detail.",
+          "Separate an opinion from what the image cannot establish."
+        ],
+        "tradeoff": "Showing the dependency chain lowers the effort of reconstructing it. My design question is whether a reviewer can also see the consequences of merging this item without having to remember what each status dot means."
+      },
+      "review_status": "checked"
+    },
+    {
+      "id": "current-penpot-inspect",
+      "kind": "image",
+      "title": "Figma to Penpot terminology cheatsheet",
+      "caption": "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team changes tools.\n\nIts October 15 Figma terminology guide explains the naming. The Inspect image shows a selected Flex layout and display: flex in the CSS panel beside it.\n\nThat connection interests me more than learning that Frames are called Boards. It gives designers and developers something concrete to point at when they discuss layout behaviour.\n\nA terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar component and see which habits carry over.\n\nOfficial Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+      "file": "resources/linkedin/current-design/penpot-inspect.png",
+      "preview": "resources/linkedin/current-design/penpot-inspect.png",
+      "sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+      "page_count": 1,
+      "transcript": [
+        "Flex and grid light version",
+        "LAYERS",
+        "View only",
+        "Flex and grid",
+        "Flex layout",
+        "Inspecting code (View Only)",
+        "DONE",
+        "DESIGN",
+        "PROTOTYPE",
+        "INSPECT",
+        "Layer info",
+        "Code",
+        "COPY ALL CODE",
+        "CSS",
+        "HTML",
+        "display: flex;",
+        "flex-direction: column;",
+        "align-items: center;"
+      ],
+      "design_brief": {
+        "reader_tension": "Understand an actual interface choice rather than an abstract design lesson.",
+        "intended_feeling": "A specific reaction a design peer can agree with or challenge.",
+        "core_decision": "The official Inspect image shows the selected Flex layout board beside a CSS panel.",
+        "visual_idea": "Preserve the official product visual at native dimensions with source attribution in the caption.",
+        "story_arc": [
+          "Identify the dated source.",
+          "Point to the visible detail.",
+          "Separate an opinion from what the image cannot establish."
+        ],
+        "tradeoff": "Familiar labels can make switching easier, while browser terms can improve the conversation with developers. I would test a real responsive component before treating the terminology table as proof that the tools behave identically."
+      },
+      "review_status": "checked"
     }
   ]
 }

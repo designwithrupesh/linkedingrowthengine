@@ -18,7 +18,7 @@ from lib.url_parser import parse_linkedin_url, build_parent_comment_urn
 from lib.apify_client import ApifyClient
 from automation.discovery import DiscoveryClient, discover_targets, read_budget_available
 from automation.capacity import check_post_capacity
-from automation import apify_ai, engagement, reply_monitor, voice
+from automation import apify_ai, design_news, engagement, reply_monitor, voice
 from automation.cadence import due_slots
 from lib.apify_client import ApifyError
 from automation.private_actions import PrivateActions, PrivateWriteOutcomeError, PrivateWriteCheckpointError
@@ -158,7 +158,7 @@ def normalize_public_text(text):
 
 
 def output_rules(kind):
-    lengths = {'post': (400, 1300), 'comment': (80, 350), 'reply': (1, 300),
+    lengths = {'post': (120, 1800), 'comment': (20, 220), 'reply': (1, 300),
                'analysis': (150, 1800), 'dm': (1, 1000), 'generic': (1, 3000)}
     low, high = lengths[kind]
     common = ('FINAL OUTPUT REQUIREMENTS. These override conflicting templates above. '
@@ -175,10 +175,10 @@ def output_rules(kind):
     style = ('Use plain text, no emoji title, Markdown headings, bold markers, hashtags, numbered checklists or bullet lists. '
              'Use complete sentences and short natural paragraphs, without generic praise or invented vulnerability. ')
     if kind == 'post':
-        return common + style + f'Write exactly one LinkedIn post of {low}-{high} characters in the text field. Use natural paragraphs of varied length, only where they help the idea. Explain one concrete design trade-off and a practical implication for early-stage founders. Stop when the point is clear. Do not pad to a target length, impose a hook formula or output a title plus a generic checklist. Count the post text, not the JSON wrapper.'
+        return common + style + f'Write exactly one LinkedIn post of {low}-{high} characters in the text field. Use natural paragraphs of varied length, only where they help the idea. Give a specific point of view about the supplied artifact, observation or question. Name what you like, doubt or would change and the detail behind that view. A short reaction can stand on its own; do not force a founder lesson, a trade-off or an experiment into every post. Stop when the point is clear. Do not pad to a target length, impose a hook formula or output a title plus a generic checklist. Count the post text, not the JSON wrapper.'
     if kind in ('comment', 'reply'):
         action = 'Reply to the supplied comment using its parent context' if kind == 'reply' else 'Comment on the supplied post'
-        return common + style + f'{action}. Start directly with a concrete mechanism, trade-off or suggestion from the supplied context. Do not open with praise, "great post", "love this", or "a strong reminder". Use {low}-{high} characters in text, one specific useful observation, at most two paragraphs. Do not generate a standalone post.'
+        return common + style + f'{action}. Answer the actual person and the exact detail they shared. A specific reaction or reasoned opinion is sufficient; do not invent a disagreement, prescribe an experiment, or force advice. Do not open with praise, "great post", "love this", or "a strong reminder". Use {low}-{high} characters in text, one specific useful observation, at most two paragraphs. Do not generate a standalone post.'
     return common + style + f'Keep text between {low} and {high} characters.'
 
 
@@ -195,7 +195,7 @@ def validate_model_output(result, kind):
         return {'text': '', 'skip': True, 'reason': failures[0]}
     if kind != 'analysis':
         text = normalize_public_text(text)
-    low, high = {'post': (400, 1300), 'comment': (80, 350), 'reply': (1, 300),
+    low, high = {'post': (120, 1800), 'comment': (20, 220), 'reply': (1, 300),
                  'analysis': (150, 1800), 'dm': (1, 1000), 'generic': (1, 3000)}[kind]
     if not low <= len(text) <= high:
         return {'text': '', 'skip': True, 'reason': f'{kind} text failed the required character range'}
@@ -223,7 +223,7 @@ def validate_grounding(result, policy):
         r'(?:(?:often|sometimes|frequently|personally|recently|previously|also|already|directly)\s+){0,3}'
         r'(?:seen|observed|watched|noticed|found|learned|learnt|tested|measured|discovered|'
         r'helped|achieved|delivered|increased|reduced|built|launched|led|managed|ran|run|worked|'
-        r'redesigned|supported|advised|consulted|coached)\b'
+        r'redesigned|supported|advised|consulted|coached|used|tried|installed|screenshotted)\b'
         r'|\b(?:my|our)\s+(?:clients?|customers?|teams?)\b'
         r'|\b(?:in|from) my experience\b', re.IGNORECASE)
     for sentence in re.split(r'(?<=[.!?])\s+|\n+', result['text']):
@@ -339,9 +339,15 @@ def model(task, context, policy):
     else:
         endpoint, token, name, local = model_connection()
     rules = output_rules(kind)
-    factual_policy = {key: policy[key] for key in ('background', 'goals', 'audience', 'boundaries', 'authorization', 'source_notes') if key in policy}
+    factual_policy = {key: policy[key] for key in ('background', 'goals', 'audience', 'boundaries', 'authorization', 'source_notes', 'voice_direction') if key in policy}
     def system_prompt(local_backend):
         operational = compact_skill_context(task) if local_backend else task
+        if kind in ('comment', 'reply'):
+            names = list(dict.fromkeys(re.findall(r'(?m)^Skill: (linkedin-[a-z-]+)', task)))
+            # The imported interaction templates impose minimum lengths and
+            # advice formulas that conflict with the owner's peer voice.
+            # Keep skill identity; the explicit owner/output rules govern text.
+            operational = '\n'.join('Skill: ' + name for name in names)
         firsthand = ('' if policy.get('source_notes') else
                      'No owner firsthand observations were supplied. Do not answer a source question about '
                      'personal experience with a story. Give a conditional suggestion using I would or I\u2019d.\n')
@@ -711,9 +717,17 @@ class Runner:
             task = skills('linkedin-content-planner', 'linkedin-post-writer')
             if p['source_notes']:
                 task += '\n' + skills('linkedin-repurposer')
+            source = None
+            if not force and design_news.requires_current_design(brief, p, hour):
+                source = design_news.select_source(self, brief, publication_time=schedule)
+                if source is None:
+                    print('Post deferred: no unused fresh official design source is available.')
+                    continue
+                design_news.apply_source_context(context, source)
+                task += '\n' + design_news.CURRENT_DESIGN_RULES
             asset = None
             from automation.visual_planning import select_brief_format, prepare_visual
-            if not force and select_brief_format(p, self.day, hour, brief) != 'text':
+            if source is None and not force and select_brief_format(p, self.day, hour, brief) != 'text':
                 try:
                     asset = prepare_visual(self, brief, self.day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
                 except apify_ai.ApifyBudgetError:
@@ -723,6 +737,8 @@ class Runner:
                 text = asset['caption'] if asset else None
             else:
                 text = self.draft(task, context)
+            if source is not None:
+                text = design_news.finalize_source_post(text, source, p)
             if text:
                 # Drafting can outlast the initial publication lead, especially
                 # when the free model needs an editing pass. Keep the slot's

@@ -73,17 +73,91 @@ class VoiceTests(unittest.TestCase):
                 self.assertTrue(voice.violations('Test the checkout step first. ' + phrase))
         self.assertFalse(voice.violations('A user-initiated call-up could reduce cognitive load by keeping the extra information out of the task until it is needed.'))
 
-    def test_source_summary_prefaces_are_rejected_and_prompt_examples_are_hypothetical(self):
+    def test_source_summary_prefaces_are_rejected_without_teaching_a_repeated_caption(self):
         for subject in ('The post', 'This post'):
             for verb in ('raises', 'highlights', 'shows', 'reminds', 'underscores',
                          'reinforces', 'captures', 'points out'):
                 with self.subTest(subject=subject, verb=verb):
                     self.assertTrue(voice.violations(subject + ' ' + verb + ' a problem worth testing.'))
         prompt = voice.prompt_rules()
-        self.assertIn('hypothetical style examples only', prompt)
-        self.assertIn('Do not copy their text', prompt)
-        self.assertIn("I'd keep the next action visible", prompt)
+        self.assertNotIn('A tour adds another thing to remember', prompt)
+        self.assertNotIn("I'd cut the extra field first", prompt)
+        self.assertNotIn('Two prototypes are enough', prompt)
         self.assertIn('Speak directly to the person', prompt)
+
+    def test_recorded_stock_advice_is_rejected_without_banning_ordinary_design_words(self):
+        recorded = (
+            'The real trade-off is whether the system can handle new bugs without regression.',
+            'A key trade-off: faster iteration risks shallow impact.',
+            'That\u2019s where authenticity starts.',
+            'I\u2019d watch how the conference defines it through a real user task.',
+            'What if the workflow is simple but not widely shared? I\u2019d encourage teams to document the exact input.',
+            'What if the feedback is focused on consistency? I\u2019d want to see an example.',
+            'Spent on what? The post doesn\u2019t say. What would you test next?',
+            'How do you test if users actually adopt this behavior?',
+            "The idea that products carry the experience of their creators is powerful. I'd add a feature.",
+        )
+        for text in recorded:
+            with self.subTest(text=text):
+                self.assertIn('Text repeats a stock advice template', voice.violations(text))
+        ordinary = (
+            'The trade-off is visible in the smaller type. It fits more rows, but I find the totals harder to scan.',
+            "I'd watch the recording once without sound to see whether the labels explain the next step.",
+            "I'd test the smaller label at the same screen width before changing its contrast.",
+            'What if the sidebar stayed open while the canvas moves?',
+            'The swipe keeps the message in view. That feels easier to follow than opening another panel.',
+            'The red error label is useful here because the rest of the form stays quiet.',
+        )
+        for text in ordinary:
+            with self.subTest(text=text):
+                self.assertEqual(voice.violations(text), ())
+
+    def test_short_specific_reactions_answers_and_supported_disagreement_pass(self):
+        for text in ('The larger caption is easier to scan beside that dense chart.',
+                     'Yes, the undo action should stay visible after the card moves.',
+                     "I disagree with hiding the price until checkout. The earlier comparison needs it.",
+                     'Removing the second panel keeps the original message in view.',
+                     'The warmer paper colour makes the black type feel less harsh.'):
+            with self.subTest(text=text):
+                self.assertEqual(voice.require_plain_text(text), text)
+
+    def test_observed_generic_marketing_benefits_are_rejected_narrowly(self):
+        for text in (
+            'Placing the control beside the label is a smart move for discoverability.',
+            'This helps clarify context without overwhelming the user.',
+            'This helps clarify context without overwhelming the users.',
+            'The grouped controls are a smart way to keep focus on the task.',
+            'This gives users the bigger picture.',
+        ):
+            with self.subTest(text=text):
+                self.assertIn('Text repeats a stock advice template', voice.violations(text))
+        for text in (
+            'The smart-reply button sits very close to delete. I would separate them.',
+            'Calling it intuitive does not explain why the label changed.',
+            'The heading helps separate the two sections.',
+            'That is a smart placement for the undo button beside the changed item.',
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(voice.violations(text), ())
+
+    def test_comment_prompt_stops_after_one_peer_thought_instead_of_a_benefit_rundown(self):
+        prompt = voice.prompt_rules()
+        self.assertIn('one exact thought in one or two ordinary sentences', prompt)
+        self.assertIn('Stop there. Do not give a mini-review', prompt)
+        self.assertIn('explain the features back to their author', prompt)
+        self.assertIn('without actual evidence in the supplied context', prompt)
+
+    def test_prompt_permits_a_point_of_view_without_mandatory_advice_or_a_question(self):
+        prompt = voice.prompt_rules()
+        self.assertIn('A specific reaction or design judgement is enough', prompt)
+        self.assertIn('One direct sentence can be a complete comment or reply', prompt)
+        self.assertIn('Do not force a lesson', prompt)
+        self.assertIn('Do not manufacture a disagreement', prompt)
+        self.assertIn('a consulting pitch or a question at the end', prompt)
+        self.assertIn('plain ASCII punctuation', prompt)
+        self.assertIn('Do not imitate spelling mistakes', prompt)
+        self.assertIn('never invent personal stories', prompt)
+        self.assertIn('not a claim about who authored the text', prompt)
 
     def test_scaffolding_hashtags_emoji_and_assistant_commentary_are_rejected(self):
         for prefix in ('## Design', '**Design**', '1. Test first', '- Test first',

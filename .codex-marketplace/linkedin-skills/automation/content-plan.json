@@ -132,78 +132,81 @@
     {
       "date": "2026-10-18",
       "hour": 18,
-      "topic": "Product language is part of brand strategy. Discuss how tone changes when a customer is confused or disappointed.",
+      "topic": "Framer country-based routing: distinguish a visitor location from their language preference.",
       "format": "text",
-      "editorial_format": "position"
+      "editorial_format": "design-pov"
     },
     {
       "date": "2026-10-19",
       "hour": 9,
-      "topic": "Turn vague interview opinions into questions about recent behavior and actual decisions. Close: a question a founder can ask without leading the answer.",
-      "format": "carousel",
-      "editorial_format": "framework",
-      "media_ref": "research-question-rewrites"
-    },
-    {
-      "date": "2026-10-19",
-      "hour": 18,
-      "topic": "Treat a design-system investment as a response to repeated work. Discuss what should exist before a small team creates a large system.",
-      "format": "text",
-      "editorial_format": "founder-decision"
-    },
-    {
-      "date": "2026-10-20",
-      "hour": 9,
-      "topic": "Define the smallest product flow that lets a team test its central assumption. Close: a boundary-setting exercise.",
-      "format": "freebie",
-      "editorial_format": "checklist",
-      "media_ref": "first-release-boundary"
-    },
-    {
-      "date": "2026-10-20",
-      "hour": 18,
-      "topic": "Invite founders with an unclear first release to discuss its central customer task and the design decisions around it. Do not imply a standing free audit service.",
-      "format": "text",
-      "cta": "If your team is deciding what belongs in its first release, I would welcome a conversation about the customer task and the choices around it.",
-      "editorial_format": "consulting-invitation"
-    },
-    {
-      "date": "2026-10-21",
-      "hour": 9,
-      "topic": "Check whether the landing page and the first product experience describe the same value. Close: a consistency question.",
+      "topic": "Notion column permissions: a lock in the property menu and the restricted viewer experience.",
       "format": "image",
-      "editorial_format": "framework",
-      "media_ref": "promise-to-first-task"
+      "editorial_format": "design-pov",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "current-notion-column-permissions"
+    },
+    {
+      "date": "2026-10-19",
+      "hour": 18,
+      "topic": "Question a redesign described only as cleaner: ask what happened to useful controls.",
+      "format": "text",
+      "editorial_format": "design-pov"
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 9,
+      "topic": "Linear stacked pull requests: read position and nearby changes in the actual interface.",
+      "format": "image",
+      "editorial_format": "design-pov",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "current-linear-stacked-prs"
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 18,
+      "topic": "Invite a consulting conversation about a mismatch between a product promise and its first task.",
+      "format": "text",
+      "editorial_format": "consulting-invitation",
+      "cta": "If your team is circling a decision like this, tell me what you are trying to settle."
+    },
+    {
+      "date": "2026-10-21",
+      "hour": 9,
+      "topic": "Penpot terminology and Inspect: connect a layout name to the CSS shown beside it.",
+      "format": "image",
+      "editorial_format": "design-pov",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "current-penpot-inspect"
     },
     {
       "date": "2026-10-21",
       "hour": 18,
-      "topic": "Consider who should decide when user feedback conflicts with the product's intended audience. Ask what evidence changes that decision.",
+      "topic": "Show recovery and permission failures when presenting a redesign, alongside the polished route.",
       "format": "text",
-      "editorial_format": "discussion"
+      "editorial_format": "design-pov"
     },
     {
       "date": "2026-10-22",
       "hour": 9,
-      "topic": "Make each review distinguish the problem, proposed solution, and unresolved assumption. Close: a concise review agenda.",
-      "format": "carousel",
-      "editorial_format": "checklist",
-      "media_ref": "design-review-agenda"
+      "topic": "Discuss a verified recent design article or product update, focusing on layout behaviour or implementation details.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-22",
       "hour": 18,
-      "topic": "Explain how an outside design perspective could help a team resolve an ambiguous product-and-brand decision. Invite a specific conversation without promising business outcomes.",
+      "topic": "Offer a specific design opinion about a visible product decision without adding a consulting pitch.",
       "format": "text",
-      "cta": "If an outside design perspective could help your team resolve an unclear product-and-brand decision, I would welcome a conversation about the problem.",
-      "editorial_format": "consulting-invitation"
+      "editorial_format": "design-pov"
     },
     {
       "date": "2026-10-23",
       "hour": 9,
-      "topic": "Summarize ways to make an early product clearer without expanding its feature list. Close: a practical takeaway.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a design claim that the source actually supports.",
       "format": "text",
-      "editorial_format": "synthesis"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-23",
@@ -216,10 +219,10 @@
     {
       "date": "2026-10-24",
       "hour": 9,
-      "topic": "Define the first designer's expected responsibilities before writing the job description. Close: a mandate-writing prompt.",
-      "format": "freebie",
-      "editorial_format": "checklist",
-      "media_ref": "first-design-hire-brief"
+      "topic": "Discuss a verified recent design article or product update, focusing on accessibility or a recovery path.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-24",
@@ -231,10 +234,10 @@
     {
       "date": "2026-10-25",
       "hour": 9,
-      "topic": "Evaluate how a designer explains constraints, decisions, and trade-offs. Close: a question about the reasoning behind a piece of work.",
-      "format": "carousel",
-      "editorial_format": "framework",
-      "media_ref": "portfolio-decision-review"
+      "topic": "Discuss a verified recent design article or product update, focusing on a reasoned opinion about the named artifact.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-25",
@@ -246,10 +249,10 @@
     {
       "date": "2026-10-26",
       "hour": 9,
-      "topic": "Sort debt by customer confusion, repeated team effort, and inconsistency before planning cleanup. Close: a useful triage lens.",
-      "format": "image",
-      "editorial_format": "checklist",
-      "media_ref": "design-debt-triage"
+      "topic": "Discuss a verified recent design article or product update, focusing on one interface choice and the person using it.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-26",
@@ -261,10 +264,10 @@
     {
       "date": "2026-10-27",
       "hour": 9,
-      "topic": "Start a design brief with the intended customer change, constraints, and what remains uncertain. Close: a practical brief outline.",
-      "format": "freebie",
-      "editorial_format": "framework",
-      "media_ref": "founder-design-brief"
+      "topic": "Discuss a verified recent design article or product update, focusing on a new tool interaction and the effort of learning it.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-27",
@@ -277,9 +280,10 @@
     {
       "date": "2026-10-28",
       "hour": 9,
-      "topic": "Make product, engineering, and design review the same customer task before debating a solution. Close: a working-session prompt.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a concrete visual or typography decision.",
       "format": "text",
-      "editorial_format": "checklist"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-28",
@@ -291,25 +295,25 @@
     {
       "date": "2026-10-29",
       "hour": 9,
-      "topic": "Examine trust in permissions, pricing explanations, and recovery from errors using hypothetical examples. Close: a brand-behavior checklist.",
-      "format": "carousel",
-      "editorial_format": "walkthrough",
-      "media_ref": "trust-in-product-moments"
+      "topic": "Discuss a verified recent design article or product update, focusing on layout behaviour or implementation details.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-29",
       "hour": 18,
-      "topic": "Invite a product-and-brand conversation focused on a moment where customers hesitate. No fabricated diagnosis or assurance of higher conversion.",
+      "topic": "Offer a specific design opinion about a visible product decision without adding a consulting pitch.",
       "format": "text",
-      "cta": "If your customers hesitate at an important moment in the experience, I would welcome a conversation about the product and brand questions involved.",
-      "editorial_format": "consulting-invitation"
+      "editorial_format": "design-pov"
     },
     {
       "date": "2026-10-30",
       "hour": 9,
-      "topic": "Share a checklist for making a first design hire's role specific and workable. Close: a useful hiring takeaway.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a design claim that the source actually supports.",
       "format": "text",
-      "editorial_format": "synthesis"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-30",
@@ -322,10 +326,10 @@
     {
       "date": "2026-10-31",
       "hour": 9,
-      "topic": "Evaluate an AI-assisted workflow through the quality of its decisions and customer-task results. Close: a test a team could run, without invented metrics.",
-      "format": "image",
-      "editorial_format": "framework",
-      "media_ref": "ai-workflow-decision-test"
+      "topic": "Discuss a verified recent design article or product update, focusing on accessibility or a recovery path.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-10-31",
@@ -337,10 +341,10 @@
     {
       "date": "2026-11-01",
       "hour": 9,
-      "topic": "Choose what a prototype must make testable before choosing its fidelity. Close: a learning-goal prompt.",
-      "format": "freebie",
-      "editorial_format": "checklist",
-      "media_ref": "prototype-learning-plan"
+      "topic": "Discuss a verified recent design article or product update, focusing on a reasoned opinion about the named artifact.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-01",
@@ -352,10 +356,10 @@
     {
       "date": "2026-11-02",
       "hour": 9,
-      "topic": "Review handoffs between marketing, product, and customer support as one customer experience. Close: a cross-team review prompt.",
-      "format": "carousel",
-      "editorial_format": "framework",
-      "media_ref": "customer-handoff-review"
+      "topic": "Discuss a verified recent design article or product update, focusing on one interface choice and the person using it.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-02",
@@ -367,9 +371,10 @@
     {
       "date": "2026-11-03",
       "hour": 9,
-      "topic": "Explain a design consulting problem in terms of the client's decision, evidence, and boundaries. Close: a useful scoping takeaway.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a new tool interaction and the effort of learning it.",
       "format": "text",
-      "editorial_format": "checklist"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-03",
@@ -382,9 +387,10 @@
     {
       "date": "2026-11-04",
       "hour": 9,
-      "topic": "Decide which customer behavior would indicate that a design change helped. Close: a measurement question without claiming results.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a concrete visual or typography decision.",
       "format": "text",
-      "editorial_format": "framework"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-04",
@@ -396,25 +402,25 @@
     {
       "date": "2026-11-05",
       "hour": 9,
-      "topic": "Make feedback actionable by naming the task, observed issue, and possible next test. Close: a useful critique prompt.",
+      "topic": "Discuss a verified recent design article or product update, focusing on layout behaviour or implementation details.",
       "format": "text",
-      "editorial_format": "framework"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-05",
       "hour": 18,
-      "topic": "Invite a conversation about a design decision where a team keeps circling back. Clarify that any engagement needs an agreed scope, not an automatic promise.",
+      "topic": "Offer a specific design opinion about a visible product decision without adding a consulting pitch.",
       "format": "text",
-      "cta": "If your team keeps circling back to the same design decision, I would welcome a conversation about what needs to become clearer. Any engagement would need an agreed scope.",
-      "editorial_format": "consulting-invitation"
+      "editorial_format": "design-pov"
     },
     {
       "date": "2026-11-06",
       "hour": 9,
-      "topic": "Combine the month's principles into a short product-and-brand review checklist. Close: a saveable reference.",
-      "format": "image",
-      "editorial_format": "synthesis",
-      "media_ref": "product-brand-review-card"
+      "topic": "Discuss a verified recent design article or product update, focusing on a design claim that the source actually supports.",
+      "format": "text",
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-06",
@@ -427,9 +433,10 @@
     {
       "date": "2026-11-07",
       "hour": 9,
-      "topic": "Share one lesson from actual public discussions during the experiment only if the recorded comments support it. Otherwise explain a design principle without claiming feedback.",
+      "topic": "Discuss a verified recent design article or product update, focusing on accessibility or a recovery path.",
       "format": "text",
-      "editorial_format": "evidence-review"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-07",
@@ -441,9 +448,10 @@
     {
       "date": "2026-11-08",
       "hour": 9,
-      "topic": "Publish a compact checklist for connecting a customer task, product choice, and brand promise. Close: a useful takeaway.",
+      "topic": "Discuss a verified recent design article or product update, focusing on a reasoned opinion about the named artifact.",
       "format": "text",
-      "editorial_format": "framework"
+      "editorial_format": "design-pov",
+      "source_mode": "current_design"
     },
     {
       "date": "2026-11-08",
@@ -459,6 +467,84 @@
       "previous_date": "2026-10-16",
       "previous_hour": 9,
       "reason": "Replaced by the reviewed sharing story; the older resource remains available without a publication slot."
+    },
+    {
+      "media_ref": "research-question-rewrites",
+      "previous_date": "2026-10-19",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "first-release-boundary",
+      "previous_date": "2026-10-20",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "promise-to-first-task",
+      "previous_date": "2026-10-21",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "design-review-agenda",
+      "previous_date": "2026-10-22",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "first-design-hire-brief",
+      "previous_date": "2026-10-24",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "portfolio-decision-review",
+      "previous_date": "2026-10-25",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "design-debt-triage",
+      "previous_date": "2026-10-26",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "founder-design-brief",
+      "previous_date": "2026-10-27",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "trust-in-product-moments",
+      "previous_date": "2026-10-29",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "ai-workflow-decision-test",
+      "previous_date": "2026-10-31",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "prototype-learning-plan",
+      "previous_date": "2026-11-01",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "customer-handoff-review",
+      "previous_date": "2026-11-02",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
+    },
+    {
+      "media_ref": "product-brand-review-card",
+      "previous_date": "2026-11-06",
+      "previous_hour": 9,
+      "reason": "Deferred for the owner-requested current design commentary and screenshot mix."
     }
   ]
 }

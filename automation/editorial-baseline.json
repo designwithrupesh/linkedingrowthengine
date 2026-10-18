@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "captured_at": "2026-10-18T05:45:14.984450+00:00",
+  "source": "Publora LinkedIn post statistics",
+  "posts": [
+    {
+      "post_group_id": "6ad3721dc012b79dd396a198",
+      "published_slot": "2026-10-18T09:00:00+05:30",
+      "post_urn": "urn:li:share:7517426754408534016",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7517426754408534016/",
+      "metrics": {
+        "IMPRESSION": 12,
+        "MEMBERS_REACHED": 6,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": true
+    },
+    {
+      "post_group_id": "6acf3a566665abdba464fcdc",
+      "published_slot": "2026-10-17T18:00:00+05:30",
+      "post_urn": "urn:li:share:7517200265494855680",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7517200265494855680/",
+      "metrics": {
+        "IMPRESSION": 81,
+        "MEMBERS_REACHED": 61,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6acf3a3bab6b198ebf450c62",
+      "published_slot": "2026-10-17T09:00:00+05:30",
+      "post_urn": "urn:li:ugcPost:7517064370120634369",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7517064370120634369/",
+      "metrics": {
+        "IMPRESSION": 13,
+        "MEMBERS_REACHED": 12,
+        "REACTION": 1,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-value",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6acf3a346665abdba464fa96",
+      "published_slot": "2026-10-16T18:00:00+05:30",
+      "post_urn": "urn:li:share:7516837882951778304",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7516837882951778304/",
+      "metrics": {
+        "IMPRESSION": 90,
+        "MEMBERS_REACHED": 65,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": true
+    },
+    {
+      "post_group_id": "6acf3a116665abdba464f857",
+      "published_slot": "2026-10-16T09:00:00+05:30",
+      "post_urn": "urn:li:ugcPost:7516702017613127680",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516702017613127680/",
+      "metrics": {
+        "IMPRESSION": 35,
+        "MEMBERS_REACHED": 23,
+        "REACTION": 1,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-value",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6acf3a0aab6b198ebf450869",
+      "published_slot": "2026-10-15T18:00:00+05:30",
+      "post_urn": "urn:li:share:7516475491210555392",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7516475491210555392/",
+      "metrics": {
+        "IMPRESSION": 126,
+        "MEMBERS_REACHED": 97,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6acf39cdab6b198ebf450152",
+      "published_slot": "2026-10-15T09:00:00+05:30",
+      "post_urn": "urn:li:share:7516339844223115264",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7516339844223115264/",
+      "metrics": {
+        "IMPRESSION": 36,
+        "MEMBERS_REACHED": 23,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": true
+    },
+    {
+      "post_group_id": "6accba4126b57a9d24d343fe",
+      "published_slot": "2026-10-14T18:00:00+05:30",
+      "post_urn": "urn:li:ugcPost:7516113634779901952",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516113634779901952/",
+      "metrics": {
+        "IMPRESSION": 59,
+        "MEMBERS_REACHED": 39,
+        "REACTION": 1,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-value",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6ac7e8c088cd87066bbfd63c",
+      "published_slot": "2026-10-14T09:00:00+05:30",
+      "post_urn": "urn:li:share:7515977197396844546",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7515977197396844546/",
+      "metrics": {
+        "IMPRESSION": 211,
+        "MEMBERS_REACHED": 120,
+        "REACTION": 0,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-zero",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    },
+    {
+      "post_group_id": "6accba26fafcfc71104a54ad",
+      "published_slot": "2026-10-13T18:00:00+05:30",
+      "post_urn": "urn:li:ugcPost:7515750753525788672",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515750753525788672/",
+      "metrics": {
+        "IMPRESSION": 51,
+        "MEMBERS_REACHED": 29,
+        "REACTION": 1,
+        "COMMENT": 0,
+        "RESHARE": 0
+      },
+      "availability": {
+        "IMPRESSION": "reported-value",
+        "MEMBERS_REACHED": "reported-value",
+        "REACTION": "reported-value",
+        "COMMENT": "reported-zero",
+        "RESHARE": "reported-zero"
+      },
+      "cached": false
+    }
+  ],
+  "aggregate": {
+    "impressions_sum_not_unique": 714,
+    "reactions_sum": 4,
+    "comments_sum": 0,
+    "reshares_sum": 0,
+    "observed_post_count": 10,
+    "note": "Post ages differ. Reach is not summed because member overlap is unknown. No causal comparison of media formats is justified by ten posts."
+  },
+  "limitations": [
+    "Publora list-posts order is creation order, so latest posts were sorted by scheduled publication time.",
+    "GET get-post verifies attached media; list-posts omits media inventory.",
+    "LinkedIn URLs derived from provider postedId are not independent proof of a public-page read.",
+    "Analytics may lag up to 24 hours and Publora caches metrics for two hours. Missing or null metrics are unavailable, never treated as zero."
+  ]
+}

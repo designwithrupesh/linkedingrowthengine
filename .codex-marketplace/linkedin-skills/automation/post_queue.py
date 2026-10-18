@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 from automation.cadence import DEFAULT_POSTING_HOURS, claimed_post_count, slot_key
 from automation import apify_ai
 from automation.visual_planning import select_brief_format, prepare_visual
+from automation import design_news
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,8 +121,17 @@ def prepare_next_day_posts(runner):
                                     if action.get('kind') == 'post' and isinstance(action.get('text'), str)][-3:]}
         if brief:
             context.update(topic=brief['topic'], content_brief=brief)
+        source = None
+        draft_task = task
+        if design_news.requires_current_design(brief, policy, hour):
+            source = design_news.select_source(runner, brief, publication_time=schedule)
+            if source is None:
+                print('Next-day post deferred: no unused fresh official design source is available.')
+                continue
+            design_news.apply_source_context(context, source)
+            draft_task += '\n' + design_news.CURRENT_DESIGN_RULES
         asset = None
-        if select_brief_format(policy, day, hour, brief) != 'text':
+        if source is None and select_brief_format(policy, day, hour, brief) != 'text':
             try:
                 asset = prepare_visual(runner, brief, day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
             except apify_ai.ApifyBudgetError:
@@ -130,7 +140,9 @@ def prepare_next_day_posts(runner):
                 continue
             text = asset['caption'] if asset else None
         else:
-            text = runner.draft(task, context)
+            text = runner.draft(draft_task, context)
+        if source is not None:
+            text = design_news.finalize_source_post(text, source, policy)
         if not text:
             continue
         if claimed_post_count(day, runner.state, zone_name) >= limit:

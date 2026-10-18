@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 import hashlib
+import html
+import re
 from typing import Any
 from zoneinfo import ZoneInfo
 
@@ -17,6 +19,29 @@ from automation.discovery import post_urn, profile_handle
 _UNRESOLVED = {'inflight', 'unknown-needs-reconciliation'}
 _POST_FIELDS = ('url', 'urn', 'shareUrn', 'text', 'authorName', 'authorHeadline',
                 'authorProfileUrl', 'postedAtISO', 'origin', 'sourceProfile')
+_LINK = re.compile(r'https?://\S+', re.IGNORECASE)
+_EXTERNAL_TEASER = re.compile(
+    r'\b(?:full (?:post|article|episode|talk|video)|read (?:the )?(?:rest|full|more)'
+    r"|watch (?:the )?(?:full|video|talk)|here['’]s the (?:talk|video|episode))\b", re.IGNORECASE)
+_MEDIA_HEADLINE = re.compile(r'\b(?:on how to|on why|on what|(?:new|full) (?:video|talk|episode))\b', re.IGNORECASE)
+_SPONSORED = re.compile(
+    r'(?<!\w)#(?:ad|sponsored)\b|\b(?:paid partnership|sponsored (?:post|content|by)|advertisement)\b'
+    r'|\b(?:thanks?|thank you) (?:to )?(?:our|the) (?:\w+ ){0,3}sponsors?\b', re.IGNORECASE)
+_TEACHING_OFFER = re.compile(r'\b(?:workshop|course|cohort|masterclass|bootcamp|webinar|conference|tickets?|students?)\b', re.IGNORECASE)
+_ENROLLMENT = re.compile(
+    r'\b(?:enroll?ment|enroll?|register|registration|sign[ -]?up|early[ -]?bird'
+    r'|(?:buy|book|reserve|get) (?:your |a )?(?:ticket|seat|spot)'
+    r'|join (?:me|us)|next cohort|limited (?:seats|spots)|this (?:saturday|sunday)'
+    r'|(?:final|last) reminder|(?:tickets?|seats?|spots?) (?:now )?(?:available|on sale))\b', re.IGNORECASE)
+_DESIGN_DETAIL = re.compile(
+    r'\b(?:users?|customers?|buttons?|forms?|inputs?|screens?|layouts?|errors?|prices?|checkout'
+    r'|icons?|menus?|navigation|design|products?|brands?|prototypes?|typography|type|spacing'
+    r'|headings?|labels?|contrast|colou?rs?|onboarding|sidebars?|canvas|undo|messages?|interfaces?)\b',
+    re.IGNORECASE)
+_ASSERTION = re.compile(
+    r"\b(?:is|are|isn['’]t|aren['’]t|does|do|can|cannot|should|will|won['’]t|"
+    r'(?:make|keep|need|add|hide|remove|stop|leave|let|block|feel|look|cost|cause|mean|help|'
+    r'create|hurt|reduce|save|start|show|put|give|move|stay|work|read|fit)s?)\b', re.IGNORECASE)
 
 
 def _clock(now: datetime, policy: dict) -> datetime:
@@ -162,6 +187,41 @@ def _engagement(state: dict) -> dict:
     return state.setdefault('engagement', {})
 
 
+def context_quality(post: dict) -> tuple[bool, str]:
+    """Reject observed teaser/ad formats without guessing their missing content.
+
+    This checks available text only. It neither follows links nor claims to
+    understand a video, attachment or full article from its headline.
+    """
+    text = post.get('text') if isinstance(post, dict) else None
+    if not isinstance(text, str) or not text.strip():
+        return False, 'missing-context'
+    text = html.unescape(text).strip()
+    body = _LINK.sub('', text)
+    body = re.sub(r'(?<!\w)#[\w-]+', '', body).strip()
+    words = re.findall(r"[^\W_]+(?:['’][^\W_]+)?", body, re.UNICODE)
+    if _SPONSORED.search(text) or (_TEACHING_OFFER.search(body) and _ENROLLMENT.search(body)):
+        return False, 'promotion'
+    if _LINK.search(text) and _EXTERNAL_TEASER.search(body) and len(words) < 35:
+        return False, 'external-teaser'
+    # An attributed title such as "Katie Dill on how to stop building zombie
+    # UIs" gives the topic, not the speaker's argument or a video transcript.
+    media = _MEDIA_HEADLINE.search(body)
+    if len(words) < 35 and media:
+        if not re.search(r'[.!?]["\')\]]?\s*$', body) or not _ASSERTION.search(body[:media.start()]):
+            return False, 'media-headline'
+    if len(words) < 12:
+        # Keep a complete concise design assertion or a real question. Merely
+        # ending a title with a full stop is not enough to supply its argument.
+        complete = bool(re.search(r'[.!?]["\')\]]?\s*$', body))
+        if re.search(r'\b(?:to discuss|to consider|should know|think about)\s*\.?$', body, re.IGNORECASE):
+            complete = False
+        specific = bool(_DESIGN_DETAIL.search(body) and _ASSERTION.search(body))
+        if len(words) < 5 or not (complete and specific):
+            return False, 'insufficient-context'
+    return True, 'self-contained-context'
+
+
 def _usable(now: datetime, policy: dict, post: dict) -> bool:
     if not isinstance(post, dict) or not canonical_target_urn(post) or not post_urn(post.get('url')):
         return False
@@ -206,7 +266,7 @@ def stash_targets(now: datetime, policy: dict, state: dict, posts: list,
 
 
 def candidate_targets(now: datetime, policy: dict, state: dict) -> list[dict]:
-    """Return cached targets with remaining work, excluding uncertain reactions."""
+    """Return contextual targets with remaining work before any model spend."""
     _clock(now, policy)
     actions = state.get('actions', {})
     deferred = _engagement(state).get('deferred_until', {})
@@ -214,6 +274,12 @@ def candidate_targets(now: datetime, policy: dict, state: dict) -> list[dict]:
     seen = set()
     for post in _engagement(state).get('targets', []):
         if not _usable(now, policy, post):
+            continue
+        eligible, reason = context_quality(post)
+        # Stable fixed diagnostics survive normal state checkpoints without
+        # creating write intents, quota usage, or a new timestamp every poll.
+        post['quality_decision'] = {'eligible': eligible, 'reason': reason}
+        if not eligible:
             continue
         aliases = _aliases(post)
         if aliases & seen:
