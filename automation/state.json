@@ -2000,7 +2000,7 @@
     },
     "post:2026-10-18:1800": {
       "kind": "post",
-      "text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
+      "text": "Country is a rough guess at language.\n\nFramer's October 1 Firewall update can redirect or block visitors by country and URL path. That's useful control for a site with regional pages.\n\nBut a visitor in the Netherlands might still want the English version. Someone travelling may want the version they use at home.\n\nI'm comfortable using location to suggest a locale. Automatically choosing it needs an obvious way back and a way to remember the person's choice. That's the part of the experience I'd check before turning a rule on.\n\nRelease notes: https://www.framer.com/updates/firewall",
       "at": "2026-10-17T15:08:57.096507+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -2012,12 +2012,13 @@
       "reason": "Publora acknowledged the request",
       "caption_edits": [
         {
-          "status": "inflight",
+          "status": "verified",
           "at": "2026-10-18T06:05:01.333231+00:00",
           "sha256": "b409d266149d147ce0a6e0771809ac091a4d6f7d510a64261c4ce3331b35a696",
           "previous_text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
           "text": "Country is a rough guess at language.\n\nFramer's October 1 Firewall update can redirect or block visitors by country and URL path. That's useful control for a site with regional pages.\n\nBut a visitor in the Netherlands might still want the English version. Someone travelling may want the version they use at home.\n\nI'm comfortable using location to suggest a locale. Automatically choosing it needs an obvious way back and a way to remember the person's choice. That's the part of the experience I'd check before turning a rule on.\n\nRelease notes: https://www.framer.com/updates/firewall",
-          "scheduled_for": "2026-10-18T12:30:00+00:00"
+          "scheduled_for": "2026-10-18T12:30:00+00:00",
+          "verified_at": "2026-10-18T06:05:04.437416+00:00"
         }
       ]
     }
@@ -2282,7 +2283,7 @@
     },
     {
       "id": "6ad38f8ac012b79dd397cace",
-      "text": "Product language is a key part of brand strategy, especially when customers feel confused or disappointed. The tone needs to shift from casual or encouraging to clear and empathetic. For example, if a search returns no results, the language should explain what happened and guide the user on how to recover, rather than leaving them wondering if their work disappeared. This helps maintain trust and reduces frustration.\n\nFor early-stage founders, the trade-off is between keeping product copy concise and making it detailed enough to reassure users during moments of uncertainty. Testing language in these states without team explanations can reveal if the message is clear. This approach prevents users from feeling lost and supports a smoother customer experience, which is critical when building a brand's reputation from the ground up.",
+      "text": "Country is a rough guess at language.\n\nFramer's October 1 Firewall update can redirect or block visitors by country and URL path. That's useful control for a site with regional pages.\n\nBut a visitor in the Netherlands might still want the English version. Someone travelling may want the version they use at home.\n\nI'm comfortable using location to suggest a locale. Automatically choosing it needs an obvious way back and a way to remember the person's choice. That's the part of the experience I'd check before turning a rule on.\n\nRelease notes: https://www.framer.com/updates/firewall",
       "url": null,
       "at": "2026-10-17T15:08:57.096507+00:00",
       "scheduled_for": "2026-10-18T12:30:00+00:00",
