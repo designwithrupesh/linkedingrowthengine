@@ -2318,9 +2318,12 @@
       "kind": "comment",
       "text": "Cool that the agent handles build and deploy so smoothly. Makes the whole workflow feel like writing in a notebook.",
       "at": "2026-10-18T15:47:31.534859+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7517112764276887552",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7517612343200030720",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
