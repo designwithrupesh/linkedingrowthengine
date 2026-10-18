@@ -2089,7 +2089,7 @@
       "media_scheduled_for": "2026-10-19T03:30:00Z",
       "media_operation_id": "5edd16c64d4d4cce0aaa77bb4b185146179bc2070089ecc7a97993abf33c9e5f",
       "media_stage": "upload-bytes",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad46196d9bbd9a04e6e33e5"
     }
