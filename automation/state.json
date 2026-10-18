@@ -2261,8 +2261,8 @@
       },
       "media_scheduled_for": "2026-10-21T03:30:00Z",
       "media_operation_id": "1718cd0030d536b209b113c5f5ed32ee5455006611f61cae98ea9bd49dd854a3",
-      "media_stage": "reserve-upload",
-      "media_stage_status": "acknowledged",
+      "media_stage": "upload-bytes",
+      "media_stage_status": "inflight",
       "http_status": 200,
       "remote_id": "6ad461ddd9bbd9a04e6e3760"
     }
