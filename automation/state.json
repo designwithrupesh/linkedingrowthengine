@@ -2094,6 +2094,16 @@
       "http_status": 200,
       "remote_id": "6ad46196d9bbd9a04e6e33e5",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-19:1800": {
+      "kind": "post",
+      "text": "I like a quiet interface. I get suspicious when 'cleaner' is the whole argument for a redesign.\n\nSometimes the screen looks cleaner because useful controls have been moved into a menu. The screenshot improves; the person doing the same task now has another place to look.\n\nShow me the before and after while someone is trying to finish something. That's a much more interesting design conversation.",
+      "at": "2026-10-18T06:05:38.755489+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-19T12:30:00+00:00",
+      "allocation_day": "2026-10-19"
     }
   },
   "days": {
@@ -2157,7 +2167,7 @@
       "read": 4
     },
     "2026-10-19": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
