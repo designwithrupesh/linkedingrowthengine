@@ -2296,9 +2296,12 @@
       "kind": "comment",
       "text": "Trust in execution is often overlooked but crucial. Without it, even shared ambition fails.",
       "at": "2026-10-18T15:39:26.840175+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7517604697470324736",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7517610310078468096",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
