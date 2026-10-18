@@ -2340,9 +2340,12 @@
       "kind": "comment",
       "text": "Interesting mix of founders from different AI startups. Karri and Can both have strong design backgrounds, which might matter for product thinking.",
       "at": "2026-10-18T16:02:22.175054+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7516881519211159553",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7517616081331548160",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
