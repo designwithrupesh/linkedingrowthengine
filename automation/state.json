@@ -2256,12 +2256,13 @@
         "page_count": 1,
         "format": "image",
         "file_name": "figma-to-penpot-terminology-cheatsheet.png",
-        "size_bytes": 302108
+        "size_bytes": 302108,
+        "media_id": "6ad461e0c012b79dd39e1a33"
       },
       "media_scheduled_for": "2026-10-21T03:30:00Z",
       "media_operation_id": "1718cd0030d536b209b113c5f5ed32ee5455006611f61cae98ea9bd49dd854a3",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad461ddd9bbd9a04e6e3760"
     }
