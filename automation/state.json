@@ -2247,7 +2247,21 @@
           "tradeoff": "Familiar labels can make switching easier, while browser terms can improve the conversation with developers. I would test a real responsive component before treating the terminology table as proof that the tools behave identically."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+        "mime_type": "image/png",
+        "title": "Figma to Penpot terminology cheatsheet",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "figma-to-penpot-terminology-cheatsheet.png",
+        "size_bytes": 302108
+      },
+      "media_scheduled_for": "2026-10-21T03:30:00Z",
+      "media_operation_id": "1718cd0030d536b209b113c5f5ed32ee5455006611f61cae98ea9bd49dd854a3",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
