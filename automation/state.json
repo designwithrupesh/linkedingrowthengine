@@ -2107,6 +2107,56 @@
       "http_status": 200,
       "remote_id": "6ad461b5c012b79dd39e182c",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-20:0900": {
+      "kind": "post",
+      "text": "Linear's October 8 update puts a pull request in the context of its stack. In this screenshot, the current change is number 3, with the surrounding changes still visible.\n\nThe numbering, connecting line and Current label make the position clear without much explanation. I like that.\n\nThe faded neighbouring rows are my hesitation. On a smaller screen, context that's technically there may still be hard to read. I'd want to see this at review size before calling the hierarchy a win.\n\nOfficial Linear release image: https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+      "at": "2026-10-18T06:05:42.931887+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-20T03:30:00+00:00",
+      "allocation_day": "2026-10-20",
+      "format": "image",
+      "asset_id": "current-linear-stacked-prs",
+      "asset_sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+      "asset_title": "Stacked pull requests",
+      "asset_pages": 1,
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "current-linear-stacked-prs",
+        "kind": "image",
+        "title": "Stacked pull requests",
+        "caption": "Linear's October 8 update puts a pull request in the context of its stack. In this screenshot, the current change is number 3, with the surrounding changes still visible.\n\nThe numbering, connecting line and Current label make the position clear without much explanation. I like that.\n\nThe faded neighbouring rows are my hesitation. On a smaller screen, context that's technically there may still be hard to read. I'd want to see this at review size before calling the hierarchy a win.\n\nOfficial Linear release image: https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+        "file": "resources/linkedin/current-design/linear-stacked-prs.png",
+        "preview": "resources/linkedin/current-design/linear-stacked-prs.png",
+        "sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+        "page_count": 1,
+        "transcript": [
+          "rideshare#2853",
+          "Up to date with main branch",
+          "Stack",
+          "4 Display retry count in payment details",
+          "3 Expose retry count in API",
+          "Current",
+          "2 Increment retry count on failed attempts",
+          "1 Add retry count column to payments",
+          "main"
+        ],
+        "design_brief": {
+          "reader_tension": "Understand an actual interface choice rather than an abstract design lesson.",
+          "intended_feeling": "A specific reaction a design peer can agree with or challenge.",
+          "core_decision": "Official product visual displays four numbered changes connected in a vertical stack.",
+          "visual_idea": "Preserve the official product visual at native dimensions with source attribution in the caption.",
+          "story_arc": [
+            "Identify the dated source.",
+            "Point to the visible detail.",
+            "Separate an opinion from what the image cannot establish."
+          ],
+          "tradeoff": "Showing the dependency chain lowers the effort of reconstructing it. My design question is whether a reviewer can also see the consequences of merging this item without having to remember what each status dot means."
+        },
+        "review_status": "checked"
+      }
     }
   },
   "days": {
@@ -2171,6 +2221,11 @@
     },
     "2026-10-19": {
       "post": 2,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-10-20": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
