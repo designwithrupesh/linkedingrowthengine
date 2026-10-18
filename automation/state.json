@@ -3033,8 +3033,8 @@
       "status": "running",
       "started_at": "2026-10-18T13:36:36.729244+00:00",
       "deadline": "2026-10-18T22:00:00+05:30",
-      "heartbeat_at": "2026-10-18T13:41:48.479011+00:00",
-      "cycles": 2,
+      "heartbeat_at": "2026-10-18T13:46:44.332064+00:00",
+      "cycles": 3,
       "recent_errors": []
     },
     "last_live_validation": {
