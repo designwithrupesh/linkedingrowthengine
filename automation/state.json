@@ -2558,10 +2558,11 @@
     {
       "id": "6ad38f8ac012b79dd397cace",
       "text": "Country is a rough guess at language.\n\nFramer's October 1 Firewall update can redirect or block visitors by country and URL path. That's useful control for a site with regional pages.\n\nBut a visitor in the Netherlands might still want the English version. Someone travelling may want the version they use at home.\n\nI'm comfortable using location to suggest a locale. Automatically choosing it needs an obvious way back and a way to remember the person's choice. That's the part of the experience I'd check before turning a rule on.\n\nRelease notes: https://www.framer.com/updates/firewall",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7517562657563107328/",
       "at": "2026-10-17T15:08:57.096507+00:00",
       "scheduled_for": "2026-10-18T12:30:00+00:00",
-      "allocation_day": "2026-10-18"
+      "allocation_day": "2026-10-18",
+      "post_urn": "urn:li:share:7517562657563107328"
     },
     {
       "id": "6ad46196d9bbd9a04e6e33e5",
