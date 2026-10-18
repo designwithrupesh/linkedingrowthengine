@@ -2194,7 +2194,7 @@
       "kind": "post",
       "text": "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team changes tools.\n\nIts October 15 Figma terminology guide explains the naming. The Inspect image shows a selected Flex layout and display: flex in the CSS panel beside it.\n\nThat connection interests me more than learning that Frames are called Boards. It gives designers and developers something concrete to point at when they discuss layout behaviour.\n\nA terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar component and see which habits carry over.\n\nOfficial Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
       "at": "2026-10-18T06:06:17.174252+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-21T03:30:00+00:00",
@@ -2262,10 +2262,11 @@
       },
       "media_scheduled_for": "2026-10-21T03:30:00Z",
       "media_operation_id": "1718cd0030d536b209b113c5f5ed32ee5455006611f61cae98ea9bd49dd854a3",
-      "media_stage": "schedule-media",
-      "media_stage_status": "acknowledged",
+      "media_stage": "verify-schedule",
+      "media_stage_status": "verified",
       "http_status": 200,
-      "remote_id": "6ad461ddd9bbd9a04e6e3760"
+      "remote_id": "6ad461ddd9bbd9a04e6e3760",
+      "reason": "Publora confirmed scheduled media and caption"
     }
   },
   "days": {
@@ -2594,7 +2595,7 @@
       "at": "2026-10-18T06:06:17.174252+00:00",
       "scheduled_for": "2026-10-21T03:30:00+00:00",
       "allocation_day": "2026-10-21",
-      "media_status": "schedule-acknowledged",
+      "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f"
     }
