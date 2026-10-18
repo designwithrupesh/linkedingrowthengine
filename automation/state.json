@@ -2166,11 +2166,12 @@
         "format": "image",
         "file_name": "stacked-pull-requests.png",
         "size_bytes": 283037,
-        "media_id": "6ad461bdc012b79dd39e18ee"
+        "media_id": "6ad461bdc012b79dd39e18ee",
+        "status": "ready"
       },
       "media_scheduled_for": "2026-10-20T03:30:00Z",
       "media_operation_id": "8544188420f95a4a1dbc17f3d5d224708926835a42cf91f4aa7bc783b457d600",
-      "media_stage": "complete-media",
+      "media_stage": "verify-attachment",
       "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad461bad9bbd9a04e6e35bc"
@@ -2478,7 +2479,7 @@
       "at": "2026-10-18T06:05:42.931887+00:00",
       "scheduled_for": "2026-10-20T03:30:00+00:00",
       "allocation_day": "2026-10-20",
-      "media_status": "draft",
+      "media_status": "ready",
       "format": "image",
       "asset_sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615"
     }
