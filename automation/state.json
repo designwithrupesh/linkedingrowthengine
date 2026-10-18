@@ -2189,6 +2189,65 @@
       "http_status": 200,
       "remote_id": "6ad461d7d9bbd9a04e6e36f7",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-21:0900": {
+      "kind": "post",
+      "text": "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team changes tools.\n\nIts October 15 Figma terminology guide explains the naming. The Inspect image shows a selected Flex layout and display: flex in the CSS panel beside it.\n\nThat connection interests me more than learning that Frames are called Boards. It gives designers and developers something concrete to point at when they discuss layout behaviour.\n\nA terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar component and see which habits carry over.\n\nOfficial Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+      "at": "2026-10-18T06:06:17.174252+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-21T03:30:00+00:00",
+      "allocation_day": "2026-10-21",
+      "format": "image",
+      "asset_id": "current-penpot-inspect",
+      "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+      "asset_title": "Figma to Penpot terminology cheatsheet",
+      "asset_pages": 1,
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "current-penpot-inspect",
+        "kind": "image",
+        "title": "Figma to Penpot terminology cheatsheet",
+        "caption": "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team changes tools.\n\nIts October 15 Figma terminology guide explains the naming. The Inspect image shows a selected Flex layout and display: flex in the CSS panel beside it.\n\nThat connection interests me more than learning that Frames are called Boards. It gives designers and developers something concrete to point at when they discuss layout behaviour.\n\nA terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar component and see which habits carry over.\n\nOfficial Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+        "file": "resources/linkedin/current-design/penpot-inspect.png",
+        "preview": "resources/linkedin/current-design/penpot-inspect.png",
+        "sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+        "page_count": 1,
+        "transcript": [
+          "Flex and grid light version",
+          "LAYERS",
+          "View only",
+          "Flex and grid",
+          "Flex layout",
+          "Inspecting code (View Only)",
+          "DONE",
+          "DESIGN",
+          "PROTOTYPE",
+          "INSPECT",
+          "Layer info",
+          "Code",
+          "COPY ALL CODE",
+          "CSS",
+          "HTML",
+          "display: flex;",
+          "flex-direction: column;",
+          "align-items: center;"
+        ],
+        "design_brief": {
+          "reader_tension": "Understand an actual interface choice rather than an abstract design lesson.",
+          "intended_feeling": "A specific reaction a design peer can agree with or challenge.",
+          "core_decision": "The official Inspect image shows the selected Flex layout board beside a CSS panel.",
+          "visual_idea": "Preserve the official product visual at native dimensions with source attribution in the caption.",
+          "story_arc": [
+            "Identify the dated source.",
+            "Point to the visible detail.",
+            "Separate an opinion from what the image cannot establish."
+          ],
+          "tradeoff": "Familiar labels can make switching easier, while browser terms can improve the conversation with developers. I would test a real responsive component before treating the terminology table as proof that the tools behave identically."
+        },
+        "review_status": "checked"
+      }
     }
   },
   "days": {
@@ -2258,6 +2317,11 @@
     },
     "2026-10-20": {
       "post": 2,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-10-21": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
