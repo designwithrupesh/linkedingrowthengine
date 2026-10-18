@@ -2272,11 +2272,14 @@
       "kind": "post",
       "text": "If you're showing me a redesign, show me the mistake too.\n\nOpen something without permission, or delete the wrong item and try to get it back.\n\nI want to see how the product talks to someone at that moment. A calm hero screen tells me very little about that part of the experience.\n\nThe recovery screens deserve a place in the presentation.",
       "at": "2026-10-18T06:06:48.780843+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-21T12:30:00+00:00",
-      "allocation_day": "2026-10-21"
+      "allocation_day": "2026-10-21",
+      "http_status": 200,
+      "remote_id": "6ad461fbd9bbd9a04e6e38fb",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -2608,6 +2611,14 @@
       "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f"
+    },
+    {
+      "id": "6ad461fbd9bbd9a04e6e38fb",
+      "text": "If you're showing me a redesign, show me the mistake too.\n\nOpen something without permission, or delete the wrong item and try to get it back.\n\nI want to see how the product talks to someone at that moment. A calm hero screen tells me very little about that part of the experience.\n\nThe recovery screens deserve a place in the presentation.",
+      "url": null,
+      "at": "2026-10-18T06:06:48.780843+00:00",
+      "scheduled_for": "2026-10-21T12:30:00+00:00",
+      "allocation_day": "2026-10-21"
     }
   ],
   "discovery": {
