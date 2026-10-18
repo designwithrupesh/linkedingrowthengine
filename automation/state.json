@@ -3066,6 +3066,62 @@
         "scanner_score": 89,
         "high_or_critical": 0
       }
+    },
+    "last_editorial_reset": {
+      "verified_at": "2026-10-18T06:08:19.089280+00:00",
+      "source_version": "1.1.36",
+      "source_commit": "0f134ac17af25c1f00ccd8d0038ded9669a234c2",
+      "baseline": {
+        "posts": 10,
+        "reported_impressions": 714,
+        "reactions": 4,
+        "comments": 0,
+        "reshares": 0,
+        "file": "automation/editorial-baseline.json"
+      },
+      "existing_caption_rewritten": "6ad38f8ac012b79dd397cace",
+      "scheduled_post_group_ids": [
+        "6ad46196d9bbd9a04e6e33e5",
+        "6ad461b5c012b79dd39e182c",
+        "6ad461bad9bbd9a04e6e35bc",
+        "6ad461d7d9bbd9a04e6e36f7",
+        "6ad461ddd9bbd9a04e6e3760",
+        "6ad461fbd9bbd9a04e6e38fb"
+      ],
+      "dates": [
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21"
+      ],
+      "hours": [
+        9,
+        18
+      ],
+      "timezone": "Asia/Calcutta",
+      "screenshots_attributed": true,
+      "public_image_hashes_verified": true,
+      "current_source_cache": {
+        "items": 9,
+        "publishers": [
+          "Linear",
+          "Nielsen Norman Group",
+          "Penpot",
+          "Smashing Magazine"
+        ],
+        "failed_feeds": 0
+      },
+      "quality_change": "Peer voice overrides imported interaction recipes; thin teasers and promotions held before generation.",
+      "nomination_status": "draft-prepared-not-submitted",
+      "top_voice_plan": "docs/TOP-VOICE-PLAN.md",
+      "checks": {
+        "python_tests": 620,
+        "node_tests": 5,
+        "selftest": "pass",
+        "scanner_score": 89,
+        "high_or_critical": 0,
+        "source_ci": 39102776264,
+        "scanner_ci": 39102776273
+      }
     }
   },
   "engagement": {
