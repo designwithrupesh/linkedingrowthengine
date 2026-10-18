@@ -2624,7 +2624,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 36,
+    "profile_cursor": 37,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3033,8 +3033,8 @@
       "status": "running",
       "started_at": "2026-10-18T13:36:36.729244+00:00",
       "deadline": "2026-10-18T22:00:00+05:30",
-      "heartbeat_at": "2026-10-18T15:11:50.076799+00:00",
-      "cycles": 20,
+      "heartbeat_at": "2026-10-18T15:16:51.651885+00:00",
+      "cycles": 21,
       "recent_errors": []
     },
     "last_live_validation": {
