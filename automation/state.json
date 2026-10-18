@@ -3030,13 +3030,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-17T13:03:11.914942+00:00",
-      "deadline": "2026-10-17T22:00:00+05:30",
-      "heartbeat_at": "2026-10-17T16:28:19.982417+00:00",
-      "cycles": 42,
-      "recent_errors": [],
-      "ended_at": "2026-10-17T16:30:00.000230+00:00"
+      "status": "running",
+      "started_at": "2026-10-18T13:36:36.729244+00:00",
+      "deadline": "2026-10-18T22:00:00+05:30",
+      "heartbeat_at": "2026-10-18T13:36:49.023717+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -3174,7 +3173,11 @@
           "urn:li:ugcPost:7515419077918679040"
         ],
         "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+        "cached_at": "2026-10-13T15:49:08.908064+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515079359230308352/",
@@ -3192,7 +3195,11 @@
           "urn:li:ugcPost:7515079290678493184"
         ],
         "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-13T15:49:08.908064+00:00"
+        "cached_at": "2026-10-13T15:49:08.908064+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515825104031870976/",
@@ -3210,7 +3217,11 @@
           "urn:li:share:7515825101053792257"
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+        "cached_at": "2026-10-15T16:03:47.205166+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515566569154953216/",
@@ -3228,7 +3239,11 @@
           "urn:li:ugcPost:7515566497952387072"
         ],
         "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00"
+        "cached_at": "2026-10-15T16:03:47.205166+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516220474209488897/",
@@ -3246,7 +3261,11 @@
           "urn:li:ugcPost:7516220473517719552"
         ],
         "first_seen_at": "2026-10-15T15:18:44.960759+00:00",
-        "cached_at": "2026-10-16T15:23:17.850619+00:00"
+        "cached_at": "2026-10-16T15:23:17.850619+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514731553684471808/",
@@ -3282,7 +3301,11 @@
           "urn:li:share:7516703573087539200"
         ],
         "first_seen_at": "2026-10-16T15:43:16.012819+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00"
+        "cached_at": "2026-10-16T15:43:16.012819+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516159655828656130/",
@@ -3300,7 +3323,11 @@
           "urn:li:ugcPost:7516159655165972480"
         ],
         "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00"
+        "cached_at": "2026-10-16T15:43:16.012819+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516009658948673536/",
@@ -3318,7 +3345,11 @@
           "urn:li:share:7516009658193694720"
         ],
         "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00"
+        "cached_at": "2026-10-16T15:43:16.012819+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515863375793324034/",
@@ -3336,7 +3367,11 @@
           "urn:li:share:7515863374711369728"
         ],
         "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00"
+        "cached_at": "2026-10-16T15:43:16.012819+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516271640838815745/",
@@ -3354,7 +3389,11 @@
           "urn:li:share:7516145262101229568"
         ],
         "first_seen_at": "2026-10-16T15:53:16.743865+00:00",
-        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+        "cached_at": "2026-10-16T15:53:16.743865+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
@@ -3372,7 +3411,11 @@
           "urn:li:share:7516291092162514944"
         ],
         "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+        "cached_at": "2026-10-16T15:53:16.743865+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
@@ -3390,7 +3433,11 @@
           "urn:li:share:7516088553353867264"
         ],
         "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+        "cached_at": "2026-10-16T15:53:16.743865+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "insufficient-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515937896546111488/",
@@ -3408,7 +3455,11 @@
           "urn:li:share:7515937895862558720"
         ],
         "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+        "cached_at": "2026-10-16T15:53:16.743865+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
@@ -3425,7 +3476,11 @@
           "urn:li:ugcPost:7515780577506013185"
         ],
         "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
-        "cached_at": "2026-10-16T15:53:16.743865+00:00"
+        "cached_at": "2026-10-16T15:53:16.743865+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516860238080360448/",
@@ -3443,7 +3498,11 @@
           "urn:li:ugcPost:7516860148611629056"
         ],
         "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+        "cached_at": "2026-10-16T16:08:17.644160+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "media-headline"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516568362173239296/",
@@ -3461,7 +3520,11 @@
           "urn:li:share:7516568360902397952"
         ],
         "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+        "cached_at": "2026-10-16T16:08:17.644160+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "external-teaser"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
@@ -3479,7 +3542,11 @@
           "urn:li:share:7516512888547627008"
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+        "cached_at": "2026-10-16T16:08:17.644160+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "external-teaser"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
@@ -3497,7 +3564,11 @@
           "urn:li:ugcPost:7516220203534430209"
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+        "cached_at": "2026-10-16T16:08:17.644160+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
@@ -3515,7 +3586,11 @@
           "urn:li:share:7516209385463963648"
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00"
+        "cached_at": "2026-10-16T16:08:17.644160+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       }
     ],
     "deferred_until": {
