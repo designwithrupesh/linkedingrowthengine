@@ -2083,12 +2083,13 @@
         "page_count": 1,
         "format": "image",
         "file_name": "notion-3-8-context-for-your-agents.png",
-        "size_bytes": 658878
+        "size_bytes": 658878,
+        "media_id": "6ad46199d9bbd9a04e6e3478"
       },
       "media_scheduled_for": "2026-10-19T03:30:00Z",
       "media_operation_id": "5edd16c64d4d4cce0aaa77bb4b185146179bc2070089ecc7a97993abf33c9e5f",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad46196d9bbd9a04e6e33e5"
     }
