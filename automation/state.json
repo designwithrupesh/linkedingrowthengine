@@ -2074,7 +2074,21 @@
           "tradeoff": "Putting permissions next to a property makes access easier to find. Granular access can also become difficult to reason about. I would want a way to check what a specific teammate can actually see before sharing."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735",
+        "mime_type": "image/png",
+        "title": "Notion 3.8: Context for your agents",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "notion-3-8-context-for-your-agents.png",
+        "size_bytes": 658878
+      },
+      "media_scheduled_for": "2026-10-19T03:30:00Z",
+      "media_operation_id": "5edd16c64d4d4cce0aaa77bb4b185146179bc2070089ecc7a97993abf33c9e5f",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
