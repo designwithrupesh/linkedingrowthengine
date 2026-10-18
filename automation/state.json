@@ -2257,11 +2257,12 @@
         "format": "image",
         "file_name": "figma-to-penpot-terminology-cheatsheet.png",
         "size_bytes": 302108,
-        "media_id": "6ad461e0c012b79dd39e1a33"
+        "media_id": "6ad461e0c012b79dd39e1a33",
+        "status": "ready"
       },
       "media_scheduled_for": "2026-10-21T03:30:00Z",
       "media_operation_id": "1718cd0030d536b209b113c5f5ed32ee5455006611f61cae98ea9bd49dd854a3",
-      "media_stage": "complete-media",
+      "media_stage": "verify-attachment",
       "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad461ddd9bbd9a04e6e3760"
@@ -2593,7 +2594,7 @@
       "at": "2026-10-18T06:06:17.174252+00:00",
       "scheduled_for": "2026-10-21T03:30:00+00:00",
       "allocation_day": "2026-10-21",
-      "media_status": "draft",
+      "media_status": "ready",
       "format": "image",
       "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f"
     }
