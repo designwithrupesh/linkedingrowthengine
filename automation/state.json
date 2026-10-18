@@ -3482,8 +3482,81 @@
   "design_news": {
     "checked_day": "2026-10-18",
     "checked_at": "2026-10-18T06:08:12.718507+00:00",
-    "status": "refresh-reserved",
-    "items": [],
+    "status": "ready",
+    "items": [
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "UX Maps: Glossary",
+        "url": "https://www.nngroup.com/articles/ux-maps-glossary/",
+        "published_at": "2026-10-16T17:00:00+00:00",
+        "excerpt": "Use this glossary to quickly clarify key terms and concepts related to UX maps."
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation",
+        "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+        "published_at": "2026-10-16T17:00:00+00:00",
+        "excerpt": "Data from AI-generated respondents pointed to the same conclusion as a survey of 604 humans but contained far fewer distinct answers."
+      },
+      {
+        "publisher": "Smashing Magazine",
+        "source_kind": "design_analysis",
+        "title": "Is Your Organization Messing Up AI Adoption?",
+        "url": "https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "published_at": "2026-10-16T10:00:00+00:00",
+        "excerpt": "What can digital transformation teach us about AI adoption? Paul Boag revisits his book Digital Adaptation to show how lessons from the past can help organizations navigate the challenges of AI today."
+      },
+      {
+        "publisher": "Penpot",
+        "source_kind": "design_analysis",
+        "title": "Figma to Penpot terminology cheatsheet",
+        "url": "https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+        "published_at": "2026-10-15T16:45:42+00:00",
+        "excerpt": "Switching from Figma to Penpot? Here’s what everything is called, from boards and flex layout to design tokens and Inspect."
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "The New Siri’s Biggest Strength Is Not Intelligence",
+        "url": "https://www.nngroup.com/articles/ai-assistant-context/",
+        "published_at": "2026-10-09T17:00:00+00:00",
+        "excerpt": "A useful AI assistant needs relevant personal context, the capability to use it, and an experience that helps users understand its limits."
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "Context Libraries: How AI Power Users Manage Context Engineering",
+        "url": "https://www.nngroup.com/articles/context-libraries/",
+        "published_at": "2026-10-09T17:00:00+00:00",
+        "excerpt": "Claude power users rarely edit their context files and often can’t find them. Your AI agent is only as powerful as its context library."
+      },
+      {
+        "publisher": "Linear",
+        "source_kind": "product_update",
+        "title": "Stacked pull requests",
+        "url": "https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+        "published_at": "2026-10-08T15:44:14+00:00",
+        "excerpt": "Stacked pull requests are now displayed in Linear Diffs. Move through a stack and see review, CI, and merge status at a glance. Related PRs are grouped into a single collapsible row in Reviews, alongside their issue and project context. For GitHub-native stacks, you can preview every affected PR before merging the current PR and those below from Linear. Learn more in our documentation. View code changes as the agent works Diffs now update in realtime throughout a Linear codin"
+      },
+      {
+        "publisher": "Smashing Magazine",
+        "source_kind": "design_analysis",
+        "title": "A Practical Guide To Naming Things",
+        "url": "https://www.smashingmagazine.com/2026/10/how-name-things/",
+        "published_at": "2026-10-06T10:00:00+00:00",
+        "excerpt": "A practical guide to naming UI components, with useful resources, naming conventions, and structures. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore."
+      },
+      {
+        "publisher": "Penpot",
+        "source_kind": "design_analysis",
+        "title": "The quick guide to Penpot layouts",
+        "url": "https://penpot.app/blog/the-quick-guide-to-penpot-layouts/",
+        "published_at": "2026-10-05T17:33:40+00:00",
+        "excerpt": "You’ve used a design tool before, and you just want to know the basics to help you get started with Penpot layouts. This is the extra quick explainer just for you!"
+      }
+    ],
     "failed_feeds": 0
   }
 }
