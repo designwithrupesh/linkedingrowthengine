@@ -2267,6 +2267,16 @@
       "http_status": 200,
       "remote_id": "6ad461ddd9bbd9a04e6e3760",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-21:1800": {
+      "kind": "post",
+      "text": "If you're showing me a redesign, show me the mistake too.\n\nOpen something without permission, or delete the wrong item and try to get it back.\n\nI want to see how the product talks to someone at that moment. A calm hero screen tells me very little about that part of the experience.\n\nThe recovery screens deserve a place in the presentation.",
+      "at": "2026-10-18T06:06:48.780843+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-21T12:30:00+00:00",
+      "allocation_day": "2026-10-21"
     }
   },
   "days": {
@@ -2340,7 +2350,7 @@
       "read": 0
     },
     "2026-10-21": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
