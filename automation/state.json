@@ -2090,7 +2090,7 @@
       "media_scheduled_for": "2026-10-19T03:30:00Z",
       "media_operation_id": "5edd16c64d4d4cce0aaa77bb4b185146179bc2070089ecc7a97993abf33c9e5f",
       "media_stage": "schedule-media",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ad46196d9bbd9a04e6e33e5"
     }
@@ -2373,7 +2373,7 @@
       "at": "2026-10-18T06:05:06.421781+00:00",
       "scheduled_for": "2026-10-19T03:30:00+00:00",
       "allocation_day": "2026-10-19",
-      "media_status": "ready",
+      "media_status": "schedule-acknowledged",
       "format": "image",
       "asset_sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735"
     }
