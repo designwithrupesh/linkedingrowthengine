@@ -2176,6 +2176,16 @@
       "http_status": 200,
       "remote_id": "6ad461bad9bbd9a04e6e35bc",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-10-20:1800": {
+      "kind": "post",
+      "text": "I'm starting consulting conversations around product design and brand strategy.\n\nThe work I'm interested in often sits between the two. A product promises simplicity, but its first task needs an explanation. Or the landing page speaks to one customer while the interface seems designed for someone else.\n\nI'd want to understand that mismatch before proposing a new visual direction.\n\nIf your team is circling a decision like this, tell me what you're trying to settle.",
+      "at": "2026-10-18T06:06:13.090979+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-20T12:30:00+00:00",
+      "allocation_day": "2026-10-20"
     }
   },
   "days": {
@@ -2244,7 +2254,7 @@
       "read": 0
     },
     "2026-10-20": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
