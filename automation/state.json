@@ -2156,7 +2156,21 @@
           "tradeoff": "Showing the dependency chain lowers the effort of reconstructing it. My design question is whether a reviewer can also see the consequences of merging this item without having to remember what each status dot means."
         },
         "review_status": "checked"
-      }
+      },
+      "media": {
+        "sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+        "mime_type": "image/png",
+        "title": "Stacked pull requests",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "stacked-pull-requests.png",
+        "size_bytes": 283037
+      },
+      "media_scheduled_for": "2026-10-20T03:30:00Z",
+      "media_operation_id": "8544188420f95a4a1dbc17f3d5d224708926835a42cf91f4aa7bc783b457d600",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
