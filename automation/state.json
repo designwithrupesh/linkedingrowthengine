@@ -2335,6 +2335,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:bbba979ef22ce4b105677ec9c9cbbe1a064cfbc05d2e66bb8aef299791b7418e": {
+      "kind": "comment",
+      "text": "Interesting mix of founders from different AI startups. Karri and Can both have strong design backgrounds, which might matter for product thinking.",
+      "at": "2026-10-18T16:02:22.175054+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7516881519211159553",
+      "parent": null
     }
   },
   "days": {
@@ -2394,9 +2402,9 @@
     },
     "2026-10-18": {
       "post": 2,
-      "interaction": 5,
+      "interaction": 6,
       "read": 14,
-      "public_interaction": 5
+      "public_interaction": 6
     },
     "2026-10-19": {
       "post": 2,
