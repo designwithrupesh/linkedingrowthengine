@@ -2624,8 +2624,8 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 35,
-    "last_status": "daily-budget-exhausted"
+    "profile_cursor": 36,
+    "last_status": "ok"
   },
   "reply_monitor": {
     "posts": {
@@ -3033,8 +3033,8 @@
       "status": "running",
       "started_at": "2026-10-18T13:36:36.729244+00:00",
       "deadline": "2026-10-18T22:00:00+05:30",
-      "heartbeat_at": "2026-10-18T15:06:45.244633+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-10-18T15:11:50.076799+00:00",
+      "cycles": 20,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -3266,24 +3266,6 @@
           "eligible": true,
           "reason": "self-contained-context"
         }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514731553684471808/",
-        "urn": "urn:li:share:7514731552811995136",
-        "shareUrn": "urn:li:share:7514731552811995136",
-        "text": "DESIGN PRA CONVERSAR 🇧🇷: The 8th Semana do Design at Itaú Unibanco, is Nov 5–6. This year's question: how AI is changing the way we build products, services, and experiences. As Fabricio Dore puts it, “Vamos conversar?” (Shall we talk?) Yes. Let’s! HT Dennie Bates",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-10T17:00:19.359000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7514731553684471808",
-          "urn:li:share:7514731552811995136"
-        ],
-        "first_seen_at": "2026-10-11T15:04:39.262212+00:00",
-        "cached_at": "2026-10-16T15:38:15.826971+00:00"
       },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516703573796159488/",
