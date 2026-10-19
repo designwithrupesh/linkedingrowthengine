@@ -2694,7 +2694,7 @@
   ],
   "discovery": {
     "profile_cursor": 43,
-    "last_status": "ok"
+    "last_status": "daily-budget-exhausted"
   },
   "reply_monitor": {
     "posts": {
@@ -3142,8 +3142,8 @@
       "status": "running",
       "started_at": "2026-10-19T14:18:15.172221+00:00",
       "deadline": "2026-10-19T22:00:00+05:30",
-      "heartbeat_at": "2026-10-19T15:08:18.526161+00:00",
-      "cycles": 11,
+      "heartbeat_at": "2026-10-19T15:13:48.773455+00:00",
+      "cycles": 12,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -3257,7 +3257,7 @@
   "engagement": {
     "profile_checked_at": {
       "lennyrachitsky": "2026-10-18T16:01:49.272843+00:00",
-      "juliezhuo": "2026-10-18T15:11:45.592028+00:00",
+      "juliezhuo": "2026-10-19T15:13:18.752666+00:00",
       "brianchesky": "2026-10-18T15:16:45.955393+00:00",
       "destraynor": "2026-10-18T15:21:46.254966+00:00",
       "rahulvohra": "2026-10-18T15:26:46.706223+00:00",
@@ -3266,50 +3266,6 @@
       "shreyasdoshi": "2026-10-18T15:46:52.228229+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515419078971551744/",
-        "urn": "urn:li:ugcPost:7515419077918679040",
-        "shareUrn": "urn:li:ugcPost:7515419077918679040",
-        "text": "My biggest takeaways from Josh Woodward (Head of Google Labs, the Gemini app, and Google AI Studio):\n\n1. The best ideas almost never come from a design sprint or brainstorm.\n2. Keep a list of what is “almost possible,” and move fast when something crosses over.\n3. Fall in love with the problem, not the product.\n4. Every company needs to think like a labs team now.\n5. When looking for early PMF, data and retention are important, but the strongest signal of PMF is in people’s eyes.\n6. When something is not working, the team almost always knows before the leader does.\n7. Someone’s “unlearning rate” is one of the most valuable skills right now.\n8. Roles are not blurring into one universal “builder” role.\n9. A labs team needs isolation, a clear mission, and the ability to create “good trouble.”\n10. Google Labs avoids burnout through \"seasons\" and rhythm.\n\nWatch the full episode: https://lnkd.in/gxfiJbHg",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-12T14:32:18.161000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7515419078971551744",
-          "urn:li:ugcPost:7515419077918679040"
-        ],
-        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-13T15:49:08.908064+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515079359230308352/",
-        "urn": "urn:li:ugcPost:7515079290678493184",
-        "shareUrn": "urn:li:ugcPost:7515079290678493184",
-        "text": "Every company needs to think and operate like a labs team now.\n\nWhat’s possible changes every few months, and to stay ahead, you need to be experimenting at the frontier.\n\nHere's my conversation with Josh Woodwardd, Head of Google Labs, the Gemini, and Google AI Studio. \n\nWe discuss:\n🔸 What skills are rising fastest in value right now\n🔸 Where the best ideas actually come from\n🔸 How to recognize PMF early\n🔸 Why you should keep a list of what’s ‘almost possible’\n🔸 Three rules for standing up an internal labs team\n\nListen now → https://lnkd.in/gxfiJbHg\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/gUGddYRd\n• Apple: https://lnkd.in/gA_myXK7",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-11T16:02:22.663000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7515079359230308352",
-          "urn:li:ugcPost:7515079290678493184"
-        ],
-        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
-        "cached_at": "2026-10-13T15:49:08.908064+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515825104031870976/",
         "urn": "urn:li:share:7515825101053792257",
