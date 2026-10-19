@@ -2635,13 +2635,14 @@
     {
       "id": "6ad46196d9bbd9a04e6e33e5",
       "text": "Notion has put a permission control inside the database column menu. I like that placement.\n\nIn the October 13 release, property access lets an owner decide which columns a person or agent can view or edit. The screenshot labels it Alpha.\n\nPutting it beside Edit property makes sense. You're already thinking about that column.\n\nWhat I can't judge from this image is the other side: what does someone with restricted access see? A missing field can look like missing data. That experience needs just as much care as the owner's menu.\n\nOfficial Notion release image: https://www.notion.com/releases/2026-10-13",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7517789140952784896/",
       "at": "2026-10-18T06:05:06.421781+00:00",
       "scheduled_for": "2026-10-19T03:30:00+00:00",
       "allocation_day": "2026-10-19",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735"
+      "asset_sha256": "e869ef0ba4174739d05c2eeb949960e84b4aeb0bc90438e56381ff443a2dc735",
+      "post_urn": "urn:li:share:7517789140952784896"
     },
     {
       "id": "6ad461b5c012b79dd39e182c",
