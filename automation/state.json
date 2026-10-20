@@ -3247,7 +3247,7 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-20T12:54:09.261536+00:00",
       "deadline": "2026-10-20T22:00:00+05:30",
       "heartbeat_at": "2026-10-20T16:29:25.828801+00:00",
@@ -3258,7 +3258,8 @@
           "type": "WriteOutcomeError",
           "at": "2026-10-20T16:10:04.863789+00:00"
         }
-      ]
+      ],
+      "ended_at": "2026-10-20T16:30:00.000197+00:00"
     },
     "last_live_validation": {
       "status": "passed",
