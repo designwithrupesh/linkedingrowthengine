@@ -2695,7 +2695,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 45,
+    "profile_cursor": 46,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3184,8 +3184,8 @@
       "status": "running",
       "started_at": "2026-10-20T12:54:09.261536+00:00",
       "deadline": "2026-10-20T22:00:00+05:30",
-      "heartbeat_at": "2026-10-20T15:19:25.685817+00:00",
-      "cycles": 30,
+      "heartbeat_at": "2026-10-20T15:24:28.116028+00:00",
+      "cycles": 31,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -3613,27 +3613,6 @@
         "quality_decision": {
           "eligible": false,
           "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515780577506013185/",
-        "urn": "urn:li:ugcPost:7515780577506013185",
-        "shareUrn": "urn:li:ugcPost:7515780577506013185",
-        "text": "I’ve obtained a new certification: World-class Product Sense in Practice with Shreyas Doshi from Maven!\n\nI didn't quite know what to expect going in, but it was a whirlwind in the best of ways. Fundamentally changed the way I think about product and product strategy.",
-        "authorName": "Maria Steinson",
-        "authorHeadline": "Creative Direction @ Wooga",
-        "authorProfileUrl": "https://www.linkedin.com/in/maria-steinson-7a0a37175/",
-        "postedAtISO": "2026-10-13T15:24:00.450000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7515780577506013185"
-        ],
-        "first_seen_at": "2026-10-13T15:29:06.110296+00:00",
-        "cached_at": "2026-10-18T15:46:52.228229+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
         }
       },
       {
