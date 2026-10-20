@@ -2417,7 +2417,7 @@
     "2026-10-20": {
       "post": 2,
       "interaction": 0,
-      "read": 4
+      "read": 5
     },
     "2026-10-21": {
       "post": 2,
@@ -2996,20 +2996,20 @@
         "last_checked_at": "2026-10-19T20:01:05.296586+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-10-19T20:01:05.296586+00:00",
+        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-19T20:01:05.296586+00:00",
+        "last_checked_at": "2026-10-20T12:54:12.650594+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
         "count": 0,
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-10-19T16:28:21.287882+00:00",
+        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
         "status": "analytics-count",
-        "last_checked_at": "2026-10-19T16:28:21.287882+00:00"
+        "last_checked_at": "2026-10-20T12:54:12.650594+00:00"
       },
       "urn:li:share:7515026715027525632": {
         "last_considered_at": "2026-10-20T07:27:07.271248+00:00",
@@ -3084,9 +3084,9 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-19T20:01:05.296586+00:00",
+        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-19T20:01:05.296586+00:00",
+        "last_checked_at": "2026-10-20T12:54:12.650594+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
         "count": 0,
         "cached": false
@@ -3124,12 +3124,12 @@
         "last_checked_at": "2026-10-20T02:03:32.604647+00:00"
       },
       "urn:li:share:7517562657563107328": {
-        "last_considered_at": "2026-10-19T16:28:21.287882+00:00",
+        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
         "changed_at": "2026-10-18T13:36:39.694629+00:00",
         "count": 1,
         "cached": false,
         "status": "analytics-count",
-        "last_checked_at": "2026-10-19T16:28:21.287882+00:00"
+        "last_checked_at": "2026-10-20T12:54:12.650594+00:00"
       },
       "urn:li:share:7517789140952784896": {
         "last_considered_at": "2026-10-19T23:33:58.788888+00:00",
@@ -3154,6 +3154,14 @@
         "cached": false,
         "status": "analytics-count",
         "last_checked_at": "2026-10-20T07:27:07.271248+00:00"
+      },
+      "urn:li:share:7518287426079948800": {
+        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
+        "changed_at": "2026-10-20T12:54:12.650594+00:00",
+        "count": 0,
+        "cached": false,
+        "status": "analytics-count",
+        "last_checked_at": "2026-10-20T12:54:12.650594+00:00"
       }
     }
   },
