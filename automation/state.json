@@ -2695,8 +2695,8 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 43,
-    "last_status": "daily-budget-exhausted"
+    "profile_cursor": 44,
+    "last_status": "ok"
   },
   "reply_monitor": {
     "posts": {
@@ -3184,8 +3184,8 @@
       "status": "running",
       "started_at": "2026-10-20T12:54:09.261536+00:00",
       "deadline": "2026-10-20T22:00:00+05:30",
-      "heartbeat_at": "2026-10-20T15:09:26.189691+00:00",
-      "cycles": 28,
+      "heartbeat_at": "2026-10-20T15:14:32.043673+00:00",
+      "cycles": 29,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -3324,28 +3324,6 @@
           "urn:li:share:7515825101053792257"
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515566569154953216/",
-        "urn": "urn:li:ugcPost:7515566497952387072",
-        "shareUrn": "urn:li:ugcPost:7515566497952387072",
-        "text": "\"Every company right now needs a set of people who's job is to be at the frontier. \n\nThey're the people who have eight $200/month subscriptions on everything.\n\nYou have to architect your organization where this can exist.\"\n\n— Josh Woodward, Head of Google Labs, Gemini App, and Google AI Studio",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-13T00:18:22.561000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7515566569154953216",
-          "urn:li:ugcPost:7515566497952387072"
-        ],
-        "first_seen_at": "2026-10-13T15:49:08.908064+00:00",
         "cached_at": "2026-10-15T16:03:47.205166+00:00",
         "quality_decision": {
           "eligible": true,
