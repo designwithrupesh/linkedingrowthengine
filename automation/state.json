@@ -2384,9 +2384,12 @@
       "kind": "comment",
       "text": "A late-night conversation in a startup office? That’s where real ambition starts. Not in boardrooms, but in messy, human moments.",
       "at": "2026-10-20T15:49:59.906526+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7517832087320555520",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7518337789697011712",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
