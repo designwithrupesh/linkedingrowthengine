@@ -2346,6 +2346,14 @@
       "http_status": 201,
       "remote_id": "7517616081331548160",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:b0a2022b4bcb4af3510d770a191e8eef814efd5af78d76aeabd874fddf801c14": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-20T15:36:47.314187+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7518008261258694657",
+      "parent": null
     }
   },
   "days": {
@@ -2416,8 +2424,9 @@
     },
     "2026-10-20": {
       "post": 2,
-      "interaction": 0,
-      "read": 13
+      "interaction": 1,
+      "read": 13,
+      "public_interaction": 1
     },
     "2026-10-21": {
       "post": 2,
@@ -2695,7 +2704,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 47,
+    "profile_cursor": 48,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3720,6 +3729,28 @@
         ],
         "first_seen_at": "2026-10-15T15:18:44.960759+00:00",
         "cached_at": "2026-10-20T15:29:21.772489+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518008262101733376/",
+        "urn": "urn:li:share:7518008261258694657",
+        "shareUrn": "urn:li:share:7518008261258694657",
+        "text": "SEATTLE DESIGN 🗣️: Oct 30 in my hometown design community AIGA Seattle with type design Prof. Marta Bernstein and tech designer Terry Marks\n⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣒⣚⣛⣛⣛⣛⣛⣛⣓⣒⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⢀⣀⣀⣈⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣁⣀⣀⡀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠈⠉⠉⢉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡉⠉⠉⠁⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⢻⡋⠉⠉⣿⣿⠉⠉⢙⡟⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⣿⣿⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣿⣿⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⠀⣿⣿⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠂⠛⠛⠐⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\nSpace Needle ASCII-Art Credit: https://lnkd.in/gbfxzQdm",
+        "authorName": "John Maeda",
+        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
+        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
+        "postedAtISO": "2026-10-19T18:00:47.524000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
+        "identity_aliases": [
+          "urn:li:activity:7518008262101733376",
+          "urn:li:share:7518008261258694657"
+        ],
+        "first_seen_at": "2026-10-20T15:34:22.372274+00:00",
+        "cached_at": "2026-10-20T15:34:22.372274+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
