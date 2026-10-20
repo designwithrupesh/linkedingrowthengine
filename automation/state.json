@@ -2390,6 +2390,14 @@
       "http_status": 201,
       "remote_id": "7518337789697011712",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:196dbee31f595b2211dedce5e7026817d6a8f37fe30ee13fcce01ceffb3f5920": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-20T16:09:55.793470+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7517940311218683904",
+      "parent": null
     }
   },
   "days": {
@@ -2460,9 +2468,9 @@
     },
     "2026-10-20": {
       "post": 2,
-      "interaction": 4,
+      "interaction": 5,
       "read": 16,
-      "public_interaction": 4
+      "public_interaction": 5
     },
     "2026-10-21": {
       "post": 2,
@@ -2740,7 +2748,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 50,
+    "profile_cursor": 51,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3464,94 +3472,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517581017466171392/",
-        "urn": "urn:li:ugcPost:7517580948452872193",
-        "shareUrn": "urn:li:ugcPost:7517580948452872193",
-        "text": "\"To make them is not to understand them.\"\n\nEmmanuel Ameisen has spent the last 3 years doing interpretability research at Anthropic, looking inside LLMs like Claude to figure out what they're actually doing. As he puts it, models are \"grown,\" not built, and his job is \"much closer to biology than to engineering.\"\n\nWe discuss:\n🔸 His surprising discovery that models plan many tokens ahead\n🔸 Why anthropomorphizing AI can actually be the right approach\n🔸 What the \"J-space\" reveals about how models think\n🔸 How interpretability connects to AI alignment and safety\n\nListen now: https://lnkd.in/gT3YjHxe\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/gEvnCPUV\n• Apple: https://lnkd.in/giDaGVMS",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-18T13:43:04.465000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7517581017466171392",
-          "urn:li:ugcPost:7517580948452872193"
-        ],
-        "first_seen_at": "2026-10-18T16:01:49.272843+00:00",
-        "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516860238080360448/",
-        "urn": "urn:li:ugcPost:7516860148611629056",
-        "shareUrn": "urn:li:ugcPost:7516860148611629056",
-        "text": "Head of Design at Stripe, Katie Dill, on how to stop building zombie UIs",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-16T13:58:57.268000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516860238080360448",
-          "urn:li:ugcPost:7516860148611629056"
-        ],
-        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
-        "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "media-headline"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516568362173239296/",
-        "urn": "urn:li:share:7516568360902397952",
-        "shareUrn": "urn:li:share:7516568360902397952",
-        "text": "Katie Dill's talk from the Lenny & Friends Summit is now my third most viewed YT video of all-time 👏👏👏\n\n(Beating out her former boss Brian Chesky!)\n\nHere's the talk: https://lnkd.in/gcec6qjp",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-15T18:39:08.629000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516568362173239296",
-          "urn:li:share:7516568360902397952"
-        ],
-        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
-        "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "external-teaser"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
-        "urn": "urn:li:share:7516512888547627008",
-        "shareUrn": "urn:li:share:7516512888547627008",
-        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516512889588047873",
-          "urn:li:share:7516512888547627008"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "external-teaser"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
         "urn": "urn:li:ugcPost:7516220203534430209",
         "shareUrn": "urn:li:ugcPost:7516220203534430209",
@@ -3812,6 +3732,116 @@
         "quality_decision": {
           "eligible": false,
           "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517940312602918912/",
+        "urn": "urn:li:ugcPost:7517940311218683904",
+        "shareUrn": "urn:li:ugcPost:7517940311218683904",
+        "text": "My biggest takeaways from Anthropic interpretability researched Emmanuel Ameisen:\n\n1. Predicting the next token requires understanding the universe.\n2. LLMs plan ahead, even though they write one token at a time.\n3. Anthropomorphizing AI can sometimes be a useful approach when trying to predict how they will behave.\n4. Interpretability research looks more like neuroscience than software engineering.\n5. Models can tell you about only a small slice of what they’re thinking.\n6. Studying models closely often raises more questions than it answers.\n7. Even the people who build AI models don’t fully understand how they work.\n8. Interpretability as a field is small, young, and open to newcomers.\n\nFull episode: https://lnkd.in/gCQgay3s",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-19T13:30:47.101000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7517940312602918912",
+          "urn:li:ugcPost:7517940311218683904"
+        ],
+        "first_seen_at": "2026-10-20T16:09:24.449006+00:00",
+        "cached_at": "2026-10-20T16:09:24.449006+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517581017466171392/",
+        "urn": "urn:li:ugcPost:7517580948452872193",
+        "shareUrn": "urn:li:ugcPost:7517580948452872193",
+        "text": "\"To make them is not to understand them.\"\n\nEmmanuel Ameisen has spent the last 3 years doing interpretability research at Anthropic, looking inside LLMs like Claude to figure out what they're actually doing. As he puts it, models are \"grown,\" not built, and his job is \"much closer to biology than to engineering.\"\n\nWe discuss:\n🔸 His surprising discovery that models plan many tokens ahead\n🔸 Why anthropomorphizing AI can actually be the right approach\n🔸 What the \"J-space\" reveals about how models think\n🔸 How interpretability connects to AI alignment and safety\n\nListen now: https://lnkd.in/gT3YjHxe\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/gEvnCPUV\n• Apple: https://lnkd.in/giDaGVMS",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-18T13:43:04.465000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7517581017466171392",
+          "urn:li:ugcPost:7517580948452872193"
+        ],
+        "first_seen_at": "2026-10-18T16:01:49.272843+00:00",
+        "cached_at": "2026-10-20T16:09:24.449006+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516860238080360448/",
+        "urn": "urn:li:ugcPost:7516860148611629056",
+        "shareUrn": "urn:li:ugcPost:7516860148611629056",
+        "text": "Head of Design at Stripe, Katie Dill, on how to stop building zombie UIs",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-16T13:58:57.268000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516860238080360448",
+          "urn:li:ugcPost:7516860148611629056"
+        ],
+        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
+        "cached_at": "2026-10-20T16:09:24.449006+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "media-headline"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516568362173239296/",
+        "urn": "urn:li:share:7516568360902397952",
+        "shareUrn": "urn:li:share:7516568360902397952",
+        "text": "Katie Dill's talk from the Lenny & Friends Summit is now my third most viewed YT video of all-time 👏👏👏\n\n(Beating out her former boss Brian Chesky!)\n\nHere's the talk: https://lnkd.in/gcec6qjp",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-15T18:39:08.629000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516568362173239296",
+          "urn:li:share:7516568360902397952"
+        ],
+        "first_seen_at": "2026-10-16T16:08:17.644160+00:00",
+        "cached_at": "2026-10-20T16:09:24.449006+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "external-teaser"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
+        "urn": "urn:li:share:7516512888547627008",
+        "shareUrn": "urn:li:share:7516512888547627008",
+        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7516512889588047873",
+          "urn:li:share:7516512888547627008"
+        ],
+        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
+        "cached_at": "2026-10-20T16:09:24.449006+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "external-teaser"
         }
       }
     ],
