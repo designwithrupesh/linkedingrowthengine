@@ -2401,6 +2401,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:196dbee31f595b2211dedce5e7026817d6a8f37fe30ee13fcce01ceffb3f5920": {
+      "kind": "comment",
+      "text": "Point 3 stands out: anthropomorphizing can be useful. It’s a shortcut to predict behavior, but it risks mistaking metaphor for mechanism. Still, it’s a real tool for early intuition.",
+      "at": "2026-10-20T16:09:59.503866+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7517940311218683904",
+      "parent": null
     }
   },
   "days": {
@@ -2471,9 +2479,9 @@
     },
     "2026-10-20": {
       "post": 2,
-      "interaction": 5,
+      "interaction": 6,
       "read": 16,
-      "public_interaction": 5
+      "public_interaction": 6
     },
     "2026-10-21": {
       "post": 2,
