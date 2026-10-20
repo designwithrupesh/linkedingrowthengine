@@ -2656,13 +2656,14 @@
     {
       "id": "6ad461bad9bbd9a04e6e35bc",
       "text": "Linear's October 8 update puts a pull request in the context of its stack. In this screenshot, the current change is number 3, with the surrounding changes still visible.\n\nThe numbering, connecting line and Current label make the position clear without much explanation. I like that.\n\nThe faded neighbouring rows are my hesitation. On a smaller screen, context that's technically there may still be hard to read. I'd want to see this at review size before calling the hierarchy a win.\n\nOfficial Linear release image: https://linear.app/changelog/2026-10-08-stacked-pull-requests",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7518151781109932032/",
       "at": "2026-10-18T06:05:42.931887+00:00",
       "scheduled_for": "2026-10-20T03:30:00+00:00",
       "allocation_day": "2026-10-20",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615"
+      "asset_sha256": "e5c71987ae4f9a5b23b218e5c3cab73819a35df91cf2fb7acd0088183ccab615",
+      "post_urn": "urn:li:share:7518151781109932032"
     },
     {
       "id": "6ad461d7d9bbd9a04e6e36f7",
