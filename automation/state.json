@@ -2417,7 +2417,7 @@
     "2026-10-20": {
       "post": 2,
       "interaction": 0,
-      "read": 7
+      "read": 8
     },
     "2026-10-21": {
       "post": 2,
@@ -3096,7 +3096,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-20T12:54:12.650594+00:00",
+        "last_considered_at": "2026-10-20T14:34:17.825724+00:00",
         "status": "analytics-count",
         "last_checked_at": "2026-10-20T12:54:12.650594+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
