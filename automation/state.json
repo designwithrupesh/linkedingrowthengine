@@ -3292,13 +3292,18 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T13:10:28.804547+00:00",
-      "cycles": 1,
+      "heartbeat_at": "2026-10-21T13:15:19.052879+00:00",
+      "cycles": 2,
       "recent_errors": [
         {
           "phase": "next-day-posts",
           "type": "ApifyModelError",
           "at": "2026-10-21T13:10:28.803334+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "ApifyModelError",
+          "at": "2026-10-21T13:15:19.051782+00:00"
         }
       ]
     },
