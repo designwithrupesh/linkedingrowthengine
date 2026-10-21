@@ -2784,7 +2784,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 56,
+    "profile_cursor": 57,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3313,8 +3313,8 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T15:45:53.799625+00:00",
-      "cycles": 32,
+      "heartbeat_at": "2026-10-21T15:50:25.713408+00:00",
+      "cycles": 33,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -3507,93 +3507,6 @@
         ],
         "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
         "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517832087819825153/",
-        "urn": "urn:li:share:7517832087320555520",
-        "shareUrn": "urn:li:share:7517832087320555520",
-        "text": "New on the blog: \n— Room for ambition\nA late-night conversation at a startup office in Finland has stayed with me for almost twenty years. Some thoughts on ambition, getting good at something, and the people around you.\n\nhttps://lnkd.in/g_N9WcjU",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-19T06:20:44.302000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517832087819825153",
-          "urn:li:share:7517832087320555520"
-        ],
-        "first_seen_at": "2026-10-20T15:49:30.617916+00:00",
-        "cached_at": "2026-10-20T15:49:30.617916+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517604699039232000/",
-        "urn": "urn:li:share:7517604697470324736",
-        "shareUrn": "urn:li:share:7517604697470324736",
-        "text": "Linux. Git. SSH. MySQL. IRC.\nAll started by individual Finns. 🇫🇮\n\nThe key here is individuals. The more organizations or broader environment get involved, the worse it gets.\n\nIt’s nice to be proud of where these things came from. But what matters more is what you do with them.\n\nEuropean individuals can invent. But America is, ironically, a much better collective environment for trying new things and turning them into something impactful. \n\nThat’s why so many these ambitious people move there. \n\nBuilding something great is and needs to be a shared ambition. This has been missing from Europe maybe the last 70-100 years. Ambition is very little at all. Shared ambition even less.\n\nEspecially now with AI, you can raise your ambition a lot. Build the best products in the world. Make rockets, satellites, drones, robots, software, drugs, whatever.\n\nRemove councils. Fire the grey hair boards. Refuse to raise from the EU financier VCs. Incorporate in Delaware if you have to. Put talented individuals in charge. \n\nAveraging everyone’s ideas doesn’t produce great work and working with people stuck in the past is not worth it. \n\nReset your thinking. \n\nWhat would it take for you to be the best of your generation?\n\nWhat’s the greatest thing you could possibly build? \n\nHow could you build it fast?\n\nMake it better and make it matter",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-18T15:17:10.592000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517604699039232000",
-          "urn:li:share:7517604697470324736"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
-        "cached_at": "2026-10-20T15:49:30.617916+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517112765380034562/",
-        "urn": "urn:li:share:7517112764276887552",
-        "shareUrn": "urn:li:share:7517112764276887552",
-        "text": "Final form achieved: Linear now also builds and deploys my personal site. Took me about 15mins to set up from my previous Codex scripts. \n\n- Github repo to store the code  \n- Discuss with the agent and write posts as Linear docs  \n- Linear coding agent run the code in the sandbox, build the site and deploy to S3  \n- S3 credentials are stored in Linear env as secrets  \n- I can now just tell the agent \"publish this article\" or \"republish the site\"  \n- Added a lightbox, rss feed today with the coding agent, reviews and merged with Linear Diffs. \n\nCan now write, make changes, review code and publish from any computer or phone just by using Linear.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-17T06:42:24.468000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517112765380034562",
-          "urn:li:share:7517112764276887552"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
-        "cached_at": "2026-10-20T15:49:30.617916+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516881519211159553/",
-        "urn": "urn:li:ugcPost:7516881519211159553",
-        "shareUrn": "urn:li:ugcPost:7516881519211159553",
-        "text": "Announcing the first speakers for Orbit (by Linear):\n> Karri Saarinen (Linear)\n> Katelyn Lesse (Anthropic)\n> Will Larson (Imprint)\n> Can Duruk (Modal)\nMore speakers coming soon.",
-        "authorName": "Linear",
-        "authorHeadline": "91,060 followers",
-        "authorProfileUrl": "https://www.linkedin.com/in/linearapp/",
-        "postedAtISO": "2026-10-17T05:51:44.083000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7516881519211159553"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
-        "cached_at": "2026-10-20T15:49:30.617916+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
@@ -3901,6 +3814,115 @@
         ],
         "first_seen_at": "2026-10-20T15:34:22.372274+00:00",
         "cached_at": "2026-10-21T15:35:18.903690+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518536397406801920/",
+        "urn": "urn:li:share:7518536396739870720",
+        "shareUrn": "urn:li:share:7518536396739870720",
+        "text": "Room for ambition\n\nWhat could we become truly good at, and how could we contribute something meaningful to the world?\n\nWhen you are young, much of the world looks like something other people have built. Seeing yourself as part of your generation means not comparing yourself to those who came before, but recognizing that you, too, will shape what comes next.\n\nThat is what shared ambition means to me. People pursuing different things, but wanting each other to do something great. You don’t need to agree with every idea. But there is a room, or an environment, that gives ambition space.\n\nOften, the support is simple: listening seriously, sharing an idea or a story, making an introduction. Helping where you can without assuming you know what someone should do. Advice can be wrong.\n\nI’ve kept this question to myself because ambition can sound like self-importance. But I don’t think of the question as a prediction of who I will become. It’s something to live up to: to make something great. An obligation to make an honest effort, not a claim to recognition.\n\nhttps://lnkd.in/g_N9WcjU",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-21T04:59:24.793000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7518536397406801920",
+          "urn:li:share:7518536396739870720"
+        ],
+        "first_seen_at": "2026-10-21T15:50:19.491635+00:00",
+        "cached_at": "2026-10-21T15:50:19.491635+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517832087819825153/",
+        "urn": "urn:li:share:7517832087320555520",
+        "shareUrn": "urn:li:share:7517832087320555520",
+        "text": "New on the blog: \n— Room for ambition\nA late-night conversation at a startup office in Finland has stayed with me for almost twenty years. Some thoughts on ambition, getting good at something, and the people around you.\n\nhttps://lnkd.in/g_N9WcjU",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-19T06:20:44.302000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7517832087819825153",
+          "urn:li:share:7517832087320555520"
+        ],
+        "first_seen_at": "2026-10-20T15:49:30.617916+00:00",
+        "cached_at": "2026-10-21T15:50:19.491635+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517604699039232000/",
+        "urn": "urn:li:share:7517604697470324736",
+        "shareUrn": "urn:li:share:7517604697470324736",
+        "text": "Linux. Git. SSH. MySQL. IRC.\nAll started by individual Finns. 🇫🇮\n\nThe key here is individuals. The more organizations or broader environment get involved, the worse it gets.\n\nIt’s nice to be proud of where these things came from. But what matters more is what you do with them.\n\nEuropean individuals can invent. But America is, ironically, a much better collective environment for trying new things and turning them into something impactful. \n\nThat’s why so many these ambitious people move there. \n\nBuilding something great is and needs to be a shared ambition. This has been missing from Europe maybe the last 70-100 years. Ambition is very little at all. Shared ambition even less.\n\nEspecially now with AI, you can raise your ambition a lot. Build the best products in the world. Make rockets, satellites, drones, robots, software, drugs, whatever.\n\nRemove councils. Fire the grey hair boards. Refuse to raise from the EU financier VCs. Incorporate in Delaware if you have to. Put talented individuals in charge. \n\nAveraging everyone’s ideas doesn’t produce great work and working with people stuck in the past is not worth it. \n\nReset your thinking. \n\nWhat would it take for you to be the best of your generation?\n\nWhat’s the greatest thing you could possibly build? \n\nHow could you build it fast?\n\nMake it better and make it matter",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-18T15:17:10.592000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7517604699039232000",
+          "urn:li:share:7517604697470324736"
+        ],
+        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
+        "cached_at": "2026-10-21T15:50:19.491635+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517112765380034562/",
+        "urn": "urn:li:share:7517112764276887552",
+        "shareUrn": "urn:li:share:7517112764276887552",
+        "text": "Final form achieved: Linear now also builds and deploys my personal site. Took me about 15mins to set up from my previous Codex scripts. \n\n- Github repo to store the code  \n- Discuss with the agent and write posts as Linear docs  \n- Linear coding agent run the code in the sandbox, build the site and deploy to S3  \n- S3 credentials are stored in Linear env as secrets  \n- I can now just tell the agent \"publish this article\" or \"republish the site\"  \n- Added a lightbox, rss feed today with the coding agent, reviews and merged with Linear Diffs. \n\nCan now write, make changes, review code and publish from any computer or phone just by using Linear.",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-10-17T06:42:24.468000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7517112765380034562",
+          "urn:li:share:7517112764276887552"
+        ],
+        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
+        "cached_at": "2026-10-21T15:50:19.491635+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516881519211159553/",
+        "urn": "urn:li:ugcPost:7516881519211159553",
+        "shareUrn": "urn:li:ugcPost:7516881519211159553",
+        "text": "Announcing the first speakers for Orbit (by Linear):\n> Karri Saarinen (Linear)\n> Katelyn Lesse (Anthropic)\n> Will Larson (Imprint)\n> Can Duruk (Modal)\nMore speakers coming soon.",
+        "authorName": "Linear",
+        "authorHeadline": "91,121 followers",
+        "authorProfileUrl": "https://www.linkedin.com/in/linearapp/",
+        "postedAtISO": "2026-10-17T05:51:44.083000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:ugcPost:7516881519211159553"
+        ],
+        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
+        "cached_at": "2026-10-21T15:50:19.491635+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
