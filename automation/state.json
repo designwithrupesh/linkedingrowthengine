@@ -3323,14 +3323,9 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T15:55:20.717295+00:00",
-      "cycles": 34,
+      "heartbeat_at": "2026-10-21T16:01:57.133245+00:00",
+      "cycles": 35,
       "recent_errors": [
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-21T13:10:28.803334+00:00"
-        },
         {
           "phase": "next-day-posts",
           "type": "ApifyModelError",
@@ -3355,6 +3350,11 @@
           "phase": "public",
           "type": "WriteOutcomeError",
           "at": "2026-10-21T15:45:53.797272+00:00"
+        },
+        {
+          "phase": "public",
+          "type": "WriteOutcomeError",
+          "at": "2026-10-21T16:01:57.131272+00:00"
         }
       ]
     },
