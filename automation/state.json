@@ -2794,7 +2794,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 57,
+    "profile_cursor": 58,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3323,8 +3323,8 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T16:01:57.133245+00:00",
-      "cycles": 35,
+      "heartbeat_at": "2026-10-21T16:05:27.053604+00:00",
+      "cycles": 36,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -3542,72 +3542,6 @@
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516271640838815745/",
-        "urn": "urn:li:share:7516145262101229568",
-        "shareUrn": "urn:li:share:7516145262101229568",
-        "text": "Is a 6-hour Saturday workshop worth it? Look at who signs up. 📊\n\n250+ people from 150+ companies have taken Advanced Product Taste, including Meta, Google, Amazon, Apple, OpenAI, Anthropic, Microsoft, Canva, Ramp, Rippling, Uber, and Coinbase.\n\n37% are Director level or above. 7 Chief Product Officers. 21 founders.\nHere is why they come: taste is a skill, and it is mostly evaluative, which means you can build it through deliberate practice. Six hours of taste workouts on real products can give you more of that practice than the last 10 years on the job.\n\nNext cohort is this Saturday, October 17. \nhttps://lnkd.in/dsaWTn8M",
-        "authorName": "Shreyas Doshi's Product Sense course",
-        "authorHeadline": "5,091 followers",
-        "authorProfileUrl": "https://www.linkedin.com/in/product-sense-shreyas/",
-        "postedAtISO": "2026-10-16T14:20:30.584000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516271640838815745",
-          "urn:li:share:7516145262101229568"
-        ],
-        "first_seen_at": "2026-10-16T15:53:16.743865+00:00",
-        "cached_at": "2026-10-20T16:04:24.118654+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
-        "urn": "urn:li:share:7516291092162514944",
-        "shareUrn": "urn:li:share:7516291092162514944",
-        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516291092795822080",
-          "urn:li:share:7516291092162514944"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-20T16:04:24.118654+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
-        "urn": "urn:li:share:7516088553353867264",
-        "shareUrn": "urn:li:share:7516088553353867264",
-        "text": "Best $ I’ve spent in years",
-        "authorName": "Hobson Bryan",
-        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
-        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
-        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516088554066915328",
-          "urn:li:share:7516088553353867264"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-20T16:04:24.118654+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "insufficient-context"
         }
       },
       {
@@ -3936,6 +3870,72 @@
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516271640838815745/",
+        "urn": "urn:li:share:7516145262101229568",
+        "shareUrn": "urn:li:share:7516145262101229568",
+        "text": "Is a 6-hour Saturday workshop worth it? Look at who signs up. 📊\n\n250+ people from 150+ companies have taken Advanced Product Taste, including Meta, Google, Amazon, Apple, OpenAI, Anthropic, Microsoft, Canva, Ramp, Rippling, Uber, and Coinbase.\n\n37% are Director level or above. 7 Chief Product Officers. 21 founders.\nHere is why they come: taste is a skill, and it is mostly evaluative, which means you can build it through deliberate practice. Six hours of taste workouts on real products can give you more of that practice than the last 10 years on the job.\n\nNext cohort is this Saturday, October 17. \nhttps://lnkd.in/dsaWTn8M",
+        "authorName": "Shreyas Doshi's Product Sense course",
+        "authorHeadline": "5,106 followers",
+        "authorProfileUrl": "https://www.linkedin.com/in/product-sense-shreyas/",
+        "postedAtISO": "2026-10-16T14:20:30.584000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516271640838815745",
+          "urn:li:share:7516145262101229568"
+        ],
+        "first_seen_at": "2026-10-16T15:53:16.743865+00:00",
+        "cached_at": "2026-10-21T16:05:20.175577+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
+        "urn": "urn:li:share:7516291092162514944",
+        "shareUrn": "urn:li:share:7516291092162514944",
+        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
+        "authorName": "Shreyas Doshi",
+        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
+        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
+        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516291092795822080",
+          "urn:li:share:7516291092162514944"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-21T16:05:20.175577+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
+        "urn": "urn:li:share:7516088553353867264",
+        "shareUrn": "urn:li:share:7516088553353867264",
+        "text": "Best $ I’ve spent in years",
+        "authorName": "Hobson Bryan",
+        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
+        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
+        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
+        "identity_aliases": [
+          "urn:li:activity:7516088554066915328",
+          "urn:li:share:7516088553353867264"
+        ],
+        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
+        "cached_at": "2026-10-21T16:05:20.175577+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "insufficient-context"
         }
       }
     ],
