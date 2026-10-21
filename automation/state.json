@@ -2793,10 +2793,10 @@
         "next_page": null
       },
       "urn:li:share:7514663593506951168": {
-        "last_attempt_at": "2026-10-20T12:54:12.650594+00:00",
-        "poll_count": 20,
+        "last_attempt_at": "2026-10-21T13:10:13.694599+00:00",
+        "poll_count": 21,
         "status": "checked",
-        "last_success_at": "2026-10-20T12:54:12.650594+00:00",
+        "last_success_at": "2026-10-21T13:10:13.694599+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -2805,10 +2805,10 @@
         "next_page": null
       },
       "urn:li:share:7514890083917864960": {
-        "last_attempt_at": "2026-10-20T12:54:12.650594+00:00",
-        "poll_count": 19,
+        "last_attempt_at": "2026-10-21T13:10:13.694599+00:00",
+        "poll_count": 20,
         "status": "checked",
-        "last_success_at": "2026-10-20T12:54:12.650594+00:00",
+        "last_success_at": "2026-10-21T13:10:13.694599+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -3055,17 +3055,29 @@
         "unresolved_replies": 0,
         "page_number": 1,
         "next_page": null
+      },
+      "urn:li:share:7518649817774895104": {
+        "last_attempt_at": "2026-10-21T13:10:13.694599+00:00",
+        "poll_count": 1,
+        "status": "checked",
+        "last_success_at": "2026-10-21T13:10:13.694599+00:00",
+        "returned_top_level": 0,
+        "coverage": "bounded-public-results",
+        "returned_rows": 0,
+        "unresolved_replies": 0,
+        "page_number": 1,
+        "next_page": null
       }
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-10-21T07:30:33.190407+00:00",
-      "post_urn": "urn:li:share:7514165310896250880",
-      "self": 1,
+      "at": "2026-10-21T13:10:13.694599+00:00",
+      "post_urn": "urn:li:share:7514663593506951168",
+      "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
       "queued": 0,
-      "duplicate": 1,
+      "duplicate": 0,
       "overflow": 0
     }
   },
