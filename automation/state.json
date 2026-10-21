@@ -2426,9 +2426,11 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-10-21T15:45:51.280323+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:share:7518669056976072704",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
