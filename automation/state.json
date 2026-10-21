@@ -2743,13 +2743,14 @@
     {
       "id": "6ad461ddd9bbd9a04e6e3760",
       "text": "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team changes tools.\n\nIts October 15 Figma terminology guide explains the naming. The Inspect image shows a selected Flex layout and display: flex in the CSS panel beside it.\n\nThat connection interests me more than learning that Frames are called Boards. It gives designers and developers something concrete to point at when they discuss layout behaviour.\n\nA terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar component and see which habits carry over.\n\nOfficial Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7518513915064954881/",
       "at": "2026-10-18T06:06:17.174252+00:00",
       "scheduled_for": "2026-10-21T03:30:00+00:00",
       "allocation_day": "2026-10-21",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f"
+      "asset_sha256": "3ee5d98f0b28c22959d768b843d41afcdebc96a2a8bd4f829403ffe4a5a5b65f",
+      "post_urn": "urn:li:share:7518513915064954881"
     },
     {
       "id": "6ad461fbd9bbd9a04e6e38fb",
