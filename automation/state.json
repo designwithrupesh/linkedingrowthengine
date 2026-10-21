@@ -2795,7 +2795,7 @@
   ],
   "discovery": {
     "profile_cursor": 58,
-    "last_status": "ok"
+    "last_status": "daily-budget-exhausted"
   },
   "reply_monitor": {
     "posts": {
@@ -3323,8 +3323,8 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T16:05:27.053604+00:00",
-      "cycles": 36,
+      "heartbeat_at": "2026-10-21T16:10:51.434759+00:00",
+      "cycles": 37,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -3468,7 +3468,7 @@
   },
   "engagement": {
     "profile_checked_at": {
-      "lennyrachitsky": "2026-10-20T16:09:24.449006+00:00",
+      "lennyrachitsky": "2026-10-21T16:10:21.398443+00:00",
       "juliezhuo": "2026-10-21T15:15:23.716818+00:00",
       "brianchesky": "2026-10-21T15:20:24.710017+00:00",
       "destraynor": "2026-10-21T15:25:24.083845+00:00",
