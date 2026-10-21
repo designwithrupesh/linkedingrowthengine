@@ -2763,7 +2763,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 51,
+    "profile_cursor": 52,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3433,72 +3433,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515825104031870976/",
-        "urn": "urn:li:share:7515825101053792257",
-        "shareUrn": "urn:li:share:7515825101053792257",
-        "text": "Moats! Does anyone have one anymore?\n\nYes. Yes, they do.\n\nBut only a small subset of what people call moats create real long-term value and defensibility.\n\nNot actually a moat:\n\n1. Distribution: This does matter more than ever. Building products has gotten easier, but getting them to customers has not. Distribution, however, does not create durable defensibility. It helps create the raw ingredients for one, but it is not itself a moat.\n\n2. Execution: Yes, speed is critical for startups. But a company that has to sprint forever is not a good business. Ultimately, it will misstep, slow down, and competition will catch up. Speed gives a company more shots on goal as it tries to build a great product and a great business, but it must eventually find something more durable.\n\n3. Brand: The idea is that when everyone is building the same thing, the most resonant brand will win. But for startups, brand works more like customer acquisition spend: Put money in, get growth out. It’s not something that will effectively keep others from competing long-term. Brand can become a true moat over time (as with Coke or Nike or Apple), but it just takes too long to really matter for most startups.\n\nWhat you're looking for is *compounding advantages*: a self-reinforcing flywheel that gets stronger and stronger over time, ultimately making a company very hard to compete with long-term.\n\nThere are only four compounding advantages that really matter. Every major tech company has at least one:\n\n1. Switching costs: The more deeply embedded a product is in the way a customer works, the harder it is for that customer to switch. This increases retention and revenue per customer, which can be reinvested into the product.\n\n2. Network effects: The more users a product has, the better it gets for everyone. This increases engagement and attracts more users.\n\n3. Scale economies: The more volume a company has, the larger and more efficient its operations can be. This lowers unit costs, funding lower prices or a better product at the same price, further driving up volume.\n\n4. Data effects: The more usage a product has, the more data it generates. This data can be used to improve the product and increase usage.\n\nIf you can’t see the potential for any in the startup you’re considering joining, that’s a red flag.\n\nIn today’s incredible post, Dan Hockenmaier shares a simple framework you can run in about an hour after getting an offer:\n1. Identify a startup’s compounding advantage\n2. Gauge how strong it could get\n3. Measure whether it’s working\n\nInside: dozens of real company examples, the specific metrics to track, and benchmarks for what good and great look like.\n\nRead it here: https://lnkd.in/gm3Dx__e",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-13T17:25:42.079000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7515825104031870976",
-          "urn:li:share:7515825101053792257"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-15T16:03:47.205166+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516009658948673536/",
-        "urn": "urn:li:share:7516009658193694720",
-        "shareUrn": "urn:li:share:7516009658193694720",
-        "text": "New post: \n— Brand is who you are\n\nI think brand is often misunderstood. People talk about it as the logo, the website, the colors. Those are the things you can see, so it’s natural to start there. But they are expressions of the brand. The underlying thing is who you are and what you stand for.\n\nhttps://lnkd.in/gyBKZ6gZ",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-14T05:39:03.400000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7516009658948673536",
-          "urn:li:share:7516009658193694720"
-        ],
-        "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515863375793324034/",
-        "urn": "urn:li:share:7515863374711369728",
-        "shareUrn": "urn:li:share:7515863374711369728",
-        "text": "Linear is becoming the place to drive more work forward in your orgs.  A customer shared this chart showing dramatically faster & automatic bug resolution after enabling Loops + @linear Cloud Coding Agent (claude/codex/open):  \n\n> Their 95th-percentile time from bug report or customer request to a fix in production dropped from 9 weeks to 3 days over three months.  \n\nSome use other use cases for Loops: \n- cleaning up deprecated code \n- investigating and fixing bugs \n- routing customer requests to whoever is on call \n- monitoring security vulnerabilities  \n- checking up on important projects or customer themes",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-13T19:57:46.778000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7515863375793324034",
-          "urn:li:share:7515863374711369728"
-        ],
-        "first_seen_at": "2026-10-15T15:38:45.930463+00:00",
-        "cached_at": "2026-10-16T15:43:16.012819+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
         "urn": "urn:li:share:7516209385463963648",
         "shareUrn": "urn:li:share:7516209385463963648",
@@ -3784,28 +3718,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515937896546111488/",
-        "urn": "urn:li:share:7515937895862558720",
-        "shareUrn": "urn:li:share:7515937895862558720",
-        "text": "Quick note: my final Product Taste cohort of 2026 is this Saturday and enrollment closes in 2 days. About 100 students have already enrolled in this current cohort. If you lead product building in any capacity (regardless of your specific role and level), join me for 6 hours this Saturday to learn how to build, communicate, and scale good taste.\n\nDetails here:\nhttps://lnkd.in/g5Pwenke",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-14T00:53:53.910000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7515937896546111488",
-          "urn:li:share:7515937895862558720"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-20T16:04:24.118654+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517940312602918912/",
         "urn": "urn:li:ugcPost:7517940311218683904",
         "shareUrn": "urn:li:ugcPost:7517940311218683904",
@@ -3959,9 +3871,9 @@
         "retry_after": "2026-10-21T17:10:22.959604+00:00"
       },
       "post:2026-10-22:1800": {
-        "attempted_at": "2026-10-21T13:15:16.183760+00:00",
+        "attempted_at": "2026-10-21T15:15:27.612284+00:00",
         "allocation_day": "2026-10-22",
-        "retry_after": "2026-10-21T15:15:16.183760+00:00"
+        "retry_after": "2026-10-21T17:15:27.612284+00:00"
       }
     }
   },
