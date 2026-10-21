@@ -3313,8 +3313,8 @@
       "status": "running",
       "started_at": "2026-10-21T13:10:11.309924+00:00",
       "deadline": "2026-10-21T22:00:00+05:30",
-      "heartbeat_at": "2026-10-21T15:40:19.146802+00:00",
-      "cycles": 31,
+      "heartbeat_at": "2026-10-21T15:45:53.799625+00:00",
+      "cycles": 32,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -3340,6 +3340,11 @@
           "phase": "public",
           "type": "WriteOutcomeError",
           "at": "2026-10-21T15:32:03.842769+00:00"
+        },
+        {
+          "phase": "public",
+          "type": "WriteOutcomeError",
+          "at": "2026-10-21T15:45:53.797272+00:00"
         }
       ]
     },
