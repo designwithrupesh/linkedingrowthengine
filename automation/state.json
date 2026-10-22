@@ -3338,8 +3338,8 @@
       "status": "running",
       "started_at": "2026-10-22T14:43:08.349333+00:00",
       "deadline": "2026-10-22T22:00:00+05:30",
-      "heartbeat_at": "2026-10-22T16:08:15.415076+00:00",
-      "cycles": 18,
+      "heartbeat_at": "2026-10-22T16:13:45.393906+00:00",
+      "cycles": 19,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -3463,7 +3463,7 @@
   },
   "engagement": {
     "profile_checked_at": {
-      "lennyrachitsky": "2026-10-21T16:10:21.398443+00:00",
+      "lennyrachitsky": "2026-10-22T16:13:15.357395+00:00",
       "juliezhuo": "2026-10-21T15:15:23.716818+00:00",
       "brianchesky": "2026-10-21T15:20:24.710017+00:00",
       "destraynor": "2026-10-21T15:25:24.083845+00:00",
@@ -3473,50 +3473,6 @@
       "shreyasdoshi": "2026-10-21T16:05:20.175577+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516209386151915520/",
-        "urn": "urn:li:share:7516209385463963648",
-        "shareUrn": "urn:li:share:7516209385463963648",
-        "text": "There’s way too much AI hype right now.\n\nSo Noam Segal and I are launching \"Hype(less),\" a research project to showcase the most genuine, impactful, and repeatable AI workflows that have created real value for you and your teams in product, design, and engineering.\n\nWe’ll showcase the best in a special three-part newsletter series in the coming months.\n\nHere's our ask: If you're a PM, engineer, or designer, please share your most valuable AI workflow here: https://tally.so/r/dWL6Xd (by 10/23).\n\nBy sharing your workflow, you'll help others cut through the AI hype.\n\nHere's the form: https://tally.so/r/dWL6Xd\n\n(Please repost and share with your colleagues so we can collect as many great examples as possible).",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-14T18:52:42.076000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516209386151915520",
-          "urn:li:share:7516209385463963648"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-16T16:08:17.644160+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516256721321824256/",
-        "urn": "urn:li:ugcPost:7516220203534430209",
-        "shareUrn": "urn:li:ugcPost:7516220203534430209",
-        "text": "Here it is: Benchmarks to measure a given company's moat.\n\nImage 1: KPIs to look at, by moat.\nImage 2: What \"good\" and \"great\" looks like.\n\nNote, these are rough and meant to be interpreted directionally, because there is so much variance by industry and business model. For a deeper exploration, see links in the PDF here: https://lnkd.in/gKrqKVty\n\nFor a lot more context and advice, don't miss Dan Hockenmaier's incredible full post: https://lnkd.in/gY6TkS2a",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-14T22:00:47.660000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516256721321824256",
-          "urn:li:ugcPost:7516220203534430209"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-18T16:01:49.272843+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516703573796159488/",
         "urn": "urn:li:share:7516703573087539200",
@@ -3628,28 +3584,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516512889588047873/",
-        "urn": "urn:li:share:7516512888547627008",
-        "shareUrn": "urn:li:share:7516512888547627008",
-        "text": "The only four real moats\n\nFull post: https://lnkd.in/gm3Dx__e",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-15T14:58:42.934000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7516512889588047873",
-          "urn:li:share:7516512888547627008"
-        ],
-        "first_seen_at": "2026-10-15T16:03:47.205166+00:00",
-        "cached_at": "2026-10-20T16:09:24.449006+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "external-teaser"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518337196379066368/",
         "urn": "urn:li:ugcPost:7518337196379066368",
         "shareUrn": "urn:li:ugcPost:7518337196379066368",
@@ -3664,28 +3598,6 @@
           "urn:li:ugcPost:7518337196379066368"
         ],
         "first_seen_at": "2026-10-21T15:30:24.307499+00:00",
-        "cached_at": "2026-10-21T15:30:24.307499+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516220474209488897/",
-        "urn": "urn:li:ugcPost:7516220473517719552",
-        "shareUrn": "urn:li:ugcPost:7516220473517719552",
-        "text": "Lots of Superhuman Mail pebbles today 💜\n\nMy favorite is this: you can now swipe any message to reply or forward.  You don’t even have to expand the message first!",
-        "authorName": "Rahul Vohra",
-        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 10 unicorns.",
-        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
-        "postedAtISO": "2026-10-14T19:36:45.675000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:activity:7516220474209488897",
-          "urn:li:ugcPost:7516220473517719552"
-        ],
-        "first_seen_at": "2026-10-15T15:18:44.960759+00:00",
         "cached_at": "2026-10-21T15:30:24.307499+00:00",
         "quality_decision": {
           "eligible": true,
@@ -3887,50 +3799,6 @@
         "quality_decision": {
           "eligible": false,
           "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516291092795822080/",
-        "urn": "urn:li:share:7516291092162514944",
-        "shareUrn": "urn:li:share:7516291092162514944",
-        "text": "Final reminder about Product Taste.\n\nHere’s what past students are saying: https://lnkd.in/g-spRB8d",
-        "authorName": "Shreyas Doshi",
-        "authorHeadline": "Startup advisor. ex-Stripe, Twitter, Google, Yahoo.",
-        "authorProfileUrl": "https://www.linkedin.com/in/shreyasdoshi/",
-        "postedAtISO": "2026-10-15T00:17:22.458000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516291092795822080",
-          "urn:li:share:7516291092162514944"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-21T16:05:20.175577+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516088554066915328/",
-        "urn": "urn:li:share:7516088553353867264",
-        "shareUrn": "urn:li:share:7516088553353867264",
-        "text": "Best $ I’ve spent in years",
-        "authorName": "Hobson Bryan",
-        "authorHeadline": "Providing Strategic Clarity & Operational Insights for Ambitious Business Leaders | Data, Analytics, and AI | Coastal Georgia",
-        "authorProfileUrl": "https://www.linkedin.com/in/hobsonbryan/",
-        "postedAtISO": "2026-10-15T00:13:09.674000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/shreyasdoshi/",
-        "identity_aliases": [
-          "urn:li:activity:7516088554066915328",
-          "urn:li:share:7516088553353867264"
-        ],
-        "first_seen_at": "2026-10-15T15:48:46.420225+00:00",
-        "cached_at": "2026-10-21T16:05:20.175577+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "insufficient-context"
         }
       }
     ],
