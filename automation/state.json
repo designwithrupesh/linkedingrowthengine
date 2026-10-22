@@ -3338,8 +3338,8 @@
       "status": "running",
       "started_at": "2026-10-22T14:43:08.349333+00:00",
       "deadline": "2026-10-22T22:00:00+05:30",
-      "heartbeat_at": "2026-10-22T15:58:14.401777+00:00",
-      "cycles": 16,
+      "heartbeat_at": "2026-10-22T16:03:14.559400+00:00",
+      "cycles": 17,
       "recent_errors": [
         {
           "phase": "next-day-posts",
