@@ -2555,7 +2555,7 @@
     "2026-10-24": {
       "post": 0,
       "interaction": 0,
-      "read": 0
+      "read": 1
     }
   },
   "reports": [
@@ -3156,9 +3156,9 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_considered_at": "2026-10-23T22:22:30.276182+00:00",
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_checked_at": "2026-10-23T22:22:30.276182+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
         "count": 2,
         "cached": false
@@ -3188,9 +3188,9 @@
         "last_checked_at": "2026-10-23T19:17:56.710389+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_considered_at": "2026-10-23T22:22:30.276182+00:00",
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_checked_at": "2026-10-23T22:22:30.276182+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
         "count": 0,
         "cached": false
@@ -3220,9 +3220,9 @@
         "cached": false
       },
       "urn:li:ugcPost:7515750753525788672": {
-        "last_considered_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_considered_at": "2026-10-23T22:22:30.276182+00:00",
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_checked_at": "2026-10-23T22:22:30.276182+00:00",
         "changed_at": "2026-10-14T02:55:03.779843+00:00",
         "count": 0,
         "cached": false
@@ -3332,20 +3332,20 @@
         "last_checked_at": "2026-10-23T15:32:41.868899+00:00"
       },
       "urn:li:share:7518287426079948800": {
-        "last_considered_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_considered_at": "2026-10-23T22:22:30.276182+00:00",
         "changed_at": "2026-10-20T12:54:12.650594+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-23T15:17:40.786427+00:00"
+        "last_checked_at": "2026-10-23T22:22:30.276182+00:00"
       },
       "urn:li:share:7518513915064954881": {
-        "last_considered_at": "2026-10-23T15:17:40.786427+00:00",
+        "last_considered_at": "2026-10-23T22:22:30.276182+00:00",
         "changed_at": "2026-10-21T07:30:33.190407+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-unverified-count",
-        "last_checked_at": "2026-10-23T15:17:40.786427+00:00"
+        "last_checked_at": "2026-10-23T22:22:30.276182+00:00"
       },
       "urn:li:share:7518649817774895104": {
         "last_considered_at": "2026-10-23T19:17:56.710389+00:00",
