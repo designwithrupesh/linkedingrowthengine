@@ -3345,24 +3345,18 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-22T14:43:08.349333+00:00",
-      "deadline": "2026-10-22T22:00:00+05:30",
-      "heartbeat_at": "2026-10-22T16:28:16.083868+00:00",
-      "cycles": 22,
+      "status": "running",
+      "started_at": "2026-10-23T15:12:38.199107+00:00",
+      "deadline": "2026-10-23T22:00:00+05:30",
+      "heartbeat_at": "2026-10-23T15:12:53.315220+00:00",
+      "cycles": 1,
       "recent_errors": [
         {
           "phase": "next-day-posts",
           "type": "ApifyModelError",
-          "at": "2026-10-22T14:43:24.860367+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-22T14:48:48.289278+00:00"
+          "at": "2026-10-23T15:12:53.314291+00:00"
         }
-      ],
-      "ended_at": "2026-10-22T16:30:00.000202+00:00"
+      ]
     },
     "last_live_validation": {
       "status": "passed",
