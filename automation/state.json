@@ -3348,13 +3348,18 @@
       "status": "running",
       "started_at": "2026-10-23T15:12:38.199107+00:00",
       "deadline": "2026-10-23T22:00:00+05:30",
-      "heartbeat_at": "2026-10-23T15:12:53.315220+00:00",
-      "cycles": 1,
+      "heartbeat_at": "2026-10-23T15:17:52.310085+00:00",
+      "cycles": 2,
       "recent_errors": [
         {
           "phase": "next-day-posts",
           "type": "ApifyModelError",
           "at": "2026-10-23T15:12:53.314291+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "ApifyModelError",
+          "at": "2026-10-23T15:17:52.309030+00:00"
         }
       ]
     },
