@@ -2836,7 +2836,7 @@
   ],
   "discovery": {
     "profile_cursor": 64,
-    "last_status": "ok"
+    "last_status": "daily-budget-exhausted"
   },
   "reply_monitor": {
     "posts": {
@@ -3364,8 +3364,8 @@
       "status": "running",
       "started_at": "2026-10-24T13:36:10.281226+00:00",
       "deadline": "2026-10-24T22:00:00+05:30",
-      "heartbeat_at": "2026-10-24T13:46:23.736696+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-10-24T13:51:47.777883+00:00",
+      "cycles": 4,
       "recent_errors": [
         {
           "phase": "post",
@@ -3500,7 +3500,7 @@
       "destraynor": "2026-10-24T13:36:20.137563+00:00",
       "rahulvohra": "2026-10-24T13:41:16.755406+00:00",
       "johnmaeda": "2026-10-24T13:46:17.832803+00:00",
-      "karrisaarinen": "2026-10-21T15:50:19.491635+00:00",
+      "karrisaarinen": "2026-10-24T13:51:17.767389+00:00",
       "shreyasdoshi": "2026-10-21T16:05:20.175577+00:00"
     },
     "targets": [
