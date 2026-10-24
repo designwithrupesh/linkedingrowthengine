@@ -2835,7 +2835,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 61,
+    "profile_cursor": 62,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3659,49 +3659,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517112765380034562/",
-        "urn": "urn:li:share:7517112764276887552",
-        "shareUrn": "urn:li:share:7517112764276887552",
-        "text": "Final form achieved: Linear now also builds and deploys my personal site. Took me about 15mins to set up from my previous Codex scripts. \n\n- Github repo to store the code  \n- Discuss with the agent and write posts as Linear docs  \n- Linear coding agent run the code in the sandbox, build the site and deploy to S3  \n- S3 credentials are stored in Linear env as secrets  \n- I can now just tell the agent \"publish this article\" or \"republish the site\"  \n- Added a lightbox, rss feed today with the coding agent, reviews and merged with Linear Diffs. \n\nCan now write, make changes, review code and publish from any computer or phone just by using Linear.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-17T06:42:24.468000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517112765380034562",
-          "urn:li:share:7517112764276887552"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
-        "cached_at": "2026-10-21T15:50:19.491635+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7516881519211159553/",
-        "urn": "urn:li:ugcPost:7516881519211159553",
-        "shareUrn": "urn:li:ugcPost:7516881519211159553",
-        "text": "Announcing the first speakers for Orbit (by Linear):\n> Karri Saarinen (Linear)\n> Katelyn Lesse (Anthropic)\n> Will Larson (Imprint)\n> Can Duruk (Modal)\nMore speakers coming soon.",
-        "authorName": "Linear",
-        "authorHeadline": "91,121 followers",
-        "authorProfileUrl": "https://www.linkedin.com/in/linearapp/",
-        "postedAtISO": "2026-10-17T05:51:44.083000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7516881519211159553"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
-        "cached_at": "2026-10-21T15:50:19.491635+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519113092664872960/",
         "urn": "urn:li:share:7519113091591278595",
         "shareUrn": "urn:li:share:7519113091591278595",
@@ -3834,6 +3791,11 @@
         "attempted_at": "2026-10-24T13:36:11.694429+00:00",
         "allocation_day": "2026-10-24",
         "retry_after": "2026-10-24T15:36:11.694429+00:00"
+      },
+      "post:2026-10-25:0900": {
+        "attempted_at": "2026-10-24T13:36:26.188593+00:00",
+        "allocation_day": "2026-10-25",
+        "retry_after": "2026-10-24T15:36:26.188593+00:00"
       }
     }
   },
