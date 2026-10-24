@@ -3364,8 +3364,8 @@
       "status": "running",
       "started_at": "2026-10-24T13:36:10.281226+00:00",
       "deadline": "2026-10-24T22:00:00+05:30",
-      "heartbeat_at": "2026-10-24T15:31:25.855436+00:00",
-      "cycles": 24,
+      "heartbeat_at": "2026-10-24T15:36:31.588608+00:00",
+      "cycles": 25,
       "recent_errors": [
         {
           "phase": "post",
@@ -3381,6 +3381,11 @@
           "phase": "next-day-posts",
           "type": "ApifyModelError",
           "at": "2026-10-24T13:41:24.878196+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "ApifyModelError",
+          "at": "2026-10-24T15:36:31.587432+00:00"
         }
       ]
     },
