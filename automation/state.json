@@ -2835,7 +2835,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 62,
+    "profile_cursor": 63,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3500,27 +3500,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518337196379066368/",
-        "urn": "urn:li:ugcPost:7518337196379066368",
-        "shareUrn": "urn:li:ugcPost:7518337196379066368",
-        "text": "And... we are live!\n\nI've never seen something go so viral internally. \n\nGiving teams the power to build their own bespoke collaborative tools led to a level of creativity that was honestly unhinged and super fun to watch. \n\nCollecting some of my favorite examples in the comments (reply with your own!)…",
-        "authorName": "Jeremy Olson",
-        "authorHeadline": "Director of Product Management at Superhuman",
-        "authorProfileUrl": "https://www.linkedin.com/in/jeremyolson/",
-        "postedAtISO": "2026-10-20T20:10:52.658000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7518337196379066368"
-        ],
-        "first_seen_at": "2026-10-21T15:30:24.307499+00:00",
-        "cached_at": "2026-10-21T15:30:24.307499+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518669058066563072/",
         "urn": "urn:li:share:7518669056976072704",
         "shareUrn": "urn:li:share:7518669056976072704",
@@ -3717,6 +3696,27 @@
           "eligible": false,
           "reason": "promotion"
         }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518337196379066368/",
+        "urn": "urn:li:ugcPost:7518337196379066368",
+        "shareUrn": "urn:li:ugcPost:7518337196379066368",
+        "text": "And... we are live!\n\nI've never seen something go so viral internally. \n\nGiving teams the power to build their own bespoke collaborative tools led to a level of creativity that was honestly unhinged and super fun to watch. \n\nCollecting some of my favorite examples in the comments (reply with your own!)…",
+        "authorName": "Jeremy Olson",
+        "authorHeadline": "Director of Product Management at Superhuman",
+        "authorProfileUrl": "https://www.linkedin.com/in/jeremyolson/",
+        "postedAtISO": "2026-10-20T20:10:52.658000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:ugcPost:7518337196379066368"
+        ],
+        "first_seen_at": "2026-10-21T15:30:24.307499+00:00",
+        "cached_at": "2026-10-24T13:41:16.755406+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
       }
     ],
     "deferred_until": {
@@ -3790,6 +3790,11 @@
         "attempted_at": "2026-10-24T13:36:26.188593+00:00",
         "allocation_day": "2026-10-25",
         "retry_after": "2026-10-24T15:36:26.188593+00:00"
+      },
+      "post:2026-10-25:1800": {
+        "attempted_at": "2026-10-24T13:41:22.226334+00:00",
+        "allocation_day": "2026-10-25",
+        "retry_after": "2026-10-24T15:41:22.226334+00:00"
       }
     }
   },
