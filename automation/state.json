@@ -3361,29 +3361,23 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-23T15:12:38.199107+00:00",
-      "deadline": "2026-10-23T22:00:00+05:30",
-      "heartbeat_at": "2026-10-23T16:27:50.985579+00:00",
-      "cycles": 16,
+      "status": "running",
+      "started_at": "2026-10-24T13:36:10.281226+00:00",
+      "deadline": "2026-10-24T22:00:00+05:30",
+      "heartbeat_at": "2026-10-24T13:36:29.644242+00:00",
+      "cycles": 1,
       "recent_errors": [
         {
-          "phase": "next-day-posts",
+          "phase": "post",
           "type": "ApifyModelError",
-          "at": "2026-10-23T15:12:53.314291+00:00"
+          "at": "2026-10-24T13:36:15.566049+00:00"
         },
         {
           "phase": "next-day-posts",
           "type": "ApifyModelError",
-          "at": "2026-10-23T15:17:52.309030+00:00"
-        },
-        {
-          "phase": "public",
-          "type": "WriteOutcomeError",
-          "at": "2026-10-23T16:19:04.486569+00:00"
+          "at": "2026-10-24T13:36:29.643287+00:00"
         }
-      ],
-      "ended_at": "2026-10-23T16:30:00.000183+00:00"
+      ]
     },
     "last_live_validation": {
       "status": "passed",
