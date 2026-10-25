@@ -2554,7 +2554,7 @@
     },
     "post:2026-10-27:0900": {
       "kind": "post",
-      "text": "The new CSS random() function highlighted by Smashing Magazine caught my eye because it challenges the usual design system mantra of strict consistency. Introducing controlled randomness directly in CSS lets designers add playful, organic touches like bouncing letters or splayed cards without leaning on JavaScript or complex preprocessor code. That’s a neat interaction shift, but I wonder about the learning curve for teams used to deterministic layouts. It’s a fresh tool that invites experimentation, yet it might require designers and developers to rethink their approach to predictability in UI. The article’s demos make it clear how this function can subtly break the grid in a way that feels intentional, not chaotic. https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
       "at": "2026-10-25T18:47:21.213785+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -2566,12 +2566,13 @@
       "reason": "Publora acknowledged the request",
       "caption_edits": [
         {
-          "status": "inflight",
+          "status": "verified",
           "at": "2026-10-25T18:51:37.921665+00:00",
           "sha256": "7e84f8759d8a392a513ca9b0a938a336341e6f61b24e583c7bfd10df4f16875a",
           "previous_text": "The new CSS random() function highlighted by Smashing Magazine caught my eye because it challenges the usual design system mantra of strict consistency. Introducing controlled randomness directly in CSS lets designers add playful, organic touches like bouncing letters or splayed cards without leaning on JavaScript or complex preprocessor code. That’s a neat interaction shift, but I wonder about the learning curve for teams used to deterministic layouts. It’s a fresh tool that invites experimentation, yet it might require designers and developers to rethink their approach to predictability in UI. The article’s demos make it clear how this function can subtly break the grid in a way that feels intentional, not chaotic. https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
           "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
-          "scheduled_for": "2026-10-27T03:30:00+00:00"
+          "scheduled_for": "2026-10-27T03:30:00+00:00",
+          "verified_at": "2026-10-25T18:51:40.189142+00:00"
         }
       ]
     },
@@ -3047,7 +3048,7 @@
     },
     {
       "id": "6ade4ec2ed849b64de3b8521",
-      "text": "The new CSS random() function highlighted by Smashing Magazine caught my eye because it challenges the usual design system mantra of strict consistency. Introducing controlled randomness directly in CSS lets designers add playful, organic touches like bouncing letters or splayed cards without leaning on JavaScript or complex preprocessor code. That’s a neat interaction shift, but I wonder about the learning curve for teams used to deterministic layouts. It’s a fresh tool that invites experimentation, yet it might require designers and developers to rethink their approach to predictability in UI. The article’s demos make it clear how this function can subtly break the grid in a way that feels intentional, not chaotic. https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T03:30:00+00:00",
