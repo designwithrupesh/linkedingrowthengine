@@ -2472,6 +2472,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:8973212be162a5ef38881308af728fd55bb15d708772790f4a1977374a3b2e0e": {
+      "kind": "comment",
+      "text": "Simple primitives and workflows make sense for agents. That’s a strong design choice. It reduces cognitive load for both humans and tools.",
+      "at": "2026-10-25T13:56:55.407072+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7519600915646103554",
+      "parent": null
     }
   },
   "days": {
@@ -2570,9 +2578,9 @@
     },
     "2026-10-25": {
       "post": 0,
-      "interaction": 1,
+      "interaction": 2,
       "read": 3,
-      "public_interaction": 1
+      "public_interaction": 2
     }
   },
   "reports": [
