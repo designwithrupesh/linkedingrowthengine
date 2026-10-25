@@ -3833,8 +3833,8 @@
       "phase": "maintenance",
       "started_at": "2026-10-25T18:58:58.254001+00:00",
       "deadline": "2026-10-25T23:58:58.254001+00:00",
-      "heartbeat_at": "2026-10-25T18:58:58.645258+00:00",
-      "cycles": 0,
+      "heartbeat_at": "2026-10-25T19:13:58.810763+00:00",
+      "cycles": 1,
       "sessions": 0,
       "recent_errors": []
     },
