@@ -2521,9 +2521,12 @@
       "kind": "comment",
       "text": "I’d be curious to see what kind of real value workflows actually deliver in practice, not just what looks impressive on paper.",
       "at": "2026-10-25T14:16:18.271578+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7519491913964756992",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7520126101818400768",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
