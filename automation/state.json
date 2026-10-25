@@ -2566,6 +2566,16 @@
       "http_status": 200,
       "remote_id": "6ade4ecced849b64de3b85a1",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-28:0900": {
+      "kind": "post",
+      "text": "Linear's update on Loops caught my attention because it integrates automation triggers directly from Slack and GitHub. Embedding these triggers within familiar tools reduces friction and cognitive load for users managing product work. This design choice respects users' existing mental models instead of pushing them into a separate interface. I'm curious how the UI visually distinguishes automated triggers from manual actions, especially through typography or iconography, to keep things clear without overwhelming users. This integration feels like a subtle but meaningful design decision that supports smoother collaboration.\n\nSource: https://linear.app/changelog/2026-10-22-slack-and-github-loops",
+      "at": "2026-10-25T18:47:42.560182+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-28T03:30:00+00:00",
+      "allocation_day": "2026-10-28"
     }
   },
   "days": {
@@ -2675,6 +2685,11 @@
     },
     "2026-10-27": {
       "post": 2,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-10-28": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
