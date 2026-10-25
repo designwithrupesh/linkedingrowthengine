@@ -2907,7 +2907,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 71,
+    "profile_cursor": 72,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3436,8 +3436,8 @@
       "status": "running",
       "started_at": "2026-10-25T12:30:37.897870+00:00",
       "deadline": "2026-10-25T22:00:00+05:30",
-      "heartbeat_at": "2026-10-25T14:45:55.019598+00:00",
-      "cycles": 28,
+      "heartbeat_at": "2026-10-25T14:50:58.165939+00:00",
+      "cycles": 29,
       "recent_errors": [
         {
           "phase": "post",
@@ -3586,72 +3586,6 @@
       "shreyasdoshi": "2026-10-25T14:00:44.374279+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518669058066563072/",
-        "urn": "urn:li:share:7518669056976072704",
-        "shareUrn": "urn:li:share:7518669056976072704",
-        "text": "DESIGN ≃ ENGINEERING: Opening lecture for the Dyson School of Engineering earlier this month where I reviewed a variety of thoughts I've had over the years in a 43-minute looooong talk: https://lnkd.in/gnDNDf4B\n\nKey takeaways: \n\n- Design and engineering meet in making. \n- Good design makes new technology familiar and useful. \n- AI is changing the work: adapt, and remember it isn’t alive. \n- Makers need to understand people and communicate. \n- Make the most of your time. \n\n---\n\nIn the event you have a lot of time 📺: https://lnkd.in/gnDNDf4B",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-21T13:46:33.559000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518669058066563072",
-          "urn:li:share:7518669056976072704"
-        ],
-        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
-        "cached_at": "2026-10-24T13:46:17.832803+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518364620076593152/",
-        "urn": "urn:li:share:7518364618751229952",
-        "shareUrn": "urn:li:share:7518364618751229952",
-        "text": "IS IT ANY GOOD?: We can build it faster than ever. But can we judge if it's any good or not?\n\nQuirine van Walt Meijer and the Foundry computational design team moved everyone into VS Code and GitHub Copilot. As a result, building got faster, so the hard part became judging the whole journey, not just each screen. HT Stephanie Keske\n\nQ's advice:\n\n- Check what you can, judge what you absolutely must\n- Keep to 3 to 5 stable dimensions for evaluation\n- Tools will run the tests, and humans (us) check the evidence\n\nThe TL;DR? Faster building only becomes better shipping when design intent survives.\n\nNew post by Quirine on Journey Evaluation: https://lnkd.in/gjHYStWE\nRecent post by Jenny Lanier Wolski on Product Simplicity: https://lnkd.in/gjUpNxzt",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-20T17:36:49.886000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518364620076593152",
-          "urn:li:share:7518364618751229952"
-        ],
-        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
-        "cached_at": "2026-10-24T13:46:17.832803+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518008262101733376/",
-        "urn": "urn:li:share:7518008261258694657",
-        "shareUrn": "urn:li:share:7518008261258694657",
-        "text": "SEATTLE DESIGN 🗣️: Oct 30 in my hometown design community AIGA Seattle with type design Prof. Marta Bernstein and tech designer Terry Marks\n⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣒⣚⣛⣛⣛⣛⣛⣛⣓⣒⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⢀⣀⣀⣈⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣁⣀⣀⡀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠈⠉⠉⢉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡉⠉⠉⠁⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⢻⡋⠉⠉⣿⣿⠉⠉⢙⡟⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⣿⣿⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣿⣿⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⠀⣿⣿⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠂⠛⠛⠐⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\nSpace Needle ASCII-Art Credit: https://lnkd.in/gbfxzQdm",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-19T18:00:47.524000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518008262101733376",
-          "urn:li:share:7518008261258694657"
-        ],
-        "first_seen_at": "2026-10-20T15:34:22.372274+00:00",
-        "cached_at": "2026-10-24T13:46:17.832803+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519600916224991233/",
         "urn": "urn:li:ugcPost:7519600915646103554",
@@ -3844,6 +3778,72 @@
         ],
         "first_seen_at": "2026-10-21T15:30:24.307499+00:00",
         "cached_at": "2026-10-25T14:45:49.501043+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518669058066563072/",
+        "urn": "urn:li:share:7518669056976072704",
+        "shareUrn": "urn:li:share:7518669056976072704",
+        "text": "DESIGN ≃ ENGINEERING: Opening lecture for the Dyson School of Engineering earlier this month where I reviewed a variety of thoughts I've had over the years in a 43-minute looooong talk: https://lnkd.in/gnDNDf4B\n\nKey takeaways: \n\n- Design and engineering meet in making. \n- Good design makes new technology familiar and useful. \n- AI is changing the work: adapt, and remember it isn’t alive. \n- Makers need to understand people and communicate. \n- Make the most of your time. \n\n---\n\nIn the event you have a lot of time 📺: https://lnkd.in/gnDNDf4B",
+        "authorName": "John Maeda",
+        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
+        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
+        "postedAtISO": "2026-10-21T13:46:33.559000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
+        "identity_aliases": [
+          "urn:li:activity:7518669058066563072",
+          "urn:li:share:7518669056976072704"
+        ],
+        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
+        "cached_at": "2026-10-25T14:50:50.350226+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518364620076593152/",
+        "urn": "urn:li:share:7518364618751229952",
+        "shareUrn": "urn:li:share:7518364618751229952",
+        "text": "IS IT ANY GOOD?: We can build it faster than ever. But can we judge if it's any good or not?\n\nQuirine van Walt Meijer and the Foundry computational design team moved everyone into VS Code and GitHub Copilot. As a result, building got faster, so the hard part became judging the whole journey, not just each screen. HT Stephanie Keske\n\nQ's advice:\n\n- Check what you can, judge what you absolutely must\n- Keep to 3 to 5 stable dimensions for evaluation\n- Tools will run the tests, and humans (us) check the evidence\n\nThe TL;DR? Faster building only becomes better shipping when design intent survives.\n\nNew post by Quirine on Journey Evaluation: https://lnkd.in/gjHYStWE\nRecent post by Jenny Lanier Wolski on Product Simplicity: https://lnkd.in/gjUpNxzt",
+        "authorName": "John Maeda",
+        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
+        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
+        "postedAtISO": "2026-10-20T17:36:49.886000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
+        "identity_aliases": [
+          "urn:li:activity:7518364620076593152",
+          "urn:li:share:7518364618751229952"
+        ],
+        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
+        "cached_at": "2026-10-25T14:50:50.350226+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518008262101733376/",
+        "urn": "urn:li:share:7518008261258694657",
+        "shareUrn": "urn:li:share:7518008261258694657",
+        "text": "SEATTLE DESIGN 🗣️: Oct 30 in my hometown design community AIGA Seattle with type design Prof. Marta Bernstein and tech designer Terry Marks\n⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣒⣚⣛⣛⣛⣛⣛⣛⣓⣒⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⢀⣀⣀⣈⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣁⣀⣀⡀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠈⠉⠉⢉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡉⠉⠉⠁⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⢻⡋⠉⠉⣿⣿⠉⠉⢙⡟⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⣿⣿⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣿⣿⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⠀⣿⣿⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠂⠛⠛⠐⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\nSpace Needle ASCII-Art Credit: https://lnkd.in/gbfxzQdm",
+        "authorName": "John Maeda",
+        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
+        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
+        "postedAtISO": "2026-10-19T18:00:47.524000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
+        "identity_aliases": [
+          "urn:li:activity:7518008262101733376",
+          "urn:li:share:7518008261258694657"
+        ],
+        "first_seen_at": "2026-10-20T15:34:22.372274+00:00",
+        "cached_at": "2026-10-25T14:50:50.350226+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
