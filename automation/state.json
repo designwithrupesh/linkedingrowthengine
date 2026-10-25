@@ -2597,11 +2597,14 @@
       "kind": "post",
       "text": "Penpot’s approach to declarative design focuses on using web standards and CSS for layout behavior, which keeps the design process aligned with how browsers actually work. By relying on native CSS properties instead of adding new abstraction layers, they aim to reduce surprises during implementation and improve collaboration between designers and developers. I wonder how their system manages complex layouts without losing the simplicity that declarative design promises, especially when dealing with responsive designs. It’s an interesting choice to trust the platform’s built-in capabilities rather than building custom solutions on top.\n\nSource: https://penpot.app/blog/declarative-design-with-penpot/",
       "at": "2026-10-25T18:48:04.748351+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-29T03:30:00+00:00",
-      "allocation_day": "2026-10-29"
+      "allocation_day": "2026-10-29",
+      "http_status": 200,
+      "remote_id": "6ade4eeeed849b64de3b8770",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -3039,6 +3042,14 @@
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T12:30:00+00:00",
       "allocation_day": "2026-10-28"
+    },
+    {
+      "id": "6ade4eeeed849b64de3b8770",
+      "text": "Penpot’s approach to declarative design focuses on using web standards and CSS for layout behavior, which keeps the design process aligned with how browsers actually work. By relying on native CSS properties instead of adding new abstraction layers, they aim to reduce surprises during implementation and improve collaboration between designers and developers. I wonder how their system manages complex layouts without losing the simplicity that declarative design promises, especially when dealing with responsive designs. It’s an interesting choice to trust the platform’s built-in capabilities rather than building custom solutions on top.\n\nSource: https://penpot.app/blog/declarative-design-with-penpot/",
+      "url": null,
+      "at": "2026-10-25T18:48:04.748351+00:00",
+      "scheduled_for": "2026-10-29T03:30:00+00:00",
+      "allocation_day": "2026-10-29"
     }
   ],
   "discovery": {
