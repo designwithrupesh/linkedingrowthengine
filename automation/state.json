@@ -2499,9 +2499,12 @@
       "kind": "comment",
       "text": "That parallel to Alone is sharp. The isolation of every decision feels real, but it’s also risky without shared accountability.",
       "at": "2026-10-25T14:01:14.870113+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7518910435295813632",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7520122311979544576",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
