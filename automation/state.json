@@ -2505,6 +2505,14 @@
       "http_status": 201,
       "remote_id": "7520122311979544576",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:8fe27952fd00ffe3ab01bfd063f3e54c6d29986195bd305203c20a728a568b44": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-10-25T14:16:15.135209+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7519491913964756992",
+      "parent": null
     }
   },
   "days": {
@@ -2603,9 +2611,9 @@
     },
     "2026-10-25": {
       "post": 0,
-      "interaction": 4,
+      "interaction": 5,
       "read": 5,
-      "public_interaction": 4
+      "public_interaction": 5
     }
   },
   "reports": [
@@ -2885,7 +2893,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 66,
+    "profile_cursor": 67,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3555,50 +3563,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519113092664872960/",
-        "urn": "urn:li:share:7519113091591278595",
-        "shareUrn": "urn:li:share:7519113091591278595",
-        "text": "My favorite PM interview prep resources:\n\n1. Insider Loops: https://lnkd.in/grVvWtis\n\n2. Never Search Alone: https://lnkd.in/gCU-DPki\n\n3. AI Practice Copilot: https://lnkd.in/grFuQ2hV\n\n4. Ultraspeaking: https://lnkd.in/g5xdTC6x\n\n5. How to use AI for your next job interview: https://lnkd.in/gKazY3A5\n\n6. The definitive guide to mastering product sense and analytical thinking interviews: https://lnkd.in/gxt7ghUz & https://lnkd.in/g8DgTQNU",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-22T19:10:59.657000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7519113092664872960",
-          "urn:li:share:7519113091591278595"
-        ],
-        "first_seen_at": "2026-10-23T16:17:54.347221+00:00",
-        "cached_at": "2026-10-23T16:17:54.347221+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517940312602918912/",
-        "urn": "urn:li:ugcPost:7517940311218683904",
-        "shareUrn": "urn:li:ugcPost:7517940311218683904",
-        "text": "My biggest takeaways from Anthropic interpretability researched Emmanuel Ameisen:\n\n1. Predicting the next token requires understanding the universe.\n2. LLMs plan ahead, even though they write one token at a time.\n3. Anthropomorphizing AI can sometimes be a useful approach when trying to predict how they will behave.\n4. Interpretability research looks more like neuroscience than software engineering.\n5. Models can tell you about only a small slice of what they’re thinking.\n6. Studying models closely often raises more questions than it answers.\n7. Even the people who build AI models don’t fully understand how they work.\n8. Interpretability as a field is small, young, and open to newcomers.\n\nFull episode: https://lnkd.in/gCQgay3s",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-19T13:30:47.101000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7517940312602918912",
-          "urn:li:ugcPost:7517940311218683904"
-        ],
-        "first_seen_at": "2026-10-20T16:09:24.449006+00:00",
-        "cached_at": "2026-10-23T16:17:54.347221+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518337196379066368/",
         "urn": "urn:li:ugcPost:7518337196379066368",
         "shareUrn": "urn:li:ugcPost:7518337196379066368",
@@ -3790,6 +3754,72 @@
         ],
         "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
         "cached_at": "2026-10-25T13:55:44.159559+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519491915050811392/",
+        "urn": "urn:li:share:7519491913964756992",
+        "shareUrn": "urn:li:share:7519491913964756992",
+        "text": "Share your best AI workflow and get featured in my newsletter!\n\nWe're all sick of overhyped AI demos and workflows. Stuff that looks/sounds amazing but doesn't actually work. This project we're calling \"Hype(less)\" aims to collect and share the most real, impactful, and repeatable AI workflows that have created real value for you and your teams. \n\nYou have until Friday, Oct 30th to submit your entry: https://tally.so/r/dWL6Xd",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-23T20:16:17.952000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7519491915050811392",
+          "urn:li:share:7519491913964756992"
+        ],
+        "first_seen_at": "2026-10-25T14:15:45.018903+00:00",
+        "cached_at": "2026-10-25T14:15:45.018903+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519113092664872960/",
+        "urn": "urn:li:share:7519113091591278595",
+        "shareUrn": "urn:li:share:7519113091591278595",
+        "text": "My favorite PM interview prep resources:\n\n1. Insider Loops: https://lnkd.in/grVvWtis\n\n2. Never Search Alone: https://lnkd.in/gCU-DPki\n\n3. AI Practice Copilot: https://lnkd.in/grFuQ2hV\n\n4. Ultraspeaking: https://lnkd.in/g5xdTC6x\n\n5. How to use AI for your next job interview: https://lnkd.in/gKazY3A5\n\n6. The definitive guide to mastering product sense and analytical thinking interviews: https://lnkd.in/gxt7ghUz & https://lnkd.in/g8DgTQNU",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-22T19:10:59.657000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7519113092664872960",
+          "urn:li:share:7519113091591278595"
+        ],
+        "first_seen_at": "2026-10-23T16:17:54.347221+00:00",
+        "cached_at": "2026-10-25T14:15:45.018903+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517940312602918912/",
+        "urn": "urn:li:ugcPost:7517940311218683904",
+        "shareUrn": "urn:li:ugcPost:7517940311218683904",
+        "text": "My biggest takeaways from Anthropic interpretability researched Emmanuel Ameisen:\n\n1. Predicting the next token requires understanding the universe.\n2. LLMs plan ahead, even though they write one token at a time.\n3. Anthropomorphizing AI can sometimes be a useful approach when trying to predict how they will behave.\n4. Interpretability research looks more like neuroscience than software engineering.\n5. Models can tell you about only a small slice of what they’re thinking.\n6. Studying models closely often raises more questions than it answers.\n7. Even the people who build AI models don’t fully understand how they work.\n8. Interpretability as a field is small, young, and open to newcomers.\n\nFull episode: https://lnkd.in/gCQgay3s",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-10-19T13:30:47.101000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7517940312602918912",
+          "urn:li:ugcPost:7517940311218683904"
+        ],
+        "first_seen_at": "2026-10-20T16:09:24.449006+00:00",
+        "cached_at": "2026-10-25T14:15:45.018903+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
