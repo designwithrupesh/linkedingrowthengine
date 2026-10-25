@@ -2477,9 +2477,12 @@
       "kind": "comment",
       "text": "Simple primitives and workflows make sense for agents. That’s a strong design choice. It reduces cognitive load for both humans and tools.",
       "at": "2026-10-25T13:56:55.407072+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7519600915646103554",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7520121223419420672",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
