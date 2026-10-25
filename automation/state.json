@@ -2527,6 +2527,16 @@
       "http_status": 201,
       "remote_id": "7520126101818400768",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-26:0900": {
+      "kind": "post",
+      "text": "Nielsen Norman Group's recent glossary on UX disciplines highlights a subtle but important interface distinction: the difference between UX design and UI design. What stands out to me is how this clarity helps the person using the product - whether a designer or a user - by setting expectations about what each discipline focuses on. For example, UI design zeroes in on the visual and interactive elements, while UX design encompasses the broader experience including research and usability. This separation might seem academic, but it can directly influence how teams communicate and prioritize features. I appreciate that the glossary doesn't blur these roles but instead defines them crisply, which can prevent confusion during design handoffs or when explaining design choices to stakeholders. Seeing this clarity in a trusted source like Nielsen Norman Group reminds me how valuable precise language is in design practice. https://www.nngroup.com/articles/ux-disciplines-glossary/",
+      "at": "2026-10-25T18:46:50.651745+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-26T03:30:00+00:00",
+      "allocation_day": "2026-10-26"
     }
   },
   "days": {
@@ -2630,7 +2640,7 @@
       "public_interaction": 6
     },
     "2026-10-26": {
-      "post": 0,
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
