@@ -3827,6 +3827,16 @@
         "source_ci": 39102776264,
         "scanner_ci": 39102776273
       }
+    },
+    "supervisor": {
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-10-25T18:53:19.131748+00:00",
+      "deadline": "2026-10-25T18:58:19.131748+00:00",
+      "heartbeat_at": "2026-10-25T18:53:19.467895+00:00",
+      "cycles": 0,
+      "sessions": 0,
+      "recent_errors": []
     }
   },
   "engagement": {
