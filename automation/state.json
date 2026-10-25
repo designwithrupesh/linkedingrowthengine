@@ -2545,11 +2545,14 @@
       "kind": "post",
       "text": "The new CSS random() function highlighted by Smashing Magazine caught my eye because it challenges the usual design system mantra of strict consistency. Introducing controlled randomness directly in CSS lets designers add playful, organic touches like bouncing letters or splayed cards without leaning on JavaScript or complex preprocessor code. That’s a neat interaction shift, but I wonder about the learning curve for teams used to deterministic layouts. It’s a fresh tool that invites experimentation, yet it might require designers and developers to rethink their approach to predictability in UI. The article’s demos make it clear how this function can subtly break the grid in a way that feels intentional, not chaotic. https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
       "at": "2026-10-25T18:47:21.213785+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-27T03:30:00+00:00",
-      "allocation_day": "2026-10-27"
+      "allocation_day": "2026-10-27",
+      "http_status": 200,
+      "remote_id": "6ade4ec2ed849b64de3b8521",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -2945,6 +2948,14 @@
       "at": "2026-10-25T18:46:50.651745+00:00",
       "scheduled_for": "2026-10-26T03:30:00+00:00",
       "allocation_day": "2026-10-26"
+    },
+    {
+      "id": "6ade4ec2ed849b64de3b8521",
+      "text": "The new CSS random() function highlighted by Smashing Magazine caught my eye because it challenges the usual design system mantra of strict consistency. Introducing controlled randomness directly in CSS lets designers add playful, organic touches like bouncing letters or splayed cards without leaning on JavaScript or complex preprocessor code. That’s a neat interaction shift, but I wonder about the learning curve for teams used to deterministic layouts. It’s a fresh tool that invites experimentation, yet it might require designers and developers to rethink their approach to predictability in UI. The article’s demos make it clear how this function can subtly break the grid in a way that feels intentional, not chaotic. https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "url": null,
+      "at": "2026-10-25T18:47:21.213785+00:00",
+      "scheduled_for": "2026-10-27T03:30:00+00:00",
+      "allocation_day": "2026-10-27"
     }
   ],
   "discovery": {
