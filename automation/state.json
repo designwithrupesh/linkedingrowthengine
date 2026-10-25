@@ -2611,7 +2611,17 @@
       "allocation_day": "2026-10-28",
       "http_status": 200,
       "remote_id": "6ade4ed721af69534cd33120",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "caption_edits": [
+        {
+          "status": "inflight",
+          "at": "2026-10-25T18:51:45.363316+00:00",
+          "sha256": "996ee1fee04f06ebf85854c88fd8d91791977fd1d3fc2eb59fdf453259b35d00",
+          "previous_text": "Linear's update on Loops caught my attention because it integrates automation triggers directly from Slack and GitHub. Embedding these triggers within familiar tools reduces friction and cognitive load for users managing product work. This design choice respects users' existing mental models instead of pushing them into a separate interface. I'm curious how the UI visually distinguishes automated triggers from manual actions, especially through typography or iconography, to keep things clear without overwhelming users. This integration feels like a subtle but meaningful design decision that supports smoother collaboration.\n\nSource: https://linear.app/changelog/2026-10-22-slack-and-github-loops",
+          "text": "Linear now lets a Loop start from an event in Slack or GitHub. That's the part of this update I'd spend time on as a designer.\n\nA pull request can trigger a draft QA plan. The useful follow-up question is where that draft appears, who reviews it and how the team can tell what ran automatically.\n\nI'd want the trigger, the result and the person responsible to be easy to find. Once work can start in another tool, that connection needs to stay visible.\n\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+          "scheduled_for": "2026-10-28T03:30:00+00:00"
+        }
+      ]
     },
     "post:2026-10-28:1800": {
       "kind": "post",
