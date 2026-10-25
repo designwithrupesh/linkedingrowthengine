@@ -2635,7 +2635,17 @@
       "allocation_day": "2026-10-28",
       "http_status": 200,
       "remote_id": "6ade4ee221af69534cd331d2",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "caption_edits": [
+        {
+          "status": "inflight",
+          "at": "2026-10-25T18:51:48.936159+00:00",
+          "sha256": "0d69b2a6d444a86a076a8e63dd64137cd1c7556b630e63e9433be1f955c7d796",
+          "previous_text": "Bringing engineering in early can shape design in a productive way, but it’s a balance. Early technical input helps spot constraints that might otherwise force late pivots, saving time and frustration. Yet if you lock down those constraints too soon, you risk stifling creative exploration and missing out on innovative solutions.\n\nThe sweet spot might be introducing high-level constraints early-like platform limits or performance budgets-while leaving enough open questions so designers can experiment with different approaches. When exactly to define these constraints depends on the team and project. They could come from initial architecture discussions or after some early prototyping. A dialogue that evolves as ideas take shape seems healthiest to me.",
+          "text": "I'd bring an engineer into a design discussion while the options are still rough.\n\nIf an idea depends on data we don't have, or a response the system can't return quickly, I'd rather find that out before polishing it.\n\nI also want to know which constraints are fixed and which ones we could change. 'We can't do that' is the start of that discussion, not enough detail to make the design decision.\n\nThen there's something useful to sketch together.",
+          "scheduled_for": "2026-10-28T12:30:00+00:00"
+        }
+      ]
     },
     "post:2026-10-29:0900": {
       "kind": "post",
