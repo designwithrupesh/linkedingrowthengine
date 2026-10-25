@@ -2604,7 +2604,7 @@
     "2026-10-25": {
       "post": 0,
       "interaction": 4,
-      "read": 4,
+      "read": 5,
       "public_interaction": 4
     }
   },
@@ -3544,7 +3544,7 @@
   },
   "engagement": {
     "profile_checked_at": {
-      "lennyrachitsky": "2026-10-23T16:17:54.347221+00:00",
+      "lennyrachitsky": "2026-10-25T14:15:45.018903+00:00",
       "juliezhuo": "2026-10-23T16:22:45.890764+00:00",
       "brianchesky": "2026-10-23T16:27:46.394498+00:00",
       "destraynor": "2026-10-24T13:36:20.137563+00:00",
