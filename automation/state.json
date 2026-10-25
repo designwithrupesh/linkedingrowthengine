@@ -3948,8 +3948,89 @@
   "design_news": {
     "checked_day": "2026-10-26",
     "checked_at": "2026-10-25T18:46:50.651745+00:00",
-    "status": "refresh-reserved",
-    "items": [],
+    "status": "ready",
+    "items": [
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "UX Disciplines: Glossary",
+        "url": "https://www.nngroup.com/articles/ux-disciplines-glossary/",
+        "published_at": "2026-10-23T17:00:00+00:00",
+        "excerpt": "Definitions of fields related to user experience, including UX design, UI design, visual design, interaction design, service design, UX research, and DesignOps"
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings",
+        "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+        "published_at": "2026-10-23T17:00:00+00:00",
+        "excerpt": "AI saves UX practitioners time on nearly every task, yet most feel lukewarm about it: mandates, unreliable output, and inflated expectations eat the gains."
+      },
+      {
+        "publisher": "Smashing Magazine",
+        "source_kind": "design_analysis",
+        "title": "Accordion Icons: Which Work Best?",
+        "url": "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "published_at": "2026-10-23T13:00:00+00:00",
+        "excerpt": "A closer look at accordion icons, why split menus are harmful, and why it’s better not to have icons and text labels link to different actions. Plus, why the caret is the safest icon choice. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore."
+      },
+      {
+        "publisher": "Linear",
+        "source_kind": "product_update",
+        "title": "More ways to run and share Loops",
+        "url": "https://linear.app/changelog/2026-10-22-slack-and-github-loops",
+        "published_at": "2026-10-22T15:38:49+00:00",
+        "excerpt": "Loops automate product work by responding to changes in Linear and connected tools. You can now trigger them from Slack and GitHub, share them as templates, and customize their reasoning levels. Slack and GitHub triggers Events in Slack and GitHub can now start loops automatically, so work can move forward without someone having to notice an update and take action. Set up a loop to answer product questions in a Slack channel, or draft a QA plan when a GitHub pull request gets"
+      },
+      {
+        "publisher": "Penpot",
+        "source_kind": "design_analysis",
+        "title": "Declarative design with Penpot",
+        "url": "https://penpot.app/blog/declarative-design-with-penpot/",
+        "published_at": "2026-10-20T16:35:48+00:00",
+        "excerpt": "Penpot is built with declarative design in mind, using web standards, CSS properties and layouts. Let’s explore how that works in real projects."
+      },
+      {
+        "publisher": "Smashing Magazine",
+        "source_kind": "design_analysis",
+        "title": "Embracing Playful Imperfection With The CSS `random()` Function",
+        "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+        "published_at": "2026-10-20T10:00:00+00:00",
+        "excerpt": "Design systems thrive on consistency, so where does randomness fit in? Through playful demos of organic typography, bouncing letters, and splayed cards, Brecht De Ruyte shows how the new CSS `random()` function brings a little imperfection to the web without JavaScript libraries or preprocessor loops that generate hundreds of lines of static CSS."
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation",
+        "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+        "published_at": "2026-10-16T17:00:00+00:00",
+        "excerpt": "Data from AI-generated respondents pointed to the same conclusion as a survey of 604 humans but contained far fewer distinct answers."
+      },
+      {
+        "publisher": "Nielsen Norman Group",
+        "source_kind": "design_analysis",
+        "title": "UX Maps: Glossary",
+        "url": "https://www.nngroup.com/articles/ux-maps-glossary/",
+        "published_at": "2026-10-16T17:00:00+00:00",
+        "excerpt": "Use this glossary to quickly clarify key terms and concepts related to UX maps."
+      },
+      {
+        "publisher": "Smashing Magazine",
+        "source_kind": "design_analysis",
+        "title": "Is Your Organization Messing Up AI Adoption?",
+        "url": "https://www.smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/",
+        "published_at": "2026-10-16T10:00:00+00:00",
+        "excerpt": "What can digital transformation teach us about AI adoption? Paul Boag revisits his book Digital Adaptation to show how lessons from the past can help organizations navigate the challenges of AI today."
+      },
+      {
+        "publisher": "Penpot",
+        "source_kind": "design_analysis",
+        "title": "Figma to Penpot terminology cheatsheet",
+        "url": "https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/",
+        "published_at": "2026-10-15T16:45:42+00:00",
+        "excerpt": "Switching from Figma to Penpot? Here’s what everything is called, from boards and flex layout to design tokens and Inspect."
+      }
+    ],
     "failed_feeds": 0
   }
 }
