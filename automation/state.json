@@ -2907,7 +2907,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 68,
+    "profile_cursor": 69,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -3928,9 +3928,9 @@
         "retry_after": "2026-10-25T16:30:53.352199+00:00"
       },
       "post:2026-10-26:1800": {
-        "attempted_at": "2026-10-25T12:35:43.479647+00:00",
+        "attempted_at": "2026-10-25T14:36:00.751595+00:00",
         "allocation_day": "2026-10-26",
-        "retry_after": "2026-10-25T14:35:43.479647+00:00"
+        "retry_after": "2026-10-25T16:36:00.751595+00:00"
       }
     }
   },
