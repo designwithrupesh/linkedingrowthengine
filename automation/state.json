@@ -2650,7 +2650,7 @@
     },
     "post:2026-10-29:0900": {
       "kind": "post",
-      "text": "Penpot’s approach to declarative design focuses on using web standards and CSS for layout behavior, which keeps the design process aligned with how browsers actually work. By relying on native CSS properties instead of adding new abstraction layers, they aim to reduce surprises during implementation and improve collaboration between designers and developers. I wonder how their system manages complex layouts without losing the simplicity that declarative design promises, especially when dealing with responsive designs. It’s an interesting choice to trust the platform’s built-in capabilities rather than building custom solutions on top.\n\nSource: https://penpot.app/blog/declarative-design-with-penpot/",
+      "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "at": "2026-10-25T18:48:04.748351+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -2662,12 +2662,13 @@
       "reason": "Publora acknowledged the request",
       "caption_edits": [
         {
-          "status": "inflight",
+          "status": "verified",
           "at": "2026-10-25T18:51:52.426495+00:00",
           "sha256": "d7b85b7a2b0e77227846e18407d4d2c8364c00fe893911c7364fbcb4b6d8662e",
           "previous_text": "Penpot’s approach to declarative design focuses on using web standards and CSS for layout behavior, which keeps the design process aligned with how browsers actually work. By relying on native CSS properties instead of adding new abstraction layers, they aim to reduce surprises during implementation and improve collaboration between designers and developers. I wonder how their system manages complex layouts without losing the simplicity that declarative design promises, especially when dealing with responsive designs. It’s an interesting choice to trust the platform’s built-in capabilities rather than building custom solutions on top.\n\nSource: https://penpot.app/blog/declarative-design-with-penpot/",
           "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
-          "scheduled_for": "2026-10-29T03:30:00+00:00"
+          "scheduled_for": "2026-10-29T03:30:00+00:00",
+          "verified_at": "2026-10-25T18:51:54.337137+00:00"
         }
       ]
     },
@@ -3123,7 +3124,7 @@
     },
     {
       "id": "6ade4eeeed849b64de3b8770",
-      "text": "Penpot’s approach to declarative design focuses on using web standards and CSS for layout behavior, which keeps the design process aligned with how browsers actually work. By relying on native CSS properties instead of adding new abstraction layers, they aim to reduce surprises during implementation and improve collaboration between designers and developers. I wonder how their system manages complex layouts without losing the simplicity that declarative design promises, especially when dealing with responsive designs. It’s an interesting choice to trust the platform’s built-in capabilities rather than building custom solutions on top.\n\nSource: https://penpot.app/blog/declarative-design-with-penpot/",
+      "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "url": null,
       "at": "2026-10-25T18:48:04.748351+00:00",
       "scheduled_for": "2026-10-29T03:30:00+00:00",
