@@ -2553,6 +2553,16 @@
       "http_status": 200,
       "remote_id": "6ade4ec2ed849b64de3b8521",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-10-27:1800": {
+      "kind": "post",
+      "text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
+      "at": "2026-10-25T18:47:21.213785+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-27T12:30:00+00:00",
+      "allocation_day": "2026-10-27"
     }
   },
   "days": {
@@ -2661,7 +2671,7 @@
       "read": 0
     },
     "2026-10-27": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
