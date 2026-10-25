@@ -2558,11 +2558,14 @@
       "kind": "post",
       "text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
       "at": "2026-10-25T18:47:21.213785+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-27T12:30:00+00:00",
-      "allocation_day": "2026-10-27"
+      "allocation_day": "2026-10-27",
+      "http_status": 200,
+      "remote_id": "6ade4ecced849b64de3b85a1",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -2965,6 +2968,14 @@
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T03:30:00+00:00",
+      "allocation_day": "2026-10-27"
+    },
+    {
+      "id": "6ade4ecced849b64de3b85a1",
+      "text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
+      "url": null,
+      "at": "2026-10-25T18:47:21.213785+00:00",
+      "scheduled_for": "2026-10-27T12:30:00+00:00",
       "allocation_day": "2026-10-27"
     }
   ],
