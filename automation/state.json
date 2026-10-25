@@ -2539,7 +2539,17 @@
       "allocation_day": "2026-10-26",
       "http_status": 200,
       "remote_id": "6ade4eaded849b64de3b846d",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "caption_edits": [
+        {
+          "status": "inflight",
+          "at": "2026-10-25T18:51:29.238608+00:00",
+          "sha256": "de214527aea219ba116f2c0e66838ccee5e3bf60e6c20d7a03bde0a8f9dcd56e",
+          "previous_text": "Nielsen Norman Group's recent glossary on UX disciplines highlights a subtle but important interface distinction: the difference between UX design and UI design. What stands out to me is how this clarity helps the person using the product - whether a designer or a user - by setting expectations about what each discipline focuses on. For example, UI design zeroes in on the visual and interactive elements, while UX design encompasses the broader experience including research and usability. This separation might seem academic, but it can directly influence how teams communicate and prioritize features. I appreciate that the glossary doesn't blur these roles but instead defines them crisply, which can prevent confusion during design handoffs or when explaining design choices to stakeholders. Seeing this clarity in a trusted source like Nielsen Norman Group reminds me how valuable precise language is in design practice. https://www.nngroup.com/articles/ux-disciplines-glossary/",
+          "text": "UX, UI, visual design, research, interaction design. A glossary is handy when a job description uses all of them to mean 'the designer'.\n\nNielsen Norman Group has published definitions for these disciplines. I'd use it at the start of a hiring conversation: which responsibilities does the team actually need, and which ones will this hire have the time and support to cover?\n\nI can work across creative direction, product design and brand strategy. I still want the brief to be clear. Breadth shouldn't turn into an undefined job.\n\nhttps://www.nngroup.com/articles/ux-disciplines-glossary/",
+          "scheduled_for": "2026-10-26T03:30:00+00:00"
+        }
+      ]
     },
     "post:2026-10-27:0900": {
       "kind": "post",
