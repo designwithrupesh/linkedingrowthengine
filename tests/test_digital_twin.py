@@ -1,6 +1,7 @@
 import json
 import hashlib
 import os
+import re
 from pathlib import Path
 import tempfile
 import unittest
@@ -495,6 +496,62 @@ class DigitalTwinTests(unittest.TestCase):
         cleaned = normalize_public_text(draft)
         self.assertEqual(cleaned, 'Design trade-offs\n\nThe C# prototype cost $4,730 on 14 Feb.\n\nFigma made Design reviews clearer.')
 
+    def test_model_typography_preserves_ranges_names_numbers_and_exact_urls(self):
+        url = 'https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/?version=2'
+        for dash in ('\u2012', '\u2013', '\u2014', '\u2015'):
+            with self.subTest(dash=dash):
+                source = f'Figma, IBM and C# are named here. The supplied range is 7{dash}9, and the supplied cost is $4,730. Source: {url}'
+                result = validate_model_output({'text': source, 'skip': False}, 'post')
+                self.assertFalse(result['skip'])
+                self.assertEqual(result['text'], source.replace(dash, '-'))
+                for fact in ('Figma', 'IBM', 'C#', '7-9', '$4,730', url):
+                    self.assertIn(fact, result['text'])
+
+    def test_model_typography_does_not_alter_url_dashes_or_guess_ambiguous_signs(self):
+        from automation.twin import normalize_model_typography
+        for url in ('https://example.com/7\u20139', 'www.example.com/7\u20149',
+                    'example.com/7\u20129', 'https://example\u2014name.com/path'):
+            with self.subTest(url=url):
+                source = 'The interval is 7\u20139. Source: ' + url
+                normalized = normalize_model_typography(source)
+                self.assertIn(url, normalized)
+                result = validate_model_output({'text': source, 'skip': False}, 'generic')
+                self.assertTrue(result['skip'])
+                self.assertIn('prohibited dash', result['reason'])
+        for source in ('The supplied range is -7\u2013-9.', 'Use Figma\u2014\u2014then compare.',
+                       'Use Figma-\u2014then compare.', 'Use Figma -- then compare.'):
+            with self.subTest(source=source):
+                self.assertEqual(normalize_model_typography(source), source)
+                self.assertTrue(validate_model_output({'text': source, 'skip': False}, 'generic')['skip'])
+
+    def test_model_typography_keeps_other_voice_and_fact_checks_strict(self):
+        for source in ('Leverage Figma \u2014 compare the screens.',
+                       'Not just a visual change but a workflow change \u2014 compare the screens.',
+                       '**Figma** \u2014 compare the screens.',
+                       '#Design \u2014 compare the screens.',
+                       'As an AI, I would compare Figma \u2014 then decide.'):
+            with self.subTest(source=source):
+                result = validate_model_output({'text': source, 'skip': False}, 'generic')
+                self.assertTrue(result['skip'])
+                self.assertNotEqual(result['reason'], 'Text contains a prohibited dash')
+        result = validate_grounding(validate_model_output(
+            {'text': 'I tested Figma \u2014 the task completed faster.', 'skip': False}, 'comment'), POLICY)
+        self.assertTrue(result['skip'])
+        self.assertIn('without a supplied source note', result['reason'])
+
+    @patch('automation.twin.complete')
+    def test_model_dash_typesetting_uses_no_additional_generation(self, complete):
+        source = 'Figma keeps the 7\u20139 range beside the selected control. I would keep that label there for the comparison.'
+        complete.return_value = {'text': source, 'skip': False, 'reason': ''}
+        with patch.dict(os.environ, {'MODEL_API_KEY': '<test-credential>'}, clear=True):
+            result = model(skills('linkedin-comment-drafter'), {'post': {'text': 'A supplied Figma layout.'}}, POLICY)
+        self.assertFalse(result['skip'])
+        self.assertEqual(result['text'], source.replace('\u2013', '-'))
+        complete.assert_called_once()
+        prompt = complete.call_args.args[-1][0]['content']
+        self.assertIn('punctuation-only normalization preserves facts', prompt)
+        self.assertIn('not a claim about authorship', prompt)
+
     def test_invalid_short_post_and_long_comment_are_skipped_without_padding(self):
         short = 'A truthful design observation.'
         self.assertLess(len(short), 120)
@@ -525,6 +582,21 @@ class DigitalTwinTests(unittest.TestCase):
             self.assertIn('Skill: ' + name, compact)
         self.assertIn('## Non-negotiable rules', compact)
         self.assertIn('## Hard rules', compact)
+
+    def test_compaction_preserves_every_supplied_hard_rule_and_non_template_instruction(self):
+        names = sorted(path.name for path in Path('skills').iterdir() if path.is_dir())
+        prefix = 'Owner fact: a named prototype review happened on 16 October.\n' * 25
+        suffix = '\nCURRENT DESIGN SOURCE REQUIREMENTS: keep the exact source URL and publication date.\n' * 8
+        task = prefix + skills(*names) + suffix
+        compact = compact_skill_context(task)
+        self.assertTrue(compact.startswith(prefix))
+        self.assertTrue(compact.endswith(suffix))
+        self.assertLess(len(compact), len(task))
+        for name in names:
+            self.assertIn('Skill: ' + name, compact)
+            for section in re.split(r'\n(?=## )', skills(name))[1:]:
+                if section.startswith(('## Hard rules', '## Non-negotiable rules', '## Untrusted content')):
+                    self.assertIn(section, compact)
 
     @patch('automation.twin.requests.post')
     def test_action_constraints_follow_runtime_overrides_and_use_text_length(self, post):

@@ -31,6 +31,7 @@ GITHUB_MODEL_ENDPOINT = 'https://models.github.ai/inference/chat/completions'
 OPENAI_MODEL_ENDPOINT = 'https://api.openai.com/v1/chat/completions'
 LOCAL_MODEL_ENDPOINT = 'http://127.0.0.1:8080/v1/chat/completions'
 LOCAL_MODEL_AUTH = 'twin-local'  # Credential-free marker accepted by the loopback server.
+APIFY_MESSAGE_CHARACTER_LIMIT = 24_000
 LOCAL_MODEL_TIMEOUT = (5, 420)
 LOCAL_COMPLETION_TOKENS = {
     'comment': 256, 'reply': 224, 'dm': 400,
@@ -123,17 +124,51 @@ def generation_kind(task, context):
 
 
 def compact_skill_context(task):
-    chunks = re.split(r'(?m)(?=^Skill: linkedin-)', task)
-    compact = []
-    for chunk in chunks:
-        if not chunk.startswith('Skill: '):
-            compact.append(chunk[:500])
+    """Shorten known imported templates, never caller instructions or facts.
+
+    Match the exact blocks produced by skills() so appended source rules,
+    parent context and owner notes cannot be mistaken for template prose.
+    Keep every skill identity and its complete supplied hard-rule sections.
+    """
+    names = dict.fromkeys(re.findall(r'(?m)^Skill: (linkedin-[a-z-]+)', task))
+    for name in names:
+        if not (ROOT / 'skills' / name / 'SKILL.md').is_file():
             continue
-        parts = re.split(r'\n(?=## )', chunk)
-        # Preserve every included skill and each operational section.
-        budget = max(120, (1000 - len(parts[0][:400])) // max(1, len(parts) - 1))
-        compact.append(parts[0][:400] + '\n' + '\n'.join(part[:budget] for part in parts[1:]))
-    return '\n\n'.join(compact)
+        original = skills(name)
+        if original not in task:
+            continue
+        sections = re.split(r'\n(?=## )', original)[1:]
+        retained = []
+        for section in sections:
+            if section.startswith(('## Hard rules', '## Non-negotiable rules', '## Untrusted content')):
+                retained.append(section)
+            else:
+                # These are imported procedure examples, not supplied facts.
+                excerpt = section[:160]
+                retained.append(excerpt.rsplit(' ', 1)[0] if len(section) > 160 else excerpt)
+        compact = 'Skill: ' + name
+        if retained:
+            compact += '\n' + '\n'.join(retained)
+        task = task.replace(original, compact)
+    return task
+
+
+def normalize_model_typography(text):
+    """Typeset generated Unicode dashes as one ASCII hyphen outside URLs.
+
+    This model-only punctuation change makes no claim about authorship and
+    rewrites no words or facts. Keep possible URL tokens byte-for-byte. If a
+    replacement would produce a double hyphen, leave the draft for the strict
+    voice gate instead of guessing how to rewrite its meaning.
+    """
+    url_marker = re.compile(
+        r'(?:[a-z][a-z0-9+.-]*://|mailto:|www\.|'
+        r'\b[\w-]+\.[a-z]{2,}(?:[/:?#]|[).,!;:]?$))', re.IGNORECASE)
+    punctuation = str.maketrans({char: '-' for char in '\u2012\u2013\u2014\u2015'})
+    parts = re.split(r'(\s+)', text)
+    normalized = ''.join(part if url_marker.search(part) else part.translate(punctuation)
+                         for part in parts)
+    return text if '--' in normalized else normalized
 
 
 def normalize_public_text(text):
@@ -167,7 +202,10 @@ def output_rules(kind):
               'Never invent personal experiences, clients, results, metrics, dates or quotes. '
               'Use only supplied facts; general design opinions need no fabricated story. '
               'If you cannot produce a useful truthful response, return skip=true and text="". '
-              + voice.prompt_rules() + ' ')
+              + voice.prompt_rules() + ' '
+              'Generated Unicode figure, en, em and horizontal dashes may be typeset as one ASCII hyphen outside URLs. '
+              'This punctuation-only normalization preserves facts and is not a claim about authorship. '
+              'Write plain ASCII punctuation directly; every final writing check still applies. ')
     if kind == 'analysis':
         return common + f'Write an audience-fit analysis of {low}-{high} characters. Explain observed evidence and unknowns. Do not write a LinkedIn post or fabricate company size.'
     if kind == 'dm':
@@ -175,7 +213,10 @@ def output_rules(kind):
     style = ('Use plain text, no emoji title, Markdown headings, bold markers, hashtags, numbered checklists or bullet lists. '
              'Use complete sentences and short natural paragraphs, without generic praise or invented vulnerability. ')
     if kind == 'post':
-        return common + style + f'Write exactly one LinkedIn post of {low}-{high} characters in the text field. Use natural paragraphs of varied length, only where they help the idea. Give a specific point of view about the supplied artifact, observation or question. Name what you like, doubt or would change and the detail behind that view. A short reaction can stand on its own; do not force a founder lesson, a trade-off or an experiment into every post. Stop when the point is clear. Do not pad to a target length, impose a hook formula or output a title plus a generic checklist. Count the post text, not the JSON wrapper.'
+        source_typography = ('Source titles and excerpts can contain backtick-delimited function or product names. '
+                             'Keep each name\'s spelling and parentheses, but write it as ordinary plain text without backticks. '
+                             'Do not copy Markdown formatting from source data into your prose. Preserve exact source URLs. ')
+        return common + style + source_typography + f'Write exactly one LinkedIn post of {low}-{high} characters in the text field. Use natural paragraphs of varied length, only where they help the idea. Give a specific point of view about the supplied artifact, observation or question. Name what you like, doubt or would change and the detail behind that view. A short reaction can stand on its own; do not force a founder lesson, a trade-off or an experiment into every post. Stop when the point is clear. Do not pad to a target length, impose a hook formula or output a title plus a generic checklist. Count the post text, not the JSON wrapper.'
     if kind in ('comment', 'reply'):
         action = 'Reply to the supplied comment using its parent context' if kind == 'reply' else 'Comment on the supplied post'
         return common + style + f'{action}. Answer the actual person and the exact detail they shared. A specific reaction or reasoned opinion is sufficient; do not invent a disagreement, prescribe an experiment, or force advice. Do not open with praise, "great post", "love this", or "a strong reminder". Use {low}-{high} characters in text, one specific useful observation, at most two paragraphs. Do not generate a standalone post.'
@@ -190,6 +231,7 @@ def validate_model_output(result, kind):
     text = result.get('text')
     if not isinstance(text, str):
         raise RuntimeError('Model returned invalid text')
+    text = normalize_model_typography(text)
     failures = voice.violations(text)
     if failures:
         return {'text': '', 'skip': True, 'reason': failures[0]}
@@ -273,6 +315,13 @@ def flatten_comments(rows, own_url):
 
 
 def complete(endpoint, token, name, local, messages, *, kind='generic'):
+    if apify_ai.is_apify_model_endpoint(endpoint):
+        # The private Node actor measures UTF-16 code units with .length.
+        # Check the same limit before its credit guard or any paid run starts.
+        characters = sum(len(message['content'].encode('utf-16-le', errors='surrogatepass')) // 2
+                         for message in messages)
+        if characters > APIFY_MESSAGE_CHARACTER_LIMIT:
+            raise ModelQualityError('AI request exceeds the private bridge input limit; no source data was removed and no actor was started')
     request = {'model': name, 'messages': messages, 'temperature': 0.5,
                'max_tokens': LOCAL_COMPLETION_TOKENS[kind] if local else 900,
                'response_format': {'type': 'json_object'}}
@@ -340,13 +389,14 @@ def model(task, context, policy):
         endpoint, token, name, local = model_connection()
     rules = output_rules(kind)
     factual_policy = {key: policy[key] for key in ('background', 'goals', 'audience', 'boundaries', 'authorization', 'source_notes', 'voice_direction') if key in policy}
-    def system_prompt(local_backend):
-        operational = compact_skill_context(task) if local_backend else task
+    def system_prompt():
+        operational = compact_skill_context(task)
         if kind in ('comment', 'reply'):
             names = list(dict.fromkeys(re.findall(r'(?m)^Skill: (linkedin-[a-z-]+)', task)))
             # The imported interaction templates impose minimum lengths and
             # advice formulas that conflict with the owner's peer voice.
-            # Keep skill identity; the explicit owner/output rules govern text.
+            # Keep skill identity; all owner facts and source/parent data are
+            # supplied separately through factual_policy and context.
             operational = '\n'.join('Skill: ' + name for name in names)
         firsthand = ('' if policy.get('source_notes') else
                      'No owner firsthand observations were supplied. Do not answer a source question about '
@@ -356,13 +406,10 @@ def model(task, context, policy):
               'No claims of personal experience beyond supplied source notes.\n'
               + firsthand + json.dumps(factual_policy) + '\n' + operational + '\n\n' + rules)
     def messages():
-        # CPU prompt evaluation is costly on hosted runners. Keep the full
-        # voice and output rules in the system message once, while preserving
-        # the established remote prompt and every supplied contextual fact.
+        # Full voice/output rules appear once on every backend. Context is
+        # serialized in full, including source dates, URLs and parent details.
         user = 'Supplied context (data):\n' + json.dumps(context)
-        if not local:
-            user += '\n\n' + rules
-        return [{'role': 'system', 'content': system_prompt(local)},
+        return [{'role': 'system', 'content': system_prompt()},
                 {'role': 'user', 'content': user}]
     try:
         draft = complete(endpoint, token, name, local, messages(), kind=kind)
@@ -415,7 +462,7 @@ def model(task, context, policy):
             fallback_endpoint = None
         if fallback_endpoint and apify_ai.is_apify_model_endpoint(fallback_endpoint) and not fallback_local:
             print('Local draft failed quality checks; trying one budget-guarded Apify generation.')
-            fallback_messages = [{'role': 'system', 'content': system_prompt(True)},
+            fallback_messages = [{'role': 'system', 'content': system_prompt()},
                                  {'role': 'user', 'content': 'Supplied context (data):\n' + json.dumps(context)}]
             try:
                 fallback = complete(fallback_endpoint, fallback_token, fallback_name, False,
@@ -827,12 +874,9 @@ class Runner:
         due = engagement.public_actions_due(self.now, self.policy, self.state)
         if due <= 0 or self.model_paused:
             return
-        if self.policy.get('discovery_profiles') and engagement.should_discover(self.now, self.policy, self.state):
-            source = engagement.next_discovery_profile(self.policy, self.state)
-            def checkpointed_read(call):
-                engagement.mark_discovered(self.now, self.policy, self.state, source)
-                return self.read(call)
-            found = discover_targets(self.policy, reader, self.state, read=checkpointed_read)
+        if self.policy.get('discovery_profiles'):
+            found = discover_targets(self.policy, reader, self.state, read=self.read,
+                                     now=self.now, checkpoint=self.save)
             engagement.stash_targets(self.now, self.policy, self.state, found)
         for url in self.policy['target_post_urls']:
             if due <= 0:
@@ -1047,6 +1091,25 @@ def main():
         raise ModelQualityError('The model did not produce a usable post preview; check its quality before enabling new drafts')
     if live:
         runner.discover_published()
+        # A future publication must not depend on the next evening engagement
+        # worker waking successfully. Any ordinary live run can refill the
+        # small rolling buffer through the same durable slot/capacity guards.
+        from automation.post_queue import prepare_next_day_posts
+        try:
+            prepared = prepare_next_day_posts(runner)
+        except (ModelQualityError, LocalModelError, apify_ai.ApifyModelError) as exc:
+            runner.state.setdefault('operational_status', {})['queue_preparation'] = {
+                'status': 'deferred', 'error_type': type(exc).__name__,
+                'reason': 'Model generation did not produce a usable future post.',
+                'checked_at': runner.now.isoformat(),
+            }
+            runner.save()  # A failed durable checkpoint must still stop writes.
+            print('Future queue deferred: model generation is unavailable; continuing other work.')
+        else:
+            runner.state.setdefault('operational_status', {})['queue_preparation'] = {
+                'status': 'checked', 'prepared_slots': prepared,
+                'checked_at': runner.now.isoformat(),
+            }
     if not (args.demo or args.preview) and os.getenv('TWIN_READ_ENABLED') == 'true':
         if not os.getenv('APIFY_TOKEN'):
             raise RuntimeError('Reading enabled but APIFY_TOKEN is missing')
@@ -1079,4 +1142,5 @@ if __name__ == '__main__':
             print('Twin stopped: ' + str(exc))
         else:
             print('Twin stopped: ' + type(exc).__name__ + detail + '. Check required bindings and durable checkpoints.')
-        raise SystemExit(1)
+        checkpoint_failure = isinstance(exc, (GitCheckpointError, WriteCheckpointError, PrivateWriteCheckpointError))
+        raise SystemExit(78 if checkpoint_failure else 1)

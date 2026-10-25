@@ -1,4 +1,4 @@
-"""Prepare tomorrow's posts before their publication slots arrive.
+"""Maintain a bounded rolling post buffer before publication slots arrive.
 
 Publora owns the publication clock once a post is acknowledged. A delayed
 GitHub wake-up therefore does not move tomorrow's morning post into midday.
@@ -18,6 +18,7 @@ from automation import design_news
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAFT_COOLDOWN_SECONDS = 2 * 60 * 60
+MAX_PREPARATION_ATTEMPTS_PER_RUN = 2
 
 
 def _future_slots(runner):
@@ -25,7 +26,6 @@ def _future_slots(runner):
     if not isinstance(now, datetime) or now.tzinfo is None or now.utcoffset() is None:
         raise ValueError('A timezone-aware post preparation clock is required')
     local = now.astimezone(ZoneInfo(policy.get('timezone', 'Asia/Calcutta')))
-    tomorrow = local.date() + timedelta(days=1)
     days = policy.get('posting_days', list(range(7)))
     if not isinstance(days, (list, tuple)) or any(type(day) is not int or not 0 <= day <= 6 for day in days):
         raise ValueError('Posting days must be weekday integers from 0 through 6')
@@ -39,12 +39,23 @@ def _future_slots(runner):
     limit = policy.get('max_posts_per_day', 2)
     if type(limit) is not int or limit < 0:
         raise ValueError('Daily post limit must be a nonnegative integer')
-    if tomorrow.weekday() not in days or not limit:
+    buffer_days = policy.get('posting_buffer_days', 1)
+    if type(buffer_days) is not int or not 1 <= buffer_days <= 3:
+        raise ValueError('Post buffer must be an integer from one through three days')
+    if not limit:
         return []
-    return [(slot_key(tomorrow, hour), tomorrow.isoformat(),
-             datetime.combine(tomorrow, datetime.min.time(), tzinfo=local.tzinfo)
-             .replace(hour=hour).astimezone(timezone.utc))
-            for hour in sorted(hours)]
+    # Prepare any nominal slot still ahead today, then the next buffer dates.
+    # Past slots never move forward into a catch-up publication.
+    dates = [local.date() + timedelta(days=offset) for offset in range(buffer_days + 1)]
+    result = []
+    for day in dates:
+        if day.weekday() not in days:
+            continue
+        for hour in sorted(hours):
+            schedule = datetime.combine(day, datetime.min.time(), tzinfo=local.tzinfo).replace(hour=hour)
+            if schedule > local:
+                result.append((slot_key(day, hour), day.isoformat(), schedule.astimezone(timezone.utc)))
+    return result
 
 
 def _retry_due(attempt, now):
@@ -62,11 +73,13 @@ def _retry_due(attempt, now):
 
 
 def prepare_next_day_posts(runner):
-    """Schedule at most two unclaimed tomorrow slots, with durable draft cooldown.
+    """Prepare today's future slots plus the next one to three local dates.
 
     Every post intent, including rejected and uncertain writes, remains claimed.
     Generation attempts have their own two-hour checkpoint; they do not consume
-    a post quota or authorize a retry of a remote write.
+    a post quota or authorize a retry of a remote write. The two-slot invocation
+    bound also applies to skipped generation, so an empty buffer cannot cause
+    a burst of model requests. Existing callers keep this function's name.
     """
     slots = _future_slots(runner)
     if not slots:
@@ -81,9 +94,16 @@ def prepare_next_day_posts(runner):
     if policy.get('source_notes'):
         task += '\n' + skills('linkedin-repurposer')
     attempted = []
+    preparation_attempts = 0
+    configured_hours = policy.get('posting_hours')
+    if configured_hours is None:
+        configured_hours = [policy['posting_hour']] if 'posting_hour' in policy else DEFAULT_POSTING_HOURS
+    slot_hours = sorted(configured_hours)
     for key, day, schedule in slots:
-        if claimed_post_count(day, runner.state, zone_name) >= limit:
+        if preparation_attempts >= MAX_PREPARATION_ATTEMPTS_PER_RUN:
             break
+        if claimed_post_count(day, runner.state, zone_name) >= limit:
+            continue
         hour = schedule.astimezone(ZoneInfo(zone_name)).hour
         brief = next((item for item in plan.get('slots', [])
                       if item['date'] == day and item['hour'] == hour), None)
@@ -111,9 +131,9 @@ def prepare_next_day_posts(runner):
         attempts[key] = {'attempted_at': runner.now.isoformat(), 'allocation_day': day,
                          'retry_after': (runner.now + timedelta(seconds=DRAFT_COOLDOWN_SECONDS)).isoformat()}
         runner.save()
+        preparation_attempts += 1
         topics = policy.get('topics') or ['product design decisions']
-        index = (datetime.fromisoformat(day).date().toordinal() * len(slots)
-                 + next(i for i, slot in enumerate(slots) if slot[0] == key))
+        index = datetime.fromisoformat(day).date().toordinal() * len(slot_hours) + slot_hours.index(hour)
         context = {'topic': topics[index % len(topics)],
                    'background': policy.get('background', []),
                    'source_notes': policy.get('source_notes', []),
@@ -146,7 +166,7 @@ def prepare_next_day_posts(runner):
         if not text:
             continue
         if claimed_post_count(day, runner.state, zone_name) >= limit:
-            break
+            continue
         kwargs = {'media_asset': asset} if asset else {}
         runner.write(key, 'post', text, scheduled_time=schedule, allocation_day=day, **kwargs)
         if key in runner.state['actions']:

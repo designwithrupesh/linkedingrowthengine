@@ -167,13 +167,13 @@ class VoiceTests(unittest.TestCase):
             with self.subTest(prefix=prefix):
                 self.assertTrue(voice.violations(prefix))
 
-    def test_all_generation_kinds_share_the_gate(self):
+    def test_all_generation_kinds_typeset_model_dashes_before_the_strict_gate(self):
         for kind in ('post', 'comment', 'reply', 'dm', 'analysis', 'generic'):
             with self.subTest(kind=kind):
-                result = twin.validate_model_output({'text': COMMENT + ' \u2014 Test it.', 'skip': False}, kind)
-                self.assertTrue(result['skip'])
-                self.assertEqual(result['text'], '')
-                self.assertIn('prohibited dash', result['reason'])
+                result = twin.validate_model_output({'text': COMMENT + ' \u2014 Check this detail.', 'skip': False}, kind)
+                self.assertFalse(result['skip'])
+                self.assertEqual(result['text'], COMMENT + ' - Check this detail.')
+                self.assertEqual(voice.require_plain_text(result['text']), result['text'])
 
     def test_specific_brief_replies_are_accepted_without_padding(self):
         result = twin.validate_model_output({'text': REPLY, 'skip': False}, 'reply')
@@ -193,7 +193,7 @@ class VoiceTests(unittest.TestCase):
 
     @patch('automation.twin.complete')
     def test_one_source_only_repair_includes_explicit_owner_rules(self, complete):
-        source = COMMENT.replace('. A faster', ' \u2014 a faster')
+        source = COMMENT + ' This is robust.'
         complete.side_effect = [{'text': source, 'skip': False}, {'text': COMMENT, 'skip': False}]
         with patch.dict(os.environ, {'MODEL_API_KEY': '<test-credential>'}, clear=True):
             result = twin.model(twin.skills('linkedin-comment-drafter'),
@@ -210,7 +210,7 @@ class VoiceTests(unittest.TestCase):
 
     @patch('automation.twin.complete')
     def test_a_second_bad_output_is_skipped_without_a_third_model_call(self, complete):
-        complete.return_value = {'text': COMMENT + ' \u2014 Test again.', 'skip': False}
+        complete.return_value = {'text': COMMENT + ' -- Test again.', 'skip': False}
         with patch.dict(os.environ, {'MODEL_API_KEY': '<test-credential>'}, clear=True):
             result = twin.model(twin.skills('linkedin-reply-handler'), {'comment': {'text': 'How would you test it?'}}, POLICY)
         self.assertTrue(result['skip'])

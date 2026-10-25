@@ -1,10 +1,13 @@
 from datetime import datetime, timedelta, timezone
+import json
 import unittest
 from unittest.mock import Mock
 
 import requests
 
-from automation.comment_signal import CommentSignals, FALLBACK_SECONDS, STATISTICS_URL
+from automation.comment_signal import (CommentSignals, FALLBACK_SECONDS,
+                                       MAX_STATISTICS_COOLDOWN_SECONDS, RETRY_SECONDS,
+                                       STATISTICS_RESOURCE, STATISTICS_URL)
 
 
 URN = 'urn:li:share:7514165310896250880'
@@ -36,6 +39,123 @@ def state(last_attempt=None, last_success=None):
 
 
 class CommentSignalTests(unittest.TestCase):
+    def test_observed_linkedin_resource_cooldown_blocks_every_post_across_restarts(self):
+        observed = datetime(2026, 10, 23, 11, 43, 46, tzinfo=timezone.utc)
+        transport, saved = session(), state(observed, observed)
+        transport.post.return_value = response({
+            'error': 'LINKEDIN_RATE_LIMITED', 'retryAfter': 44174, 'quotaScope': 'application',
+            'resource': STATISTICS_RESOURCE,
+            'message': 'LinkedIn memberCreatorPostAnalytics:FINDER:entity is cooling down (application).',
+            'details': 'private-provider-body',
+        }, 429)
+        self.assertFalse(CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, observed))
+        self.assertEqual(saved['comment_signals']['statistics_cooldown'], {
+            'status': 'rate-limited', 'resource': STATISTICS_RESOURCE, 'scope': 'application',
+            'until': '2026-10-24T00:00:00+00:00', 'observed_at': observed.isoformat(),
+            'reason': 'linkedin-statistics-rate-limited',
+        })
+        self.assertNotIn('private-provider-body', str(saved))
+        self.assertNotIn('secret', str(saved))
+        restarted, persisted = session(), json.loads(json.dumps(saved))
+        signals = CommentSignals('linkedin-owner', 'secret', restarted)
+        for index in range(5):
+            other = {'post_urn': f'urn:li:share:{7514165310896250881 + index}'}
+            self.assertTrue(signals.due(other, persisted, observed + timedelta(minutes=5)))
+        self.assertFalse(signals.due(POST, persisted, observed + timedelta(hours=1)))
+        self.assertTrue(signals.due(POST, persisted, observed + timedelta(seconds=FALLBACK_SECONDS)))
+        restarted.get.assert_not_called()
+        restarted.post.assert_not_called()
+        self.assertNotIn('publishing', persisted)
+        self.assertNotIn('actions', persisted)
+
+    def test_resource_expiry_rechecks_even_after_a_recent_fallback_poll(self):
+        transport, saved = session(), state(NOW, NOW)
+        transport.post.return_value = response({'error': 'LINKEDIN_RATE_LIMITED', 'retryAfter': 44174}, 429)
+        self.assertFalse(CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW))
+        expires = NOW + timedelta(seconds=44174)
+        before = session()
+        signal = CommentSignals('linkedin-owner', 'secret', before)
+        self.assertTrue(signal.due(POST, saved, expires - timedelta(seconds=1)))
+        before.post.assert_not_called()
+        self.assertTrue(signal.due(POST, saved, expires))
+        before.post.assert_called_once()
+        self.assertEqual(saved['comment_signals']['posts'][URN]['status'], 'analytics-count')
+
+    def test_invalid_retry_values_receive_a_conservative_bounded_resource_backoff(self):
+        for value in (None, 0, -1, True, '44174', float('nan'), float('inf'), [], {}):
+            with self.subTest(value=value):
+                transport, saved = session(), state()
+                transport.post.return_value = response({'error': 'LINKEDIN_RATE_LIMITED',
+                    'retryAfter': value, 'quotaScope': 'private-provider-body'}, 429)
+                CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+                cooldown = saved['comment_signals']['statistics_cooldown']
+                self.assertEqual(cooldown['until'], (NOW + timedelta(seconds=RETRY_SECONDS)).isoformat())
+                self.assertEqual(cooldown['scope'], 'unknown')
+                self.assertNotIn('private-provider-body', str(saved))
+        for value, seconds in ((0.5, 1), (10 ** 200, MAX_STATISTICS_COOLDOWN_SECONDS)):
+            transport, saved = session(), state()
+            transport.post.return_value = response({'retryAfter': value}, 429)
+            CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+            self.assertEqual(saved['comment_signals']['statistics_cooldown']['until'],
+                             (NOW + timedelta(seconds=seconds)).isoformat())
+
+    def test_retry_after_header_can_supply_seconds_or_http_date_without_storing_headers(self):
+        for header, seconds in (('1800', 1800), ('Fri, 09 Oct 2026 11:00:00 GMT', 3600),
+                                ('-1', RETRY_SECONDS), ('00000000000000000000', RETRY_SECONDS),
+                                ('private-provider-body', RETRY_SECONDS)):
+            with self.subTest(header=header):
+                transport, saved = session(), state()
+                limited = response({}, 429)
+                limited.headers = {'Retry-After': header, 'x-private-token': 'secret'}
+                transport.post.return_value = limited
+                CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+                self.assertEqual(saved['comment_signals']['statistics_cooldown']['until'],
+                                 (NOW + timedelta(seconds=seconds)).isoformat())
+                self.assertNotIn('secret', str(saved))
+                self.assertNotIn('private-provider-body', str(saved))
+
+    def test_longer_of_valid_json_and_header_retry_instructions_wins(self):
+        transport, saved = session(), state()
+        limited = response({'retryAfter': 1800}, 429)
+        limited.headers = {'Retry-After': '3600'}
+        transport.post.return_value = limited
+        CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+        self.assertEqual(saved['comment_signals']['statistics_cooldown']['until'],
+                         (NOW + timedelta(hours=1)).isoformat())
+
+    def test_invalid_429_json_still_backs_off_but_other_errors_do_not_create_a_resource_limit(self):
+        transport, saved = session(), state()
+        limited = response({}, 429)
+        limited.json.side_effect = ValueError('private-provider-body')
+        transport.post.return_value = limited
+        CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+        self.assertEqual(saved['comment_signals']['statistics_cooldown']['reason'], 'statistics-rate-limited')
+        self.assertNotIn('private-provider-body', str(saved))
+        for status in (403, 500):
+            transport, saved = session(), state()
+            transport.post.return_value = response({'retryAfter': 44174}, status)
+            CommentSignals('linkedin-owner', 'secret', transport).due(POST, saved, NOW)
+            self.assertNotIn('statistics_cooldown', saved['comment_signals'])
+
+    def test_rate_limited_selection_keeps_fair_rotation_and_pending_pagination(self):
+        last_read = NOW - timedelta(seconds=FALLBACK_SECONDS)
+        transport, saved = session(), state(last_read, last_read)
+        transport.post.return_value = response({'retryAfter': 44174}, 429)
+        signals = CommentSignals('linkedin-owner', 'secret', transport)
+        signals.due(POST, saved, NOW)
+        posts = [{'post_urn': f'urn:li:share:{7514165310896250880 + index}'} for index in range(12)]
+        observed = []
+        for cycle in range(3):
+            now = NOW + timedelta(minutes=5 * cycle)
+            chosen = signals.select(posts, saved, now)
+            observed.extend(item['post_urn'] for item in chosen)
+            for item in chosen:
+                signals.due(item, saved, now)
+        self.assertEqual(set(observed), {item['post_urn'] for item in posts})
+        transport.post.assert_called_once()
+        saved['reply_monitor']['posts'][URN]['next_page'] = 2
+        self.assertEqual(signals.select([POST], saved, NOW + timedelta(minutes=20)), [POST])
+
     def test_first_count_then_success_and_unchanged_skip(self):
         transport, saved = session(), state()
         signals = CommentSignals('linkedin-owner', 'secret', transport)

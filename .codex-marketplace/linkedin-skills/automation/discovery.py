@@ -6,7 +6,7 @@ No profile handles are built in; policy explicitly selects the source profiles.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import math
 import os
 import re
@@ -215,30 +215,62 @@ class DiscoveryClient(ApifyClient):
         return result
 
 
-def discover_targets(policy: dict, reader: DiscoveryClient, state: dict,
-                     read: Callable | None = None) -> list[dict]:
-    """Read one configured profile and rotate sources across durable runs.
-
-    Pass ``read=runner.read`` in the runner so discovery is checkpointed and
-    counted like every other paid read. The owner's posts belong to the reply
-    workflow and are excluded here even if a source actor returns a reshare.
-    """
+def _discovery_source(policy: dict, state: dict, now: datetime | None):
+    """Select the next expired source without changing its durable cursor."""
     own = profile_handle(policy.get('profile_url'))
-    sources = []
-    for value in policy.get('discovery_profiles') or []:
-        handle = profile_handle(value)
-        if handle and handle != own and handle not in sources:
-            sources.append(handle)
+    sources = list(dict.fromkeys(handle for value in policy.get('discovery_profiles') or []
+                                if (handle := profile_handle(value)) and handle != own))
     if not sources:
-        return []
-    discovery = state.setdefault('discovery', {})
-    cursor = discovery.get('profile_cursor', 0)
+        return None
+    cursor = state.get('discovery', {}).get('profile_cursor', 0)
     if not isinstance(cursor, int) or isinstance(cursor, bool) or cursor < 0:
         cursor = 0
-    handle = sources[cursor % len(sources)]
+    if now is None:
+        return sources[cursor % len(sources)], cursor + 1
+    if not isinstance(now, datetime) or now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError('A timezone-aware discovery clock is required')
+    ttl = policy.get('target_cache_ttl_hours', 6)
+    if not isinstance(ttl, int) or isinstance(ttl, bool) or not 1 <= ttl <= 24:
+        raise ValueError('Discovery cache TTL must be between 1 and 24 hours')
+    checked = state.get('engagement', {}).get('profile_checked_at', {})
+    for offset in range(len(sources)):
+        handle = sources[(cursor + offset) % len(sources)]
+        try:
+            stamp = datetime.fromisoformat(checked[handle].replace('Z', '+00:00'))
+            if stamp.tzinfo is None or stamp.utcoffset() is None:
+                stamp = None
+        except (KeyError, TypeError, AttributeError, ValueError):
+            stamp = None
+        if stamp is None or now.astimezone(timezone.utc) - stamp >= timedelta(hours=ttl):
+            return handle, cursor + offset + 1
+    return None
+
+
+def discover_targets(policy: dict, reader: DiscoveryClient, state: dict,
+                     read: Callable | None = None, *, now: datetime | None = None,
+                     checkpoint: Callable | None = None) -> list[dict]:
+    """Read one configured profile and rotate sources across durable runs.
+
+    Pass ``read=runner.read`` so the quota and account guard run first. With
+    ``now`` and ``checkpoint=runner.save``, reserve the selected source only
+    after those guards allow a read, but before its actor can start. An
+    uncertain actor attempt therefore keeps its TTL while a denied read does
+    not consume freshness or strand the rotation on one profile.
+    """
+    own = profile_handle(policy.get('profile_url'))
+    source = _discovery_source(policy, state, now)
+    if source is None:
+        return []
+    handle, next_cursor = source
+    discovery = state.setdefault('discovery', {})
 
     def fetch():
-        discovery['profile_cursor'] = cursor + 1
+        discovery['profile_cursor'] = next_cursor
+        if now is not None:
+            state.setdefault('engagement', {}).setdefault('profile_checked_at', {})[handle] = (
+                now.astimezone(timezone.utc).isoformat())
+        if checkpoint is not None:
+            checkpoint()
         return reader.fetch_profile_posts(handle, limit=5)
 
     try:

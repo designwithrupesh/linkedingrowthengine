@@ -9,7 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 from automation.session import (SessionCheckpointError, SessionSourceUpdated,
                                 refresh_checkpoint, run_session, session_bounds)
-from automation.twin import LocalModelError, WriteOutcomeError
+from automation.twin import LocalModelError, WriteOutcomeError, Runner
 from automation.private_actions import PrivateWriteOutcomeError
 
 
@@ -228,6 +228,40 @@ class SessionTests(unittest.TestCase):
         self.assertEqual(result['cycles'], 1)
         self.assertFalse(self.writes)
         self.assertFalse(self.runners[0].state['actions'])
+        self.assertEqual(result['recent_errors'], [])
+        state = json.loads(self.path.read_text(encoding='utf-8'))
+        self.assertEqual(state['operational_status']['session']['status'], 'completed')
+
+    def test_first_expired_reply_stops_the_twenty_item_drain_and_preserves_queue(self):
+        self.clock.now = START + timedelta(hours=4, minutes=59)
+        pending = {f'reply:{index}': {
+            'key': f'reply:{index}', 'post_text': 'An interface decision.',
+            'post_urn': 'urn:li:share:7500000000000000001', 'parent': str(index),
+            'comment': {'id': str(index), 'text': 'Why use this label?'},
+            'first_seen_at': self.clock.now.isoformat(),
+        } for index in range(20)}
+        self.path.write_text(json.dumps({'actions': {}, 'days': {},
+                                        'reply_monitor': {'pending': pending, 'posts': {}}}), encoding='utf-8')
+        def slow_draft(*args):
+            self.clock.sleep(120)
+            return 'The shorter label is clearer to me here.'
+        draft = Mock(side_effect=slow_draft)
+        def replies(runner):
+            runner.session_replies = 0
+            runner.draft = draft
+            Runner.drain_replies(runner)
+        self.hooks['replies'] = replies
+        result = self.run_worker()
+        draft.assert_called_once()
+        self.assertEqual(result['status'], 'completed')
+        self.assertEqual(result['recent_errors'], [])
+        self.assertEqual(result['cycles'], 1)
+        self.assertEqual([name for _, name in self.calls], ['post', 'published-posts', 'replies'])
+        self.queue.assert_not_called()
+        self.assertFalse(self.writes)
+        saved = json.loads(self.path.read_text(encoding='utf-8'))
+        self.assertEqual(saved['reply_monitor']['pending'], pending)
+        self.assertFalse(saved['actions'])
 
     def test_draft_crossing_slot_uses_actual_write_timestamp(self):
         self.clock.now = START + timedelta(minutes=14, seconds=50)

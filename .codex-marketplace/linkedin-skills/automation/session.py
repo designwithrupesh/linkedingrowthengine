@@ -29,6 +29,10 @@ class SessionSourceUpdated(RuntimeError):
     """A newer source revision needs a fresh workflow checkout."""
 
 
+class SessionDeadlineReached(RuntimeError):
+    """Stop the current phase normally without consuming unwritten intents."""
+
+
 def _aware(now):
     if not isinstance(now, datetime) or now.tzinfo is None or now.utcoffset() is None:
         raise ValueError('A timezone-aware session clock is required')
@@ -105,7 +109,7 @@ def _guard_writes(runner, clock, deadline):
         _refresh_runner_clock(runner, clock())
         if runner.now >= deadline:
             print('Session write deferred: the engagement window has ended.')
-            return
+            raise SessionDeadlineReached('The session deadline was reached')
         if kind in ('reaction', 'comment') and engagement.public_actions_due(
                 runner.now, runner.policy, runner.state) <= 0:
             print('Session write deferred: the current public slot has no allowance.')
@@ -172,15 +176,17 @@ def run_session(policy, path, *, wait_for_window=False, max_minutes=330,
         if reader is not None:
             # Replies run before public comments; a failure in another stage
             # cannot prevent this cycle from checking the owner's threads.
-            stages.extend([('replies', lambda: runner.replies(reader)),
-                           ('private', runner.private_workflow),
+            stages.append(('replies', lambda: runner.replies(reader)))
+        stages.append(('next-day-posts', lambda: prepare_next_day_posts(runner)))
+        if reader is not None:
+            stages.extend([('private', runner.private_workflow),
                            ('public', lambda: runner.public_engagement(reader))])
             if runner.local.weekday() == 4:
                 stages.append(('analytics', lambda: runner.analytics(reader)))
         else:
             stages.append(('private', runner.private_workflow))
-        stages.append(('next-day-posts', lambda: prepare_next_day_posts(runner)))
         cycle_errors = []
+        deadline_reached = False
         for phase, operation in stages:
             if _aware(clock()) >= deadline:
                 break
@@ -189,6 +195,11 @@ def run_session(policy, path, *, wait_for_window=False, max_minutes=330,
                 operation()
                 if runner.session_checkpoint_failed:
                     raise SessionCheckpointError('A durable session checkpoint failed')
+            except SessionDeadlineReached:
+                if runner.session_checkpoint_failed:
+                    raise SessionCheckpointError('A durable session checkpoint failed') from None
+                deadline_reached = True
+                break
             except (WriteCheckpointError, PrivateWriteCheckpointError,
                     subprocess.CalledProcessError, SessionCheckpointError):
                 # A failed durable checkpoint must stop all future writes.
@@ -214,6 +225,8 @@ def run_session(policy, path, *, wait_for_window=False, max_minutes=330,
             raise SessionCheckpointError('A durable session checkpoint failed') from None
         print(json.dumps({'session_cycle': cycles, 'at': clock().isoformat(),
                           'counts': runner.counts, 'deferred_stages': len(cycle_errors)}), flush=True)
+        if deadline_reached:
+            break
         # Base cadence on the cycle start, with no overlapping or catch-up loops.
         next_poll = max(cycle_at + timedelta(seconds=poll_seconds), _aware(clock()))
         _wait_until(min(next_poll, deadline), clock, sleeper)

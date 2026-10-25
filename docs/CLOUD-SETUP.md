@@ -64,3 +64,7 @@ Keep confidential stories, private voice samples, draft queues, and reports in i
 Use timezone-aware timestamps for any explicit schedule. `scripts/schedule_post.py` defaults to today's 10:00 in the host timezone or five minutes ahead; it is not the runner's daily calendar.
 
 Generated posts, comments, replies, messages, and profile copy share the strict writing gate in `lib/voice.py`. Em dashes, en dashes, double hyphens, canned praise, stock phrases, and writing scaffolding are rejected before publishing. Short answers need no padding. Scheduled-copy revisions use a content-only patch followed by a remote read to confirm the text and publishing time.
+
+## Hosted autopilot
+
+The deployed workflow `autopilot` mode maintains bounded workers through same-repository GitHub Actions handoffs. See [operation and health](DIGITAL-TWIN.md#autopilot-operation). It does not require this cloud chat to stay open. Future cloud snapshots and the hosted workflow are separate; configuration draft publication does not start or repair the hosted worker.

@@ -88,5 +88,6 @@
   "current_design_hours": [
     9
   ],
-  "voice_direction": "Direct, conversational designer POV. React to a real visible choice or supplied argument; contractions and a brief specific reaction are welcome. Avoid textbook explanations, repeated hypothetical examples, forced tests, manufactured disagreement, a lesson for founders in every post, and automatic questions. Do not imitate chat typos or claim hands-on product use without supplied evidence. Current product claims need an exact dated source; official visuals must be attributed."
+  "voice_direction": "Direct, conversational designer POV. React to a real visible choice or supplied argument; contractions and a brief specific reaction are welcome. Avoid textbook explanations, repeated hypothetical examples, forced tests, manufactured disagreement, a lesson for founders in every post, and automatic questions. Do not imitate chat typos or claim hands-on product use without supplied evidence. Current product claims need an exact dated source; official visuals must be attributed.",
+  "posting_buffer_days": 3
 }

@@ -28,6 +28,50 @@ POST_TEXT = ('Research should inform the next design decision. A prototype can e
              'assumption before a team commits to the full product. ' * 8).strip()
 
 
+# Published context from the two Oct 23 requests that exceeded the actor cap.
+_CALENDAR_RECENT_POSTS = ["I'm starting consulting conversations around product design and brand strategy.\n"
+ '\n'
+ "The work I'm interested in often sits between the two. A product promises simplicity, but its "
+ 'first task needs an explanation. Or the landing page speaks to one customer while the interface '
+ 'seems designed for someone else.\n'
+ '\n'
+ "I'd want to understand that mismatch before proposing a new visual direction.\n"
+ '\n'
+ "If your team is circling a decision like this, tell me what you're trying to settle.",
+ "Penpot calling Auto layout 'Flex layout' is a useful difference to talk about when a team "
+ 'changes tools.\n'
+ '\n'
+ 'Its October 15 Figma terminology guide explains the naming. The Inspect image shows a selected '
+ 'Flex layout and display: flex in the CSS panel beside it.\n'
+ '\n'
+ 'That connection interests me more than learning that Frames are called Boards. It gives '
+ 'designers and developers something concrete to point at when they discuss layout behaviour.\n'
+ '\n'
+ "A terminology guide is a starting point. Before moving a team, I'd still rebuild a familiar "
+ 'component and see which habits carry over.\n'
+ '\n'
+ 'Official Penpot guide and image: https://penpot.app/blog/figma-to-penpot-terminology-cheatsheet/',
+ "If you're showing me a redesign, show me the mistake too.\n"
+ '\n'
+ 'Open something without permission, or delete the wrong item and try to get it back.\n'
+ '\n'
+ 'I want to see how the product talks to someone at that moment. A calm hero screen tells me very '
+ 'little about that part of the experience.\n'
+ '\n'
+ 'The recovery screens deserve a place in the presentation.']
+_CALENDAR_SOURCE = {'data_only': True,
+ 'excerpt': 'Design systems thrive on consistency, so where does randomness fit in? Through '
+            'playful demos of organic typography, bouncing letters, and splayed cards, Brecht De '
+            'Ruyte shows how the new CSS `random()` function brings a little imperfection to the '
+            'web without JavaScript libraries or preprocessor loops that generate hundreds of '
+            'lines of static CSS.',
+ 'published_at': '2026-10-20T10:00:00+00:00',
+ 'publisher': 'Smashing Magazine',
+ 'source_kind': 'design_analysis',
+ 'title': 'Embracing Playful Imperfection With The CSS `random()` Function',
+ 'url': 'https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/'}
+
+
 class ModelRoutingTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -535,3 +579,140 @@ class ModelRoutingTests(unittest.TestCase):
         self.assertEqual(json.loads(messages[1]['content'])['draft'], source)
         self.assertNotIn('must-not-enter-edit', json.dumps(messages))
         self.assertIn('linkedin-humanizer', messages[0]['content'])
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_real_calendar_posts_that_exceeded_the_actor_limit_keep_all_facts(self, post, bridge):
+        policy = json.loads((twin.ROOT / 'automation/policy.json').read_text(encoding="utf-8"))
+        plan = json.loads((twin.ROOT / 'automation/content-plan.json').read_text(encoding="utf-8"))
+        brief_by_hour = {item['hour']: item for item in plan['slots'] if item['date'] == '2026-10-23'}
+        bridge.return_value = self.native_text(POST_TEXT)
+        for hour, previous_characters in ((9, 27282), (18, 25543)):
+            with self.subTest(hour=hour, previous_characters=previous_characters):
+                brief = brief_by_hour[hour]
+                context = {'topic': brief['topic'], 'source_notes': policy['source_notes'],
+                           'recent_posts': _CALENDAR_RECENT_POSTS, 'content_brief': brief}
+                task = twin.skills('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-repurposer')
+                if hour == 9:
+                    context['current_design_source'] = _CALENDAR_SOURCE
+                    task += '\n' + twin.design_news.CURRENT_DESIGN_RULES
+                else:
+                    context['background'] = policy['background']
+                task += '\n' + twin.skills('linkedin-humanizer')
+                # Reproduce the old request's duplicate output rules and full
+                # imported templates to establish this fixture really failed.
+                facts = {key: policy[key] for key in ('background', 'goals', 'audience', 'boundaries',
+                         'authorization', 'source_notes', 'voice_direction') if key in policy}
+                legacy_characters = (len(json.dumps(facts)) + len(task) + len(json.dumps(context))
+                                     + 2 * len(twin.output_rules('post')))
+                self.assertGreater(legacy_characters, twin.APIFY_MESSAGE_CHARACTER_LIMIT)
+                original_context = json.dumps(context)
+                bridge.reset_mock()
+                with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+                    result = twin.model(task, context, policy)
+                self.assertFalse(result['skip'])
+                bridge.assert_called_once()
+                request = bridge.call_args.args[1]
+                messages = request['messages']
+                self.assertLessEqual(sum(len(m['content'].encode('utf-16-le')) // 2 for m in messages), 24000)
+                self.assertEqual(json.loads(messages[1]['content'].split('\n', 1)[1]), context)
+                self.assertEqual(json.dumps(context), original_context)
+                system = messages[0]['content']
+                self.assertIn(json.dumps(facts), system)
+                self.assertIn(twin.voice.prompt_rules(), system)
+                self.assertEqual(sum(m['content'].count('FINAL OUTPUT REQUIREMENTS') for m in messages), 1)
+                for name in ('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-repurposer', 'linkedin-humanizer'):
+                    self.assertIn('Skill: ' + name, system)
+                if hour == 9:
+                    self.assertIn(twin.design_news.CURRENT_DESIGN_RULES, system)
+                    self.assertEqual(json.loads(messages[1]['content'].split('\n', 1)[1])['current_design_source'], _CALENDAR_SOURCE)
+        post.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_owner_facts_context_and_caller_directives_too_large_are_held_before_actor(self, post, bridge):
+        marker = 'preserve-this-source-verbatim '
+        huge = marker * 1200
+        cases = [(dict(POLICY, source_notes=[huge]), {'topic': 'Design'}, ''),
+                 (POLICY, {'topic': 'Design', 'current_design_source': {'excerpt': huge}}, ''),
+                 (POLICY, {'topic': 'Design', 'comment': {'parent_text': huge}}, ''),
+                 (POLICY, {'topic': 'Design'}, '\nOwner-supplied instructions:\n' + huge)]
+        for policy, context, extra in cases:
+            with self.subTest(context_keys=list(context), extra=bool(extra)), \
+                 patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+                original = json.dumps({'policy': policy, 'context': context})
+                with self.assertRaises(twin.ModelQualityError) as caught:
+                    twin.model(twin.skills('linkedin-post-writer', 'linkedin-humanizer') + extra, context, policy)
+                self.assertIn('no actor was started', str(caught.exception))
+                self.assertNotIn(marker, str(caught.exception))
+                self.assertEqual(json.dumps({'policy': policy, 'context': context}), original)
+        bridge.assert_not_called()
+        post.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    def test_private_actor_guard_uses_node_utf16_units_and_allows_exact_limit(self, bridge):
+        bridge.return_value = self.native
+        messages = [{'role': 'system', 'content': 'x'}, {'role': 'user', 'content': 'y' * 23999}]
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+            twin.complete(*twin.model_connection(), messages)
+        bridge.assert_called_once()
+        self.assertEqual(bridge.call_args.args[1]['messages'], messages)
+        bridge.reset_mock()
+        messages[1]['content'] = '\U0001f600' * 12000
+        self.assertLess(sum(len(m['content']) for m in messages), 24000)
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True), \
+             self.assertRaises(twin.ModelQualityError):
+            twin.complete(*twin.model_connection(), messages)
+        bridge.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_all_twelve_skills_keep_their_identity_and_owner_rules_in_paid_requests(self, post, bridge):
+        names = sorted(path.name for path in (twin.ROOT / 'skills').iterdir() if path.is_dir())
+        self.assertEqual(len(names), 12)
+        bridge.return_value = self.native_text(POST_TEXT)
+        context = {'engagers': [], 'post': 'Observed design conversation, without customer claims.'}
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+            result = twin.model(twin.skills(*names), context, POLICY)
+        self.assertFalse(result['skip'])
+        system, user = bridge.call_args.args[1]['messages']
+        for name in names:
+            self.assertEqual(system['content'].count('Skill: ' + name), 1)
+        self.assertIn(twin.voice.prompt_rules(), system['content'])
+        self.assertIn('No claims of personal experience beyond supplied source notes', system['content'])
+        self.assertEqual(json.loads(user['content'].split('\n', 1)[1]), context)
+        bridge.assert_called_once()
+        post.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    @patch('automation.twin.requests.post')
+    def test_cpu_quality_fallback_cannot_bill_for_an_oversized_external_source(self, post, bridge):
+        invented = 'I have seen customers complete onboarding faster after my redesign.'
+        post.return_value = self.response()
+        post.return_value.json.return_value = self.native_text(invented)
+        context = {'post': {'text': 'An external source with all its details. ' * 1000}}
+        original = json.dumps(context)
+        with patch.dict(os.environ, {'INTERACTION_MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT,
+                                    'APIFY_TOKEN': '<test-credential>'}, clear=True), \
+             self.assertRaises(twin.ModelQualityError):
+            twin.model(twin.skills('linkedin-comment-drafter', 'linkedin-humanizer'), context, POLICY)
+        self.assertEqual(post.call_count, 2)
+        self.assertEqual(json.dumps(context), original)
+        bridge.assert_not_called()
+
+    @patch('automation.apify_ai.complete')
+    def test_source_code_formatting_stays_data_while_post_rules_request_plain_names(self, bridge):
+        context = {'topic': 'A published CSS design choice', 'current_design_source': _CALENDAR_SOURCE}
+        original = json.dumps(context)
+        bridge.return_value = self.native_text(POST_TEXT)
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+            result = twin.model(twin.skills('linkedin-post-writer', 'linkedin-humanizer'), context, POLICY)
+        self.assertFalse(result['skip'])
+        system, user = bridge.call_args.args[1]['messages']
+        self.assertIn('ordinary plain text without backticks', system['content'])
+        self.assertIn('Preserve exact source URLs', system['content'])
+        self.assertIn('`random()`', json.loads(user['content'].split('\n', 1)[1])['current_design_source']['title'])
+        self.assertEqual(json.dumps(context), original)
+        self.assertTrue(twin.validate_model_output({'text': 'Use the CSS `random()` function for a supplied detail.',
+                                                  'skip': False}, 'generic')['skip'])
+        bridge.assert_called_once()

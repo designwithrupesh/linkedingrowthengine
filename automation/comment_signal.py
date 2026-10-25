@@ -11,7 +11,9 @@ Statistics use a read-only POST endpoint; this module never writes to LinkedIn.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
+import math
 import re
 
 import requests
@@ -23,6 +25,8 @@ FALLBACK_SECONDS = 6 * 60 * 60
 RECONCILE_SECONDS = 24 * 60 * 60
 RETRY_SECONDS = 15 * 60
 STATISTICS_INTERVAL_SECONDS = 2 * 60 * 60
+STATISTICS_RESOURCE = 'memberCreatorPostAnalytics:FINDER:entity'
+MAX_STATISTICS_COOLDOWN_SECONDS = 24 * 60 * 60
 POST_URN = re.compile(r'urn:li:(?:activity|share|ugcPost):\d{18,25}')
 
 
@@ -44,6 +48,56 @@ def _stamp(value):
 
 def _integer(value):
     return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def _retry_seconds(value):
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or value <= 0:
+        return None
+    if isinstance(value, float) and not math.isfinite(value):
+        return None
+    return math.ceil(min(value, MAX_STATISTICS_COOLDOWN_SECONDS))
+
+
+def _record_statistics_cooldown(response, state, now):
+    """Keep a bounded resource cooldown, never a provider message or token."""
+    try:
+        payload = response.json()
+    except (ValueError, TypeError):
+        payload = None
+    payload = payload if isinstance(payload, dict) else {}
+    candidates = [_retry_seconds(payload.get('retryAfter'))]
+    headers = getattr(response, 'headers', None)
+    header = headers.get('Retry-After') if hasattr(headers, 'get') else None
+    if isinstance(header, str):
+        if re.fullmatch(r'[0-9]+', header.strip()):
+            # Avoid converting an unbounded provider integer string.
+            digits = header.strip().lstrip('0') or '0'
+            value = int(digits) if len(digits) < 10 else MAX_STATISTICS_COOLDOWN_SECONDS
+            candidates.append(_retry_seconds(value))
+        else:
+            try:
+                retry_at = parsedate_to_datetime(header)
+                if retry_at.tzinfo is not None:
+                    candidates.append(_retry_seconds((retry_at - now).total_seconds()))
+            except (ValueError, TypeError, OverflowError):
+                pass
+    delay = max((value for value in candidates if value is not None), default=RETRY_SECONDS)
+    scope = payload.get('quotaScope')
+    if scope not in ('application', 'member'):
+        scope = 'unknown'
+    reason = ('linkedin-statistics-rate-limited' if payload.get('error') == 'LINKEDIN_RATE_LIMITED'
+              else 'statistics-rate-limited')
+    state.setdefault('comment_signals', {})['statistics_cooldown'] = {
+        'status': 'rate-limited', 'resource': STATISTICS_RESOURCE, 'scope': scope,
+        'until': (now + timedelta(seconds=delay)).isoformat(),
+        'observed_at': now.isoformat(), 'reason': reason,
+    }
+
+
+def _statistics_cooling(state, now):
+    cooldown = state.get('comment_signals', {}).get('statistics_cooldown', {})
+    until = _stamp(cooldown.get('until')) if isinstance(cooldown, dict) else None
+    return until is not None and now.timestamp() < until
 
 
 class CommentSignals:
@@ -97,11 +151,14 @@ class CommentSignals:
             return None
         return self._analytics
 
-    def _count(self, urn):
+    def _count(self, urn, state, now):
         try:
             response = self._session.post(STATISTICS_URL, headers=self._headers(),
                 json={'postedId': urn, 'platformId': self.platform_id, 'queryType': 'COMMENT'},
                 timeout=20, allow_redirects=False)
+            if response.status_code == 429:
+                _record_statistics_cooldown(response, state, now)
+                return None, None
             if response.status_code != 200:
                 return None, None
             payload = response.json()
@@ -173,7 +230,13 @@ class CommentSignals:
         success = _stamp(monitor.get('last_success_at'))
         clock = now.timestamp()
         checked = _stamp(signal.get('last_checked_at'))
-        if checked is not None and clock - checked < STATISTICS_INTERVAL_SECONDS:
+        if _statistics_cooling(state, now):
+            if (signal.get('status') != 'fallback-statistics-cooldown' or checked is None
+                    or clock - checked >= STATISTICS_INTERVAL_SECONDS):
+                signal.update(status='fallback-statistics-cooldown', last_checked_at=now.isoformat())
+            return attempt is None or clock - attempt >= FALLBACK_SECONDS
+        if (checked is not None and clock - checked < STATISTICS_INTERVAL_SECONDS
+                and signal.get('status') != 'fallback-statistics-cooldown'):
             return self._cached_due(signal, monitor, now)
 
         def fallback(status):
@@ -183,9 +246,10 @@ class CommentSignals:
         analytics = self.has_analytics()
         if analytics is not True:
             return fallback('fallback-no-analytics' if analytics is False else 'fallback-unverified-analytics')
-        count, cached = self._count(urn)
+        count, cached = self._count(urn, state, now)
         if count is None:
-            return fallback('fallback-unverified-count')
+            return fallback('fallback-statistics-cooldown' if _statistics_cooling(state, now)
+                            else 'fallback-unverified-count')
         if signal.get('count') != count or not _integer(signal.get('count')):
             signal['changed_at'] = now.isoformat()
         signal.update(count=count, cached=cached, status='analytics-count', last_checked_at=now.isoformat())

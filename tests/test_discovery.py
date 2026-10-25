@@ -1,5 +1,8 @@
 """Public-source parsing, quota wiring and free-credit boundaries."""
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+import json
+from pathlib import Path
+import tempfile
 import unittest
 from unittest.mock import Mock
 
@@ -199,6 +202,113 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(discover_targets({'discovery_profiles': ['source']}, client, state), [])
         self.assertNotIn('secret', str(state))
         self.assertEqual(state['discovery']['last_status'], 'source-unavailable')
+
+    def test_denied_read_does_not_consume_source_cursor_or_freshness(self):
+        now = datetime(2026, 10, 23, 12, tzinfo=timezone.utc)
+        state = {'discovery': {'profile_cursor': 58},
+                 'engagement': {'profile_checked_at': {'other': now.isoformat()}}}
+        client, checkpoint = Mock(), Mock()
+        policy = {'discovery_profiles': ['source', 'other'], 'target_cache_ttl_hours': 24}
+        self.assertEqual(discover_targets(policy, client, state, read=Mock(return_value=None),
+                                         now=now, checkpoint=checkpoint), [])
+        self.assertEqual(state['discovery']['profile_cursor'], 58)
+        self.assertEqual(state['engagement']['profile_checked_at'], {'other': now.isoformat()})
+        self.assertEqual(state['discovery']['last_status'], 'daily-budget-exhausted')
+        checkpoint.assert_not_called()
+        client.fetch_profile_posts.assert_not_called()
+
+    def test_expired_source_after_fresh_head_is_reserved_before_actor_starts(self):
+        now = datetime(2026, 10, 23, 12, tzinfo=timezone.utc)
+        state = {'discovery': {'profile_cursor': 2},
+                 'engagement': {'profile_checked_at': {'source': now.isoformat(),
+                    'other': (now - timedelta(days=2)).isoformat()}}}
+        snapshots = []
+        checkpoint = lambda: snapshots.append(json.loads(json.dumps(state)))
+        client = Mock()
+        def fetch(handle, *, limit):
+            self.assertEqual(handle, 'other')
+            self.assertEqual(limit, 5)
+            self.assertEqual(len(snapshots), 1)
+            self.assertEqual(snapshots[0]['discovery']['profile_cursor'], 4)
+            self.assertEqual(snapshots[0]['engagement']['profile_checked_at']['other'], now.isoformat())
+            return []
+        client.fetch_profile_posts.side_effect = fetch
+        policy = {'discovery_profiles': ['source', 'other'], 'target_cache_ttl_hours': 24}
+        discover_targets(policy, client, state, read=lambda call: call(), now=now, checkpoint=checkpoint)
+        client.fetch_profile_posts.assert_called_once()
+        # Both sources are now fresh. Repeated cycles cannot spend another read.
+        discover_targets(policy, client, state, now=now + timedelta(minutes=5), checkpoint=checkpoint)
+        client.fetch_profile_posts.assert_called_once()
+        self.assertEqual(len(snapshots), 1)
+
+    def test_uncertain_paid_source_attempt_keeps_reservation_and_rotates(self):
+        now = datetime(2026, 10, 23, 12, tzinfo=timezone.utc)
+        state, snapshots = {}, []
+        client = Mock()
+        client.fetch_profile_posts.side_effect = [requests.Timeout('provider detail'), []]
+        policy = {'discovery_profiles': ['source', 'other'], 'target_cache_ttl_hours': 24}
+        def checkpoint():
+            snapshots.append(json.loads(json.dumps(state)))
+        discover_targets(policy, client, state, read=lambda call: call(), now=now, checkpoint=checkpoint)
+        self.assertEqual(state['discovery']['last_status'], 'source-unavailable')
+        self.assertEqual(snapshots[0]['discovery']['profile_cursor'], 1)
+        self.assertEqual(snapshots[0]['engagement']['profile_checked_at']['source'], now.isoformat())
+        # Reload exactly the pre-request durable snapshot after an uncertain actor.
+        restarted = snapshots[0]
+        discover_targets(policy, client, restarted, read=lambda call: call(),
+                         now=now + timedelta(minutes=5), checkpoint=checkpoint)
+        self.assertEqual([call.args[0] for call in client.fetch_profile_posts.call_args_list],
+                         ['source', 'other'])
+        self.assertEqual(restarted['discovery']['profile_cursor'], 2)
+
+    def test_checkpoint_failure_prevents_paid_actor_start(self):
+        client = Mock()
+        with self.assertRaisesRegex(RuntimeError, 'checkpoint failed'):
+            discover_targets({'discovery_profiles': ['source']}, client, {},
+                             read=lambda call: call(), now=datetime.now(timezone.utc),
+                             checkpoint=Mock(side_effect=RuntimeError('checkpoint failed')))
+        client.fetch_profile_posts.assert_not_called()
+
+    def test_rotation_checks_every_profile_without_owner_or_duplicate_reads(self):
+        now = datetime(2026, 10, 23, 12, tzinfo=timezone.utc)
+        state = {'discovery': {'profile_cursor': 0}, 'engagement': {'profile_checked_at': {
+            'source': now.isoformat(), 'third': (now - timedelta(days=2)).isoformat()}}}
+        client = Mock()
+        client.fetch_profile_posts.return_value = []
+        policy = {'profile_url': 'https://linkedin.com/in/owner/',
+                  'discovery_profiles': ['owner', 'source', 'SOURCE', 'other', 'third'],
+                  'target_cache_ttl_hours': 24}
+        discover_targets(policy, client, state, now=now)
+        discover_targets(policy, client, state, now=now)
+        discover_targets(policy, client, state, now=now)
+        self.assertEqual([call.args[0] for call in client.fetch_profile_posts.call_args_list],
+                         ['other', 'third'])
+        self.assertEqual(state['discovery']['profile_cursor'], 3)
+
+    def test_runner_budget_guard_block_does_not_cache_profile_and_can_resume(self):
+        from automation.twin import Runner
+        now = datetime(2026, 10, 23, 12, tzinfo=timezone.utc)
+        policy = {'timezone': 'Asia/Calcutta', 'profile_url': 'https://linkedin.com/in/owner/',
+                  'discovery_profiles': ['source', 'other'], 'target_cache_ttl_hours': 24,
+                  'max_public_interactions_per_day': 40, 'max_public_actions_per_session': 2,
+                  'max_read_calls_per_day': 350, 'target_post_urls': []}
+        with tempfile.TemporaryDirectory() as temp:
+            runner = Runner(policy, Path(temp) / 'state.json', now=now)
+            runner.read_budget_guard = Mock(return_value=False)
+            client = Mock()
+            client.fetch_profile_posts.return_value = []
+            runner.public_engagement(client)
+            self.assertNotIn('profile_cursor', runner.state['discovery'])
+            self.assertNotIn('profile_checked_at', runner.state['engagement'])
+            self.assertEqual(runner.counts['read'], 0)
+            client.fetch_profile_posts.assert_not_called()
+            runner.read_budget_guard.return_value = True
+            runner.public_engagement(client)
+            client.fetch_profile_posts.assert_called_once_with('source', limit=5)
+            persisted = json.loads(runner.path.read_text(encoding="utf-8"))
+            self.assertEqual(persisted['discovery']['profile_cursor'], 1)
+            self.assertEqual(persisted['engagement']['profile_checked_at']['source'], now.isoformat())
+            self.assertEqual(persisted['days']['2026-10-23']['read'], 1)
 
 
 class ReadBudgetTests(unittest.TestCase):

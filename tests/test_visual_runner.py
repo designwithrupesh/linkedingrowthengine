@@ -68,6 +68,9 @@ class VisualRunnerTests(unittest.TestCase):
                                   scheduled_time=self.schedule, media_asset=self.asset)
 
     def test_budget_paused_queue_can_still_prepare_a_reviewed_carousel(self):
+        # Current nominal time has passed; this case isolates tomorrow's carousel.
+        self.runner.now = self.schedule
+        self.runner.policy = {**self.runner.policy, 'posting_buffer_days': 1}
         self.runner.model_paused = True
         result = prepare_next_day_posts(self.runner)
         self.assertEqual(result, ['post:2026-10-13:1800'])
