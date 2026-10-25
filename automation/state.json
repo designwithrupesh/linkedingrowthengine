@@ -2578,7 +2578,7 @@
     },
     "post:2026-10-27:1800": {
       "kind": "post",
-      "text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
+      "text": "Before starting another redesign, I'd ask the team to bring one example of what is going wrong.\n\nAn abandoned task. A support conversation. A screen that needs a long explanation. Something we can examine together.\n\nThat gives the work a starting point. 'It feels dated' tells me very little about what a redesign needs to change.\n\nI'm open to consulting conversations around product design, brand strategy and creative direction. If you're looking at a redesign, I'd be interested to hear what prompted it.",
       "at": "2026-10-25T18:47:21.213785+00:00",
       "status": "scheduled",
       "post_urn": null,
@@ -2590,12 +2590,13 @@
       "reason": "Publora acknowledged the request",
       "caption_edits": [
         {
-          "status": "inflight",
+          "status": "verified",
           "at": "2026-10-25T18:51:41.442578+00:00",
           "sha256": "e38da4b53a1f709cf7bf52050c9189af3f118e7f0a773e9d30e1afcadfb255ed",
           "previous_text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
           "text": "Before starting another redesign, I'd ask the team to bring one example of what is going wrong.\n\nAn abandoned task. A support conversation. A screen that needs a long explanation. Something we can examine together.\n\nThat gives the work a starting point. 'It feels dated' tells me very little about what a redesign needs to change.\n\nI'm open to consulting conversations around product design, brand strategy and creative direction. If you're looking at a redesign, I'd be interested to hear what prompted it.",
-          "scheduled_for": "2026-10-27T12:30:00+00:00"
+          "scheduled_for": "2026-10-27T12:30:00+00:00",
+          "verified_at": "2026-10-25T18:51:43.632344+00:00"
         }
       ]
     },
@@ -3066,7 +3067,7 @@
     },
     {
       "id": "6ade4ecced849b64de3b85a1",
-      "text": "If your team keeps returning to the same redesign, it’s worth stepping back and really unpacking the decisions and assumptions driving that cycle. Too often, redesigns happen without clarifying the underlying problem, so the work ends up chasing symptoms instead of causes. I’d welcome a conversation to help teams dig into what’s really at stake and what’s been overlooked - not to jump in with quick fixes, but to create space for clarity. That’s where more thoughtful, lasting design starts.",
+      "text": "Before starting another redesign, I'd ask the team to bring one example of what is going wrong.\n\nAn abandoned task. A support conversation. A screen that needs a long explanation. Something we can examine together.\n\nThat gives the work a starting point. 'It feels dated' tells me very little about what a redesign needs to change.\n\nI'm open to consulting conversations around product design, brand strategy and creative direction. If you're looking at a redesign, I'd be interested to hear what prompted it.",
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T12:30:00+00:00",
