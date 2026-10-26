@@ -2692,7 +2692,31 @@
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:00.071825+00:00",
         "scheduled_for": "2026-10-27T12:30:00+00:00"
-      }
+      },
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-26T05:09:25.076322+00:00",
+          "remote_id": "6ade4ecced849b64de3b85a1",
+          "text": "Bring the screen that keeps coming back into review.\n\nA redesign brief is stronger when it points to one unresolved moment. 'Make it cleaner' can wait until the team agrees what needs to change.\n\nThe attached intake sheet is fillable. If your team is stuck on a redesign, I'm open to a consulting conversation.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/oct26/redesign-intake-sheet.pdf",
+          "previous_text": "Before starting another redesign, I'd ask the team to bring one example of what is going wrong.\n\nAn abandoned task. A support conversation. A screen that needs a long explanation. Something we can examine together.\n\nThat gives the work a starting point. 'It feels dated' tells me very little about what a redesign needs to change.\n\nI'm open to consulting conversations around product design, brand strategy and creative direction. If you're looking at a redesign, I'd be interested to hear what prompted it.",
+          "scheduled_for": "2026-10-27T12:30:00Z",
+          "media": {
+            "sha256": "8c3d60243b288a82f4bb63fbed0a28f04c13557517d3092d1a7d06b48f4e79a4",
+            "mime_type": "application/pdf",
+            "title": "Redesign intake sheet",
+            "type": "document",
+            "page_count": 3,
+            "format": "freebie",
+            "file_name": "redesign-intake-sheet.pdf",
+            "size_bytes": 59053
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "a91d4d65de5c69c405aac7353589942b6609375bf113d6559737efdbf922a320"
+        }
+      ]
     },
     "post:2026-10-28:0900": {
       "kind": "post",
