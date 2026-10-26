@@ -2646,7 +2646,7 @@
       "kind": "post",
       "text": "I'd bring an engineer into a design discussion while the options are still rough.\n\nIf an idea depends on data we don't have, or a response the system can't return quickly, I'd rather find that out before polishing it.\n\nI also want to know which constraints are fixed and which ones we could change. 'We can't do that' is the start of that discussion, not enough detail to make the design decision.\n\nThen there's something useful to sketch together.",
       "at": "2026-10-25T18:47:42.560182+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-28T12:30:00+00:00",
@@ -2666,7 +2666,7 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:07.431570+00:00",
         "scheduled_for": "2026-10-28T12:30:00+00:00"
@@ -3160,7 +3160,8 @@
       "url": null,
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T12:30:00+00:00",
-      "allocation_day": "2026-10-28"
+      "allocation_day": "2026-10-28",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4eeeed849b64de3b8770",
