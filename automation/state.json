@@ -2556,7 +2556,7 @@
       "kind": "post",
       "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
       "at": "2026-10-25T18:47:21.213785+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-27T03:30:00+00:00",
@@ -2576,7 +2576,7 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:00:55.850615+00:00",
         "scheduled_for": "2026-10-27T03:30:00+00:00"
@@ -3115,7 +3115,8 @@
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T03:30:00+00:00",
-      "allocation_day": "2026-10-27"
+      "allocation_day": "2026-10-27",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4ecced849b64de3b85a1",
