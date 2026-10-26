@@ -3155,10 +3155,11 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "draft-verified",
+        "status": "replaced-and-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:10.896161+00:00",
-        "scheduled_for": "2026-10-29T03:30:00+00:00"
+        "scheduled_for": "2026-10-29T03:30:00+00:00",
+        "verified_at": "2026-10-26T05:11:13.421483+00:00"
       },
       "media_replacements": [
         {
