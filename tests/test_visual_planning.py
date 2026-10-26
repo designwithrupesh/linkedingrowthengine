@@ -1,6 +1,7 @@
 from copy import deepcopy
 from datetime import date
 import json
+import os
 from pathlib import Path
 from types import SimpleNamespace
 import tempfile
@@ -8,6 +9,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from automation.apify_ai import ApifyBudgetError
+from automation import apify_ai, twin
 from automation import visual_planning as planning
 from automation.visual_assets import VisualAssetError
 from lib.voice import VoiceError, prompt_rules
@@ -421,6 +423,48 @@ class VisualPreparationTests(unittest.TestCase):
             with self.assertRaises(ApifyBudgetError):
                 self.runtime_prepare()
         complete.assert_called_once()
+        self.render.assert_not_called()
+
+    def test_visual_apify_budget_pause_uses_one_local_generation_with_unchanged_source_and_schema(self):
+        endpoint = apify_ai.model_info()[0]
+        spec = self.source_spec()
+        payload = {'text': json.dumps(spec), 'skip': False, 'reason': ''}
+        brief = {'format': 'image', 'topic': 'Review related changes', 'current_design_source': self.source()}
+        before = deepcopy(brief)
+        with patch('automation.twin.model_connection', return_value=(endpoint, 'apify-test-placeholder', apify_ai.MODEL, False)), \
+             patch.dict(os.environ, {'INTERACTION_MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT}, clear=True), \
+             patch('automation.twin.complete', side_effect=[ApifyBudgetError('Budget paused'), payload]) as complete:
+            asset = planning.prepare_visual(self.runner, brief, '2026-10-12', 18, self.temp.name)
+        self.assertEqual(complete.call_count, 2)
+        paid, local = complete.call_args_list
+        self.assertEqual(local.args[:4], (twin.LOCAL_MODEL_ENDPOINT, twin.LOCAL_MODEL_AUTH, 'twin-local', True))
+        self.assertEqual(local.args[4], paid.args[4])
+        self.assertEqual(local.kwargs, paid.kwargs)
+        self.assertEqual(local.kwargs['kind'], 'generic')
+        context = json.loads(local.args[4][1]['content'].split('\n', 1)[1])
+        self.assertEqual(context['current_design_source']['url'], self.source()['url'])
+        self.assertEqual(context['current_design_source']['published_at'], self.source()['published_at'])
+        self.assertNotIn('apify-test-placeholder', json.dumps(local.args[4]))
+        for actual, requested in zip(asset['spec']['slides'], spec['slides']):
+            for key, value in requested.items():
+                self.assertEqual(actual[key], value)
+        self.assertIn(self.source()['url'], asset['caption'])
+        self.assertEqual(brief, before)
+
+    def test_visual_budget_pause_does_not_borrow_unconfigured_or_arbitrary_model_routes(self):
+        endpoint = apify_ai.model_info()[0]
+        cases = ((endpoint, {}),
+                 (endpoint, {'INTERACTION_MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT + '?token=unexpected'}),
+                 (twin.OPENAI_MODEL_ENDPOINT, {'INTERACTION_MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT}),
+                 ('https://model.example.test/chat', {'INTERACTION_MODEL_ENDPOINT': twin.LOCAL_MODEL_ENDPOINT}))
+        for route, environment in cases:
+            with self.subTest(route=route, environment=environment), \
+                 patch('automation.twin.model_connection', return_value=(route, 'test-placeholder', 'model', False)), \
+                 patch.dict(os.environ, environment, clear=True), \
+                 patch('automation.twin.complete', side_effect=ApifyBudgetError('Budget paused')) as complete:
+                with self.assertRaises(ApifyBudgetError):
+                    self.runtime_prepare()
+                complete.assert_called_once()
         self.render.assert_not_called()
 
     def test_runtime_rejects_fenced_json_and_forged_identity(self):

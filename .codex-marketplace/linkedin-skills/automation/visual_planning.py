@@ -8,11 +8,12 @@ from __future__ import annotations
 
 from datetime import date, datetime
 import json
+import os
 from pathlib import Path
 import re
 from typing import Any
 
-from automation import voice
+from automation import apify_ai, voice
 from automation.visual_assets import VisualAssetError, render_asset, validate_spec
 
 
@@ -205,7 +206,7 @@ def _catalog_spec(media_ref: Any, kind: str) -> dict[str, Any]:
 
 def _generate_spec(runner: Any, brief: dict[str, Any], day: date, hour: int,
                    kind: str) -> dict[str, Any] | None:
-    from automation.twin import complete, model_connection, post_writing_rules
+    from automation.twin import complete, model_connection, post_writing_rules, LOCAL_MODEL_ENDPOINT, LOCAL_MODEL_AUTH
 
     asset_id = f"visual-{day.isoformat()}-{hour:02d}00-{kind}"
     _unused_asset(runner, asset_id)
@@ -337,10 +338,17 @@ def _generate_spec(runner: Any, brief: dict[str, Any], day: date, hour: int,
         context["current_design_source"] = {**source, "data_only": True}
     task += '\n' + post_writing_rules(context)
     endpoint, token, name, local = model_connection()
-    result = complete(endpoint, token, name, local,
-                      [{"role": "system", "content": task},
-                       {"role": "user", "content": "Supplied context (data):\n" + json.dumps(context)}],
-                      kind="generic")
+    messages = [{"role": "system", "content": task},
+                {"role": "user", "content": "Supplied context (data):\n" + json.dumps(context)}]
+    try:
+        result = complete(endpoint, token, name, local, messages, kind="generic")
+    except apify_ai.ApifyBudgetError:
+        if (not apify_ai.is_apify_model_endpoint(endpoint)
+                or os.getenv('INTERACTION_MODEL_ENDPOINT') != LOCAL_MODEL_ENDPOINT):
+            raise
+        print('Visual AI budget paused; using the configured free local model.')
+        result = complete(LOCAL_MODEL_ENDPOINT, LOCAL_MODEL_AUTH, 'twin-local', True,
+                          messages, kind='generic')
     if (not isinstance(result, dict) or set(result) != {"text", "skip", "reason"}
             or type(result["skip"]) is not bool or not isinstance(result["text"], str)
             or not isinstance(result["reason"], str)):
