@@ -2578,7 +2578,7 @@
       "visual_rebuild_hold": {
         "status": "inflight",
         "reason": "Owner rejected text-only batch and requested visual replacements",
-        "at": "2026-10-26T04:58:19.521743+00:00",
+        "at": "2026-10-26T05:00:55.850615+00:00",
         "scheduled_for": "2026-10-27T03:30:00+00:00"
       }
     },
