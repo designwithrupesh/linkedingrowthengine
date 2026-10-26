@@ -3569,6 +3569,52 @@
           "tradeoff": "A narrow first scope can defer useful work; the checkpoint makes that deferral explicit rather than permanent."
         }
       }
+    },
+    "post:2026-10-30:0900": {
+      "kind": "post",
+      "text": "An automation setup should leave something you can come back to.\n\nLinear's Slack reply says it will post customer follow-ups here after each relevant merge. I like having that promise in the same place as the request.\n\nOfficial Linear demo:\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+      "at": "2026-10-26T05:11:41.378146+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-10-30T03:30:00+00:00",
+      "allocation_day": "2026-10-30",
+      "format": "image",
+      "asset_id": "linear-loop-confirmation-oct26",
+      "asset_sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06",
+      "asset_title": "The confirmation stays beside the request",
+      "asset_pages": 1,
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "linear-loop-confirmation-oct26",
+        "kind": "image",
+        "title": "The confirmation stays beside the request",
+        "caption": "An automation setup should leave something you can come back to.\n\nLinear's Slack reply says it will post customer follow-ups here after each relevant merge. I like having that promise in the same place as the request.\n\nOfficial Linear demo:\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+        "file": "resources/linkedin/oct26/linear-loops-frame-12.png",
+        "preview": "resources/linkedin/oct26/linear-loops-frame-12.png",
+        "sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06",
+        "page_count": 1,
+        "transcript": [
+          "Brian",
+          "Linear",
+          "APP",
+          "Check the linked issue for customer requests.",
+          "Post in this channel with the customers who need follow-up.",
+          "Loop created."
+        ],
+        "review_status": "checked",
+        "design_brief": {
+          "reader_tension": "The visual choice needs a concrete explanation.",
+          "intended_feeling": "Recognize the decision in a real interface.",
+          "core_decision": "The setup confirmation should preserve the continuing behaviour of an automation.",
+          "visual_idea": "An unchanged frame from the official Linear demo shows the request beside its setup confirmation.",
+          "story_arc": [
+            "See the original interface.",
+            "Read the specific opinion alongside it."
+          ],
+          "tradeoff": "The screenshot establishes visible details; it does not establish usability results or personal product use."
+        }
+      }
     }
   },
   "days": {
@@ -3688,6 +3734,11 @@
     },
     "2026-10-29": {
       "post": 2,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-10-30": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
