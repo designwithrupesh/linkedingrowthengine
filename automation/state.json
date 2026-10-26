@@ -2574,7 +2574,13 @@
           "scheduled_for": "2026-10-27T03:30:00+00:00",
           "verified_at": "2026-10-25T18:51:40.189142+00:00"
         }
-      ]
+      ],
+      "visual_rebuild_hold": {
+        "status": "inflight",
+        "reason": "Owner rejected text-only batch and requested visual replacements",
+        "at": "2026-10-26T04:58:19.521743+00:00",
+        "scheduled_for": "2026-10-27T03:30:00+00:00"
+      }
     },
     "post:2026-10-27:1800": {
       "kind": "post",
