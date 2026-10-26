@@ -2712,7 +2712,7 @@
             "size_bytes": 59053
           },
           "media_stage": "pause-existing-post",
-          "media_stage_status": "inflight",
+          "media_stage_status": "acknowledged",
           "status": "inflight",
           "media_operation_id": "a91d4d65de5c69c405aac7353589942b6609375bf113d6559737efdbf922a320",
           "http_status": 200,
