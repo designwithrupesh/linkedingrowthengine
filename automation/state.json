@@ -3133,9 +3133,9 @@
     },
     "post:2026-10-29:0900": {
       "kind": "post",
-      "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+      "text": "Keep the type decisions attached to the label.\n\nIn Penpot's Inspect view, 'Services' sits beside its font, weight and line-height. The next person can read the values behind this bit of the interface instead of measuring a picture.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "at": "2026-10-25T18:48:04.748351+00:00",
-      "status": "media-held",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-29T03:30:00+00:00",
@@ -3178,15 +3178,77 @@
             "file_name": "the-values-behind-services.png",
             "size_bytes": 414585
           },
-          "media_stage": "schedule-existing-replacement",
-          "media_stage_status": "acknowledged",
-          "status": "inflight",
+          "media_stage": "verify-replacement-schedule",
+          "media_stage_status": "verified",
+          "status": "scheduled",
           "media_operation_id": "ef65f66604eadbd04d6b40fc91a53a8ff5a682a12731d5e62f30a928d82ad7a2",
           "http_status": 200,
           "old_media_id": null,
-          "new_media_id": "6adee0e0ed849b64de3fb81b"
+          "new_media_id": "6adee0e0ed849b64de3fb81b",
+          "reason": "Existing post replacement verified"
         }
-      ]
+      ],
+      "media": {
+        "sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e",
+        "mime_type": "image/png",
+        "title": "The values behind Services",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "the-values-behind-services.png",
+        "size_bytes": 414585,
+        "media_id": "6adee0e0ed849b64de3fb81b",
+        "status": "ready"
+      },
+      "format": "image",
+      "asset_sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e",
+      "asset_title": "The values behind Services",
+      "asset_pages": 1,
+      "media_scheduled_for": "2026-10-29T03:30:00Z",
+      "asset_id": "penpot-type-inspect-oct26",
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "penpot-type-inspect-oct26",
+        "kind": "image",
+        "title": "The values behind Services",
+        "caption": "Keep the type decisions attached to the label.\n\nIn Penpot's Inspect view, 'Services' sits beside its font, weight and line-height. The next person can read the values behind this bit of the interface instead of measuring a picture.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+        "file": "resources/linkedin/oct26/penpot-inspect.png",
+        "preview": "resources/linkedin/oct26/penpot-inspect.png",
+        "sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e",
+        "page_count": 1,
+        "transcript": [
+          "Inspecting code (View Only)",
+          "DONE",
+          "Services",
+          "DESIGN",
+          "PROTOTYPE",
+          "INSPECT",
+          "Layer info",
+          "Styles",
+          "Typography",
+          "body.strong",
+          "Font Family",
+          "DM Sans",
+          "Font Size",
+          "16px",
+          "Font Weight",
+          "600",
+          "Line Height",
+          "1.25"
+        ],
+        "review_status": "checked",
+        "design_brief": {
+          "reader_tension": "The visual choice needs a concrete explanation.",
+          "intended_feeling": "Recognize the decision in a real interface.",
+          "core_decision": "Inspect can preserve the exact design values attached to a selected piece of the interface.",
+          "visual_idea": "The selected Services label and its actual typography values remain visible in the official screenshot.",
+          "story_arc": [
+            "See the original interface.",
+            "Read the specific opinion alongside it."
+          ],
+          "tradeoff": "The screenshot establishes visible details; it does not establish usability results or personal product use."
+        }
+      }
     },
     "post:2026-10-26:1800": {
       "kind": "post",
@@ -3827,12 +3889,14 @@
     },
     {
       "id": "6ade4eeeed849b64de3b8770",
-      "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+      "text": "Keep the type decisions attached to the label.\n\nIn Penpot's Inspect view, 'Services' sits beside its font, weight and line-height. The next person can read the values behind this bit of the interface instead of measuring a picture.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "url": null,
       "at": "2026-10-25T18:48:04.748351+00:00",
       "scheduled_for": "2026-10-29T03:30:00+00:00",
       "allocation_day": "2026-10-29",
-      "media_status": "replacement-in-progress"
+      "media_status": "scheduled",
+      "format": "image",
+      "asset_sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e"
     },
     {
       "id": "6ade4fb821af69534cd33884",
