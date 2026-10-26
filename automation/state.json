@@ -2706,7 +2706,7 @@
       "kind": "post",
       "text": "If the same design decision keeps coming back to the founder, I'd ask who owns it.\n\nA review can end with a new screen and leave a question open. Who is this for? What should the first version let them do? Who decides when two priorities clash?\n\nI'd want a design lead to bring those questions to the right people, settle what can be settled, and write down the reasoning. The next review should be able to build on that decision.\n\nBefore agreeing a list of design deliverables, I'd want to agree that responsibility too.",
       "at": "2026-10-25T18:51:34.016285+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-26T12:30:00+00:00",
@@ -2715,7 +2715,7 @@
       "remote_id": "6ade4fb821af69534cd33884",
       "reason": "Publora acknowledged the request",
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:15.283189+00:00",
         "scheduled_for": "2026-10-26T12:30:00+00:00"
@@ -3190,7 +3190,8 @@
       "url": null,
       "at": "2026-10-25T18:51:34.016285+00:00",
       "scheduled_for": "2026-10-26T12:30:00+00:00",
-      "allocation_day": "2026-10-26"
+      "allocation_day": "2026-10-26",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4fcd21af69534cd33993",
