@@ -4522,7 +4522,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-10-26T18:15:07.254497+00:00",
+        "last_considered_at": "2026-10-26T19:45:09.625138+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-26T18:15:07.254497+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -4530,7 +4530,7 @@
         "cached": false
       },
       "urn:li:share:7515388331061452800": {
-        "last_considered_at": "2026-10-26T18:00:07.210404+00:00",
+        "last_considered_at": "2026-10-26T19:45:09.625138+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-26T18:00:07.210404+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -4570,7 +4570,7 @@
         "cached": false
       },
       "urn:li:share:7516339844223115264": {
-        "last_considered_at": "2026-10-26T18:00:07.210404+00:00",
+        "last_considered_at": "2026-10-26T19:45:09.625138+00:00",
         "changed_at": "2026-10-15T04:51:54.515633+00:00",
         "count": 0,
         "cached": false,
@@ -4610,7 +4610,7 @@
         "last_checked_at": "2026-10-26T18:00:07.210404+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-10-26T18:15:07.254497+00:00",
+        "last_considered_at": "2026-10-26T19:45:09.625138+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
@@ -4634,7 +4634,7 @@
         "last_checked_at": "2026-10-26T18:45:08.054722+00:00"
       },
       "urn:li:share:7517789140952784896": {
-        "last_considered_at": "2026-10-26T18:15:07.254497+00:00",
+        "last_considered_at": "2026-10-26T19:45:09.625138+00:00",
         "changed_at": "2026-10-19T06:53:51.766653+00:00",
         "count": 0,
         "cached": false,
@@ -4842,7 +4842,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-10-26T19:30:09.175176+00:00"
+      "checked_at": "2026-10-26T19:45:09.625138+00:00"
     }
   },
   "engagement": {
