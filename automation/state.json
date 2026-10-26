@@ -2713,7 +2713,13 @@
       "allocation_day": "2026-10-26",
       "http_status": 200,
       "remote_id": "6ade4fb821af69534cd33884",
-      "reason": "Publora acknowledged the request"
+      "reason": "Publora acknowledged the request",
+      "visual_rebuild_hold": {
+        "status": "inflight",
+        "reason": "Owner rejected text-only batch and requested visual replacements",
+        "at": "2026-10-26T05:01:15.283189+00:00",
+        "scheduled_for": "2026-10-26T12:30:00+00:00"
+      }
     },
     "post:2026-10-29:1800": {
       "kind": "post",
