@@ -4104,13 +4104,14 @@
     {
       "id": "6ade4fb821af69534cd33884",
       "text": "When opening the address is the main task, the row should do one thing.\n\nThe pencil creates a second destination in what looks like the same control. Put 'Edit address' inside the details, or make editing the main action from the start.\n\nAn illustrative interaction study, informed by:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7520461780251205633/",
       "at": "2026-10-25T18:51:34.016285+00:00",
       "scheduled_for": "2026-10-26T12:30:00+00:00",
       "allocation_day": "2026-10-26",
       "media_status": "scheduled",
       "format": "carousel",
-      "asset_sha256": "d1f6652df6fc4ca7fde5e1ae1f76d9738149ac9452096761cf23565b9c1b6b22"
+      "asset_sha256": "d1f6652df6fc4ca7fde5e1ae1f76d9738149ac9452096761cf23565b9c1b6b22",
+      "post_urn": "urn:li:ugcPost:7520461780251205633"
     },
     {
       "id": "6ade4fcd21af69534cd33993",
