@@ -2869,10 +2869,11 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "draft-verified",
+        "status": "replaced-and-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:04.143930+00:00",
-        "scheduled_for": "2026-10-28T03:30:00+00:00"
+        "scheduled_for": "2026-10-28T03:30:00+00:00",
+        "verified_at": "2026-10-26T05:10:18.142932+00:00"
       },
       "media_replacements": [
         {
