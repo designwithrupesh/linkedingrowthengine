@@ -2676,7 +2676,7 @@
       "kind": "post",
       "text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "at": "2026-10-25T18:48:04.748351+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-29T03:30:00+00:00",
@@ -2696,7 +2696,7 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:10.896161+00:00",
         "scheduled_for": "2026-10-29T03:30:00+00:00"
@@ -3175,7 +3175,8 @@
       "url": null,
       "at": "2026-10-25T18:48:04.748351+00:00",
       "scheduled_for": "2026-10-29T03:30:00+00:00",
-      "allocation_day": "2026-10-29"
+      "allocation_day": "2026-10-29",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4fb821af69534cd33884",
