@@ -4834,9 +4834,9 @@
     "supervisor": {
       "status": "running",
       "phase": "maintenance",
-      "started_at": "2026-10-26T05:13:41.203406+00:00",
-      "deadline": "2026-10-26T05:18:41.203406+00:00",
-      "heartbeat_at": "2026-10-26T05:13:41.646617+00:00",
+      "started_at": "2026-10-26T05:19:30.759059+00:00",
+      "deadline": "2026-10-26T10:19:30.759059+00:00",
+      "heartbeat_at": "2026-10-26T05:19:31.393559+00:00",
       "cycles": 0,
       "sessions": 0,
       "recent_errors": []
