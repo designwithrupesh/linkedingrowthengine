@@ -4490,7 +4490,7 @@
         "cached": false
       },
       "urn:li:share:7514527701878284288": {
-        "last_considered_at": "2026-10-26T21:21:49.360460+00:00",
+        "last_considered_at": "2026-10-26T22:51:50.968604+00:00",
         "changed_at": "2026-10-10T06:04:24.231829+00:00",
         "count": 0,
         "cached": false,
@@ -4514,15 +4514,15 @@
         "last_checked_at": "2026-10-26T21:51:49.793595+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-26T21:06:49.360982+00:00",
+        "last_considered_at": "2026-10-26T22:51:50.968604+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-26T19:30:09.175176+00:00",
+        "last_checked_at": "2026-10-26T22:51:50.968604+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
         "count": 0,
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-10-26T21:21:49.360460+00:00",
+        "last_considered_at": "2026-10-26T22:51:50.968604+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-26T21:21:49.360460+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -4546,9 +4546,9 @@
         "cached": false
       },
       "urn:li:ugcPost:7515750753525788672": {
-        "last_considered_at": "2026-10-26T21:06:49.360982+00:00",
+        "last_considered_at": "2026-10-26T22:51:50.968604+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-26T19:30:09.175176+00:00",
+        "last_checked_at": "2026-10-26T22:51:50.968604+00:00",
         "changed_at": "2026-10-14T02:55:03.779843+00:00",
         "count": 0,
         "cached": false
@@ -4610,7 +4610,7 @@
         "last_checked_at": "2026-10-26T20:51:48.882866+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-10-26T21:21:49.360460+00:00",
+        "last_considered_at": "2026-10-26T22:51:50.968604+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
@@ -4847,7 +4847,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-10-26T22:21:50.500141+00:00"
+      "checked_at": "2026-10-26T22:51:50.968604+00:00"
     }
   },
   "engagement": {
