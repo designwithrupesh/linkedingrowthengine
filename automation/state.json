@@ -2847,9 +2847,9 @@
     },
     "post:2026-10-28:0900": {
       "kind": "post",
-      "text": "Linear now lets a Loop start from an event in Slack or GitHub. That's the part of this update I'd spend time on as a designer.\n\nA pull request can trigger a draft QA plan. The useful follow-up question is where that draft appears, who reviews it and how the team can tell what ran automatically.\n\nI'd want the trigger, the result and the person responsible to be easy to find. Once work can start in another tool, that connection needs to stay visible.\n\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+      "text": "DHL gives the parent page an 'Overview' link inside the expanded branch.\n\nThat's the arrangement I prefer. The row can open the menu without also trying to take me to a page. The two actions get two clear places.\n\nDHL screenshot via Smashing Magazine:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
       "at": "2026-10-25T18:47:42.560182+00:00",
-      "status": "media-held",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-28T03:30:00+00:00",
@@ -2892,15 +2892,73 @@
             "file_name": "the-parent-page-gets-its-own-link.png",
             "size_bytes": 616079
           },
-          "media_stage": "schedule-existing-replacement",
-          "media_stage_status": "acknowledged",
-          "status": "inflight",
+          "media_stage": "verify-replacement-schedule",
+          "media_stage_status": "verified",
+          "status": "scheduled",
           "media_operation_id": "cc5f7ef166253a1f9b27ed887ee396bd116a314d5cc6fb7e9953c26c78c3dba2",
           "http_status": 200,
           "old_media_id": null,
-          "new_media_id": "6adee0a921af69534cd7687d"
+          "new_media_id": "6adee0a921af69534cd7687d",
+          "reason": "Existing post replacement verified"
         }
-      ]
+      ],
+      "media": {
+        "sha256": "2468d8e93d941002b7f3bf8fb585c463f97486aaa74ba02c55b8aa5ca3b046ce",
+        "mime_type": "image/png",
+        "title": "The parent page gets its own link",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "the-parent-page-gets-its-own-link.png",
+        "size_bytes": 616079,
+        "media_id": "6adee0a921af69534cd7687d",
+        "status": "ready"
+      },
+      "format": "image",
+      "asset_sha256": "2468d8e93d941002b7f3bf8fb585c463f97486aaa74ba02c55b8aa5ca3b046ce",
+      "asset_title": "The parent page gets its own link",
+      "asset_pages": 1,
+      "media_scheduled_for": "2026-10-28T03:30:00Z",
+      "asset_id": "dhl-overview-link-oct26",
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "dhl-overview-link-oct26",
+        "kind": "image",
+        "title": "The parent page gets its own link",
+        "caption": "DHL gives the parent page an 'Overview' link inside the expanded branch.\n\nThat's the arrangement I prefer. The row can open the menu without also trying to take me to a page. The two actions get two clear places.\n\nDHL screenshot via Smashing Magazine:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+        "file": "resources/linkedin/oct26/smashing-dhl.png",
+        "preview": "resources/linkedin/oct26/smashing-dhl.png",
+        "sha256": "2468d8e93d941002b7f3bf8fb585c463f97486aaa74ba02c55b8aa5ca3b046ce",
+        "page_count": 1,
+        "transcript": [
+          "DHL",
+          "Private Customers",
+          "Business Customer",
+          "Homepage",
+          "Shipping parcels",
+          "Delivery services",
+          "Overview",
+          "Shipment tracking",
+          "Parcel notification",
+          "Delivery notification",
+          "Live tracking",
+          "Delivery at home",
+          "Your Pickup Location",
+          "Customer Service"
+        ],
+        "review_status": "checked",
+        "design_brief": {
+          "reader_tension": "The visual choice needs a concrete explanation.",
+          "intended_feeling": "Recognize the decision in a real interface.",
+          "core_decision": "A parent page can get its own link inside an expanded navigation branch.",
+          "visual_idea": "The original DHL screenshot pair shows the expanded branch and its separate Overview destination.",
+          "story_arc": [
+            "See the original interface.",
+            "Read the specific opinion alongside it."
+          ],
+          "tradeoff": "The screenshot establishes visible details; it does not establish usability results or personal product use."
+        }
+      }
     },
     "post:2026-10-28:1800": {
       "kind": "post",
@@ -3579,12 +3637,14 @@
     },
     {
       "id": "6ade4ed721af69534cd33120",
-      "text": "Linear now lets a Loop start from an event in Slack or GitHub. That's the part of this update I'd spend time on as a designer.\n\nA pull request can trigger a draft QA plan. The useful follow-up question is where that draft appears, who reviews it and how the team can tell what ran automatically.\n\nI'd want the trigger, the result and the person responsible to be easy to find. Once work can start in another tool, that connection needs to stay visible.\n\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+      "text": "DHL gives the parent page an 'Overview' link inside the expanded branch.\n\nThat's the arrangement I prefer. The row can open the menu without also trying to take me to a page. The two actions get two clear places.\n\nDHL screenshot via Smashing Magazine:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
       "url": null,
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T03:30:00+00:00",
       "allocation_day": "2026-10-28",
-      "media_status": "replacement-in-progress"
+      "media_status": "scheduled",
+      "format": "image",
+      "asset_sha256": "2468d8e93d941002b7f3bf8fb585c463f97486aaa74ba02c55b8aa5ca3b046ce"
     },
     {
       "id": "6ade4ee221af69534cd331d2",
