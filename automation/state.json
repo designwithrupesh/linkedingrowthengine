@@ -3159,7 +3159,31 @@
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:10.896161+00:00",
         "scheduled_for": "2026-10-29T03:30:00+00:00"
-      }
+      },
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-26T05:10:46.935837+00:00",
+          "remote_id": "6ade4eeeed849b64de3b8770",
+          "text": "Keep the type decisions attached to the label.\n\nIn Penpot's Inspect view, 'Services' sits beside its font, weight and line-height. The next person can read the values behind this bit of the interface instead of measuring a picture.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+          "previous_text": "Penpot's article on declarative design puts CSS properties and layouts at the centre of the discussion.\n\nThat's a useful place to start when a design needs to behave across different widths. I'd want to be able to explain what should grow, what should wrap and what needs a limit.\n\nA tidy frame doesn't answer those questions on its own. The layout rules are part of the design, and I'd want them discussed while the work is still easy to change.\n\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+          "scheduled_for": "2026-10-29T03:30:00Z",
+          "media": {
+            "sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e",
+            "mime_type": "image/png",
+            "title": "The values behind Services",
+            "type": "image",
+            "page_count": 1,
+            "format": "image",
+            "file_name": "the-values-behind-services.png",
+            "size_bytes": 414585
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "ef65f66604eadbd04d6b40fc91a53a8ff5a682a12731d5e62f30a928d82ad7a2"
+        }
+      ]
     },
     "post:2026-10-26:1800": {
       "kind": "post",
