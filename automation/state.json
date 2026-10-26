@@ -4828,8 +4828,8 @@
       "phase": "maintenance",
       "started_at": "2026-10-26T15:21:00.763288+00:00",
       "deadline": "2026-10-26T20:21:00.763288+00:00",
-      "heartbeat_at": "2026-10-26T17:45:04.143278+00:00",
-      "cycles": 6,
+      "heartbeat_at": "2026-10-26T18:00:04.578631+00:00",
+      "cycles": 7,
       "sessions": 1,
       "recent_errors": []
     },
