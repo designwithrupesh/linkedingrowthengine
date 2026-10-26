@@ -4833,11 +4833,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-10-26T10:20:13.807435+00:00",
       "deadline": "2026-10-26T15:20:13.807435+00:00",
-      "heartbeat_at": "2026-10-26T11:20:15.527669+00:00",
-      "cycles": 4,
+      "heartbeat_at": "2026-10-26T11:30:00.244068+00:00",
+      "cycles": 5,
       "sessions": 0,
       "recent_errors": []
     },
