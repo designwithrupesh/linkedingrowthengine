@@ -151,9 +151,10 @@ def prepare_next_day_posts(runner):
             design_news.apply_source_context(context, source)
             draft_task += '\n' + design_news.CURRENT_DESIGN_RULES
         asset = None
-        if source is None and select_brief_format(policy, day, hour, brief) != 'text':
+        if select_brief_format(policy, day, hour, brief) != 'text':
             try:
-                asset = prepare_visual(runner, brief, day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
+                visual_brief = design_news.source_visual_brief(brief, source) if source is not None else brief
+                asset = prepare_visual(runner, visual_brief, day, hour, ROOT / 'testing' / 'visual-assets' / 'runtime')
             except apify_ai.ApifyBudgetError:
                 runner.model_paused = True
                 runner.state.setdefault('operational_status', {})['ai'] = 'budget-paused'

@@ -57,6 +57,42 @@ class VisualFormatTests(unittest.TestCase):
                 planning.select_brief_format({"visual_formats_by_weekday": rotation},
                                              "2026-10-12", 18)
 
+    def test_enforced_rotation_cannot_be_erased_by_legacy_text_briefs(self):
+        policy = {'enforce_visual_rotation': True}
+        monday = date(2026, 10, 12)
+        formats = []
+        for offset, kind in enumerate(planning.DEFAULT_WEEKDAY_FORMATS):
+            day = date.fromordinal(monday.toordinal() + offset)
+            formats.append(planning.select_brief_format(policy, day, 18, {'format': 'text'}))
+            self.assertEqual(formats[-1], kind)
+            self.assertEqual(planning.select_brief_format(policy, day, 9, {'format': 'text'}), 'text')
+        self.assertEqual(formats.count('carousel'), 3)
+        self.assertEqual(formats.count('freebie'), 2)
+        self.assertEqual(formats.count('image'), 2)
+        self.assertNotIn('text', formats)
+
+    def test_enforced_rotation_keeps_explicit_reviewed_formats_and_text_exceptions(self):
+        policy = {'enforce_visual_rotation': True}
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-12', 18,
+                                                     {'format': 'freebie', 'art_ref': 'reviewed'}), 'freebie')
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-12', 18,
+                                                     {'format': 'text', 'allow_text_exception': True}), 'text')
+        for override in ({'enforce_visual_rotation': 'true'},
+                         {'enforce_visual_rotation': True, 'visual_formats_by_weekday': ['text'] * 7}):
+            with self.subTest(override=override), self.assertRaises(VisualAssetError):
+                planning.select_brief_format(override, '2026-10-12', 18, {'format': 'text'})
+
+    def test_enforcement_activation_keeps_historical_text_and_applies_on_start_date(self):
+        policy = {'enforce_visual_rotation': True, 'visual_rotation_start_date': '2026-10-26'}
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-25', 18, {'format': 'text'}), 'text')
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-26', 18, {'format': 'text'}), 'image')
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-27', 18, {'format': 'text'}), 'carousel')
+        self.assertEqual(planning.select_brief_format(policy, '2026-10-25', 18, {'format': 'freebie'}), 'freebie')
+        for invalid in ('2026-10-32', '20261026', None, 26):
+            with self.subTest(activation=invalid), self.assertRaises(VisualAssetError):
+                planning.select_brief_format({**policy, 'visual_rotation_start_date': invalid},
+                                             '2026-10-26', 18, {'format': 'text'})
+
     def test_invalid_dates_hours_and_briefs_fail_before_selection(self):
         for day in ("2026-10-32", "20261012", 12):
             with self.subTest(day=day), self.assertRaises(VisualAssetError):
@@ -225,8 +261,116 @@ class VisualPreparationTests(unittest.TestCase):
         complete.assert_called_once()
         messages = complete.call_args.args[4]
         self.assertEqual(messages[0]["content"].count(prompt_rules()), 1)
+        self.assertIn('VISUAL CAPTION', messages[0]['content'])
+        self.assertIn('Caption the design you are specifying', messages[0]['content'])
         self.assertNotIn("BAD_OLD_COPY", json.dumps(messages))
         self.assertEqual(complete.call_args.kwargs["kind"], "generic")
+
+    def source(self):
+        return {'publisher': 'Linear', 'source_kind': 'product_update',
+                'title': 'Stacked pull requests',
+                'excerpt': 'Related changes stay connected during review through explicit dependencies.',
+                'url': 'https://linear.app/changelog/2026-10-08-stacked-pull-requests',
+                'published_at': '2026-10-08T15:44:14+00:00'}
+
+    def source_spec(self):
+        spec = self.generated()
+        spec.update(title='Review related changes',
+                    subtitle='Conceptual illustration: stacked pull requests',
+                    caption="I'd keep the dependency visible beside the change being reviewed.")
+        spec['slides'] = [{'title': 'Stacked pull requests',
+                           'body': ['Related changes stay connected during review.'],
+                           'layout': 'diagram', 'visual': {'nodes': [
+                               {'label': 'Change', 'title': 'Related work', 'detail': 'Keep the dependency explicit.'},
+                               {'label': 'Review', 'title': 'Connected changes', 'detail': 'Show what the review depends on.'},
+                           ]}}]
+        return spec
+
+    def test_current_source_visual_is_a_labeled_specific_diagram_with_exact_citation(self):
+        brief = {'format': 'image', 'topic': 'Review dependencies', 'current_design_source': self.source()}
+        original = deepcopy(brief)
+        with patch('automation.twin.model_connection', return_value=('endpoint', 'token', 'model', False)), \
+             self.generation(self.source_spec()) as complete:
+            asset = planning.prepare_visual(self.runner, brief, '2026-10-12', 18, self.temp.name)
+        self.assertEqual(asset['kind'], 'image')
+        self.assertIn(self.source()['url'], asset['caption'])
+        self.assertEqual(asset['spec']['slides'][0]['layout'], 'diagram')
+        self.assertIn('Conceptual illustration', asset['spec']['subtitle'])
+        context = json.loads(complete.call_args.args[4][1]['content'].split('\n', 1)[1])
+        self.assertEqual(context['current_design_source']['published_at'], self.source()['published_at'])
+        self.assertTrue(context['current_design_source']['data_only'])
+        self.assertEqual(context['attachment']['kind'], 'image')
+        self.assertIn('not a screenshot', complete.call_args.args[4][0]['content'])
+        self.assertIn('VISUAL CAPTION', complete.call_args.args[4][0]['content'])
+        self.assertNotIn('Choose a relevant appointment', complete.call_args.args[4][0]['content'])
+        system = complete.call_args.args[4][0]['content']
+        for seed in ('calendar', 'appointment', 'booking', 'Book this time', 'View calendar'):
+            self.assertNotIn(seed.casefold(), system.casefold())
+        encoded = system.split('Encoding skeleton only, not copy to publish: ', 1)[1]
+        skeleton, _ = json.JSONDecoder().raw_decode(encoded)
+        schematic = json.loads(skeleton['text'])
+        self.assertEqual(schematic['title'], 'Source-grounded title')
+        self.assertEqual(schematic['caption'], 'Source-grounded caption')
+        self.assertEqual(schematic['subtitle'], 'Conceptual illustration')
+        self.assertEqual(schematic['slides'], [])
+        self.assertEqual(brief, original)
+
+    def test_source_visual_holds_unrelated_content_or_unsupported_numbers_without_text_fallback(self):
+        unrelated = self.source_spec()
+        unrelated.update(title='Choose an appointment', subtitle='Conceptual illustration: booking')
+        unrelated['slides'] = [{**slide, 'title': 'Choose an appointment',
+                                'body': ['The calendar opens first.'], 'visual': {'nodes': [
+                                    {'label': 'Time', 'title': 'Choose a time', 'detail': 'Select Tuesday.'},
+                                    {'label': 'Book', 'title': 'Confirm the booking', 'detail': 'Read the calendar.'},
+                                ]}} for slide in unrelated['slides']]
+        invented = self.source_spec()
+        invented['slides'][0]['body'] = ['Related changes make review 37% faster.']
+        for spec in (unrelated, invented):
+            with self.subTest(title=spec['title']), \
+                 patch('automation.twin.model_connection', return_value=('endpoint', 'token', 'model', False)), \
+                 self.generation(spec), self.assertRaises(VisualAssetError):
+                planning.prepare_visual(self.runner, {'format': 'image', 'current_design_source': self.source()},
+                                        '2026-10-12', 18, self.temp.name)
+        self.render.assert_not_called()
+
+    def test_source_carousel_keeps_pdf_format_and_source_specific_content_on_each_page(self):
+        spec = self.generated('carousel')
+        spec.update(title='Review related changes',
+                    subtitle='Conceptual illustration: stacked pull requests',
+                    caption='The dependency belongs beside the change being reviewed.')
+        spec['slides'] = [
+            {'title': 'Two ways to describe related work', 'body': ['Keep connected changes visible.'],
+             'layout': 'comparison', 'visual': {'panels': [
+                 {'label': 'Separate', 'title': 'Changes alone', 'body': 'The review does not show a dependency.'},
+                 {'label': 'Connected', 'title': 'Related changes', 'body': 'The dependency is explicit.'}]}},
+            self.source_spec()['slides'][0],
+            {'title': 'What connects the review', 'body': ['Name the explicit dependency.'],
+             'layout': 'matrix', 'visual': {'matrix': {'columns': ['Work', 'Review'],
+                                                      'rows': [['Related changes', 'Explicit dependencies']]}}},
+            {'title': 'A question for the review', 'body': ['Keep related work in view.'],
+             'layout': 'worksheet', 'visual': {'fields': [{'label': 'Dependency',
+                                                          'hint': 'Which related change affects this review?'}]}},
+        ]
+        with patch('automation.twin.model_connection', return_value=('endpoint', 'token', 'model', False)), \
+             self.generation(spec):
+            asset = planning.prepare_visual(self.runner, {'format': 'carousel', 'current_design_source': self.source()},
+                                            '2026-10-12', 18, self.temp.name)
+        self.assertEqual(asset['kind'], 'carousel')
+        self.assertEqual(len(asset['spec']['slides']), 4)
+        self.assertIn(self.source()['url'], asset['caption'])
+        unrelated_page = deepcopy(spec)
+        unrelated_page['slides'][3].update(body=['Choose an appointment.'], visual={'fields': [
+            {'label': 'Time', 'hint': 'Choose Tuesday.'}]})
+        with patch('automation.twin.model_connection', return_value=('endpoint', 'token', 'model', False)), \
+             self.generation(unrelated_page), self.assertRaisesRegex(VisualAssetError, 'unrelated content page'):
+            planning.prepare_visual(self.runner, {'format': 'carousel', 'current_design_source': self.source()},
+                                    '2026-10-12', 18, self.temp.name)
+
+    def test_source_cannot_be_attached_to_an_unrelated_reviewed_catalog_asset(self):
+        with patch('automation.twin.complete') as complete, self.assertRaises(VisualAssetError):
+            self.prepare(current_design_source=self.source())
+        complete.assert_not_called()
+        self.render.assert_not_called()
 
     def test_generation_prompt_has_a_valid_encoded_json_skeleton(self):
         with patch("automation.twin.model_connection", return_value=("endpoint", "token", "model", False)), \

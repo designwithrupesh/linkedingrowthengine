@@ -147,6 +147,26 @@ class VoiceTests(unittest.TestCase):
         self.assertIn('explain the features back to their author', prompt)
         self.assertIn('without actual evidence in the supplied context', prompt)
 
+    def test_generic_source_openers_are_rejected_without_banning_technical_reasoning(self):
+        for text in ('This interface caught my attention because of the label placement.',
+                     'The sweet spot is balancing speed and usability.'):
+            with self.subTest(text=text):
+                self.assertIn('Text repeats a stock advice template', voice.violations(text))
+        for text in ('The study measured cognitive load while participants used the two menus.',
+                     "I'd ask which field is required before changing the form.",
+                     'The expanded row should keep the original label visible.'):
+            with self.subTest(text=text):
+                self.assertEqual(voice.violations(text), ())
+
+    def test_media_and_present_opinion_instructions_do_not_teach_a_new_caption_template(self):
+        prompt = voice.prompt_rules()
+        self.assertIn('State a present design judgement directly', prompt)
+        self.assertIn('do not repeat hypothetical advice across posts', prompt)
+        self.assertIn('let the visual carry the example', prompt)
+        self.assertIn('Do not narrate panels', prompt)
+        self.assertIn('Technical terms are welcome', prompt)
+        self.assertIn('Do not claim reduced cognitive load from a screenshot', prompt)
+
     def test_prompt_permits_a_point_of_view_without_mandatory_advice_or_a_question(self):
         prompt = voice.prompt_rules()
         self.assertIn('A specific reaction or design judgement is enough', prompt)

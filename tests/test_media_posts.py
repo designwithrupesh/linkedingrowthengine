@@ -447,6 +447,44 @@ class ExistingMediaReplacementTests(unittest.TestCase):
         self.assertEqual(self.put.call_count, 2)
         self.assertNotIn('json', self.put.call_args_list[0].kwargs)
 
+    def test_text_post_gets_media_on_same_id_without_create_delete_or_new_quota(self):
+        caption = 'The label and icon should open the same view. The edit action belongs inside.'
+        self.action.pop('media')
+        counts = copy.deepcopy(self.runner.state['days'])
+        self.get.side_effect = [response(self.group('draft')),
+                                response(self.group('draft', caption=caption)),
+                                response(self.group('draft', new=True, caption=caption)),
+                                response(self.group('scheduled', new=True, caption=caption))]
+        result = self.run_replacement(caption=caption)
+        self.assertEqual(result['status'], 'scheduled')
+        self.assertIsNone(result['old_media_id'])
+        self.assertEqual(self.action['remote_id'], GROUP_ID)
+        self.assertEqual(self.action['text'], caption)
+        self.assertEqual(self.action['media']['media_id'], MEDIA_ID)
+        self.assertEqual(self.runner.state['days'], counts)
+        self.assertEqual(len(self.runner.state['posts']), 1)
+        self.delete.assert_not_called()
+        self.assertFalse(any('/create-post' in call.args[0] for call in self.post.call_args_list))
+
+    def test_unready_attachment_on_former_text_post_holds_without_scheduling(self):
+        unready = self.group('draft', new=True)
+        unready['media'][0]['status'] = 'uploading'
+        self.get.side_effect = [response(self.group('scheduled')),
+                                response(self.group('draft')), response(unready)]
+        result = self.run_replacement()
+        self.assertEqual(result['status'], 'media-held')
+        self.assertEqual(self.put.call_count, 2)  # Pause and signed upload only.
+        self.delete.assert_not_called()
+        self.assertEqual(self.runner.state['days']['2026-10-13']['post'], 1)
+
+    def test_multiple_existing_attachments_are_not_treated_as_empty_text_post(self):
+        group = self.group('scheduled', old=True, new=True)
+        self.get.side_effect = [response(group)]
+        self.assertEqual(self.run_replacement()['status'], 'media-held')
+        self.post.assert_not_called()
+        self.put.assert_not_called()
+        self.delete.assert_not_called()
+
     def test_old_media_delete_follows_verified_new_ready_inventory(self):
         def delete_after_inventory(*args, **kwargs):
             self.assertEqual(self.get.call_count, 3)

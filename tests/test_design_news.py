@@ -285,17 +285,36 @@ class DesignNewsTests(unittest.TestCase):
         self.assertFalse(runner.state['actions'])
         self.assertIn('post:2026-10-18:0900', runner.state['post_queue']['attempts'])
 
-    def test_next_day_source_slot_uses_text_and_cites_without_generic_visual_fallback(self):
+    def test_next_day_source_slot_keeps_selected_image_and_passes_source_into_visual(self):
         runner = self.runner()
         self.cache(runner, [source()])
         self.plan(day='2026-10-19', format='image')
-        with patch('automation.post_queue.ROOT', self.path), patch('automation.post_queue.prepare_visual') as visual:
+        asset = {'kind': 'image', 'asset_id': 'source-specific-diagram', 'caption': TEXT + '\n\nSource: ' + source()['url']}
+        def record(key, kind, text, **kwargs):
+            runner.state['actions'][key] = {'kind': kind, 'text': text, 'format': kwargs['media_asset']['kind']}
+        with patch('automation.post_queue.ROOT', self.path), \
+             patch('automation.post_queue.prepare_visual', return_value=asset) as visual, \
+             patch.object(runner, 'write', side_effect=record) as write:
             self.assertEqual(prepare_next_day_posts(runner), ['post:2026-10-19:0900'])
-        visual.assert_not_called()
-        task, context, _ = runner.generate.call_args.args
-        self.assertIn(design_news.CURRENT_DESIGN_RULES, task)
-        self.assertEqual(context['current_design_source']['url'], source()['url'])
+        visual.assert_called_once()
+        supplied = visual.call_args.args[1]
+        self.assertEqual(supplied['format'], 'image')
+        self.assertEqual(supplied['current_design_source']['url'], source()['url'])
+        self.assertEqual(supplied['current_design_source']['published_at'], source()['published_at'])
+        self.assertEqual(write.call_args.kwargs['media_asset'], asset)
+        runner.generate.assert_not_called()
         self.assertIn(source()['url'], runner.state['actions']['post:2026-10-19:0900']['text'])
+
+    def test_source_visual_decline_holds_slot_without_generating_a_text_replacement(self):
+        runner = self.runner()
+        self.cache(runner, [source()])
+        self.plan(day='2026-10-19', format='carousel')
+        with patch('automation.post_queue.ROOT', self.path), \
+             patch('automation.post_queue.prepare_visual', return_value=None):
+            self.assertEqual(prepare_next_day_posts(runner), [])
+        runner.generate.assert_not_called()
+        self.assertFalse(runner.state['actions'])
+        self.assertIn('post:2026-10-19:0900', runner.state['post_queue']['attempts'])
 
     def test_next_day_unavailable_source_skips_without_consuming_post_quota(self):
         runner = self.runner()

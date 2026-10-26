@@ -4,6 +4,12 @@ This application connects the imported 12-skill bundle to an autonomous GitHub A
 
 ## Autopilot operation
 
+The reviewed [October visual batch](../resources/linkedin/oct26/README.md) binds exact screenshots, original carousels and fillable PDFs to their captions through [art-directed-content.json](../automation/art-directed-content.json). Upcoming reviewed slots use explicit `art_ref` values and retain those exact media bytes. They do not spend model credit or rebuild the files with the generic renderer.
+
+With `enforce_visual_rotation` enabled, an old evening `format: text` entry follows the seven-day visual mix unless the brief explicitly allows a text exception. A current-design source no longer bypasses the selected media format. A missing or rejected asset stays held instead of silently becoming prose. Replacing a future text post attaches and verifies its media on the same post ID, preserving its publication time and daily quota.
+
+Writing instructions prioritize the owner's brief over imported style recipes. They ask for a direct, source-supported judgement and a short caption that complements the actual visual. Repetition history is not a factual source or a style template. Source screenshots and original proposals stay clearly distinguished; no instruction claims human authorship or a guaranteed absence of detectable AI patterns.
+
 Scheduled runs and the `autopilot` dispatch use [the supervisor](../automation/supervisor.py). Each worker has a 300-minute budget inside the 360-minute workflow limit. It runs normal maintenance every 15 minutes, enters the existing five-minute session at 17:00 IST and retains the 22:00 public-action cutoff. After a normal worker exit, [the handoff](../automation/handoff.py) dispatches the next worker using the current job's GitHub Actions token. The existing workflow concurrency group keeps writers serialized. Cron remains a backup; after the first worker starts, a successor does not depend on another cron event. Checkout and model startup can still create short handoff gaps.
 
 The repository is public and uses standard GitHub-hosted Linux runners; no external scheduler subscription or new persistent credential is added. `actions: write` permits the fixed same-repository workflow dispatch. Pausing `TWIN_LIVE`, disabling the workflow, or cancelling a worker prevents its automatic handoff. Startup/checkpoint failure does not create a tight restart loop. GitHub service availability and permissions still matter; an unacknowledged handoff is an error, not proof of a running successor.

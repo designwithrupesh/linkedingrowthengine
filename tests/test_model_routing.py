@@ -363,7 +363,9 @@ class ModelRoutingTests(unittest.TestCase):
         self.assertEqual(complete.call_count, 2)
         editor = complete.call_args.args[-1][0]['content']
         self.assertIn('without a supplied source note are not facts', editor)
-        self.assertIn('conditional possibility', editor)
+        self.assertIn('Remove those claims', editor)
+        self.assertIn('supported present opinion', editor)
+        self.assertIn('Do not preserve invented past events', editor)
 
     @patch('automation.twin.complete')
     def test_editor_cannot_preserve_or_add_a_personal_observation(self, complete):
@@ -716,3 +718,103 @@ class ModelRoutingTests(unittest.TestCase):
         self.assertTrue(twin.validate_model_output({'text': 'Use the CSS `random()` function for a supplied detail.',
                                                   'skip': False}, 'generic')['skip'])
         bridge.assert_called_once()
+
+    @patch('automation.apify_ai.complete')
+    def test_source_post_uses_direct_judgement_without_imported_style_recipes(self, bridge):
+        source = {'publisher': 'Notion', 'source_kind': 'product_release',
+                  'title': 'Property access controls', 'published_at': '2026-10-13T00:00:00Z',
+                  'url': 'https://www.notion.com/releases/2026-10-13',
+                  'excerpt': 'The supplied screenshot places Property access beside Edit property. Its label says Alpha.'}
+        context = {'topic': 'A column menu decision', 'current_design_source': source,
+                   'recent_posts': ["I'd ask who owns the decision.", "I'd want to see the next step."],
+                   'content_brief': {'format': 'text'}, 'private_detail': 'must-stay-context-only'}
+        direct = ('Property access belongs beside Edit property. Both decisions concern the same column. '
+                  'The Alpha label also matters; it marks a limit to what this screenshot establishes.')
+        bridge.return_value = self.native_text(direct)
+        task = twin.skills('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-humanizer')
+        task += '\n' + twin.design_news.CURRENT_DESIGN_RULES
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+            result = twin.model(task, context, POLICY)
+        self.assertEqual(result['text'], direct)
+        bridge.assert_called_once()
+        system, user = bridge.call_args.args[1]['messages']
+        self.assertEqual(json.loads(user['content'].split('\n', 1)[1]), context)
+        self.assertIn(twin.voice.prompt_rules(), system['content'])
+        self.assertIn(twin.design_news.CURRENT_DESIGN_RULES, system['content'])
+        self.assertIn('present design judgement directly', system['content'])
+        self.assertIn('not as wording or a conditional-advice formula to imitate', system['content'])
+        self.assertNotIn('Give a conditional suggestion', system['content'])
+        self.assertNotIn('one moment of real vulnerability', system['content'])
+        self.assertNotIn('one em dash, one natural triad', system['content'])
+        self.assertNotIn('must-stay-context-only', system['content'])
+        for name in ('linkedin-content-planner', 'linkedin-post-writer', 'linkedin-humanizer'):
+            self.assertIn('Skill: ' + name, system['content'])
+
+    @patch('automation.apify_ai.complete')
+    def test_caption_route_preserves_actual_media_contents_and_does_not_recap_document(self, bridge):
+        caption = ('The ownership field deserves its own space in this brief. A design decision can look agreed '
+                   'while nobody has responsibility for taking it forward. That is the part to settle before adding more deliverables.')
+        bridge.return_value = self.native_text(caption)
+        for kind in ('image', 'carousel', 'freebie'):
+            with self.subTest(kind=kind):
+                context = {'topic': 'A design mandate', 'content_brief': {'format': kind},
+                           'attachment': {'kind': kind, 'visual_status': 'reviewed_asset',
+                                          'title': 'Agree the design mandate',
+                                          'spec': {'fields': ['Decision', 'Owner', 'Open question'],
+                                                   'pages': ['An example mandate', 'A blank working brief']}},
+                           'download_url': 'https://example.com/working-brief.pdf'}
+                bridge.reset_mock()
+                with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+                    result = twin.model(twin.skills('linkedin-post-writer'), context, POLICY)
+                self.assertEqual(result['text'], caption)
+                system, user = bridge.call_args.args[1]['messages']
+                self.assertEqual(json.loads(user['content'].split('\n', 1)[1]), context)
+                self.assertIn('VISUAL CAPTION', system['content'])
+                self.assertIn('let the visual carry the example', system['content'])
+                self.assertIn('do not walk through the slides', system['content'])
+                self.assertIn('supplied visible details of the reviewed asset', system['content'])
+                self.assertNotIn('specifying in this response', system['content'])
+                if kind == 'freebie':
+                    self.assertIn('Use only a supplied download URL', system['content'])
+                bridge.assert_called_once()
+
+    @patch('automation.apify_ai.complete')
+    def test_planned_and_missing_visual_metadata_never_claim_an_attachment_exists(self, bridge):
+        bridge.return_value = self.native_text(POST_TEXT)
+        for status in ('planned_conceptual_illustration', None):
+            with self.subTest(status=status):
+                context = {'topic': 'A booking decision', 'content_brief': {'format': 'image'}}
+                if status:
+                    context['attachment'] = {'kind': 'image', 'visual_status': status}
+                with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+                    twin.model(twin.skills('linkedin-post-writer'), context, POLICY)
+                system, user = bridge.call_args.args[1]['messages']
+                self.assertEqual(json.loads(user['content'].split('\n', 1)[1]), context)
+                if status:
+                    self.assertIn('Every visual detail mentioned must actually appear in that specification', system['content'])
+                else:
+                    self.assertIn('requested format alone is not evidence of an attachment', system['content'])
+                self.assertNotIn('supplied visible details of the reviewed asset', system['content'])
+
+    @patch('automation.apify_ai.complete')
+    def test_caption_edit_retains_only_draft_facts_and_does_not_expand_a_tradeoff(self, bridge):
+        source = 'The owner field makes this mandate robust. https://example.com/brief.pdf'
+        caption = ('The owner field needs its own space in the brief. Otherwise the decision can appear settled '
+                   'without anyone taking responsibility for it. https://example.com/brief.pdf')
+        bridge.side_effect = [self.native_text(source), self.native_text(caption)]
+        context = {'topic': 'A mandate', 'content_brief': {'format': 'carousel'},
+                   'attachment': {'kind': 'carousel', 'visual_status': 'planned_conceptual_illustration',
+                                  'private_unneeded_detail': 'not-an-editor-source'},
+                   'current_design_source': {'title': 'must-not-enter-source-only-edit', 'excerpt': 'not-an-editor-source'}}
+        with patch.dict(os.environ, {'APIFY_TOKEN': '<test-credential>'}, clear=True):
+            result = twin.model(twin.skills('linkedin-post-writer'), context, POLICY)
+        self.assertEqual(result['text'], caption)
+        self.assertEqual(bridge.call_count, 2)
+        messages = bridge.call_args.args[1]['messages']
+        self.assertEqual(json.loads(messages[1]['content'])['draft'], source)
+        self.assertIn('draft is the entire factual source', messages[0]['content'])
+        self.assertIn('do not add unseen panels', messages[0]['content'])
+        self.assertNotIn('Explain its existing design trade-off more clearly', messages[0]['content'])
+        self.assertNotIn('not-an-editor-source', json.dumps(messages))
+        self.assertNotIn('must-not-enter-source-only-edit', json.dumps(messages))
+        self.assertNotIn('specifying in this response', messages[0]['content'])

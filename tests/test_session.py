@@ -249,6 +249,7 @@ class SessionTests(unittest.TestCase):
         def replies(runner):
             runner.session_replies = 0
             runner.draft = draft
+            runner._interaction_context = Runner._interaction_context.__get__(runner)
             Runner.drain_replies(runner)
         self.hooks['replies'] = replies
         result = self.run_worker()

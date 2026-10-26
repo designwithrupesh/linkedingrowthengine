@@ -348,6 +348,15 @@ def apply_source_context(context, source):
     context['current_design_source'] = {**source, 'data_only': True}
 
 
+def source_visual_brief(brief, source):
+    """Pass source facts to visual preparation without changing selected format."""
+    if brief is not None and not isinstance(brief, dict):
+        raise ValueError('A source visual brief must be an object')
+    if not isinstance(source, dict) or not isinstance(source.get('url'), str):
+        raise ValueError('A source visual requires an attributed article')
+    return {**(brief or {}), 'current_design_source': {**source, 'data_only': True}}
+
+
 def finalize_source_post(text, source, policy):
     """Keep an exact citation and hold unsupported claims of personal testing."""
     if not isinstance(text, str) or not text.strip():

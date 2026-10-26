@@ -82,12 +82,14 @@
     "image",
     "carousel",
     "freebie",
-    "text"
+    "carousel"
   ],
   "visual_direction": "Start with the reader and the human situation. Choose the emotional connection, story and communication goal before choosing a layout. Use composition, material, typography and image to explain the idea; avoid generic stacked text and image templates. Review complete PDFs and images before scheduling.",
   "current_design_hours": [
     9
   ],
-  "voice_direction": "Direct, conversational designer POV. React to a real visible choice or supplied argument; contractions and a brief specific reaction are welcome. Avoid textbook explanations, repeated hypothetical examples, forced tests, manufactured disagreement, a lesson for founders in every post, and automatic questions. Do not imitate chat typos or claim hands-on product use without supplied evidence. Current product claims need an exact dated source; official visuals must be attributed.",
-  "posting_buffer_days": 3
+  "voice_direction": "A specific present design judgement in ordinary words. Use the actual visible label, control, layout rule or published argument as evidence. Keep image and PDF captions brief and complementary to the visual. Avoid textbook summaries, repeated conditional advice, stock praise, manufactured disagreement, questions for engagement and generic benefits. Do not imitate chat typos, invent career anecdotes or claim hands-on use. Preserve exact dated sources and distinguish original design proposals from actual product screenshots.",
+  "posting_buffer_days": 3,
+  "enforce_visual_rotation": true,
+  "visual_rotation_start_date": "2026-10-26"
 }

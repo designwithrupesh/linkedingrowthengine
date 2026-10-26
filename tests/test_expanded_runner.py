@@ -230,6 +230,91 @@ class ExpandedRunnerTests(unittest.TestCase):
         restarted.generate.assert_not_called()
         self.assertEqual(reply_monitor.pending_replies(restarted.state), [])
 
+    def test_public_comment_receives_only_five_recent_sent_comments_without_changing_post(self):
+        runner = self.runner(now=clock(17))
+        # Insert newest first so timestamp order, rather than dictionary order,
+        # decides which published messages the next comment must avoid.
+        previous = ['Published comment ' + str(index) + ('x' * 400 if index == 6 else '')
+                    for index in range(7)]
+        for index in reversed(range(7)):
+            runner.state['actions']['prior-comment:' + str(index)] = {
+                'kind': 'comment', 'status': 'sent', 'text': previous[index],
+                'at': clock(9, index, day=9).isoformat(), 'remote_id': 'comment-' + str(index)}
+        for kind, status, text in (
+                ('reply', 'sent', 'A separate published reply.'),
+                ('reaction', 'sent', 'LIKE'),
+                ('comment', 'unknown-needs-reconciliation', 'An uncertain comment.'),
+                ('comment', 'inflight', 'An in-flight comment.'),
+                ('comment', 'dry-run', 'An unpublished preview.')):
+            runner.state['actions'][kind + ':' + status] = {
+                'kind': kind, 'status': status, 'text': text, 'at': clock(16, day=9).isoformat()}
+        target = public_post()
+        original = copy.deepcopy(target)
+        with patch('automation.twin.engagement.candidate_targets', return_value=[target]):
+            runner.public_engagement(self.reader())
+        context = runner.generate.call_args.args[1]
+        self.assertEqual(context['recent_comments'], [text[:350] for text in previous[2:]])
+        self.assertNotIn('recent_replies', context)
+        self.assertIn('only to avoid repeating', context['recent_writing_use'])
+        self.assertIn('not copy', context['recent_writing_use'])
+        self.assertIn('factual source', context['recent_writing_use'])
+        self.assertIs(context['post'], target)
+        self.assertEqual(context['post'], original)
+        self.send.assert_not_called()
+
+    def test_queued_reply_receives_only_sent_reply_history_with_exact_parent_context(self):
+        runner = self.runner()
+        for kind, status, text in (
+                ('reply', 'sent', 'The previously published answer.'),
+                ('comment', 'sent', 'A separate published comment.'),
+                ('reply', 'unknown-needs-reconciliation', 'An uncertain answer.'),
+                ('reply', 'inflight', 'An answer still in flight.')):
+            runner.state['actions']['prior:' + kind + ':' + status] = {
+                'kind': kind, 'status': status, 'text': text,
+                'at': clock(9, day=9).isoformat(), 'remote_id': 'prior-message'}
+        own = owned_post()
+        rows = comments()
+        rows[0]['replies'] = [{**comments()[0], 'comment_id': '200',
+                              'text': 'What changes when the task has two steps?'}]
+        reply_monitor.queue_comments(runner.state, own, rows, runner.policy['profile_url'], runner.now)
+        expected = copy.deepcopy(reply_monitor.pending_replies(runner.state, now=runner.now))
+        runner.drain_replies()
+        contexts = [call.args[1] for call in runner.generate.call_args_list]
+        self.assertEqual(len(contexts), 2)
+        for context, item in zip(contexts, expected):
+            self.assertEqual(context['recent_replies'], ['The previously published answer.'])
+            self.assertNotIn('recent_comments', context)
+            self.assertEqual(context['post'], item['post_text'])
+            self.assertEqual(context['comment'], item['comment'])
+        self.assertEqual(contexts[1]['comment']['parent_text'], rows[0]['text'])
+        self.send.assert_not_called()
+
+    def test_legacy_interactions_keep_comment_and_reply_history_separate(self):
+        runner = self.runner(now=clock(17))
+        runner.policy.pop('max_public_interactions_per_day')
+        target = public_post()
+        runner.policy['target_post_urls'] = [target['url']]
+        own = owned_post()
+        runner.state['posts'].append(own)
+        for kind in ('comment', 'reply'):
+            runner.state['actions']['prior:' + kind] = {
+                'kind': kind, 'status': 'sent', 'text': 'A published ' + kind + '.',
+                'at': clock(9, day=9).isoformat(), 'remote_id': kind + '-receipt'}
+        row = {**comments()[0], 'posted_at': {'timestamp': runner.now.timestamp() * 1000}}
+        reader = self.reader([row])
+        reader.fetch_post.return_value = target
+        runner._legacy_interactions(reader)
+        comment_context, reply_context = [call.args[1] for call in runner.generate.call_args_list]
+        self.assertEqual(comment_context['recent_comments'], ['A published comment.'])
+        self.assertNotIn('recent_replies', comment_context)
+        self.assertEqual(comment_context['post'], target)
+        self.assertEqual(reply_context['recent_replies'], ['A published reply.'])
+        self.assertNotIn('recent_comments', reply_context)
+        self.assertEqual(reply_context['post'], own['text'])
+        self.assertEqual(reply_context['comment']['text'], row['text'])
+        self.assertEqual(reply_context['comment']['parent_text'], row['text'])
+        self.send.assert_not_called()
+
     def test_unknown_reaction_quarantines_explicit_target_before_actor_read(self):
         runner = self.runner(now=clock(17))
         post = public_post()

@@ -257,63 +257,75 @@
     {
       "date": "2026-10-26",
       "hour": 18,
-      "topic": "Explore the moment when a team needs design leadership rather than more output. Discuss the recurring decisions that point to that need.",
-      "format": "text",
-      "editorial_format": "founder-decision"
+      "topic": "When the icon and label disagree",
+      "format": "carousel",
+      "editorial_format": "specific-visual-commentary",
+      "art_ref": "when-icon-label-disagree",
+      "source_mode": "reviewed_artifact"
     },
     {
       "date": "2026-10-27",
       "hour": 9,
-      "topic": "Discuss a verified recent design article or product update, focusing on a new tool interaction and the effort of learning it.",
-      "format": "text",
-      "editorial_format": "design-pov",
-      "source_mode": "current_design"
+      "topic": "Equal columns, explicit rules",
+      "format": "image",
+      "editorial_format": "specific-visual-commentary",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "penpot-grid-rules-oct26"
     },
     {
       "date": "2026-10-27",
       "hour": 18,
-      "topic": "Invite teams facing repeated redesigns to discuss the decisions and assumptions behind the work. Frame consulting around clarifying the problem.",
-      "format": "text",
-      "cta": "If your team keeps returning to the same redesign, I would welcome a conversation about the decision and assumptions behind it.",
-      "editorial_format": "consulting-invitation"
+      "topic": "Redesign intake sheet",
+      "format": "freebie",
+      "editorial_format": "consulting-invitation",
+      "art_ref": "redesign-intake-sheet-oct26",
+      "source_mode": "reviewed_artifact",
+      "cta": "If your team is stuck on a redesign, I'm open to a consulting conversation."
     },
     {
       "date": "2026-10-28",
       "hour": 9,
-      "topic": "Discuss a verified recent design article or product update, focusing on a concrete visual or typography decision.",
-      "format": "text",
-      "editorial_format": "design-pov",
-      "source_mode": "current_design"
+      "topic": "The parent page gets its own link",
+      "format": "image",
+      "editorial_format": "specific-visual-commentary",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "dhl-overview-link-oct26"
     },
     {
       "date": "2026-10-28",
       "hour": 18,
-      "topic": "Describe how early engineering input can improve design decisions while preserving room to explore. Ask where technical constraints should enter the process.",
-      "format": "text",
-      "editorial_format": "discussion"
+      "topic": "When automation starts elsewhere",
+      "format": "carousel",
+      "editorial_format": "specific-visual-commentary",
+      "art_ref": "loop-receipt-carousel",
+      "source_mode": "reviewed_artifact"
     },
     {
       "date": "2026-10-29",
       "hour": 9,
-      "topic": "Discuss a verified recent design article or product update, focusing on layout behaviour or implementation details.",
-      "format": "text",
-      "editorial_format": "design-pov",
-      "source_mode": "current_design"
+      "topic": "The values behind Services",
+      "format": "image",
+      "editorial_format": "specific-visual-commentary",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "penpot-type-inspect-oct26"
     },
     {
       "date": "2026-10-29",
       "hour": 18,
-      "topic": "Offer a specific design opinion about a visible product decision without adding a consulting pitch.",
-      "format": "text",
-      "editorial_format": "design-pov"
+      "topic": "First design hire scope sheet",
+      "format": "freebie",
+      "editorial_format": "specific-visual-commentary",
+      "art_ref": "first-design-hire-scope-oct26",
+      "source_mode": "reviewed_artifact"
     },
     {
       "date": "2026-10-30",
       "hour": 9,
-      "topic": "Discuss a verified recent design article or product update, focusing on a design claim that the source actually supports.",
-      "format": "text",
-      "editorial_format": "design-pov",
-      "source_mode": "current_design"
+      "topic": "The confirmation stays beside the request",
+      "format": "image",
+      "editorial_format": "specific-visual-commentary",
+      "source_mode": "reviewed_artifact",
+      "art_ref": "linear-loop-confirmation-oct26"
     },
     {
       "date": "2026-10-30",

@@ -77,6 +77,7 @@ _RECYCLED_ADVICE = re.compile(
     r"|^\s*what if\b[^?\n]{1,320}\?\s*i['’]d (?:test|watch|want to see|encourage)\b"
     r'|\b(?:the bigger picture|intuitive and efficient)\b'
     r'|\b(?:a smart way to|a smart move for|without overwhelming the users?)\b'
+    r'|\b(?:caught my attention|sweet spot)\b'
     r'|\bthat balance between [^.?!]{1,90} helps users\b'
     r'|^\s*the idea that [^.!?\n]{1,160} is (?:powerful|compelling|interesting)\b',
     re.IGNORECASE,
@@ -124,6 +125,9 @@ def prompt_rules() -> str:
         'A specific reaction or design judgement is enough: appreciate a particular choice, '
         'agree for a clear reason, disagree with a supported claim, or answer the question asked. '
         'Choose what fits this conversation rather than covering all these moves. '
+        'State a present design judgement directly when the evidence supports it. '
+        'An opinion does not need to become "I\'d ask", "I\'d want" or "I\'d test" to be truthful. '
+        'Keep genuine conditionals, but do not repeat hypothetical advice across posts. '
         'Do not force a lesson, a mechanism, a trade-off, an experiment or consulting advice into every response. '
         'Do not manufacture a disagreement or assume the author ignored something absent from an excerpt. '
         'Let the supplied detail carry the point; avoid turning it into a broad speech about design. '
@@ -136,6 +140,10 @@ def prompt_rules() -> str:
         'Do not claim an interface is intuitive, fast or easier, or that it helps users quickly '
         'understand something, without actual evidence in the supplied context. '
         'Express your own preference about a specific label or placement, not an untested claim about users. '
+        'Do not claim reduced cognitive load from a screenshot or release note alone. '
+        'Technical terms are welcome when the supplied evidence supports their use. '
+        'For attached media, add one reading angle and let the visual carry the example. '
+        'Do not narrate panels, recap their text or repeat the visual in the caption. '
         'Prefer one direct sentence when it answers the person; extend only for another concrete detail. '
         'Use ordinary contractions, plain ASCII punctuation and varied sentence lengths when they sound natural. '
         'Never use em dashes, en dashes, double hyphens or decorative separators. '
@@ -150,6 +158,7 @@ def prompt_rules() -> str:
         '"meaningful impact", "purposeful and impactful", and "shape your product\'s trajectory". '
         'Avoid the repeated templates "the real trade-off", "a key trade-off", '
         '"I\'d watch how", "that\'s where authenticity starts", and "what would you test next?". '
+        'No source-summary openers such as "caught my attention", or a generic "sweet spot". '
         'Do not default to "What if...? I\'d test/watch..." or turn every reaction into advice '
         'about testing a customer task. Suggest a test only when that suggestion fits the actual discussion. '
         'Do not use "it\'s not X, it\'s Y", "not just X but Y", or "this isn\'t about X" framing. '
