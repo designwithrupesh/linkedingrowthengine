@@ -4828,9 +4828,9 @@
       "phase": "engagement",
       "started_at": "2026-10-26T10:20:13.807435+00:00",
       "deadline": "2026-10-26T15:20:13.807435+00:00",
-      "heartbeat_at": "2026-10-26T11:30:00.244068+00:00",
-      "cycles": 5,
-      "sessions": 0,
+      "heartbeat_at": "2026-10-26T15:20:03.207228+00:00",
+      "cycles": 6,
+      "sessions": 1,
       "recent_errors": []
     },
     "queue_preparation": {
