@@ -2725,7 +2725,7 @@
       "kind": "post",
       "text": "An accordion row where the label opens a page and the icon expands a panel asks for a very precise click.\n\nI'd make the label and icon do the same thing. If there's a separate page to visit, I'd give that link its own place inside the expanded content.\n\nSmashing Magazine's article on accordion icons argues against splitting those actions and recommends the caret. I agree with the first part in particular: the whole row should make one clear promise before anyone clicks.\n\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
       "at": "2026-10-25T18:51:55.796815+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-29T12:30:00+00:00",
@@ -2734,7 +2734,7 @@
       "remote_id": "6ade4fcd21af69534cd33993",
       "reason": "Publora acknowledged the request",
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:19.050886+00:00",
         "scheduled_for": "2026-10-29T12:30:00+00:00"
@@ -3205,7 +3205,8 @@
       "url": null,
       "at": "2026-10-25T18:51:55.796815+00:00",
       "scheduled_for": "2026-10-29T12:30:00+00:00",
-      "allocation_day": "2026-10-29"
+      "allocation_day": "2026-10-29",
+      "media_status": "visual-rebuild-draft"
     }
   ],
   "discovery": {
