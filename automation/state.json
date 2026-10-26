@@ -2873,7 +2873,31 @@
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:04.143930+00:00",
         "scheduled_for": "2026-10-28T03:30:00+00:00"
-      }
+      },
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-26T05:09:53.072932+00:00",
+          "remote_id": "6ade4ed721af69534cd33120",
+          "text": "DHL gives the parent page an 'Overview' link inside the expanded branch.\n\nThat's the arrangement I prefer. The row can open the menu without also trying to take me to a page. The two actions get two clear places.\n\nDHL screenshot via Smashing Magazine:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+          "previous_text": "Linear now lets a Loop start from an event in Slack or GitHub. That's the part of this update I'd spend time on as a designer.\n\nA pull request can trigger a draft QA plan. The useful follow-up question is where that draft appears, who reviews it and how the team can tell what ran automatically.\n\nI'd want the trigger, the result and the person responsible to be easy to find. Once work can start in another tool, that connection needs to stay visible.\n\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+          "scheduled_for": "2026-10-28T03:30:00Z",
+          "media": {
+            "sha256": "2468d8e93d941002b7f3bf8fb585c463f97486aaa74ba02c55b8aa5ca3b046ce",
+            "mime_type": "image/png",
+            "title": "The parent page gets its own link",
+            "type": "image",
+            "page_count": 1,
+            "format": "image",
+            "file_name": "the-parent-page-gets-its-own-link.png",
+            "size_bytes": 616079
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "cc5f7ef166253a1f9b27ed887ee396bd116a314d5cc6fb7e9953c26c78c3dba2"
+        }
+      ]
     },
     "post:2026-10-28:1800": {
       "kind": "post",
