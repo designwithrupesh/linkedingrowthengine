@@ -3433,10 +3433,11 @@
       "remote_id": "6ade4fcd21af69534cd33993",
       "reason": "Publora acknowledged the request",
       "visual_rebuild_hold": {
-        "status": "draft-verified",
+        "status": "replaced-and-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:19.050886+00:00",
-        "scheduled_for": "2026-10-29T12:30:00+00:00"
+        "scheduled_for": "2026-10-29T12:30:00+00:00",
+        "verified_at": "2026-10-26T05:11:39.678065+00:00"
       },
       "media_replacements": [
         {
