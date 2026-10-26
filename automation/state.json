@@ -4690,39 +4690,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-25T12:30:37.897870+00:00",
-      "deadline": "2026-10-25T22:00:00+05:30",
-      "heartbeat_at": "2026-10-25T16:25:51.496707+00:00",
-      "cycles": 48,
-      "recent_errors": [
-        {
-          "phase": "post",
-          "type": "ApifyModelError",
-          "at": "2026-10-25T12:30:41.978671+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-25T12:30:52.333055+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-25T12:35:45.882829+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-25T14:30:56.281548+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "ApifyModelError",
-          "at": "2026-10-25T14:36:04.535096+00:00"
-        }
-      ],
-      "ended_at": "2026-10-25T16:30:00.000214+00:00"
+      "status": "running",
+      "started_at": "2026-10-26T11:30:01.408916+00:00",
+      "deadline": "2026-10-26T20:50:01.408916+05:30",
+      "heartbeat_at": "2026-10-26T11:30:02.787171+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -4919,50 +4892,6 @@
           "urn:li:share:7518536396739870720"
         ],
         "first_seen_at": "2026-10-21T15:50:19.491635+00:00",
-        "cached_at": "2026-10-25T13:55:44.159559+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517832087819825153/",
-        "urn": "urn:li:share:7517832087320555520",
-        "shareUrn": "urn:li:share:7517832087320555520",
-        "text": "New on the blog: \n— Room for ambition\nA late-night conversation at a startup office in Finland has stayed with me for almost twenty years. Some thoughts on ambition, getting good at something, and the people around you.\n\nhttps://lnkd.in/g_N9WcjU",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-19T06:20:44.302000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517832087819825153",
-          "urn:li:share:7517832087320555520"
-        ],
-        "first_seen_at": "2026-10-20T15:49:30.617916+00:00",
-        "cached_at": "2026-10-25T13:55:44.159559+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517604699039232000/",
-        "urn": "urn:li:share:7517604697470324736",
-        "shareUrn": "urn:li:share:7517604697470324736",
-        "text": "Linux. Git. SSH. MySQL. IRC.\nAll started by individual Finns. 🇫🇮\n\nThe key here is individuals. The more organizations or broader environment get involved, the worse it gets.\n\nIt’s nice to be proud of where these things came from. But what matters more is what you do with them.\n\nEuropean individuals can invent. But America is, ironically, a much better collective environment for trying new things and turning them into something impactful. \n\nThat’s why so many these ambitious people move there. \n\nBuilding something great is and needs to be a shared ambition. This has been missing from Europe maybe the last 70-100 years. Ambition is very little at all. Shared ambition even less.\n\nEspecially now with AI, you can raise your ambition a lot. Build the best products in the world. Make rockets, satellites, drones, robots, software, drugs, whatever.\n\nRemove councils. Fire the grey hair boards. Refuse to raise from the EU financier VCs. Incorporate in Delaware if you have to. Put talented individuals in charge. \n\nAveraging everyone’s ideas doesn’t produce great work and working with people stuck in the past is not worth it. \n\nReset your thinking. \n\nWhat would it take for you to be the best of your generation?\n\nWhat’s the greatest thing you could possibly build? \n\nHow could you build it fast?\n\nMake it better and make it matter",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-18T15:17:10.592000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7517604699039232000",
-          "urn:li:share:7517604697470324736"
-        ],
-        "first_seen_at": "2026-10-18T15:36:51.659263+00:00",
         "cached_at": "2026-10-25T13:55:44.159559+00:00",
         "quality_decision": {
           "eligible": true,
