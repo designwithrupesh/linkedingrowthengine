@@ -3614,7 +3614,21 @@
           ],
           "tradeoff": "The screenshot establishes visible details; it does not establish usability results or personal product use."
         }
-      }
+      },
+      "media": {
+        "sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06",
+        "mime_type": "image/png",
+        "title": "The confirmation stays beside the request",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "the-confirmation-stays-beside-the-request.png",
+        "size_bytes": 553411
+      },
+      "media_scheduled_for": "2026-10-30T03:30:00Z",
+      "media_operation_id": "aef03fb1f804b618d4da1759383d4d0e94e88057dbdd13e9e544ab6cdcdf369c",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
