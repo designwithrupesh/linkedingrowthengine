@@ -2554,9 +2554,9 @@
     },
     "post:2026-10-27:0900": {
       "kind": "post",
-      "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "text": "Equal-looking columns can still have different layout rules.\n\nPenpot's 1fr tracks make the choice explicit here. I want that intent in the file, so a later change doesn't start with guessing which widths were meant to stay together.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "at": "2026-10-25T18:47:21.213785+00:00",
-      "status": "media-held",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-27T03:30:00+00:00",
@@ -2599,15 +2599,69 @@
             "file_name": "equal-columns-explicit-rules.png",
             "size_bytes": 530982
           },
-          "media_stage": "schedule-existing-replacement",
-          "media_stage_status": "acknowledged",
-          "status": "inflight",
+          "media_stage": "verify-replacement-schedule",
+          "media_stage_status": "verified",
+          "status": "scheduled",
           "media_operation_id": "25bff1b958c35782dac83f3eba47d6b1d530d763952325dd02880c8fc3e2bed1",
           "http_status": 200,
           "old_media_id": null,
-          "new_media_id": "6adee071ed849b64de3fb2fa"
+          "new_media_id": "6adee071ed849b64de3fb2fa",
+          "reason": "Existing post replacement verified"
         }
-      ]
+      ],
+      "media": {
+        "sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0",
+        "mime_type": "image/png",
+        "title": "Equal columns, explicit rules",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "equal-columns-explicit-rules.png",
+        "size_bytes": 530982,
+        "media_id": "6adee071ed849b64de3fb2fa",
+        "status": "ready"
+      },
+      "format": "image",
+      "asset_sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0",
+      "asset_title": "Equal columns, explicit rules",
+      "asset_pages": 1,
+      "media_scheduled_for": "2026-10-27T03:30:00Z",
+      "asset_id": "penpot-grid-rules-oct26",
+      "asset_spec": {
+        "source": "checked-art-directed",
+        "id": "penpot-grid-rules-oct26",
+        "kind": "image",
+        "title": "Equal columns, explicit rules",
+        "caption": "Equal-looking columns can still have different layout rules.\n\nPenpot's 1fr tracks make the choice explicit here. I want that intent in the file, so a later change doesn't start with guessing which widths were meant to stay together.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
+        "file": "resources/linkedin/oct26/penpot-grid.png",
+        "preview": "resources/linkedin/oct26/penpot-grid.png",
+        "sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0",
+        "page_count": 1,
+        "transcript": [
+          "LAYERS",
+          "DESIGN",
+          "Grid Layout",
+          "Columns",
+          "Rows",
+          "1FR",
+          "1FR",
+          "1FR",
+          "AUTO",
+          "1fr"
+        ],
+        "review_status": "checked",
+        "design_brief": {
+          "reader_tension": "The visual choice needs a concrete explanation.",
+          "intended_feeling": "Recognize the decision in a real interface.",
+          "core_decision": "Equal-width columns should express a shared layout rule, not just coincidentally match.",
+          "visual_idea": "The grid tracks and layout controls are visible together in the actual Penpot example.",
+          "story_arc": [
+            "See the original interface.",
+            "Read the specific opinion alongside it."
+          ],
+          "tradeoff": "The screenshot establishes visible details; it does not establish usability results or personal product use."
+        }
+      }
     },
     "post:2026-10-27:1800": {
       "kind": "post",
@@ -3324,12 +3378,14 @@
     },
     {
       "id": "6ade4ec2ed849b64de3b8521",
-      "text": "Bouncing letters and splayed cards are exactly the sort of things I'd let be a little unpredictable.\n\nSmashing Magazine's demos use the CSS random() function to introduce that variation without extra JavaScript. I'd be much more cautious about moving a control someone is about to click.\n\nThe distinction for me is what gets to vary. A decorative detail can play. A button still needs to be where the person expects it.\n\nhttps://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      "text": "Equal-looking columns can still have different layout rules.\n\nPenpot's 1fr tracks make the choice explicit here. I want that intent in the file, so a later change doesn't start with guessing which widths were meant to stay together.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T03:30:00+00:00",
       "allocation_day": "2026-10-27",
-      "media_status": "replacement-in-progress"
+      "media_status": "scheduled",
+      "format": "image",
+      "asset_sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0"
     },
     {
       "id": "6ade4ecced849b64de3b85a1",
