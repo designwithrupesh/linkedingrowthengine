@@ -2895,7 +2895,9 @@
           "media_stage": "inspect-existing-media",
           "media_stage_status": "prepared",
           "status": "inflight",
-          "media_operation_id": "cc5f7ef166253a1f9b27ed887ee396bd116a314d5cc6fb7e9953c26c78c3dba2"
+          "media_operation_id": "cc5f7ef166253a1f9b27ed887ee396bd116a314d5cc6fb7e9953c26c78c3dba2",
+          "http_status": 200,
+          "old_media_id": null
         }
       ]
     },
@@ -3581,7 +3583,7 @@
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T03:30:00+00:00",
       "allocation_day": "2026-10-28",
-      "media_status": "visual-rebuild-draft"
+      "media_status": "replacement-in-progress"
     },
     {
       "id": "6ade4ee221af69534cd331d2",
