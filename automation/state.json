@@ -4832,12 +4832,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-26T05:19:30.759059+00:00",
       "deadline": "2026-10-26T10:19:30.759059+00:00",
-      "heartbeat_at": "2026-10-26T10:04:38.097047+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-10-26T10:19:31.129187+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": []
     },
