@@ -2586,7 +2586,7 @@
       "kind": "post",
       "text": "Before starting another redesign, I'd ask the team to bring one example of what is going wrong.\n\nAn abandoned task. A support conversation. A screen that needs a long explanation. Something we can examine together.\n\nThat gives the work a starting point. 'It feels dated' tells me very little about what a redesign needs to change.\n\nI'm open to consulting conversations around product design, brand strategy and creative direction. If you're looking at a redesign, I'd be interested to hear what prompted it.",
       "at": "2026-10-25T18:47:21.213785+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-27T12:30:00+00:00",
@@ -2606,7 +2606,7 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:00.071825+00:00",
         "scheduled_for": "2026-10-27T12:30:00+00:00"
@@ -3130,7 +3130,8 @@
       "url": null,
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T12:30:00+00:00",
-      "allocation_day": "2026-10-27"
+      "allocation_day": "2026-10-27",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4ed721af69534cd33120",
