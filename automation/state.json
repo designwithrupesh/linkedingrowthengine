@@ -3008,8 +3008,8 @@
             "file_name": "when-automation-starts-elsewhere.pdf",
             "size_bytes": 1255724
           },
-          "media_stage": "pause-existing-post",
-          "media_stage_status": "acknowledged",
+          "media_stage": "reserve-replacement-upload",
+          "media_stage_status": "inflight",
           "status": "inflight",
           "media_operation_id": "f7b3692a7312eca2ac0ef3ed795738df0b59d35b5be7d419eeeaaa30fedb350a",
           "http_status": 200,
