@@ -4824,13 +4824,13 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-10-26T10:20:13.807435+00:00",
-      "deadline": "2026-10-26T15:20:13.807435+00:00",
-      "heartbeat_at": "2026-10-26T15:20:14.109817+00:00",
-      "cycles": 7,
-      "sessions": 1,
+      "status": "running",
+      "phase": "engagement",
+      "started_at": "2026-10-26T15:21:00.763288+00:00",
+      "deadline": "2026-10-26T20:21:00.763288+00:00",
+      "heartbeat_at": "2026-10-26T15:21:01.275667+00:00",
+      "cycles": 0,
+      "sessions": 0,
       "recent_errors": []
     },
     "queue_preparation": {
