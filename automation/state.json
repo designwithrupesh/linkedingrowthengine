@@ -2616,7 +2616,7 @@
       "kind": "post",
       "text": "Linear now lets a Loop start from an event in Slack or GitHub. That's the part of this update I'd spend time on as a designer.\n\nA pull request can trigger a draft QA plan. The useful follow-up question is where that draft appears, who reviews it and how the team can tell what ran automatically.\n\nI'd want the trigger, the result and the person responsible to be easy to find. Once work can start in another tool, that connection needs to stay visible.\n\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
       "at": "2026-10-25T18:47:42.560182+00:00",
-      "status": "scheduled",
+      "status": "media-held",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-28T03:30:00+00:00",
@@ -2636,7 +2636,7 @@
         }
       ],
       "visual_rebuild_hold": {
-        "status": "inflight",
+        "status": "draft-verified",
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:04.143930+00:00",
         "scheduled_for": "2026-10-28T03:30:00+00:00"
@@ -3145,7 +3145,8 @@
       "url": null,
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T03:30:00+00:00",
-      "allocation_day": "2026-10-28"
+      "allocation_day": "2026-10-28",
+      "media_status": "visual-rebuild-draft"
     },
     {
       "id": "6ade4ee221af69534cd331d2",
