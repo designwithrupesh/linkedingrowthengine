@@ -4708,12 +4708,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-26T11:30:01.408916+00:00",
       "deadline": "2026-10-26T20:50:01.408916+05:30",
       "heartbeat_at": "2026-10-26T15:15:16.874219+00:00",
       "cycles": 46,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-10-26T15:20:01.409095+00:00"
     },
     "last_live_validation": {
       "status": "passed",
