@@ -3628,8 +3628,8 @@
       },
       "media_scheduled_for": "2026-10-30T03:30:00Z",
       "media_operation_id": "aef03fb1f804b618d4da1759383d4d0e94e88057dbdd13e9e544ab6cdcdf369c",
-      "media_stage": "reserve-upload",
-      "media_stage_status": "acknowledged",
+      "media_stage": "upload-bytes",
+      "media_stage_status": "inflight",
       "http_status": 200,
       "remote_id": "6adee111ed849b64de3fba47"
     }
