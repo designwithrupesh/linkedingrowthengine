@@ -2989,7 +2989,31 @@
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:07.431570+00:00",
         "scheduled_for": "2026-10-28T12:30:00+00:00"
-      }
+      },
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-26T05:10:19.896896+00:00",
+          "remote_id": "6ade4ee221af69534cd331d2",
+          "text": "A Slack reply can confirm a setup and still leave the saved rule hard to find.\n\nLinear's demo says what will trigger the loop and where it will post. The last page is my proposal for the record behind that reply: who owns it, what starts it and where to pause it.\n\nThe demo frames and the proposed screen are labelled separately.\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
+          "previous_text": "I'd bring an engineer into a design discussion while the options are still rough.\n\nIf an idea depends on data we don't have, or a response the system can't return quickly, I'd rather find that out before polishing it.\n\nI also want to know which constraints are fixed and which ones we could change. 'We can't do that' is the start of that discussion, not enough detail to make the design decision.\n\nThen there's something useful to sketch together.",
+          "scheduled_for": "2026-10-28T12:30:00Z",
+          "media": {
+            "sha256": "c75e1ca2674a06fedaefb15fbd29df142ee88449f74b33a3f5224a14d3d630d5",
+            "mime_type": "application/pdf",
+            "title": "When automation starts elsewhere",
+            "type": "document",
+            "page_count": 3,
+            "format": "carousel",
+            "file_name": "when-automation-starts-elsewhere.pdf",
+            "size_bytes": 1255724
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "f7b3692a7312eca2ac0ef3ed795738df0b59d35b5be7d419eeeaaa30fedb350a"
+        }
+      ]
     },
     "post:2026-10-29:0900": {
       "kind": "post",
