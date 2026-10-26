@@ -4711,8 +4711,8 @@
       "status": "running",
       "started_at": "2026-10-26T11:30:01.408916+00:00",
       "deadline": "2026-10-26T20:50:01.408916+05:30",
-      "heartbeat_at": "2026-10-26T13:30:10.158798+00:00",
-      "cycles": 25,
+      "heartbeat_at": "2026-10-26T13:35:11.464982+00:00",
+      "cycles": 26,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -4954,28 +4954,6 @@
           "urn:li:share:7519113091591278595"
         ],
         "first_seen_at": "2026-10-23T16:17:54.347221+00:00",
-        "cached_at": "2026-10-25T14:15:45.018903+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517940312602918912/",
-        "urn": "urn:li:ugcPost:7517940311218683904",
-        "shareUrn": "urn:li:ugcPost:7517940311218683904",
-        "text": "My biggest takeaways from Anthropic interpretability researched Emmanuel Ameisen:\n\n1. Predicting the next token requires understanding the universe.\n2. LLMs plan ahead, even though they write one token at a time.\n3. Anthropomorphizing AI can sometimes be a useful approach when trying to predict how they will behave.\n4. Interpretability research looks more like neuroscience than software engineering.\n5. Models can tell you about only a small slice of what they’re thinking.\n6. Studying models closely often raises more questions than it answers.\n7. Even the people who build AI models don’t fully understand how they work.\n8. Interpretability as a field is small, young, and open to newcomers.\n\nFull episode: https://lnkd.in/gCQgay3s",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-19T13:30:47.101000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7517940312602918912",
-          "urn:li:ugcPost:7517940311218683904"
-        ],
-        "first_seen_at": "2026-10-20T16:09:24.449006+00:00",
         "cached_at": "2026-10-25T14:15:45.018903+00:00",
         "quality_decision": {
           "eligible": true,
