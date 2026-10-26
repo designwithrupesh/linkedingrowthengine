@@ -2719,7 +2719,31 @@
         "reason": "Owner rejected text-only batch and requested visual replacements",
         "at": "2026-10-26T05:01:15.283189+00:00",
         "scheduled_for": "2026-10-26T12:30:00+00:00"
-      }
+      },
+      "media_replacements": [
+        {
+          "kind": "post-media-replacement",
+          "at": "2026-10-26T05:08:25.222823+00:00",
+          "remote_id": "6ade4fb821af69534cd33884",
+          "text": "When opening the address is the main task, the row should do one thing.\n\nThe pencil creates a second destination in what looks like the same control. Put 'Edit address' inside the details, or make editing the main action from the start.\n\nAn illustrative interaction study, informed by:\nhttps://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+          "previous_text": "If the same design decision keeps coming back to the founder, I'd ask who owns it.\n\nA review can end with a new screen and leave a question open. Who is this for? What should the first version let them do? Who decides when two priorities clash?\n\nI'd want a design lead to bring those questions to the right people, settle what can be settled, and write down the reasoning. The next review should be able to build on that decision.\n\nBefore agreeing a list of design deliverables, I'd want to agree that responsibility too.",
+          "scheduled_for": "2026-10-26T12:30:00Z",
+          "media": {
+            "sha256": "d1f6652df6fc4ca7fde5e1ae1f76d9738149ac9452096761cf23565b9c1b6b22",
+            "mime_type": "application/pdf",
+            "title": "When the icon and label disagree",
+            "type": "document",
+            "page_count": 5,
+            "format": "carousel",
+            "file_name": "when-the-icon-and-label-disagree.pdf",
+            "size_bytes": 60247
+          },
+          "media_stage": "inspect-existing-media",
+          "media_stage_status": "prepared",
+          "status": "inflight",
+          "media_operation_id": "35d51b16d91737107edcc5807d94b4aaf6df984d0fdf570f3fe1a29d3e04b7a8"
+        }
+      ]
     },
     "post:2026-10-29:1800": {
       "kind": "post",
