@@ -4049,13 +4049,14 @@
     {
       "id": "6ade4ec2ed849b64de3b8521",
       "text": "Equal-looking columns can still have different layout rules.\n\nPenpot's 1fr tracks make the choice explicit here. I want that intent in the file, so a later change doesn't start with guessing which widths were meant to stay together.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7520688249196048384/",
       "at": "2026-10-25T18:47:21.213785+00:00",
       "scheduled_for": "2026-10-27T03:30:00+00:00",
       "allocation_day": "2026-10-27",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0"
+      "asset_sha256": "4ae4edf6d8935df7aadc416f3a63aeda39cde992d41d0d7d65a2d5e4a74fc4d0",
+      "post_urn": "urn:li:share:7520688249196048384"
     },
     {
       "id": "6ade4ecced849b64de3b85a1",
