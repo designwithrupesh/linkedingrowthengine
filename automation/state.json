@@ -4507,7 +4507,7 @@
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-10-27T09:08:17.609756+00:00",
+        "last_considered_at": "2026-10-27T10:53:19.302596+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
@@ -4571,7 +4571,7 @@
         "cached": false
       },
       "urn:li:share:7516339844223115264": {
-        "last_considered_at": "2026-10-27T09:23:17.642485+00:00",
+        "last_considered_at": "2026-10-27T10:53:19.302596+00:00",
         "changed_at": "2026-10-15T04:51:54.515633+00:00",
         "count": 0,
         "cached": false,
@@ -4587,7 +4587,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-27T09:08:17.609756+00:00",
+        "last_considered_at": "2026-10-27T10:53:19.302596+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T09:08:17.609756+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4627,7 +4627,7 @@
         "last_checked_at": "2026-10-27T08:23:16.474025+00:00"
       },
       "urn:li:share:7517562657563107328": {
-        "last_considered_at": "2026-10-27T09:08:17.609756+00:00",
+        "last_considered_at": "2026-10-27T10:53:19.302596+00:00",
         "changed_at": "2026-10-18T13:36:39.694629+00:00",
         "count": 1,
         "cached": false,
@@ -4699,7 +4699,7 @@
         "cached": false
       },
       "urn:li:share:7520688249196048384": {
-        "last_considered_at": "2026-10-27T09:23:17.642485+00:00",
+        "last_considered_at": "2026-10-27T10:53:19.302596+00:00",
         "changed_at": "2026-10-27T03:37:32.874152+00:00",
         "count": 0,
         "cached": false,
@@ -4864,7 +4864,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-10-27T10:23:18.761700+00:00"
+      "checked_at": "2026-10-27T10:53:19.302596+00:00"
     }
   },
   "engagement": {
