@@ -3639,11 +3639,14 @@
       "kind": "post",
       "text": "The fact that AI saves time on nearly every task but practitioners remain lukewarm is a key design insight. It shows that automation doesn’t just speed up work; it changes the trust in design decisions. When AI generates outputs that aren’t reliable or require constant oversight, it creates a recovery path problem: designers lose confidence in their own judgment. That’s not a flaw in the tool, but in how we design the feedback loop between AI and human judgment. The real design challenge isn’t adoption, it’s maintaining trust through transparency and control.\n\nSource: https://www.nngroup.com/articles/ai-in-ux-survey-26/",
       "at": "2026-10-27T18:30:06.155484+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-10-31T03:30:00+00:00",
-      "allocation_day": "2026-10-31"
+      "allocation_day": "2026-10-31",
+      "http_status": 200,
+      "remote_id": "6ae0ee1c8b896170867b44a6",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4151,6 +4154,14 @@
       "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06"
+    },
+    {
+      "id": "6ae0ee1c8b896170867b44a6",
+      "text": "The fact that AI saves time on nearly every task but practitioners remain lukewarm is a key design insight. It shows that automation doesn’t just speed up work; it changes the trust in design decisions. When AI generates outputs that aren’t reliable or require constant oversight, it creates a recovery path problem: designers lose confidence in their own judgment. That’s not a flaw in the tool, but in how we design the feedback loop between AI and human judgment. The real design challenge isn’t adoption, it’s maintaining trust through transparency and control.\n\nSource: https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+      "url": null,
+      "at": "2026-10-27T18:30:06.155484+00:00",
+      "scheduled_for": "2026-10-31T03:30:00+00:00",
+      "allocation_day": "2026-10-31"
     }
   ],
   "discovery": {
