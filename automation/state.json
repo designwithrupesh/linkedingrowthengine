@@ -4840,14 +4840,19 @@
       "phase": "maintenance",
       "started_at": "2026-10-27T06:23:12.383179+00:00",
       "deadline": "2026-10-27T11:23:12.383179+00:00",
-      "heartbeat_at": "2026-10-27T08:38:15.005880+00:00",
-      "cycles": 9,
+      "heartbeat_at": "2026-10-27T08:53:15.294562+00:00",
+      "cycles": 10,
       "sessions": 0,
       "recent_errors": [
         {
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-10-27T06:41:35.407709+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-10-27T08:39:37.364053+00:00"
         }
       ]
     },
