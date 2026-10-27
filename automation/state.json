@@ -4499,9 +4499,9 @@
         "last_checked_at": "2026-10-27T04:07:33.408335+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-10-27T03:37:32.874152+00:00",
+        "last_considered_at": "2026-10-27T05:37:34.930636+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-27T03:37:32.874152+00:00",
+        "last_checked_at": "2026-10-27T05:37:34.930636+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
         "count": 0,
         "cached": false
@@ -4683,28 +4683,28 @@
         "last_checked_at": "2026-10-27T04:52:34.236410+00:00"
       },
       "urn:li:share:7520326598542311424": {
-        "last_considered_at": "2026-10-27T03:37:32.874152+00:00",
+        "last_considered_at": "2026-10-27T05:37:34.930636+00:00",
         "changed_at": "2026-10-26T05:13:43.506492+00:00",
         "count": 0,
         "cached": false,
         "status": "analytics-count",
-        "last_checked_at": "2026-10-27T03:37:32.874152+00:00"
+        "last_checked_at": "2026-10-27T05:37:34.930636+00:00"
       },
       "urn:li:ugcPost:7520461780251205633": {
-        "last_considered_at": "2026-10-27T03:52:33.190837+00:00",
+        "last_considered_at": "2026-10-27T05:37:34.930636+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-27T03:22:32.655749+00:00",
+        "last_checked_at": "2026-10-27T05:37:34.930636+00:00",
         "changed_at": "2026-10-27T01:22:30.521786+00:00",
         "count": 0,
         "cached": false
       },
       "urn:li:share:7520688249196048384": {
-        "last_considered_at": "2026-10-27T05:22:34.584305+00:00",
+        "last_considered_at": "2026-10-27T05:37:34.930636+00:00",
         "changed_at": "2026-10-27T03:37:32.874152+00:00",
         "count": 0,
         "cached": false,
         "status": "analytics-count",
-        "last_checked_at": "2026-10-27T03:37:32.874152+00:00"
+        "last_checked_at": "2026-10-27T05:37:34.930636+00:00"
       }
     },
     "statistics_cooldown": {
@@ -4859,7 +4859,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-10-27T05:22:34.584305+00:00"
+      "checked_at": "2026-10-27T05:37:34.930636+00:00"
     }
   },
   "engagement": {
