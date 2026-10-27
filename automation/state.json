@@ -4720,13 +4720,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-26T15:21:02.719120+00:00",
-      "deadline": "2026-10-26T22:00:00+05:30",
-      "heartbeat_at": "2026-10-26T16:26:11.482772+00:00",
-      "cycles": 14,
-      "recent_errors": [],
-      "ended_at": "2026-10-26T16:30:00.000174+00:00"
+      "status": "running",
+      "started_at": "2026-10-27T11:30:01.323617+00:00",
+      "deadline": "2026-10-27T21:53:01.323617+05:30",
+      "heartbeat_at": "2026-10-27T11:30:03.544063+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -4922,28 +4921,6 @@
           "urn:li:share:7518364618751229952"
         ],
         "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
-        "cached_at": "2026-10-25T14:50:50.350226+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518008262101733376/",
-        "urn": "urn:li:share:7518008261258694657",
-        "shareUrn": "urn:li:share:7518008261258694657",
-        "text": "SEATTLE DESIGN 🗣️: Oct 30 in my hometown design community AIGA Seattle with type design Prof. Marta Bernstein and tech designer Terry Marks\n⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣒⣚⣛⣛⣛⣛⣛⣛⣓⣒⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⢀⣀⣀⣈⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣁⣀⣀⡀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠈⠉⠉⢉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡉⠉⠉⠁⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⢻⡋⠉⠉⣿⣿⠉⠉⢙⡟⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⣿⣿⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣿⣿⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⠀⣿⣿⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠂⠛⠛⠐⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\nSpace Needle ASCII-Art Credit: https://lnkd.in/gbfxzQdm",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-19T18:00:47.524000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518008262101733376",
-          "urn:li:share:7518008261258694657"
-        ],
-        "first_seen_at": "2026-10-20T15:34:22.372274+00:00",
         "cached_at": "2026-10-25T14:50:50.350226+00:00",
         "quality_decision": {
           "eligible": true,
