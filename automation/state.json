@@ -4484,9 +4484,9 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-27T13:20:07.656057+00:00",
+        "last_considered_at": "2026-10-27T13:50:09.078678+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-27T11:35:02.335505+00:00",
+        "last_checked_at": "2026-10-27T13:50:09.078678+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
         "count": 2,
         "cached": false
@@ -4500,7 +4500,7 @@
         "last_checked_at": "2026-10-27T13:30:08.121544+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-10-27T13:20:07.656057+00:00",
+        "last_considered_at": "2026-10-27T13:50:09.078678+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T13:20:07.656057+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
@@ -4684,7 +4684,7 @@
         "last_checked_at": "2026-10-27T13:40:08.586559+00:00"
       },
       "urn:li:share:7520326598542311424": {
-        "last_considered_at": "2026-10-27T13:20:07.656057+00:00",
+        "last_considered_at": "2026-10-27T13:50:09.078678+00:00",
         "changed_at": "2026-10-26T05:13:43.506492+00:00",
         "count": 0,
         "cached": false,
@@ -4692,7 +4692,7 @@
         "last_checked_at": "2026-10-27T13:20:07.656057+00:00"
       },
       "urn:li:ugcPost:7520461780251205633": {
-        "last_considered_at": "2026-10-27T13:20:07.656057+00:00",
+        "last_considered_at": "2026-10-27T13:50:09.078678+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T13:20:07.656057+00:00",
         "changed_at": "2026-10-27T01:22:30.521786+00:00",
@@ -4708,7 +4708,7 @@
         "last_checked_at": "2026-10-27T13:45:08.856830+00:00"
       },
       "urn:li:ugcPost:7520824174379003904": {
-        "last_considered_at": "2026-10-27T13:25:07.878595+00:00",
+        "last_considered_at": "2026-10-27T13:50:09.078678+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T12:35:06.472079+00:00"
       }
