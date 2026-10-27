@@ -4523,7 +4523,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-10-27T11:23:55.527699+00:00",
+        "last_considered_at": "2026-10-27T11:55:03.467796+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T11:23:55.527699+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -4539,9 +4539,9 @@
         "cached": false
       },
       "urn:li:share:7515614827323740160": {
-        "last_considered_at": "2026-10-27T11:23:55.527699+00:00",
+        "last_considered_at": "2026-10-27T11:55:03.467796+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-27T09:38:18.273665+00:00",
+        "last_checked_at": "2026-10-27T11:55:03.467796+00:00",
         "changed_at": "2026-10-16T02:59:46.639744+00:00",
         "count": 0,
         "cached": false
@@ -4563,7 +4563,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516113634779901952": {
-        "last_considered_at": "2026-10-27T11:30:02.142479+00:00",
+        "last_considered_at": "2026-10-27T11:55:03.467796+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T11:30:02.142479+00:00",
         "changed_at": "2026-10-15T00:15:43.176519+00:00",
@@ -4579,7 +4579,7 @@
         "last_checked_at": "2026-10-27T11:40:02.633251+00:00"
       },
       "urn:li:share:7516475491210555392": {
-        "last_considered_at": "2026-10-27T11:30:02.142479+00:00",
+        "last_considered_at": "2026-10-27T11:55:03.467796+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-27T11:30:02.142479+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4611,7 +4611,7 @@
         "last_checked_at": "2026-10-27T11:35:02.335505+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-10-27T11:23:55.527699+00:00",
+        "last_considered_at": "2026-10-27T11:55:03.467796+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
