@@ -4908,12 +4908,12 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
+      "phase": "maintenance",
       "started_at": "2026-10-28T12:27:54.493657+00:00",
       "deadline": "2026-10-28T17:27:54.493657+00:00",
-      "heartbeat_at": "2026-10-28T12:27:54.927410+00:00",
-      "cycles": 0,
-      "sessions": 0,
+      "heartbeat_at": "2026-10-28T16:30:02.859679+00:00",
+      "cycles": 1,
+      "sessions": 1,
       "recent_errors": []
     },
     "queue_preparation": {
