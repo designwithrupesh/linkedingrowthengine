@@ -4767,8 +4767,8 @@
       "status": "running",
       "started_at": "2026-10-28T11:30:01.635614+00:00",
       "deadline": "2026-10-28T17:57:01.635614+05:30",
-      "heartbeat_at": "2026-10-28T12:15:08.107806+00:00",
-      "cycles": 10,
+      "heartbeat_at": "2026-10-28T12:20:08.490020+00:00",
+      "cycles": 11,
       "recent_errors": []
     },
     "last_live_validation": {
