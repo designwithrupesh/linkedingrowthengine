@@ -4103,13 +4103,14 @@
     {
       "id": "6ade4ee221af69534cd331d2",
       "text": "A Slack reply can confirm a setup and still leave the saved rule hard to find.\n\nLinear's demo says what will trigger the loop and where it will post. The last page is my proposal for the record behind that reply: who owns it, what starts it and where to pause it.\n\nThe demo frames and the proposed screen are labelled separately.\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7521186562949230592/",
       "at": "2026-10-25T18:47:42.560182+00:00",
       "scheduled_for": "2026-10-28T12:30:00+00:00",
       "allocation_day": "2026-10-28",
       "media_status": "scheduled",
       "format": "carousel",
-      "asset_sha256": "c75e1ca2674a06fedaefb15fbd29df142ee88449f74b33a3f5224a14d3d630d5"
+      "asset_sha256": "c75e1ca2674a06fedaefb15fbd29df142ee88449f74b33a3f5224a14d3d630d5",
+      "post_urn": "urn:li:ugcPost:7521186562949230592"
     },
     {
       "id": "6ade4eeeed849b64de3b8770",
