@@ -4542,9 +4542,9 @@
         "last_checked_at": "2026-10-28T01:10:44.428795+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_considered_at": "2026-10-28T02:10:45.359621+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_checked_at": "2026-10-28T02:10:45.359621+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
         "count": 0,
         "cached": false
@@ -4574,9 +4574,9 @@
         "cached": false
       },
       "urn:li:ugcPost:7515750753525788672": {
-        "last_considered_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_considered_at": "2026-10-28T02:10:45.359621+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_checked_at": "2026-10-28T02:10:45.359621+00:00",
         "changed_at": "2026-10-14T02:55:03.779843+00:00",
         "count": 0,
         "cached": false
@@ -4598,15 +4598,15 @@
         "cached": false
       },
       "urn:li:share:7516339844223115264": {
-        "last_considered_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_considered_at": "2026-10-28T02:10:45.359621+00:00",
         "changed_at": "2026-10-15T04:51:54.515633+00:00",
         "count": 0,
         "cached": false,
         "status": "analytics-count",
-        "last_checked_at": "2026-10-28T00:10:43.206697+00:00"
+        "last_checked_at": "2026-10-28T02:10:45.359621+00:00"
       },
       "urn:li:share:7516475491210555392": {
-        "last_considered_at": "2026-10-28T00:25:43.457672+00:00",
+        "last_considered_at": "2026-10-28T02:10:45.359621+00:00",
         "status": "analytics-count",
         "last_checked_at": "2026-10-28T00:25:43.457672+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4622,9 +4622,9 @@
         "cached": false
       },
       "urn:li:share:7516837882951778304": {
-        "last_considered_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_considered_at": "2026-10-28T02:10:45.359621+00:00",
         "status": "analytics-count",
-        "last_checked_at": "2026-10-28T00:10:43.206697+00:00",
+        "last_checked_at": "2026-10-28T02:10:45.359621+00:00",
         "changed_at": "2026-10-17T00:49:22.690469+00:00",
         "count": 0,
         "cached": false
@@ -4904,7 +4904,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-10-28T01:55:44.902414+00:00"
+      "checked_at": "2026-10-28T02:10:45.359621+00:00"
     }
   },
   "engagement": {
