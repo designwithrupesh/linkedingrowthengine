@@ -4881,11 +4881,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-10-28T07:27:08.386218+00:00",
       "deadline": "2026-10-28T12:27:08.386218+00:00",
-      "heartbeat_at": "2026-10-28T11:27:14.409508+00:00",
-      "cycles": 16,
+      "heartbeat_at": "2026-10-28T11:30:00.333202+00:00",
+      "cycles": 17,
       "sessions": 0,
       "recent_errors": [
         {
