@@ -4520,7 +4520,7 @@
         "cached": false
       },
       "urn:li:share:7514527701878284288": {
-        "last_considered_at": "2026-10-28T13:02:59.389566+00:00",
+        "last_considered_at": "2026-10-28T13:33:01.028892+00:00",
         "changed_at": "2026-10-10T06:04:24.231829+00:00",
         "count": 0,
         "cached": false,
@@ -4632,7 +4632,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_considered_at": "2026-10-28T13:02:59.389566+00:00",
+        "last_considered_at": "2026-10-28T13:33:01.028892+00:00",
         "changed_at": "2026-10-17T05:05:50.925122+00:00",
         "count": 0,
         "cached": false,
@@ -4648,7 +4648,7 @@
         "last_checked_at": "2026-10-28T12:00:05.342811+00:00"
       },
       "urn:li:share:7517426754408534016": {
-        "last_considered_at": "2026-10-28T13:02:59.389566+00:00",
+        "last_considered_at": "2026-10-28T13:33:01.028892+00:00",
         "changed_at": "2026-10-18T05:18:29.395764+00:00",
         "count": 0,
         "cached": false,
@@ -4712,12 +4712,12 @@
         "last_checked_at": "2026-10-28T12:47:58.606258+00:00"
       },
       "urn:li:share:7520326598542311424": {
-        "last_considered_at": "2026-10-28T12:57:59.120405+00:00",
+        "last_considered_at": "2026-10-28T13:33:01.028892+00:00",
         "changed_at": "2026-10-26T05:13:43.506492+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-28T11:27:16.560661+00:00"
+        "last_checked_at": "2026-10-28T13:33:01.028892+00:00"
       },
       "urn:li:ugcPost:7520461780251205633": {
         "last_considered_at": "2026-10-28T13:23:00.492189+00:00",
@@ -4752,7 +4752,7 @@
         "last_checked_at": "2026-10-28T12:00:05.342811+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_considered_at": "2026-10-28T13:02:59.389566+00:00",
+        "last_considered_at": "2026-10-28T13:33:01.028892+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T12:32:59.187695+00:00"
       }
