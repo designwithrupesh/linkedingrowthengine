@@ -4773,8 +4773,8 @@
       "status": "running",
       "started_at": "2026-10-28T12:27:56.329365+00:00",
       "deadline": "2026-10-28T22:00:00+05:30",
-      "heartbeat_at": "2026-10-28T14:38:07.737776+00:00",
-      "cycles": 27,
+      "heartbeat_at": "2026-10-28T14:43:50.193929+00:00",
+      "cycles": 28,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -4785,6 +4785,11 @@
           "phase": "next-day-posts",
           "type": "VisualAssetError",
           "at": "2026-10-28T12:59:36.766572+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "VisualAssetError",
+          "at": "2026-10-28T14:43:50.110141+00:00"
         }
       ]
     },
