@@ -4543,7 +4543,7 @@
         "last_checked_at": "2026-10-28T11:12:16.417495+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-28T10:12:15.463710+00:00",
+        "last_considered_at": "2026-10-28T11:40:03.878750+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T10:12:15.463710+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
@@ -4575,7 +4575,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7515750753525788672": {
-        "last_considered_at": "2026-10-28T10:12:15.463710+00:00",
+        "last_considered_at": "2026-10-28T11:40:03.878750+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T10:12:15.463710+00:00",
         "changed_at": "2026-10-14T02:55:03.779843+00:00",
@@ -4599,7 +4599,7 @@
         "cached": false
       },
       "urn:li:share:7516339844223115264": {
-        "last_considered_at": "2026-10-28T10:12:15.463710+00:00",
+        "last_considered_at": "2026-10-28T11:40:03.878750+00:00",
         "changed_at": "2026-10-15T04:51:54.515633+00:00",
         "count": 0,
         "cached": false,
@@ -4607,7 +4607,7 @@
         "last_checked_at": "2026-10-28T10:12:15.463710+00:00"
       },
       "urn:li:share:7516475491210555392": {
-        "last_considered_at": "2026-10-28T10:12:15.463710+00:00",
+        "last_considered_at": "2026-10-28T11:40:03.878750+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T10:12:15.463710+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4623,7 +4623,7 @@
         "cached": false
       },
       "urn:li:share:7516837882951778304": {
-        "last_considered_at": "2026-10-28T10:12:15.463710+00:00",
+        "last_considered_at": "2026-10-28T11:40:03.878750+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T10:12:15.463710+00:00",
         "changed_at": "2026-10-17T00:49:22.690469+00:00",
