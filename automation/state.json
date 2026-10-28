@@ -4764,13 +4764,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-27T16:24:53.374289+00:00",
-      "deadline": "2026-10-27T22:00:00+05:30",
-      "heartbeat_at": "2026-10-27T16:29:56.061815+00:00",
-      "cycles": 2,
-      "recent_errors": [],
-      "ended_at": "2026-10-27T16:30:00.000154+00:00"
+      "status": "running",
+      "started_at": "2026-10-28T11:30:01.635614+00:00",
+      "deadline": "2026-10-28T17:57:01.635614+05:30",
+      "heartbeat_at": "2026-10-28T11:30:04.922832+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -4929,27 +4928,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518337196379066368/",
-        "urn": "urn:li:ugcPost:7518337196379066368",
-        "shareUrn": "urn:li:ugcPost:7518337196379066368",
-        "text": "And... we are live!\n\nI've never seen something go so viral internally. \n\nGiving teams the power to build their own bespoke collaborative tools led to a level of creativity that was honestly unhinged and super fun to watch. \n\nCollecting some of my favorite examples in the comments (reply with your own!)…",
-        "authorName": "Jeremy Olson",
-        "authorHeadline": "Director of Product Management at Superhuman",
-        "authorProfileUrl": "https://www.linkedin.com/in/jeremyolson/",
-        "postedAtISO": "2026-10-20T20:10:52.658000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:ugcPost:7518337196379066368"
-        ],
-        "first_seen_at": "2026-10-21T15:30:24.307499+00:00",
-        "cached_at": "2026-10-25T14:45:49.501043+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518669058066563072/",
         "urn": "urn:li:share:7518669056976072704",
         "shareUrn": "urn:li:share:7518669056976072704",
@@ -4963,28 +4941,6 @@
         "identity_aliases": [
           "urn:li:activity:7518669058066563072",
           "urn:li:share:7518669056976072704"
-        ],
-        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
-        "cached_at": "2026-10-25T14:50:50.350226+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518364620076593152/",
-        "urn": "urn:li:share:7518364618751229952",
-        "shareUrn": "urn:li:share:7518364618751229952",
-        "text": "IS IT ANY GOOD?: We can build it faster than ever. But can we judge if it's any good or not?\n\nQuirine van Walt Meijer and the Foundry computational design team moved everyone into VS Code and GitHub Copilot. As a result, building got faster, so the hard part became judging the whole journey, not just each screen. HT Stephanie Keske\n\nQ's advice:\n\n- Check what you can, judge what you absolutely must\n- Keep to 3 to 5 stable dimensions for evaluation\n- Tools will run the tests, and humans (us) check the evidence\n\nThe TL;DR? Faster building only becomes better shipping when design intent survives.\n\nNew post by Quirine on Journey Evaluation: https://lnkd.in/gjHYStWE\nRecent post by Jenny Lanier Wolski on Product Simplicity: https://lnkd.in/gjUpNxzt",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-20T17:36:49.886000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518364620076593152",
-          "urn:li:share:7518364618751229952"
         ],
         "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
         "cached_at": "2026-10-25T14:50:50.350226+00:00",
@@ -5031,28 +4987,6 @@
           "urn:li:share:7518910435295813632"
         ],
         "first_seen_at": "2026-10-25T13:55:44.159559+00:00",
-        "cached_at": "2026-10-26T14:00:12.142624+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518536397406801920/",
-        "urn": "urn:li:share:7518536396739870720",
-        "shareUrn": "urn:li:share:7518536396739870720",
-        "text": "Room for ambition\n\nWhat could we become truly good at, and how could we contribute something meaningful to the world?\n\nWhen you are young, much of the world looks like something other people have built. Seeing yourself as part of your generation means not comparing yourself to those who came before, but recognizing that you, too, will shape what comes next.\n\nThat is what shared ambition means to me. People pursuing different things, but wanting each other to do something great. You don’t need to agree with every idea. But there is a room, or an environment, that gives ambition space.\n\nOften, the support is simple: listening seriously, sharing an idea or a story, making an introduction. Helping where you can without assuming you know what someone should do. Advice can be wrong.\n\nI’ve kept this question to myself because ambition can sound like self-importance. But I don’t think of the question as a prediction of who I will become. It’s something to live up to: to make something great. An obligation to make an honest effort, not a claim to recognition.\n\nhttps://lnkd.in/g_N9WcjU",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-21T04:59:24.793000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7518536397406801920",
-          "urn:li:share:7518536396739870720"
-        ],
-        "first_seen_at": "2026-10-21T15:50:19.491635+00:00",
         "cached_at": "2026-10-26T14:00:12.142624+00:00",
         "quality_decision": {
           "eligible": true,
