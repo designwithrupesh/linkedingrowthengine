@@ -4907,12 +4907,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-28T17:28:43.651699+00:00",
       "deadline": "2026-10-28T22:28:43.651699+00:00",
-      "heartbeat_at": "2026-10-28T22:14:07.015203+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-10-28T22:28:43.870425+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
