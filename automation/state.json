@@ -4592,7 +4592,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516113634779901952": {
-        "last_considered_at": "2026-10-28T12:20:06.735218+00:00",
+        "last_considered_at": "2026-10-28T12:47:58.606258+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T11:12:16.417495+00:00",
         "changed_at": "2026-10-15T00:15:43.176519+00:00",
@@ -4616,7 +4616,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-28T12:20:06.735218+00:00",
+        "last_considered_at": "2026-10-28T12:47:58.606258+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T11:12:16.417495+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4656,7 +4656,7 @@
         "last_checked_at": "2026-10-28T12:05:05.737653+00:00"
       },
       "urn:li:share:7517562657563107328": {
-        "last_considered_at": "2026-10-28T12:20:06.735218+00:00",
+        "last_considered_at": "2026-10-28T12:47:58.606258+00:00",
         "changed_at": "2026-10-18T13:36:39.694629+00:00",
         "count": 1,
         "cached": false,
@@ -4704,12 +4704,12 @@
         "last_checked_at": "2026-10-28T12:05:05.737653+00:00"
       },
       "urn:li:share:7518649817774895104": {
-        "last_considered_at": "2026-10-28T12:15:06.390048+00:00",
+        "last_considered_at": "2026-10-28T12:47:58.606258+00:00",
         "changed_at": "2026-10-21T13:10:13.694599+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-28T10:27:15.224568+00:00"
+        "last_checked_at": "2026-10-28T12:47:58.606258+00:00"
       },
       "urn:li:share:7520326598542311424": {
         "last_considered_at": "2026-10-28T12:25:07.071879+00:00",
@@ -4736,7 +4736,7 @@
         "last_checked_at": "2026-10-28T12:42:58.317700+00:00"
       },
       "urn:li:ugcPost:7520824174379003904": {
-        "last_considered_at": "2026-10-28T12:20:06.735218+00:00",
+        "last_considered_at": "2026-10-28T12:47:58.606258+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-28T11:12:16.417495+00:00",
         "changed_at": "2026-10-28T01:25:44.371693+00:00",
