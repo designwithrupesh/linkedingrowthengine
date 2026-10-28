@@ -4770,7 +4770,7 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-28T12:27:56.329365+00:00",
       "deadline": "2026-10-28T22:00:00+05:30",
       "heartbeat_at": "2026-10-28T16:28:17.698582+00:00",
@@ -4796,7 +4796,8 @@
           "type": "VisualAssetError",
           "at": "2026-10-28T14:58:56.655434+00:00"
         }
-      ]
+      ],
+      "ended_at": "2026-10-28T16:30:00.000193+00:00"
     },
     "last_live_validation": {
       "status": "passed",
