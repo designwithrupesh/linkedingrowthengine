@@ -4880,12 +4880,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "engagement",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-28T07:27:08.386218+00:00",
       "deadline": "2026-10-28T12:27:08.386218+00:00",
-      "heartbeat_at": "2026-10-28T12:27:03.382053+00:00",
-      "cycles": 18,
+      "heartbeat_at": "2026-10-28T12:27:08.717644+00:00",
+      "cycles": 19,
       "sessions": 1,
       "recent_errors": [
         {
