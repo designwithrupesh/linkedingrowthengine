@@ -4773,8 +4773,8 @@
       "status": "running",
       "started_at": "2026-10-28T12:27:56.329365+00:00",
       "deadline": "2026-10-28T22:00:00+05:30",
-      "heartbeat_at": "2026-10-28T13:43:03.107289+00:00",
-      "cycles": 16,
+      "heartbeat_at": "2026-10-28T13:48:03.233977+00:00",
+      "cycles": 17,
       "recent_errors": [
         {
           "phase": "next-day-posts",
@@ -4923,28 +4923,6 @@
       "shreyasdoshi": "2026-10-26T14:05:13.628675+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518669058066563072/",
-        "urn": "urn:li:share:7518669056976072704",
-        "shareUrn": "urn:li:share:7518669056976072704",
-        "text": "DESIGN ≃ ENGINEERING: Opening lecture for the Dyson School of Engineering earlier this month where I reviewed a variety of thoughts I've had over the years in a 43-minute looooong talk: https://lnkd.in/gnDNDf4B\n\nKey takeaways: \n\n- Design and engineering meet in making. \n- Good design makes new technology familiar and useful. \n- AI is changing the work: adapt, and remember it isn’t alive. \n- Makers need to understand people and communicate. \n- Make the most of your time. \n\n---\n\nIn the event you have a lot of time 📺: https://lnkd.in/gnDNDf4B",
-        "authorName": "John Maeda",
-        "authorHeadline": "AI @ GITHUB × MSFT / Laws of Simplicity + How To Speak Machine / LinkedIn Top US Influencer",
-        "authorProfileUrl": "https://www.linkedin.com/in/johnmaeda/",
-        "postedAtISO": "2026-10-21T13:46:33.559000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/johnmaeda/",
-        "identity_aliases": [
-          "urn:li:activity:7518669058066563072",
-          "urn:li:share:7518669056976072704"
-        ],
-        "first_seen_at": "2026-10-21T15:35:18.903690+00:00",
-        "cached_at": "2026-10-25T14:50:50.350226+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519600916224991233/",
         "urn": "urn:li:ugcPost:7519600915646103554",
