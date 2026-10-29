@@ -4618,7 +4618,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-10-29T14:01:50.918351+00:00",
+        "last_considered_at": "2026-10-29T14:36:53.063417+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T14:01:50.918351+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4666,12 +4666,12 @@
         "last_checked_at": "2026-10-29T13:56:50.644099+00:00"
       },
       "urn:li:share:7517789140952784896": {
-        "last_considered_at": "2026-10-29T14:01:50.918351+00:00",
+        "last_considered_at": "2026-10-29T14:36:53.063417+00:00",
         "changed_at": "2026-10-19T06:53:51.766653+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T12:15:04.021415+00:00"
+        "last_checked_at": "2026-10-29T14:36:53.063417+00:00"
       },
       "urn:li:share:7517925295543328768": {
         "last_considered_at": "2026-10-29T14:26:52.509146+00:00",
@@ -4698,7 +4698,7 @@
         "last_checked_at": "2026-10-29T12:20:04.239242+00:00"
       },
       "urn:li:share:7518513915064954881": {
-        "last_considered_at": "2026-10-29T14:01:50.918351+00:00",
+        "last_considered_at": "2026-10-29T14:36:53.063417+00:00",
         "changed_at": "2026-10-21T07:30:33.190407+00:00",
         "count": 0,
         "cached": false,
@@ -4754,7 +4754,7 @@
         "last_checked_at": "2026-10-29T13:31:49.183607+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_considered_at": "2026-10-29T14:06:51.282179+00:00",
+        "last_considered_at": "2026-10-29T14:36:53.063417+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T13:36:49.460695+00:00",
         "changed_at": "2026-10-29T01:59:30.942941+00:00",
@@ -4770,9 +4770,9 @@
         "last_checked_at": "2026-10-29T14:21:52.100160+00:00"
       },
       "urn:li:ugcPost:7521548937778913280": {
-        "last_considered_at": "2026-10-29T14:06:51.282179+00:00",
+        "last_considered_at": "2026-10-29T14:36:53.063417+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T12:35:06.204097+00:00"
+        "last_checked_at": "2026-10-29T14:36:53.063417+00:00"
       }
     },
     "statistics_cooldown": {
