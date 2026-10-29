@@ -4139,13 +4139,14 @@
     {
       "id": "6ade4fcd21af69534cd33993",
       "text": "Give the first designer a boundary they can work inside.\n\nA checkout review can have an owner, a checkpoint and an explicit list of work that will wait. 'Own design' leaves all of that open.\n\nThe attached scope sheet is fillable. Use it with the founder and engineering lead before turning the role into a list of deliverables.\n\nDownload the worksheet: https://raw.githubusercontent.com/designwithrupesh/linkedingrowthengine/main/resources/linkedin/oct26/first-design-hire-scope.pdf",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7521548937778913280/",
       "at": "2026-10-25T18:51:55.796815+00:00",
       "scheduled_for": "2026-10-29T12:30:00+00:00",
       "allocation_day": "2026-10-29",
       "media_status": "scheduled",
       "format": "freebie",
-      "asset_sha256": "ee862d94809959174ffd5bbcf0525a7fc182242386371ba2ccb71578963b8ca0"
+      "asset_sha256": "ee862d94809959174ffd5bbcf0525a7fc182242386371ba2ccb71578963b8ca0",
+      "post_urn": "urn:li:ugcPost:7521548937778913280"
     },
     {
       "id": "6adee111ed849b64de3fba47",
