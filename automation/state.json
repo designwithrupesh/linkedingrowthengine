@@ -4919,12 +4919,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-29T03:30:07.924326+00:00",
       "deadline": "2026-10-29T08:30:07.924326+00:00",
-      "heartbeat_at": "2026-10-29T08:15:13.947559+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-10-29T08:30:08.219777+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
