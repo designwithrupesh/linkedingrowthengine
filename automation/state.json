@@ -4570,9 +4570,9 @@
         "cached": false
       },
       "urn:li:share:7515614827323740160": {
-        "last_considered_at": "2026-10-29T12:00:03.438567+00:00",
+        "last_considered_at": "2026-10-29T12:35:06.204097+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T10:30:51.179737+00:00",
+        "last_checked_at": "2026-10-29T12:35:06.204097+00:00",
         "changed_at": "2026-10-16T02:59:46.639744+00:00",
         "count": 0,
         "cached": false
@@ -4650,7 +4650,7 @@
         "last_checked_at": "2026-10-29T11:30:02.246103+00:00"
       },
       "urn:li:share:7517426754408534016": {
-        "last_considered_at": "2026-10-29T12:05:03.654138+00:00",
+        "last_considered_at": "2026-10-29T12:35:06.204097+00:00",
         "changed_at": "2026-10-18T05:18:29.395764+00:00",
         "count": 0,
         "cached": false,
@@ -4722,9 +4722,9 @@
         "last_checked_at": "2026-10-29T11:35:02.434312+00:00"
       },
       "urn:li:ugcPost:7520461780251205633": {
-        "last_considered_at": "2026-10-29T12:00:03.438567+00:00",
+        "last_considered_at": "2026-10-29T12:35:06.204097+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T10:30:51.179737+00:00",
+        "last_checked_at": "2026-10-29T12:35:06.204097+00:00",
         "changed_at": "2026-10-27T01:22:30.521786+00:00",
         "count": 0,
         "cached": false
@@ -4754,7 +4754,7 @@
         "last_checked_at": "2026-10-29T11:30:02.246103+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_considered_at": "2026-10-29T12:05:03.654138+00:00",
+        "last_considered_at": "2026-10-29T12:35:06.204097+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T11:35:02.434312+00:00",
         "changed_at": "2026-10-29T01:59:30.942941+00:00",
@@ -4768,6 +4768,11 @@
         "cached": false,
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T12:20:04.239242+00:00"
+      },
+      "urn:li:ugcPost:7521548937778913280": {
+        "last_considered_at": "2026-10-29T12:35:06.204097+00:00",
+        "status": "fallback-statistics-cooldown",
+        "last_checked_at": "2026-10-29T12:35:06.204097+00:00"
       }
     },
     "statistics_cooldown": {
