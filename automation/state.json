@@ -4923,8 +4923,8 @@
       "phase": "maintenance",
       "started_at": "2026-10-29T08:30:47.536527+00:00",
       "deadline": "2026-10-29T13:30:47.536527+00:00",
-      "heartbeat_at": "2026-10-29T10:30:49.321618+00:00",
-      "cycles": 8,
+      "heartbeat_at": "2026-10-29T10:45:49.494003+00:00",
+      "cycles": 9,
       "sessions": 0,
       "recent_errors": [
         {
