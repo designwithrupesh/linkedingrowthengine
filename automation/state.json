@@ -4514,7 +4514,7 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-29T12:55:05.790335+00:00",
+        "last_considered_at": "2026-10-29T13:31:49.183607+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T12:55:05.790335+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
@@ -4538,7 +4538,7 @@
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-10-29T12:55:05.790335+00:00",
+        "last_considered_at": "2026-10-29T13:31:49.183607+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
@@ -4682,15 +4682,15 @@
         "last_checked_at": "2026-10-29T12:55:05.790335+00:00"
       },
       "urn:li:share:7518151781109932032": {
-        "last_considered_at": "2026-10-29T13:00:06.025576+00:00",
+        "last_considered_at": "2026-10-29T13:31:49.183607+00:00",
         "changed_at": "2026-10-20T07:27:07.271248+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T11:30:02.246103+00:00"
+        "last_checked_at": "2026-10-29T13:31:49.183607+00:00"
       },
       "urn:li:share:7518287426079948800": {
-        "last_considered_at": "2026-10-29T12:55:05.790335+00:00",
+        "last_considered_at": "2026-10-29T13:31:49.183607+00:00",
         "changed_at": "2026-10-20T12:54:12.650594+00:00",
         "count": 0,
         "cached": false,
@@ -4746,12 +4746,12 @@
         "cached": false
       },
       "urn:li:share:7521050633118830592": {
-        "last_considered_at": "2026-10-29T13:00:06.025576+00:00",
+        "last_considered_at": "2026-10-29T13:31:49.183607+00:00",
         "changed_at": "2026-10-28T03:41:24.070996+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T11:30:02.246103+00:00"
+        "last_checked_at": "2026-10-29T13:31:49.183607+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
         "last_considered_at": "2026-10-29T13:05:06.275157+00:00",
