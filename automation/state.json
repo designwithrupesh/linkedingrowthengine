@@ -4514,7 +4514,7 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-10-29T15:35:03.970074+00:00",
+        "last_considered_at": "2026-10-29T16:05:05.483701+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T15:05:01.513748+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
@@ -4546,7 +4546,7 @@
         "last_checked_at": "2026-10-29T14:41:53.411117+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
+        "last_considered_at": "2026-10-29T16:05:05.483701+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T14:51:54.070665+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
@@ -4586,7 +4586,7 @@
         "cached": false
       },
       "urn:li:share:7515977197396844546": {
-        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
+        "last_considered_at": "2026-10-29T16:05:05.483701+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T15:30:03.478324+00:00",
         "changed_at": "2026-10-16T02:59:46.639744+00:00",
@@ -4642,12 +4642,12 @@
         "last_checked_at": "2026-10-29T15:55:04.874311+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
+        "last_considered_at": "2026-10-29T16:05:05.483701+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T13:41:49.805578+00:00"
+        "last_checked_at": "2026-10-29T16:05:05.483701+00:00"
       },
       "urn:li:share:7517426754408534016": {
         "last_considered_at": "2026-10-29T15:45:04.290217+00:00",
@@ -4746,7 +4746,7 @@
         "cached": false
       },
       "urn:li:share:7521050633118830592": {
-        "last_considered_at": "2026-10-29T15:35:03.970074+00:00",
+        "last_considered_at": "2026-10-29T16:05:05.483701+00:00",
         "changed_at": "2026-10-28T03:41:24.070996+00:00",
         "count": 0,
         "cached": false,
