@@ -4115,13 +4115,14 @@
     {
       "id": "6ade4eeeed849b64de3b8770",
       "text": "Keep the type decisions attached to the label.\n\nIn Penpot's Inspect view, 'Services' sits beside its font, weight and line-height. The next person can read the values behind this bit of the interface instead of measuring a picture.\n\nOfficial Penpot screenshot:\nhttps://penpot.app/blog/declarative-design-with-penpot/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7521413031172517888/",
       "at": "2026-10-25T18:48:04.748351+00:00",
       "scheduled_for": "2026-10-29T03:30:00+00:00",
       "allocation_day": "2026-10-29",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e"
+      "asset_sha256": "1102113f5cf7a92bdb2b60f149dfa10ceb1f6d71283116954d40351c3d77099e",
+      "post_urn": "urn:li:share:7521413031172517888"
     },
     {
       "id": "6ade4fb821af69534cd33884",
