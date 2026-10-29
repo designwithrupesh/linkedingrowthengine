@@ -4546,7 +4546,7 @@
         "last_checked_at": "2026-10-29T14:41:53.411117+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-10-29T14:51:54.070665+00:00",
+        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T14:51:54.070665+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
@@ -4586,15 +4586,15 @@
         "cached": false
       },
       "urn:li:share:7515977197396844546": {
-        "last_considered_at": "2026-10-29T14:51:54.070665+00:00",
+        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-29T13:05:06.275157+00:00",
+        "last_checked_at": "2026-10-29T15:30:03.478324+00:00",
         "changed_at": "2026-10-16T02:59:46.639744+00:00",
         "count": 0,
         "cached": false
       },
       "urn:li:ugcPost:7516113634779901952": {
-        "last_considered_at": "2026-10-29T15:00:01.218696+00:00",
+        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-29T14:26:52.509146+00:00",
         "changed_at": "2026-10-15T00:15:43.176519+00:00",
@@ -4642,7 +4642,7 @@
         "last_checked_at": "2026-10-29T13:46:50.070536+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-10-29T14:51:54.070665+00:00",
+        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
@@ -4674,7 +4674,7 @@
         "last_checked_at": "2026-10-29T14:36:53.063417+00:00"
       },
       "urn:li:share:7517925295543328768": {
-        "last_considered_at": "2026-10-29T15:00:01.218696+00:00",
+        "last_considered_at": "2026-10-29T15:30:03.478324+00:00",
         "changed_at": "2026-10-19T14:18:17.451973+00:00",
         "count": 0,
         "cached": false,
