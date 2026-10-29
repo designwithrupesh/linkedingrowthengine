@@ -4920,11 +4920,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-10-29T08:30:47.536527+00:00",
       "deadline": "2026-10-29T13:30:47.536527+00:00",
-      "heartbeat_at": "2026-10-29T11:15:49.867137+00:00",
-      "cycles": 11,
+      "heartbeat_at": "2026-10-29T11:30:00.175352+00:00",
+      "cycles": 12,
       "sessions": 0,
       "recent_errors": [
         {
@@ -4951,6 +4951,11 @@
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-10-29T11:02:12.546923+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-10-29T11:18:24.133875+00:00"
         }
       ]
     },
