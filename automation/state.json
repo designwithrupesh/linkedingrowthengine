@@ -4924,10 +4924,16 @@
       "phase": "maintenance",
       "started_at": "2026-10-29T13:31:46.301220+00:00",
       "deadline": "2026-10-29T18:31:46.301220+00:00",
-      "heartbeat_at": "2026-10-29T17:00:02.782132+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-10-29T17:15:03.094817+00:00",
+      "cycles": 4,
       "sessions": 1,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-10-29T17:02:03.169766+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
