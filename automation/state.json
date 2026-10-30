@@ -4803,8 +4803,8 @@
       "status": "running",
       "started_at": "2026-10-30T14:35:37.266206+00:00",
       "deadline": "2026-10-30T22:00:00+05:30",
-      "heartbeat_at": "2026-10-30T14:45:41.219751+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-10-30T14:50:41.492671+00:00",
+      "cycles": 4,
       "recent_errors": [
         {
           "phase": "next-day-posts",
