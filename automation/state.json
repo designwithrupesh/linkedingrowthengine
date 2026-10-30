@@ -4928,15 +4928,10 @@
       "phase": "maintenance",
       "started_at": "2026-10-29T23:33:20.574797+00:00",
       "deadline": "2026-10-30T04:33:20.574797+00:00",
-      "heartbeat_at": "2026-10-30T03:33:24.956359+00:00",
-      "cycles": 16,
+      "heartbeat_at": "2026-10-30T03:48:25.218001+00:00",
+      "cycles": 17,
       "sessions": 0,
       "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-10-30T01:06:09.761442+00:00"
-        },
         {
           "phase": "maintenance",
           "type": "RuntimeError",
@@ -4961,6 +4956,11 @@
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-10-30T03:19:11.238452+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-10-30T03:34:18.332400+00:00"
         }
       ]
     },
