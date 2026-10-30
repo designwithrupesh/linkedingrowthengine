@@ -4800,39 +4800,18 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-30T11:30:01.443348+00:00",
-      "deadline": "2026-10-30T20:04:01.443348+05:30",
-      "heartbeat_at": "2026-10-30T14:30:41.945661+00:00",
-      "cycles": 37,
+      "status": "running",
+      "started_at": "2026-10-30T14:35:37.266206+00:00",
+      "deadline": "2026-10-30T22:00:00+05:30",
+      "heartbeat_at": "2026-10-30T14:40:29.389901+00:00",
+      "cycles": 1,
       "recent_errors": [
         {
           "phase": "next-day-posts",
           "type": "VisualAssetError",
-          "at": "2026-10-30T11:36:50.645496+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-30T12:37:02.057975+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-30T13:08:25.415042+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-30T13:21:28.228383+00:00"
-        },
-        {
-          "phase": "post",
-          "type": "LocalModelError",
-          "at": "2026-10-30T13:42:32.899759+00:00"
+          "at": "2026-10-30T14:40:29.104730+00:00"
         }
-      ],
-      "ended_at": "2026-10-30T14:34:01.443542+00:00"
+      ]
     },
     "last_live_validation": {
       "status": "passed",
