@@ -4539,7 +4539,7 @@
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-10-30T12:20:04.426565+00:00",
+        "last_considered_at": "2026-10-30T12:55:06.028404+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
@@ -4611,7 +4611,7 @@
         "last_checked_at": "2026-10-30T11:30:02.407782+00:00"
       },
       "urn:li:share:7516475491210555392": {
-        "last_considered_at": "2026-10-30T12:20:04.426565+00:00",
+        "last_considered_at": "2026-10-30T12:55:06.028404+00:00",
         "status": "fallback-statistics-cooldown",
         "last_checked_at": "2026-10-30T11:45:03.017264+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4635,7 +4635,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_considered_at": "2026-10-30T12:20:04.426565+00:00",
+        "last_considered_at": "2026-10-30T12:55:06.028404+00:00",
         "changed_at": "2026-10-17T05:05:50.925122+00:00",
         "count": 0,
         "cached": false,
@@ -4691,7 +4691,7 @@
         "last_checked_at": "2026-10-30T11:50:03.193929+00:00"
       },
       "urn:li:share:7518287426079948800": {
-        "last_considered_at": "2026-10-30T12:20:04.426565+00:00",
+        "last_considered_at": "2026-10-30T12:55:06.028404+00:00",
         "changed_at": "2026-10-20T12:54:12.650594+00:00",
         "count": 0,
         "cached": false,
@@ -4771,9 +4771,9 @@
         "last_checked_at": "2026-10-30T12:15:04.181040+00:00"
       },
       "urn:li:ugcPost:7521548937778913280": {
-        "last_considered_at": "2026-10-30T12:25:04.583708+00:00",
+        "last_considered_at": "2026-10-30T12:55:06.028404+00:00",
         "status": "fallback-statistics-cooldown",
-        "last_checked_at": "2026-10-30T10:49:50.910632+00:00",
+        "last_checked_at": "2026-10-30T12:55:06.028404+00:00",
         "changed_at": "2026-10-30T02:03:25.036501+00:00",
         "count": 0,
         "cached": false
