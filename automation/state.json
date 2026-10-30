@@ -4151,13 +4151,14 @@
     {
       "id": "6adee111ed849b64de3fba47",
       "text": "An automation setup should leave something you can come back to.\n\nLinear's Slack reply says it will post customer follow-ups here after each relevant merge. I like having that promise in the same place as the request.\n\nOfficial Linear demo:\nhttps://linear.app/changelog/2026-10-22-slack-and-github-loops",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7521775415846367232/",
       "at": "2026-10-26T05:11:41.378146+00:00",
       "scheduled_for": "2026-10-30T03:30:00+00:00",
       "allocation_day": "2026-10-30",
       "media_status": "scheduled",
       "format": "image",
-      "asset_sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06"
+      "asset_sha256": "13a90548dd88dbb07e979b15247453bcde90502ec0f7838c66ba0b00a9501f06",
+      "post_urn": "urn:li:share:7521775415846367232"
     },
     {
       "id": "6ae0ee1c8b896170867b44a6",
