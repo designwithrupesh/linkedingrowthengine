@@ -4942,12 +4942,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "engagement",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-30T09:34:47.887363+00:00",
       "deadline": "2026-10-30T14:34:47.887363+00:00",
-      "heartbeat_at": "2026-10-30T14:34:03.899166+00:00",
-      "cycles": 9,
+      "heartbeat_at": "2026-10-30T14:34:48.095728+00:00",
+      "cycles": 10,
       "sessions": 1,
       "recent_errors": [
         {
