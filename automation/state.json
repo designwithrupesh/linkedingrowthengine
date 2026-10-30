@@ -4800,29 +4800,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-29T13:31:48.007357+00:00",
-      "deadline": "2026-10-29T22:00:00+05:30",
-      "heartbeat_at": "2026-10-29T16:25:41.363965+00:00",
-      "cycles": 35,
-      "recent_errors": [
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-29T14:59:29.533888+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-29T15:13:36.879185+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "LocalModelError",
-          "at": "2026-10-29T15:24:57.888470+00:00"
-        }
-      ],
-      "ended_at": "2026-10-29T16:30:00.000179+00:00"
+      "status": "running",
+      "started_at": "2026-10-30T11:30:01.443348+00:00",
+      "deadline": "2026-10-30T20:04:01.443348+05:30",
+      "heartbeat_at": "2026-10-30T11:30:03.866473+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -5040,28 +5023,6 @@
           "urn:li:share:7519491913964756992"
         ],
         "first_seen_at": "2026-10-25T14:15:45.018903+00:00",
-        "cached_at": "2026-10-26T14:20:13.545433+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519113092664872960/",
-        "urn": "urn:li:share:7519113091591278595",
-        "shareUrn": "urn:li:share:7519113091591278595",
-        "text": "My favorite PM interview prep resources:\n\n1. Insider Loops: https://lnkd.in/grVvWtis\n\n2. Never Search Alone: https://lnkd.in/gCU-DPki\n\n3. AI Practice Copilot: https://lnkd.in/grFuQ2hV\n\n4. Ultraspeaking: https://lnkd.in/g5xdTC6x\n\n5. How to use AI for your next job interview: https://lnkd.in/gKazY3A5\n\n6. The definitive guide to mastering product sense and analytical thinking interviews: https://lnkd.in/gxt7ghUz & https://lnkd.in/g8DgTQNU",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-22T19:10:59.657000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7519113092664872960",
-          "urn:li:share:7519113091591278595"
-        ],
-        "first_seen_at": "2026-10-23T16:17:54.347221+00:00",
         "cached_at": "2026-10-26T14:20:13.545433+00:00",
         "quality_decision": {
           "eligible": true,
