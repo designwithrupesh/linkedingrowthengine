@@ -4932,12 +4932,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-29T23:33:20.574797+00:00",
       "deadline": "2026-10-30T04:33:20.574797+00:00",
-      "heartbeat_at": "2026-10-30T04:18:25.707293+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-10-30T04:33:20.828572+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
