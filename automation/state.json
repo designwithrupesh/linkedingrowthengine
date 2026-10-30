@@ -4803,13 +4803,18 @@
       "status": "running",
       "started_at": "2026-10-30T14:35:37.266206+00:00",
       "deadline": "2026-10-30T22:00:00+05:30",
-      "heartbeat_at": "2026-10-30T15:00:42.374445+00:00",
-      "cycles": 6,
+      "heartbeat_at": "2026-10-30T15:10:50.151901+00:00",
+      "cycles": 7,
       "recent_errors": [
         {
           "phase": "next-day-posts",
           "type": "VisualAssetError",
           "at": "2026-10-30T14:40:29.104730+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "LocalModelError",
+          "at": "2026-10-30T15:10:49.800922+00:00"
         }
       ]
     },
