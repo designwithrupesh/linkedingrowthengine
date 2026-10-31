@@ -3652,11 +3652,14 @@
       "kind": "post",
       "text": "The shift from 'user experience' to 'experience design' in the Nielsen Norman Group article feels like a necessary evolution. It acknowledges that design now includes agents acting on behalf of people, not just humans. That’s a concrete visual shift in how we frame the field: the term 'user' is dropped, not because it’s obsolete, but because experience is now about human goals through interactions with systems and agents. The focus stays on purpose, not just human presence. That’s a stronger design foundation.\n\nSource: https://www.nngroup.com/articles/ux-vs-experience-design/",
       "at": "2026-10-31T18:30:04.243097+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-04T03:30:00+00:00",
-      "allocation_day": "2026-11-04"
+      "allocation_day": "2026-11-04",
+      "http_status": 200,
+      "remote_id": "6ae633e833575169fb3f17e9",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4188,6 +4191,14 @@
       "scheduled_for": "2026-10-31T03:30:00+00:00",
       "allocation_day": "2026-10-31",
       "post_urn": "urn:li:share:7522137783054864384"
+    },
+    {
+      "id": "6ae633e833575169fb3f17e9",
+      "text": "The shift from 'user experience' to 'experience design' in the Nielsen Norman Group article feels like a necessary evolution. It acknowledges that design now includes agents acting on behalf of people, not just humans. That’s a concrete visual shift in how we frame the field: the term 'user' is dropped, not because it’s obsolete, but because experience is now about human goals through interactions with systems and agents. The focus stays on purpose, not just human presence. That’s a stronger design foundation.\n\nSource: https://www.nngroup.com/articles/ux-vs-experience-design/",
+      "url": null,
+      "at": "2026-10-31T18:30:04.243097+00:00",
+      "scheduled_for": "2026-11-04T03:30:00+00:00",
+      "allocation_day": "2026-11-04"
     }
   ],
   "discovery": {
