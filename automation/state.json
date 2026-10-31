@@ -4812,8 +4812,8 @@
       "status": "running",
       "started_at": "2026-10-31T15:39:29.233637+00:00",
       "deadline": "2026-10-31T22:00:00+05:30",
-      "heartbeat_at": "2026-10-31T15:49:31.248732+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-10-31T15:54:31.388788+00:00",
+      "cycles": 4,
       "recent_errors": []
     },
     "last_live_validation": {
