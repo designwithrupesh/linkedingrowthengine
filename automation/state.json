@@ -4812,14 +4812,9 @@
       "status": "running",
       "started_at": "2026-10-31T11:30:01.519594+00:00",
       "deadline": "2026-10-31T21:08:01.519594+05:30",
-      "heartbeat_at": "2026-10-31T14:50:17.881521+00:00",
-      "cycles": 41,
+      "heartbeat_at": "2026-10-31T14:57:05.839691+00:00",
+      "cycles": 42,
       "recent_errors": [
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-31T11:42:20.699081+00:00"
-        },
         {
           "phase": "next-day-posts",
           "type": "VisualAssetError",
@@ -4844,6 +4839,11 @@
           "phase": "next-day-posts",
           "type": "VisualAssetError",
           "at": "2026-10-31T14:42:34.390062+00:00"
+        },
+        {
+          "phase": "next-day-posts",
+          "type": "VisualAssetError",
+          "at": "2026-10-31T14:57:05.760377+00:00"
         }
       ]
     },
