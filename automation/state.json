@@ -4809,12 +4809,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-10-31T15:39:29.233637+00:00",
       "deadline": "2026-10-31T22:00:00+05:30",
       "heartbeat_at": "2026-10-31T16:29:32.489151+00:00",
       "cycles": 11,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-10-31T16:30:00.000133+00:00"
     },
     "last_live_validation": {
       "status": "passed",
