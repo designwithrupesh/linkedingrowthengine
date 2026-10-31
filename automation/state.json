@@ -4926,12 +4926,12 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
+      "phase": "maintenance",
       "started_at": "2026-10-31T15:39:27.702772+00:00",
       "deadline": "2026-10-31T20:39:27.702772+00:00",
-      "heartbeat_at": "2026-10-31T15:39:28.161375+00:00",
-      "cycles": 0,
-      "sessions": 0,
+      "heartbeat_at": "2026-10-31T16:30:01.324292+00:00",
+      "cycles": 1,
+      "sessions": 1,
       "recent_errors": []
     },
     "queue_preparation": {
