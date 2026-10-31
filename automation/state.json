@@ -4809,29 +4809,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-10-30T14:35:37.266206+00:00",
-      "deadline": "2026-10-30T22:00:00+05:30",
-      "heartbeat_at": "2026-10-30T16:25:59.835876+00:00",
-      "cycles": 23,
-      "recent_errors": [
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-30T14:40:29.104730+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "LocalModelError",
-          "at": "2026-10-30T15:10:49.800922+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-10-30T15:23:12.209517+00:00"
-        }
-      ],
-      "ended_at": "2026-10-30T16:30:00.000172+00:00"
+      "status": "running",
+      "started_at": "2026-10-31T11:30:01.519594+00:00",
+      "deadline": "2026-10-31T21:08:01.519594+05:30",
+      "heartbeat_at": "2026-10-31T11:30:04.405816+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -4985,28 +4968,6 @@
     },
     "targets": [
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519600916224991233/",
-        "urn": "urn:li:ugcPost:7519600915646103554",
-        "shareUrn": "urn:li:ugcPost:7519600915646103554",
-        "text": "Many teams are now feeling this. Nothing better than @linear for your agents, Jira is not the place.\n\nEven new ones like Grok Bot just grok how to use it. Simple, well-defined primitives and workflows that make sense for agents and humans.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-10-24T03:29:25.857000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7519600916224991233",
-          "urn:li:ugcPost:7519600915646103554"
-        ],
-        "first_seen_at": "2026-10-25T13:55:44.159559+00:00",
-        "cached_at": "2026-10-26T14:00:12.142624+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7520207763990331392/",
         "urn": "urn:li:ugcPost:7520207689038135297",
         "shareUrn": "urn:li:ugcPost:7520207689038135297",
@@ -5026,28 +4987,6 @@
         "quality_decision": {
           "eligible": false,
           "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519491915050811392/",
-        "urn": "urn:li:share:7519491913964756992",
-        "shareUrn": "urn:li:share:7519491913964756992",
-        "text": "Share your best AI workflow and get featured in my newsletter!\n\nWe're all sick of overhyped AI demos and workflows. Stuff that looks/sounds amazing but doesn't actually work. This project we're calling \"Hype(less)\" aims to collect and share the most real, impactful, and repeatable AI workflows that have created real value for you and your teams. \n\nYou have until Friday, Oct 30th to submit your entry: https://tally.so/r/dWL6Xd",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-23T20:16:17.952000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7519491915050811392",
-          "urn:li:share:7519491913964756992"
-        ],
-        "first_seen_at": "2026-10-25T14:15:45.018903+00:00",
-        "cached_at": "2026-10-26T14:20:13.545433+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
         }
       }
     ],
