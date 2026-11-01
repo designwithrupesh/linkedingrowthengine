@@ -4866,12 +4866,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-11-01T11:30:01.207374+00:00",
       "deadline": "2026-11-01T17:11:01.207374+05:30",
       "heartbeat_at": "2026-11-01T11:40:05.146897+00:00",
       "cycles": 3,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-11-01T11:41:01.207547+00:00"
     },
     "last_live_validation": {
       "status": "passed",
