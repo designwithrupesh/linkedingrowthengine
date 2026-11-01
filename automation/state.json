@@ -4956,12 +4956,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-10-31T20:40:03.148613+00:00",
       "deadline": "2026-11-01T01:40:03.148613+00:00",
-      "heartbeat_at": "2026-11-01T01:25:06.836183+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-01T01:40:03.329073+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
