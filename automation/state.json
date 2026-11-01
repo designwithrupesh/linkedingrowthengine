@@ -3756,12 +3756,13 @@
         "page_count": 1,
         "format": "image",
         "file_name": "check-the-next-customer-decision.png",
-        "size_bytes": 88915
+        "size_bytes": 88915,
+        "media_id": "6ae7c945110c9c4a3eb586d6"
       },
       "media_scheduled_for": "2026-11-02T12:30:00Z",
       "media_operation_id": "8c1c3d619c29a1c1a3015948ffff4a89fa708dc86be357905f861d4be1a84a0b",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6ae7c94333575169fb4a4990"
     }
