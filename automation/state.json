@@ -3673,6 +3673,16 @@
       "http_status": 200,
       "remote_id": "6ae6e335110c9c4a3eae6c44",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-05:0900": {
+      "kind": "post",
+      "text": "The idea of a monthly wallpaper collection feels like a design habit, not a feature. A static collection of images with no layout behavior or interaction makes it feel like content, not design. If the goal is to influence user experience, the layout should respond to context or behavior. For example, a wallpaper that changes based on time of day or user activity would be more than a visual treat. Right now, it's just a set of images. That’s not a design insight; it’s a design artifact.\n\nSource: https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+      "at": "2026-11-01T19:27:50.909470+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-05T03:30:00+00:00",
+      "allocation_day": "2026-11-05"
     }
   },
   "days": {
@@ -3822,6 +3832,11 @@
     },
     "2026-11-02": {
       "post": 0,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-11-05": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
