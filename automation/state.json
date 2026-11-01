@@ -3747,7 +3747,21 @@
             }
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "7db08dbddc48bed2d5f0420b4b0d7fe4673703703c3c3763c9d995744d9aef3d",
+        "mime_type": "image/png",
+        "title": "Check the next customer decision",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "check-the-next-customer-decision.png",
+        "size_bytes": 88915
+      },
+      "media_scheduled_for": "2026-11-02T12:30:00Z",
+      "media_operation_id": "8c1c3d619c29a1c1a3015948ffff4a89fa708dc86be357905f861d4be1a84a0b",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
