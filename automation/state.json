@@ -4869,8 +4869,8 @@
       "status": "running",
       "started_at": "2026-11-01T11:42:00.166998+00:00",
       "deadline": "2026-11-01T22:00:00+05:30",
-      "heartbeat_at": "2026-11-01T13:22:08.220336+00:00",
-      "cycles": 21,
+      "heartbeat_at": "2026-11-01T13:27:08.334291+00:00",
+      "cycles": 22,
       "recent_errors": [
         {
           "phase": "next-day-posts",
