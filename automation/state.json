@@ -3686,6 +3686,68 @@
       "http_status": 200,
       "remote_id": "6ae792e833575169fb488dbc",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-02:1800": {
+      "kind": "post",
+      "text": "I'd show the next available time before opening the calendar.",
+      "at": "2026-11-01T23:13:29.038057+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-02T12:30:00+00:00",
+      "allocation_day": "2026-11-02",
+      "format": "image",
+      "asset_id": "visual-2026-11-02-1800-image",
+      "asset_sha256": "7db08dbddc48bed2d5f0420b4b0d7fe4673703703c3c3763c9d995744d9aef3d",
+      "asset_title": "Check the next customer decision",
+      "asset_pages": 1,
+      "asset_spec": {
+        "id": "visual-2026-11-02-1800-image",
+        "kind": "image",
+        "title": "Check the next customer decision",
+        "subtitle": "Hypothetical example: choosing a time",
+        "caption": "I'd show the next available time before opening the calendar.",
+        "slides": [
+          {
+            "title": "When a customer is confused",
+            "body": [
+              "They don't know what the product does",
+              "They can't see how it solves their problem"
+            ],
+            "example": "",
+            "layout": "annotated-ui",
+            "visual": {
+              "screens": [
+                {
+                  "label": "Customer view",
+                  "title": "Booking screen",
+                  "rows": [
+                    "What time would you like to book?",
+                    "Available slots: 10:00, 11:30, 14:00"
+                  ],
+                  "action": "Book this time"
+                },
+                {
+                  "label": "After change",
+                  "title": "With time suggestion",
+                  "rows": [
+                    "Next available: 11:30",
+                    "What time would you like to book?",
+                    "Available slots: 10:00, 11:30, 14:00"
+                  ],
+                  "action": "Book this time"
+                }
+              ],
+              "annotations": [
+                {
+                  "label": "Suggestion",
+                  "detail": "The next available slot is highlighted first"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -3834,7 +3896,7 @@
       "read": 0
     },
     "2026-11-02": {
-      "post": 0,
+      "post": 1,
       "interaction": 0,
       "read": 0
     },
