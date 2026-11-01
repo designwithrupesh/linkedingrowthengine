@@ -3660,6 +3660,16 @@
       "http_status": 200,
       "remote_id": "6ae633e833575169fb3f17e9",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-03:0900": {
+      "kind": "post",
+      "text": "Penpot’s explanation of declarative design makes sense: instead of writing out every step of how a design should behave, you define what it should achieve. That’s a shift toward clarity and maintainability. I’d prefer to see this in action with a real UI example, like a form that auto-validates based on rules, not hardcoded logic. The idea is solid, but without a concrete case, it’s hard to judge if it actually reduces learning effort.\n\nSource: https://penpot.app/blog/what-is-declarative-design-and-why-is-it-the-future/",
+      "at": "2026-11-01T06:56:20.231300+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-03T03:30:00+00:00",
+      "allocation_day": "2026-11-03"
     }
   },
   "days": {
@@ -3798,6 +3808,11 @@
       "read": 0
     },
     "2026-11-04": {
+      "post": 1,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-11-03": {
       "post": 1,
       "interaction": 0,
       "read": 0
