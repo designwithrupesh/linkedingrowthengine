@@ -3761,8 +3761,8 @@
       },
       "media_scheduled_for": "2026-11-02T12:30:00Z",
       "media_operation_id": "8c1c3d619c29a1c1a3015948ffff4a89fa708dc86be357905f861d4be1a84a0b",
-      "media_stage": "reserve-upload",
-      "media_stage_status": "acknowledged",
+      "media_stage": "upload-bytes",
+      "media_stage_status": "inflight",
       "http_status": 200,
       "remote_id": "6ae7c94333575169fb4a4990"
     }
