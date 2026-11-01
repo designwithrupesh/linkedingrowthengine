@@ -4983,11 +4983,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-11-01T06:41:18.212616+00:00",
       "deadline": "2026-11-01T11:41:18.212616+00:00",
-      "heartbeat_at": "2026-11-01T11:26:21.700588+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-01T11:30:00.164267+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
