@@ -4989,44 +4989,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-11-01T11:42:00.166998+00:00",
-      "deadline": "2026-11-01T22:00:00+05:30",
-      "heartbeat_at": "2026-11-01T16:27:17.167360+00:00",
-      "cycles": 58,
-      "recent_errors": [
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-11-01T12:58:40.189286+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-11-01T13:14:55.213130+00:00"
-        },
-        {
-          "phase": "post",
-          "type": "VisualAssetError",
-          "at": "2026-11-01T13:42:54.620945+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-11-01T14:42:56.201878+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "LocalModelError",
-          "at": "2026-11-01T14:58:44.167894+00:00"
-        },
-        {
-          "phase": "next-day-posts",
-          "type": "VisualAssetError",
-          "at": "2026-11-01T15:13:06.126989+00:00"
-        }
-      ],
-      "ended_at": "2026-11-01T16:30:00.000199+00:00"
+      "status": "running",
+      "started_at": "2026-11-02T11:30:01.973197+00:00",
+      "deadline": "2026-11-02T18:15:01.973197+05:30",
+      "heartbeat_at": "2026-11-02T11:30:06.395863+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
@@ -5162,30 +5130,7 @@
       "karrisaarinen": "2026-10-26T14:00:12.142624+00:00",
       "shreyasdoshi": "2026-10-26T14:05:13.628675+00:00"
     },
-    "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7520207763990331392/",
-        "urn": "urn:li:ugcPost:7520207689038135297",
-        "shareUrn": "urn:li:ugcPost:7520207689038135297",
-        "text": "An 86-minute guide to finding product-market fit\n\nRob Snyder is the author of The Power of Pull, has helped over 50 startups go from zero to $1M+ ARR, and is the most requested guest by my podcast listeners. \n\nIn this episode, he walks through how to find product-market fit, step by step.\n\nWe discuss:\n🔸 The PULL framework for finding a customer who's \"weird not to buy\"\n🔸 Where the best startup ideas come from\n🔸 The cold outreach message that gets calls\n🔸 How to run your first sales call (and why he skips design partners)\n🔸 The \"Hail Mary\" question and \"goblin mode\"\n\nListen now: https://lnkd.in/gVnBkKtC\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/gRcz3zVk\n• Apple: https://lnkd.in/ggpnj-Sv",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-10-25T19:40:49.639000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7520207763990331392",
-          "urn:li:ugcPost:7520207689038135297"
-        ],
-        "first_seen_at": "2026-10-26T14:20:13.545433+00:00",
-        "cached_at": "2026-10-26T14:20:13.545433+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      }
-    ],
+    "targets": [],
     "deferred_until": {
       "urn:li:share:7516512888547627008": "2026-10-17T13:33:08.320715+00:00",
       "urn:li:activity:7516512889588047873": "2026-10-17T13:33:08.320715+00:00"
