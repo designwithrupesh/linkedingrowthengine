@@ -5111,12 +5111,12 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-02T17:47:05.277738+00:00",
-      "deadline": "2026-11-02T22:47:05.277738+00:00",
-      "heartbeat_at": "2026-11-02T22:47:05.614222+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-02T22:47:56.898016+00:00",
+      "deadline": "2026-11-03T03:47:56.898016+00:00",
+      "heartbeat_at": "2026-11-02T22:47:57.483738+00:00",
+      "cycles": 0,
       "sessions": 0,
       "recent_errors": []
     },
