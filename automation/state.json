@@ -5111,13 +5111,13 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-02T07:45:08.034293+00:00",
-      "deadline": "2026-11-02T12:45:08.034293+00:00",
-      "heartbeat_at": "2026-11-02T12:45:08.371786+00:00",
-      "cycles": 17,
-      "sessions": 1,
+      "status": "running",
+      "phase": "engagement",
+      "started_at": "2026-11-02T12:46:04.555683+00:00",
+      "deadline": "2026-11-02T17:46:04.555683+00:00",
+      "heartbeat_at": "2026-11-02T12:46:05.038963+00:00",
+      "cycles": 0,
+      "sessions": 0,
       "recent_errors": []
     },
     "queue_preparation": {
