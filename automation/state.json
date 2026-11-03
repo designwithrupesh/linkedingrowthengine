@@ -5112,14 +5112,20 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-02T22:47:56.898016+00:00",
       "deadline": "2026-11-03T03:47:56.898016+00:00",
-      "heartbeat_at": "2026-11-03T03:33:03.459936+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-03T03:47:57.184909+00:00",
+      "cycles": 20,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-03T03:36:35.722669+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
