@@ -4740,9 +4740,9 @@
         "last_checked_at": "2026-11-03T13:20:06.895833+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-11-03T12:45:05.374811+00:00",
+        "last_considered_at": "2026-11-03T13:25:06.936129+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-03T11:19:45.704692+00:00",
+        "last_checked_at": "2026-11-03T13:25:06.936129+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
         "count": 0,
         "cached": false
@@ -4844,7 +4844,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_considered_at": "2026-11-03T12:50:05.727469+00:00",
+        "last_considered_at": "2026-11-03T13:25:06.936129+00:00",
         "changed_at": "2026-10-17T05:05:50.925122+00:00",
         "count": 0,
         "cached": false,
@@ -4852,12 +4852,12 @@
         "last_checked_at": "2026-11-03T12:50:05.727469+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-11-03T12:45:05.374811+00:00",
+        "last_considered_at": "2026-11-03T13:25:06.936129+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-03T11:19:45.704692+00:00"
+        "last_checked_at": "2026-11-03T13:25:06.936129+00:00"
       },
       "urn:li:share:7517426754408534016": {
         "last_considered_at": "2026-11-03T13:15:06.614987+00:00",
@@ -4892,7 +4892,7 @@
         "last_checked_at": "2026-11-03T13:00:06.100553+00:00"
       },
       "urn:li:share:7518151781109932032": {
-        "last_considered_at": "2026-11-03T12:50:05.727469+00:00",
+        "last_considered_at": "2026-11-03T13:25:06.936129+00:00",
         "changed_at": "2026-10-20T07:27:07.271248+00:00",
         "count": 0,
         "cached": false,
@@ -4972,7 +4972,7 @@
         "cached": false
       },
       "urn:li:share:7521413031172517888": {
-        "last_considered_at": "2026-11-03T12:50:05.727469+00:00",
+        "last_considered_at": "2026-11-03T13:25:06.936129+00:00",
         "changed_at": "2026-10-29T03:30:10.478291+00:00",
         "count": 0,
         "cached": false,
