@@ -5144,11 +5144,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-11-03T08:49:41.889791+00:00",
       "deadline": "2026-11-03T13:49:41.889791+00:00",
-      "heartbeat_at": "2026-11-03T11:19:43.942551+00:00",
-      "cycles": 10,
+      "heartbeat_at": "2026-11-03T11:30:00.172818+00:00",
+      "cycles": 11,
       "sessions": 0,
       "recent_errors": []
     },
