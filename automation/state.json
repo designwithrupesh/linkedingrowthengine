@@ -5027,13 +5027,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-11-03T11:30:01.303150+00:00",
-      "deadline": "2026-11-03T19:19:01.303150+05:30",
-      "heartbeat_at": "2026-11-03T13:45:09.827592+00:00",
-      "cycles": 28,
-      "recent_errors": [],
-      "ended_at": "2026-11-03T13:49:01.303346+00:00"
+      "status": "running",
+      "started_at": "2026-11-03T13:50:28.194897+00:00",
+      "deadline": "2026-11-03T22:00:00+05:30",
+      "heartbeat_at": "2026-11-03T13:50:33.105761+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
