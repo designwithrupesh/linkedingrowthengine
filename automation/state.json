@@ -5030,8 +5030,8 @@
       "status": "running",
       "started_at": "2026-11-03T11:30:01.303150+00:00",
       "deadline": "2026-11-03T19:19:01.303150+05:30",
-      "heartbeat_at": "2026-11-03T11:35:04.362281+00:00",
-      "cycles": 2,
+      "heartbeat_at": "2026-11-03T11:40:04.543502+00:00",
+      "cycles": 3,
       "recent_errors": []
     },
     "last_live_validation": {
