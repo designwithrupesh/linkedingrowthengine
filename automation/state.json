@@ -5027,12 +5027,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-11-03T13:50:28.194897+00:00",
       "deadline": "2026-11-03T22:00:00+05:30",
       "heartbeat_at": "2026-11-03T16:25:51.545696+00:00",
       "cycles": 32,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-11-03T16:30:00.000125+00:00"
     },
     "last_live_validation": {
       "status": "passed",
