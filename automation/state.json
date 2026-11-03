@@ -4325,10 +4325,11 @@
     {
       "id": "6ae6e335110c9c4a3eae6c44",
       "text": "Penpot’s explanation of declarative design makes sense: instead of writing out every step of how a design should behave, you define what it should achieve. That’s a shift toward clarity and maintainability. I’d prefer to see this in action with a real UI example, like a form that auto-validates based on rules, not hardcoded logic. The idea is solid, but without a concrete case, it’s hard to judge if it actually reduces learning effort.\n\nSource: https://penpot.app/blog/what-is-declarative-design-and-why-is-it-the-future/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7523224951345197056/",
       "at": "2026-11-01T06:56:20.231300+00:00",
       "scheduled_for": "2026-11-03T03:30:00+00:00",
-      "allocation_day": "2026-11-03"
+      "allocation_day": "2026-11-03",
+      "post_urn": "urn:li:share:7523224951345197056"
     },
     {
       "id": "6ae792e833575169fb488dbc",
