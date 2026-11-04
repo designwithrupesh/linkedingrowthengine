@@ -5177,28 +5177,12 @@
     "supervisor": {
       "status": "running",
       "phase": "maintenance",
-      "started_at": "2026-11-04T04:52:43.135424+00:00",
-      "deadline": "2026-11-04T09:52:43.135424+00:00",
-      "heartbeat_at": "2026-11-04T09:37:47.901958+00:00",
-      "cycles": 19,
+      "started_at": "2026-11-04T11:00:14.833570+00:00",
+      "deadline": "2026-11-04T16:00:14.833570+00:00",
+      "heartbeat_at": "2026-11-04T11:00:15.229298+00:00",
+      "cycles": 0,
       "sessions": 0,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T05:40:44.470880+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T05:55:12.951456+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T06:10:52.491675+00:00"
-        }
-      ]
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
