@@ -5149,35 +5149,14 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-03T23:52:02.107857+00:00",
-      "deadline": "2026-11-04T04:52:02.107857+00:00",
-      "heartbeat_at": "2026-11-04T04:52:02.340944+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-04T04:52:43.135424+00:00",
+      "deadline": "2026-11-04T09:52:43.135424+00:00",
+      "heartbeat_at": "2026-11-04T04:52:43.623130+00:00",
+      "cycles": 0,
       "sessions": 0,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T03:40:11.061138+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T03:54:30.260588+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T04:10:19.255433+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-04T04:29:55.422266+00:00"
-        }
-      ]
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
