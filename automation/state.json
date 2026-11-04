@@ -3780,6 +3780,16 @@
       "http_status": 200,
       "remote_id": "6ae97ce933575169fb5af3f0",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-07:0900": {
+      "kind": "post",
+      "text": "Splitting logic between CSS and JavaScript to simplify code can feel like a win, but it risks making the overall system harder to understand. The article shows how a small change in CSS can reduce file size or eliminate JS, yet pull logic into the visual layer where it doesn’t belong. That’s not a design gain; it’s a trade-off in maintainability. A recovery path exists only if the team can trace the behavior in the DOM or debug state changes. Without that clarity, the design feels like a technical shortcut, not a thoughtful solution. Source: https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+      "at": "2026-11-04T06:22:46.595230+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-07T03:30:00+00:00",
+      "allocation_day": "2026-11-07"
     }
   },
   "days": {
@@ -3938,6 +3948,11 @@
       "read": 0
     },
     "2026-11-06": {
+      "post": 1,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-11-07": {
       "post": 1,
       "interaction": 0,
       "read": 0
