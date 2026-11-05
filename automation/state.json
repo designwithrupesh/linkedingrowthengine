@@ -3798,11 +3798,14 @@
       "kind": "post",
       "text": "The idea that UX is reduced to AI context in agentic software factories feels like a misstep. If UX has to discover needs, shape the output, and evaluate post-launch, then the user’s voice isn’t just a prompt but a continuous, active part of the loop. That’s not a simplification of UX, it’s a redefinition. The real design question isn’t how to feed AI data, but how to ensure the user’s intent is surfaced, questioned, and validated at every stage. Without that, the system becomes a black box that makes decisions the user didn’t ask for.\n\nSource: https://www.nngroup.com/articles/ux-agentic-software-factories/",
       "at": "2026-11-05T04:20:30.258897+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-08T03:30:00+00:00",
-      "allocation_day": "2026-11-08"
+      "allocation_day": "2026-11-08",
+      "http_status": 200,
+      "remote_id": "6aec0481075cf73235c4f837",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4419,6 +4422,14 @@
       "at": "2026-11-04T06:22:46.595230+00:00",
       "scheduled_for": "2026-11-07T03:30:00+00:00",
       "allocation_day": "2026-11-07"
+    },
+    {
+      "id": "6aec0481075cf73235c4f837",
+      "text": "The idea that UX is reduced to AI context in agentic software factories feels like a misstep. If UX has to discover needs, shape the output, and evaluate post-launch, then the user’s voice isn’t just a prompt but a continuous, active part of the loop. That’s not a simplification of UX, it’s a redefinition. The real design question isn’t how to feed AI data, but how to ensure the user’s intent is surfaced, questioned, and validated at every stage. Without that, the system becomes a black box that makes decisions the user didn’t ask for.\n\nSource: https://www.nngroup.com/articles/ux-agentic-software-factories/",
+      "url": null,
+      "at": "2026-11-05T04:20:30.258897+00:00",
+      "scheduled_for": "2026-11-08T03:30:00+00:00",
+      "allocation_day": "2026-11-08"
     }
   ],
   "discovery": {
