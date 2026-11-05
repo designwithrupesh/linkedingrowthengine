@@ -4786,7 +4786,7 @@
         "cached": false
       },
       "urn:li:share:7514527701878284288": {
-        "last_considered_at": "2026-11-05T13:05:09.533495+00:00",
+        "last_considered_at": "2026-11-05T13:45:12.553922+00:00",
         "changed_at": "2026-10-10T06:04:24.231829+00:00",
         "count": 0,
         "cached": false,
@@ -4890,7 +4890,7 @@
         "cached": false
       },
       "urn:li:share:7516837882951778304": {
-        "last_considered_at": "2026-11-05T13:05:09.533495+00:00",
+        "last_considered_at": "2026-11-05T13:45:12.553922+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T12:25:06.546230+00:00",
         "changed_at": "2026-10-17T00:49:22.690469+00:00",
@@ -4986,7 +4986,7 @@
         "last_checked_at": "2026-11-05T13:15:10.254081+00:00"
       },
       "urn:li:ugcPost:7520461780251205633": {
-        "last_considered_at": "2026-11-05T13:05:09.533495+00:00",
+        "last_considered_at": "2026-11-05T13:45:12.553922+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T12:25:06.546230+00:00",
         "changed_at": "2026-10-27T01:22:30.521786+00:00",
@@ -5018,7 +5018,7 @@
         "last_checked_at": "2026-11-05T12:20:06.350337+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_considered_at": "2026-11-05T13:05:09.533495+00:00",
+        "last_considered_at": "2026-11-05T13:45:12.553922+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T12:25:06.546230+00:00",
         "changed_at": "2026-10-29T01:59:30.942941+00:00",
@@ -5073,9 +5073,9 @@
         "last_checked_at": "2026-11-05T11:40:03.704329+00:00"
       },
       "urn:li:share:7523949728326385664": {
-        "last_considered_at": "2026-11-05T13:10:10.233453+00:00",
+        "last_considered_at": "2026-11-05T13:45:12.553922+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-05T11:22:08.851423+00:00"
+        "last_checked_at": "2026-11-05T13:45:12.553922+00:00"
       }
     },
     "statistics_cooldown": {
