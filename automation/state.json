@@ -5206,12 +5206,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-05T18:42:42.397842+00:00",
       "deadline": "2026-11-05T23:42:42.397842+00:00",
-      "heartbeat_at": "2026-11-05T23:27:49.373247+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-05T23:42:42.676325+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": []
     },
