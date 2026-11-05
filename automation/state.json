@@ -5207,12 +5207,12 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-05T04:36:12.642445+00:00",
-      "deadline": "2026-11-05T09:36:12.642445+00:00",
-      "heartbeat_at": "2026-11-05T09:36:12.991596+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-05T09:37:03.618216+00:00",
+      "deadline": "2026-11-05T14:37:03.618216+00:00",
+      "heartbeat_at": "2026-11-05T09:37:04.024038+00:00",
+      "cycles": 0,
       "sessions": 0,
       "recent_errors": []
     },
