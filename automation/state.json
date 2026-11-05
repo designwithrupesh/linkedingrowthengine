@@ -5207,10 +5207,10 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
-      "started_at": "2026-11-05T14:37:56.909060+00:00",
-      "deadline": "2026-11-05T19:37:56.909060+00:00",
-      "heartbeat_at": "2026-11-05T14:37:57.551233+00:00",
+      "phase": "maintenance",
+      "started_at": "2026-11-05T18:42:42.397842+00:00",
+      "deadline": "2026-11-05T23:42:42.397842+00:00",
+      "heartbeat_at": "2026-11-05T18:42:43.095862+00:00",
       "cycles": 0,
       "sessions": 0,
       "recent_errors": []
