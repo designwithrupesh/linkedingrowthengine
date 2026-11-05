@@ -4778,7 +4778,7 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-11-05T10:07:07.189067+00:00",
+        "last_considered_at": "2026-11-05T11:40:03.704329+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T10:07:07.189067+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
@@ -4810,7 +4810,7 @@
         "last_checked_at": "2026-11-05T11:07:08.382364+00:00"
       },
       "urn:li:share:7515026715027525632": {
-        "last_considered_at": "2026-11-05T10:07:07.189067+00:00",
+        "last_considered_at": "2026-11-05T11:40:03.704329+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T10:07:07.189067+00:00",
         "changed_at": "2026-10-12T01:51:50.587794+00:00",
@@ -4818,7 +4818,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-11-05T10:07:07.189067+00:00",
+        "last_considered_at": "2026-11-05T11:40:03.704329+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-05T10:07:07.189067+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -5010,7 +5010,7 @@
         "cached": false
       },
       "urn:li:share:7521050633118830592": {
-        "last_considered_at": "2026-11-05T10:07:07.189067+00:00",
+        "last_considered_at": "2026-11-05T11:40:03.704329+00:00",
         "changed_at": "2026-10-28T03:41:24.070996+00:00",
         "count": 0,
         "cached": false,
@@ -5068,9 +5068,9 @@
         "last_checked_at": "2026-11-05T09:21:22.365935+00:00"
       },
       "urn:li:share:7523587336883040256": {
-        "last_considered_at": "2026-11-05T10:22:07.397042+00:00",
+        "last_considered_at": "2026-11-05T11:40:03.704329+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-05T08:36:21.177243+00:00"
+        "last_checked_at": "2026-11-05T11:40:03.704329+00:00"
       },
       "urn:li:share:7523949728326385664": {
         "last_considered_at": "2026-11-05T11:22:08.851423+00:00",
