@@ -5123,12 +5123,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-11-06T11:30:02.014948+00:00",
       "deadline": "2026-11-06T20:15:02.014948+05:30",
       "heartbeat_at": "2026-11-06T14:40:48.309941+00:00",
       "cycles": 39,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-11-06T14:45:02.015158+00:00"
     },
     "last_live_validation": {
       "status": "passed",
