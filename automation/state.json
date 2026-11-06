@@ -5243,8 +5243,8 @@
       "phase": "maintenance",
       "started_at": "2026-11-06T14:46:19.384490+00:00",
       "deadline": "2026-11-06T19:46:19.384490+00:00",
-      "heartbeat_at": "2026-11-06T18:45:04.951708+00:00",
-      "cycles": 10,
+      "heartbeat_at": "2026-11-06T19:00:05.314138+00:00",
+      "cycles": 11,
       "sessions": 1,
       "recent_errors": []
     },
