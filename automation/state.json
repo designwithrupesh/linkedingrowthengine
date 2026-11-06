@@ -5239,12 +5239,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-06T14:46:19.384490+00:00",
       "deadline": "2026-11-06T19:46:19.384490+00:00",
-      "heartbeat_at": "2026-11-06T19:45:06.371749+00:00",
-      "cycles": 14,
+      "heartbeat_at": "2026-11-06T19:46:19.725157+00:00",
+      "cycles": 15,
       "sessions": 1,
       "recent_errors": []
     },
