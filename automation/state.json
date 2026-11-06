@@ -5123,13 +5123,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-11-06T11:30:02.014948+00:00",
-      "deadline": "2026-11-06T20:15:02.014948+05:30",
-      "heartbeat_at": "2026-11-06T14:40:48.309941+00:00",
-      "cycles": 39,
-      "recent_errors": [],
-      "ended_at": "2026-11-06T14:45:02.015158+00:00"
+      "status": "running",
+      "started_at": "2026-11-06T14:46:21.571674+00:00",
+      "deadline": "2026-11-06T22:00:00+05:30",
+      "heartbeat_at": "2026-11-06T14:46:26.008989+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
