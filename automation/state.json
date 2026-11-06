@@ -5242,8 +5242,8 @@
       "phase": "maintenance",
       "started_at": "2026-11-06T09:45:27.302756+00:00",
       "deadline": "2026-11-06T14:45:27.302756+00:00",
-      "heartbeat_at": "2026-11-06T11:00:29.262288+00:00",
-      "cycles": 5,
+      "heartbeat_at": "2026-11-06T11:15:29.560157+00:00",
+      "cycles": 6,
       "sessions": 0,
       "recent_errors": [
         {
