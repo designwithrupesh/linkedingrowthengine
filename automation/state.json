@@ -5240,12 +5240,12 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
+      "phase": "maintenance",
       "started_at": "2026-11-06T14:46:19.384490+00:00",
       "deadline": "2026-11-06T19:46:19.384490+00:00",
-      "heartbeat_at": "2026-11-06T14:46:20.074238+00:00",
-      "cycles": 0,
-      "sessions": 0,
+      "heartbeat_at": "2026-11-06T16:30:01.538808+00:00",
+      "cycles": 1,
+      "sessions": 1,
       "recent_errors": []
     },
     "queue_preparation": {
