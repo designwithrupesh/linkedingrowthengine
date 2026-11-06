@@ -5239,30 +5239,14 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-06T09:45:27.302756+00:00",
-      "deadline": "2026-11-06T14:45:27.302756+00:00",
-      "heartbeat_at": "2026-11-06T14:45:27.597173+00:00",
-      "cycles": 9,
-      "sessions": 1,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-06T09:50:03.514366+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-06T10:03:40.053762+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-06T10:18:44.103235+00:00"
-        }
-      ]
+      "status": "running",
+      "phase": "engagement",
+      "started_at": "2026-11-06T14:46:19.384490+00:00",
+      "deadline": "2026-11-06T19:46:19.384490+00:00",
+      "heartbeat_at": "2026-11-06T14:46:20.074238+00:00",
+      "cycles": 0,
+      "sessions": 0,
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
