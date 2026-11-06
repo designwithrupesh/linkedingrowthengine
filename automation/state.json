@@ -3811,11 +3811,14 @@
       "kind": "post",
       "text": "Linear’s mobile diffs let users start reviews on mobile and continue on desktop, which feels like a practical win for workflow continuity. But the design choice to tie review state to device context risks creating friction if users switch devices mid-review without clear session persistence. The lack of a visual or UX detail showing how the review state syncs or what happens if the user disconnects mid-flow makes it feel like a feature, not a thoughtful design. Without showing how the state is tracked or displayed, it’s hard to know if it truly reduces friction or just shifts it elsewhere.\n\nSource: https://linear.app/changelog/2026-11-04-mobile-diffs",
       "at": "2026-11-06T10:30:30.869551+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-09T03:30:00+00:00",
-      "allocation_day": "2026-11-09"
+      "allocation_day": "2026-11-09",
+      "http_status": 200,
+      "remote_id": "6aedacef2b8d707d12ab47a1",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4446,6 +4449,14 @@
       "at": "2026-11-05T04:20:30.258897+00:00",
       "scheduled_for": "2026-11-08T03:30:00+00:00",
       "allocation_day": "2026-11-08"
+    },
+    {
+      "id": "6aedacef2b8d707d12ab47a1",
+      "text": "Linear’s mobile diffs let users start reviews on mobile and continue on desktop, which feels like a practical win for workflow continuity. But the design choice to tie review state to device context risks creating friction if users switch devices mid-review without clear session persistence. The lack of a visual or UX detail showing how the review state syncs or what happens if the user disconnects mid-flow makes it feel like a feature, not a thoughtful design. Without showing how the state is tracked or displayed, it’s hard to know if it truly reduces friction or just shifts it elsewhere.\n\nSource: https://linear.app/changelog/2026-11-04-mobile-diffs",
+      "url": null,
+      "at": "2026-11-06T10:30:30.869551+00:00",
+      "scheduled_for": "2026-11-09T03:30:00+00:00",
+      "allocation_day": "2026-11-09"
     }
   ],
   "discovery": {
