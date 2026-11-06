@@ -5212,12 +5212,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-06T04:44:39.112562+00:00",
       "deadline": "2026-11-06T09:44:39.112562+00:00",
-      "heartbeat_at": "2026-11-06T09:29:42.899152+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-06T09:44:39.286113+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
