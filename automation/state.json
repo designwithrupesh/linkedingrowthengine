@@ -5211,14 +5211,19 @@
       "phase": "maintenance",
       "started_at": "2026-11-05T23:43:48.091597+00:00",
       "deadline": "2026-11-06T04:43:48.091597+00:00",
-      "heartbeat_at": "2026-11-06T03:58:53.836864+00:00",
-      "cycles": 17,
+      "heartbeat_at": "2026-11-06T04:13:54.101103+00:00",
+      "cycles": 18,
       "sessions": 0,
       "recent_errors": [
         {
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-11-06T03:46:27.025003+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-06T04:01:09.911063+00:00"
         }
       ]
     },
