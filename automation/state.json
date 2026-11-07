@@ -3824,11 +3824,14 @@
       "kind": "post",
       "text": "I agree that watching real users do tasks early and repeatedly is a strong foundation. It grounds design in actual behavior, not guesswork. What matters most is when a design choice is tied to a specific user action observed in a task. Without that link, it’s easy to fall back on vague principles. A decision rooted in a concrete observation feels more credible and actionable.\n\nSource: https://www.nngroup.com/articles/usability-101-introduction-to-usability/",
       "at": "2026-11-07T04:17:46.710744+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-10T03:30:00+00:00",
-      "allocation_day": "2026-11-10"
+      "allocation_day": "2026-11-10",
+      "http_status": 200,
+      "remote_id": "6aeea7768653ba60c778520f",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4473,6 +4476,14 @@
       "at": "2026-11-06T10:30:30.869551+00:00",
       "scheduled_for": "2026-11-09T03:30:00+00:00",
       "allocation_day": "2026-11-09"
+    },
+    {
+      "id": "6aeea7768653ba60c778520f",
+      "text": "I agree that watching real users do tasks early and repeatedly is a strong foundation. It grounds design in actual behavior, not guesswork. What matters most is when a design choice is tied to a specific user action observed in a task. Without that link, it’s easy to fall back on vague principles. A decision rooted in a concrete observation feels more credible and actionable.\n\nSource: https://www.nngroup.com/articles/usability-101-introduction-to-usability/",
+      "url": null,
+      "at": "2026-11-07T04:17:46.710744+00:00",
+      "scheduled_for": "2026-11-10T03:30:00+00:00",
+      "allocation_day": "2026-11-10"
     }
   ],
   "discovery": {
