@@ -4832,7 +4832,7 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-11-07T15:25:10.199365+00:00",
+        "last_considered_at": "2026-11-07T16:04:56.854714+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-07T15:25:10.199365+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
@@ -4872,7 +4872,7 @@
         "cached": false
       },
       "urn:li:share:7515252488137261056": {
-        "last_considered_at": "2026-11-07T15:25:10.199365+00:00",
+        "last_considered_at": "2026-11-07T16:04:56.854714+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-07T15:25:10.199365+00:00",
         "changed_at": "2026-10-13T00:34:22.502862+00:00",
@@ -5008,12 +5008,12 @@
         "last_checked_at": "2026-11-07T15:15:09.871171+00:00"
       },
       "urn:li:share:7518287426079948800": {
-        "last_considered_at": "2026-11-07T15:20:10.041428+00:00",
+        "last_considered_at": "2026-11-07T16:04:56.854714+00:00",
         "changed_at": "2026-10-20T12:54:12.650594+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-07T13:50:07.014240+00:00"
+        "last_checked_at": "2026-11-07T16:04:56.854714+00:00"
       },
       "urn:li:share:7518513915064954881": {
         "last_considered_at": "2026-11-07T15:54:56.175231+00:00",
@@ -5064,7 +5064,7 @@
         "cached": false
       },
       "urn:li:share:7521050633118830592": {
-        "last_considered_at": "2026-11-07T15:25:10.199365+00:00",
+        "last_considered_at": "2026-11-07T16:04:56.854714+00:00",
         "changed_at": "2026-10-28T03:41:24.070996+00:00",
         "count": 0,
         "cached": false,
@@ -5127,7 +5127,7 @@
         "last_checked_at": "2026-11-07T14:25:08.378753+00:00"
       },
       "urn:li:share:7523949728326385664": {
-        "last_considered_at": "2026-11-07T15:25:10.199365+00:00",
+        "last_considered_at": "2026-11-07T16:04:56.854714+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-07T15:25:10.199365+00:00"
       },
