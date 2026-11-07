@@ -5513,99 +5513,10 @@
     }
   },
   "design_news": {
-    "checked_day": "2026-11-06",
-    "checked_at": "2026-11-06T04:28:56.607243+00:00",
-    "status": "ready",
-    "items": [
-      {
-        "publisher": "Linear",
-        "source_kind": "product_update",
-        "title": "Mobile Diffs",
-        "url": "https://linear.app/changelog/2026-11-04-mobile-diffs",
-        "published_at": "2026-11-05T17:49:55+00:00",
-        "excerpt": "Diffs, Linear’s fast and focused review experience, is now available for iOS and Android. Here’s what you can do from your phone: Understand changes with Guided Reviews Start on mobile, continue on desktop See what needs review in your inbox View preview links Work with review and cloud coding agents Merge approved changes Try it from the Reviews tab in your Linear mobile app, or learn more in our blog post. If you’re not yet reviewing in Linear, get started here. Fixes Agent"
-      },
-      {
-        "publisher": "Smashing Magazine",
-        "source_kind": "design_analysis",
-        "title": "Making Immersive LLM Chat Experiences More Accessible",
-        "url": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
-        "published_at": "2026-11-05T13:00:00+00:00",
-        "excerpt": "As LLM chat patterns become more widespread, making them accessible is essential to ensuring everyone can access the information, tools, and opportunities they offer. Drawing on his work improving these interfaces, Eric Bailey shares practical ways to make chat-based experiences on the web more accessible and usable for people who rely on assistive technology."
-      },
-      {
-        "publisher": "Smashing Magazine",
-        "source_kind": "design_analysis",
-        "title": "Modern CSS Might Make Your Front-End More Complex",
-        "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
-        "published_at": "2026-11-03T10:00:00+00:00",
-        "excerpt": "Replacing JavaScript with a modern CSS feature can simplify a piece of code while making the wider application harder to reason about. Gabriel Shoyombo explores what happens when logic is split between CSS and JavaScript, sharing practical guidance to help you keep complexity in check during migration."
-      },
-      {
-        "publisher": "Penpot",
-        "source_kind": "design_analysis",
-        "title": "Digital sovereignty for business: A practical guide to controlling your tech infrastructure",
-        "url": "https://penpot.app/blog/digital-sovereignty/",
-        "published_at": "2026-11-02T17:10:50+00:00",
-        "excerpt": "Vendor lock-in, proprietary formats, and shifting regulations put your business at risk. Learn how digital sovereignty helps you control your tech stack on your own terms."
-      },
-      {
-        "publisher": "Smashing Magazine",
-        "source_kind": "design_analysis",
-        "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition)",
-        "url": "https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
-        "published_at": "2026-10-31T08:00:00+00:00",
-        "excerpt": "Let’s kick of November with a new collection of desktop wallpapers! Designed by creatives from across the globe, the wallpapers come in a variety of screen resolutions and can be downloaded for free. Enjoy!"
-      },
-      {
-        "publisher": "Nielsen Norman Group",
-        "source_kind": "design_analysis",
-        "title": "The Role of UX in Agentic Software Factories",
-        "url": "https://www.nngroup.com/articles/ux-agentic-software-factories/",
-        "published_at": "2026-10-30T17:00:00+00:00",
-        "excerpt": "AI-native software development lifecycles reduce UX to AI context. UX must discover user needs, shape what’s built, and evaluate it before and after launch."
-      },
-      {
-        "publisher": "Nielsen Norman Group",
-        "source_kind": "design_analysis",
-        "title": "Experience Design: Dropping the “User” from “User Experience”",
-        "url": "https://www.nngroup.com/articles/ux-vs-experience-design/",
-        "published_at": "2026-10-30T17:00:00+00:00",
-        "excerpt": "AI is expanding UX beyond human users to agents acting on their behalf. Experience design names this broader field, which still centers on people’s goals."
-      },
-      {
-        "publisher": "Penpot",
-        "source_kind": "design_analysis",
-        "title": "What is declarative design and why is it the future?",
-        "url": "https://penpot.app/blog/what-is-declarative-design-and-why-is-it-the-future/",
-        "published_at": "2026-10-27T18:38:50+00:00",
-        "excerpt": "Declarative design means setting rules a design follows, not detailing how it looks in every situation. Let’s compare it to other approaches (with examples!)"
-      },
-      {
-        "publisher": "Nielsen Norman Group",
-        "source_kind": "design_analysis",
-        "title": "UX Disciplines: Glossary",
-        "url": "https://www.nngroup.com/articles/ux-disciplines-glossary/",
-        "published_at": "2026-10-23T17:00:00+00:00",
-        "excerpt": "Definitions of fields related to user experience, including UX design, UI design, visual design, interaction design, service design, UX research, and DesignOps"
-      },
-      {
-        "publisher": "Nielsen Norman Group",
-        "source_kind": "design_analysis",
-        "title": "AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings",
-        "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
-        "published_at": "2026-10-23T17:00:00+00:00",
-        "excerpt": "AI saves UX practitioners time on nearly every task, yet most feel lukewarm about it: mandates, unreliable output, and inflated expectations eat the gains."
-      },
-      {
-        "publisher": "Smashing Magazine",
-        "source_kind": "design_analysis",
-        "title": "Accordion Icons: Which Work Best?",
-        "url": "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
-        "published_at": "2026-10-23T13:00:00+00:00",
-        "excerpt": "A closer look at accordion icons, why split menus are harmful, and why it’s better not to have icons and text labels link to different actions. Plus, why the caret is the safest icon choice. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore."
-      }
-    ],
+    "checked_day": "2026-11-07",
+    "checked_at": "2026-11-07T04:17:46.710744+00:00",
+    "status": "refresh-reserved",
+    "items": [],
     "failed_feeds": 0
   }
 }
