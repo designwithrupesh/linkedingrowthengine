@@ -4848,9 +4848,9 @@
         "last_checked_at": "2026-11-07T12:10:03.324115+00:00"
       },
       "urn:li:share:7514663593506951168": {
-        "last_considered_at": "2026-11-07T11:55:02.813070+00:00",
+        "last_considered_at": "2026-11-07T12:40:04.546182+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-07T10:33:38.547313+00:00",
+        "last_checked_at": "2026-11-07T12:40:04.546182+00:00",
         "changed_at": "2026-10-11T01:21:49.862913+00:00",
         "count": 0,
         "cached": false
@@ -4936,7 +4936,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_considered_at": "2026-11-07T12:00:03.009873+00:00",
+        "last_considered_at": "2026-11-07T12:40:04.546182+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-07T11:04:11.460492+00:00",
         "changed_at": "2026-10-17T09:18:17.960511+00:00",
@@ -4952,7 +4952,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_considered_at": "2026-11-07T12:00:03.009873+00:00",
+        "last_considered_at": "2026-11-07T12:40:04.546182+00:00",
         "changed_at": "2026-10-17T05:05:50.925122+00:00",
         "count": 0,
         "cached": false,
@@ -4968,7 +4968,7 @@
         "last_checked_at": "2026-11-07T12:15:03.492268+00:00"
       },
       "urn:li:share:7517426754408534016": {
-        "last_considered_at": "2026-11-07T12:00:03.009873+00:00",
+        "last_considered_at": "2026-11-07T12:40:04.546182+00:00",
         "changed_at": "2026-10-18T05:18:29.395764+00:00",
         "count": 0,
         "cached": false,
@@ -5117,7 +5117,7 @@
         "last_checked_at": "2026-11-07T10:33:38.547313+00:00"
       },
       "urn:li:share:7523224951345197056": {
-        "last_considered_at": "2026-11-07T12:00:03.009873+00:00",
+        "last_considered_at": "2026-11-07T12:40:04.546182+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-07T11:04:11.460492+00:00"
       },
