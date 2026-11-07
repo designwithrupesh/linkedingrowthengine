@@ -5271,12 +5271,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-07T00:47:40.939882+00:00",
       "deadline": "2026-11-07T05:47:40.939882+00:00",
-      "heartbeat_at": "2026-11-07T05:32:46.038347+00:00",
-      "cycles": 19,
+      "heartbeat_at": "2026-11-07T05:47:41.185698+00:00",
+      "cycles": 20,
       "sessions": 0,
       "recent_errors": [
         {
