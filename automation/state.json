@@ -5271,30 +5271,14 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-07T00:47:40.939882+00:00",
-      "deadline": "2026-11-07T05:47:40.939882+00:00",
-      "heartbeat_at": "2026-11-07T05:47:41.185698+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-07T05:48:30.635277+00:00",
+      "deadline": "2026-11-07T10:48:30.635277+00:00",
+      "heartbeat_at": "2026-11-07T05:48:31.120530+00:00",
+      "cycles": 0,
       "sessions": 0,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-07T03:36:10.739317+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-07T03:51:21.290782+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-07T04:05:19.222498+00:00"
-        }
-      ]
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
