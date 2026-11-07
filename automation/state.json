@@ -5272,11 +5272,11 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-11-07T10:49:09.551808+00:00",
       "deadline": "2026-11-07T15:49:09.551808+00:00",
-      "heartbeat_at": "2026-11-07T11:19:10.084437+00:00",
-      "cycles": 2,
+      "heartbeat_at": "2026-11-07T11:30:00.173121+00:00",
+      "cycles": 3,
       "sessions": 0,
       "recent_errors": []
     },
