@@ -4074,6 +4074,14 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "reaction:comment:04b7c552366f331fe760959acd24c5381821b9515eef77d2205f3712534d6c09": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-08T14:04:23.893532+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7523426895414067200",
+      "parent": null
     }
   },
   "days": {
@@ -4243,9 +4251,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 15,
+      "interaction": 16,
       "read": 40,
-      "public_interaction": 15
+      "public_interaction": 16
     },
     "2026-11-09": {
       "post": 2,
