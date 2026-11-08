@@ -3958,6 +3958,14 @@
       "http_status": 201,
       "remote_id": "7525161703215656960",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:2f5cd16866ed3f4e12c4cc6f296eb863ee6f0c5982e70ea7b5537739284579d6": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-08T12:05:58.250523+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7523428198810841088",
+      "parent": null
     }
   },
   "days": {
@@ -4127,9 +4135,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 4,
+      "interaction": 5,
       "read": 26,
-      "public_interaction": 4
+      "public_interaction": 5
     },
     "2026-11-09": {
       "post": 2,
@@ -5660,6 +5668,28 @@
         ],
         "first_seen_at": "2026-11-08T11:45:05.467744+00:00",
         "cached_at": "2026-11-08T11:45:05.467744+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523428199519735808/",
+        "urn": "urn:li:ugcPost:7523428198810841088",
+        "shareUrn": "urn:li:ugcPost:7523428198810841088",
+        "text": "For more than 10 years, we've been building the most productive email app ever made.\n\nBut not everybody wants to switch apps.\n\nToday, we're bringing the Superhuman magic right into Gmail and Outlook!\n\nIntroducing: Email Assistant by Superhuman Mail 💜\n\nIt stays on top of your inbox, so you don't have to.\n\nHuge congratulations to the amazing team across Superhuman Mail and Superhuman that pulled this off 😄\n\nCheck it out... 👇",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 11 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-11-03T16:57:41.302000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7523428199519735808",
+          "urn:li:ugcPost:7523428198810841088"
+        ],
+        "first_seen_at": "2026-11-08T12:03:46.065120+00:00",
+        "cached_at": "2026-11-08T12:03:46.065120+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
