@@ -4172,7 +4172,7 @@
     "2026-11-08": {
       "post": 1,
       "interaction": 8,
-      "read": 29,
+      "read": 30,
       "public_interaction": 8
     },
     "2026-11-09": {
@@ -5387,7 +5387,7 @@
         "last_checked_at": "2026-11-08T12:08:44.096273+00:00"
       },
       "urn:li:share:7518649817774895104": {
-        "last_considered_at": "2026-11-08T10:37:54.313023+00:00",
+        "last_considered_at": "2026-11-08T12:28:45.083994+00:00",
         "changed_at": "2026-10-21T13:10:13.694599+00:00",
         "count": 0,
         "cached": false,
@@ -5419,7 +5419,7 @@
         "last_checked_at": "2026-11-08T11:53:43.495138+00:00"
       },
       "urn:li:ugcPost:7520824174379003904": {
-        "last_considered_at": "2026-11-08T10:37:54.313023+00:00",
+        "last_considered_at": "2026-11-08T12:28:45.083994+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-08T10:37:54.313023+00:00",
         "changed_at": "2026-10-28T01:25:44.371693+00:00",
