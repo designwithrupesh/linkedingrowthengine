@@ -3996,9 +3996,12 @@
       "kind": "comment",
       "text": "Agents auto-triaging bugs reduce friction only if teams view software as a living system, not a task list.",
       "at": "2026-11-08T12:25:09.403189+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7524542807290744832",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525171561746817024",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
