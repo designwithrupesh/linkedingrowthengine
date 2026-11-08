@@ -4018,9 +4018,12 @@
       "kind": "comment",
       "text": "Aligning with existing structure reduces friction by matching real team workflows.",
       "at": "2026-11-08T12:34:36.999699+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7524234818167980032",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525173941259382785",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
