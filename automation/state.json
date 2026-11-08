@@ -4234,7 +4234,7 @@
     "2026-11-08": {
       "post": 1,
       "interaction": 14,
-      "read": 38,
+      "read": 39,
       "public_interaction": 14
     },
     "2026-11-09": {
@@ -5265,7 +5265,7 @@
         "cached": false
       },
       "urn:li:share:7514527701878284288": {
-        "last_considered_at": "2026-11-08T11:53:43.495138+00:00",
+        "last_considered_at": "2026-11-08T13:38:49.362975+00:00",
         "changed_at": "2026-10-10T06:04:24.231829+00:00",
         "count": 0,
         "cached": false,
@@ -5369,7 +5369,7 @@
         "cached": false
       },
       "urn:li:share:7516837882951778304": {
-        "last_considered_at": "2026-11-08T11:53:43.495138+00:00",
+        "last_considered_at": "2026-11-08T13:38:49.362975+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-08T11:53:43.495138+00:00",
         "changed_at": "2026-10-17T00:49:22.690469+00:00",
@@ -5457,7 +5457,7 @@
         "last_checked_at": "2026-11-08T12:43:46.554046+00:00"
       },
       "urn:li:share:7520326598542311424": {
-        "last_considered_at": "2026-11-08T11:40:03.473910+00:00",
+        "last_considered_at": "2026-11-08T13:38:49.362975+00:00",
         "changed_at": "2026-10-26T05:13:43.506492+00:00",
         "count": 0,
         "cached": false,
@@ -5497,7 +5497,7 @@
         "last_checked_at": "2026-11-08T13:33:49.101214+00:00"
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_considered_at": "2026-11-08T11:40:03.473910+00:00",
+        "last_considered_at": "2026-11-08T13:38:49.362975+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-08T11:40:03.473910+00:00",
         "changed_at": "2026-10-29T01:59:30.942941+00:00",
@@ -5529,7 +5529,7 @@
         "last_checked_at": "2026-11-08T12:38:46.014166+00:00"
       },
       "urn:li:share:7522137783054864384": {
-        "last_considered_at": "2026-11-08T11:40:03.473910+00:00",
+        "last_considered_at": "2026-11-08T13:38:49.362975+00:00",
         "changed_at": "2026-10-31T03:52:15.623593+00:00",
         "count": 0,
         "cached": false,
