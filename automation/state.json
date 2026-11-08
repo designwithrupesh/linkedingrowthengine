@@ -3974,9 +3974,12 @@
       "kind": "comment",
       "text": "Merging Superhuman’s assistant into Gmail and Outlook is a smart move. Keeping it lightweight and focused on real-time help avoids clutter and stays useful without overwhelming users.",
       "at": "2026-11-08T12:06:01.656814+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7523428198810841088",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525166747625205761",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
