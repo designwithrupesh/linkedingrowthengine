@@ -3914,6 +3914,14 @@
       "http_status": 200,
       "remote_id": "6aeff1ebc2bf5327166eb4ba",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "reaction:comment:6e31214c02173a7216ebf095cf5a36dc41017e35744a3db39d24e081ac210aba": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-08T11:38:29.031904+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7524243767978295296",
+      "parent": null
     }
   },
   "days": {
@@ -4083,8 +4091,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 0,
-      "read": 24
+      "interaction": 1,
+      "read": 24,
+      "public_interaction": 1
     },
     "2026-11-09": {
       "post": 2,
@@ -5575,7 +5584,30 @@
       "karrisaarinen": "2026-10-26T14:00:12.142624+00:00",
       "shreyasdoshi": "2026-10-26T14:05:13.628675+00:00"
     },
-    "targets": [],
+    "targets": [
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524243849209356289/",
+        "urn": "urn:li:ugcPost:7524243767978295296",
+        "shareUrn": "urn:li:ugcPost:7524243767978295296",
+        "text": "🚨 🚨 NEW EPISODE ALERT 🚨 🚨 \n\nAirbnb’s business model was strong enough to hide Brian Chesky’s self described weaknesses as a CEO—until the pandemic. \n\nAs a young designer leading a rapidly growing company, Brian surrounded himself with experienced executives and followed conventional advice: hire great people, delegate and focus on the big picture.\n\nBut delegation gradually became distance. Intimidated by leaders with decades more experience, Brian (@bchesky) often deferred to their judgment. Airbnb expanded into too many projects, accumulated layers of management and became increasingly difficult to steer.\n\nThen COVID erased 80 percent of its business in eight weeks. With the company’s survival at stake, Brian could no longer lead from a distance.\n\nHe studied how Steve Jobs had rebuilt Apple, cut projects, simplified the organization and returned to the details. Brian began speaking with employees several levels below him, scrutinizing decisions and setting a single direction for the company—even when that approach frustrated executives.\n\nThe crisis didn’t suddenly give him every skill a CEO needs. It forced him to stop treating experience as a substitute for his own judgment.\n\nHiring people who know more than you is essential. Surrendering responsibility for understanding what they’re doing is not.\n\nHear the full story of Airbnb (@airbnb) on How I Built This with @guy.raz.",
+        "authorName": "Guy Raz",
+        "authorHeadline": "Creator: How I Built This • Founder: Built-it Productions • Co-Founder: Tinkercast Media",
+        "authorProfileUrl": "https://www.linkedin.com/in/guyrazpodcasts/",
+        "postedAtISO": "2026-11-05T23:36:44.041000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/brianchesky/",
+        "identity_aliases": [
+          "urn:li:activity:7524243849209356289",
+          "urn:li:ugcPost:7524243767978295296"
+        ],
+        "first_seen_at": "2026-11-08T11:35:05.363818+00:00",
+        "cached_at": "2026-11-08T11:35:05.363818+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      }
+    ],
     "deferred_until": {
       "urn:li:share:7516512888547627008": "2026-10-17T13:33:08.320715+00:00",
       "urn:li:activity:7516512889588047873": "2026-10-17T13:33:08.320715+00:00"
