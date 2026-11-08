@@ -4024,6 +4024,14 @@
       "http_status": 201,
       "remote_id": "7525173941259382785",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:a2ac7430f37e9299d7e7b4ffac3c4a0b62fb6bf8b44f790ad8d8166be79808af": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-08T12:49:24.118286+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7524181076387201024",
+      "parent": null
     }
   },
   "days": {
@@ -4193,9 +4201,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 10,
+      "interaction": 11,
       "read": 33,
-      "public_interaction": 10
+      "public_interaction": 11
     },
     "2026-11-09": {
       "post": 2,
@@ -5858,6 +5866,116 @@
         ],
         "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
         "cached_at": "2026-11-08T12:23:52.448247+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
+        "urn": "urn:li:share:7523827587970949120",
+        "shareUrn": "urn:li:share:7523827587970949120",
+        "text": "Lenny's Newsletter as a physical magazine!\n\nEight hand-picked posts from the past year, 108 thick coated pages, perfect-bound, with your name on the cover. \n\nThis is a limited edition, and will sell out.\n\nFor the next 48 hours, shipping is FREE worldwide. Makes a great gift!\n\nGrab it here: https://lnkd.in/g8R3rJTu\n\nP.S. I'm not making any money from this. Just want to try this out, see how how folks like it.",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-04T19:24:43.065000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523827588541317120",
+          "urn:li:share:7523827587970949120"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-08T12:48:48.334504+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523824420260569088/",
+        "urn": "urn:li:share:7523824419425742849",
+        "shareUrn": "urn:li:share:7523824419425742849",
+        "text": "Lenny's Newsletter is now a physical magazine!\n\n• 108 thick coated pages\n• Perfect-bound spine\n• Glossy cover\n• 8.5\" × 11\"\n\nFor the next 48 hours, shipping is FREE worldwide.\n\nGrab it here: https://lnkd.in/dxNdcpmt",
+        "authorName": "Daniel Belfort",
+        "authorHeadline": "danielbelfort.com",
+        "authorProfileUrl": "https://www.linkedin.com/in/danielbelfort/",
+        "postedAtISO": "2026-11-04T19:16:24.306000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523824420260569088",
+          "urn:li:share:7523824419425742849"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-08T12:48:48.334504+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523498054977732608/",
+        "urn": "urn:li:share:7523498053962539008",
+        "shareUrn": "urn:li:share:7523498053962539008",
+        "text": "Announcing: Public compensation benchmarks for the most in-demand tech roles, now available for free on LennysJobs.com 💥\n\nPick a role and location, and get detailed base salary and new-hire equity benchmarks, from entry-level IC to Sr. Director. Data updated monthly.\n\nTo make this happen, I’ve partnered with Pave, home to the world’s largest real-time compensation dataset, which pulls directly from the HR, payroll, and equity systems of 9,000+ companies (e.g. OpenAI, Databricks, Ramp, Cursor).\n\nThis is the first time Pave has opened up this data to everyone, and I’m excited to help more people get the comp they deserve.\n\nFind it here: http://lennysjobs.com/comp",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-03T21:35:16.141000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523498054977732608",
+          "urn:li:share:7523498053962539008"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-08T12:48:48.334504+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523426896412389378/",
+        "urn": "urn:li:share:7523426895414067200",
+        "shareUrn": "urn:li:share:7523426895414067200",
+        "text": "The holidays are fast approaching, so I’m back with my sixth (!) annual gift guide. \n\nOver 100 gift ideas—all things I actually use, love, and recommend.\n\nThis started out as a random post idea, but now you’d be surprised how many people ping me asking when the new list will be out.\n\nAs always, the collection includes a mix of practical stuff with a lot of fun and delight, from high-end products to very affordable items. There are no affiliate links here, and I’m not benefiting from recommending any of these products.\n\nPro tip: After reading it, point your favorite AI agent at the post and have it brainstorm gifts for your family, friends, and coworkers.\n\nHere's the guide: https://lnkd.in/g-2iBX6u",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-03T16:52:30.617000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523426896412389378",
+          "urn:li:share:7523426895414067200"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-08T12:48:48.334504+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523058141400559617/",
+        "urn": "urn:li:ugcPost:7523058140347740160",
+        "shareUrn": "urn:li:ugcPost:7523058140347740160",
+        "text": "My biggest takeaways from Hector Serrano (Head of Content at Wispr Flow):\n\n1. Paid UGC is one of the highest-alpha opportunities for B2B SaaS right now.\n2. Turn on paid early, but only after PMF.\n3. The key is to incentivize creators by giving them a % of GMV or ad spend.\n4. A “smart retainer” keeps new creators around long enough to get good.\n5. Recruit your first creators off-platform, by hand.\n6. Copycat ads die fast, so push every creator to experiment.\n7. Recruit niche creators to target your ICPs.\n8. You need two people to run a paid-UGC program: a creative lead and a media buyer.\n9. “The best marketers are allergic to AI.”\n10. Develop young talent like a soccer academy.\n\nFull episode: https://lnkd.in/gUW9fmMB",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-02T16:27:12.571000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523058141400559617",
+          "urn:li:ugcPost:7523058140347740160"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-08T12:48:48.334504+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
