@@ -3832,6 +3832,69 @@
       "http_status": 200,
       "remote_id": "6aeea7768653ba60c778520f",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-09:1800": {
+      "kind": "post",
+      "text": "Show how a founding designer prioritizes product design and brand strategy tasks when advising early-stage founders.",
+      "at": "2026-11-08T03:52:01.103674+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-09T12:30:00+00:00",
+      "allocation_day": "2026-11-09",
+      "format": "image",
+      "asset_id": "visual-2026-11-09-1800-image",
+      "asset_sha256": "9a3e7904de086f794c08b81fdc72872531b56741b522ac8ff02f833381952eee",
+      "asset_title": "Founding designer and consulting perspectives",
+      "asset_pages": 1,
+      "asset_spec": {
+        "id": "visual-2026-11-09-1800-image",
+        "kind": "image",
+        "title": "Founding designer and consulting perspectives",
+        "subtitle": "Hypothetical example: balancing roles for early-stage startups",
+        "caption": "Show how a founding designer prioritizes product design and brand strategy tasks when advising early-stage founders.",
+        "slides": [
+          {
+            "title": "Balancing immediate product design and brand strategy needs",
+            "body": [
+              "Founding designer faces a choice: focus on onboarding flow or brand voice consistency.",
+              "Each impacts early user trust and product adoption differently."
+            ],
+            "example": "",
+            "layout": "annotated-ui",
+            "visual": {
+              "screens": [
+                {
+                  "label": "Onboarding flow screen",
+                  "title": "User onboarding steps",
+                  "rows": [
+                    "Welcome message",
+                    "Profile setup",
+                    "Feature tutorial"
+                  ],
+                  "action": "Continue"
+                },
+                {
+                  "label": "Brand strategy screen",
+                  "title": "Brand voice guidelines",
+                  "rows": [
+                    "Tone: approachable",
+                    "Values: transparency, innovation",
+                    "Messaging: clear benefits"
+                  ],
+                  "action": "Apply guidelines"
+                }
+              ],
+              "annotations": [
+                {
+                  "label": "Priority decision",
+                  "detail": "Choosing which task to tackle first based on startup goals and resource constraints."
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -4005,7 +4068,7 @@
       "read": 9
     },
     "2026-11-09": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     },
