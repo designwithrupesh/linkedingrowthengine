@@ -5460,8 +5460,8 @@
       "status": "running",
       "started_at": "2026-11-08T11:30:01.608048+00:00",
       "deadline": "2026-11-08T17:22:01.608048+05:30",
-      "heartbeat_at": "2026-11-08T11:38:35.428695+00:00",
-      "cycles": 2,
+      "heartbeat_at": "2026-11-08T11:40:06.821693+00:00",
+      "cycles": 3,
       "recent_errors": []
     },
     "last_live_validation": {
