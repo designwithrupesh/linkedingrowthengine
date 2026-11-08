@@ -4089,9 +4089,11 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-11-08T14:19:34.306113+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:ugcPost:7523058140347740160",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
