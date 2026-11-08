@@ -5598,8 +5598,8 @@
       "status": "running",
       "started_at": "2026-11-08T11:53:42.264885+00:00",
       "deadline": "2026-11-08T22:00:00+05:30",
-      "heartbeat_at": "2026-11-08T13:53:58.615083+00:00",
-      "cycles": 25,
+      "heartbeat_at": "2026-11-08T13:58:53.629886+00:00",
+      "cycles": 26,
       "recent_errors": [
         {
           "phase": "public",
