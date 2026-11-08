@@ -3894,7 +3894,21 @@
             }
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "9a3e7904de086f794c08b81fdc72872531b56741b522ac8ff02f833381952eee",
+        "mime_type": "image/png",
+        "title": "Founding designer and consulting perspectives",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "founding-designer-and-consulting-perspectives.png",
+        "size_bytes": 97366
+      },
+      "media_scheduled_for": "2026-11-09T12:30:00Z",
+      "media_operation_id": "0876addc713d53da51b8dac1f28f8956a5c8916eaff16438b0e25d607a4024ab",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
