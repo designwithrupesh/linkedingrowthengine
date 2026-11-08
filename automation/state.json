@@ -4059,9 +4059,11 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-11-08T13:34:20.640480+00:00",
-      "status": "inflight",
+      "status": "unknown-needs-reconciliation",
       "post_urn": "urn:li:share:7523824419425742849",
-      "parent": null
+      "parent": null,
+      "http_status": 429,
+      "reason": "HTTP response did not establish a successful write"
     }
   },
   "days": {
