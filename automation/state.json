@@ -3952,9 +3952,12 @@
       "kind": "comment",
       "text": "Proactive intervention based on user behavior is a strong design choice. It shifts from reactive to predictive support, which feels more human and less robotic.",
       "at": "2026-11-08T11:45:59.182822+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7524070900615417856",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525161703215656960",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
