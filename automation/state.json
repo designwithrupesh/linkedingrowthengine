@@ -5618,14 +5618,9 @@
       "status": "running",
       "started_at": "2026-11-08T11:53:42.264885+00:00",
       "deadline": "2026-11-08T22:00:00+05:30",
-      "heartbeat_at": "2026-11-08T14:13:54.875762+00:00",
-      "cycles": 29,
+      "heartbeat_at": "2026-11-08T14:19:36.973399+00:00",
+      "cycles": 30,
       "recent_errors": [
-        {
-          "phase": "public",
-          "type": "WriteOutcomeError",
-          "at": "2026-11-08T12:49:26.707792+00:00"
-        },
         {
           "phase": "public",
           "type": "WriteOutcomeError",
@@ -5650,6 +5645,11 @@
           "phase": "public",
           "type": "WriteOutcomeError",
           "at": "2026-11-08T14:04:26.763578+00:00"
+        },
+        {
+          "phase": "public",
+          "type": "WriteOutcomeError",
+          "at": "2026-11-08T14:19:36.972029+00:00"
         }
       ]
     },
