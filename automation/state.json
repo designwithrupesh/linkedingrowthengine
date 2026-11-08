@@ -3925,6 +3925,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:6e31214c02173a7216ebf095cf5a36dc41017e35744a3db39d24e081ac210aba": {
+      "kind": "comment",
+      "text": "Delegation without ownership creates fragile systems. Brian’s shift to direct engagement highlights that presence matters more than hierarchy.",
+      "at": "2026-11-08T11:38:32.293779+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7524243767978295296",
+      "parent": null
     }
   },
   "days": {
@@ -4094,9 +4102,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 1,
+      "interaction": 2,
       "read": 24,
-      "public_interaction": 1
+      "public_interaction": 2
     },
     "2026-11-09": {
       "post": 2,
