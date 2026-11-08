@@ -3936,6 +3936,14 @@
       "http_status": 201,
       "remote_id": "7525159829204516864",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:998ba2d62f766c070ad21c5b53f3a075011ee437d8c6d43de1d9c015bcedae59": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-08T11:45:55.863959+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7524070900615417856",
+      "parent": null
     }
   },
   "days": {
@@ -4105,9 +4113,9 @@
     },
     "2026-11-08": {
       "post": 1,
-      "interaction": 2,
+      "interaction": 3,
       "read": 25,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-11-09": {
       "post": 2,
@@ -5616,6 +5624,28 @@
         ],
         "first_seen_at": "2026-11-08T11:35:05.363818+00:00",
         "cached_at": "2026-11-08T11:35:05.363818+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524070901487808512/",
+        "urn": "urn:li:share:7524070900615417856",
+        "shareUrn": "urn:li:share:7524070900615417856",
+        "text": "We've shipped a very cool integration between Pendo.io and Fin. \n\nBy augmenting Fin's understanding of the user's behaviour in your product/app, you'll see \n*  Proactive Fin - Pendo identifies users who are stuck, or rage clicking, or about to give up and let's Fin jump in with a solution\n* better Fin performance (e.g. when a user says \"this isn't working\" Pendo can heavily augment Fin's understanding of what's going on)\n\nThis is one of many ways we'll see Fin improve over the coming months, do please let us know else you'd like to see.  (link in comments)",
+        "authorName": "Des Traynor",
+        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
+        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
+        "postedAtISO": "2026-11-05T11:31:33.392000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
+        "identity_aliases": [
+          "urn:li:activity:7524070901487808512",
+          "urn:li:share:7524070900615417856"
+        ],
+        "first_seen_at": "2026-11-08T11:45:05.467744+00:00",
+        "cached_at": "2026-11-08T11:45:05.467744+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
