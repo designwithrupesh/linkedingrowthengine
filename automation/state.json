@@ -5444,10 +5444,16 @@
       "phase": "maintenance",
       "started_at": "2026-11-08T01:51:57.187433+00:00",
       "deadline": "2026-11-08T06:51:57.187433+00:00",
-      "heartbeat_at": "2026-11-08T03:36:59.137415+00:00",
-      "cycles": 7,
+      "heartbeat_at": "2026-11-08T03:51:59.376482+00:00",
+      "cycles": 8,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-08T03:37:11.828230+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
