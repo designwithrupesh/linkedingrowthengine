@@ -4233,7 +4233,9 @@
       "media_scheduled_for": "2026-11-10T12:30:00Z",
       "media_operation_id": "982dab813c103db50c96f6be5555c36e056f1c1b594c41bc383237bdf79f8d20",
       "media_stage": "create-draft",
-      "media_stage_status": "inflight"
+      "media_stage_status": "acknowledged",
+      "http_status": 200,
+      "remote_id": "6af140c6c2bf5327167b148f"
     }
   },
   "days": {
@@ -4900,6 +4902,17 @@
       "media_status": "scheduled",
       "format": "image",
       "asset_sha256": "9a3e7904de086f794c08b81fdc72872531b56741b522ac8ff02f833381952eee"
+    },
+    {
+      "id": "6af140c6c2bf5327167b148f",
+      "text": "Choose between interface updates by comparing alternatives and mapping decisions.",
+      "url": null,
+      "at": "2026-11-09T03:40:42.850367+00:00",
+      "scheduled_for": "2026-11-10T12:30:00+00:00",
+      "allocation_day": "2026-11-10",
+      "media_status": "draft",
+      "format": "carousel",
+      "asset_sha256": "6549be0eed14630d2c94145c02d711ab49971d2a99fdaef8c757558abebbc879"
     }
   ],
   "discovery": {
