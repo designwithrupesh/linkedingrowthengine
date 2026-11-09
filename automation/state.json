@@ -4219,7 +4219,21 @@
             }
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "6549be0eed14630d2c94145c02d711ab49971d2a99fdaef8c757558abebbc879",
+        "mime_type": "application/pdf",
+        "title": "Current product interfaces and design tool updates",
+        "type": "document",
+        "page_count": 5,
+        "format": "carousel",
+        "file_name": "current-product-interfaces-and-design-tool-updates.pdf",
+        "size_bytes": 59303
+      },
+      "media_scheduled_for": "2026-11-10T12:30:00Z",
+      "media_operation_id": "982dab813c103db50c96f6be5555c36e056f1c1b594c41bc383237bdf79f8d20",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
