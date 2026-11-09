@@ -4428,7 +4428,7 @@
     "2026-11-09": {
       "post": 2,
       "interaction": 0,
-      "read": 56
+      "read": 57
     },
     "2026-11-10": {
       "post": 2,
@@ -5559,7 +5559,7 @@
         "cached": false
       },
       "urn:li:ugcPost:7515750753525788672": {
-        "last_considered_at": "2026-11-09T12:30:04.754539+00:00",
+        "last_considered_at": "2026-11-09T14:12:01.114736+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-09T12:30:04.754539+00:00",
         "changed_at": "2026-10-14T02:55:03.779843+00:00",
@@ -5790,7 +5790,7 @@
         "last_checked_at": "2026-11-09T13:47:00.048821+00:00"
       },
       "urn:li:share:7523949728326385664": {
-        "last_considered_at": "2026-11-09T12:30:04.754539+00:00",
+        "last_considered_at": "2026-11-09T14:12:01.114736+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-09T12:30:04.754539+00:00"
       },
