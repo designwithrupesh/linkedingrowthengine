@@ -5105,10 +5105,10 @@
         "next_page": null
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_attempt_at": "2026-11-09T01:55:08.925835+00:00",
-        "poll_count": 16,
+        "last_attempt_at": "2026-11-09T08:26:20.694874+00:00",
+        "poll_count": 17,
         "status": "checked",
-        "last_success_at": "2026-11-09T01:55:08.925835+00:00",
+        "last_success_at": "2026-11-09T08:26:20.694874+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5129,10 +5129,10 @@
         "next_page": null
       },
       "urn:li:share:7517426754408534016": {
-        "last_attempt_at": "2026-11-09T01:55:08.925835+00:00",
-        "poll_count": 15,
+        "last_attempt_at": "2026-11-09T08:26:20.694874+00:00",
+        "poll_count": 16,
         "status": "checked",
-        "last_success_at": "2026-11-09T01:55:08.925835+00:00",
+        "last_success_at": "2026-11-09T08:26:20.694874+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5237,10 +5237,10 @@
         "next_page": null
       },
       "urn:li:ugcPost:7520461780251205633": {
-        "last_attempt_at": "2026-11-09T01:55:08.925835+00:00",
-        "poll_count": 6,
+        "last_attempt_at": "2026-11-09T08:26:20.694874+00:00",
+        "poll_count": 7,
         "status": "checked",
-        "last_success_at": "2026-11-09T01:55:08.925835+00:00",
+        "last_success_at": "2026-11-09T08:26:20.694874+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5321,10 +5321,10 @@
         "next_page": null
       },
       "urn:li:share:7521050633118830592": {
-        "last_attempt_at": "2026-11-09T02:10:09.502390+00:00",
-        "poll_count": 5,
+        "last_attempt_at": "2026-11-09T08:26:20.694874+00:00",
+        "poll_count": 6,
         "status": "checked",
-        "last_success_at": "2026-11-09T02:10:09.502390+00:00",
+        "last_success_at": "2026-11-09T08:26:20.694874+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5443,8 +5443,8 @@
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-11-09T08:11:20.259589+00:00",
-      "post_urn": "urn:li:share:7523949728326385664",
+      "at": "2026-11-09T08:26:20.694874+00:00",
+      "post_urn": "urn:li:share:7521050633118830592",
       "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
