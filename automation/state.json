@@ -5836,8 +5836,8 @@
       "status": "running",
       "started_at": "2026-11-09T11:30:01.218776+00:00",
       "deadline": "2026-11-09T18:26:01.218776+05:30",
-      "heartbeat_at": "2026-11-09T12:45:06.982715+00:00",
-      "cycles": 16,
+      "heartbeat_at": "2026-11-09T12:50:13.054908+00:00",
+      "cycles": 17,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -5975,94 +5975,6 @@
       "shreyasdoshi": "2026-11-09T12:35:12.236898+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
-        "urn": "urn:li:share:7523827587970949120",
-        "shareUrn": "urn:li:share:7523827587970949120",
-        "text": "Lenny's Newsletter as a physical magazine!\n\nEight hand-picked posts from the past year, 108 thick coated pages, perfect-bound, with your name on the cover. \n\nThis is a limited edition, and will sell out.\n\nFor the next 48 hours, shipping is FREE worldwide. Makes a great gift!\n\nGrab it here: https://lnkd.in/g8R3rJTu\n\nP.S. I'm not making any money from this. Just want to try this out, see how how folks like it.",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-04T19:24:43.065000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523827588541317120",
-          "urn:li:share:7523827587970949120"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-08T12:48:48.334504+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523824420260569088/",
-        "urn": "urn:li:share:7523824419425742849",
-        "shareUrn": "urn:li:share:7523824419425742849",
-        "text": "Lenny's Newsletter is now a physical magazine!\n\n• 108 thick coated pages\n• Perfect-bound spine\n• Glossy cover\n• 8.5\" × 11\"\n\nFor the next 48 hours, shipping is FREE worldwide.\n\nGrab it here: https://lnkd.in/dxNdcpmt",
-        "authorName": "Daniel Belfort",
-        "authorHeadline": "danielbelfort.com",
-        "authorProfileUrl": "https://www.linkedin.com/in/danielbelfort/",
-        "postedAtISO": "2026-11-04T19:16:24.306000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523824420260569088",
-          "urn:li:share:7523824419425742849"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-08T12:48:48.334504+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523498054977732608/",
-        "urn": "urn:li:share:7523498053962539008",
-        "shareUrn": "urn:li:share:7523498053962539008",
-        "text": "Announcing: Public compensation benchmarks for the most in-demand tech roles, now available for free on LennysJobs.com 💥\n\nPick a role and location, and get detailed base salary and new-hire equity benchmarks, from entry-level IC to Sr. Director. Data updated monthly.\n\nTo make this happen, I’ve partnered with Pave, home to the world’s largest real-time compensation dataset, which pulls directly from the HR, payroll, and equity systems of 9,000+ companies (e.g. OpenAI, Databricks, Ramp, Cursor).\n\nThis is the first time Pave has opened up this data to everyone, and I’m excited to help more people get the comp they deserve.\n\nFind it here: http://lennysjobs.com/comp",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-03T21:35:16.141000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523498054977732608",
-          "urn:li:share:7523498053962539008"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-08T12:48:48.334504+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523426896412389378/",
-        "urn": "urn:li:share:7523426895414067200",
-        "shareUrn": "urn:li:share:7523426895414067200",
-        "text": "The holidays are fast approaching, so I’m back with my sixth (!) annual gift guide. \n\nOver 100 gift ideas—all things I actually use, love, and recommend.\n\nThis started out as a random post idea, but now you’d be surprised how many people ping me asking when the new list will be out.\n\nAs always, the collection includes a mix of practical stuff with a lot of fun and delight, from high-end products to very affordable items. There are no affiliate links here, and I’m not benefiting from recommending any of these products.\n\nPro tip: After reading it, point your favorite AI agent at the post and have it brainstorm gifts for your family, friends, and coworkers.\n\nHere's the guide: https://lnkd.in/g-2iBX6u",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-03T16:52:30.617000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523426896412389378",
-          "urn:li:share:7523426895414067200"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-08T12:48:48.334504+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523058141400559617/",
         "urn": "urn:li:ugcPost:7523058140347740160",
@@ -6256,6 +6168,116 @@
         ],
         "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
         "cached_at": "2026-11-09T12:25:05.565515+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525269502465605632/",
+        "urn": "urn:li:ugcPost:7525269435612352512",
+        "shareUrn": "urn:li:ugcPost:7525269435612352512",
+        "text": "Why PMs are suddenly valuable again with Tulsee Doshi—Head of product for Google’s frontier AI models, including Gemini, Nano Banana, Genie, Veo, and more.\n\nWe discuss:\n🔸 The rising value of great PMs\n🔸 Google’s full-stack frontier AI strategy\n🔸 Why model development is like Snape’s potions class\n🔸 Why the PM role has shifted from writing requirements to creating something with “heft\n🔸 How to write your first eval\n\nListen now: https://lnkd.in/g-EWmu7S\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/g3t2VEi3\n• Apple: https://lnkd.in/gZspvDZx",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-08T18:54:22.134000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525269502465605632",
+          "urn:li:ugcPost:7525269435612352512"
+        ],
+        "first_seen_at": "2026-11-09T12:50:06.065558+00:00",
+        "cached_at": "2026-11-09T12:50:06.065558+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
+        "urn": "urn:li:share:7523827587970949120",
+        "shareUrn": "urn:li:share:7523827587970949120",
+        "text": "Lenny's Newsletter as a physical magazine!\n\nEight hand-picked posts from the past year, 108 thick coated pages, perfect-bound, with your name on the cover. \n\nThis is a limited edition, and will sell out.\n\nFor the next 48 hours, shipping is FREE worldwide. Makes a great gift!\n\nGrab it here: https://lnkd.in/g8R3rJTu\n\nP.S. I'm not making any money from this. Just want to try this out, see how how folks like it.",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-04T19:24:43.065000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523827588541317120",
+          "urn:li:share:7523827587970949120"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-09T12:50:06.065558+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523824420260569088/",
+        "urn": "urn:li:share:7523824419425742849",
+        "shareUrn": "urn:li:share:7523824419425742849",
+        "text": "Lenny's Newsletter is now a physical magazine!\n\n• 108 thick coated pages\n• Perfect-bound spine\n• Glossy cover\n• 8.5\" × 11\"\n\nFor the next 48 hours, shipping is FREE worldwide.\n\nGrab it here: https://lnkd.in/dxNdcpmt",
+        "authorName": "Daniel Belfort",
+        "authorHeadline": "danielbelfort.com",
+        "authorProfileUrl": "https://www.linkedin.com/in/danielbelfort/",
+        "postedAtISO": "2026-11-04T19:16:24.306000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523824420260569088",
+          "urn:li:share:7523824419425742849"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-09T12:50:06.065558+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523498054977732608/",
+        "urn": "urn:li:share:7523498053962539008",
+        "shareUrn": "urn:li:share:7523498053962539008",
+        "text": "Announcing: Public compensation benchmarks for the most in-demand tech roles, now available for free on LennysJobs.com 💥\n\nPick a role and location, and get detailed base salary and new-hire equity benchmarks, from entry-level IC to Sr. Director. Data updated monthly.\n\nTo make this happen, I’ve partnered with Pave, home to the world’s largest real-time compensation dataset, which pulls directly from the HR, payroll, and equity systems of 9,000+ companies (e.g. OpenAI, Databricks, Ramp, Cursor).\n\nThis is the first time Pave has opened up this data to everyone, and I’m excited to help more people get the comp they deserve.\n\nFind it here: http://lennysjobs.com/comp",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-03T21:35:16.141000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523498054977732608",
+          "urn:li:share:7523498053962539008"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-09T12:50:06.065558+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523426896412389378/",
+        "urn": "urn:li:share:7523426895414067200",
+        "shareUrn": "urn:li:share:7523426895414067200",
+        "text": "The holidays are fast approaching, so I’m back with my sixth (!) annual gift guide. \n\nOver 100 gift ideas—all things I actually use, love, and recommend.\n\nThis started out as a random post idea, but now you’d be surprised how many people ping me asking when the new list will be out.\n\nAs always, the collection includes a mix of practical stuff with a lot of fun and delight, from high-end products to very affordable items. There are no affiliate links here, and I’m not benefiting from recommending any of these products.\n\nPro tip: After reading it, point your favorite AI agent at the post and have it brainstorm gifts for your family, friends, and coworkers.\n\nHere's the guide: https://lnkd.in/g-2iBX6u",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-03T16:52:30.617000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523426896412389378",
+          "urn:li:share:7523426895414067200"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-09T12:50:06.065558+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
