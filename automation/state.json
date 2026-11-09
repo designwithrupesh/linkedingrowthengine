@@ -4244,11 +4244,14 @@
       "kind": "post",
       "text": "A small, focused community for in-house UX practitioners sharing real business cases and templates makes design decisions more concrete and less theoretical. Access to proven research plans and examples from peers inside organizations grounds UX work in real-world constraints and outcomes. Design choices gain credibility when tied to specific user actions or business results. This kind of resource is a practical tool for early-stage founders and product leaders to see how UX supports brand and product goals directly.\n\nSource: https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
       "at": "2026-11-09T12:30:30.068776+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-11T03:30:00+00:00",
-      "allocation_day": "2026-11-11"
+      "allocation_day": "2026-11-11",
+      "http_status": 200,
+      "remote_id": "6af1bce7ef6598ddfda956b3",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
@@ -4931,6 +4934,14 @@
       "media_status": "scheduled",
       "format": "carousel",
       "asset_sha256": "6549be0eed14630d2c94145c02d711ab49971d2a99fdaef8c757558abebbc879"
+    },
+    {
+      "id": "6af1bce7ef6598ddfda956b3",
+      "text": "A small, focused community for in-house UX practitioners sharing real business cases and templates makes design decisions more concrete and less theoretical. Access to proven research plans and examples from peers inside organizations grounds UX work in real-world constraints and outcomes. Design choices gain credibility when tied to specific user actions or business results. This kind of resource is a practical tool for early-stage founders and product leaders to see how UX supports brand and product goals directly.\n\nSource: https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+      "url": null,
+      "at": "2026-11-09T12:30:30.068776+00:00",
+      "scheduled_for": "2026-11-11T03:30:00+00:00",
+      "allocation_day": "2026-11-11"
     }
   ],
   "discovery": {
