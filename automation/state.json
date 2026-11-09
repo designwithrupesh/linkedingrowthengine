@@ -4239,6 +4239,16 @@
       "http_status": 200,
       "remote_id": "6af140c6c2bf5327167b148f",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "post:2026-11-11:0900": {
+      "kind": "post",
+      "text": "A small, focused community for in-house UX practitioners sharing real business cases and templates makes design decisions more concrete and less theoretical. Access to proven research plans and examples from peers inside organizations grounds UX work in real-world constraints and outcomes. Design choices gain credibility when tied to specific user actions or business results. This kind of resource is a practical tool for early-stage founders and product leaders to see how UX supports brand and product goals directly.\n\nSource: https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+      "at": "2026-11-09T12:30:30.068776+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-11T03:30:00+00:00",
+      "allocation_day": "2026-11-11"
     }
   },
   "days": {
@@ -4419,6 +4429,11 @@
     },
     "2026-11-10": {
       "post": 2,
+      "interaction": 0,
+      "read": 0
+    },
+    "2026-11-11": {
+      "post": 1,
       "interaction": 0,
       "read": 0
     }
