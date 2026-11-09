@@ -4234,7 +4234,7 @@
       "media_scheduled_for": "2026-11-10T12:30:00Z",
       "media_operation_id": "982dab813c103db50c96f6be5555c36e056f1c1b594c41bc383237bdf79f8d20",
       "media_stage": "complete-media",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6af140c6c2bf5327167b148f"
     }
