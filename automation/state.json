@@ -4428,7 +4428,7 @@
     "2026-11-09": {
       "post": 2,
       "interaction": 0,
-      "read": 62
+      "read": 63
     },
     "2026-11-10": {
       "post": 2,
@@ -5519,7 +5519,7 @@
         "cached": false
       },
       "urn:li:share:7514890083917864960": {
-        "last_considered_at": "2026-11-09T13:47:00.048821+00:00",
+        "last_considered_at": "2026-11-09T15:42:05.046910+00:00",
         "changed_at": "2026-10-11T07:28:23.120183+00:00",
         "count": 0,
         "cached": false,
@@ -5785,7 +5785,7 @@
         "last_checked_at": "2026-11-09T14:02:00.666182+00:00"
       },
       "urn:li:share:7523587336883040256": {
-        "last_considered_at": "2026-11-09T13:47:00.048821+00:00",
+        "last_considered_at": "2026-11-09T15:42:05.046910+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-09T13:47:00.048821+00:00"
       },
