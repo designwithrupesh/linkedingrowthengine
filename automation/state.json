@@ -5836,8 +5836,8 @@
       "status": "running",
       "started_at": "2026-11-09T12:56:57.392391+00:00",
       "deadline": "2026-11-09T22:00:00+05:30",
-      "heartbeat_at": "2026-11-09T16:22:07.620893+00:00",
-      "cycles": 42,
+      "heartbeat_at": "2026-11-09T16:27:13.215440+00:00",
+      "cycles": 43,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -5975,28 +5975,6 @@
       "shreyasdoshi": "2026-11-09T12:35:12.236898+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523058141400559617/",
-        "urn": "urn:li:ugcPost:7523058140347740160",
-        "shareUrn": "urn:li:ugcPost:7523058140347740160",
-        "text": "My biggest takeaways from Hector Serrano (Head of Content at Wispr Flow):\n\n1. Paid UGC is one of the highest-alpha opportunities for B2B SaaS right now.\n2. Turn on paid early, but only after PMF.\n3. The key is to incentivize creators by giving them a % of GMV or ad spend.\n4. A “smart retainer” keeps new creators around long enough to get good.\n5. Recruit your first creators off-platform, by hand.\n6. Copycat ads die fast, so push every creator to experiment.\n7. Recruit niche creators to target your ICPs.\n8. You need two people to run a paid-UGC program: a creative lead and a media buyer.\n9. “The best marketers are allergic to AI.”\n10. Develop young talent like a soccer academy.\n\nFull episode: https://lnkd.in/gUW9fmMB",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-02T16:27:12.571000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523058141400559617",
-          "urn:li:ugcPost:7523058140347740160"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-08T12:48:48.334504+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524243849209356289/",
         "urn": "urn:li:ugcPost:7524243767978295296",
