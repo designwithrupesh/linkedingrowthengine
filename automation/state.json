@@ -5949,12 +5949,12 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-09T17:57:37.481729+00:00",
-      "deadline": "2026-11-09T22:57:37.481729+00:00",
-      "heartbeat_at": "2026-11-09T22:57:37.675833+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-09T22:58:19.426834+00:00",
+      "deadline": "2026-11-10T03:58:19.426834+00:00",
+      "heartbeat_at": "2026-11-09T22:58:20.002600+00:00",
+      "cycles": 0,
       "sessions": 0,
       "recent_errors": []
     },
