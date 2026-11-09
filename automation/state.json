@@ -4094,6 +4094,132 @@
       "parent": null,
       "http_status": 429,
       "reason": "HTTP response did not establish a successful write"
+    },
+    "post:2026-11-10:1800": {
+      "kind": "post",
+      "text": "Choose between interface updates by comparing alternatives and mapping decisions.",
+      "at": "2026-11-09T03:40:42.850367+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-10T12:30:00+00:00",
+      "allocation_day": "2026-11-10",
+      "format": "carousel",
+      "asset_id": "visual-2026-11-10-1800-carousel",
+      "asset_sha256": "6549be0eed14630d2c94145c02d711ab49971d2a99fdaef8c757558abebbc879",
+      "asset_title": "Current product interfaces and design tool updates",
+      "asset_pages": 5,
+      "asset_spec": {
+        "id": "visual-2026-11-10-1800-carousel",
+        "kind": "carousel",
+        "title": "Current product interfaces and design tool updates",
+        "subtitle": "Hypothetical example: evolving interface choices",
+        "caption": "Choose between interface updates by comparing alternatives and mapping decisions.",
+        "slides": [
+          {
+            "title": "Comparing interface update options",
+            "body": [
+              "Option A shows a simplified dashboard with fewer metrics.",
+              "Option B retains full metrics but adds customizable widgets."
+            ],
+            "example": "",
+            "layout": "comparison",
+            "visual": {
+              "panels": [
+                {
+                  "label": "Option A",
+                  "title": "Simplified dashboard",
+                  "body": "Focus on key metrics only"
+                },
+                {
+                  "label": "Option B",
+                  "title": "Full dashboard",
+                  "body": "All metrics plus widget customization"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Decision flow for update rollout",
+            "body": [
+              "Start with user feedback on dashboard complexity.",
+              "Decide whether to simplify or enhance customization."
+            ],
+            "example": "",
+            "layout": "diagram",
+            "visual": {
+              "nodes": [
+                {
+                  "label": "User feedback",
+                  "title": "Collect insights",
+                  "detail": "Identify pain points in current dashboard"
+                },
+                {
+                  "label": "Simplify",
+                  "title": "Reduce metrics",
+                  "detail": "Show only essential data"
+                },
+                {
+                  "label": "Customize",
+                  "title": "Add widgets",
+                  "detail": "Allow user control over dashboard"
+                },
+                {
+                  "label": "Test rollout",
+                  "title": "Pilot update",
+                  "detail": "Measure user satisfaction"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Feature prioritization matrix",
+            "body": [
+              "Evaluate features by impact and implementation effort."
+            ],
+            "example": "",
+            "layout": "matrix",
+            "visual": {
+              "matrix": {
+                "columns": [
+                  "Low effort",
+                  "High effort"
+                ],
+                "rows": [
+                  [
+                    "Essential metrics",
+                    "Custom widgets"
+                  ],
+                  [
+                    "Additional charts",
+                    "Advanced filters"
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "title": "Update planning worksheet",
+            "body": [
+              "List key decisions and notes for design updates."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Primary goal",
+                  "hint": "E.g., simplify dashboard or add customization"
+                },
+                {
+                  "label": "User feedback summary",
+                  "hint": "Key pain points or requests"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -4273,7 +4399,7 @@
       "read": 24
     },
     "2026-11-10": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
