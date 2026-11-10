@@ -4359,7 +4359,21 @@
             }
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "b23c1978e4a071a2b7a6d1b4d985e6a4f742c48e33f147ee48c8f999b3a1d404",
+        "mime_type": "application/pdf",
+        "title": "Check the next customer decision",
+        "type": "document",
+        "page_count": 5,
+        "format": "freebie",
+        "file_name": "check-the-next-customer-decision.pdf",
+        "size_bytes": 58223
+      },
+      "media_scheduled_for": "2026-11-11T12:30:00Z",
+      "media_operation_id": "2099172a12efd185e6348f940304424ada4bf77f391fe7a7b5359333dc1e14a0",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
