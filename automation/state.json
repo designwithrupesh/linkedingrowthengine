@@ -4368,12 +4368,13 @@
         "page_count": 5,
         "format": "freebie",
         "file_name": "check-the-next-customer-decision.pdf",
-        "size_bytes": 58223
+        "size_bytes": 58223,
+        "media_id": "6af292f7b1b0ee55a79d0b14"
       },
       "media_scheduled_for": "2026-11-11T12:30:00Z",
       "media_operation_id": "2099172a12efd185e6348f940304424ada4bf77f391fe7a7b5359333dc1e14a0",
       "media_stage": "reserve-upload",
-      "media_stage_status": "inflight",
+      "media_stage_status": "acknowledged",
       "http_status": 200,
       "remote_id": "6af292f1b1b0ee55a79d0adb"
     }
