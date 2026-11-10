@@ -5992,8 +5992,8 @@
       "status": "running",
       "started_at": "2026-11-10T11:30:01.908127+00:00",
       "deadline": "2026-11-10T19:29:01.908127+05:30",
-      "heartbeat_at": "2026-11-10T11:45:14.627921+00:00",
-      "cycles": 4,
+      "heartbeat_at": "2026-11-10T11:50:16.118472+00:00",
+      "cycles": 5,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -6137,28 +6137,6 @@
       "shreyasdoshi": "2026-11-09T12:35:12.236898+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524070901487808512/",
-        "urn": "urn:li:share:7524070900615417856",
-        "shareUrn": "urn:li:share:7524070900615417856",
-        "text": "We've shipped a very cool integration between Pendo.io and Fin. \n\nBy augmenting Fin's understanding of the user's behaviour in your product/app, you'll see \n*  Proactive Fin - Pendo identifies users who are stuck, or rage clicking, or about to give up and let's Fin jump in with a solution\n* better Fin performance (e.g. when a user says \"this isn't working\" Pendo can heavily augment Fin's understanding of what's going on)\n\nThis is one of many ways we'll see Fin improve over the coming months, do please let us know else you'd like to see.  (link in comments)",
-        "authorName": "Des Traynor",
-        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
-        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
-        "postedAtISO": "2026-11-05T11:31:33.392000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
-        "identity_aliases": [
-          "urn:li:activity:7524070901487808512",
-          "urn:li:share:7524070900615417856"
-        ],
-        "first_seen_at": "2026-11-08T11:45:05.467744+00:00",
-        "cached_at": "2026-11-09T11:50:03.927738+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523428199519735808/",
         "urn": "urn:li:ugcPost:7523428198810841088",
@@ -6418,6 +6396,28 @@
         ],
         "first_seen_at": "2026-11-08T11:35:05.363818+00:00",
         "cached_at": "2026-11-10T11:40:12.381654+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524070901487808512/",
+        "urn": "urn:li:share:7524070900615417856",
+        "shareUrn": "urn:li:share:7524070900615417856",
+        "text": "We've shipped a very cool integration between Pendo.io and Fin. \n\nBy augmenting Fin's understanding of the user's behaviour in your product/app, you'll see \n*  Proactive Fin - Pendo identifies users who are stuck, or rage clicking, or about to give up and let's Fin jump in with a solution\n* better Fin performance (e.g. when a user says \"this isn't working\" Pendo can heavily augment Fin's understanding of what's going on)\n\nThis is one of many ways we'll see Fin improve over the coming months, do please let us know else you'd like to see.  (link in comments)",
+        "authorName": "Des Traynor",
+        "authorHeadline": "Co-Founder of Fin (fka Intercom)",
+        "authorProfileUrl": "https://www.linkedin.com/in/destraynor/",
+        "postedAtISO": "2026-11-05T11:31:33.392000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/destraynor/",
+        "identity_aliases": [
+          "urn:li:activity:7524070901487808512",
+          "urn:li:share:7524070900615417856"
+        ],
+        "first_seen_at": "2026-11-08T11:45:05.467744+00:00",
+        "cached_at": "2026-11-10T11:50:08.162518+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
