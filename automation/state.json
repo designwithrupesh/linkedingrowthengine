@@ -4395,9 +4395,12 @@
       "kind": "comment",
       "text": "A system defining projects and teams creates shared reality, which cuts redundancy and makes coordination clearer.",
       "at": "2026-11-10T12:27:35.703325+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7525609850693668864",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525896951356289024",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
