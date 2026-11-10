@@ -5989,13 +5989,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-11-09T12:56:57.392391+00:00",
-      "deadline": "2026-11-09T22:00:00+05:30",
-      "heartbeat_at": "2026-11-09T16:27:13.215440+00:00",
-      "cycles": 43,
-      "recent_errors": [],
-      "ended_at": "2026-11-09T16:30:00.000204+00:00"
+      "status": "running",
+      "started_at": "2026-11-10T11:30:01.908127+00:00",
+      "deadline": "2026-11-10T19:29:01.908127+05:30",
+      "heartbeat_at": "2026-11-10T11:30:16.124090+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
