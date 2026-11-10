@@ -6216,20 +6216,14 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-10T08:59:54.590981+00:00",
-      "deadline": "2026-11-10T13:59:54.590981+00:00",
-      "heartbeat_at": "2026-11-10T13:59:54.929229+00:00",
-      "cycles": 13,
-      "sessions": 1,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "TimeoutExpired",
-          "at": "2026-11-10T11:30:00.001299+00:00"
-        }
-      ]
+      "status": "running",
+      "phase": "engagement",
+      "started_at": "2026-11-10T14:00:44.429922+00:00",
+      "deadline": "2026-11-10T19:00:44.429922+00:00",
+      "heartbeat_at": "2026-11-10T14:00:45.004588+00:00",
+      "cycles": 0,
+      "sessions": 0,
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
