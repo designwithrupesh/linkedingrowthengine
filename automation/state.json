@@ -5135,7 +5135,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 97,
+    "profile_cursor": 98,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -6201,7 +6201,7 @@
       "rahulvohra": "2026-11-10T12:05:14.458133+00:00",
       "johnmaeda": "2026-11-10T12:20:08.958243+00:00",
       "karrisaarinen": "2026-11-10T12:25:09.280636+00:00",
-      "shreyasdoshi": "2026-11-09T12:35:12.236898+00:00"
+      "shreyasdoshi": "2026-11-10T12:35:32.150716+00:00"
     },
     "targets": [
       {
