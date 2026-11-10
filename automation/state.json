@@ -4252,6 +4252,114 @@
       "http_status": 200,
       "remote_id": "6af1bce7ef6598ddfda956b3",
       "reason": "Publora acknowledged the request"
+    },
+    "post:2026-11-11:1800": {
+      "kind": "post",
+      "text": "I'd show the next available time before opening the calendar.",
+      "at": "2026-11-10T03:43:28.911109+00:00",
+      "status": "inflight",
+      "post_urn": null,
+      "parent": null,
+      "scheduled_for": "2026-11-11T12:30:00+00:00",
+      "allocation_day": "2026-11-11",
+      "format": "freebie",
+      "asset_id": "visual-2026-11-11-1800-freebie",
+      "asset_sha256": "b23c1978e4a071a2b7a6d1b4d985e6a4f742c48e33f147ee48c8f999b3a1d404",
+      "asset_title": "Check the next customer decision",
+      "asset_pages": 5,
+      "asset_spec": {
+        "id": "visual-2026-11-11-1800-freebie",
+        "kind": "freebie",
+        "title": "Check the next customer decision",
+        "subtitle": "Hypothetical example: choosing a time",
+        "caption": "I'd show the next available time before opening the calendar.",
+        "slides": [
+          {
+            "title": "Identify the user's immediate decision",
+            "body": [
+              "User wants to book a meeting but faces a calendar with many unavailable slots.",
+              "Decision: Should the interface highlight the next free time before showing the full calendar?"
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "User's main question",
+                  "hint": "When can I book next?"
+                },
+                {
+                  "label": "Current interface challenge",
+                  "hint": "Calendar shows many blocked times"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Compare interface options",
+            "body": [
+              "Option A: Show full calendar first, no highlight.",
+              "Option B: Show next available time upfront, then calendar."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Option A pros and cons",
+                  "hint": "Pros: full view; Cons: hard to find free time"
+                },
+                {
+                  "label": "Option B pros and cons",
+                  "hint": "Pros: quick info; Cons: might hide full calendar context"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Decide on user focus and feeling",
+            "body": [
+              "What should the user notice first?",
+              "How should they feel about booking availability?"
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Primary user focus",
+                  "hint": "Next available slot or full calendar?"
+                },
+                {
+                  "label": "Desired user feeling",
+                  "hint": "Relief finding a slot or confidence in choices"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Plan the interface update",
+            "body": [
+              "Choose the best option based on user needs.",
+              "Draft UI text and button labels for clarity."
+            ],
+            "example": "",
+            "layout": "worksheet",
+            "visual": {
+              "fields": [
+                {
+                  "label": "Chosen interface approach",
+                  "hint": "E.g., show next available time first"
+                },
+                {
+                  "label": "Button label example",
+                  "hint": "E.g., Book this time"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "days": {
@@ -4436,7 +4544,7 @@
       "read": 22
     },
     "2026-11-11": {
-      "post": 1,
+      "post": 2,
       "interaction": 0,
       "read": 0
     }
