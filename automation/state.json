@@ -4257,7 +4257,7 @@
       "kind": "post",
       "text": "I'd show the next available time before opening the calendar.",
       "at": "2026-11-10T03:43:28.911109+00:00",
-      "status": "inflight",
+      "status": "scheduled",
       "post_urn": null,
       "parent": null,
       "scheduled_for": "2026-11-11T12:30:00+00:00",
@@ -4374,10 +4374,11 @@
       },
       "media_scheduled_for": "2026-11-11T12:30:00Z",
       "media_operation_id": "2099172a12efd185e6348f940304424ada4bf77f391fe7a7b5359333dc1e14a0",
-      "media_stage": "schedule-media",
-      "media_stage_status": "acknowledged",
+      "media_stage": "verify-schedule",
+      "media_stage_status": "verified",
       "http_status": 200,
-      "remote_id": "6af292f1b1b0ee55a79d0adb"
+      "remote_id": "6af292f1b1b0ee55a79d0adb",
+      "reason": "Publora confirmed scheduled media and caption"
     }
   },
   "days": {
@@ -5078,7 +5079,7 @@
       "at": "2026-11-10T03:43:28.911109+00:00",
       "scheduled_for": "2026-11-11T12:30:00+00:00",
       "allocation_day": "2026-11-11",
-      "media_status": "schedule-acknowledged",
+      "media_status": "scheduled",
       "format": "freebie",
       "asset_sha256": "b23c1978e4a071a2b7a6d1b4d985e6a4f742c48e33f147ee48c8f999b3a1d404"
     }
