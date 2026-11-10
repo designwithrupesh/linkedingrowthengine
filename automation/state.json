@@ -4639,7 +4639,7 @@
     "2026-11-10": {
       "post": 2,
       "interaction": 6,
-      "read": 65,
+      "read": 66,
       "public_interaction": 6
     },
     "2026-11-11": {
@@ -6077,7 +6077,7 @@
         "last_checked_at": "2026-11-10T14:30:49.354030+00:00"
       },
       "urn:li:share:7525761666400038912": {
-        "last_considered_at": "2026-11-10T14:30:49.354030+00:00",
+        "last_considered_at": "2026-11-10T16:30:03.957223+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-10T14:30:49.354030+00:00"
       },
@@ -6228,7 +6228,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-11-10T11:15:00.596429+00:00"
+      "checked_at": "2026-11-10T16:30:03.957223+00:00"
     }
   },
   "engagement": {
