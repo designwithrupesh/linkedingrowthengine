@@ -4419,9 +4419,12 @@
       "kind": "reaction",
       "text": "LIKE",
       "at": "2026-11-10T12:50:51.075861+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7525723156741918720",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "acknowledged",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
