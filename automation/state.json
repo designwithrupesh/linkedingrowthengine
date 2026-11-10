@@ -6100,13 +6100,12 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "completed",
-      "started_at": "2026-11-10T11:30:01.908127+00:00",
-      "deadline": "2026-11-10T19:29:01.908127+05:30",
-      "heartbeat_at": "2026-11-10T13:55:15.440650+00:00",
-      "cycles": 30,
-      "recent_errors": [],
-      "ended_at": "2026-11-10T13:59:01.908330+00:00"
+      "status": "running",
+      "started_at": "2026-11-10T14:00:46.668878+00:00",
+      "deadline": "2026-11-10T22:00:00+05:30",
+      "heartbeat_at": "2026-11-10T14:00:50.115394+00:00",
+      "cycles": 1,
+      "recent_errors": []
     },
     "last_live_validation": {
       "status": "passed",
