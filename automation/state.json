@@ -4639,7 +4639,7 @@
     "2026-11-10": {
       "post": 2,
       "interaction": 6,
-      "read": 60,
+      "read": 61,
       "public_interaction": 6
     },
     "2026-11-11": {
@@ -6032,7 +6032,7 @@
         "last_checked_at": "2026-11-10T14:45:50.535445+00:00"
       },
       "urn:li:share:7522998468307525633": {
-        "last_considered_at": "2026-11-10T13:15:10.917082+00:00",
+        "last_considered_at": "2026-11-10T15:05:51.497454+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-10T13:15:10.917082+00:00"
       },
