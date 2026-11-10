@@ -5197,10 +5197,10 @@
         "next_page": null
       },
       "urn:li:share:7514527701878284288": {
-        "last_attempt_at": "2026-11-10T11:40:04.007100+00:00",
-        "poll_count": 34,
+        "last_attempt_at": "2026-11-10T18:15:06.085634+00:00",
+        "poll_count": 35,
         "status": "checked",
-        "last_success_at": "2026-11-10T11:40:04.007100+00:00",
+        "last_success_at": "2026-11-10T18:15:06.085634+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5257,10 +5257,10 @@
         "next_page": null
       },
       "urn:li:share:7515388331061452800": {
-        "last_attempt_at": "2026-11-10T11:40:04.007100+00:00",
-        "poll_count": 29,
+        "last_attempt_at": "2026-11-10T18:15:06.085634+00:00",
+        "poll_count": 30,
         "status": "checked",
-        "last_success_at": "2026-11-10T11:40:04.007100+00:00",
+        "last_success_at": "2026-11-10T18:15:06.085634+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5665,10 +5665,10 @@
         "next_page": null
       },
       "urn:li:share:7523587336883040256": {
-        "last_attempt_at": "2026-11-10T11:40:04.007100+00:00",
-        "poll_count": 10,
+        "last_attempt_at": "2026-11-10T18:15:06.085634+00:00",
+        "poll_count": 11,
         "status": "checked",
-        "last_success_at": "2026-11-10T11:40:04.007100+00:00",
+        "last_success_at": "2026-11-10T18:15:06.085634+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5739,8 +5739,8 @@
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-11-10T18:00:05.941990+00:00",
-      "post_urn": "urn:li:share:7516339844223115264",
+      "at": "2026-11-10T18:15:06.085634+00:00",
+      "post_urn": "urn:li:share:7514527701878284288",
       "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
