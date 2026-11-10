@@ -4414,6 +4414,14 @@
       "http_status": 200,
       "remote_id": "6af30f91ef6598ddfdbbf562",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:00742f8e2cad08d2242e884a345a3c4844934be971c5cab09a9b1cd2be153ddb": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-10T12:50:51.075861+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7525723156741918720",
+      "parent": null
     }
   },
   "days": {
@@ -4594,9 +4602,9 @@
     },
     "2026-11-10": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 58,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-11-11": {
       "post": 2,
@@ -6227,72 +6235,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525269502465605632/",
-        "urn": "urn:li:ugcPost:7525269435612352512",
-        "shareUrn": "urn:li:ugcPost:7525269435612352512",
-        "text": "Why PMs are suddenly valuable again with Tulsee Doshi—Head of product for Google’s frontier AI models, including Gemini, Nano Banana, Genie, Veo, and more.\n\nWe discuss:\n🔸 The rising value of great PMs\n🔸 Google’s full-stack frontier AI strategy\n🔸 Why model development is like Snape’s potions class\n🔸 Why the PM role has shifted from writing requirements to creating something with “heft\n🔸 How to write your first eval\n\nListen now: https://lnkd.in/g-EWmu7S\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/g3t2VEi3\n• Apple: https://lnkd.in/gZspvDZx",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-08T18:54:22.134000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7525269502465605632",
-          "urn:li:ugcPost:7525269435612352512"
-        ],
-        "first_seen_at": "2026-11-09T12:50:06.065558+00:00",
-        "cached_at": "2026-11-09T12:50:06.065558+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
-        "urn": "urn:li:share:7523827587970949120",
-        "shareUrn": "urn:li:share:7523827587970949120",
-        "text": "Lenny's Newsletter as a physical magazine!\n\nEight hand-picked posts from the past year, 108 thick coated pages, perfect-bound, with your name on the cover. \n\nThis is a limited edition, and will sell out.\n\nFor the next 48 hours, shipping is FREE worldwide. Makes a great gift!\n\nGrab it here: https://lnkd.in/g8R3rJTu\n\nP.S. I'm not making any money from this. Just want to try this out, see how how folks like it.",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-04T19:24:43.065000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523827588541317120",
-          "urn:li:share:7523827587970949120"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-09T12:50:06.065558+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523824420260569088/",
-        "urn": "urn:li:share:7523824419425742849",
-        "shareUrn": "urn:li:share:7523824419425742849",
-        "text": "Lenny's Newsletter is now a physical magazine!\n\n• 108 thick coated pages\n• Perfect-bound spine\n• Glossy cover\n• 8.5\" × 11\"\n\nFor the next 48 hours, shipping is FREE worldwide.\n\nGrab it here: https://lnkd.in/dxNdcpmt",
-        "authorName": "Daniel Belfort",
-        "authorHeadline": "danielbelfort.com",
-        "authorProfileUrl": "https://www.linkedin.com/in/danielbelfort/",
-        "postedAtISO": "2026-11-04T19:16:24.306000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7523824420260569088",
-          "urn:li:share:7523824419425742849"
-        ],
-        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
-        "cached_at": "2026-11-09T12:50:06.065558+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523498054977732608/",
         "urn": "urn:li:share:7523498053962539008",
         "shareUrn": "urn:li:share:7523498053962539008",
@@ -6507,6 +6449,116 @@
         ],
         "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
         "cached_at": "2026-11-10T12:25:09.280636+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525723157760987136/",
+        "urn": "urn:li:share:7525723156741918720",
+        "shareUrn": "urn:li:share:7525723156741918720",
+        "text": "The best time to join a rocketship is before everyone knows about it.\n\nI’m excited to launch The Next 50: the 50 hottest early-stage startups to keep an eye on (and try to join).\n\nUsing Harmonic’s data, the juiciest startup dataset out there, we looked at every early-stage startup and ranked them on headcount growth, recent funding, and investor interest.\n\nWe then picked the top 50. \n\nHere's the full list: https://lnkd.in/gBJQC3U8\n\nMy goal here is to help you figure out where to go work. We’ll update this list quarterly, and I’d love your feedback on what other factors we should consider in the future.\n\nP.S. This is in addition to the Lenny 100, the top 100 well-known companies with the highest talent density, tackling the most ambitious problems: https://lnkd.in/grmYGxnd",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-10T00:57:01.985000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525723157760987136",
+          "urn:li:share:7525723156741918720"
+        ],
+        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
+        "cached_at": "2026-11-10T12:50:11.276093+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525596804113989632/",
+        "urn": "urn:li:ugcPost:7525596802881003520",
+        "shareUrn": "urn:li:ugcPost:7525596802881003520",
+        "text": "My biggest takeaways from Head of Product for Gemini and Google's other frontier AI models, Tulsee Doshi.\n\n1. Great PMs are more in demand than ever.\n2. The PM role has shifted from writing requirements to creating something with “heft.”\n3. Tulsee hires PMs who have opinions about models.\n4. To understand a new model, test it on work you care about.\n5. Model development is less like engineering and more like alchemy.\n6. Tulsee’s 60-20-20 rule is a practical way to build ahead of the models.\n7. Your first eval can be five prompts.\n8. Burnout comes from chaos and grunt work more than from long hours.\n9. Google’s full-stack AI strategy gives it an advantage few competitors can match.\n\nFull episode: https://lnkd.in/gptJAyDr",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-09T16:34:56.928000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525596804113989632",
+          "urn:li:ugcPost:7525596802881003520"
+        ],
+        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
+        "cached_at": "2026-11-10T12:50:11.276093+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525269502465605632/",
+        "urn": "urn:li:ugcPost:7525269435612352512",
+        "shareUrn": "urn:li:ugcPost:7525269435612352512",
+        "text": "Why PMs are suddenly valuable again with Tulsee Doshi—Head of product for Google’s frontier AI models, including Gemini, Nano Banana, Genie, Veo, and more.\n\nWe discuss:\n🔸 The rising value of great PMs\n🔸 Google’s full-stack frontier AI strategy\n🔸 Why model development is like Snape’s potions class\n🔸 Why the PM role has shifted from writing requirements to creating something with “heft\n🔸 How to write your first eval\n\nListen now: https://lnkd.in/g-EWmu7S\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/g3t2VEi3\n• Apple: https://lnkd.in/gZspvDZx",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-08T18:54:22.134000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525269502465605632",
+          "urn:li:ugcPost:7525269435612352512"
+        ],
+        "first_seen_at": "2026-11-09T12:50:06.065558+00:00",
+        "cached_at": "2026-11-10T12:50:11.276093+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
+        "urn": "urn:li:share:7523827587970949120",
+        "shareUrn": "urn:li:share:7523827587970949120",
+        "text": "Lenny's Newsletter as a physical magazine!\n\nEight hand-picked posts from the past year, 108 thick coated pages, perfect-bound, with your name on the cover. \n\nThis is a limited edition, and will sell out.\n\nFor the next 48 hours, shipping is FREE worldwide. Makes a great gift!\n\nGrab it here: https://lnkd.in/g8R3rJTu\n\nP.S. I'm not making any money from this. Just want to try this out, see how how folks like it.",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-04T19:24:43.065000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523827588541317120",
+          "urn:li:share:7523827587970949120"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-10T12:50:11.276093+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523824420260569088/",
+        "urn": "urn:li:share:7523824419425742849",
+        "shareUrn": "urn:li:share:7523824419425742849",
+        "text": "Lenny's Newsletter is now a physical magazine!\n\n• 108 thick coated pages\n• Perfect-bound spine\n• Glossy cover\n• 8.5\" × 11\"\n\nFor the next 48 hours, shipping is FREE worldwide.\n\nGrab it here: https://lnkd.in/dxNdcpmt",
+        "authorName": "Daniel Belfort",
+        "authorHeadline": "danielbelfort.com",
+        "authorProfileUrl": "https://www.linkedin.com/in/danielbelfort/",
+        "postedAtISO": "2026-11-04T19:16:24.306000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7523824420260569088",
+          "urn:li:share:7523824419425742849"
+        ],
+        "first_seen_at": "2026-11-08T12:48:48.334504+00:00",
+        "cached_at": "2026-11-10T12:50:11.276093+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
