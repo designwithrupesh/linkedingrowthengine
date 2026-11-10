@@ -6103,8 +6103,8 @@
       "status": "running",
       "started_at": "2026-11-10T11:30:01.908127+00:00",
       "deadline": "2026-11-10T19:29:01.908127+05:30",
-      "heartbeat_at": "2026-11-10T13:30:15.189391+00:00",
-      "cycles": 25,
+      "heartbeat_at": "2026-11-10T13:35:15.627919+00:00",
+      "cycles": 26,
       "recent_errors": []
     },
     "last_live_validation": {
