@@ -5223,10 +5223,10 @@
         "next_page": null
       },
       "urn:li:share:7516339844223115264": {
-        "last_attempt_at": "2026-11-10T04:59:06.047590+00:00",
-        "poll_count": 24,
+        "last_attempt_at": "2026-11-10T11:35:03.755925+00:00",
+        "poll_count": 25,
         "status": "checked",
-        "last_success_at": "2026-11-10T04:59:06.047590+00:00",
+        "last_success_at": "2026-11-10T11:35:03.755925+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5259,10 +5259,10 @@
         "next_page": null
       },
       "urn:li:share:7516837882951778304": {
-        "last_attempt_at": "2026-11-10T04:59:06.047590+00:00",
-        "poll_count": 21,
+        "last_attempt_at": "2026-11-10T11:35:03.755925+00:00",
+        "poll_count": 22,
         "status": "checked",
-        "last_success_at": "2026-11-10T04:59:06.047590+00:00",
+        "last_success_at": "2026-11-10T11:35:03.755925+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5331,10 +5331,10 @@
         "next_page": null
       },
       "urn:li:share:7517925295543328768": {
-        "last_attempt_at": "2026-11-10T04:59:06.047590+00:00",
-        "poll_count": 18,
+        "last_attempt_at": "2026-11-10T11:35:03.755925+00:00",
+        "poll_count": 19,
         "status": "checked",
-        "last_success_at": "2026-11-10T04:59:06.047590+00:00",
+        "last_success_at": "2026-11-10T11:35:03.755925+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5633,13 +5633,13 @@
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-11-10T11:30:03.395035+00:00",
-      "post_urn": "urn:li:share:7514165310896250880",
-      "self": 1,
+      "at": "2026-11-10T11:35:03.755925+00:00",
+      "post_urn": "urn:li:share:7516339844223115264",
+      "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
       "queued": 0,
-      "duplicate": 1,
+      "duplicate": 0,
       "overflow": 0
     }
   },
