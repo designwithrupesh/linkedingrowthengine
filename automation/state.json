@@ -6220,8 +6220,8 @@
       "phase": "maintenance",
       "started_at": "2026-11-10T14:00:44.429922+00:00",
       "deadline": "2026-11-10T19:00:44.429922+00:00",
-      "heartbeat_at": "2026-11-10T17:00:02.654680+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-11-10T17:15:02.939666+00:00",
+      "cycles": 4,
       "sessions": 1,
       "recent_errors": []
     },
