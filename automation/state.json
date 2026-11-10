@@ -6015,8 +6015,8 @@
       "status": "running",
       "started_at": "2026-11-10T11:30:01.908127+00:00",
       "deadline": "2026-11-10T19:29:01.908127+05:30",
-      "heartbeat_at": "2026-11-10T12:20:16.184946+00:00",
-      "cycles": 11,
+      "heartbeat_at": "2026-11-10T12:27:39.121959+00:00",
+      "cycles": 12,
       "recent_errors": []
     },
     "last_live_validation": {
