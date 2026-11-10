@@ -6216,12 +6216,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "engagement",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-10T08:59:54.590981+00:00",
       "deadline": "2026-11-10T13:59:54.590981+00:00",
-      "heartbeat_at": "2026-11-10T13:59:03.552648+00:00",
-      "cycles": 12,
+      "heartbeat_at": "2026-11-10T13:59:54.929229+00:00",
+      "cycles": 13,
       "sessions": 1,
       "recent_errors": [
         {
