@@ -5992,8 +5992,8 @@
       "status": "running",
       "started_at": "2026-11-10T11:30:01.908127+00:00",
       "deadline": "2026-11-10T19:29:01.908127+05:30",
-      "heartbeat_at": "2026-11-10T12:00:18.742133+00:00",
-      "cycles": 7,
+      "heartbeat_at": "2026-11-10T12:05:21.496757+00:00",
+      "cycles": 8,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -6137,28 +6137,6 @@
       "shreyasdoshi": "2026-11-09T12:35:12.236898+00:00"
     },
     "targets": [
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523428199519735808/",
-        "urn": "urn:li:ugcPost:7523428198810841088",
-        "shareUrn": "urn:li:ugcPost:7523428198810841088",
-        "text": "For more than 10 years, we've been building the most productive email app ever made.\n\nBut not everybody wants to switch apps.\n\nToday, we're bringing the Superhuman magic right into Gmail and Outlook!\n\nIntroducing: Email Assistant by Superhuman Mail 💜\n\nIt stays on top of your inbox, so you don't have to.\n\nHuge congratulations to the amazing team across Superhuman Mail and Superhuman that pulled this off 😄\n\nCheck it out... 👇",
-        "authorName": "Rahul Vohra",
-        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 11 unicorns.",
-        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
-        "postedAtISO": "2026-11-03T16:57:41.302000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
-        "identity_aliases": [
-          "urn:li:activity:7523428199519735808",
-          "urn:li:ugcPost:7523428198810841088"
-        ],
-        "first_seen_at": "2026-11-08T12:03:46.065120+00:00",
-        "cached_at": "2026-11-09T12:05:04.554253+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
       {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524926453461827584/",
         "urn": "urn:li:ugcPost:7524926452895711232",
@@ -6418,6 +6396,28 @@
         ],
         "first_seen_at": "2026-11-08T11:45:05.467744+00:00",
         "cached_at": "2026-11-10T11:50:08.162518+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523428199519735808/",
+        "urn": "urn:li:ugcPost:7523428198810841088",
+        "shareUrn": "urn:li:ugcPost:7523428198810841088",
+        "text": "For more than 10 years, we've been building the most productive email app ever made.\n\nBut not everybody wants to switch apps.\n\nToday, we're bringing the Superhuman magic right into Gmail and Outlook!\n\nIntroducing: Email Assistant by Superhuman Mail 💜\n\nIt stays on top of your inbox, so you don't have to.\n\nHuge congratulations to the amazing team across Superhuman Mail and Superhuman that pulled this off 😄\n\nCheck it out... 👇",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 11 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-11-03T16:57:41.302000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7523428199519735808",
+          "urn:li:ugcPost:7523428198810841088"
+        ],
+        "first_seen_at": "2026-11-08T12:03:46.065120+00:00",
+        "cached_at": "2026-11-10T12:05:14.458133+00:00",
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
