@@ -4452,9 +4452,12 @@
       "kind": "comment",
       "text": "The 60-20-20 rule offers a clear rhythm that helps maintain momentum without overcommitting to any single model shift.",
       "at": "2026-11-10T13:00:57.534169+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7525596802881003520",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7525905347136352257",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
