@@ -6100,12 +6100,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-11-10T14:00:46.668878+00:00",
       "deadline": "2026-11-10T22:00:00+05:30",
       "heartbeat_at": "2026-11-10T16:26:00.348752+00:00",
       "cycles": 30,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-11-10T16:30:00.000193+00:00"
     },
     "last_live_validation": {
       "status": "passed",
