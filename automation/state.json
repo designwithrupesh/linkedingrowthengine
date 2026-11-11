@@ -4645,7 +4645,7 @@
     "2026-11-11": {
       "post": 2,
       "interaction": 0,
-      "read": 15
+      "read": 16
     },
     "2026-11-12": {
       "post": 1,
@@ -5752,9 +5752,9 @@
   "comment_signals": {
     "posts": {
       "urn:li:share:7514165310896250880": {
-        "last_considered_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_considered_at": "2026-11-11T00:32:07.198318+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_checked_at": "2026-11-11T00:32:07.198318+00:00",
         "changed_at": "2026-10-10T00:22:58.153381+00:00",
         "count": 2,
         "cached": false
@@ -5864,9 +5864,9 @@
         "cached": false
       },
       "urn:li:share:7516837882951778304": {
-        "last_considered_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_considered_at": "2026-11-11T00:32:07.198318+00:00",
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_checked_at": "2026-11-11T00:32:07.198318+00:00",
         "changed_at": "2026-10-17T00:49:22.690469+00:00",
         "count": 0,
         "cached": false
@@ -5880,12 +5880,12 @@
         "last_checked_at": "2026-11-11T00:02:07.038873+00:00"
       },
       "urn:li:share:7517200265494855680": {
-        "last_considered_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_considered_at": "2026-11-11T00:32:07.198318+00:00",
         "changed_at": "2026-10-17T13:03:13.976984+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-10T22:16:27.565071+00:00"
+        "last_checked_at": "2026-11-11T00:32:07.198318+00:00"
       },
       "urn:li:share:7517426754408534016": {
         "last_considered_at": "2026-11-10T23:46:28.729633+00:00",
@@ -5912,12 +5912,12 @@
         "last_checked_at": "2026-11-10T23:01:28.411168+00:00"
       },
       "urn:li:share:7517925295543328768": {
-        "last_considered_at": "2026-11-10T22:16:27.565071+00:00",
+        "last_considered_at": "2026-11-11T00:32:07.198318+00:00",
         "changed_at": "2026-10-19T14:18:17.451973+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-10T22:16:27.565071+00:00"
+        "last_checked_at": "2026-11-11T00:32:07.198318+00:00"
       },
       "urn:li:share:7518151781109932032": {
         "last_considered_at": "2026-11-10T22:46:27.870188+00:00",
@@ -5936,12 +5936,12 @@
         "last_checked_at": "2026-11-10T23:16:28.448985+00:00"
       },
       "urn:li:share:7518513915064954881": {
-        "last_considered_at": "2026-11-10T22:01:27.259310+00:00",
+        "last_considered_at": "2026-11-11T00:32:07.198318+00:00",
         "changed_at": "2026-10-21T07:30:33.190407+00:00",
         "count": 0,
         "cached": false,
         "status": "fallback-no-analytics",
-        "last_checked_at": "2026-11-10T22:01:27.259310+00:00"
+        "last_checked_at": "2026-11-11T00:32:07.198318+00:00"
       },
       "urn:li:share:7518649817774895104": {
         "last_considered_at": "2026-11-10T22:46:27.870188+00:00",
@@ -6228,7 +6228,7 @@
     "queue_preparation": {
       "status": "checked",
       "prepared_slots": [],
-      "checked_at": "2026-11-11T00:17:07.068273+00:00"
+      "checked_at": "2026-11-11T00:32:07.198318+00:00"
     }
   },
   "engagement": {
