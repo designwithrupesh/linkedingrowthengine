@@ -4537,7 +4537,9 @@
       "media_scheduled_for": "2026-11-12T12:30:00Z",
       "media_operation_id": "5f669b942ed1b2db26952bf4fbfb6d5a4e958c75b17c68e1db3cf966f3eb544c",
       "media_stage": "create-draft",
-      "media_stage_status": "inflight"
+      "media_stage_status": "acknowledged",
+      "http_status": 200,
+      "remote_id": "6af3e1c6c1878628d9bb2485"
     }
   },
   "days": {
@@ -5257,6 +5259,17 @@
       "at": "2026-11-10T12:35:27.881056+00:00",
       "scheduled_for": "2026-11-12T03:30:00+00:00",
       "allocation_day": "2026-11-12"
+    },
+    {
+      "id": "6af3e1c6c1878628d9bb2485",
+      "text": "I highlight how button style and wording reflect brand personality in the checkout flow.",
+      "url": null,
+      "at": "2026-11-11T03:32:09.820473+00:00",
+      "scheduled_for": "2026-11-12T12:30:00+00:00",
+      "allocation_day": "2026-11-12",
+      "media_status": "draft",
+      "format": "image",
+      "asset_sha256": "914d67958dade0d6fc8fa5a44f59f301cc15aef6fcf2ff5415f3bc49b1218b55"
     }
   ],
   "discovery": {
