@@ -6299,12 +6299,13 @@
     "private_connection": "disabled-by-policy",
     "own_reply_verification": "visible-in-parent-thread",
     "session": {
-      "status": "running",
+      "status": "completed",
       "started_at": "2026-11-11T15:04:28.248864+00:00",
       "deadline": "2026-11-11T22:00:00+05:30",
       "heartbeat_at": "2026-11-11T16:29:35.826572+00:00",
       "cycles": 18,
-      "recent_errors": []
+      "recent_errors": [],
+      "ended_at": "2026-11-11T16:30:00.000163+00:00"
     },
     "last_live_validation": {
       "status": "passed",
