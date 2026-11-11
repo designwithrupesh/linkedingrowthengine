@@ -5342,10 +5342,10 @@
         "next_page": null
       },
       "urn:li:share:7515252488137261056": {
-        "last_attempt_at": "2026-11-11T00:02:07.038873+00:00",
-        "poll_count": 32,
+        "last_attempt_at": "2026-11-11T07:03:00.812830+00:00",
+        "poll_count": 33,
         "status": "checked",
-        "last_success_at": "2026-11-11T00:02:07.038873+00:00",
+        "last_success_at": "2026-11-11T07:03:00.812830+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5438,10 +5438,10 @@
         "next_page": null
       },
       "urn:li:ugcPost:7516702017613127680": {
-        "last_attempt_at": "2026-11-11T00:02:07.038873+00:00",
-        "poll_count": 26,
+        "last_attempt_at": "2026-11-11T07:03:00.812830+00:00",
+        "poll_count": 27,
         "status": "checked",
-        "last_success_at": "2026-11-11T00:02:07.038873+00:00",
+        "last_success_at": "2026-11-11T07:03:00.812830+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5462,10 +5462,10 @@
         "next_page": null
       },
       "urn:li:ugcPost:7517064370120634369": {
-        "last_attempt_at": "2026-11-11T00:02:07.038873+00:00",
-        "poll_count": 23,
+        "last_attempt_at": "2026-11-11T07:03:00.812830+00:00",
+        "poll_count": 24,
         "status": "checked",
-        "last_success_at": "2026-11-11T00:02:07.038873+00:00",
+        "last_success_at": "2026-11-11T07:03:00.812830+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5702,10 +5702,10 @@
         "next_page": null
       },
       "urn:li:ugcPost:7521186562949230592": {
-        "last_attempt_at": "2026-11-11T00:02:07.038873+00:00",
-        "poll_count": 12,
+        "last_attempt_at": "2026-11-11T07:03:00.812830+00:00",
+        "poll_count": 13,
         "status": "checked",
-        "last_success_at": "2026-11-11T00:02:07.038873+00:00",
+        "last_success_at": "2026-11-11T07:03:00.812830+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5750,10 +5750,10 @@
         "next_page": null
       },
       "urn:li:share:7524674647741689856": {
-        "last_attempt_at": "2026-11-11T00:02:07.038873+00:00",
-        "poll_count": 12,
+        "last_attempt_at": "2026-11-11T07:03:00.812830+00:00",
+        "poll_count": 13,
         "status": "checked",
-        "last_success_at": "2026-11-11T00:02:07.038873+00:00",
+        "last_success_at": "2026-11-11T07:03:00.812830+00:00",
         "returned_top_level": 0,
         "coverage": "bounded-public-results",
         "returned_rows": 0,
@@ -5848,8 +5848,8 @@
     },
     "pending": {},
     "last_ingest": {
-      "at": "2026-11-11T06:48:00.500481+00:00",
-      "post_urn": "urn:li:ugcPost:7515750753525788672",
+      "at": "2026-11-11T07:03:00.812830+00:00",
+      "post_urn": "urn:li:share:7515252488137261056",
       "self": 0,
       "unidentified": 0,
       "invalid_parent": 0,
