@@ -6415,12 +6415,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "maintenance",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-11T15:04:26.776290+00:00",
       "deadline": "2026-11-11T20:04:26.776290+00:00",
-      "heartbeat_at": "2026-11-11T20:00:05.190402+00:00",
-      "cycles": 15,
+      "heartbeat_at": "2026-11-11T20:04:27.020033+00:00",
+      "cycles": 16,
       "sessions": 1,
       "recent_errors": []
     },
