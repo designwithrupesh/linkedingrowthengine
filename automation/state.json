@@ -6416,12 +6416,12 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
+      "phase": "maintenance",
       "started_at": "2026-11-11T15:04:26.776290+00:00",
       "deadline": "2026-11-11T20:04:26.776290+00:00",
-      "heartbeat_at": "2026-11-11T15:04:27.064555+00:00",
-      "cycles": 0,
-      "sessions": 0,
+      "heartbeat_at": "2026-11-11T16:30:01.434677+00:00",
+      "cycles": 1,
+      "sessions": 1,
       "recent_errors": []
     },
     "queue_preparation": {
