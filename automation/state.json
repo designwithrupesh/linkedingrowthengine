@@ -4581,9 +4581,12 @@
       "kind": "comment",
       "text": "When teams hire PMs and engineers but cut design roles, the user experience is still shaped by design decisions, just not by dedicated designers.",
       "at": "2026-11-11T12:51:17.266635+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7525978951526023168",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7526265301009768448",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
