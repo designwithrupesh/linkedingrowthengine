@@ -4565,6 +4565,14 @@
       "http_status": 201,
       "remote_id": "7526258981716316160",
       "reason": "Publora acknowledged the request"
+    },
+    "reaction:comment:2a5d63294b3de53d931c3ed0c5cfccaa92b28370cbc299b94faaaf7826c3f33d": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-11T12:51:14.195848+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7525978951526023168",
+      "parent": null
     }
   },
   "days": {
@@ -4751,9 +4759,9 @@
     },
     "2026-11-11": {
       "post": 2,
-      "interaction": 2,
+      "interaction": 3,
       "read": 61,
-      "public_interaction": 2
+      "public_interaction": 3
     },
     "2026-11-12": {
       "post": 2,
@@ -6442,72 +6450,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525723157760987136/",
-        "urn": "urn:li:share:7525723156741918720",
-        "shareUrn": "urn:li:share:7525723156741918720",
-        "text": "The best time to join a rocketship is before everyone knows about it.\n\nI’m excited to launch The Next 50: the 50 hottest early-stage startups to keep an eye on (and try to join).\n\nUsing Harmonic’s data, the juiciest startup dataset out there, we looked at every early-stage startup and ranked them on headcount growth, recent funding, and investor interest.\n\nWe then picked the top 50. \n\nHere's the full list: https://lnkd.in/gBJQC3U8\n\nMy goal here is to help you figure out where to go work. We’ll update this list quarterly, and I’d love your feedback on what other factors we should consider in the future.\n\nP.S. This is in addition to the Lenny 100, the top 100 well-known companies with the highest talent density, tackling the most ambitious problems: https://lnkd.in/grmYGxnd",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-10T00:57:01.985000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7525723157760987136",
-          "urn:li:share:7525723156741918720"
-        ],
-        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
-        "cached_at": "2026-11-10T12:50:11.276093+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525596804113989632/",
-        "urn": "urn:li:ugcPost:7525596802881003520",
-        "shareUrn": "urn:li:ugcPost:7525596802881003520",
-        "text": "My biggest takeaways from Head of Product for Gemini and Google's other frontier AI models, Tulsee Doshi.\n\n1. Great PMs are more in demand than ever.\n2. The PM role has shifted from writing requirements to creating something with “heft.”\n3. Tulsee hires PMs who have opinions about models.\n4. To understand a new model, test it on work you care about.\n5. Model development is less like engineering and more like alchemy.\n6. Tulsee’s 60-20-20 rule is a practical way to build ahead of the models.\n7. Your first eval can be five prompts.\n8. Burnout comes from chaos and grunt work more than from long hours.\n9. Google’s full-stack AI strategy gives it an advantage few competitors can match.\n\nFull episode: https://lnkd.in/gptJAyDr",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-09T16:34:56.928000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7525596804113989632",
-          "urn:li:ugcPost:7525596802881003520"
-        ],
-        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
-        "cached_at": "2026-11-10T12:50:11.276093+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525269502465605632/",
-        "urn": "urn:li:ugcPost:7525269435612352512",
-        "shareUrn": "urn:li:ugcPost:7525269435612352512",
-        "text": "Why PMs are suddenly valuable again with Tulsee Doshi—Head of product for Google’s frontier AI models, including Gemini, Nano Banana, Genie, Veo, and more.\n\nWe discuss:\n🔸 The rising value of great PMs\n🔸 Google’s full-stack frontier AI strategy\n🔸 Why model development is like Snape’s potions class\n🔸 Why the PM role has shifted from writing requirements to creating something with “heft\n🔸 How to write your first eval\n\nListen now: https://lnkd.in/g-EWmu7S\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/g3t2VEi3\n• Apple: https://lnkd.in/gZspvDZx",
-        "authorName": "Lenny Rachitsky",
-        "authorHeadline": "Deeply researched product, growth, and career advice",
-        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
-        "postedAtISO": "2026-11-08T18:54:22.134000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
-        "identity_aliases": [
-          "urn:li:activity:7525269502465605632",
-          "urn:li:ugcPost:7525269435612352512"
-        ],
-        "first_seen_at": "2026-11-09T12:50:06.065558+00:00",
-        "cached_at": "2026-11-10T12:50:11.276093+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "promotion"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523827588541317120/",
         "urn": "urn:li:share:7523827587970949120",
         "shareUrn": "urn:li:share:7523827587970949120",
@@ -6725,6 +6667,116 @@
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525978952482553856/",
+        "urn": "urn:li:share:7525978951526023168",
+        "shareUrn": "urn:li:share:7525978951526023168",
+        "text": "STATE OF THE TECH JOB MARKET IN 2026\n\nTwice a year, I dig into trends in hiring and job openings. This is the fifth report I've done, and the most surprising yet:\n\n1. PMs are winning in the AI era\n2. Engineering demand has stalled\n3. Design openings are at a record low\n4. Every role now requires AI skills\n5. Tech jobs are concentrating in the Bay Area\n6. Remote roles are at a record low\n7. The tech job market is growing fast, but mostly outside of software (gasp!)\n\nFull report here: https://lnkd.in/gwxauQt5",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-10T17:53:28.199000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525978952482553856",
+          "urn:li:share:7525978951526023168"
+        ],
+        "first_seen_at": "2026-11-11T12:50:16.069274+00:00",
+        "cached_at": "2026-11-11T12:50:16.069274+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525939232482390016/",
+        "urn": "urn:li:share:7525939229122555905",
+        "shareUrn": "urn:li:share:7525939229122555905",
+        "text": "Lenny Rachitsky's State of the tech job market, late 2026 is out today, with new data from both sides: the roles companies are posting and the people they're hiring.\n\nGreat to collaborate with Lenny and Amit Taylor on this analysis: job openings data from TrueUp, and US hiring data from Live Data Technologies, which tracks job changes for 124 million professionals.\n\nFive of Lenny's seven top findings:\n\n1. PMs seem to be benefiting most in the AI era. PM openings are at their highest in nearly four years, and PMs are now 21% of US hires across PM, engineering, design, data science and user research, up from 16% in 2021.\n\n2. Demand for engineers is plateauing. Open engineering roles grew just 2.5% this past year, and US companies hired about 113,000 software engineers, less than half the 2022 peak.\n\n3. Demand for designers continues to hit record lows.\n\n4. \"Everybody now needs to AI.\"\n\n5. The tech job market is growing, but mostly outside software roles.\n\nTwo more findings, on where the jobs are today, are in the full report.\n\nCurious about a company or role the report didn’t cover? Ask in the comments and I’ll share what our hiring data shows. The data behind the report is linked below if you want to explore it yourself as well.",
+        "authorName": "Alex Hamilton",
+        "authorHeadline": "Insights @ Live Data Technologies | Hiring and job change insights for 124 million professionals",
+        "authorProfileUrl": "https://www.linkedin.com/in/luisalexanderhamilton/",
+        "postedAtISO": "2026-11-10T15:16:11.640000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525939232482390016",
+          "urn:li:share:7525939229122555905"
+        ],
+        "first_seen_at": "2026-11-11T12:50:16.069274+00:00",
+        "cached_at": "2026-11-11T12:50:16.069274+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525723157760987136/",
+        "urn": "urn:li:share:7525723156741918720",
+        "shareUrn": "urn:li:share:7525723156741918720",
+        "text": "The best time to join a rocketship is before everyone knows about it.\n\nI’m excited to launch The Next 50: the 50 hottest early-stage startups to keep an eye on (and try to join).\n\nUsing Harmonic’s data, the juiciest startup dataset out there, we looked at every early-stage startup and ranked them on headcount growth, recent funding, and investor interest.\n\nWe then picked the top 50. \n\nHere's the full list: https://lnkd.in/gBJQC3U8\n\nMy goal here is to help you figure out where to go work. We’ll update this list monthly, and I’d love your feedback on what other factors we should consider in the future.\n\nP.S. This is in addition to the Lenny 100, the top 100 well-known companies with the highest talent density, tackling the most ambitious problems: https://lnkd.in/grmYGxnd",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-10T00:57:01.985000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525723157760987136",
+          "urn:li:share:7525723156741918720"
+        ],
+        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
+        "cached_at": "2026-11-11T12:50:16.069274+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525596804113989632/",
+        "urn": "urn:li:ugcPost:7525596802881003520",
+        "shareUrn": "urn:li:ugcPost:7525596802881003520",
+        "text": "My biggest takeaways from Head of Product for Gemini and Google's other frontier AI models, Tulsee Doshi.\n\n1. Great PMs are more in demand than ever.\n2. The PM role has shifted from writing requirements to creating something with “heft.”\n3. Tulsee hires PMs who have opinions about models.\n4. To understand a new model, test it on work you care about.\n5. Model development is less like engineering and more like alchemy.\n6. Tulsee’s 60-20-20 rule is a practical way to build ahead of the models.\n7. Your first eval can be five prompts.\n8. Burnout comes from chaos and grunt work more than from long hours.\n9. Google’s full-stack AI strategy gives it an advantage few competitors can match.\n\nFull episode: https://lnkd.in/gptJAyDr",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-09T16:34:56.928000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525596804113989632",
+          "urn:li:ugcPost:7525596802881003520"
+        ],
+        "first_seen_at": "2026-11-10T12:50:11.276093+00:00",
+        "cached_at": "2026-11-11T12:50:16.069274+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525269502465605632/",
+        "urn": "urn:li:ugcPost:7525269435612352512",
+        "shareUrn": "urn:li:ugcPost:7525269435612352512",
+        "text": "Why PMs are suddenly valuable again with Tulsee Doshi—Head of product for Google’s frontier AI models, including Gemini, Nano Banana, Genie, Veo, and more.\n\nWe discuss:\n🔸 The rising value of great PMs\n🔸 Google’s full-stack frontier AI strategy\n🔸 Why model development is like Snape’s potions class\n🔸 Why the PM role has shifted from writing requirements to creating something with “heft\n🔸 How to write your first eval\n\nListen now: https://lnkd.in/g-EWmu7S\n\nThank you to our wonderful sponsors WorkOS and DX for supporting the podcast:\n🏆 WorkOS — Make your app Enterprise Ready, with SSO, SCIM, RBAC, and more: https://workos.com/lenny\n🏆 DX — Engineering intelligence for the AI era: https://lnkd.in/gAyHwtQE\n\nAlso available on:\n• Spotify: https://lnkd.in/g3t2VEi3\n• Apple: https://lnkd.in/gZspvDZx",
+        "authorName": "Lenny Rachitsky",
+        "authorHeadline": "Deeply researched product, growth, and career advice",
+        "authorProfileUrl": "https://www.linkedin.com/in/lennyrachitsky/",
+        "postedAtISO": "2026-11-08T18:54:22.134000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/lennyrachitsky/",
+        "identity_aliases": [
+          "urn:li:activity:7525269502465605632",
+          "urn:li:ugcPost:7525269435612352512"
+        ],
+        "first_seen_at": "2026-11-09T12:50:06.065558+00:00",
+        "cached_at": "2026-11-11T12:50:16.069274+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
         }
       }
     ],
