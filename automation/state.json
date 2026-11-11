@@ -4576,6 +4576,14 @@
       "http_status": 201,
       "remote_id": "acknowledged",
       "reason": "Publora acknowledged the request"
+    },
+    "comment:2a5d63294b3de53d931c3ed0c5cfccaa92b28370cbc299b94faaaf7826c3f33d": {
+      "kind": "comment",
+      "text": "When teams hire PMs and engineers but cut design roles, the user experience is still shaped by design decisions, just not by dedicated designers.",
+      "at": "2026-11-11T12:51:17.266635+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:share:7525978951526023168",
+      "parent": null
     }
   },
   "days": {
@@ -4762,9 +4770,9 @@
     },
     "2026-11-11": {
       "post": 2,
-      "interaction": 3,
+      "interaction": 4,
       "read": 61,
-      "public_interaction": 3
+      "public_interaction": 4
     },
     "2026-11-12": {
       "post": 2,
