@@ -4523,7 +4523,21 @@
             }
           }
         ]
-      }
+      },
+      "media": {
+        "sha256": "914d67958dade0d6fc8fa5a44f59f301cc15aef6fcf2ff5415f3bc49b1218b55",
+        "mime_type": "image/png",
+        "title": "Brand decisions visible in real product experiences",
+        "type": "image",
+        "page_count": 1,
+        "format": "image",
+        "file_name": "brand-decisions-visible-in-real-product-experiences.png",
+        "size_bytes": 97121
+      },
+      "media_scheduled_for": "2026-11-12T12:30:00Z",
+      "media_operation_id": "5f669b942ed1b2db26952bf4fbfb6d5a4e958c75b17c68e1db3cf966f3eb544c",
+      "media_stage": "create-draft",
+      "media_stage_status": "inflight"
     }
   },
   "days": {
