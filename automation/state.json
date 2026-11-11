@@ -6415,13 +6415,13 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-11T15:04:26.776290+00:00",
-      "deadline": "2026-11-11T20:04:26.776290+00:00",
-      "heartbeat_at": "2026-11-11T20:04:27.020033+00:00",
-      "cycles": 16,
-      "sessions": 1,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-11T20:05:11.259591+00:00",
+      "deadline": "2026-11-12T01:05:11.259591+00:00",
+      "heartbeat_at": "2026-11-11T20:05:11.846549+00:00",
+      "cycles": 0,
+      "sessions": 0,
       "recent_errors": []
     },
     "queue_preparation": {
