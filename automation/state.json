@@ -4559,9 +4559,12 @@
       "kind": "comment",
       "text": "Storing project context and code in one place lets agents work with real-world data, not just abstract features. That’s more useful than isolated tools.",
       "at": "2026-11-11T12:26:10.693135+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:ugcPost:7525974334440394752",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7526258981716316160",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
