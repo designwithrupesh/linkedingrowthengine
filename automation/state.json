@@ -6217,8 +6217,8 @@
       "status": "running",
       "started_at": "2026-11-11T11:30:03.485400+00:00",
       "deadline": "2026-11-11T20:33:03.485400+05:30",
-      "heartbeat_at": "2026-11-11T12:05:13.735820+00:00",
-      "cycles": 8,
+      "heartbeat_at": "2026-11-11T12:10:16.182625+00:00",
+      "cycles": 9,
       "recent_errors": []
     },
     "last_live_validation": {
@@ -6640,6 +6640,28 @@
         "quality_decision": {
           "eligible": true,
           "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526112003371896832/",
+        "urn": "urn:li:share:7526112002893807616",
+        "shareUrn": "urn:li:share:7526112002893807616",
+        "text": "On November 19th, we are hosting the very first Superhuman user conference!\n\nWe’ll be sharing what’s next for Superhuman, and unveil a lot of very cool new product stuff 💜\n\nIf you're in the Bay Area, then come on by!  Space is limited, so please register with the link in the comments 👇",
+        "authorName": "Rahul Vohra",
+        "authorHeadline": "Founder of Superhuman Mail (fka Superhuman (acq Grammarly (now Superhuman))). Founder of Rapportive (acq LinkedIn). Investor in 130+ startups, 11 unicorns.",
+        "authorProfileUrl": "https://www.linkedin.com/in/rahulvohra/",
+        "postedAtISO": "2026-11-11T02:42:10.003000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/rahulvohra/",
+        "identity_aliases": [
+          "urn:li:activity:7526112003371896832",
+          "urn:li:share:7526112002893807616"
+        ],
+        "first_seen_at": "2026-11-11T12:10:09.214104+00:00",
+        "cached_at": "2026-11-11T12:10:09.214104+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "promotion"
         }
       }
     ],
