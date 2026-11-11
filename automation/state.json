@@ -4536,8 +4536,8 @@
       },
       "media_scheduled_for": "2026-11-12T12:30:00Z",
       "media_operation_id": "5f669b942ed1b2db26952bf4fbfb6d5a4e958c75b17c68e1db3cf966f3eb544c",
-      "media_stage": "create-draft",
-      "media_stage_status": "acknowledged",
+      "media_stage": "reserve-upload",
+      "media_stage_status": "inflight",
       "http_status": 200,
       "remote_id": "6af3e1c6c1878628d9bb2485"
     }
