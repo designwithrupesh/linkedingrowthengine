@@ -6330,12 +6330,12 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-11T05:02:55.858534+00:00",
-      "deadline": "2026-11-11T10:02:55.858534+00:00",
-      "heartbeat_at": "2026-11-11T10:02:56.164521+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-11T10:03:39.245717+00:00",
+      "deadline": "2026-11-11T15:03:39.245717+00:00",
+      "heartbeat_at": "2026-11-11T10:03:39.740022+00:00",
+      "cycles": 0,
       "sessions": 0,
       "recent_errors": []
     },
