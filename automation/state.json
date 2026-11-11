@@ -5276,7 +5276,7 @@
     }
   ],
   "discovery": {
-    "profile_cursor": 99,
+    "profile_cursor": 100,
     "last_status": "ok"
   },
   "reply_monitor": {
@@ -6347,7 +6347,7 @@
   "engagement": {
     "profile_checked_at": {
       "lennyrachitsky": "2026-11-10T12:50:11.276093+00:00",
-      "juliezhuo": "2026-11-10T11:30:11.527334+00:00",
+      "juliezhuo": "2026-11-11T11:35:11.308401+00:00",
       "brianchesky": "2026-11-10T11:40:12.381654+00:00",
       "destraynor": "2026-11-10T11:50:08.162518+00:00",
       "rahulvohra": "2026-11-10T12:05:14.458133+00:00",
