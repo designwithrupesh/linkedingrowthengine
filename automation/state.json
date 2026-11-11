@@ -4603,9 +4603,12 @@
       "kind": "comment",
       "text": "Designers are being cut, but UX decisions still rely on design thinking. That’s a structural risk, not just a staffing shift.",
       "at": "2026-11-11T13:00:35.862919+00:00",
-      "status": "inflight",
+      "status": "sent",
       "post_urn": "urn:li:share:7525939229122555905",
-      "parent": null
+      "parent": null,
+      "http_status": 201,
+      "remote_id": "7526267643469815808",
+      "reason": "Publora acknowledged the request"
     }
   },
   "days": {
