@@ -4543,6 +4543,14 @@
       "http_status": 200,
       "remote_id": "6af3e1c6c1878628d9bb2485",
       "reason": "Publora confirmed scheduled media and caption"
+    },
+    "reaction:comment:e3416c794a25ea1b7bd423ade22613d7f608f397db549a0422400fbc50db28d4": {
+      "kind": "reaction",
+      "text": "LIKE",
+      "at": "2026-11-11T12:26:07.503748+00:00",
+      "status": "inflight",
+      "post_urn": "urn:li:ugcPost:7525974334440394752",
+      "parent": null
     }
   },
   "days": {
@@ -4729,8 +4737,9 @@
     },
     "2026-11-11": {
       "post": 2,
-      "interaction": 0,
-      "read": 56
+      "interaction": 1,
+      "read": 56,
+      "public_interaction": 1
     },
     "2026-11-12": {
       "post": 2,
@@ -6379,94 +6388,6 @@
         }
       },
       {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525609853814431744/",
-        "urn": "urn:li:share:7525609850693668864",
-        "shareUrn": "urn:li:share:7525609850693668864",
-        "text": "I’ve never quite understood the appeal of software that gives you a blank canvas and building blocks to make your own tools. I’d rather use a purpose-built product from a team whose judgment I trust, or build something custom for my exact needs with AI.\n\nThe middle ground makes you do the design work, but limits you to someone else’s building blocks. In companies, everyone can end up building their own systems, leaving the organization to deal with the complexity.\n\nThis is why I like the house analogy more than LEGOs for software that’s supposed to help people do work.\n\nA house has a structure. A kitchen is designed for cooking. A bathroom has plumbing. Within that structure, you can choose the furniture, decorate, rearrange things, and make the space your own.\n\nNow imagine sharing that house with 1,000 people. Would it help if everyone could decide for themselves what each room was for? Before doing anything together, you’d have to figure out what everyone meant by a kitchen.\n\nAt Linear, we’ve deliberately designed shared concepts like issues, projects, and teams. People have freedom in how they organize and do their work, but they don’t need to invent their own definition of a project.\n\nOne of the values of that structure is that it gives the work a canonical place. It’s rare to see someone casually duplicate an entire project in Linear. People do this all the time with documents and spreadsheets. Eventually, someone has to figure out which copy reflects what’s actually happening.\n\nThere’s a different feeling when the system helps to represent the work. Changing something has consequences for how other people understand it and what happens next. You’re working in a shared reality rather than making another copy of it.\n\nIdeally in organization I like to see freedom within structure. Not freedom to make the structure meaningless\n\nI think making those structural decisions is part of our job as product builders. Leaving them open doesn’t remove the work. It asks every organization to do it themselves.\nWith AI making custom software easier to build, that middle ground feels increasingly hard to justify. \n\nA purpose-built product should bring judgment about how the work fits together. \n\nOtherwise, I’d rather have the freedom to build exactly what I need.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-11-09T17:26:48.219000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7525609853814431744",
-          "urn:li:share:7525609850693668864"
-        ],
-        "first_seen_at": "2026-11-10T12:25:09.280636+00:00",
-        "cached_at": "2026-11-10T12:25:09.280636+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524926453461827584/",
-        "urn": "urn:li:ugcPost:7524926452895711232",
-        "shareUrn": "urn:li:ugcPost:7524926452895711232",
-        "text": "why do you all want to reshuffle the roles",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-11-07T20:11:12.878000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7524926453461827584",
-          "urn:li:ugcPost:7524926452895711232"
-        ],
-        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
-        "cached_at": "2026-11-10T12:25:09.280636+00:00",
-        "quality_decision": {
-          "eligible": false,
-          "reason": "insufficient-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524542809123704832/",
-        "urn": "urn:li:share:7524542807290744832",
-        "shareUrn": "urn:li:share:7524542807290744832",
-        "text": "People keep asking how companies like Ramp, Linear, and Anthropic ship so much software with agents. There is no new SDLC or secret set of tools. The tools are increasingly available to everyone. You can build your own, use Linear, Claude, or whatever works.  \n\nThe bigger difference is ambition. These companies encourage their teams to build more, experiment more, and let agents do more of the work. That's the main different between \"AI native\" or not. You try to use the technology to the max.  \n\nBut don't get there by adopting a tool, you change your beliefs.\n\nSo in the very simplest way: \n- let agents build \n- automate what you can\n- make it easier and faster to contribute \n- increase the ambition of what your teams attempt.  \n\nIn practice, that means things like: \n- Standardize around cloud agents. Most of our code (5M lines last quater) is now written in Linear with our Linear cloud coding agent. Cloud sandboxes make standardizing the system and environment easier for everyone and enables faster contributions  \n\n- Linear agent (with code access and cloud agent) operates in Slack too. If there is a discussion or someone notices a problem just say \"@linear fix this\" (decrease the time from something noticed to fixed)  \n\n- As bugs, errors etc arrive in Linear, send them to Triage, and have Loop to auto-investigate (connect to tools like Sentry, Datadog), and write a fix  \n\n- Let designers, PMs, non-technical people contribute code where useful. If they notice a problem, tell them they can submit a fix. If they want to try something, ask them to build a prototype.  \n\n- Set up code review agent and systems to make sure PRs are safe to merge.  \n\n- Run security as an automation, have agents constantly try to find security issues in your codebase, as they find, send it to a coding agent  \n\n- Instead of working on issue level, increase ambition, make a whole project, ask the agent to ask questions, investigate code base, create issues and have the agent work on the whole project at once. \n\n- Bring customer feedback to the system like Linear, and make it available. At Linear every project now starts with 10-500 customer notes that influence the direction of the work, and which customers we should ask to test the solution first. \n\n- Set up Loops/automations to constantly update reference documents for agents, like product area/code owners so work can be routed to right humans  \n\nThen what is left is how do you set direction for your teams (initiatives, projects they should work on) and how do you review results (better code review, Linear does it with Guided Reviews), how you maintain quality/cohesion which is not a new problem either.  \n\nAt @linear we can help with automation, cloud agents, and code review, customer feedback and planning bits.  But we can't change your mindset or how your company operates.  \n\nIf your company is still spending energy debating jira workflow steps, you're probably solving the wrong problems.",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-11-06T18:46:44.940000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7524542809123704832",
-          "urn:li:share:7524542807290744832"
-        ],
-        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
-        "cached_at": "2026-11-10T12:25:09.280636+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524234818809806848/",
-        "urn": "urn:li:share:7524234818167980032",
-        "shareUrn": "urn:li:share:7524234818167980032",
-        "text": "I created the Linear Product Ops bot. \nIt helps with things like:  \n– writing clear issues \n– short, useful PRDs \n– turning feedback into project plans \n– triaging feedback from X \n– coordinating coding agents  \n\nTo test it, I built my own Elgato Key Light app and a solar monitoring app. Grok helped me figure out the project, ask questions, write the spec, and turn it into issues. Then I could keep track of progress as the Linear agent worked through them, and review the code as it came in. \n\nWhat surprised me was how little I had to explain. Linear already has the structure, teams, issues, projects, triage and the MCP tools to work with it. The bot could build on that instead of inventing a system from scratch. \n\nOnce you install the skill, you also get $25 in AI credits to build your apps with Linear.  Let me know if you have feedback!",
-        "authorName": "Karri Saarinen",
-        "authorHeadline": "Co-Founder, CEO at Linear",
-        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
-        "postedAtISO": "2026-11-05T22:22:54.327000+00:00",
-        "origin": "profile-discovery",
-        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
-        "identity_aliases": [
-          "urn:li:activity:7524234818809806848",
-          "urn:li:share:7524234818167980032"
-        ],
-        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
-        "cached_at": "2026-11-10T12:25:09.280636+00:00",
-        "quality_decision": {
-          "eligible": true,
-          "reason": "self-contained-context"
-        }
-      },
-      {
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524181076999659520/",
         "urn": "urn:li:share:7524181076387201024",
         "shareUrn": "urn:li:share:7524181076387201024",
@@ -6662,6 +6583,116 @@
         "quality_decision": {
           "eligible": false,
           "reason": "promotion"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525974335841337344/",
+        "urn": "urn:li:ugcPost:7525974334440394752",
+        "shareUrn": "urn:li:ugcPost:7525974334440394752",
+        "text": "If you need cloud coding agent for Slack, think about automating bug fixing with software factory, need context layer for agents and your team. You likely already have these with Linear\n\nOur philosophy with Linear has been to avoid pushing features too hard. Different companies and teams need different things at different times. The downside is that people sometimes don't know the feature exists and might add new tool for something Linear already could do for them, often with no additional cost. \n\nNo matter if you're a team or a solo builder:  \n\n+ You can keep team docs, project specs, and PRDs in Linear, and have your agent update and maintain them through MCP. Agent context between your agents. Loops can also automate the updating the documents from code, or other sources.  \n\n+ Linear Agent can write code directly from Linear or Slack. Just say “Linear, work on this.” You can connect it to internal tools through MCP, too. It's like Shopify river agent, but you don't have to build it and lot of the usage is included in the pla  \n\n+ Triage, Loops, and Linear cloud coding agent can work as a software factory. A service reports an issue, it lands to team triage, you can set up a Loop automation to investigate,   \n\n+ You can store personal and team skills in Linear. Ask your agent to save a workflow as a skill, then use it again. A Loop can keep those skills up to date across Linear and git.  \n\n+ Project update/Pulse creates one updates feed for your whole company. You can then monitor or get your agent to summarize important things to you  \n\n+ Customer feedback. A database of customer quotes can live in Linear as customer requests, linked to the issues and projects they shaped, or in a separate team like we do.\n\n+ Request intake/forms. Linear Asks takes requests from Slack, emails or web, and turns them into issues.  \n\n+ You can review code in Linear, alongside the issue and the context behind the change.",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-11-10T17:35:07.506000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7525974335841337344",
+          "urn:li:ugcPost:7525974334440394752"
+        ],
+        "first_seen_at": "2026-11-11T12:25:10.381592+00:00",
+        "cached_at": "2026-11-11T12:25:10.381592+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525609853814431744/",
+        "urn": "urn:li:share:7525609850693668864",
+        "shareUrn": "urn:li:share:7525609850693668864",
+        "text": "I’ve never quite understood the appeal of software that gives you a blank canvas and building blocks to make your own tools. I’d rather use a purpose-built product from a team whose judgment I trust, or build something custom for my exact needs with AI.\n\nThe middle ground makes you do the design work, but limits you to someone else’s building blocks. In companies, everyone can end up building their own systems, leaving the organization to deal with the complexity.\n\nThis is why I like the house analogy more than LEGOs for software that’s supposed to help people do work.\n\nA house has a structure. A kitchen is designed for cooking. A bathroom has plumbing. Within that structure, you can choose the furniture, decorate, rearrange things, and make the space your own.\n\nNow imagine sharing that house with 1,000 people. Would it help if everyone could decide for themselves what each room was for? Before doing anything together, you’d have to figure out what everyone meant by a kitchen.\n\nAt Linear, we’ve deliberately designed shared concepts like issues, projects, and teams. People have freedom in how they organize and do their work, but they don’t need to invent their own definition of a project.\n\nOne of the values of that structure is that it gives the work a canonical place. It’s rare to see someone casually duplicate an entire project in Linear. People do this all the time with documents and spreadsheets. Eventually, someone has to figure out which copy reflects what’s actually happening.\n\nThere’s a different feeling when the system helps to represent the work. Changing something has consequences for how other people understand it and what happens next. You’re working in a shared reality rather than making another copy of it.\n\nIdeally in organization I like to see freedom within structure. Not freedom to make the structure meaningless\n\nI think making those structural decisions is part of our job as product builders. Leaving them open doesn’t remove the work. It asks every organization to do it themselves.\nWith AI making custom software easier to build, that middle ground feels increasingly hard to justify. \n\nA purpose-built product should bring judgment about how the work fits together. \n\nOtherwise, I’d rather have the freedom to build exactly what I need.",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-11-09T17:26:48.219000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7525609853814431744",
+          "urn:li:share:7525609850693668864"
+        ],
+        "first_seen_at": "2026-11-10T12:25:09.280636+00:00",
+        "cached_at": "2026-11-11T12:25:10.381592+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524926453461827584/",
+        "urn": "urn:li:ugcPost:7524926452895711232",
+        "shareUrn": "urn:li:ugcPost:7524926452895711232",
+        "text": "why do you all want to reshuffle the roles",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-11-07T20:11:12.878000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7524926453461827584",
+          "urn:li:ugcPost:7524926452895711232"
+        ],
+        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
+        "cached_at": "2026-11-11T12:25:10.381592+00:00",
+        "quality_decision": {
+          "eligible": false,
+          "reason": "insufficient-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524542809123704832/",
+        "urn": "urn:li:share:7524542807290744832",
+        "shareUrn": "urn:li:share:7524542807290744832",
+        "text": "People keep asking how companies like Ramp, Linear, and Anthropic ship so much software with agents. There is no new SDLC or secret set of tools. The tools are increasingly available to everyone. You can build your own, use Linear, Claude, or whatever works.  \n\nThe bigger difference is ambition. These companies encourage their teams to build more, experiment more, and let agents do more of the work. That's the main different between \"AI native\" or not. You try to use the technology to the max.  \n\nBut don't get there by adopting a tool, you change your beliefs.\n\nSo in the very simplest way: \n- let agents build \n- automate what you can\n- make it easier and faster to contribute \n- increase the ambition of what your teams attempt.  \n\nIn practice, that means things like: \n- Standardize around cloud agents. Most of our code (5M lines last quater) is now written in Linear with our Linear cloud coding agent. Cloud sandboxes make standardizing the system and environment easier for everyone and enables faster contributions  \n\n- Linear agent (with code access and cloud agent) operates in Slack too. If there is a discussion or someone notices a problem just say \"@linear fix this\" (decrease the time from something noticed to fixed)  \n\n- As bugs, errors etc arrive in Linear, send them to Triage, and have Loop to auto-investigate (connect to tools like Sentry, Datadog), and write a fix  \n\n- Let designers, PMs, non-technical people contribute code where useful. If they notice a problem, tell them they can submit a fix. If they want to try something, ask them to build a prototype.  \n\n- Set up code review agent and systems to make sure PRs are safe to merge.  \n\n- Run security as an automation, have agents constantly try to find security issues in your codebase, as they find, send it to a coding agent  \n\n- Instead of working on issue level, increase ambition, make a whole project, ask the agent to ask questions, investigate code base, create issues and have the agent work on the whole project at once. \n\n- Bring customer feedback to the system like Linear, and make it available. At Linear every project now starts with 10-500 customer notes that influence the direction of the work, and which customers we should ask to test the solution first. \n\n- Set up Loops/automations to constantly update reference documents for agents, like product area/code owners so work can be routed to right humans  \n\nThen what is left is how do you set direction for your teams (initiatives, projects they should work on) and how do you review results (better code review, Linear does it with Guided Reviews), how you maintain quality/cohesion which is not a new problem either.  \n\nAt @linear we can help with automation, cloud agents, and code review, customer feedback and planning bits.  But we can't change your mindset or how your company operates.  \n\nIf your company is still spending energy debating jira workflow steps, you're probably solving the wrong problems.",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-11-06T18:46:44.940000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7524542809123704832",
+          "urn:li:share:7524542807290744832"
+        ],
+        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
+        "cached_at": "2026-11-11T12:25:10.381592+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524234818809806848/",
+        "urn": "urn:li:share:7524234818167980032",
+        "shareUrn": "urn:li:share:7524234818167980032",
+        "text": "I created the Linear Product Ops bot. \nIt helps with things like:  \n– writing clear issues \n– short, useful PRDs \n– turning feedback into project plans \n– triaging feedback from X \n– coordinating coding agents  \n\nTo test it, I built my own Elgato Key Light app and a solar monitoring app. Grok helped me figure out the project, ask questions, write the spec, and turn it into issues. Then I could keep track of progress as the Linear agent worked through them, and review the code as it came in. \n\nWhat surprised me was how little I had to explain. Linear already has the structure, teams, issues, projects, triage and the MCP tools to work with it. The bot could build on that instead of inventing a system from scratch. \n\nOnce you install the skill, you also get $25 in AI credits to build your apps with Linear.  Let me know if you have feedback!",
+        "authorName": "Karri Saarinen",
+        "authorHeadline": "Co-Founder, CEO at Linear",
+        "authorProfileUrl": "https://www.linkedin.com/in/karrisaarinen/",
+        "postedAtISO": "2026-11-05T22:22:54.327000+00:00",
+        "origin": "profile-discovery",
+        "sourceProfile": "https://www.linkedin.com/in/karrisaarinen/",
+        "identity_aliases": [
+          "urn:li:activity:7524234818809806848",
+          "urn:li:share:7524234818167980032"
+        ],
+        "first_seen_at": "2026-11-08T12:23:52.448247+00:00",
+        "cached_at": "2026-11-11T12:25:10.381592+00:00",
+        "quality_decision": {
+          "eligible": true,
+          "reason": "self-contained-context"
         }
       }
     ],
