@@ -4752,7 +4752,7 @@
     "2026-11-11": {
       "post": 2,
       "interaction": 2,
-      "read": 56,
+      "read": 57,
       "public_interaction": 2
     },
     "2026-11-12": {
@@ -6223,6 +6223,11 @@
         "last_considered_at": "2026-11-11T10:48:42.263874+00:00",
         "status": "fallback-no-analytics",
         "last_checked_at": "2026-11-11T10:48:42.263874+00:00"
+      },
+      "urn:li:ugcPost:7526259963363663872": {
+        "last_considered_at": "2026-11-11T12:30:08.859658+00:00",
+        "status": "fallback-no-analytics",
+        "last_checked_at": "2026-11-11T12:30:08.859658+00:00"
       }
     },
     "statistics_cooldown": {
