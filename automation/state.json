@@ -5326,10 +5326,11 @@
     {
       "id": "6af30f91ef6598ddfdbbf562",
       "text": "Eric Bailey's focus on making LLM chat experiences accessible highlights a key design choice: ensuring chat interfaces work well with assistive technologies. This means designers need to go beyond visual polish and consider how screen readers and keyboard navigation interact with chat patterns. I appreciate that the article calls for practical steps rather than just high-level principles, which aligns with grounding design decisions in real user needs and constraints. Accessibility in conversational UI is often overlooked, so spotlighting this helps keep it on the product roadmap for early-stage teams aiming for inclusive customer experiences. The Smashing Magazine piece from November 2026 offers a timely reminder that accessibility is a concrete design challenge, not just a compliance checkbox. https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
-      "url": null,
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7526486438989971456/",
       "at": "2026-11-10T12:35:27.881056+00:00",
       "scheduled_for": "2026-11-12T03:30:00+00:00",
-      "allocation_day": "2026-11-12"
+      "allocation_day": "2026-11-12",
+      "post_urn": "urn:li:share:7526486438989971456"
     },
     {
       "id": "6af3e1c6c1878628d9bb2485",
