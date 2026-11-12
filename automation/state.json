@@ -6433,12 +6433,12 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-12T01:05:55.555611+00:00",
-      "deadline": "2026-11-12T06:05:55.555611+00:00",
-      "heartbeat_at": "2026-11-12T06:05:55.854982+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-12T06:06:44.535290+00:00",
+      "deadline": "2026-11-12T11:06:44.535290+00:00",
+      "heartbeat_at": "2026-11-12T06:06:44.949439+00:00",
+      "cycles": 0,
       "sessions": 0,
       "recent_errors": []
     },
