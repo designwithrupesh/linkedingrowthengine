@@ -6442,10 +6442,16 @@
       "phase": "maintenance",
       "started_at": "2026-11-12T21:09:21.941624+00:00",
       "deadline": "2026-11-13T02:09:21.941624+00:00",
-      "heartbeat_at": "2026-11-12T21:09:22.502980+00:00",
-      "cycles": 0,
+      "heartbeat_at": "2026-11-12T21:24:22.849066+00:00",
+      "cycles": 1,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-12T21:09:24.648013+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
