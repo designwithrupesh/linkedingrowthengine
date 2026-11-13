@@ -6438,12 +6438,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "engagement",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-13T07:10:52.231661+00:00",
       "deadline": "2026-11-13T12:10:52.231661+00:00",
-      "heartbeat_at": "2026-11-13T12:10:01.547733+00:00",
-      "cycles": 26,
+      "heartbeat_at": "2026-11-13T12:10:52.473314+00:00",
+      "cycles": 27,
       "sessions": 8,
       "recent_errors": [
         {
