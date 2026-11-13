@@ -6439,18 +6439,13 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "engagement",
+      "phase": "maintenance",
       "started_at": "2026-11-13T12:11:31.080030+00:00",
       "deadline": "2026-11-13T17:11:31.080030+00:00",
-      "heartbeat_at": "2026-11-13T16:26:40.604561+00:00",
-      "cycles": 51,
-      "sessions": 51,
+      "heartbeat_at": "2026-11-13T16:31:40.771380+00:00",
+      "cycles": 52,
+      "sessions": 52,
       "recent_errors": [
-        {
-          "phase": "engagement",
-          "type": "HTTPError",
-          "at": "2026-11-13T15:56:41.057648+00:00"
-        },
         {
           "phase": "engagement",
           "type": "HTTPError",
@@ -6475,6 +6470,11 @@
           "phase": "engagement",
           "type": "HTTPError",
           "at": "2026-11-13T16:21:41.958854+00:00"
+        },
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-13T16:26:45.294723+00:00"
         }
       ]
     },
