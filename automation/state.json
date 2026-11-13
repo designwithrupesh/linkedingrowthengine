@@ -6442,10 +6442,16 @@
       "phase": "engagement",
       "started_at": "2026-11-13T12:11:31.080030+00:00",
       "deadline": "2026-11-13T17:11:31.080030+00:00",
-      "heartbeat_at": "2026-11-13T12:11:31.461161+00:00",
-      "cycles": 0,
-      "sessions": 0,
-      "recent_errors": []
+      "heartbeat_at": "2026-11-13T12:16:31.654186+00:00",
+      "cycles": 1,
+      "sessions": 1,
+      "recent_errors": [
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-13T12:11:32.870949+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
