@@ -6457,10 +6457,16 @@
       "phase": "engagement",
       "started_at": "2026-11-16T15:23:17.487540+00:00",
       "deadline": "2026-11-16T20:23:17.487540+00:00",
-      "heartbeat_at": "2026-11-16T15:23:18.132088+00:00",
-      "cycles": 0,
-      "sessions": 0,
-      "recent_errors": []
+      "heartbeat_at": "2026-11-16T15:28:18.470732+00:00",
+      "cycles": 1,
+      "sessions": 1,
+      "recent_errors": [
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-16T15:23:20.413277+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
