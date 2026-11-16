@@ -6457,10 +6457,16 @@
       "phase": "maintenance",
       "started_at": "2026-11-16T10:22:31.401820+00:00",
       "deadline": "2026-11-16T15:22:31.401820+00:00",
-      "heartbeat_at": "2026-11-16T10:22:32.009896+00:00",
-      "cycles": 0,
+      "heartbeat_at": "2026-11-16T10:37:32.316164+00:00",
+      "cycles": 1,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-16T10:22:34.166747+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
