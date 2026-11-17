@@ -6459,13 +6459,19 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-11-17T11:26:33.667222+00:00",
       "deadline": "2026-11-17T16:26:33.667222+00:00",
-      "heartbeat_at": "2026-11-17T11:26:34.212529+00:00",
-      "cycles": 0,
+      "heartbeat_at": "2026-11-17T11:30:00.262942+00:00",
+      "cycles": 1,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-17T11:26:36.352761+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
