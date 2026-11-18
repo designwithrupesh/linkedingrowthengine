@@ -6467,15 +6467,10 @@
       "phase": "engagement",
       "started_at": "2026-11-18T07:30:16.616818+00:00",
       "deadline": "2026-11-18T12:30:16.616818+00:00",
-      "heartbeat_at": "2026-11-18T11:45:01.268157+00:00",
-      "cycles": 19,
-      "sessions": 3,
+      "heartbeat_at": "2026-11-18T11:50:01.580678+00:00",
+      "cycles": 20,
+      "sessions": 4,
       "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-18T10:45:23.008472+00:00"
-        },
         {
           "phase": "maintenance",
           "type": "RuntimeError",
@@ -6500,6 +6495,11 @@
           "phase": "engagement",
           "type": "HTTPError",
           "at": "2026-11-18T11:40:02.737800+00:00"
+        },
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-18T11:45:03.360528+00:00"
         }
       ]
     },
