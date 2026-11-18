@@ -6463,12 +6463,12 @@
       }
     },
     "supervisor": {
-      "status": "running",
-      "phase": "engagement",
+      "status": "completed",
+      "phase": "handoff",
       "started_at": "2026-11-18T07:30:16.616818+00:00",
       "deadline": "2026-11-18T12:30:16.616818+00:00",
-      "heartbeat_at": "2026-11-18T12:30:03.874918+00:00",
-      "cycles": 28,
+      "heartbeat_at": "2026-11-18T12:30:16.874317+00:00",
+      "cycles": 29,
       "sessions": 12,
       "recent_errors": [
         {
