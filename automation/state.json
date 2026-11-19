@@ -6468,45 +6468,14 @@
       }
     },
     "supervisor": {
-      "status": "completed",
-      "phase": "handoff",
-      "started_at": "2026-11-19T03:33:30.679825+00:00",
-      "deadline": "2026-11-19T08:33:30.679825+00:00",
-      "heartbeat_at": "2026-11-19T08:33:30.929991+00:00",
-      "cycles": 20,
+      "status": "running",
+      "phase": "maintenance",
+      "started_at": "2026-11-19T08:34:20.946878+00:00",
+      "deadline": "2026-11-19T13:34:20.946878+00:00",
+      "heartbeat_at": "2026-11-19T08:34:21.541297+00:00",
+      "cycles": 0,
       "sessions": 0,
-      "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T07:03:37.042040+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T07:18:37.194064+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T07:33:37.589228+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T07:48:37.922890+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T08:03:38.105007+00:00"
-        },
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-19T08:18:38.454572+00:00"
-        }
-      ]
+      "recent_errors": []
     },
     "queue_preparation": {
       "status": "checked",
