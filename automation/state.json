@@ -6474,18 +6474,13 @@
     },
     "supervisor": {
       "status": "running",
-      "phase": "maintenance",
+      "phase": "engagement",
       "started_at": "2026-11-20T09:38:12.484112+00:00",
       "deadline": "2026-11-20T14:38:12.484112+00:00",
-      "heartbeat_at": "2026-11-20T11:23:15.514063+00:00",
-      "cycles": 7,
+      "heartbeat_at": "2026-11-20T11:30:00.356058+00:00",
+      "cycles": 8,
       "sessions": 0,
       "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-20T09:53:15.896005+00:00"
-        },
         {
           "phase": "maintenance",
           "type": "RuntimeError",
@@ -6510,6 +6505,11 @@
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-11-20T11:08:17.326895+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-20T11:23:17.811178+00:00"
         }
       ]
     },
