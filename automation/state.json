@@ -6497,14 +6497,19 @@
       "phase": "engagement",
       "started_at": "2026-11-24T13:53:44.361253+00:00",
       "deadline": "2026-11-24T18:53:44.361253+00:00",
-      "heartbeat_at": "2026-11-24T13:58:45.100949+00:00",
-      "cycles": 1,
-      "sessions": 1,
+      "heartbeat_at": "2026-11-24T14:03:45.440716+00:00",
+      "cycles": 2,
+      "sessions": 2,
       "recent_errors": [
         {
           "phase": "engagement",
           "type": "HTTPError",
           "at": "2026-11-24T13:53:46.791502+00:00"
+        },
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-24T13:58:47.343098+00:00"
         }
       ]
     },
