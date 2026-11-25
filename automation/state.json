@@ -6502,8 +6502,8 @@
       "phase": "maintenance",
       "started_at": "2026-11-25T04:56:07.069473+00:00",
       "deadline": "2026-11-25T09:56:07.069473+00:00",
-      "heartbeat_at": "2026-11-25T05:41:08.506646+00:00",
-      "cycles": 3,
+      "heartbeat_at": "2026-11-25T05:56:08.850831+00:00",
+      "cycles": 4,
       "sessions": 0,
       "recent_errors": [
         {
@@ -6520,6 +6520,11 @@
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-11-25T05:26:11.045996+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-25T05:41:10.480426+00:00"
         }
       ]
     },
