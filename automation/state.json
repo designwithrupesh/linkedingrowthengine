@@ -6507,10 +6507,16 @@
       "phase": "engagement",
       "started_at": "2026-11-26T16:01:05.272963+00:00",
       "deadline": "2026-11-26T21:01:05.272963+00:00",
-      "heartbeat_at": "2026-11-26T16:01:06.077162+00:00",
-      "cycles": 0,
-      "sessions": 0,
-      "recent_errors": []
+      "heartbeat_at": "2026-11-26T16:06:06.383348+00:00",
+      "cycles": 1,
+      "sessions": 1,
+      "recent_errors": [
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-26T16:01:08.154984+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
