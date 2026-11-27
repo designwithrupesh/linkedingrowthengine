@@ -6512,14 +6512,19 @@
       "phase": "engagement",
       "started_at": "2026-11-27T12:03:57.527043+00:00",
       "deadline": "2026-11-27T17:03:57.527043+00:00",
-      "heartbeat_at": "2026-11-27T12:08:58.255229+00:00",
-      "cycles": 1,
-      "sessions": 1,
+      "heartbeat_at": "2026-11-27T12:13:58.492755+00:00",
+      "cycles": 2,
+      "sessions": 2,
       "recent_errors": [
         {
           "phase": "engagement",
           "type": "HTTPError",
           "at": "2026-11-27T12:03:59.769462+00:00"
+        },
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-27T12:09:00.216250+00:00"
         }
       ]
     },
