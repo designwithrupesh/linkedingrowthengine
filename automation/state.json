@@ -6512,15 +6512,10 @@
       "phase": "engagement",
       "started_at": "2026-11-27T12:03:57.527043+00:00",
       "deadline": "2026-11-27T17:03:57.527043+00:00",
-      "heartbeat_at": "2026-11-27T15:29:07.761545+00:00",
-      "cycles": 41,
-      "sessions": 41,
+      "heartbeat_at": "2026-11-27T15:34:07.997269+00:00",
+      "cycles": 42,
+      "sessions": 42,
       "recent_errors": [
-        {
-          "phase": "engagement",
-          "type": "HTTPError",
-          "at": "2026-11-27T14:59:08.239786+00:00"
-        },
         {
           "phase": "engagement",
           "type": "HTTPError",
@@ -6545,6 +6540,11 @@
           "phase": "engagement",
           "type": "HTTPError",
           "at": "2026-11-27T15:24:09.309831+00:00"
+        },
+        {
+          "phase": "engagement",
+          "type": "HTTPError",
+          "at": "2026-11-27T15:29:10.099442+00:00"
         }
       ]
     },
