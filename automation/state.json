@@ -6512,15 +6512,10 @@
       "phase": "maintenance",
       "started_at": "2026-11-27T02:02:33.234355+00:00",
       "deadline": "2026-11-27T07:02:33.234355+00:00",
-      "heartbeat_at": "2026-11-27T03:32:35.977316+00:00",
-      "cycles": 6,
+      "heartbeat_at": "2026-11-27T03:47:36.330105+00:00",
+      "cycles": 7,
       "sessions": 0,
       "recent_errors": [
-        {
-          "phase": "maintenance",
-          "type": "RuntimeError",
-          "at": "2026-11-27T02:02:36.116140+00:00"
-        },
         {
           "phase": "maintenance",
           "type": "RuntimeError",
@@ -6545,6 +6540,11 @@
           "phase": "maintenance",
           "type": "RuntimeError",
           "at": "2026-11-27T03:17:37.630280+00:00"
+        },
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-27T03:32:38.279383+00:00"
         }
       ]
     },
