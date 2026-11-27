@@ -6512,10 +6512,16 @@
       "phase": "maintenance",
       "started_at": "2026-11-27T07:03:15.517638+00:00",
       "deadline": "2026-11-27T12:03:15.517638+00:00",
-      "heartbeat_at": "2026-11-27T07:03:16.046389+00:00",
-      "cycles": 0,
+      "heartbeat_at": "2026-11-27T07:18:16.285882+00:00",
+      "cycles": 1,
       "sessions": 0,
-      "recent_errors": []
+      "recent_errors": [
+        {
+          "phase": "maintenance",
+          "type": "RuntimeError",
+          "at": "2026-11-27T07:03:18.048740+00:00"
+        }
+      ]
     },
     "queue_preparation": {
       "status": "checked",
